@@ -1,0 +1,5430 @@
+{
+  "set": {
+    "id": "a4e3a90a-e819-4561-bf23-51b5736d8020",
+    "name": "Wave 3",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "id": "44b7efa0-c8dc-4f05-9cf3-bea2674da45e",
+      "name": "Anticipation Engine",
+      "size": "small",
+      "number": "001",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When the upgraded character attacks > Reveal the top card of your deck. If it's an Action, you may play it.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "618ab1a0-4771-4eac-8174-b0938a074a70",
+      "name": "Backup Bag",
+      "size": "small",
+      "number": "002",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "If one of your cards would cause a Weapon or Armor to be scrapped from the upgraded character > Scrap this card instead.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "bafe07d4-5a49-4851-85c7-eaf649eb78cb",
+      "name": "Basic Combat Protocol",
+      "size": "small",
+      "number": "003",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Bold 1]",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "795ad86d-48e4-4a25-9cec-6b742650c661",
+      "name": "Battering Ram",
+      "size": "small",
+      "number": "004",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 2,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Trucks] only. When the upgraded character does attack damage to an enemy > Your opponent flips that enemy to its other mode.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "63b31f11-d8c1-43ef-b586-7b1d657c65d9",
+      "name": "Battlefield Report",
+      "size": "small",
+      "number": "005",
+      "rarity": "Common",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > When one of your characters defends. [When Revealed] > Draw 2 cards. Then put a card from your hand on top of your deck.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "1c8894f9-13b2-47fa-a9c0-10bc5b3d766d",
+      "name": "Battlefield Scan",
+      "size": "small",
+      "number": "006",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Enemies can't use [Brave] or [Stealth] this turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 1,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a1dfcf56-5809-43e5-9c39-05b9e285704a",
+      "name": "Bolster",
+      "size": "small",
+      "number": "007",
+      "rarity": "Uncommon",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > When one of your characters defends. [When Revealed] > You may play an Armor onto the defender.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "44a86783-96eb-45c8-a158-733a5d30a041",
+      "name": "Brainstorm",
+      "size": "small",
+      "number": "008",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "You may play an Action. Then you play another Action.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "b9481568-58a3-4311-ab32-54c71a3583d0",
+      "name": "Calculated Strike",
+      "size": "small",
+      "number": "009",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "One of your characters gets +2 [ATK] and [Pierce 2] until end of turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a43a3ca9-aef2-48f3-b67e-1ba3abdc3aea",
+      "name": "Alpha Trion, Cybertronian Sage",
+      "size": "standard",
+      "number": "T01",
+      "rarity": "Rare",
+      "stars": 11,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Spaceship",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Return an [O] Action from your scrap pile to hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 1,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "After you flip battle cards for this character's attack and before defense flips > You may play one of the [B] Actions you flipped.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "fdf8231b-717f-480c-a70a-ef0e7d0a2656",
+      "name": "Callous Leadership",
+      "size": "small",
+      "number": "010",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Move up to 5 damage counters from one of your Decepticon [Leaders] that has 8 [STARS] or more to one of your other characters.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "154ca3e4-9d85-430a-b1bf-3663436f9ace",
+      "name": "Combat Dagger",
+      "size": "small",
+      "number": "011",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Bold 1]",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "b6635a4b-6b6e-44fd-971e-e40466182bc8",
+      "name": "Compact Shield",
+      "size": "small",
+      "number": "012",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": 1,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Put on Autobots only.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "cd15e350-34f4-4cb2-9aef-aa0492ea5701",
+      "name": "Covert Armor",
+      "size": "small",
+      "number": "013",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Melee] characters only. While the upgraded character is defending against a [Specialist] > The upgraded character has +1 [DEF].",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "ddf8336b-3b80-4ca8-a855-407c24e613c1",
+      "name": "Dampening Field",
+      "size": "small",
+      "number": "014",
+      "rarity": "Rare",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > When one of your characters defends. [When Revealed] > Your opponent can't flip more than 4 battle cards during this battle.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "891be5af-a3a1-4986-8769-f1fe895736c7",
+      "name": "Defensive Formation",
+      "size": "small",
+      "number": "015",
+      "rarity": "Common",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > When one of your characters defends. [When Revealed] > Each of your characters get +1 [DEF] until end of turn..",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "c5588318-4bd8-4953-b92f-54ea3ec45264",
+      "name": "Device Virus",
+      "size": "small",
+      "number": "016",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Scrap one of your Upgrades > Scrap up to 2 enemy Upgrades of the same type as your scrapped Upgrade.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "51e3a80b-1d39-4982-a40c-9c5dd87a8ce7",
+      "name": "Dismantle",
+      "size": "small",
+      "number": "017",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Scrap an enemy Weapon or Armor.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "74523c7c-c044-423b-8ffd-84b658c8a384",
+      "name": "Dismantling Claw",
+      "size": "small",
+      "number": "018",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 1,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When this is scrapped from a character > Scrap an enemy Weapon.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "62923253-0522-45c9-af07-b9cedeba64a4",
+      "name": "EM24 IR Laser Launcher",
+      "size": "small",
+      "number": "019",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 3,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "69abb61f-f4b1-4081-9f81-ff80edf5982a",
+      "name": "Captain Elita-1, Special Ops • Ranger",
+      "size": "standard",
+      "number": "T02",
+      "rarity": "Rare",
+      "stars": 12,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 0,
+          "health": 17,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Car",
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Move any number of damage counters from one of your other characters to this, but not enough to KO her.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 0,
+          "health": 17,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "When this is KO'd > Scrap the top card of your deck. You may play it. Then scrap another card from the top of your deck. You may play it.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "04fd6ae4-f204-4399-948f-f4e402e5ef55",
+      "name": "Emergency Defense Field",
+      "size": "small",
+      "number": "020",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "If the upgraded character defends and would take an even amount of attack damage > Instead it takes no attack damage. When the upgraded character defends and takes no attack damage > Scrap this card.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "5e044073-ecdd-4c7f-8472-c00853111744",
+      "name": "Emp Wave",
+      "size": "small",
+      "number": "021",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Tap ALL characters.",
+      "stars": 1,
+      "icons": {
+        "orange": 0,
+        "blue": 2,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "814138e9-c9ee-4dce-a8a6-30e319eeba1c",
+      "name": "Energy Pack",
+      "size": "small",
+      "number": "022",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put only on characters that have 11 [STARS] or more. The upgraded character has +4 [HEALTH].",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "311b7d4b-0722-41fc-a21e-e3bf42d0e11b",
+      "name": "Erratic Energy Grenade",
+      "size": "small",
+      "number": "023",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "At the start of your turn > Do 1 damage to the upgraded character. When the upgraded character is KO'd > Do 2 damage to each enemy.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "73b71cf0-8f33-44bb-8e6e-b11f93bcad46",
+      "name": "Extra Padding",
+      "size": "small",
+      "number": "024",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Tough 1]. When you put this on a character > You may play another Extra Padding. Up to 3 Extra Paddings can fit in 1 Armor slot.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "e83b6f16-ba82-44cb-9684-694136ba679b",
+      "name": "Firecon Flame",
+      "size": "small",
+      "number": "025",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Put on [Firecons] only. Each of your [Firecons] has [Bold 1].",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "21f46a92-8ec3-4d92-9caa-a50d59b20506",
+      "name": "Force Field",
+      "size": "small",
+      "number": "026",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "If the upgraded character would take 5 or more attack damage > Instead scrap this card and the upgraded character takes 4 attack damage.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "67889f11-ea9c-4ca1-b0c1-e83f9ff74b6e",
+      "name": "Frag Toss",
+      "size": "small",
+      "number": "027",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Your opponent chooses one of their characters and does 1 damage to it. If your starting team was only Decepticons > Your opponent does 1 more damage to the chosen character.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "6dabf43c-bcfb-413f-813e-0a1ee620d80c",
+      "name": "Fuel Cache",
+      "size": "small",
+      "number": "028",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Reveal the top 3 cards of your deck. If they include at least [O][B][W], put them all into your hand. Otherwise, scrap them.",
+      "stars": 1,
+      "icons": {
+        "orange": 1,
+        "blue": 1,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "68342545-98f5-4f5a-acef-083327fe8d45",
+      "name": "Full Loadout",
+      "size": "small",
+      "number": "029",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Choose one of your characters. You may play a Weapon, an Armor, and a Utility onto it.",
+      "stars": 1,
+      "icons": {
+        "orange": 2,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "83ed2e1c-d7e7-4132-846e-b84a07e6cb06",
+      "name": "Captain Ironhide, Infantry • Bodyguard",
+      "size": "standard",
+      "number": "T03",
+      "rarity": "Rare",
+      "stars": 9,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Truck",
+            "Ranged"
+          ],
+          "text": "This can't take non-attack damage from your opponent's cards.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "When this attacks and has a Weapon > You may swap that Weapon with a [B] Weapon from your hand.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "d63ee4b1-183a-4b9a-82d2-c1b13208ed5a",
+      "name": "Heat of Battle",
+      "size": "small",
+      "number": "030",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "ALL characters get [Bold 3] and [Tough 3] until end of turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "8d910ebc-3146-4fa0-9fac-806ed29668c1",
+      "name": "Heroic Team-Up",
+      "size": "small",
+      "number": "031",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Tap one of your untapped Autobots. Add its [ATK] total to one of your untapped Autobots until end of turn.",
+      "stars": 1,
+      "icons": {
+        "orange": 1,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "cafbb774-1ba6-4961-8bc7-e89ca46b92b3",
+      "name": "Hiding Spot",
+      "size": "small",
+      "number": "032",
+      "rarity": "Uncommon",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > After your opponent chooses an attacker and before they choose a defender. [When Revealed] > One of your characters gets [Stealth] until end of turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a6245c26-946c-4fef-bd57-df3a0dfbeed6",
+      "name": "HV Electron Breacher",
+      "size": "small",
+      "number": "033",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 2,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Put on Decepticons only.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "3492fe71-531b-4e78-8ab1-57839b502d81",
+      "name": "Infiltrate",
+      "size": "small",
+      "number": "034",
+      "rarity": "Rare",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > When your opponent plays an [O] Action. [When Revealed] > Scrap that Action and it has no effect.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "d6e8a560-e19d-41b8-9a4a-6b2dbc255146",
+      "name": "Laser Cutlass",
+      "size": "small",
+      "number": "035",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 1,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put only on characters that have 7 [STARS] or fewer. [Pierce 3].",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "630e4f3d-3798-4929-ac9b-03158ba88d77",
+      "name": "LV Gamma-Disruptor Launcher",
+      "size": "small",
+      "number": "036",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 2,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Put on Shockwave only. Up to 2 LV Gamma-Disruptor Launchers can fit in 1 Weapon slot. When you put this on Shockwave > Your opponent chooses a card from their hand and scraps it.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "6b043473-6b8e-44c7-9854-2f1db1cb4ab0",
+      "name": "Ultra Magnus Armor",
+      "size": "small",
+      "number": "037",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": 2,
+      "def": 2,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Put on Autobots only.\n\nIf the upgraded character would take non-attack damage > Instead it takes that much damage minus 1.",
+      "stars": 2,
+      "icons": {
+        "orange": 1,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "524e5fb5-513a-4e55-bbd8-bd34cd7d9e86",
+      "name": "Medic!",
+      "size": "small",
+      "number": "038",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Repair 2 damage from one of your characters.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "7865824e-663a-434a-aae3-715690eedc85",
+      "name": "Metal Detector",
+      "size": "small",
+      "number": "039",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When the upgraded character attacks > Reveal the top card of your deck. If it's an Upgrade, you may play it.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 1,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "177ffcf5-761f-411d-81dc-f6fbeab60b1d",
+      "name": "Captain Starscream, Infantry • Air Commander",
+      "size": "standard",
+      "number": "T04",
+      "rarity": "Rare",
+      "stars": 12,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 16,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Plane",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Do 1 damage to an enemy that has no Upgrades.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 1,
+          "health": 16,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "When an Upgrade is scrapped from an enemy > Do 1 damage to that enemy.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "eb9aecb9-dfe4-471e-bb7c-19eedfdd6a6f",
+      "name": "Micro Capacitor",
+      "size": "small",
+      "number": "040",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When you use the upgraded character's [TAP] ability > Untap that character and scrap this card.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "396b6a52-957e-4ccd-8ce4-6055ce9beb56",
+      "name": "Pep Talk",
+      "size": "small",
+      "number": "041",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Draw 2 cards.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "c9e74b58-9c8b-4d01-98b8-b14a5389440e",
+      "name": "Personal Targeting Drone",
+      "size": "small",
+      "number": "042",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Pierce 1]. When this is scrapped from a character > Scrap an enemy Utility.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "2f9aef7b-7050-4c5c-bcda-4b5b9ca27779",
+      "name": "Point-Defense System",
+      "size": "small",
+      "number": "043",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "While the upgraded character is defending against an enemy that has [Pierce] > Reduce that enemy's [Pierce] total by 2.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "b2c93179-a1cd-4100-820c-f6f3b69c5bfb",
+      "name": "Pop a Wheelie",
+      "size": "small",
+      "number": "044",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Flip each of your characters from bot mode to [Motorcycle] mode. You get an extra attack this turn, but only a [Motorcycle] can attack this way.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "b9e9fdd0-08f5-4573-bbf7-f6578b9bac1c",
+      "name": "Quartermaster",
+      "size": "small",
+      "number": "045",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Choose one > \n• Move an Upgrade from one of your characters to another one. \n• Put a [Battle Master] Upgrade from your KO area onto one of your characters.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "90994ae7-2ca6-4ea6-b558-fcdd97a5cbb5",
+      "name": "Reactive Armor",
+      "size": "small",
+      "number": "046",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When this is scrapped from a character > Scrap an enemy Armor.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "8fa113dc-d614-4652-b0bf-6e7247b2f182",
+      "name": "Reflex Circuits",
+      "size": "small",
+      "number": "047",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Ranged] characters only. While the upgraded character is defending against a [Melee] enemy > The upgraded character has +1 [DEF].",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a56e9497-82a7-4fd2-a0f7-1a9bbd867b24",
+      "name": "Repurpose",
+      "size": "small",
+      "number": "048",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Scrap a card from your hand. Then draw 2 cards.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "687b0608-5883-46f6-8208-93e0be32ff0d",
+      "name": "Rock Toss",
+      "size": "small",
+      "number": "049",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Do 1 damage to a tapped enemy.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "f4f387c3-2a3e-41d9-be70-a937139c9cb3",
+      "name": "Captain Wheeljack, Engineering  Scientist",
+      "size": "standard",
+      "number": "T05",
+      "rarity": "Uncommon",
+      "stars": 9,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Specialist"
+          ],
+          "text": "Before the game begins > You may reveal a Brainstorm from your deck and put it into your hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you play your third Action during your turn > Draw a card.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "b41b1191-ab1f-4c0f-a9d7-e0f33ed38b13",
+      "name": "RR Disruptor Blade",
+      "size": "small",
+      "number": "050",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 3,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When the upgraded character attacks and you don't flip a [K] > Scrap this card after the battle.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "488465a5-d8de-428b-a650-5f8efa9344c3",
+      "name": "Scavenge the Battlefield",
+      "size": "small",
+      "number": "051",
+      "rarity": "Rare",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > When one of your characters is KO'd. [When Revealed] > Instead of scrapping that character's Upgrades, you may put any number of them onto one of your other characters.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "9a5aca44-a811-4212-a1de-3c4b0b18cb62",
+      "name": "Smoke Cloak",
+      "size": "small",
+      "number": "052",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Tough 1]",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "83733ecc-d6e6-4476-b682-76c0ff67fbeb",
+      "name": "Smokethrower",
+      "size": "small",
+      "number": "053",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Bold 2]",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "e40a9b5e-9432-4199-a2ae-8f11096c7034",
+      "name": "Diagnosis",
+      "size": "small",
+      "number": "054",
+      "rarity": "Common",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Repair 1 damage from one of your characters. If your starting team was only Autobots > Draw a card.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "8916aa40-3c68-40a0-8385-23573d36209b",
+      "name": "Special Ops Mission",
+      "size": "small",
+      "number": "055",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "You may play a Secret Action. Then you may play another Secret Action.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "adb23374-9c07-4d22-937b-ed2fc64a865b",
+      "name": "Spinner Rims",
+      "size": "small",
+      "number": "056",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When the upgraded character battles and you flip your first [W] > Flip 1 extra battle card.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "33c8923d-9d72-4370-a0f8-ffeff60f3e22",
+      "name": "Squish them like Bugs",
+      "size": "small",
+      "number": "057",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Choose one of your characters. When it does attack damage this turn to an enemy that has fewer [STARS] than it > Do 1 damage to each enemy that has fewer [STARS] than your character.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "f0fe3b99-a4b8-4c53-bb84-c48d820e8d63",
+      "name": "Steady Shot",
+      "size": "small",
+      "number": "058",
+      "rarity": "Uncommon",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "One of your characters gets +2 [ATK] until end of turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "8d123bd7-f864-448c-a88b-ca04ea01c5cd",
+      "name": "Sturdy Armor",
+      "size": "small",
+      "number": "059",
+      "rarity": "Uncommon",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Specialists] only. While the upgraded character is defending against a [Ranged] enemy > The upgraded character has +1 [DEF].",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "92170a8c-3274-44a8-b9d4-5352dbe19242",
+      "name": "General Megatron, Infantry • Leader",
+      "size": "standard",
+      "number": "T06",
+      "rarity": "Super Rare",
+      "stars": 13,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 3,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Tank",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Do damage to an enemy equal to the number of Weapons you have on the battlefield.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 7,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Ranged"
+          ],
+          "text": "At the start of your turn, if this has 3 or more Upgrades > Do 1 damage to each enemy.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "a39a616c-fcde-4655-baef-2554e837e30c",
+      "name": "Take Cover",
+      "size": "small",
+      "number": "060",
+      "rarity": "Rare",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > If one or more of your characters would take non-attack damage during your opponent's turn. [When Revealed] > Instead your characters can't take non-attack damage this turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "85d30d94-78a0-4a3d-a810-514841659bad",
+      "name": "Two-Pronged Attack",
+      "size": "small",
+      "number": "061",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Choose one of your characters. If it's a [Tank], your opponent chooses 2 cards from their hand and scraps them. If it's a [Plane], your opponent chooses one of their characters and does 2 damage to it.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "adfd744c-3808-41c7-92cc-29193af73dcf",
+      "name": "Unconventional Flying Object",
+      "size": "small",
+      "number": "062",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Flip one of your [Spaceships] to bot mode. Then flip it back to alt mode.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "0b1518fb-376d-4f9e-ae7c-4bc8a58baf7a",
+      "name": "Urban Camo",
+      "size": "small",
+      "number": "063",
+      "rarity": "Common",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Tough 1]",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "7c9e0bf7-973b-4c88-940f-80811a2b4ceb",
+      "name": "W-5 Gyro Blaster",
+      "size": "small",
+      "number": "064",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": 1,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "When the upgraded character battles > Each player can't flip more than 2 battle cards during this battle.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "eba75d92-3e22-4305-b53e-68b4cdc4c3a4",
+      "name": "General Optimus Prime, Infantry • Leader",
+      "size": "standard",
+      "number": "T07",
+      "rarity": "Rare",
+      "stars": 11,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 3,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Truck",
+            "Melee"
+          ],
+          "text": "Each of your other characters has [Bold 1] and [Tough 1].",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Ranged"
+          ],
+          "text": "[Bold 1], [Tough 1]\n\n[Focus 1]",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "d1c29956-f100-4f72-b46e-19aff7c86177",
+      "name": "Major Prowl, Infantry • Strategist",
+      "size": "standard",
+      "number": "T08",
+      "rarity": "Common",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Ranged"
+          ],
+          "text": "",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "When this attacks an enemy that has a Weapon > Do 2 damage to that enemy.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "92384d3f-e2da-4c45-8f06-badb3341d8ec",
+      "name": "Major Shockwave, Applied Sciences • Scientist",
+      "size": "standard",
+      "number": "T09",
+      "rarity": "Super Rare",
+      "stars": 14,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 6,
+          "def": 3,
+          "health": 17,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Spaceship",
+            "Specialist"
+          ],
+          "text": "You may look at the top card of your deck at any time.\nWhen you flip to this mode > Draw a card. Then your opponent chooses a card from their hand and scraps it.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 7,
+          "def": 2,
+          "health": 17,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "You may look at the top card of your deck at any time. \nWhile the top card of your deck is a Decepticon card or a Secret Action > You may play it as though it were in your hand.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "0670cf9b-aee6-4c7b-9f23-e8112d87c3c5",
+      "name": "Major Soundwave, Espionage • Spy",
+      "size": "standard",
+      "number": "T10",
+      "rarity": "Uncommon",
+      "stars": 11,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Spaceship",
+            "Specialist"
+          ],
+          "text": "Each of your [Spy Patrols] has +1 [DEF]",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "When this attacks > Untap each of your [Spy Patrols].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "34062981-8303-41d6-8ada-98394afa7c75",
+      "name": "Major Ultra Magnus, Infantry • City Commander",
+      "size": "standard",
+      "number": "T11",
+      "rarity": "Super Rare",
+      "stars": 12,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 17,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Truck",
+            "Ranged"
+          ],
+          "text": "Before the game begins > You may put an Ultra Magnus Armor from your deck onto this. [Brave]",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 1,
+          "health": 17,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Ranged"
+          ],
+          "text": "When this attacks and you flip at least [O][O][B][B] > Do 1 damage to EACH character.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "34f7e3e0-4e9c-45d6-992f-358aaacde4cc",
+      "name": "Private Arcee, Special Ops • Warrior",
+      "size": "standard",
+      "number": "T12",
+      "rarity": "Common",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Melee"
+          ],
+          "text": "[Focus 1]",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "When this has a Weapon > She has [Bold 1] and [Tough 1].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "82f6ca40-ff6a-4c1f-955b-85314003dba5",
+      "name": "Private Firedrive, Ground Command • Artillery",
+      "size": "small",
+      "number": "T13",
+      "rarity": "Uncommon",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 10,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master",
+            "Ranged"
+          ],
+          "text": "When this attacks > Draw a card.",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": 3,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "When the upgraded character attacks > Scrap any number of cards from your hand. For each one scrapped this way, the upgraded character gets +1 [ATK] until end of turn.\nIf this would leave the battlefield > Put it into your KO area instead.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "99c4ac4e-9b2b-4a6b-84b1-82ac99c8b0c1",
+      "name": "Private Flak, Artillery • Tactics",
+      "size": "small",
+      "number": "T14",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 2,
+          "def": 2,
+          "health": 7,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Patrol",
+            "Tank",
+            "Ranged"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Patrol",
+            "Ranged"
+          ],
+          "text": "[TAP] Scrap a [O] card from your hand > You may play an Upgrade.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "527a7553-41ea-4c6c-9c62-2f26fcc10828",
+      "name": "Private Lionizer, Ground Command • Artillery",
+      "size": "small",
+      "number": "T15",
+      "rarity": "Uncommon",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 0,
+          "def": 2,
+          "health": 8,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master",
+            "Melee"
+          ],
+          "text": "[Bold 4]",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": null,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "[Bold 4]. When the upgraded character attacks > [Plan 1]. If this would leave the battlefield > Put it into your KO area instad.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "133220ba-8d62-4b0e-9342-35b8bde8d143",
+      "name": "Private Mudslinger, Special Ops • Infiltration",
+      "size": "small",
+      "number": "T16",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Off-Road Patrol",
+            "Truck",
+            "Melee"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Off-Road Patrol",
+            "Melee"
+          ],
+          "text": "[TAP] Scrap a [K] card from your hand > Move 1 damage counter from one of your characters to an enemy.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "3e7a7fb9-bff9-4864-a52a-50d3dc0bfbd2",
+      "name": "Private Pteraxadon, Air Command • Artillery",
+      "size": "small",
+      "number": "T17",
+      "rarity": "Uncommon",
+      "stars": 6,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master",
+            "Melee"
+          ],
+          "text": "",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": 3,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "When the upgraded character attacks and you flip at least [W][W] > The defender's base [DEF] becomes 0 during this battle. If this would leave the battlefield > Put it into your KO area instead.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "ed92dd75-0cee-4e72-bfd4-6a8c9a7d4329",
+      "name": "Private Red Alert, Medical • Medic",
+      "size": "standard",
+      "number": "T18",
+      "rarity": "Common",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 2,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > Repair 1 damage from one of your characters.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "When this attacks and you flip at least [W][O][B] > This gets +3 [ATK] until end of turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "ac216ec6-b6c3-4872-a9bf-356bbf763094",
+      "name": "Private Red Heat, Infantry • Emergency Response",
+      "size": "small",
+      "number": "T19",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 2,
+          "def": 0,
+          "health": 8,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Rescue Patrol",
+            "Truck",
+            "Specialist"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 8,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Rescue Patrol",
+            "Specialist"
+          ],
+          "text": "[TAP] Scrap a [W] card from your hand > Choose 2 of your characters and swap all their Upgrades.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "b224cb97-b92a-4972-96fe-4b855bd74aea",
+      "name": "Private Sideswipe, Infantry • Soldier",
+      "size": "standard",
+      "number": "T20",
+      "rarity": "Uncommon",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > This gets +2 [ATK] until end of turn for each character in your KO area.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "When one of your other characters is KO'd during your opponent's turn > Untap this.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "48549d3e-49bf-4ccc-8b6d-4bff4162ebf1",
+      "name": "Private Stakeout, Infantry • Communications",
+      "size": "small",
+      "number": "T21",
+      "rarity": "Common",
+      "stars": 4,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 5,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Rescue Patrol",
+            "Car",
+            "Specialist"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 5,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Rescue Patrol",
+            "Specialist"
+          ],
+          "text": "[TAP] Scrap a [W] card from your hand > Flip one of your characters to its other mode.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "ad1a3dd1-7efd-4828-a56a-350860713294",
+      "name": "Private Top Shot, Artillery • Patrol Leader",
+      "size": "small",
+      "number": "T22",
+      "rarity": "Common",
+      "stars": 4,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 1,
+          "def": 2,
+          "health": 5,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Battle Patrol",
+            "Tank",
+            "Ranged"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 5,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Battle Patrol",
+            "Ranged"
+          ],
+          "text": "[TAP] Scrap a [O] card from your hand > Draw 2 Cards, then put a card from your hand on top of your deck.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "1bbb3035-14cf-4773-bd4c-c2771454597a",
+      "name": "Private Tote, Special Ops • Infiltration",
+      "size": "small",
+      "number": "T23",
+      "rarity": "Common",
+      "stars": 4,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 5,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Off-Road Patrol",
+            "Truck",
+            "Melee"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 5,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Off-Road Patrol",
+            "Melee"
+          ],
+          "text": "[TAP] Scrap a [K] card from your hand > Untap one of your characters that has 6 [STAR] or fewer.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "6b0e8ea0-7de1-43c3-addf-e84ffd2482b6",
+      "name": "Private Trailbreaker, Infantry • Fortification & Defense",
+      "size": "standard",
+      "number": "T24",
+      "rarity": "Uncommon",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Truck",
+            "Melee"
+          ],
+          "text": "Before the game begins > You may put a Force Field from your deck onto this.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 0,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "While this has an Armor > He has [Brave].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "9645e8e5-0618-4eff-9455-3dcec6267aaa",
+      "name": "Raider Aimless, Air Force • Weapons",
+      "size": "small",
+      "number": "T25",
+      "rarity": "Uncommon",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 8,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Battle Master",
+            "Ranged"
+          ],
+          "text": "[Tough 3]",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "When the upgraded character attacks and you flip at least [B][B][B]- Do 3 damage to the defender. If this would leave the battlefield > Put it into your KO area instead.",
+          "mode": "alt"
+        }
+      ]
+    },
+    {
+      "id": "bc8d1725-0495-4245-bfc4-de63b3c8a97c",
+      "name": "Raider Blowpipe, Air Force • Weapons",
+      "size": "small",
+      "number": "T26",
+      "rarity": "Uncommon",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Battle Master",
+            "Ranged"
+          ],
+          "text": "[Focus 1]",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": null,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "When the uprgaded character attacks and you flip battle cards > It gets +1 [ATK] until end of turn for each different color among battle icons you flipped. If this would leave the battlefield > Put it into your KO area instead.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "196aeeaa-ef96-4f69-86e3-b350ac9fb5da",
+      "name": "Raider Cindersaur, Black Ops • Demolitions",
+      "size": "standard",
+      "number": "T27",
+      "rarity": "Rare",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Firecon",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > You may play an [O] Action.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Firecon",
+            "Melee"
+          ],
+          "text": "When this attacks and you flip at least [O][O][O][O] > Do 2 damage to a tapped enemy.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "4be6b24c-be97-470a-881f-4d40484ce8d1",
+      "name": "Raider Detour, Infantry • Demolitions",
+      "size": "small",
+      "number": "T28",
+      "rarity": "Common",
+      "stars": 4,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 6,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Sports Car Patrol",
+            "Car",
+            "Specialist"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 6,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Sports Car Patrol",
+            "Specialist"
+          ],
+          "text": "[TAP] Scrap a [B] card from your hand > Draw 2 cards.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "36a2dd3d-fccc-4ca5-8db0-17113594f4c9",
+      "name": "Raider Flamefeather, Black Ops • Soldier",
+      "size": "standard",
+      "number": "T29",
+      "rarity": "Uncommon",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Firecon",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Each of your [Firecons] gets [Bold 1] until end of turn.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Firecon",
+            "Ranged"
+          ],
+          "text": "When this defends and you flip battle cards > He gets +1 [DEF] until end of battle for each [O] you flip, up to +5 [DEF].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "c771a8c5-d912-4317-a26f-4beb7d2c0f85",
+      "name": "Raider Ion Storm, Infantry • Rainmaker",
+      "size": "standard",
+      "number": "T30",
+      "rarity": "Common",
+      "stars": 12,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 7,
+          "def": 3,
+          "health": 14,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Plane",
+            "Ranged"
+          ],
+          "text": "",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 7,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "When this attacks > Return one of the defender's Upgrades to its owner's hand.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "ef0dec62-ce0f-4f3f-afb5-1862a205a1ae",
+      "name": "Raider Laserbeak, Espionage • Interrogation",
+      "size": "small",
+      "number": "T31",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 2,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Spy Patrol"
+          ],
+          "text": "When you flip to this mode > Draw a card. Then scrap a card from your hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Spy Patrol",
+            "Ranged"
+          ],
+          "text": "[Pierce 2]\n[TAP] You may play a Secret Action.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "b79cf68a-9082-41a5-b695-93f8ec635056",
+      "name": "Raider Needlenose, Air Force • Soldier",
+      "size": "standard",
+      "number": "T32",
+      "rarity": "Rare",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Plane",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Return a card that has exactly 1 [STAR] from your scrap pile to hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "When you play a battle card that has exactly 1 [STAR] > Do 1 damage to an enemy.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "ae516104-f050-426a-9880-99847b48e465",
+      "name": "Raider Nightstick, Ground Force • Weapons",
+      "size": "small",
+      "number": "T33",
+      "rarity": "Uncommon",
+      "stars": 6,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 1,
+          "health": 6,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Battle Master",
+            "Specialist"
+          ],
+          "text": "",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": 2,
+          "def": 1,
+          "health": null,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "When the upgraded character attacks and you flip at least [K][K] > Your opponent chooses a card from their hand and scraps it.\n\nIf this would leave the battlefield > Put it in your KO area instead.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "1ce94762-0a43-4f89-abe2-97f2e1c4f050",
+      "name": "Raider Ravage, Espionage • Saboteur",
+      "size": "small",
+      "number": "T34",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 3,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Spy Patrol"
+          ],
+          "text": "",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Spy Patrol",
+            "Melee"
+          ],
+          "text": "[TAP] Do 1 damage to an enemy. If that enemy has 4 [DEF] or more, do 2 damage to it instead.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "3ce50c7b-9f0d-4c13-bfda-b432e28db8bc",
+      "name": "Raider Road Hugger, Infantry • Tactics",
+      "size": "small",
+      "number": "T35",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Sports Car Patrol",
+            "Car",
+            "Melee"
+          ],
+          "text": "This has [Stealth] while Untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Sports Car Patrol",
+            "Melee"
+          ],
+          "text": "[TAP] Scrap a [B] card from your hand > One of your characters gets +3 [ATK] until end of turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "d6ce2fc5-4774-4302-b28d-0948e823561d",
+      "name": "Raider Runabout, Infantry • Soldier",
+      "size": "standard",
+      "number": "T36",
+      "rarity": "Common",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Car",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Repair 1 damage from this. If you have Runamuck on the battlefield, repair 1 damage from him, and flip him from bot mode to alt mode.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "8992583f-49eb-4320-aa01-5f727620081f",
+      "name": "Raider Runamuck, Infantry • Soldier",
+      "size": "standard",
+      "number": "T37",
+      "rarity": "Common",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Car",
+            "Specialist"
+          ],
+          "text": "",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Draw a card. If you have Runabout on the battlefield, flip him from alt mode to bot mode.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "94276c3c-60c9-4584-9004-3fd12df98a93",
+      "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
+      "size": "small",
+      "number": "T38",
+      "rarity": "Common",
+      "stars": 4,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 6,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Air Strike Patrol",
+            "Plane",
+            "Ranged"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 6,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Air Strike Patrol",
+            "Ranged"
+          ],
+          "text": "[TAP] Scrap 3 [G] cards from your hand > One of your characters gets [Bold 3] until end of turn. If the 3 scrapped cards have the same name, instead that character gets [Bold 6] until end of turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "25fd04a9-6738-46bd-b28f-c59e05d10439",
+      "name": "Raider Triggerhappy, Air Force • Gunner",
+      "size": "standard",
+      "number": "T39",
+      "rarity": "Uncommon",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Plane",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Return a Weapon from your scrap pile to hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "[Pierce 4]",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "9db04b48-bb13-4819-a5ce-2c169095e282",
+      "name": "Raider Visper, Infantry • Patrol Leader",
+      "size": "small",
+      "number": "T40",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Air Strike Patrol",
+            "Plane",
+            "Ranged"
+          ],
+          "text": "This has [Stealth] while untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Air Strike Patrol",
+            "Ranged"
+          ],
+          "text": "[TAP] Scrap 3 [G] cards from your hand > Your opponent chooses 3 cards from their hand and scraps them. If the 3 cards you scrapped have the same name as each other, draw 3 cards.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "57c3511f-f722-4baa-a21f-624ef4bb9f65",
+      "name": "Sergeant Chromia, Special Ops • Counterintelligence",
+      "size": "standard",
+      "number": "T41",
+      "rarity": "Common",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > You may play an [B] armor.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When this defends and you flip at least [B][B] > Draw a card.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "3a7eb922-2629-4dc4-91fa-3f079afe5ee1",
+      "name": "Sergeant Cog, Artillery • Mechanic",
+      "size": "standard",
+      "number": "T42",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Weaponizer",
+            "Ranged"
+          ],
+          "text": "",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": 4,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Weaponizer"
+          ],
+          "text": "When you put this on a character > Draw a card for each character you have on the battlefield. Then you may play an Upgrade onto each of your characters. If this would leave the battlefield > Put it into your KO area instead.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "4abcf396-9ace-44fc-b407-823786ef67c0",
+      "name": "Sergeant Hound, Infantry • Recon",
+      "size": "standard",
+      "number": "T43",
+      "rarity": "Common",
+      "stars": 9,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 13,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Truck",
+            "Melee"
+          ],
+          "text": "",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 13,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "When you upgrade this > He gets +2 [ATK] until end of turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "51e89d37-2f5d-40df-a5fd-b76aff1177ed",
+      "name": "Sergeant Skrapnel, Infantry • Electronic Warfare",
+      "size": "standard",
+      "number": "T44",
+      "rarity": "Common",
+      "stars": 9,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Insecticon",
+            "Melee"
+          ],
+          "text": "[Brave]",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Insecticon",
+            "Melee"
+          ],
+          "text": "When an Upgrade is scrapped from one of your characters > Repair 1 damage from this.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "7374c402-f78b-42a0-967f-de7d7908d12c",
+      "name": "Sergeant Skywarp, Black Ops • Seeker",
+      "size": "standard",
+      "number": "T45",
+      "rarity": "Rare",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Plane",
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Return up to 2 Secret Actions that have different names from your scrap pile to hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 11,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you play a Secret Action > Draw a card.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "0eb593f0-f4b4-452d-b6d7-8d1abebacd2c",
+      "name": "Sergeant Sparkstalker, Black Ops • Cryptology",
+      "size": "standard",
+      "number": "T46",
+      "rarity": "Common",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 10,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Firecon",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > Scrap an enemy Armor.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 10,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Firecon",
+            "Melee"
+          ],
+          "text": "When this attacks and you flip at least [O][O][O] > Draw 2 cards.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "a4ea3040-8360-46bb-9859-402a40571ac8",
+      "name": "Specialist Flamewar, Special Ops • Hunter",
+      "size": "standard",
+      "number": "T47",
+      "rarity": "Uncommon",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 0,
+          "health": 10,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Motorcycle",
+            "Specialist"
+          ],
+          "text": "[Stealth]",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 10,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "[Focus 2]",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "99abad3b-e20e-4e45-b9ab-3a5f6a63a8fd",
+      "name": "Specialist Ratchet, Engineering • Rescue & Repair",
+      "size": "standard",
+      "number": "T48",
+      "rarity": "Uncommon",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 0,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Truck",
+            "Specialist"
+          ],
+          "text": "Before the game begins > You may reveal a Medic! from your deck and put it into your hand.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 0,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you repair damage > This gets +1 [ATK] until end of turn for each damage repaired.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "ecf0e42b-1b60-4235-97e1-5b634f7d12e9",
+      "name": "Raider Road Hugger, Infantry • Tactics",
+      "size": "small",
+      "number": "TP10 2019",
+      "rarity": "Common",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Sports Car Patrol",
+            "Car",
+            "Melee"
+          ],
+          "text": "This has [Stealth] while Untapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 7,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Sports Car Patrol",
+            "Melee"
+          ],
+          "text": "[TAP] Scrap a [B] card from your hand > One of your characters gets +3 [ATK] until end of turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "199b5579-f3fb-4943-b57a-34d1396a4f54",
+      "name": "Private Smashdown, Ground Command • Artillery",
+      "size": "small",
+      "number": "TP3 2019",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 2,
+          "def": 2,
+          "health": 6,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master",
+            "Melee"
+          ],
+          "text": "",
+          "mode": "bot"
+        },
+        {
+          "type": "Character",
+          "subtype": "Upgrade Mode",
+          "atk": 2,
+          "def": null,
+          "health": null,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Battle Master"
+          ],
+          "text": "When the upgraded character attacks and you flip more colors of battle icons than your opponent flips > The upgraded character gets +2 [ATK] until end of battle. If this would leave the battlefield > Put it into your KO area instead.",
+          "mode": "upgrade"
+        }
+      ]
+    },
+    {
+      "id": "5f7b3632-b8ab-498f-9f87-1e3d47fe0dc7",
+      "name": "Private Red Alert, Medical • Medic",
+      "size": "standard",
+      "number": "TP6 2019",
+      "rarity": "Common",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 2,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Car",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > Repair 1 damage from one of your characters.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Melee"
+          ],
+          "text": "When this attacks and you flip at least [W][O][B] > This gets +3 [ATK] until end of turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "8cebb7b0-b95b-417c-8098-703032e77ba8",
+      "name": "Nightbird, Enigmatic Agent",
+      "size": "standard",
+      "number": "TP7 2019",
+      "rarity": "Rare",
+      "stars": 7,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 0,
+          "health": 11,
+          "faction": [
+            "Mercenary"
+          ],
+          "traits": [
+            "Car",
+            "Ranged"
+          ],
+          "text": "When your opponent plays an Action > They choose one of their characters and do 1 damage to it.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Mercenary"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "When this does enough attack damage to KO an enemy > Use this card's [Bounty] ability. [Bounty] > Play an Action from your opponent's scrap pile.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "08036fef-f380-41b4-8b5a-406d4b13e8c8",
+      "name": "Raider Runabout, Infantry • Soldier",
+      "size": "standard",
+      "number": "TP8 2019",
+      "rarity": "Common",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Car",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Repair 1 damage from this. If you have Runamuck on the battlefield, repair 1 damage from him, and flip him from bot mode to alt mode.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Ranged"
+          ],
+          "text": "",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "f43a5031-6022-49c7-a34f-2d6c8e4fcf10",
+      "name": "Raider Runamuck, Infantry • Soldier",
+      "size": "standard",
+      "number": "TP9 2019",
+      "rarity": "Common",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Car",
+            "Specialist"
+          ],
+          "text": "",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Draw a card. If you have Runabout on the battlefield, flip him from alt mode to bot mode.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "de1e95fb-af70-46e3-a598-be6646c40cc4",
+      "name": "Buzzsaw, Ravage, Frenzy Attack!",
+      "size": "small",
+      "number": "001",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "If you have Buzzsaw on the battlefield > Draw a card. If you have Ravage on the battlefield > Do 1 damage to an enemy.\n\nIf you have Frenzy on that battlefield > Your opponent chooses one of their Armors and scraps it.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "239be9c0-cfe8-409c-a964-b124302f61a5",
+      "name": "Daring Counterattack",
+      "size": "small",
+      "number": "002",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Choose one of your characters > It gets +1 [ATK] until end of turn for each Autobot [Mini-Cassette] in your KO area. If you have Blaster on the battlefield, the chosen character also gets [Pierce 6] until end of turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "2e4f8ffb-52b9-4712-b903-2985a0511f23",
+      "name": "Inner Groove",
+      "size": "small",
+      "number": "003",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": 1,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Mini-Cassettes] only.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "624653bd-112a-4e68-a6be-abe908d55887",
+      "name": "Intercept Communications",
+      "size": "small",
+      "number": "004",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Play only if Soundwave was on your starting team.\n\nDraw 2 cards.\n\nChoose a card in your opponent's scrap pile and put it on top of their deck.",
+      "stars": 1,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 2
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "857190c1-a4e3-47cb-aa5b-8181d36017a9",
+      "name": "Interpret The Airwaves",
+      "size": "small",
+      "number": "005",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Play only if Blaster was on your starting team.\n\nLook at the top 5 cards of your deck and put them back in any order.",
+      "stars": 1,
+      "icons": {
+        "orange": 2,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a21ee8cd-f78f-46ba-88f0-3b6b6c5c00ee",
+      "name": "Obstructive Rhythm",
+      "size": "small",
+      "number": "006",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "For each [Mini-Cassette] you have on the battlefield > The upgraded character has [Tough 1].",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "bfdbbe75-269c-47d0-8f95-182a693efc56",
+      "name": "Recover Cassette",
+      "size": "small",
+      "number": "007",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "If you have Blaster or Soundwave on the battlefield > You may put one of your [Mini-Cassettes] from the battlefield under it. If you do, repair 2 damage from one of your characters, then put this card into your KO area.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "2294a207-6e43-428b-b83c-505643015f6e",
+      "name": "Blaster, Communications",
+      "size": "standard",
+      "number": "T01",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "Your starting [STAR] limit increases by 1 for each [Mini-Cassette] on your starting team.\n\nThis starts the game with all [Mini-Cassettes] on your starting team under it.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Deploy a [Mini-Cassette] from under this to the battlefield in bot mode. When you do, play the top card of your deck.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "bae7eb3d-7bd7-4080-a23f-cadbc98b87dd",
+      "name": "Eject, Electronic Surveillance",
+      "size": "small",
+      "number": "T02",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > Look at the top 2 cards of your deck. You may scrap them.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Specialist"
+          ],
+          "text": "When this defends > Enemies can't use [Bold] this turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "ce252dc9-00b4-46c5-91cd-b709337c220c",
+      "name": "Ramhorn, Warrior",
+      "size": "small",
+      "number": "T03",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]\n\nWhen you flip to this mode > You may move an Armor from one of your characters to another one.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "When this defends > You may play an [W] Armor.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "bf8668b4-246b-46f8-bef3-bbb56a2d2ac3",
+      "name": "Steeljaw, Tracker",
+      "size": "small",
+      "number": "T04",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]\n\nWhen you flip to this mode > Each of your characters gets [Bold 1] until end of turn.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "[Bold 1]\n\nEach of your characters that has 10[STARS] or more has [Bold 1].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "4334a360-e49f-43e9-aaf4-b5fd2a06b9a8",
+      "name": "Soundwave, Communications",
+      "size": "standard",
+      "number": "T05",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "Your starting [STAR] limit increases by 1 for each [Mini-Cassette] on your starting team.\n\nThis starts the game with all [Mini-Cassettes] on your starting team under it.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Deploy a [Mini-Cassette] from under this to the battlefield in bot mode. When you do, look at your opponent's hand and choose a card from it. Your opponent puts that card on top of their deck.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "e3ed0fae-dfe9-445c-9096-fe2415ce7475",
+      "name": "Buzzsaw, Spy",
+      "size": "small",
+      "number": "T06",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > You may move a Weapon from one of your characters to another one.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Ranged"
+          ],
+          "text": "When this attacks > You may play a [B] Weapon.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "7b99285f-5fd0-4d8e-abd7-af28ab1d0e1e",
+      "name": "Frenzy, Warrior",
+      "size": "small",
+      "number": "T07",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > Your opponent reveals the top 2 cards of their deck. You may have your opponent scrap those cards.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "When this attacks > Enemies can't use [Tough] this turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "26facecd-8803-4c16-8058-d1f60166996e",
+      "name": "Ravage, Saboteur",
+      "size": "small",
+      "number": "T08",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]\n\nWhen you flip to this mode > One of your characters gets [Pierce 2] until end of turn.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "[Pierce 2]\n\nEach of your characters that has 10 [STARS] or more has [Tough 1].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "936854b3-1627-4a2e-81a1-2e1acad90405",
+      "name": "Buzzsaw, Ravage, Frenzy Attack!",
+      "size": "small",
+      "number": "001",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "If you have Buzzsaw on the battlefield > Draw a card. If you have Ravage on the battlefield > Do 1 damage to an enemy.\n\nIf you have Frenzy on that battlefield > Your opponent chooses one of their Armors and scraps it.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "bf8e9730-a47b-435e-858a-5b716da1af7c",
+      "name": "Daring Counterattack",
+      "size": "small",
+      "number": "002",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Choose one of your characters > It gets +1 [ATK] until end of turn for each Autobot [Mini-Cassette] in your KO area. If you have Blaster on the battlefield, the chosen character also gets [Pierce 6] until end of turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "428ae217-7b55-487c-b4a3-b886ca2632f6",
+      "name": "Inner Groove",
+      "size": "small",
+      "number": "003",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": 1,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Mini-Cassettes] only.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "6674b3d3-9eca-4964-9bdd-e9dfb251c2df",
+      "name": "Intercept Communications",
+      "size": "small",
+      "number": "004",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Play only if Soundwave was on your starting team.\n\nDraw 2 cards.\n\nChoose a card in your opponent's scrap pile and put it on top of their deck.",
+      "stars": 1,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 2
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "fe8e0d4d-ac91-4cd8-8c53-43df91dcba3a",
+      "name": "Interpret The Airwaves",
+      "size": "small",
+      "number": "005",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Autobot"
+      ],
+      "traits": [],
+      "text": "Play only if Blaster was on your starting team.\n\nLook at the top 5 cards of your deck and put them back in any order.",
+      "stars": 1,
+      "icons": {
+        "orange": 2,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "983b5d07-cc06-4744-bd13-c20511264137",
+      "name": "Obstructive Rhythm",
+      "size": "small",
+      "number": "006",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Armor",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "For each [Mini-Cassette] you have on the battlefield > The upgraded character has [Tough 1].",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "b3dbe874-044e-4a35-b932-1533f499958c",
+      "name": "Recover Cassette",
+      "size": "small",
+      "number": "007",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "If you have Blaster or Soundwave on the battlefield > You may put one of your [Mini-Cassettes] from the battlefield under it. If you do, repair 2 damage from one of your characters, then put this card into your KO area.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "cd9f3159-4a23-470b-b0f2-41933befcdc0",
+      "name": "Blaster, Communications",
+      "size": "standard",
+      "number": "T01",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 2,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "Your starting [STAR] limit increases by 1 for each [Mini-Cassette] on your starting team.\n\nThis starts the game with all [Mini-Cassettes] on your starting team under it.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 5,
+          "def": 1,
+          "health": 14,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Depoly a [Mini-Cassette] from under this to the battlefield in bot mode. When you do, play the top card of your deck.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "a2e25515-d013-48b3-ac0b-72553d03f3ae",
+      "name": "Eject, Electronic Surveillance",
+      "size": "small",
+      "number": "T02",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > Look at the top 2 cards of your deck. You may scrap them.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Specialist"
+          ],
+          "text": "When this defends > Enemies can't use [Bold] this turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "552b6417-80fe-4b72-b9b6-70dd057d460a",
+      "name": "Ramhorn, Warrior",
+      "size": "small",
+      "number": "T03",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > You may move an Armor from one of your characters to another one.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "When this defends > You may play an [W] Armor.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "377f4bcc-7436-47aa-8053-78e78af91b20",
+      "name": "Steeljaw, Tracker",
+      "size": "small",
+      "number": "T04",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]\n\nWhen you flip to this mode > Each of your characters gets [Bold 1] until end of turn.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "[Bold 1]\n\nEach of your characters that has 10[STARS] or more has [Bold 1].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "838eabc7-402a-4627-9209-30a07bf642da",
+      "name": "Soundwave, Communications",
+      "size": "standard",
+      "number": "T05",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "Your starting [STAR] limit increases by 1 for each [Mini-Cassette] on your starting team.\n\nThis starts the game with all [Mini-Cassettes] on your starting team under it.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 15,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Specialist"
+          ],
+          "text": "When you flip to this mode > Depoly a [Mini-Cassette] from under this to the battlefield in bot mode. When you do, look at your opponent's hand and choose a card from it. Your opponent puts that card on top of their deck.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "894d4cc9-b679-4db4-b4a8-4c4c200fa9da",
+      "name": "Buzzsaw, Spy",
+      "size": "small",
+      "number": "T06",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > You may move a Weapon from one of your characters to another one.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Ranged"
+          ],
+          "text": "When this attacks > You may play a [B] Weapon.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "57de52db-be79-49e4-9a70-bcbd7ab73beb",
+      "name": "Frenzy, Warrior",
+      "size": "small",
+      "number": "T07",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]. When you flip to this mode > Your opponent reveals the top 2 cards of their deck. You may have your opponent scrap those cards.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "When this attacks > Enemies can't use [Tough] this turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "0d9bd898-5b85-4c0a-bf33-c0ee685ade24",
+      "name": "Ravage, Saboteur",
+      "size": "small",
+      "number": "T08",
+      "rarity": "Rare",
+      "stars": 5,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette"
+          ],
+          "text": "[Stealth]\n\nWhen you flip to this mode > One of your characters gets [Pierce 2] until end of turn.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 9,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Mini-Cassette",
+            "Melee"
+          ],
+          "text": "[Pierce 2]\n\nEach of your characters that has 10[STARS] or more has [Tough 1].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "2cc006af-7afc-49b4-ab99-2d17a67db794",
+      "name": "Private Camshaft, Special Ops • Scout",
+      "size": "standard",
+      "number": "T01",
+      "rarity": "Rare",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Omnibot",
+            "Car",
+            "Specialist"
+          ],
+          "text": "At the start of your first turn > You may play an Armor onto one of your [Omnibots].",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Omnibot",
+            "Specialist"
+          ],
+          "text": "When one of your [Omnibots] with an Armor defends > It gets [Tough] until end of battle equal to the number of [Omnibots] you have with an Armor.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "5514f982-510c-4609-8ca3-d28fcfac7896",
+      "name": "Private Downshift, Special Ops • Security Agent",
+      "size": "standard",
+      "number": "T02",
+      "rarity": "Rare",
+      "stars": 8,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Omnibot",
+            "Car",
+            "Melee"
+          ],
+          "text": "At the start of your first turn > You may play a Weapon onto one of your [Omnibots].",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 11,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Omnibot",
+            "Ranged"
+          ],
+          "text": "When one of your [Omnibots] with a Weapon attacks > It gets [Bold] until end of the turn equal to the number of [Omnibots] you have with a Weapon.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "c63fc2d5-43f8-4a7d-a372-0b48eb17f20b",
+      "name": "Sergeant Overdrive, Special Ops • Strategist",
+      "size": "standard",
+      "number": "T03",
+      "rarity": "Rare",
+      "stars": 9,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 3,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Omnibot",
+            "Car",
+            "Ranged"
+          ],
+          "text": "At the start of your first turn > You may play a Utility onto one of your [Omnibots].",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 1,
+          "health": 12,
+          "faction": [
+            "Autobot"
+          ],
+          "traits": [
+            "Leader",
+            "Omnibot",
+            "Ranged"
+          ],
+          "text": "When one of your [Omnibots] with a Utility battles > It gets [Focus] until end of battle equal to the number of [Omnibots] you have with a Utility.",
+          "mode": "bot"
+        }
+      ]
+    }
+  ]
+}

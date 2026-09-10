@@ -1,0 +1,829 @@
+{
+  "set": {
+    "id": "3180d273-e2a2-41fb-9c1d-62b4f9ae894c",
+    "name": "Wave 2",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "Aerialbot Enigma",
+      "comment": "Partial",
+      "tfdsl": "if(all_friends(name=Superion).count>0)->damage(1,all_enemies());combine(5,'Superion, Sky Protector',bot,Aerialbots)"
+    },
+    {
+      "name": "Aerialbot Formation",
+      "comment": "Partial",
+      "tfdsl": "put_only(trait=Aerialbot)"
+    },
+    {
+      "name": "Ancient Wisdom",
+      "tfdsl": ""
+    },
+    {
+      "name": "Armored Plating",
+      "tfdsl": ""
+    },
+    {
+      "name": "Attack Drone",
+      "comment": "Partial",
+      "tfdsl": "on-put()->play(pick_hand(name='Attack Drone'))"
+    },
+    {
+      "name": "Backup Beam",
+      "tfdsl": "bold(2)"
+    },
+    {
+      "name": "Bad Attitude",
+      "tfdsl": ""
+    },
+    {
+      "name": "Bashing Shield",
+      "tfdsl": "on-put()->scrap_upgrade(pick_enemy_upgrade(subtype=Armor))"
+    },
+    {
+      "name": "Bolt of Lightning",
+      "tfdsl": "damage(3,pick_enemy())"
+    },
+    {
+      "name": "Bravery",
+      "tfdsl": "brave()"
+    },
+    {
+      "name": "Bumpers",
+      "comment": "Partial",
+      "tfdsl": "put_only(trait=Car)"
+    },
+    {
+      "name": "Combat Commands",
+      "comment": "Partial",
+      "tfdsl": "put_only(trait=Sentinel)"
+    },
+    {
+      "name": "Confidence",
+      "comment": "Partial",
+      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2))"
+    },
+    {
+      "name": "Cooling Vents",
+      "tfdsl": "on-put(when(attached().trait=Ranged))->repair(1,attached())"
+    },
+    {
+      "name": "Cornered!",
+      "comment": "Implement opponent_flip()",
+      "tfdsl": "opponent_flip(pick_enemy(mode=bot))"
+    },
+    {
+      "name": "Crash Landing",
+      "comment": "TODO: Needs testing",
+      "tfdsl": "put_only(trait=Plane);on-attached-ko()->damage(attached().atk, pick_enemy(tapped=tapped))"
+    },
+    {
+      "name": "Decepticon Crown",
+      "comment": "Partial",
+      "tfdsl": "put_only(faction=Decepticon)"
+    },
+    {
+      "name": "Defensive Driving",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dinobot Enigma",
+      "comment": "Partial",
+      "tfdsl": "if(all_friends(name=Volcanicus).count>0)->bold_eot(2,pick_friend(name=Volcanicus));combine('Volcanicus, Fiery Champion',5,bot,Dinobot)"
+    },
+    {
+      "name": "Electrified Spikes",
+      "tfdsl": "put_only(trait=Dinobot);on-attached-after-defend-flip(when(event().flips.orange>=2))->damage(1, event().attacker)"
+    },
+    {
+      "name": "Enemy Combat Analysis",
+      "tfdsl": ""
+    },
+    {
+      "name": "Energized Field",
+      "tfdsl": "on-attached-after-defend-flip(when(event().flips.orange>0))->damage(1, event().attacker)"
+    },
+    {
+      "name": "Energon Slingshot",
+      "tfdsl": "on-put(when(attached().trait=Melee))->damage(1,pick_enemy())"
+    },
+    {
+      "name": "Enforcement Batons",
+      "tfdsl": "on-put()->scrap_upgrade(pick_enemy_upgrade(subtype=Weapon))"
+    },
+    {
+      "name": "Erratic Lightning",
+      "tfdsl": ""
+    },
+    {
+      "name": "Escape Route",
+      "tfdsl": "flip(pick_friend(mode=bot),alt)"
+    },
+    {
+      "name": "Espionage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Evasive Maneuvers",
+      "tfdsl": ""
+    },
+    {
+      "name": "Field Communicator",
+      "tfdsl": "on-put(when(attached().trait=Specialist))->(scrap_deck(get_deck());play(previous_target()))"
+    },
+    {
+      "name": "Field Repair",
+      "tfdsl": "repair(1,pick_friend())"
+    },
+    {
+      "name": "Fling",
+      "tfdsl": "move(1,pick_friend(),pick_enemy())"
+    },
+    {
+      "name": "Focus Fire",
+      "comment": "Partial",
+      "tfdsl": "bold(1,pick_friend())"
+    },
+    {
+      "name": "Fog of War",
+      "tfdsl": ""
+    },
+    {
+      "name": "Handheld Blaster",
+      "tfdsl": "bold(1)"
+    },
+    {
+      "name": "Heavy-Handed",
+      "comment": "Partial",
+      "tfdsl": "atk_eot(2,pick_friend())"
+    },
+    {
+      "name": "Improvised Shield",
+      "tfdsl": "tough(1)"
+    },
+    {
+      "name": "Inferno Breath",
+      "comment": "TODO: Need to test the case when you can't pick a friend, does the if previous target work. Also need a better way to express that",
+      "tfdsl": "tap(pick_friend(stars<=10,tapped=untapped));if(previous_target()!=0)->damage(3,pick_enemy())"
+    },
+    {
+      "name": "Intelligence Mission",
+      "comment": "TODO: Find a better way of doing the PT!=0",
+      "tfdsl": "tap(pick_friend(trait=Specialist,tapped=untapped,stars>=5));if(previous_target()!=0)->draw(3)"
+    },
+    {
+      "name": "Inverted!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Leap of Faith",
+      "tfdsl": "scrap_deck(get_deck());play(previous_target());scrap_deck(get_deck());play(previous_target(2))"
+    },
+    {
+      "name": "Marksmanship",
+      "tfdsl": "if(all_friends(trait=Ranged).count>0)->damage(2,pick_enemy(mode='bot'))"
+    },
+    {
+      "name": "Master Plan",
+      "tfdsl": ""
+    },
+    {
+      "name": "Mining Pick",
+      "tfdsl": ""
+    },
+    {
+      "name": "Mounted Missiles",
+      "tfdsl": ""
+    },
+    {
+      "name": "Noble's Blaster",
+      "tfdsl": "put_only(faction=Autobot);on-attached-attack(when(event().defender.faction=Decepticon))->pierce_eob(2,attached())"
+    },
+    {
+      "name": "Pep Talk",
+      "tfdsl": "draw(2)"
+    },
+    {
+      "name": "Power Punch",
+      "tfdsl": "bold(3);on-attached-after-attack()->scrap_upgrade(this())"
+    },
+    {
+      "name": "Predacon Enigma",
+      "comment": "Partial",
+      "tfdsl": "if(all_friends(name=Predaking).count>0)->(draw(1);play(pick_hand(type=Upgrade)));combine('Predaking, Ferocious Hunter',5,bot,Predacon)"
+    },
+    {
+      "name": "Press the Advantage",
+      "tfdsl": "atk_eot(2,pick_friend(faction=Autobot));def_eot(-2,pick_enemy(faction=Decepticon))"
+    },
+    {
+      "name": "Primary Laser",
+      "tfdsl": ""
+    },
+    {
+      "name": "Rapid Conversion",
+      "tfdsl": "flip(pick_friend())"
+    },
+    {
+      "name": "Reckless Charge",
+      "tfdsl": "atk_eot(4,pick_friend());on-eot()->damage(3,previous_target())"
+    },
+    {
+      "name": "Recon System",
+      "tfdsl": ""
+    },
+    {
+      "name": "Rest and Relaxation",
+      "tfdsl": "repair(1,pick_friend())"
+    },
+    {
+      "name": "Scoundrel's Blaster",
+      "tfdsl": "put_only(faction=Decepticon);on-attached-attack(when(event().defender.faction=Autobot))->pierce_eob(2,attached())"
+    },
+    {
+      "name": "Scrounge",
+      "tfdsl": ""
+    },
+    {
+      "name": "Secret Dealings",
+      "comment": "Partial",
+      "tfdsl": "draw(1)"
+    },
+    {
+      "name": "Security Console",
+      "tfdsl": "on-attached-defend()->(draw(1);plan(pick_hand()))"
+    },
+    {
+      "name": "Sentinel Enigma",
+      "comment": "Partial",
+      "tfdsl": "combine('Optimus Maximus, Ultimate Defender',6,bot,Sentinel)"
+    },
+    {
+      "name": "Smelt",
+      "tfdsl": "scrap_upgrade(opponent_pick(opponent().upgrades))"
+    },
+    {
+      "name": "Sonic Scramble",
+      "comment": "Partial",
+      "tfdsl": "scrap_hand(opponent_pick(opponent().hand))"
+    },
+    {
+      "name": "Spare Parts",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sparring Gear",
+      "tfdsl": "tough(2)"
+    },
+    {
+      "name": "Stealthiness",
+      "tfdsl": "stealth()"
+    },
+    {
+      "name": "Steamroll",
+      "tfdsl": ""
+    },
+    {
+      "name": "Stunticon Enigma",
+      "comment": "Partial",
+      "tfdsl": "if(all_friends(name=Menasor).count>0)->draw(2);combine('Menasor, Menacing Colossus',5,bot,Stunticon)"
+    },
+    {
+      "name": "Stunticon Swagger",
+      "comment": "Partial",
+      "tfdsl": "put_only(trait=Stunticon)"
+    },
+    {
+      "name": "Superior Cannon",
+      "tfdsl": "play_only(this-turn().techresearch=played);bold(4)"
+    },
+    {
+      "name": "Superior Jetpack",
+      "tfdsl": "play_only(this-turn().techresearch=played);pierce(4)"
+    },
+    {
+      "name": "Superior Plating",
+      "tfdsl": "play_only(this-turn().techresearch=played);tough(4)"
+    },
+    {
+      "name": "Surprise Attack",
+      "tfdsl": "pierce_eot(3,pick_friend())"
+    },
+    {
+      "name": "Swindled",
+      "comment": "Partial",
+      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2))"
+    },
+    {
+      "name": "Tackle",
+      "comment": "TODO: Debug previous_target().stars - can it take paths?",
+      "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));tap(pick_enemy(previous_target().stars<=stars))"
+    },
+    {
+      "name": "Tech Research",
+      "comment": "TODO: This needs to put a token into the this-turn-context. ",
+      "tfdsl": "set(techresearch=played)"
+    },
+    {
+      "name": "Testify",
+      "tfdsl": "each(all_players())->draw(2,it())"
+    },
+    {
+      "name": "Tooth and Claw",
+      "comment": "Partial",
+      "tfdsl": "put_only(trait=Predacon)"
+    },
+    {
+      "name": "Underhanded Tactics",
+      "comment": "Partial",
+      "tfdsl": "damage(1,pick_enemy())"
+    },
+    {
+      "name": "Universal Network Access",
+      "tfdsl": "draw(3)"
+    },
+    {
+      "name": "Unleash Potential",
+      "tfdsl": ""
+    },
+    {
+      "name": "Vandalize",
+      "tfdsl": "scrap_upgrade(all_enemy_upgrades())"
+    },
+    {
+      "name": "Vaporize",
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade())"
+    },
+    {
+      "name": "Acid Storm, Toxic Terror",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Air Raid, Fearless Flyer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Alpha Bravo, Airborne Special Ops",
+      "tfdsl": {
+        "alt": "",
+        "bot": "pierce(3)"
+      }
+    },
+    {
+      "name": "Autobot Hot Rod, Impulsive Fighter",
+      "tfdsl": {
+        "alt": "tough(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Mirage, Counterintelligence",
+      "tfdsl": {
+        "alt": "pierce(2)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Novastar, Search and Rescue",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Springer, Aerial Defense",
+      "tfdsl": {
+        "alt 1": "static(tough,when(this().upgrades.subtype=Armor),2)",
+        "alt 2": "static(bold,when(this().upgrades.subtype=Weapon),2)",
+        "bot": "static(pierce,when(this().upgrades.subtype=Utility),3)"
+      }
+    },
+    {
+      "name": "Blackwing, Aerial Attacker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Blitzwing, Relentless Foe",
+      "tfdsl": {
+        "alt 1": "brave()",
+        "alt 2": "stealth()",
+        "bot": "on-attached-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1))->flip(this())"
+      }
+    },
+    {
+      "name": "Bluestreak, Reluctant Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-attached-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1,event().flips.white>=1))->flip(this(),alt)"
+      }
+    },
+    {
+      "name": "Blurr, Fastest Bot in the Galaxy",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bombshell, Decepticon Psy Ops",
+      "tfdsl": {
+        "alt": "on-this-flip()->draw(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Breakdown, Paranoid Scout",
+      "tfdsl": {
+        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=2))->atk_eot(2,this())",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bumblebee, Trusted Lieutenant",
+      "tfdsl": {
+        "alt": "on-this-flip()->play(pick_hand(type=Action))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dead End, Doomed Loner",
+      "tfdsl": {
+        "alt": "tough(1)",
+        "bot": "on-this-flip()->draw(1)"
+      }
+    },
+    {
+      "name": "Decepticon Drag Strip, Cutthroat Warrior",
+      "tfdsl": {
+        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=2,event().flips.orange>=2))->draw(2)",
+        "bot": "pierce(1)"
+      }
+    },
+    {
+      "name": "Decepticon Venin, Insecticon Tyrant",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dinobot Sludge, Dino Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-this-attack(when(self().hand.count<opponent().hand.count))->draw(2)"
+      }
+    },
+    {
+      "name": "Dinobot Slug, Battering Ram",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dinobot Snarl, Spiked Battler",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dinobot Swoop, Bombardier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dirge, Doombringer",
+      "comment": "Partial",
+      "tfdsl": {
+        "alt": "",
+        "bot": "pierce(1)"
+      }
+    },
+    {
+      "name": "Divebomb, Aerial Assault",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dreadwind, Air Defense",
+      "tfdsl": {
+        "alt": "pierce(2)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Fireflight, Sky High Recon",
+      "tfdsl": {
+        "alt": "brave()",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Grapple, Autobot Architect",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Grimlock, Powerful Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ironhide, Steadfast Brawler",
+      "tfdsl": {
+        "alt": "bold(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Megatron, Arrogant Ruler",
+      "tfdsl": {
+        "alt": "on-this-flip()->play(pick_hand(type=Upgrade))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Motormaster, Stunticon Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Offroad, All-Terrain Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-this-flip()->repair(1,this())"
+      }
+    },
+    {
+      "name": "Optimus Prime, Gleaming Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Predacon Headstrong, Ground Assault",
+      "tfdsl": {
+        "alt": "brave()",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Predacon Rampage, Savage Hunter",
+      "tfdsl": {
+        "alt": "pierce(2)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Prowl, Strategic Mastermind",
+      "tfdsl": {
+        "alt": "bold(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Razorclaw, Predacon Leader",
+      "tfdsl": {
+        "alt": "bold(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ruckus, Combat Assault",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Silverbolt, Aerialbot Leader",
+      "tfdsl": {
+        "alt": "bold(1);on-attached-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1,event().flips.white>=1))->flip(this(),bot)",
+        "bot": "on-this-flip()->damage(1,pick_enemy())"
+      }
+    },
+    {
+      "name": "Skydive, Air Warfare Specialist",
+      "tfdsl": {
+        "alt": "tough(2)",
+        "bot": "on-this-attack()->repair(1,pick_friend(trait=Aerialbot))"
+      }
+    },
+    {
+      "name": "Skywarp, Teleporting Seeker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Starscream, Decepticon King",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sunstreaker, Bold Warrior",
+      "tfdsl": {
+        "alt": "tough(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Thrust, Supersonic Interceptor",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Torox, Fueler",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Warpath, Confident Sharpshooter",
+      "comment": "Partial",
+      "tfdsl": {
+        "alt": "",
+        "bot": "pierce(2)"
+      }
+    },
+    {
+      "name": "Windblade, Combiner Hunter",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-this-attack(when(event().defender.mode='combiner'))->pierce_eot(4,all_friends())"
+      }
+    },
+    {
+      "name": "Dreadwing, Sky Destroyer",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Menasor, Menacing Colossus",
+      "comment": "Partial",
+      "tfdsl": {
+        "combiner": "bold(1);tough(1);pierce(1)"
+      }
+    },
+    {
+      "name": "Optimus Maximus, Ultimate Defender",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Predaking, Ferocious Hunter",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Superion, Sky Protector",
+      "comment": "Partial",
+      "tfdsl": {
+        "combiner": "bold(1);tough(2);pierce(3)"
+      }
+    },
+    {
+      "name": "Volcanicus, Fiery Champion",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Omega Supreme, Autobot Defense Base",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Builder's Tools",
+      "comment": "Partial",
+      "tfdsl": "put_only(trait=Constructicon)"
+    },
+    {
+      "name": "Constructicon Enigma",
+      "comment": "Partial",
+      "tfdsl": "combine('Devastator, Towering Warrior',6,bot,Constructicon)"
+    },
+    {
+      "name": "Heavy Landing",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reclaim",
+      "tfdsl": ""
+    },
+    {
+      "name": "Work Overtime",
+      "tfdsl": ""
+    },
+    {
+      "name": "Bonecrusher, Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": "pierce(2)"
+      }
+    },
+    {
+      "name": "Hook, Surgical Engineer",
+      "tfdsl": {
+        "alt": "",
+        "bot": "pierce(1)"
+      }
+    },
+    {
+      "name": "Longhaul, Transport",
+      "tfdsl": {
+        "alt": "",
+        "bot": "bold(1)"
+      }
+    },
+    {
+      "name": "Mixmaster, Materials Fabrication",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Scavenger, Mining and Salvage",
+      "tfdsl": {
+        "alt": "",
+        "bot": "tough(1)"
+      }
+    },
+    {
+      "name": "Scrapper, Constructicon Foreman",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Devastator, Towering Warrior",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Bumblebee, Least Likely, Most Dangerous",
+      "tfdsl": {
+        "alt": "",
+        "bot": "bold(1)"
+      }
+    },
+    {
+      "name": "Megatron, Cybertronian Tyrant",
+      "tfdsl": {
+        "alt": "bold(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Starscream, Decepticon Lieutenant",
+      "tfdsl": {
+        "alt": "",
+        "bot": "tough(1)"
+      }
+    },
+    {
+      "name": "Windblade, Defender of Truth",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-this-flip()->pierce_eot(2,this())"
+      }
+    }
+  ]
+}

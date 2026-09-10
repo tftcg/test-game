@@ -1,0 +1,69 @@
+{
+    "id": "026f3891",
+    "warnings": [
+        "<span class=\"Info\" title=\"Deck construction rules used in normal, standard play\">Standard Play</span>: This sideboard has fewer than the 10&#127136; maximum."
+    ],
+    "errors": [],
+    "combiners": {
+        "G07": {
+            "C2A01": true,
+            "C2A02": true,
+            "C2A03": true,
+            "C2A04": true,
+            "C2A05": true,
+            "C2A06": true
+        }
+    },
+    "hasalpha": false,
+    "hasbeta": false,
+    "valid": true,
+    "user": -1,
+    "name": "[Preconstructed] Devastator Set",
+    "notes": "The retail Devastator Set, released on March 29, 2019.",
+    "public": 1,
+    "tournament": null,
+    "created": "2020-09-06 18:37:55",
+    "modified": "2022-10-19 18:56:53",
+    "deck": {
+        "user": -1,
+        "name": "[Preconstructed] Devastator Set",
+        "notes": "The retail Devastator Set, released on March 29, 2019.",
+        "public": 1,
+        "tournament": null,
+        "created": "2020-09-06 18:37:55",
+        "modified": "2022-10-19 18:56:53",
+        "characters": {
+            "C2A01": 1,
+            "C2A02": 1,
+            "C2A03": 1,
+            "C2A04": 1,
+            "C2A05": 1,
+            "C2A06": 1
+        },
+        "stratagems": [],
+        "battle": {
+            "B1007": 3,
+            "B1031": 3,
+            "B1033": 3,
+            "B1057": 2,
+            "B1065": 3,
+            "B2036": 2,
+            "B2046": 3,
+            "B2050": 3,
+            "B2051": 3,
+            "B2A001": 3,
+            "B2A002": 3,
+            "B2A003": 3,
+            "B2A004": 3,
+            "B2A005": 3
+        }
+    },
+    "sideboard": {
+        "characters": [],
+        "stratagems": [],
+        "battle": []
+    },
+    "outside": {
+        "G07": 1
+    }
+}

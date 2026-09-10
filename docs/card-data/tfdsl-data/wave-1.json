@@ -1,0 +1,741 @@
+{
+  "set": {
+    "name": "Wave 1"
+  },
+  "cards": [
+    {
+      "name": "Aerial Recon",
+      "tfdsl": "put_only(trait=Plane);on-attached-battle()->focus(1)"
+    },
+    {
+      "name": "Agility of Bumblebee",
+      "tfdsl": "on-attached-attack(when(attached().name=Bumblebee))->draw(1)"
+    },
+    {
+      "name": "Armed Hovercraft",
+      "tfdsl": "on-put(when(attached().trait=Ranged))->damage(1,all_enemies())"
+    },
+    {
+      "name": "Armored Plating",
+      "tfdsl": ""
+    },
+    {
+      "name": "Backup Plan",
+      "tfdsl": "scrap_hand();draw(3)"
+    },
+    {
+      "name": "Battle Ready",
+      "tfdsl": "each(all_friends())->atk_eot(it().upgrades.count,it())"
+    },
+    {
+      "name": "Blast Shield",
+      "tfdsl": "on-after-defend()->scrap_upgrade(this())"
+    },
+    {
+      "name": "Body Armor",
+      "tfdsl": "put_only(trait=Melee);tough(3)"
+    },
+    {
+      "name": "Bombing Run",
+      "tfdsl": "move(1,all_friends(trait=Plane),pick_enemy())"
+    },
+    {
+      "name": "Brainstorm",
+      "tfdsl": "play(pick_hand(type=Action));play(pick_hand(type=Action))"
+    },
+    {
+      "name": "Bug Bomb",
+      "tfdsl": "put_only(trait=Insecticon);on-ko(when(bot=attached()))->(draw(1);scrap_upgrade(pick_enemy_upgrade());scrap_hand(opponent_pick_opponent_hand()))"
+    },
+    {
+      "name": "Cargo Trailer",
+      "comment": "FAILS: No such thing as slot_utility(3, this())",
+      "tfdsl": "put_only(trait=Truck);static(atk,all_upgrades(attached().upgrade.name='Cargo Trailer').count);slot_utility(3,this())"
+    },
+    {
+      "name": "Collateral Damage",
+      "tfdsl": "each(all_players())->scrap_upgrade(pick(it().upgrades,subtype=Weapon));each(all_players())->scrap_hand(pick(it().hand))"
+    },
+    {
+      "name": "Combat Training",
+      "tfdsl": "static(bold,when(attached().upgrade.subtype=Weapon),1);static(tough,when(attached().upgrade.subtype=Armor),1)"
+    },
+    {
+      "name": "Computer Sabotage",
+      "comment": "INSTEAD: scrap_all_but(3, opponent) ??",
+      "tfdsl": "scrap_hand(-3,opponent)"
+    },
+    {
+      "name": "Crushing Size",
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Utility));when(previous_success=false)->draw(1);pierce(1)"
+    },
+    {
+      "name": "Crushing Treads",
+      "tfdsl": "put_only(trait=Tank);static(pierce,attached().def)"
+    },
+    {
+      "name": "Cybertonium Bow",
+      "comment": "FAILS: on-attack-flip not implemented yet",
+      "tfdsl": "on-attack-flip(when(event.blue=event.orange))->atk_eob(event.blue)"
+    },
+    {
+      "name": "Data Bank",
+      "tfdsl": "on-start-turn()->draw(1)"
+    },
+    {
+      "name": "Data Pad",
+      "comment": "Would be lovely to just say 'plan(1)'",
+      "tfdsl": "on-attached-attack()->(draw(1);plan(pick_hand()))"
+    },
+    {
+      "name": "Debilitating Crystal",
+      "tfdsl": "on-attached-attack()->return_upgrade(pick(event().defender.upgrades))"
+    },
+    {
+      "name": "Dino-Chomp!",
+      "tfdsl": "scrap_hand();bold_eot(5,pick_friend(trait=Dinobot))"
+    },
+    {
+      "name": "Disarm",
+      "tfdsl": "return_upgrade(pick_char().upgrades)"
+    },
+    {
+      "name": "Disruption",
+      "tfdsl": "scrap_hand(pick_opponent_hand(type=Upgrade))"
+    },
+    {
+      "name": "Disruptive Entrance",
+      "tfdsl": "scrap_hand(pick_opponent_hand(type=Action))"
+    },
+    {
+      "name": "Drill Arms",
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Armor));when(previous_success=false)->draw(1)"
+    },
+    {
+      "name": "Emergency Maintenance",
+      "tfdsl": "repair(1,pick_friend());when(all_friends(zone=KO).star.sum>all_friends().star.sum)->repair(2,previous_target())"
+    },
+    {
+      "name": "Energon Axe",
+      "tfdsl": "put_only(damage>0);pierce(2)"
+    },
+    {
+      "name": "Equipment Enthusiast",
+      "tfdsl": "draw(self().upgrades.count)"
+    },
+    {
+      "name": "Flamethrower",
+      "tfdsl": "bold(2)"
+    },
+    {
+      "name": "Force Field",
+      "tfdsl": "instead(on-attack-damage(when(event.damage>4))->modify(event.damage=4))"
+    },
+    {
+      "name": "Fusion Cannon of Megatron",
+      "tfdsl": "static(pierce,when(attached().name=Megatron),3)"
+    },
+    {
+      "name": "Grenade Launcher",
+      "tfdsl": "on-attached-after-attack()->scrap_upgrade(this())"
+    },
+    {
+      "name": "Handheld Blaster",
+      "tfdsl": "bold(1)"
+    },
+    {
+      "name": "Heroism",
+      "tfdsl": "on-attack-damage(when(event.target!=attached(),event.owner=attached().owner))->modify(event.target=attached())"
+    },
+    {
+      "name": "Hunker Down",
+      "tfdsl": "flip(all_friends(mode=bot,other_trait=Tank));scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
+    },
+    {
+      "name": "I Still Function!",
+      "comment": "Currently it can pick a non-character from the KO. Also... I think it will KO due to the ; before the repair",
+      "tfdsl": "return_from_ko(pick(self().ko,star<=12));repair(1,previous_target());on-end-turn()->ko(previous_target())"
+    },
+    {
+      "name": "Improvised Shield",
+      "tfdsl": "tough(1)"
+    },
+    {
+      "name": "Incoming Transmission",
+      "tfdsl": "draw(2);put_deck(pick_hand())"
+    },
+    {
+      "name": "Inspiring Leadership",
+      "tfdsl": "draw(3);scrap_hand(pick_hand(count=2))"
+    },
+    {
+      "name": "Ion Blaster of Optimus Prime",
+      "tfdsl": "put_only(name='Optimus Prime')"
+    },
+    {
+      "name": "Jaws of Steel",
+      "tfdsl": "put_only(trait=Dinobot);bold(2)"
+    },
+    {
+      "name": "Leap Into Battle",
+      "tfdsl": "atk_eot(3,pick_friend())"
+    },
+    {
+      "name": "Matrix of Leadership",
+      "comment": "FAILS: This currently doesn't work. You can't put an each() after an arrow and static doesn't take targets",
+      "tfdsl-old": "put_only(faction=Autobot);if(attached().trait=Leader)->each(other_friends())->(static(pierce,1,it());static(atk,1,it()))",
+      "tfdsl": "put_only(faction=Autobot);each(other_friends())->if(attached().trait=Leader)->(static(pierce,1,it());static(atk,1,it()))"
+    },
+    {
+      "name": "Medic!",
+      "tfdsl": "repair(2,pick_friend())"
+    },
+    {
+      "name": "Multi-Mission Gear",
+      "tfdsl": "on-put(when(attached().trait=Specialist))->play(pick_hand(type=Action))"
+    },
+    {
+      "name": "Multi-Tool",
+      "tfdsl": "on-put(when(attached().trait=Specialist))->play(pick_hand(type=Upgrade))"
+    },
+    {
+      "name": "New Designs",
+      "tfdsl": "play(pick_hand(type=Upgrade))"
+    },
+    {
+      "name": "Null-Ray of Starscream",
+      "tfdsl": "static(bold,when(attached().name=Starscream),2)"
+    },
+    {
+      "name": "One Shall Stand, One Shall Fall",
+      "tfdsl": "damage(3,pick_friend(),pick_enemy())"
+    },
+    {
+      "name": "Peace through Tyranny",
+      "tfdsl": ""
+    },
+    {
+      "name": "Photon Bomb",
+      "tfdsl": "damage(2,all_chars())"
+    },
+    {
+      "name": "Piercing Blaster",
+      "tfdsl": "pierce(3)"
+    },
+    {
+      "name": "Plasma Burst",
+      "tfdsl": "damage(2,pick_enemy())"
+    },
+    {
+      "name": "Power Sword",
+      "tfdsl": "put_only(trait=Melee);bold(3)"
+    },
+    {
+      "name": "Primary Laser",
+      "tfdsl": ""
+    },
+    {
+      "name": "Ramming Speed",
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade())"
+    },
+    {
+      "name": "Rapid Ascent",
+      "tfdsl": "on-put(when(attached().trait=Ranged))->scrap_hand(opponent_pick_opponent_hand())"
+    },
+    {
+      "name": "Rapid Conversion",
+      "tfdsl": "flip(pick_friend())"
+    },
+    {
+      "name": "Ready For Action",
+      "tfdsl": "untap(pick_friend(star<=10))"
+    },
+    {
+      "name": "Reinforced Plating",
+      "tfdsl": "tough(2)"
+    },
+    {
+      "name": "Repair Bay",
+      "tfdsl": "repair(1,all_friends())"
+    },
+    {
+      "name": "Roll Out!",
+      "tfdsl": "flip(all_friends(mode=bot))"
+    },
+    {
+      "name": "Salvage for Parts",
+      "tfdsl": "CUSTOM_salvage_for_parts()"
+    },
+    {
+      "name": "Scrapper Gauntlets",
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Weapon));when(previous_success=false)->draw(1)"
+    },
+    {
+      "name": "Security Checkpoint",
+      "comment": "TODO: Needs to include revealing the hand",
+      "tfdsl": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))"
+    },
+    {
+      "name": "Shock Absorbers",
+      "tfdsl": "on-defend-flip(when(event.blue=event.orange))->def_eob(event.orange)"
+    },
+    {
+      "name": "Start Your Engines",
+      "tfdsl": "flip(all_friends(mode=bot,other_trait=Car));untap(pick_char(trait=Car))"
+    },
+    {
+      "name": "Static Laser of Ironhide",
+      "tfdsl": "on-attached-attack(when(attacker.name!=Ironhide))->damage(2,previous_target())"
+    },
+    {
+      "name": "Strafing Run",
+      "tfdsl": "damage(1,all_enemies())"
+    },
+    {
+      "name": "Supercharge",
+      "tfdsl": "bold_eot(3,pick_friend())"
+    },
+    {
+      "name": "Swap Missions",
+      "tfdsl": "untap(pick_friend(tapped=true));tap(pick_friend(tapped=false))"
+    },
+    {
+      "name": "Swap Parts",
+      "tfdsl": ""
+    },
+    {
+      "name": "Swarm!",
+      "tfdsl": "CUSTOM_swarm()"
+    },
+    {
+      "name": "System Reboot",
+      "tfdsl": "each(all_players())->(scrap_hand(it().hand);draw(4,it()))"
+    },
+    {
+      "name": "Team-Up Tactics",
+      "tfdsl": "choose(pick_friend());if(previous_target().trait=Truck)->repair(2,previous_target());if(previous_target().trait=Car)->draw(2)"
+    },
+    {
+      "name": "The Bigger They Are",
+      "tfdsl": "atk_eot(2,pick_friend());on-attack(when(attacker=previous_target(),defender.stars>attacker.stars))->pierce_eob(4)"
+    },
+    {
+      "name": "Thermal Weaponry",
+      "tfdsl": "on-attached-attack-flip(when(event().card.blue>0))->pierce_eob(event().card.blue,attached())"
+    },
+    {
+      "name": "Treasure Hunt",
+      "tfdsl": "scrap_deck(4);scrap_to_hand(all(previous_target(), type=Upgrade))"
+    },
+    {
+      "name": "Turbo Boosters",
+      "tfdsl": "put_only(trait=Car);untap(attached())"
+    },
+    {
+      "name": "Zap",
+      "tfdsl": "damage(1,pick_enemy())"
+    },
+    {
+      "name": "Height Advantage",
+      "tfdsl": "bold_eot(4,pick_friend(trait=Titan))"
+    },
+    {
+      "name": "Protected By Metroplex",
+      "comment": "TODO: Implement modify()",
+      "tfdsl": "on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name='Metroplex, Autobot City',event.target.owner=attached().owner))"
+    },
+    {
+      "name": "Rally the City",
+      "comment": "BUG: The .count path isn't getting executed here, though it does parse",
+      "tfdsl": "if(all_friends(name='Metroplex, Autobot City').count>0)->draw(all_friends().count)"
+    },
+    {
+      "name": "All-Out Attack",
+      "tfdsl": "CUSTOM_all_out_attack()"
+    },
+    {
+      "name": "Tandem Targeting System",
+      "tfdsl": "on-play(when(play-source=hand()))->scrap_play('Tandem Targeting System')"
+    },
+    {
+      "name": "Arcee, Skilled Fighter",
+      "tfdsl": {
+        "comment": "TODO: test bot",
+        "alt": "on-this-flip()->repair(1,all_friends())",
+        "bot": "static(pierce,this().atk)"
+      }
+    },
+    {
+      "name": "Autobot Cosmos, Recon & Communication",
+      "tfdsl": {
+        "comment": "Test alt",
+        "alt": "on-this-flip()->(scrap_hand(all_hand();draw(previous_target().length)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Hound, Long-Range Scout",
+      "altTxt": "When you flip to this mode 🠪 You may scrap a card from your hand that has at least W. If you do, draw 2 cards.",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-this-after-battle-flip(when(event().flips.white>=1))->(atk_eot(1,this());def_eot(1,this()))"
+      }
+    },
+    {
+      "name": "Autobot Jazz, Special Ops",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->pierce(2,this())"
+      }
+    },
+    {
+      "name": "Autobot Mirage, Lone Wolf",
+      "tfdsl": {
+        "alt": "on-this-flip()->play(pick_hand(type=Action))",
+        "comment": "TODO: Needs to only untap on the first attack",
+        "bot": "on-attached-after-attack-flip(when(event().flips.white>=3))->untap(this())"
+      }
+    },
+    {
+      "name": "Barrage, Merciless Insecticon",
+      "tfdsl": {
+        "alt": "on-this-flip()->pierce_eot(2,pick_friend())",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bombshell, Insecticon Mind-Controller",
+      "tfdsl": {
+        "comment": "vanilla both",
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bumblebee, Courageous Scout",
+      "tfdsl": {
+        "alt": "on-this-flip()->(draw(1);put_deck(pick_hand()))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bumblebee, Legendary Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Chop Shop, Sneaky Insecticon",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Chromia, Special Ops",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->draw(2)"
+      }
+    },
+    {
+      "name": "Darkmount, Cruel Overlord",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-this-defend(when(event().attacker.trait=Ranged))->def_eob(2,this())"
+      }
+    },
+    {
+      "name": "Deadlock, Bounty Hunter",
+      "tfdsl": {
+        "comment": "vanilla bot",
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Decepticon Shockwave, Cybertron Commander",
+      "tfdsl": {
+        "alt": "on-this-flip()->(each(all_players())->draw(2,it()))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Demolisher, Devoted Decepticon",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dinobot Sludge, Mighty Stomper",
+      "tfdsl": {
+        "alt": "",
+        "bot": "on-attack(when(event().attacker.trait=Dinobot))->repair(1,event().attacker)"
+      }
+    },
+    {
+      "name": "Dinobot Slug, Hot-Headed Warrior",
+      "tfdsl": {
+        "comment": "vanilla both",
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dinobot Snarl, Desert Warrior",
+      "tfdsl": {
+        "alt": "on-this-flip(when(self().hand.count=0))->draw(2)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Dinobot Swoop, Fearsome Flyer",
+      "tfdsl": {
+        "comment": "TODO: Test",
+        "alt": "on-this-flip()->move(1,self(),pick_enemy())",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Flamewar, Veteran Decepticon",
+      "tfdsl": {
+        "alt": "on-this-flip()->bold_eot(1,all_friends())",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Grimlock, Dinobot Leader",
+      "tfdsl": {
+        "alt": "on-this-flip()->bold_eot(3,pick_friend(trait=Dinobot))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Inferno, Fearless Firefighter",
+      "tfdsl": {
+        "comment": "vanilla bot",
+        "alt": "on-this-flip()->return_upgrade(all(pick_char().upgrades))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Insecticon Skrapnel, Insecticon Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Jetfire, Air Guardian",
+      "tfdsl": {
+        "alt": "bold(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Kickback, Cunning Insecticon",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Megatron, Decepticon Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": "pierce(3)"
+      }
+    },
+    {
+      "name": "Megatron, Living Weapon",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Nemesis Prime, Dark Clone",
+      "tfdsl": {
+        "alt": "on-this-flip()->damage(2,opponent_pick(opponent().chars))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Optimus Prime, Battlefield Legend",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Optimus Prime, Freedom Fighter",
+      "tfdsl": {
+        "alt": "on-this-flip()->repair(1,all_friends(faction=Autobot))",
+        "bot": "bold(2)"
+      }
+    },
+    {
+      "name": "Prowl, Military Strategist",
+      "tfdsl": {
+        "alt": "on-this-flip()->bold_eot(2,all_friends(trait=Car))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ramjet, Sky Smasher",
+      "tfdsl": {
+        "comment": "vanilla both",
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ransack, Insecticon Commando",
+      "tfdsl": {
+        "comment": "TODO: Test. The alt needs to be pick_other_char()",
+        "alt": "on-this-flip()->move(2,pick_char(),this())",
+        "bot": "static(atk,this().damage)"
+      }
+    },
+    {
+      "name": "Sergeant Kup, Veteran Sergeant",
+      "tfdsl": {
+        "comment": "vanilla both",
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Skywarp, Sneaky Prankster",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Starscream, Air Commander",
+      "tfdsl": {
+        "comment": "TODO: Needs other_friends()",
+        "alt": "on-this-flip()->damage(all_friends(trait=Plane).length,pick_enemy())",
+        "bot": "bold(2)"
+      }
+    },
+    {
+      "name": "Starscream, Scheming Second-in-Command",
+      "tfdsl": {
+        "alt": "bold(1)",
+        "bot": "tough(1)"
+      }
+    },
+    {
+      "name": "Sunstorm, Fusion Flyer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Thundercracker, Mach Warrior",
+      "tfdsl": {
+        "comment": "Test. Bot mode not implemented yet",
+        "alt": "on-this-flip()->damage(2,pick_enemy(trait=Melee))",
+        "bot": "on-play()->atk_eot(1)"
+      }
+    },
+    {
+      "name": "Wheeljack, Weapons Inventor",
+      "botTxt": "While you have a Weapon in your scrap pile 🠪 This has Bold 3.",
+      "tfdsl": {
+        "alt": "on-friend-upgrade(when(event().attached.trait=Car))->(draw(1);scrap_hand(pick_hand()))",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bumblebee, Electrum Warrior",
+      "tfdsl": {
+        "alt": "on-this-flip()->bold_eot(2,this())",
+        "bot": "static(tough,when(this().damage>=5),2)"
+      }
+    },
+    {
+      "name": "Metroplex, Autobot City",
+      "tfdsl": {
+        "alt": "on-start-game()->(summon_friend('Scamper, City Patrol','Six-Gun, Heavy Weapons Expert','Slammer, Combat Drone');place_under(this(),previous_target(1),previous_target(2),previous_target(3)));on-this-flip()->deploy(this(),pick_under_this())",
+        "bot": "on-this-after-attack-flip(when(event().flips.white>=2,event().flips.orange>=2,event().flips.blue>=2))->(tap(all_enemies());damage(1,all_enemies()))"
+      }
+    },
+    {
+      "name": "Scamper, City Patrol",
+      "altTxt": "Your Metroplex has Bold 1",
+      "tfdsl": {
+        "comment": "Using !Utility is a cheap way to do Armor OR Weapon but it will fail someday",
+        "altDesired": "static(bold,when(exists(name=this().name,mode=alt)),1,find('Metroplex'))",
+        "alt": "",
+        "bot": "on-this-flip(when(all_friends(name='Metroplex, Autobot City').count>0))->scrap_upgrade(pick_enemy_upgrade(trait!=Utility))"
+      }
+    },
+    {
+      "name": "Six-Gun, Heavy Weapons Expert",
+      "tfdsl": {
+        "comment":  "Name needs to just be Metroplex",
+        "alt": "on-attack(when(event().attacker.owner=self(),event().attacker.name='Metroplex, Autobot City'))->damage(1,event().defender)",
+        "bot": "on-this-flip()->bold_eot(2,all_friends(name='Metroplex, Autobot City'))"
+      }
+    },
+    {
+      "name": "Slammer, Combat Drone",
+      "alttext": "Partial. Needs: Your Metroplex has Bold 1.",
+      "tfdsl": {
+        "alt": "on-deploy(when(event().deployer.name='Metroplex, Autobot City'))->damage(1,all_enemies())"
+      }
+    },
+    {
+      "name": "Cliffjumper, Renegade Warrior",
+      "tfdsl": {
+        "comment": "Test alt mode. ko will need to be changed to only chars in the ko",
+        "alt": "on-flip(when(event().flipped.owner=this().owner,event.().flipped.mode=bot))->draw(1)",
+        "bot": "static(atk,self().ko.length)"
+      }
+    },
+    {
+      "name": "Slipstream, Strategic Seeker",
+      "tfdsl": {
+        "comment": "TODO: Test alt mode. bot mode needs colors implementing.",
+        "alt": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Plane))->move(event().attacker,event().defender)",
+        "bot": "on-this-after-attack-flip(when(colors.count>=3))->atk_eot(3,this())"
+      }
+    },
+    {
+      "name": "Bumblebee, Brave Warrior",
+      "tfdsl": {
+        "alt": "on-this-flip()->pierce_eot(1,all_friends())",
+        "bot": "tough(1)"
+      }
+    },
+    {
+      "name": "Ironhide, Veteran Autobot",
+      "tfdsl": {
+        "comment": "vanilla both",
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Optimus Prime, Autobot Leader",
+      "tfdsl": {
+        "alt": "on-this-flip()->draw(1)",
+        "bot": "bold(1)"
+      }
+    },
+    {
+      "name": "Red Alert, Security Chief",
+      "tfdsl": {
+        "comment": "vanilla both",
+        "alt": "",
+        "bot": ""
+      }
+    }
+  ]
+}

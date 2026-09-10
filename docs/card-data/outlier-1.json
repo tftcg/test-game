@@ -1,0 +1,511 @@
+{
+  "set": {
+    "id": "51da13e8-8e0d-4b1b-a09a-680bb5f61000",
+    "name": "Outlier 1",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "id": "5c4d5178-a594-4eab-8ece-6bd740296fbd",
+      "name": "Bend to My Will",
+      "size": "small",
+      "number": "001",
+      "rarity": "Rare",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Reveal] > Before your opponent chooses an attacker during their turn.\n[When Revealed] > Your opponent taps one of their characters that has 10[STARS] or fewer.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a542135a-c7d6-4395-a466-a5d8d47a0529",
+      "name": "Colossal Proportions",
+      "size": "small",
+      "number": "002",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": 1,
+      "def": 1,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on Unicron, Chaos Bringer only.\n\nWhen the upgraded character attacks > The defender can't use [Tough] this turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "8ceec27b-c928-4b76-8201-57664d9a57eb",
+      "name": "Energon Harvest",
+      "size": "small",
+      "number": "003",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "An opponent of your choice chooses one >\n• That player does 2 damage to each of their characters.\n• You put 2 Chaos Counters on Unicron, Chaos Bringer.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a6c03272-de53-4836-9042-9786ad418ac6",
+      "name": "Enhanced Talons",
+      "size": "small",
+      "number": "004",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 1,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Unicronian] characters only.\n\nWhen the upgraded character attacks > Do 1 damage to the defender.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "b9314ac2-f46a-459b-95ee-79f5b38fa496",
+      "name": "Hand of Doom",
+      "size": "small",
+      "number": "005",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 2,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on Unicron, Chaos Bringer only.\n\nWhen Unicron, Chaos Bringer attacks > Do 1 damage to each enemy.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "a7bab216-67df-44eb-88c8-63447526347f",
+      "name": "Imminent Chaos",
+      "size": "small",
+      "number": "006",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put 1 Chaos Counter to Unicron, Chaos Bringer.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 1,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "0865bd6b-2def-48c4-8823-4be5b5f77d83",
+      "name": "Insignificance",
+      "size": "small",
+      "number": "007",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Scrap an enemy Upgrade. That Upgrade's owner scraps a card from their hand.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "f002cef8-e965-4969-b778-42c140128c1f",
+      "name": "Leashed Will",
+      "size": "small",
+      "number": "008",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Utility",
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Put on [Unicronian] characters only.\n\nWhen one of your [Unicronian] characters battles > [Plan 1].",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "cdb1f267-8783-4eb9-8ad9-68814d8e4b74",
+      "name": "Menacing Gaze",
+      "size": "small",
+      "number": "009",
+      "rarity": "Rare",
+      "type": "Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "Choose an enemy > Your opponent flips it to another mode.",
+      "stars": 0,
+      "icons": {
+        "orange": 1,
+        "blue": 1,
+        "white": 0,
+        "green": 0,
+        "black": 0
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "0fc38719-f2ad-4cbc-9cc8-124a4590e707",
+      "name": "Unicron, Chaos Bringer",
+      "size": "large",
+      "number": "T01",
+      "rarity": "Super Rare",
+      "stars": 25,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 0,
+          "def": 0,
+          "health": 35,
+          "faction": [
+            "Unicronian"
+          ],
+          "traits": [],
+          "text": "At the start of your turn > Draw a card. Put 2 Chaos Counters on this.\n\nIf this would take 2 or more damage > Remove a Chaos Counter from this instead.\n\nAt the start of your turn, if this has 20 or more Chaos Counters on him > You win the game.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 1,
+          "health": 35,
+          "faction": [
+            "Unicronian"
+          ],
+          "traits": [
+            "Melee",
+            "Ranged"
+          ],
+          "text": "Once per turn you may remove a number of Chaos Counters from this to do one of the following effects >\n• 1>Do 1 damage to an enemy.\n• 2>Draw 2, [Plan 1].\n• 3>Repair 3 damage from this.\n• 5>Return a card from your scrap pile to your hand.\n• 2+X>KO an enemy that has X[STARS].",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "be658582-3083-484e-8464-17d8b58da92b",
+      "name": "Light Our Darkest Hour...",
+      "size": "small",
+      "number": "S01",
+      "rarity": "Rare",
+      "stratagemTarget": "All Characters",
+      "sides": [
+        {
+          "type": "Stratagem",
+          "subtype": null,
+          "atk": null,
+          "def": null,
+          "health": null,
+          "faction": [],
+          "traits": [],
+          "text": "Characters other than Unicron, Chaos Bringer have +1[ATK], +1[DEF], [Pierce 1].",
+          "side": "front",
+          "stars": 0
+        },
+        {
+          "type": "",
+          "subtype": null,
+          "atk": null,
+          "def": null,
+          "health": null,
+          "faction": [],
+          "traits": [],
+          "text": "",
+          "side": "back",
+          "stars": null
+        }
+      ]
+    },
+    {
+      "id": "a85a69fb-2746-43a5-a7dd-3f3f71f83011",
+      "name": "Scourge, Decepticon Tracker",
+      "size": "standard",
+      "number": "T02",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Unicronian",
+            "Spaceship",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Return a Sweeps from your KO area to the battlefield tapped and fully repaired.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 12,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Unicronian",
+            "Melee"
+          ],
+          "text": "[Brave]\n\nWhen this defends and you flip at least 3 different battle icons > Choose one of your other characters. Damage from this attack is done to that character instead.",
+          "mode": "alt"
+        }
+      ]
+    },
+    {
+      "id": "ece7b7d8-7d3a-40d5-a128-b602447bbc82",
+      "name": "Sweeps, Minion",
+      "size": "standard",
+      "number": "T03",
+      "rarity": "Super Rare",
+      "stars": 4,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 3,
+          "def": 2,
+          "health": 4,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Unicronian",
+            "Ranged"
+          ],
+          "text": "[Brave]\n\n[Horde 2]\n\n[Revenge] > Put 1 Chaos Counter on Unicron, Chaos Bringer.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "44e62566-21d3-4ce9-9643-bf5920da29f9",
+      "name": "Cyclonus, Wild Soldier",
+      "size": "standard",
+      "number": "T04",
+      "rarity": "Super Rare",
+      "stars": 10,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Unicronian",
+            "Spaceship",
+            "Ranged"
+          ],
+          "text": "[Focus 2]",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 4,
+          "def": 2,
+          "health": 13,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Unicronian",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > This gets +2[ATK] until the end of the turn. If he has a weapon, instead he gets +4[ATK] until the end of the turn.",
+          "mode": "bot"
+        }
+      ]
+    },
+    {
+      "id": "cdb0e0a8-34e9-411b-ad84-de94a8fced58",
+      "name": "Galvatron, Decepticon Warlord",
+      "size": "standard",
+      "number": "T05",
+      "rarity": "Super Rare",
+      "stars": 15,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt Mode",
+          "atk": 5,
+          "def": 3,
+          "health": 17,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Unicronian",
+            "Tank",
+            "Ranged"
+          ],
+          "text": "This can attack untapped enemies as though they were tapped.",
+          "mode": "alt"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 6,
+          "def": 2,
+          "health": 17,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Unicronian",
+            "Ranged"
+          ],
+          "text": "When this attacks and damages an enemy > Scrap an Upgrade from that enemy.",
+          "mode": "bot"
+        }
+      ]
+    }
+  ]
+}

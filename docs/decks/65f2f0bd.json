@@ -1,0 +1,55 @@
+{
+    "id": "65f2f0bd",
+    "warnings": [
+        "<span class=\"Info\" title=\"Deck construction rules used in normal, standard play\">Standard Play</span>: This sideboard has fewer than the 10&#127136; maximum."
+    ],
+    "errors": [
+        "<span class=\"Info\" title=\"Deck construction rules used in normal, standard play\">Standard Play</span>: This deck has more than 25&#9733;."
+    ],
+    "combiners": [],
+    "hasalpha": false,
+    "hasbeta": false,
+    "valid": false,
+    "user": -1,
+    "name": "[Preconstructed] Metroplex Set",
+    "notes": "The retail Metroplex Set, released on November 20, 2018.",
+    "public": 1,
+    "tournament": null,
+    "created": "2020-09-06 18:35:32",
+    "modified": "2020-10-05 02:52:04",
+    "deck": {
+        "user": -1,
+        "name": "[Preconstructed] Metroplex Set",
+        "notes": "The retail Metroplex Set, released on November 20, 2018.",
+        "public": 1,
+        "tournament": null,
+        "created": "2020-09-06 18:35:32",
+        "modified": "2020-10-05 02:52:04",
+        "characters": {
+            "C1A01": 1
+        },
+        "stratagems": [],
+        "battle": {
+            "B1004": 3,
+            "B1005": 3,
+            "B1014": 2,
+            "B1020": 2,
+            "B1030": 3,
+            "B1031": 3,
+            "B1034": 3,
+            "B1039": 3,
+            "B1040": 3,
+            "B1059": 3,
+            "B1071": 3,
+            "B1A001": 3,
+            "B1A002": 3,
+            "B1A003": 3
+        }
+    },
+    "sideboard": {
+        "characters": [],
+        "stratagems": [],
+        "battle": []
+    },
+    "outside": []
+}

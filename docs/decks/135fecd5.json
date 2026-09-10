@@ -1,0 +1,63 @@
+{
+    "id": "135fecd5",
+    "warnings": [
+        "<span class=\"Info\" title=\"Deck construction rules used in normal, standard play\">Standard Play</span>: This sideboard has fewer than the 10&#127136; maximum."
+    ],
+    "errors": [],
+    "combiners": [],
+    "hasalpha": false,
+    "hasbeta": false,
+    "valid": true,
+    "user": -1,
+    "name": "[Preconstructed] Bumblebee Vs. Megatron Starter Set",
+    "notes": "The retail Bumblebee Vs. Megatron Starter Set, released on May 3, 2019.",
+    "public": 1,
+    "tournament": null,
+    "created": "2020-09-06 18:38:51",
+    "modified": "2022-10-12 20:40:03",
+    "deck": {
+        "user": -1,
+        "name": "[Preconstructed] Bumblebee Vs. Megatron Starter Set",
+        "notes": "The retail Bumblebee Vs. Megatron Starter Set, released on May 3, 2019.",
+        "public": 1,
+        "tournament": null,
+        "created": "2020-09-06 18:38:51",
+        "modified": "2022-10-12 20:40:03",
+        "characters": {
+            "C2S01": 1,
+            "C2S02": 1,
+            "C2S03": 1,
+            "C2S04": 1
+        },
+        "stratagems": [],
+        "battle": {
+            "B1029": 2,
+            "B1033": 2,
+            "B1048": 2,
+            "B1070": 1,
+            "B1071": 2,
+            "B2004": 2,
+            "B2006": 2,
+            "B2024": 2,
+            "B2034": 2,
+            "B2036": 2,
+            "B2037": 2,
+            "B2040": 1,
+            "B2046": 2,
+            "B2050": 2,
+            "B2052": 2,
+            "B2054": 2,
+            "B2058": 2,
+            "B2063": 2,
+            "B2064": 2,
+            "B2071": 2,
+            "B2081": 2
+        }
+    },
+    "sideboard": {
+        "characters": [],
+        "stratagems": [],
+        "battle": []
+    },
+    "outside": []
+}

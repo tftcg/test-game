@@ -1,0 +1,62 @@
+{
+    "id": "0b706068",
+    "warnings": [
+        "<span class=\"Info\" title=\"Deck construction rules used in normal, standard play\">Standard Play</span>: This sideboard has fewer than the 10&#127136; maximum."
+    ],
+    "errors": [],
+    "combiners": [],
+    "hasalpha": false,
+    "hasbeta": false,
+    "valid": true,
+    "user": -1,
+    "name": "[Preconstructed] Autobot Starter Set",
+    "notes": "The retail Autobot Starter Set, released on September 28, 2018.",
+    "public": 1,
+    "tournament": null,
+    "created": "2020-09-06 17:05:20",
+    "modified": "2020-10-05 02:52:04",
+    "deck": {
+        "user": -1,
+        "name": "[Preconstructed] Autobot Starter Set",
+        "notes": "The retail Autobot Starter Set, released on September 28, 2018.",
+        "public": 1,
+        "tournament": null,
+        "created": "2020-09-06 17:05:20",
+        "modified": "2020-10-05 02:52:04",
+        "characters": {
+            "C1S01": 1,
+            "C1S02": 1,
+            "C1S03": 1,
+            "C1S04": 1
+        },
+        "stratagems": [],
+        "battle": {
+            "B1004": 2,
+            "B1006": 2,
+            "B1020": 2,
+            "B1021": 2,
+            "B1030": 2,
+            "B1033": 2,
+            "B1034": 2,
+            "B1038": 2,
+            "B1039": 2,
+            "B1040": 2,
+            "B1043": 2,
+            "B1048": 2,
+            "B1053": 2,
+            "B1054": 2,
+            "B1056": 2,
+            "B1057": 2,
+            "B1058": 2,
+            "B1059": 2,
+            "B1062": 2,
+            "B1076": 2
+        }
+    },
+    "sideboard": {
+        "characters": [],
+        "stratagems": [],
+        "battle": []
+    },
+    "outside": []
+}

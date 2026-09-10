@@ -1,0 +1,4896 @@
+{
+ "cards": [
+  {
+    "name": "Aerial Recon",
+    "id": "B1001"
+  },
+  {
+    "name": "Agility of Bumblebee",
+    "id": "B1002"
+  },
+  {
+    "name": "Armed Hovercraft",
+    "id": "B1003"
+  },
+  {
+    "name": "Armored Plating",
+    "id": "B1004"
+  },
+  {
+    "name": "Backup Plan",
+    "id": "B1005"
+  },
+  {
+    "name": "Battle Ready",
+    "id": "B1006"
+  },
+  {
+    "name": "Blast Shield",
+    "id": "B1007"
+  },
+  {
+    "name": "Body Armor",
+    "id": "B1008"
+  },
+  {
+    "name": "Bombing Run",
+    "id": "B1009"
+  },
+  {
+    "name": "Brainstorm",
+    "id": "B1010"
+  },
+  {
+    "name": "Bug Bomb",
+    "id": "B1011"
+  },
+  {
+    "name": "Cargo Trailer",
+    "id": "B1012"
+  },
+  {
+    "name": "Collateral Damage",
+    "id": "B1013"
+  },
+  {
+    "name": "Combat Training",
+    "id": "B1014"
+  },
+  {
+    "name": "Computer Sabotage",
+    "id": "B1015"
+  },
+  {
+    "name": "Crushing Size",
+    "id": "B1016"
+  },
+  {
+    "name": "Crushing Treads",
+    "id": "B1017"
+  },
+  {
+    "name": "Cybertonium Bow",
+    "id": "B1018"
+  },
+  {
+    "name": "Data Bank",
+    "id": "B1019"
+  },
+  {
+    "name": "Data Pad",
+    "id": "B1020"
+  },
+  {
+    "name": "Debilitating Crystal",
+    "id": "B1021"
+  },
+  {
+    "name": "Dino-Chomp!",
+    "id": "B1022"
+  },
+  {
+    "name": "Disarm",
+    "id": "B1023"
+  },
+  {
+    "name": "Disruption",
+    "id": "B1024"
+  },
+  {
+    "name": "Disruptive Entrance",
+    "id": "B1025"
+  },
+  {
+    "name": "Drill Arms",
+    "id": "B1026"
+  },
+  {
+    "name": "Emergency Maintenance",
+    "id": "B1027"
+  },
+  {
+    "name": "Energon Axe",
+    "id": "B1028"
+  },
+  {
+    "name": "Equipment Enthusiast",
+    "id": "B1029"
+  },
+  {
+    "name": "Flamethrower",
+    "id": "B1030"
+  },
+  {
+    "name": "Force Field",
+    "id": "B1031"
+  },
+  {
+    "name": "Fusion Cannon of Megatron",
+    "id": "B1032"
+  },
+  {
+    "name": "Grenade Launcher",
+    "id": "B1033"
+  },
+  {
+    "name": "Handheld Blaster",
+    "id": "B1034"
+  },
+  {
+    "name": "Heroism",
+    "id": "B1035"
+  },
+  {
+    "name": "Hunker Down",
+    "id": "B1036"
+  },
+  {
+    "name": "I Still Function!",
+    "id": "B1037"
+  },
+  {
+    "name": "Improvised Shield",
+    "id": "B1038"
+  },
+  {
+    "name": "Incoming Transmission",
+    "id": "B1039"
+  },
+  {
+    "name": "Inspiring Leadership",
+    "id": "B1040"
+  },
+  {
+    "name": "Ion Blaster of Optimus Prime",
+    "id": "B1041"
+  },
+  {
+    "name": "Jaws of Steel",
+    "id": "B1042"
+  },
+  {
+    "name": "Leap Into Battle",
+    "id": "B1043"
+  },
+  {
+    "name": "Matrix of Leadership",
+    "id": "B1044"
+  },
+  {
+    "name": "Medic!",
+    "id": "B1045"
+  },
+  {
+    "name": "Multi-Mission Gear",
+    "id": "B1046"
+  },
+  {
+    "name": "Multi-Tool",
+    "id": "B1047"
+  },
+  {
+    "name": "New Designs",
+    "id": "B1048"
+  },
+  {
+    "name": "Null-Ray of Starscream",
+    "id": "B1049"
+  },
+  {
+    "name": "One Shall Stand, One Shall Fall",
+    "id": "B1050"
+  },
+  {
+    "name": "Peace through Tyranny",
+    "id": "B1051"
+  },
+  {
+    "name": "Photon Bomb",
+    "id": "B1052"
+  },
+  {
+    "name": "Piercing Blaster",
+    "id": "B1053"
+  },
+  {
+    "name": "Plasma Burst",
+    "id": "B1054"
+  },
+  {
+    "name": "Power Sword",
+    "id": "B1055"
+  },
+  {
+    "name": "Primary Laser",
+    "id": "B1056"
+  },
+  {
+    "name": "Ramming Speed",
+    "id": "B1057"
+  },
+  {
+    "name": "Rapid Ascent",
+    "id": "B1058"
+  },
+  {
+    "name": "Rapid Conversion",
+    "id": "B1059"
+  },
+  {
+    "name": "Ready For Action",
+    "id": "B1060"
+  },
+  {
+    "name": "Reinforced Plating",
+    "id": "B1061"
+  },
+  {
+    "name": "Repair Bay",
+    "id": "B1062"
+  },
+  {
+    "name": "Roll Out!",
+    "id": "B1063"
+  },
+  {
+    "name": "Salvage for Parts",
+    "id": "B1064"
+  },
+  {
+    "name": "Scrapper Gauntlets",
+    "id": "B1065"
+  },
+  {
+    "name": "Security Checkpoint",
+    "id": "B1066"
+  },
+  {
+    "name": "Shock Absorbers",
+    "id": "B1067"
+  },
+  {
+    "name": "Start Your Engines",
+    "id": "B1068"
+  },
+  {
+    "name": "Static Laser of Ironhide",
+    "id": "B1069"
+  },
+  {
+    "name": "Strafing Run",
+    "id": "B1070"
+  },
+  {
+    "name": "Supercharge",
+    "id": "B1071"
+  },
+  {
+    "name": "Swap Missions",
+    "id": "B1072"
+  },
+  {
+    "name": "Swap Parts",
+    "id": "B1073"
+  },
+  {
+    "name": "Swarm!",
+    "id": "B1074"
+  },
+  {
+    "name": "System Reboot",
+    "id": "B1075"
+  },
+  {
+    "name": "Team-Up Tactics",
+    "id": "B1076"
+  },
+  {
+    "name": "The Bigger They Are",
+    "id": "B1077"
+  },
+  {
+    "name": "Thermal Weaponry",
+    "id": "B1078"
+  },
+  {
+    "name": "Treasure Hunt",
+    "id": "B1079"
+  },
+  {
+    "name": "Turbo Boosters",
+    "id": "B1080"
+  },
+  {
+    "name": "Zap",
+    "id": "B1081"
+  },
+  {
+    "name": "Arcee, Skilled Fighter",
+    "id": "C101"
+  },
+  {
+    "name": "Autobot Cosmos, Recon &amp; Communication",
+    "id": "C102"
+  },
+  {
+    "name": "Autobot Hound, Long-Range Scout",
+    "id": "C103"
+  },
+  {
+    "name": "Autobot Jazz, Special Ops",
+    "id": "C104"
+  },
+  {
+    "name": "Autobot Mirage, Lone Wolf",
+    "id": "C105"
+  },
+  {
+    "name": "Barrage, Merciless Insecticon",
+    "id": "C106"
+  },
+  {
+    "name": "Bombshell, Insecticon Mind-Controller",
+    "id": "C107"
+  },
+  {
+    "name": "Bumblebee, Courageous Scout",
+    "id": "C108"
+  },
+  {
+    "name": "Bumblebee, Legendary Warrior",
+    "id": "C109"
+  },
+  {
+    "name": "Chop Shop, Sneaky Insecticon",
+    "id": "C110"
+  },
+  {
+    "name": "Chromia, Special Ops",
+    "id": "C111"
+  },
+  {
+    "name": "Darkmount, Cruel Overlord",
+    "id": "C112"
+  },
+  {
+    "name": "Deadlock, Bounty Hunter",
+    "id": "C113"
+  },
+  {
+    "name": "Decepticon Shockwave, Cybertron Commander",
+    "id": "C114"
+  },
+  {
+    "name": "Demolisher, Devoted Decepticon",
+    "id": "C115"
+  },
+  {
+    "name": "Dinobot Sludge, Mighty Stomper",
+    "id": "C116"
+  },
+  {
+    "name": "Dinobot Slug, Hot-Headed Warrior",
+    "id": "C117"
+  },
+  {
+    "name": "Dinobot Snarl, Desert Warrior",
+    "id": "C118"
+  },
+  {
+    "name": "Dinobot Swoop, Fearsome Flyer",
+    "id": "C119"
+  },
+  {
+    "name": "Flamewar, Veteran Decepticon",
+    "id": "C120"
+  },
+  {
+    "name": "Grimlock, Dinobot Leader",
+    "id": "C121"
+  },
+  {
+    "name": "Inferno, Fearless Firefighter",
+    "id": "C122"
+  },
+  {
+    "name": "Insecticon Skrapnel, Insecticon Leader",
+    "id": "C123"
+  },
+  {
+    "name": "Jetfire, Air Guardian",
+    "id": "C124"
+  },
+  {
+    "name": "Kickback, Cunning Insecticon",
+    "id": "C125"
+  },
+  {
+    "name": "Megatron, Decepticon Leader",
+    "id": "C126"
+  },
+  {
+    "name": "Megatron, Living Weapon",
+    "id": "C127"
+  },
+  {
+    "name": "Nemesis Prime, Dark Clone",
+    "id": "C128"
+  },
+  {
+    "name": "Optimus Prime, Battlefield Legend",
+    "id": "C129"
+  },
+  {
+    "name": "Optimus Prime, Freedom Fighter",
+    "id": "C130"
+  },
+  {
+    "name": "Prowl, Military Strategist",
+    "id": "C131"
+  },
+  {
+    "name": "Ramjet, Sky Smasher",
+    "id": "C132"
+  },
+  {
+    "name": "Ransack, Insecticon Commando",
+    "id": "C133"
+  },
+  {
+    "name": "Sergeant Kup, Veteran Sergeant",
+    "id": "C134"
+  },
+  {
+    "name": "Skywarp, Sneaky Prankster",
+    "id": "C135"
+  },
+  {
+    "name": "Starscream, Air Commander",
+    "id": "C136"
+  },
+  {
+    "name": "Starscream, Scheming Second-in-Command",
+    "id": "C137"
+  },
+  {
+    "name": "Sunstorm, Fusion Flyer",
+    "id": "C138"
+  },
+  {
+    "name": "Thundercracker, Mach Warrior",
+    "id": "C139"
+  },
+  {
+    "name": "Wheeljack, Weapons Inventor",
+    "id": "C140"
+  },
+  {
+    "name": "Bumblebee, Electrum Warrior",
+    "id": "CP1901"
+  },
+  {
+    "name": "Flamewar, Veteran Decepticon",
+    "id": "CP1904"
+  },
+  {
+    "name": "Height Advantage",
+    "id": "B1A001"
+  },
+  {
+    "name": "Protected By Metroplex",
+    "id": "B1A002"
+  },
+  {
+    "name": "Rally the City",
+    "id": "B1A003"
+  },
+  {
+    "name": "Metroplex, Autobot City",
+    "id": "C1A01"
+  },
+  {
+    "name": "Scamper, City Patrol",
+    "id": "C1A02"
+  },
+  {
+    "name": "Six-Gun, Heavy Weapons Expert",
+    "id": "C1A03"
+  },
+  {
+    "name": "Slammer, Combat Drone",
+    "id": "C1A04"
+  },
+  {
+    "name": "All-Out Attack",
+    "id": "B1C001"
+  },
+  {
+    "name": "Tandem Targeting System",
+    "id": "B1C002"
+  },
+  {
+    "name": "Cliffjumper, Renegade Warrior",
+    "id": "C1C01"
+  },
+  {
+    "name": "Slipstream, Strategic Seeker",
+    "id": "C1C02"
+  },
+  {
+    "name": "Bumblebee, Brave Warrior",
+    "id": "C1S01"
+  },
+  {
+    "name": "Ironhide, Veteran Autobot",
+    "id": "C1S02"
+  },
+  {
+    "name": "Optimus Prime, Autobot Leader",
+    "id": "C1S03"
+  },
+  {
+    "name": "Red Alert, Security Chief",
+    "id": "C1S04"
+  },
+  {
+    "name": "Agility of Bumblebee",
+    "id": "B1E001"
+  },
+  {
+    "name": "Bombing Run",
+    "id": "B1E002"
+  },
+  {
+    "name": "Cargo Trailer",
+    "id": "B1E003"
+  },
+  {
+    "name": "Fusion Cannon of Megatron",
+    "id": "B1E004"
+  },
+  {
+    "name": "Ion Blaster of Optimus Prime",
+    "id": "B1E005"
+  },
+  {
+    "name": "Start Your Engines",
+    "id": "B1E006"
+  },
+  {
+    "name": "All-Out Attack",
+    "id": "BP1911"
+  },
+  {
+    "name": "Tandem Targeting System",
+    "id": "BP1912"
+  },
+  {
+    "name": "Bumblebee, Legendary Warrior",
+    "id": "C1E01"
+  },
+  {
+    "name": "Cliffjumper, Renegade Warrior",
+    "id": "C1E02"
+  },
+  {
+    "name": "Megatron, Living Weapon",
+    "id": "C1E03"
+  },
+  {
+    "name": "Nemesis Prime, Dark Clone",
+    "id": "C1E04"
+  },
+  {
+    "name": "Optimus Prime, Battlefield Legend",
+    "id": "C1E05"
+  },
+  {
+    "name": "Slipstream, Strategic Seeker",
+    "id": "C1E06"
+  },
+  {
+    "name": "Aerialbot Enigma",
+    "id": "B2001"
+  },
+  {
+    "name": "Aerialbot Formation",
+    "id": "B2002"
+  },
+  {
+    "name": "Ancient Wisdom",
+    "id": "B2003"
+  },
+  {
+    "name": "Armored Plating",
+    "id": "B2004"
+  },
+  {
+    "name": "Attack Drone",
+    "id": "B2005"
+  },
+  {
+    "name": "Backup Beam",
+    "id": "B2006"
+  },
+  {
+    "name": "Bad Attitude",
+    "id": "B2007"
+  },
+  {
+    "name": "Bashing Shield",
+    "id": "B2008"
+  },
+  {
+    "name": "Bolt of Lightning",
+    "id": "B2009"
+  },
+  {
+    "name": "Bravery",
+    "id": "B2010"
+  },
+  {
+    "name": "Bumpers",
+    "id": "B2011"
+  },
+  {
+    "name": "Combat Commands",
+    "id": "B2012"
+  },
+  {
+    "name": "Confidence",
+    "id": "B2013"
+  },
+  {
+    "name": "Cooling Vents",
+    "id": "B2014"
+  },
+  {
+    "name": "Cornered!",
+    "id": "B2015"
+  },
+  {
+    "name": "Crash Landing",
+    "id": "B2016"
+  },
+  {
+    "name": "Decepticon Crown",
+    "id": "B2017"
+  },
+  {
+    "name": "Defensive Driving",
+    "id": "B2018"
+  },
+  {
+    "name": "Dinobot Enigma",
+    "id": "B2019"
+  },
+  {
+    "name": "Electrified Spikes",
+    "id": "B2020"
+  },
+  {
+    "name": "Enemy Combat Analysis",
+    "id": "B2021"
+  },
+  {
+    "name": "Energized Field",
+    "id": "B2022"
+  },
+  {
+    "name": "Energon Slingshot",
+    "id": "B2023"
+  },
+  {
+    "name": "Enforcement Batons",
+    "id": "B2024"
+  },
+  {
+    "name": "Erratic Lightning",
+    "id": "B2025"
+  },
+  {
+    "name": "Escape Route",
+    "id": "B2026"
+  },
+  {
+    "name": "Espionage",
+    "id": "B2027"
+  },
+  {
+    "name": "Evasive Maneuvers",
+    "id": "B2028"
+  },
+  {
+    "name": "Field Communicator",
+    "id": "B2029"
+  },
+  {
+    "name": "Field Repair",
+    "id": "B2030"
+  },
+  {
+    "name": "Fling",
+    "id": "B2031"
+  },
+  {
+    "name": "Focus Fire",
+    "id": "B2032"
+  },
+  {
+    "name": "Fog of War",
+    "id": "B2033"
+  },
+  {
+    "name": "Handheld Blaster",
+    "id": "B2034"
+  },
+  {
+    "name": "Heavy-Handed",
+    "id": "B2035"
+  },
+  {
+    "name": "Improvised Shield",
+    "id": "B2036"
+  },
+  {
+    "name": "Inferno Breath",
+    "id": "B2037"
+  },
+  {
+    "name": "Intelligence Mission",
+    "id": "B2038"
+  },
+  {
+    "name": "Inverted!",
+    "id": "B2039"
+  },
+  {
+    "name": "Leap of Faith",
+    "id": "B2040"
+  },
+  {
+    "name": "Marksmanship",
+    "id": "B2041"
+  },
+  {
+    "name": "Master Plan",
+    "id": "B2042"
+  },
+  {
+    "name": "Mining Pick",
+    "id": "B2043"
+  },
+  {
+    "name": "Mounted Missiles",
+    "id": "B2044"
+  },
+  {
+    "name": "Noble's Blaster",
+    "id": "B2045"
+  },
+  {
+    "name": "Pep Talk",
+    "id": "B2046"
+  },
+  {
+    "name": "Power Punch",
+    "id": "B2047"
+  },
+  {
+    "name": "Predacon Enigma",
+    "id": "B2048"
+  },
+  {
+    "name": "Press the Advantage",
+    "id": "B2049"
+  },
+  {
+    "name": "Primary Laser",
+    "id": "B2050"
+  },
+  {
+    "name": "Rapid Conversion",
+    "id": "B2051"
+  },
+  {
+    "name": "Reckless Charge",
+    "id": "B2052"
+  },
+  {
+    "name": "Recon System",
+    "id": "B2053"
+  },
+  {
+    "name": "Rest and Relaxation",
+    "id": "B2054"
+  },
+  {
+    "name": "Scoundrel's Blaster",
+    "id": "B2055"
+  },
+  {
+    "name": "Scrounge",
+    "id": "B2056"
+  },
+  {
+    "name": "Secret Dealings",
+    "id": "B2057"
+  },
+  {
+    "name": "Security Console",
+    "id": "B2058"
+  },
+  {
+    "name": "Sentinel Enigma",
+    "id": "B2059"
+  },
+  {
+    "name": "Smelt",
+    "id": "B2060"
+  },
+  {
+    "name": "Sonic Scramble",
+    "id": "B2061"
+  },
+  {
+    "name": "Spare Parts",
+    "id": "B2062"
+  },
+  {
+    "name": "Sparring Gear",
+    "id": "B2063"
+  },
+  {
+    "name": "Stealthiness",
+    "id": "B2064"
+  },
+  {
+    "name": "Steamroll",
+    "id": "B2065"
+  },
+  {
+    "name": "Stunticon Enigma",
+    "id": "B2066"
+  },
+  {
+    "name": "Stunticon Swagger",
+    "id": "B2067"
+  },
+  {
+    "name": "Superior Cannon",
+    "id": "B2068"
+  },
+  {
+    "name": "Superior Jetpack",
+    "id": "B2069"
+  },
+  {
+    "name": "Superior Plating",
+    "id": "B2070"
+  },
+  {
+    "name": "Surprise Attack",
+    "id": "B2071"
+  },
+  {
+    "name": "Swindled",
+    "id": "B2072"
+  },
+  {
+    "name": "Tackle",
+    "id": "B2073"
+  },
+  {
+    "name": "Tech Research",
+    "id": "B2074"
+  },
+  {
+    "name": "Testify",
+    "id": "B2075"
+  },
+  {
+    "name": "Tooth and Claw",
+    "id": "B2076"
+  },
+  {
+    "name": "Underhanded Tactics",
+    "id": "B2077"
+  },
+  {
+    "name": "Universal Network Access",
+    "id": "B2078"
+  },
+  {
+    "name": "Unleash Potential",
+    "id": "B2079"
+  },
+  {
+    "name": "Vandalize",
+    "id": "B2080"
+  },
+  {
+    "name": "Vaporize",
+    "id": "B2081"
+  },
+  {
+    "name": "Acid Storm, Toxic Terror",
+    "id": "C201"
+  },
+  {
+    "name": "Air Raid, Fearless Flyer",
+    "id": "C202"
+  },
+  {
+    "name": "Alpha Bravo, Airborne Special Ops",
+    "id": "C203"
+  },
+  {
+    "name": "Autobot Hot Rod, Impulsive Fighter",
+    "id": "C204"
+  },
+  {
+    "name": "Autobot Mirage, Counterintelligence",
+    "id": "C205"
+  },
+  {
+    "name": "Autobot Novastar, Search and Rescue",
+    "id": "C206"
+  },
+  {
+    "name": "Autobot Springer, Aerial Defense",
+    "id": "C207"
+  },
+  {
+    "name": "Blackwing, Aerial Attacker",
+    "id": "C208"
+  },
+  {
+    "name": "Blitzwing, Relentless Foe",
+    "id": "C209"
+  },
+  {
+    "name": "Bluestreak, Reluctant Soldier",
+    "id": "C210"
+  },
+  {
+    "name": "Blurr, Fastest Bot in the Galaxy",
+    "id": "C211"
+  },
+  {
+    "name": "Bombshell, Decepticon Psy Ops",
+    "id": "C212"
+  },
+  {
+    "name": "Breakdown, Paranoid Scout",
+    "id": "C213"
+  },
+  {
+    "name": "Bumblebee, Trusted Lieutenant",
+    "id": "C214"
+  },
+  {
+    "name": "Dead End, Doomed Loner",
+    "id": "C215"
+  },
+  {
+    "name": "Decepticon Drag Strip, Cutthroat Warrior",
+    "id": "C216"
+  },
+  {
+    "name": "Decepticon Venin, Insecticon Tyrant",
+    "id": "C217"
+  },
+  {
+    "name": "Dinobot Sludge, Dino Demolitions",
+    "id": "C218"
+  },
+  {
+    "name": "Dinobot Slug, Battering Ram",
+    "id": "C219"
+  },
+  {
+    "name": "Dinobot Snarl, Spiked Battler",
+    "id": "C220"
+  },
+  {
+    "name": "Dinobot Swoop, Bombardier",
+    "id": "C221"
+  },
+  {
+    "name": "Dirge, Doombringer",
+    "id": "C222"
+  },
+  {
+    "name": "Divebomb, Aerial Assault",
+    "id": "C223"
+  },
+  {
+    "name": "Dreadwind, Air Defense",
+    "id": "C224"
+  },
+  {
+    "name": "Fireflight, Sky High Recon",
+    "id": "C225"
+  },
+  {
+    "name": "Grapple, Autobot Architect",
+    "id": "C226"
+  },
+  {
+    "name": "Grimlock, Powerful Commander",
+    "id": "C227"
+  },
+  {
+    "name": "Ironhide, Steadfast Brawler",
+    "id": "C228"
+  },
+  {
+    "name": "Megatron, Arrogant Ruler",
+    "id": "C229"
+  },
+  {
+    "name": "Motormaster, Stunticon Leader",
+    "id": "C230"
+  },
+  {
+    "name": "Offroad, All-Terrain Soldier",
+    "id": "C231"
+  },
+  {
+    "name": "Optimus Prime, Gleaming Commander",
+    "id": "C232"
+  },
+  {
+    "name": "Predacon Headstrong, Ground Assault",
+    "id": "C233"
+  },
+  {
+    "name": "Predacon Rampage, Savage Hunter",
+    "id": "C234"
+  },
+  {
+    "name": "Prowl, Strategic Mastermind",
+    "id": "C235"
+  },
+  {
+    "name": "Razorclaw, Predacon Leader",
+    "id": "C236"
+  },
+  {
+    "name": "Ruckus, Combat Assault",
+    "id": "C237"
+  },
+  {
+    "name": "Silverbolt, Aerialbot Leader",
+    "id": "C238"
+  },
+  {
+    "name": "Skydive, Air Warfare Specialist",
+    "id": "C239"
+  },
+  {
+    "name": "Skywarp, Teleporting Seeker",
+    "id": "C240"
+  },
+  {
+    "name": "Starscream, Decepticon King",
+    "id": "C241"
+  },
+  {
+    "name": "Sunstreaker, Bold Warrior",
+    "id": "C242"
+  },
+  {
+    "name": "Thrust, Supersonic Interceptor",
+    "id": "C243"
+  },
+  {
+    "name": "Torox, Fueler",
+    "id": "C244"
+  },
+  {
+    "name": "Warpath, Confident Sharpshooter",
+    "id": "C245"
+  },
+  {
+    "name": "Windblade, Combiner Hunter",
+    "id": "C246"
+  },
+  {
+    "name": "Omega Supreme, Autobot Defense Base",
+    "id": "CP1902"
+  },
+  {
+    "name": "Bumblebee, Trusted Lieutenant",
+    "id": "CP1905"
+  },
+  {
+    "name": "Dreadwing, Sky Destroyer",
+    "id": "G01"
+  },
+  {
+    "name": "Menasor, Menacing Colossus",
+    "id": "G02"
+  },
+  {
+    "name": "Optimus Maximus, Ultimate Defender",
+    "id": "G03"
+  },
+  {
+    "name": "Predaking, Ferocious Hunter",
+    "id": "G04"
+  },
+  {
+    "name": "Superion, Sky Protector",
+    "id": "G05"
+  },
+  {
+    "name": "Volcanicus, Fiery Champion",
+    "id": "G06"
+  },
+  {
+    "name": "Builder's Tools",
+    "id": "B2A001"
+  },
+  {
+    "name": "Constructicon Enigma",
+    "id": "B2A002"
+  },
+  {
+    "name": "Heavy Landing",
+    "id": "B2A003"
+  },
+  {
+    "name": "Reclaim",
+    "id": "B2A004"
+  },
+  {
+    "name": "Work Overtime",
+    "id": "B2A005"
+  },
+  {
+    "name": "Bonecrusher, Demolitions",
+    "id": "C2A01"
+  },
+  {
+    "name": "Hook, Surgical Engineer",
+    "id": "C2A02"
+  },
+  {
+    "name": "Longhaul, Transport",
+    "id": "C2A03"
+  },
+  {
+    "name": "Mixmaster, Materials Fabrication",
+    "id": "C2A04"
+  },
+  {
+    "name": "Scavenger, Mining and Salvage",
+    "id": "C2A05"
+  },
+  {
+    "name": "Scrapper, Constructicon Foreman",
+    "id": "C2A06"
+  },
+  {
+    "name": "Devastator, Towering Warrior",
+    "id": "G07"
+  },
+  {
+    "name": "Bumblebee, Least Likely, Most Dangerous",
+    "id": "C2S01"
+  },
+  {
+    "name": "Megatron, Cybertronian Tyrant",
+    "id": "C2S02"
+  },
+  {
+    "name": "Starscream, Decepticon Lieutenant",
+    "id": "C2S03"
+  },
+  {
+    "name": "Windblade, Defender of Truth",
+    "id": "C2S04"
+  },
+  {
+    "name": "Anticipation Engine",
+    "id": "B3001"
+  },
+  {
+    "name": "Backup Bag",
+    "id": "B3002"
+  },
+  {
+    "name": "Basic Combat Protocol",
+    "id": "B3003"
+  },
+  {
+    "name": "Battering Ram",
+    "id": "B3004"
+  },
+  {
+    "name": "Battlefield Report",
+    "id": "B3005"
+  },
+  {
+    "name": "Battlefield Scan",
+    "id": "B3006"
+  },
+  {
+    "name": "Bolster",
+    "id": "B3007"
+  },
+  {
+    "name": "Brainstorm",
+    "id": "B3008"
+  },
+  {
+    "name": "Calculated Strike",
+    "id": "B3009"
+  },
+  {
+    "name": "Callous Leadership",
+    "id": "B3010"
+  },
+  {
+    "name": "Combat Dagger",
+    "id": "B3011"
+  },
+  {
+    "name": "Compact Shield",
+    "id": "B3012"
+  },
+  {
+    "name": "Covert Armor",
+    "id": "B3013"
+  },
+  {
+    "name": "Dampening Field",
+    "id": "B3014"
+  },
+  {
+    "name": "Defensive Formation",
+    "id": "B3015"
+  },
+  {
+    "name": "Device Virus",
+    "id": "B3016"
+  },
+  {
+    "name": "Dismantle",
+    "id": "B3017"
+  },
+  {
+    "name": "Dismantling Claw",
+    "id": "B3018"
+  },
+  {
+    "name": "EM24 IR Laser Launcher",
+    "id": "B3019"
+  },
+  {
+    "name": "Emergency Defense Field",
+    "id": "B3020"
+  },
+  {
+    "name": "Emp Wave",
+    "id": "B3021"
+  },
+  {
+    "name": "Energy Pack",
+    "id": "B3022"
+  },
+  {
+    "name": "Erratic Energy Grenade",
+    "id": "B3023"
+  },
+  {
+    "name": "Extra Padding",
+    "id": "B3024"
+  },
+  {
+    "name": "Firecon Flame",
+    "id": "B3025"
+  },
+  {
+    "name": "Force Field",
+    "id": "B3026"
+  },
+  {
+    "name": "Frag Toss",
+    "id": "B3027"
+  },
+  {
+    "name": "Fuel Cache",
+    "id": "B3028"
+  },
+  {
+    "name": "Full Loadout",
+    "id": "B3029"
+  },
+  {
+    "name": "Heat of Battle",
+    "id": "B3030"
+  },
+  {
+    "name": "Heroic Team-Up",
+    "id": "B3031"
+  },
+  {
+    "name": "Hiding Spot",
+    "id": "B3032"
+  },
+  {
+    "name": "HV Electron Breacher",
+    "id": "B3033"
+  },
+  {
+    "name": "Infiltrate",
+    "id": "B3034"
+  },
+  {
+    "name": "Laser Cutlass",
+    "id": "B3035"
+  },
+  {
+    "name": "LV Gamma-Disruptor Launcher",
+    "id": "B3036"
+  },
+  {
+    "name": "Ultra Magnus Armor",
+    "id": "B3037"
+  },
+  {
+    "name": "Medic!",
+    "id": "B3038"
+  },
+  {
+    "name": "Metal Detector",
+    "id": "B3039"
+  },
+  {
+    "name": "Micro Capacitor",
+    "id": "B3040"
+  },
+  {
+    "name": "Pep Talk",
+    "id": "B3041"
+  },
+  {
+    "name": "Personal Targeting Drone",
+    "id": "B3042"
+  },
+  {
+    "name": "Point-Defense System",
+    "id": "B3043"
+  },
+  {
+    "name": "Pop a Wheelie",
+    "id": "B3044"
+  },
+  {
+    "name": "Quartermaster",
+    "id": "B3045"
+  },
+  {
+    "name": "Reactive Armor",
+    "id": "B3046"
+  },
+  {
+    "name": "Reflex Circuits",
+    "id": "B3047"
+  },
+  {
+    "name": "Repurpose",
+    "id": "B3048"
+  },
+  {
+    "name": "Rock Toss",
+    "id": "B3049"
+  },
+  {
+    "name": "RR Disruptor Blade",
+    "id": "B3050"
+  },
+  {
+    "name": "Scavenge the Battlefield",
+    "id": "B3051"
+  },
+  {
+    "name": "Smoke Cloak",
+    "id": "B3052"
+  },
+  {
+    "name": "Smokethrower",
+    "id": "B3053"
+  },
+  {
+    "name": "Diagnosis",
+    "id": "B3054"
+  },
+  {
+    "name": "Special Ops Mission",
+    "id": "B3055"
+  },
+  {
+    "name": "Spinner Rims",
+    "id": "B3056"
+  },
+  {
+    "name": "Squish them like Bugs",
+    "id": "B3057"
+  },
+  {
+    "name": "Steady Shot",
+    "id": "B3058"
+  },
+  {
+    "name": "Sturdy Armor",
+    "id": "B3059"
+  },
+  {
+    "name": "Take Cover",
+    "id": "B3060"
+  },
+  {
+    "name": "Two-Pronged Attack",
+    "id": "B3061"
+  },
+  {
+    "name": "Unconventional Flying Object",
+    "id": "B3062"
+  },
+  {
+    "name": "Urban Camo",
+    "id": "B3063"
+  },
+  {
+    "name": "W-5 Gyro Blaster",
+    "id": "B3064"
+  },
+  {
+    "name": "Alpha Trion, Cybertronian Sage",
+    "id": "C301"
+  },
+  {
+    "name": "Captain Elita-1, Special Ops • Ranger",
+    "id": "C302"
+  },
+  {
+    "name": "Captain Ironhide, Infantry • Bodyguard",
+    "id": "C303"
+  },
+  {
+    "name": "Captain Starscream, Infantry • Air Commander",
+    "id": "C304"
+  },
+  {
+    "name": "Captain Wheeljack, Engineering  Scientist",
+    "id": "C305"
+  },
+  {
+    "name": "General Megatron, Infantry • Leader",
+    "id": "C306"
+  },
+  {
+    "name": "General Optimus Prime, Infantry • Leader",
+    "id": "C307"
+  },
+  {
+    "name": "Major Prowl, Infantry • Strategist",
+    "id": "C308"
+  },
+  {
+    "name": "Major Shockwave, Applied Sciences • Scientist",
+    "id": "C309"
+  },
+  {
+    "name": "Major Soundwave, Espionage • Spy",
+    "id": "C310"
+  },
+  {
+    "name": "Major Ultra Magnus, Infantry • City Commander",
+    "id": "C311"
+  },
+  {
+    "name": "Private Arcee, Special Ops • Warrior",
+    "id": "C312"
+  },
+  {
+    "name": "Duo-Charge Electrostatic Photon Cannon",
+    "id": "C313"
+  },
+  {
+    "name": "Private Flak, Artillery • Tactics",
+    "id": "C314"
+  },
+  {
+    "name": "RS Firesteel Saber, Weapon",
+    "id": "C315"
+  },
+  {
+    "name": "Private Mudslinger, Special Ops • Infiltration",
+    "id": "C316"
+  },
+  {
+    "name": "Binary Edgewing Scythe",
+    "id": "C317"
+  },
+  {
+    "name": "Private Red Alert, Medical • Medic",
+    "id": "C318"
+  },
+  {
+    "name": "Private Red Heat, Infantry • Emergency Response",
+    "id": "C319"
+  },
+  {
+    "name": "Private Sideswipe, Infantry • Soldier",
+    "id": "C320"
+  },
+  {
+    "name": "Private Stakeout, Infantry • Communications",
+    "id": "C321"
+  },
+  {
+    "name": "Private Top Shot, Artillery • Patrol Leader",
+    "id": "C322"
+  },
+  {
+    "name": "Private Tote, Special Ops • Infiltration",
+    "id": "C323"
+  },
+  {
+    "name": "Private Trailbreaker, Infantry • Fortification &amp; Defense",
+    "id": "C324"
+  },
+  {
+    "name": "Manifold Ion Particle Blaster, Weapon",
+    "id": "C325"
+  },
+  {
+    "name": "Dual-Impact Shatterblast Compression Cannon",
+    "id": "C326"
+  },
+  {
+    "name": "Raider Cindersaur, Black Ops • Demolitions",
+    "id": "C327"
+  },
+  {
+    "name": "Raider Detour, Infantry • Demolitions",
+    "id": "C328"
+  },
+  {
+    "name": "Raider Flamefeather, Black Ops • Soldier",
+    "id": "C329"
+  },
+  {
+    "name": "Raider Ion Storm, Infantry • Rainmaker",
+    "id": "C330"
+  },
+  {
+    "name": "Raider Laserbeak, Espionage • Interrogation",
+    "id": "C331"
+  },
+  {
+    "name": "Raider Needlenose, Air Force • Soldier",
+    "id": "C332"
+  },
+  {
+    "name": "Black Beam Blaster",
+    "id": "C333"
+  },
+  {
+    "name": "Raider Ravage, Espionage • Saboteur",
+    "id": "C334"
+  },
+  {
+    "name": "Raider Road Hugger, Infantry • Tactics",
+    "id": "C335"
+  },
+  {
+    "name": "Raider Runabout, Infantry • Soldier",
+    "id": "C336"
+  },
+  {
+    "name": "Raider Runamuck, Infantry • Soldier",
+    "id": "C337"
+  },
+  {
+    "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
+    "id": "C338"
+  },
+  {
+    "name": "Raider Triggerhappy, Air Force • Gunner",
+    "id": "C339"
+  },
+  {
+    "name": "Raider Visper, Infantry • Patrol Leader",
+    "id": "C340"
+  },
+  {
+    "name": "Sergeant Chromia, Special Ops • Counterintelligence",
+    "id": "C341"
+  },
+  {
+    "name": "Heavy Force Defensebreaker Cannon",
+    "id": "C342"
+  },
+  {
+    "name": "Sergeant Hound, Infantry • Recon",
+    "id": "C343"
+  },
+  {
+    "name": "Sergeant Skrapnel, Infantry • Electronic Warfare",
+    "id": "C344"
+  },
+  {
+    "name": "Sergeant Skywarp, Black Ops • Seeker",
+    "id": "C345"
+  },
+  {
+    "name": "Sergeant Sparkstalker, Black Ops • Cryptology",
+    "id": "C346"
+  },
+  {
+    "name": "Specialist Flamewar, Special Ops • Hunter",
+    "id": "C347"
+  },
+  {
+    "name": "Specialist Ratchet, Engineering • Rescue &amp; Repair",
+    "id": "C348"
+  },
+  {
+    "name": "Airquake Hammerclaw",
+    "id": "CP1903"
+  },
+  {
+    "name": "Private Red Alert, Medical • Medic",
+    "id": "CP1906"
+  },
+  {
+    "name": "Nightbird, Enigmatic Agent",
+    "id": "CP1907"
+  },
+  {
+    "name": "Raider Runabout, Infantry • Soldier",
+    "id": "CP1908"
+  },
+  {
+    "name": "Raider Runamuck, Infantry • Soldier",
+    "id": "CP1909"
+  },
+  {
+    "name": "Raider Road Hugger, Infantry • Tactics",
+    "id": "CP1910"
+  },
+  {
+    "name": "Buzzsaw, Ravage, Frenzy Attack!",
+    "id": "B3A001"
+  },
+  {
+    "name": "Daring Counterattack",
+    "id": "B3A002"
+  },
+  {
+    "name": "Inner Groove",
+    "id": "B3A003"
+  },
+  {
+    "name": "Intercept Communications",
+    "id": "B3A004"
+  },
+  {
+    "name": "Interpret The Airwaves",
+    "id": "B3A005"
+  },
+  {
+    "name": "Obstructive Rhythm",
+    "id": "B3A006"
+  },
+  {
+    "name": "Recover Cassette",
+    "id": "B3A007"
+  },
+  {
+    "name": "Blaster, Communications",
+    "id": "C3A01"
+  },
+  {
+    "name": "Eject, Electronic Surveillance",
+    "id": "C3A02"
+  },
+  {
+    "name": "Ramhorn, Warrior",
+    "id": "C3A03"
+  },
+  {
+    "name": "Steeljaw, Tracker",
+    "id": "C3A04"
+  },
+  {
+    "name": "Soundwave, Communications",
+    "id": "C3A05"
+  },
+  {
+    "name": "Buzzsaw, Spy",
+    "id": "C3A06"
+  },
+  {
+    "name": "Frenzy, Warrior",
+    "id": "C3A07"
+  },
+  {
+    "name": "Ravage, Saboteur",
+    "id": "C3A08"
+  },
+  {
+    "name": "Buzzsaw, Ravage, Frenzy Attack!",
+    "id": "B3A35001"
+  },
+  {
+    "name": "Daring Counterattack",
+    "id": "B3A35002"
+  },
+  {
+    "name": "Inner Groove",
+    "id": "B3A35003"
+  },
+  {
+    "name": "Intercept Communications",
+    "id": "B3A35004"
+  },
+  {
+    "name": "Interpret The Airwaves",
+    "id": "B3A35005"
+  },
+  {
+    "name": "Obstructive Rhythm",
+    "id": "B3A35006"
+  },
+  {
+    "name": "Recover Cassette",
+    "id": "B3A35007"
+  },
+  {
+    "name": "Blaster, Communications",
+    "id": "C3A3501"
+  },
+  {
+    "name": "Eject, Electronic Surveillance",
+    "id": "C3A3502"
+  },
+  {
+    "name": "Ramhorn, Warrior",
+    "id": "C3A3503"
+  },
+  {
+    "name": "Steeljaw, Tracker",
+    "id": "C3A3504"
+  },
+  {
+    "name": "Soundwave, Communications",
+    "id": "C3A3505"
+  },
+  {
+    "name": "Buzzsaw, Spy",
+    "id": "C3A3506"
+  },
+  {
+    "name": "Frenzy, Warrior",
+    "id": "C3A3507"
+  },
+  {
+    "name": "Ravage, Saboteur",
+    "id": "C3A3508"
+  },
+  {
+    "name": "Private Camshaft, Special Ops • Scout",
+    "id": "C3C01"
+  },
+  {
+    "name": "Private Downshift, Special Ops • Security Agent",
+    "id": "C3C02"
+  },
+  {
+    "name": "Sergeant Overdrive, Special Ops • Strategist",
+    "id": "C3C03"
+  },
+  {
+    "name": "4-Wheel Drive",
+    "id": "B4001"
+  },
+  {
+    "name": "Acute Reflexes",
+    "id": "B4002"
+  },
+  {
+    "name": "Adaptive Plating",
+    "id": "B4003"
+  },
+  {
+    "name": "Backfire",
+    "id": "B4004"
+  },
+  {
+    "name": "Multi-Missile Pod",
+    "id": "B4005"
+  },
+  {
+    "name": "Battlefield Incursion",
+    "id": "B4006"
+  },
+  {
+    "name": "Blast Suit",
+    "id": "B4007"
+  },
+  {
+    "name": "Composite Armor",
+    "id": "B4008"
+  },
+  {
+    "name": "Contract Contingency",
+    "id": "B4009"
+  },
+  {
+    "name": "Conversion Engine",
+    "id": "B4010"
+  },
+  {
+    "name": "Coup",
+    "id": "B4011"
+  },
+  {
+    "name": "Crowbar",
+    "id": "B4012"
+  },
+  {
+    "name": "Crude Club",
+    "id": "B4013"
+  },
+  {
+    "name": "Daring Escape",
+    "id": "B4014"
+  },
+  {
+    "name": "Decipher",
+    "id": "B4015"
+  },
+  {
+    "name": "Defensive Configuration",
+    "id": "B4016"
+  },
+  {
+    "name": "Designated Target",
+    "id": "B4017"
+  },
+  {
+    "name": "Dual Wield",
+    "id": "B4018"
+  },
+  {
+    "name": "Energy Transfer",
+    "id": "B4019"
+  },
+  {
+    "name": "Erratic Cannon",
+    "id": "B4020"
+  },
+  {
+    "name": "Even The Score",
+    "id": "B4021"
+  },
+  {
+    "name": "Fight For Position",
+    "id": "B4022"
+  },
+  {
+    "name": "Guarded Posture",
+    "id": "B4023"
+  },
+  {
+    "name": "Hazardous Shield",
+    "id": "B4024"
+  },
+  {
+    "name": "Head-On Collision",
+    "id": "B4025"
+  },
+  {
+    "name": "Heroic Resolve",
+    "id": "B4026"
+  },
+  {
+    "name": "Hidden Fortification",
+    "id": "B4027"
+  },
+  {
+    "name": "Hijack",
+    "id": "B4028"
+  },
+  {
+    "name": "Immersed In Shadow",
+    "id": "B4029"
+  },
+  {
+    "name": "Increased Durability",
+    "id": "B4030"
+  },
+  {
+    "name": "Indestructible Sword",
+    "id": "B4031"
+  },
+  {
+    "name": "Involuntary Promotion",
+    "id": "B4032"
+  },
+  {
+    "name": "Jam Signals",
+    "id": "B4033"
+  },
+  {
+    "name": "Kinetic Converter",
+    "id": "B4034"
+  },
+  {
+    "name": "Kinetic Intensifier Whip",
+    "id": "B4035"
+  },
+  {
+    "name": "Lucky Vest",
+    "id": "B4036"
+  },
+  {
+    "name": "Medic's Protective Field",
+    "id": "B4037"
+  },
+  {
+    "name": "Minor Medic Kit",
+    "id": "B4038"
+  },
+  {
+    "name": "New Orders",
+    "id": "B4039"
+  },
+  {
+    "name": "Opportune Offensive",
+    "id": "B4040"
+  },
+  {
+    "name": "Opportune Repairs",
+    "id": "B4041"
+  },
+  {
+    "name": "Overheat",
+    "id": "B4042"
+  },
+  {
+    "name": "Overwhelming Advantage",
+    "id": "B4043"
+  },
+  {
+    "name": "Pincer Movement",
+    "id": "B4044"
+  },
+  {
+    "name": "Plunder",
+    "id": "B4045"
+  },
+  {
+    "name": "Pocket Processor",
+    "id": "B4046"
+  },
+  {
+    "name": "Point Position",
+    "id": "B4047"
+  },
+  {
+    "name": "Relentless Invasion",
+    "id": "B4048"
+  },
+  {
+    "name": "Reprocess",
+    "id": "B4049"
+  },
+  {
+    "name": "Sabotaged Armaments",
+    "id": "B4050"
+  },
+  {
+    "name": "Shoulder Holster",
+    "id": "B4051"
+  },
+  {
+    "name": "Showing Off",
+    "id": "B4052"
+  },
+  {
+    "name": "Soldier's Blaster",
+    "id": "B4053"
+  },
+  {
+    "name": "Special Delivery",
+    "id": "B4054"
+  },
+  {
+    "name": "Stable Cover",
+    "id": "B4055"
+  },
+  {
+    "name": "Step Forward",
+    "id": "B4056"
+  },
+  {
+    "name": "Sturdy Javelin",
+    "id": "B4057"
+  },
+  {
+    "name": "Swerve",
+    "id": "B4058"
+  },
+  {
+    "name": "Terrifying Resilience",
+    "id": "B4059"
+  },
+  {
+    "name": "Toolbox",
+    "id": "B4060"
+  },
+  {
+    "name": "Unflinching Courage",
+    "id": "B4061"
+  },
+  {
+    "name": "Valuable Contract",
+    "id": "B4062"
+  },
+  {
+    "name": "War of Attrition",
+    "id": "B4063"
+  },
+  {
+    "name": "Wedge Formation",
+    "id": "B4064"
+  },
+  {
+    "name": "Captain Astrotrain, Space Force • Transport",
+    "id": "C401"
+  },
+  {
+    "name": "Captain Impactor, Special Ops • Wrecker",
+    "id": "C402"
+  },
+  {
+    "name": "Captain Jetfire, Engineering • Air Guardian",
+    "id": "C403"
+  },
+  {
+    "name": "Deadlock, Soldier of Fortune",
+    "id": "C404"
+  },
+  {
+    "name": "Detritus, Arms Dealer",
+    "id": "C405"
+  },
+  {
+    "name": "General Optimus Prime, Galactic Commander",
+    "id": "C406"
+  },
+  {
+    "name": "Lockdown, Bounty Hunter",
+    "id": "C407"
+  },
+  {
+    "name": "Lord Megatron, Conqueror of Cybertron",
+    "id": "C408"
+  },
+  {
+    "name": "MTX-M2 Anti-Gravity Cannon",
+    "id": "C409"
+  },
+  {
+    "name": "MTX-S2A Guided Missile Launcher",
+    "id": "C410"
+  },
+  {
+    "name": "Mudflap, Hired Muscle",
+    "id": "C411"
+  },
+  {
+    "name": "Octone, Capricious Agitator",
+    "id": "C412"
+  },
+  {
+    "name": "Omega Supreme (Base), Transport • City Defender",
+    "id": "C413"
+  },
+  {
+    "name": "Omega Supreme (Spaceship), Transport • City Defender",
+    "id": "C414"
+  },
+  {
+    "name": "Omega Supreme (Tank), Transport • City Defender",
+    "id": "C415"
+  },
+  {
+    "name": "Shadowsteel Iceblade",
+    "id": "C416"
+  },
+  {
+    "name": "Private Fixit, Rescue Patrol • Medic",
+    "id": "C417"
+  },
+  {
+    "name": "Private Greenlight, Special Ops • Recon",
+    "id": "C418"
+  },
+  {
+    "name": "Private Highjump, Off-Road Patrol • Infiltration",
+    "id": "C419"
+  },
+  {
+    "name": "Private Hot Rod, Infantry • Soldier",
+    "id": "C420"
+  },
+  {
+    "name": "Private Powertrain, Off-Road Patrol • Patrol Leader",
+    "id": "C421"
+  },
+  {
+    "name": "Private Seawatch, Rescue Patrol • Search &amp; Rescue",
+    "id": "C422"
+  },
+  {
+    "name": "Private Sidetrack, Battle Patrol • Demolitions",
+    "id": "C423"
+  },
+  {
+    "name": "Private Smokescreen, Special Ops • Soldier",
+    "id": "C424"
+  },
+  {
+    "name": "Private Sunrunner, Battle Patrol • Air Defense",
+    "id": "C425"
+  },
+  {
+    "name": "Anti-Gravity Turbo Pack",
+    "id": "C426"
+  },
+  {
+    "name": "Anti-Ballistic Turret Helmet",
+    "id": "C427"
+  },
+  {
+    "name": "Raider Apeface, Espionage • Commando",
+    "id": "C428"
+  },
+  {
+    "name": "Raider Blackjack, Sports Car Patrol • Patrol Leader",
+    "id": "C429"
+  },
+  {
+    "name": "Oxidation Cannon",
+    "id": "C430"
+  },
+  {
+    "name": "Raider Chop Shop, Infantry • Soldier",
+    "id": "C431"
+  },
+  {
+    "name": "Raider Hyperdrive, Sports Car Patrol • Demolitions",
+    "id": "C432"
+  },
+  {
+    "name": "Raider Kickback, Infantry • Soldier",
+    "id": "C433"
+  },
+  {
+    "name": "Steelbite Incisor Mask",
+    "id": "C434"
+  },
+  {
+    "name": "Raider Nightflight, Air Strike Patrol • Spy",
+    "id": "C435"
+  },
+  {
+    "name": "Raider Nova Storm, Infantry  Combustion Specialist",
+    "id": "C436"
+  },
+  {
+    "name": "Raider Ratbat, Spy Patrol • Fuel Scout",
+    "id": "C437"
+  },
+  {
+    "name": "Raider Rumble, Spy Patrol • Demolitions",
+    "id": "C438"
+  },
+  {
+    "name": "Multi-Maneuver Glider Wings",
+    "id": "C439"
+  },
+  {
+    "name": "Raider Spinister, Infantry • Aerial Assault",
+    "id": "C440"
+  },
+  {
+    "name": "Raider Tailwind, Air Strike Patrol • Strategist",
+    "id": "C441"
+  },
+  {
+    "name": "Sergeant Barricade, Infantry • Enforcer",
+    "id": "C442"
+  },
+  {
+    "name": "Sergeant Crosshairs, Artillery • Weapons Supervisor",
+    "id": "C443"
+  },
+  {
+    "name": "Sergeant Mirage, Special Ops • Spy",
+    "id": "C444"
+  },
+  {
+    "name": "Sergeant Soundblaster, Weapons • Arms Dealer",
+    "id": "C445"
+  },
+  {
+    "name": "Sergeant Springer, Special Ops • Aerial Defense",
+    "id": "C446"
+  },
+  {
+    "name": "Sergeant Thundercracker, Infantry • Seeker",
+    "id": "C447"
+  },
+  {
+    "name": "Skytread (Plane), Special Ops • Soldier",
+    "id": "C448"
+  },
+  {
+    "name": "Skytread (Tank), Special Ops • Soldier",
+    "id": "C449"
+  },
+  {
+    "name": "Specialist Sandstorm, Special Ops • Advance Guard",
+    "id": "C450"
+  },
+  {
+    "name": "TTC-HD Turret Armor",
+    "id": "C451"
+  },
+  {
+    "name": "TTC-HP Oblivio Launcher",
+    "id": "C452"
+  },
+  {
+    "name": "Captain Omega Supreme, Transport • City Defender",
+    "id": "G08"
+  },
+  {
+    "name": "Raider Brunt, Weapons • Soldier",
+    "id": "G09"
+  },
+  {
+    "name": "Raider Skytread, Special Ops • Soldier",
+    "id": "G10"
+  },
+  {
+    "name": "Sergeant Six-Gun, Artillery • Soldier",
+    "id": "G11"
+  },
+  {
+    "name": "Trypticon, Assault Base",
+    "id": "C4A01"
+  },
+  {
+    "name": "Brunt, Artillery Drone",
+    "id": "C4A02"
+  },
+  {
+    "name": "Full-Tilt, Base Recon",
+    "id": "C4A03"
+  },
+  {
+    "name": "Wipe-Out, Devoted Minion",
+    "id": "C4A04"
+  },
+  {
+    "name": "Belligerence",
+    "id": "B5001"
+  },
+  {
+    "name": "Blade Flurry",
+    "id": "B5002"
+  },
+  {
+    "name": "Brass Knuckles",
+    "id": "B5003"
+  },
+  {
+    "name": "Camien Crash",
+    "id": "B5004"
+  },
+  {
+    "name": "Concealing Contrails",
+    "id": "B5005"
+  },
+  {
+    "name": "Conversion Expertise",
+    "id": "B5006"
+  },
+  {
+    "name": "Counterespionage",
+    "id": "B5007"
+  },
+  {
+    "name": "Crystal of Power",
+    "id": "B5008"
+  },
+  {
+    "name": "Decoy Flares",
+    "id": "B5009"
+  },
+  {
+    "name": "Disassemble",
+    "id": "B5010"
+  },
+  {
+    "name": "Electro-Optical Visor",
+    "id": "B5011"
+  },
+  {
+    "name": "Emergency Barricade",
+    "id": "B5012"
+  },
+  {
+    "name": "Emergency Repair Patch",
+    "id": "B5013"
+  },
+  {
+    "name": "End Hostilities",
+    "id": "B5014"
+  },
+  {
+    "name": "Energon Mace",
+    "id": "B5015"
+  },
+  {
+    "name": "Enhanced Power Cell",
+    "id": "B5016"
+  },
+  {
+    "name": "Escape Capsule",
+    "id": "B5017"
+  },
+  {
+    "name": "Fusion Borer",
+    "id": "B5018"
+  },
+  {
+    "name": "Ghost Shield",
+    "id": "B5019"
+  },
+  {
+    "name": "Grav-Inhibitor",
+    "id": "B5020"
+  },
+  {
+    "name": "Hand-to-Hand Combat",
+    "id": "B5021"
+  },
+  {
+    "name": "Handheld Blaster",
+    "id": "B5022"
+  },
+  {
+    "name": "Headbutt",
+    "id": "B5023"
+  },
+  {
+    "name": "High Five",
+    "id": "B5024"
+  },
+  {
+    "name": "Hit and Run",
+    "id": "B5025"
+  },
+  {
+    "name": "Hold the Line",
+    "id": "B5026"
+  },
+  {
+    "name": "Holomatter Projector",
+    "id": "B5027"
+  },
+  {
+    "name": "Hull Down",
+    "id": "B5028"
+  },
+  {
+    "name": "Improvised Shield",
+    "id": "B5029"
+  },
+  {
+    "name": "Industrial-grade Phase Charge",
+    "id": "B5030"
+  },
+  {
+    "name": "Intrusion Countermeasures Software",
+    "id": "B5031"
+  },
+  {
+    "name": "Junk Cannon",
+    "id": "B5032"
+  },
+  {
+    "name": "Laser Scalpel",
+    "id": "B5033"
+  },
+  {
+    "name": "Last Stand",
+    "id": "B5034"
+  },
+  {
+    "name": "Lock on Target",
+    "id": "B5035"
+  },
+  {
+    "name": "Lose the Initiative",
+    "id": "B5036"
+  },
+  {
+    "name": "Lucky Dodge",
+    "id": "B5037"
+  },
+  {
+    "name": "Magnetic Dysfunction Ray",
+    "id": "B5038"
+  },
+  {
+    "name": "Master of Metallikato",
+    "id": "B5039"
+  },
+  {
+    "name": "Master Sword",
+    "id": "B5040"
+  },
+  {
+    "name": "Mission Briefing",
+    "id": "B5041"
+  },
+  {
+    "name": "Nitro Booster",
+    "id": "B5042"
+  },
+  {
+    "name": "Overrule",
+    "id": "B5043"
+  },
+  {
+    "name": "Paralyzo Box",
+    "id": "B5044"
+  },
+  {
+    "name": "Plasma Horns",
+    "id": "B5045"
+  },
+  {
+    "name": "Precision Fire",
+    "id": "B5046"
+  },
+  {
+    "name": "Reflect Damage",
+    "id": "B5047"
+  },
+  {
+    "name": "Regenerative Core",
+    "id": "B5048"
+  },
+  {
+    "name": "Scout Armor",
+    "id": "B5049"
+  },
+  {
+    "name": "Scouting Mission",
+    "id": "B5050"
+  },
+  {
+    "name": "Sharpened Talons",
+    "id": "B5051"
+  },
+  {
+    "name": "Sonic Stun-Gun",
+    "id": "B5052"
+  },
+  {
+    "name": "Speed Trap",
+    "id": "B5053"
+  },
+  {
+    "name": "Spiked Bracelet",
+    "id": "B5054"
+  },
+  {
+    "name": "Spy Satellite Uplink",
+    "id": "B5055"
+  },
+  {
+    "name": "Spymaster's Ruse",
+    "id": "B5056"
+  },
+  {
+    "name": "Staggering Might",
+    "id": "B5057"
+  },
+  {
+    "name": "Supporting Fire",
+    "id": "B5058"
+  },
+  {
+    "name": "Temporal Quagmire",
+    "id": "B5059"
+  },
+  {
+    "name": "Triangulator",
+    "id": "B5060"
+  },
+  {
+    "name": "Tripwire",
+    "id": "B5061"
+  },
+  {
+    "name": "Trithyllium Shield",
+    "id": "B5062"
+  },
+  {
+    "name": "Turn the Tide",
+    "id": "B5063"
+  },
+  {
+    "name": "Versatility",
+    "id": "B5064"
+  },
+  {
+    "name": "Apex",
+    "id": "C501"
+  },
+  {
+    "name": "Autobot Gears, Transport &amp; Reconnaissance",
+    "id": "C502"
+  },
+  {
+    "name": "Autobot Nautica, Camien Engineer",
+    "id": "C503"
+  },
+  {
+    "name": "Autobot Outback, Gunner",
+    "id": "C504"
+  },
+  {
+    "name": "Autobot Stylor",
+    "id": "C505"
+  },
+  {
+    "name": "Autobot Teslor",
+    "id": "C506"
+  },
+  {
+    "name": "Autobot Whirl, Aerial Assault",
+    "id": "C507"
+  },
+  {
+    "name": "Beachcomber, Geologist",
+    "id": "C508"
+  },
+  {
+    "name": "Bludgeon, Electric Warrior",
+    "id": "C509"
+  },
+  {
+    "name": "Brainstorm, Biomechanical Engineer",
+    "id": "C510"
+  },
+  {
+    "name": "Brawn, Demolitions",
+    "id": "C511"
+  },
+  {
+    "name": "Brisko",
+    "id": "C512"
+  },
+  {
+    "name": "Chasm",
+    "id": "C513"
+  },
+  {
+    "name": "Chromedome, Computer Programmer",
+    "id": "C514"
+  },
+  {
+    "name": "Clobber",
+    "id": "C515"
+  },
+  {
+    "name": "Crankcase, Data Collector",
+    "id": "C516"
+  },
+  {
+    "name": "Decepticon Pounce, Infiltrator",
+    "id": "C517"
+  },
+  {
+    "name": "Decepticon Quake, Ground Assault",
+    "id": "C518"
+  },
+  {
+    "name": "Doomshot",
+    "id": "C519"
+  },
+  {
+    "name": "Fangry, Sky Tracker",
+    "id": "C520"
+  },
+  {
+    "name": "Flameout",
+    "id": "C521"
+  },
+  {
+    "name": "Flintlock",
+    "id": "C522"
+  },
+  {
+    "name": "Freezeout",
+    "id": "C523"
+  },
+  {
+    "name": "Grax",
+    "id": "C524"
+  },
+  {
+    "name": "Horri-Bull, Ground Trooper",
+    "id": "C525"
+  },
+  {
+    "name": "Kreb",
+    "id": "C526"
+  },
+  {
+    "name": "Megatron, Fallen Hero",
+    "id": "C527"
+  },
+  {
+    "name": "Mindwipe, Hypnotist",
+    "id": "C528"
+  },
+  {
+    "name": "Monxo",
+    "id": "C529"
+  },
+  {
+    "name": "Nightracer, Gunner",
+    "id": "C530"
+  },
+  {
+    "name": "Ominus",
+    "id": "C531"
+  },
+  {
+    "name": "Optimus Prime, Legendary Warrior",
+    "id": "C532"
+  },
+  {
+    "name": "Parsec",
+    "id": "C533"
+  },
+  {
+    "name": "Roadbuster, Ground Assault Commander",
+    "id": "C534"
+  },
+  {
+    "name": "Sergeant Kup, Wrecker Leader",
+    "id": "C535"
+  },
+  {
+    "name": "Skullsmasher, Swamp Warrior",
+    "id": "C536"
+  },
+  {
+    "name": "Sky Shadow (Plane)",
+    "id": "C537"
+  },
+  {
+    "name": "Sky Shadow (Tank)",
+    "id": "C538"
+  },
+  {
+    "name": "Topspin, Air &amp; Space Assault",
+    "id": "C539"
+  },
+  {
+    "name": "Tracks, Autobot Warrior",
+    "id": "C540"
+  },
+  {
+    "name": "Twin Twist, Demolitions",
+    "id": "C541"
+  },
+  {
+    "name": "Vorath",
+    "id": "C542"
+  },
+  {
+    "name": "Windcharger, Autobot Warrior",
+    "id": "C543"
+  },
+  {
+    "name": "Windsweeper, Air Defense",
+    "id": "C544"
+  },
+  {
+    "name": "Wingspan, Data Processor",
+    "id": "C545"
+  },
+  {
+    "name": "Wolfwire, Ground Tracker",
+    "id": "C546"
+  },
+  {
+    "name": "Arcana",
+    "id": "CP2001"
+  },
+  {
+    "name": "Tidal Wave, Dark Fleet (Aircraft Carrier)",
+    "id": "CP2002"
+  },
+  {
+    "name": "Tidal Wave, Dark Fleet (Transport)",
+    "id": "CP2003"
+  },
+  {
+    "name": "Tidal Wave, Dark Fleet (Battleship)",
+    "id": "CP2004"
+  },
+  {
+    "name": "Convex",
+    "id": "CP2005"
+  },
+  {
+    "name": "Perceptor, Precise Sniper",
+    "id": "CP2006"
+  },
+  {
+    "name": "Sky Shadow, Elite Warrior",
+    "id": "G12"
+  },
+  {
+    "name": "Tidal Wave, Dark Fleet",
+    "id": "G13"
+  },
+  {
+    "name": "Aerial Enhancements",
+    "id": "S501"
+  },
+  {
+    "name": "All-Out",
+    "id": "S502"
+  },
+  {
+    "name": "Better Things To Do Than Die",
+    "id": "S503"
+  },
+  {
+    "name": "Bike Gang",
+    "id": "S504"
+  },
+  {
+    "name": "Camien Toughness",
+    "id": "S505"
+  },
+  {
+    "name": "Data Protection",
+    "id": "S506"
+  },
+  {
+    "name": "Duty &amp; Honor",
+    "id": "S507"
+  },
+  {
+    "name": "Heroic Spotlight",
+    "id": "S508"
+  },
+  {
+    "name": "Infiltration",
+    "id": "S509"
+  },
+  {
+    "name": "Jurassic Punch",
+    "id": "S510"
+  },
+  {
+    "name": "Master Converter",
+    "id": "S511"
+  },
+  {
+    "name": "Me Grimlock, You Grimlock!",
+    "id": "S512"
+  },
+  {
+    "name": "Metallikato Stance",
+    "id": "S513"
+  },
+  {
+    "name": "More Guns",
+    "id": "S514"
+  },
+  {
+    "name": "Orbital Strike",
+    "id": "S515"
+  },
+  {
+    "name": "Pop-Up Attack",
+    "id": "S516"
+  },
+  {
+    "name": "Resilience",
+    "id": "S517"
+  },
+  {
+    "name": "Revenge",
+    "id": "S518"
+  },
+  {
+    "name": "Sabotage",
+    "id": "S519"
+  },
+  {
+    "name": "Saturation Bombing",
+    "id": "S520"
+  },
+  {
+    "name": "Science Officer",
+    "id": "S521"
+  },
+  {
+    "name": "Sky Shadow Sync",
+    "id": "S522"
+  },
+  {
+    "name": "Stealth Mission",
+    "id": "S523"
+  },
+  {
+    "name": "Strategic Airlift",
+    "id": "S524"
+  },
+  {
+    "name": "Swap Heads",
+    "id": "S525"
+  },
+  {
+    "name": "Systems Enhancement",
+    "id": "S526"
+  },
+  {
+    "name": "The Usurper",
+    "id": "S527"
+  },
+  {
+    "name": "Villainous Spotlight",
+    "id": "S528"
+  },
+  {
+    "name": "Weapons Cache",
+    "id": "S529"
+  },
+  {
+    "name": "Who's Next?",
+    "id": "S530"
+  },
+  {
+    "name": "Fortress Maximus, Great War Veteran",
+    "id": "C5A01"
+  },
+  {
+    "name": "Cerebros, City Commander",
+    "id": "C5A02"
+  },
+  {
+    "name": "Emissary",
+    "id": "C5A03"
+  },
+  {
+    "name": "All-Out Attack",
+    "id": "B6001"
+  },
+  {
+    "name": "Ancient Security Tentacle",
+    "id": "B6002"
+  },
+  {
+    "name": "Angolmois Surge",
+    "id": "B6003"
+  },
+  {
+    "name": "Aquatic Maneuvers",
+    "id": "B6004"
+  },
+  {
+    "name": "Are These Wires Important?",
+    "id": "B6005"
+  },
+  {
+    "name": "Armed To The Teeth",
+    "id": "B6006"
+  },
+  {
+    "name": "Aspect of Bitterness",
+    "id": "B6007"
+  },
+  {
+    "name": "Aspect of Death",
+    "id": "B6008"
+  },
+  {
+    "name": "Aspect of Doubt",
+    "id": "B6009"
+  },
+  {
+    "name": "Aspect of Laughter",
+    "id": "B6010"
+  },
+  {
+    "name": "Aspect of Rage",
+    "id": "B6011"
+  },
+  {
+    "name": "Assuming Control",
+    "id": "B6012"
+  },
+  {
+    "name": "Black Mail",
+    "id": "B6013"
+  },
+  {
+    "name": "Bomb Removal Protocol",
+    "id": "B6014"
+  },
+  {
+    "name": "CNA-Encoded Armory",
+    "id": "B6015"
+  },
+  {
+    "name": "Demolition Derby",
+    "id": "B6016"
+  },
+  {
+    "name": "Discordant Cacophony",
+    "id": "B6017"
+  },
+  {
+    "name": "Dreadful Feast",
+    "id": "B6018"
+  },
+  {
+    "name": "&quot;Dutch&quot;",
+    "id": "B6019"
+  },
+  {
+    "name": "Energy Conversion Field",
+    "id": "B6020"
+  },
+  {
+    "name": "Forked Tentacle",
+    "id": "B6021"
+  },
+  {
+    "name": "Gift of Innermost Energon",
+    "id": "B6022"
+  },
+  {
+    "name": "Give Me Your Face",
+    "id": "B6023"
+  },
+  {
+    "name": "Guilty or Innocent",
+    "id": "B6024"
+  },
+  {
+    "name": "Insurance Write-Off",
+    "id": "B6025"
+  },
+  {
+    "name": "Judicial Discretion",
+    "id": "B6026"
+  },
+  {
+    "name": "Litigious Tentacle",
+    "id": "B6027"
+  },
+  {
+    "name": "Loading The Cannon",
+    "id": "B6028"
+  },
+  {
+    "name": "Lose The Battle...",
+    "id": "B6029"
+  },
+  {
+    "name": "Lost In Transit",
+    "id": "B6030"
+  },
+  {
+    "name": "Maceration Laser",
+    "id": "B6031"
+  },
+  {
+    "name": "Manipulate Time",
+    "id": "B6032"
+  },
+  {
+    "name": "Masher Mace",
+    "id": "B6033"
+  },
+  {
+    "name": "Motorcycle Chase",
+    "id": "B6034"
+  },
+  {
+    "name": "Occupation",
+    "id": "B6035"
+  },
+  {
+    "name": "Open Agenda",
+    "id": "B6036"
+  },
+  {
+    "name": "Opportune Protection",
+    "id": "B6037"
+  },
+  {
+    "name": "Photon Charge",
+    "id": "B6038"
+  },
+  {
+    "name": "Polarity Gauntlet",
+    "id": "B6039"
+  },
+  {
+    "name": "Polydermal Graft",
+    "id": "B6040"
+  },
+  {
+    "name": "Prime's New Arm",
+    "id": "B6041"
+  },
+  {
+    "name": "Reroute Enemy Vectors",
+    "id": "B6042"
+  },
+  {
+    "name": "Scrounging For Energon",
+    "id": "B6043"
+  },
+  {
+    "name": "Secret Missive",
+    "id": "B6044"
+  },
+  {
+    "name": "Sharkticon Matrix",
+    "id": "B6045"
+  },
+  {
+    "name": "Shield Crash",
+    "id": "B6046"
+  },
+  {
+    "name": "Sidecar Artillery",
+    "id": "B6047"
+  },
+  {
+    "name": "Squid Pro Quo",
+    "id": "B6048"
+  },
+  {
+    "name": "Stim Shock",
+    "id": "B6049"
+  },
+  {
+    "name": "Subcontractor Agreement",
+    "id": "B6050"
+  },
+  {
+    "name": "Tetrinite Micro-Lining",
+    "id": "B6051"
+  },
+  {
+    "name": "The Dweller Awakens",
+    "id": "B6052"
+  },
+  {
+    "name": "Thermal Sealant",
+    "id": "B6053"
+  },
+  {
+    "name": "Touch of Quintessa",
+    "id": "B6054"
+  },
+  {
+    "name": "Turnabout Snare",
+    "id": "B6055"
+  },
+  {
+    "name": "Underbase Fragment",
+    "id": "B6056"
+  },
+  {
+    "name": "United Against Tyranny",
+    "id": "B6057"
+  },
+  {
+    "name": "Universal Greeting",
+    "id": "B6058"
+  },
+  {
+    "name": "Unsavory Leftovers",
+    "id": "B6059"
+  },
+  {
+    "name": "Vorpal Fangs",
+    "id": "B6060"
+  },
+  {
+    "name": "What Lies Beyond",
+    "id": "B6061"
+  },
+  {
+    "name": "Whipped Into Shape",
+    "id": "B6062"
+  },
+  {
+    "name": "Aspect of Laughter",
+    "id": "BP2007"
+  },
+  {
+    "name": "Scrounging For Energon",
+    "id": "BP2202"
+  },
+  {
+    "name": "Allicon Aronik, Killer Croc",
+    "id": "C601"
+  },
+  {
+    "name": "Allicon Eyuk, Bog Scavenger",
+    "id": "C602"
+  },
+  {
+    "name": "Alpha Sentinel, Dark Guardian Relic",
+    "id": "C603"
+  },
+  {
+    "name": "Armada, Herald of Shrouds",
+    "id": "C604"
+  },
+  {
+    "name": "Autobot Countdown, Aerospace Commander",
+    "id": "C605"
+  },
+  {
+    "name": "Autobot Pipes, Idiosyncratic Collector",
+    "id": "C606"
+  },
+  {
+    "name": "Autobot Powerglide, Haughty Show-Off",
+    "id": "C607"
+  },
+  {
+    "name": "Axor, Opportunistic Fencer",
+    "id": "C608"
+  },
+  {
+    "name": "Crashbash, Ocean Terror",
+    "id": "C609"
+  },
+  {
+    "name": "Crossguard 2X",
+    "id": "C610"
+  },
+  {
+    "name": "Decepticon Exhaust, Consumptive Condottiere",
+    "id": "C611"
+  },
+  {
+    "name": "Deliberata, Judger and The Judged",
+    "id": "C612"
+  },
+  {
+    "name": "General Ghyrik, Grievous Executioner",
+    "id": "C613"
+  },
+  {
+    "name": "Gilthor, Chained Amalgamation",
+    "id": "C614"
+  },
+  {
+    "name": "Inquisitor Drebzik, Exhaustive Interrogator",
+    "id": "C615"
+  },
+  {
+    "name": "Klementia, Medical Magistrate",
+    "id": "C616"
+  },
+  {
+    "name": "Lokos",
+    "id": "C617"
+  },
+  {
+    "name": "Mind Control Collar",
+    "id": "C618"
+  },
+  {
+    "name": "Mind Control Helmet",
+    "id": "C619"
+  },
+  {
+    "name": "Nacelle, Eager Aerospace Engineer",
+    "id": "C620"
+  },
+  {
+    "name": "Optimus Prime, Dark Awakening",
+    "id": "C621"
+  },
+  {
+    "name": "Rabblerouser, Aerial Onslaught",
+    "id": "C622"
+  },
+  {
+    "name": "Mara-Al-Utha, Usurper of Menonia",
+    "id": "C623"
+  },
+  {
+    "name": "Savage Wheelie, Rhymer Climber",
+    "id": "C624"
+  },
+  {
+    "name": "Sharkticon Biter, Brazen Berserker",
+    "id": "C625"
+  },
+  {
+    "name": "Sharkticon Chomp, Craving Carnivore",
+    "id": "C626"
+  },
+  {
+    "name": "Sharkticon Gnaw, Gluttonous Gourmand",
+    "id": "C627"
+  },
+  {
+    "name": "Sharkticon Peck, Protoform Pup",
+    "id": "C628"
+  },
+  {
+    "name": "Shockblast, Galactic Man",
+    "id": "C629"
+  },
+  {
+    "name": "UD-04 Globo Guard",
+    "id": "C630"
+  },
+  {
+    "name": "Tow-Line, Signals Engineer",
+    "id": "C631"
+  },
+  {
+    "name": "Lokos",
+    "id": "CP2201"
+  },
+  {
+    "name": "Brace For Impact",
+    "id": "S601"
+  },
+  {
+    "name": "Brutal Conditioning",
+    "id": "S602"
+  },
+  {
+    "name": "Buried Banquet",
+    "id": "S603"
+  },
+  {
+    "name": "Cantankerous Attitude",
+    "id": "S604"
+  },
+  {
+    "name": "Cerebro-Shell Shock",
+    "id": "S605"
+  },
+  {
+    "name": "Colossal Cannons",
+    "id": "S606"
+  },
+  {
+    "name": "Dark Regeneration",
+    "id": "S607"
+  },
+  {
+    "name": "Death Crystal Cannon",
+    "id": "S608"
+  },
+  {
+    "name": "Energon Reclamation",
+    "id": "S609"
+  },
+  {
+    "name": "Enterprising Spotlight",
+    "id": "S610"
+  },
+  {
+    "name": "Forbidden Sorcery",
+    "id": "S611"
+  },
+  {
+    "name": "Hit Me With That Beat",
+    "id": "S612"
+  },
+  {
+    "name": "In The Name of Slingshot",
+    "id": "S613"
+  },
+  {
+    "name": "Indigestion",
+    "id": "S614"
+  },
+  {
+    "name": "Kneel Before Us",
+    "id": "S615"
+  },
+  {
+    "name": "Localized Tremors",
+    "id": "S616"
+  },
+  {
+    "name": "Magnetic Boomerang",
+    "id": "S617"
+  },
+  {
+    "name": "Mass Displacement Drive",
+    "id": "S618"
+  },
+  {
+    "name": "Nebulous Spotlight",
+    "id": "S619"
+  },
+  {
+    "name": "Orbital Command",
+    "id": "S620"
+  },
+  {
+    "name": "Pit of Judgement",
+    "id": "S621"
+  },
+  {
+    "name": "Quite A Haul",
+    "id": "S622"
+  },
+  {
+    "name": "Sound The Alarm",
+    "id": "S623"
+  },
+  {
+    "name": "Squeeze Play",
+    "id": "S624"
+  },
+  {
+    "name": "Stuck On You",
+    "id": "S625"
+  },
+  {
+    "name": "The Last Line of Defense",
+    "id": "S626"
+  },
+  {
+    "name": "The Solo Job",
+    "id": "S627"
+  },
+  {
+    "name": "Thermal Reciprocation",
+    "id": "S628"
+  },
+  {
+    "name": "Third Party Brigade",
+    "id": "S629"
+  },
+  {
+    "name": "This Gun For Hire",
+    "id": "S630"
+  },
+  {
+    "name": "Triggercon-Vention",
+    "id": "S631"
+  },
+  {
+    "name": "Up In Smoke",
+    "id": "S632"
+  },
+  {
+    "name": "V2 Sonicsurge Drone Armor",
+    "id": "S633"
+  },
+  {
+    "name": "Off-Road Cycle",
+    "id": "S634"
+  },
+  {
+    "name": "Verdant Aegis",
+    "id": "S635"
+  },
+  {
+    "name": "Agile Formation",
+    "id": "B7001"
+  },
+  {
+    "name": "Armor Piercing Munitions",
+    "id": "B7002"
+  },
+  {
+    "name": "Camien Grace",
+    "id": "B7003"
+  },
+  {
+    "name": "Combat Drop",
+    "id": "B7004"
+  },
+  {
+    "name": "Contemplation",
+    "id": "B7005"
+  },
+  {
+    "name": "Corrupt Construction",
+    "id": "B7006"
+  },
+  {
+    "name": "Die Autobots!",
+    "id": "B7007"
+  },
+  {
+    "name": "Electro-Static Shielding",
+    "id": "B7008"
+  },
+  {
+    "name": "Enhanced Fusion Cannon",
+    "id": "B7009"
+  },
+  {
+    "name": "Evasive Action",
+    "id": "B7010"
+  },
+  {
+    "name": "Fearless",
+    "id": "B7011"
+  },
+  {
+    "name": "Foreman's Ingenuity",
+    "id": "B7012"
+  },
+  {
+    "name": "Impetuous Stand",
+    "id": "B7013"
+  },
+  {
+    "name": "Rage",
+    "id": "B7014"
+  },
+  {
+    "name": "Rapid Response Cycle",
+    "id": "B7015"
+  },
+  {
+    "name": "Revving the Engine",
+    "id": "B7016"
+  },
+  {
+    "name": "Robust",
+    "id": "B7017"
+  },
+  {
+    "name": "Scatter Blaster",
+    "id": "B7018"
+  },
+  {
+    "name": "Towering Presence",
+    "id": "B7019"
+  },
+  {
+    "name": "Trithyllium Drill",
+    "id": "B7020"
+  },
+  {
+    "name": "Banzai-Tron, Crystalocution Master",
+    "id": "C701"
+  },
+  {
+    "name": "Bludgeon, Metallikato Monster",
+    "id": "C702"
+  },
+  {
+    "name": "Brainstorm, Haunted Schemer",
+    "id": "C703"
+  },
+  {
+    "name": "Fangry, Cursed Nightmare",
+    "id": "C704"
+  },
+  {
+    "name": "Hardhead, Grave Mistakes",
+    "id": "C705"
+  },
+  {
+    "name": "Highbrow, Appallingly Astute",
+    "id": "C706"
+  },
+  {
+    "name": "Hoist, Fearless Rescuer",
+    "id": "C707"
+  },
+  {
+    "name": "Megatron",
+    "id": "C708"
+  },
+  {
+    "name": "Wolfwire, Lying In Wait",
+    "id": "C709"
+  },
+  {
+    "name": "Nightbird, Tera-Kura Construct",
+    "id": "C710"
+  },
+  {
+    "name": "All Hail Megatron!",
+    "id": "S701"
+  },
+  {
+    "name": "Artillery Support",
+    "id": "S702"
+  },
+  {
+    "name": "Covert",
+    "id": "S703"
+  },
+  {
+    "name": "Durable Decepticon",
+    "id": "S704"
+  },
+  {
+    "name": "Fully Loaded",
+    "id": "S705"
+  },
+  {
+    "name": "Holomatter Mastery",
+    "id": "S706"
+  },
+  {
+    "name": "Impervious",
+    "id": "S707"
+  },
+  {
+    "name": "Malevolent Architect",
+    "id": "S708"
+  },
+  {
+    "name": "Obfuscating Cloud",
+    "id": "S709"
+  },
+  {
+    "name": "One Tough Bug!",
+    "id": "S710"
+  },
+  {
+    "name": "Out of the Way Hot Rod!",
+    "id": "S711"
+  },
+  {
+    "name": "Road Warriors",
+    "id": "S712"
+  },
+  {
+    "name": "Silent Hunter",
+    "id": "S713"
+  },
+  {
+    "name": "Soundwave Superior",
+    "id": "S714"
+  },
+  {
+    "name": "Sulfuric Deluge",
+    "id": "S715"
+  },
+  {
+    "name": "Assault Protocol",
+    "id": "S716"
+  },
+  {
+    "name": "38-Amp Ionic Plate",
+    "id": "B8001"
+  },
+  {
+    "name": "Abrogate",
+    "id": "B8002"
+  },
+  {
+    "name": "Anti-Grav Cell",
+    "id": "B8003"
+  },
+  {
+    "name": "Armor Axe",
+    "id": "B8004"
+  },
+  {
+    "name": "Auxiliary Fuel Tank",
+    "id": "B8005"
+  },
+  {
+    "name": "Bracing Up",
+    "id": "B8006"
+  },
+  {
+    "name": "Caring is Sharing!",
+    "id": "B8007"
+  },
+  {
+    "name": "Cooling of Tensions",
+    "id": "B8008"
+  },
+  {
+    "name": "Custom Junkion Saddle",
+    "id": "B8009"
+  },
+  {
+    "name": "Dare to Be Stupid!",
+    "id": "B8010"
+  },
+  {
+    "name": "Decelerator Laser",
+    "id": "B8011"
+  },
+  {
+    "name": "Depower-Linx",
+    "id": "B8012"
+  },
+  {
+    "name": "Diffraction Sword",
+    "id": "B8013"
+  },
+  {
+    "name": "Drill Fingers",
+    "id": "B8014"
+  },
+  {
+    "name": "Dual Smokestacks",
+    "id": "B8015"
+  },
+  {
+    "name": "Escapology",
+    "id": "B8016"
+  },
+  {
+    "name": "Everything Must Go!",
+    "id": "B8017"
+  },
+  {
+    "name": "Explosive Disposal",
+    "id": "B8018"
+  },
+  {
+    "name": "Extended Duration Mission",
+    "id": "B8019"
+  },
+  {
+    "name": "Half-Track Trickery",
+    "id": "B8020"
+  },
+  {
+    "name": "Hand of Adaptus",
+    "id": "B8021"
+  },
+  {
+    "name": "Happy Motoring!",
+    "id": "B8022"
+  },
+  {
+    "name": "Head Case",
+    "id": "B8023"
+  },
+  {
+    "name": "Head of State",
+    "id": "B8024"
+  },
+  {
+    "name": "High Beam Headlights",
+    "id": "B8025"
+  },
+  {
+    "name": "Hodgepodge Panoply",
+    "id": "B8026"
+  },
+  {
+    "name": "Hot Seat",
+    "id": "B8027"
+  },
+  {
+    "name": "Hurry Hurry Hurry!",
+    "id": "B8028"
+  },
+  {
+    "name": "Imminent Breakthrough",
+    "id": "B8029"
+  },
+  {
+    "name": "Inexorable Force",
+    "id": "B8030"
+  },
+  {
+    "name": "Junkyard Turbofox",
+    "id": "B8031"
+  },
+  {
+    "name": "Lagartan Spaulders",
+    "id": "B8032"
+  },
+  {
+    "name": "Lie in Wait",
+    "id": "B8033"
+  },
+  {
+    "name": "Locking it Up",
+    "id": "B8034"
+  },
+  {
+    "name": "Me Grimlock Need New Strategy",
+    "id": "B8035"
+  },
+  {
+    "name": "Mirror Response Mode",
+    "id": "B8036"
+  },
+  {
+    "name": "Monofiber Filament",
+    "id": "B8037"
+  },
+  {
+    "name": "Muster the Will",
+    "id": "B8038"
+  },
+  {
+    "name": "Mystical Bond",
+    "id": "B8039"
+  },
+  {
+    "name": "Ninety Day Warranty!",
+    "id": "B8040"
+  },
+  {
+    "name": "Nucleon Exposure",
+    "id": "B8041"
+  },
+  {
+    "name": "Nudge Gun",
+    "id": "B8042"
+  },
+  {
+    "name": "Pack Behavior",
+    "id": "B8043"
+  },
+  {
+    "name": "Passenger Coverage",
+    "id": "B8044"
+  },
+  {
+    "name": "Patrol Bolas",
+    "id": "B8045"
+  },
+  {
+    "name": "Patrol the Perimeter",
+    "id": "B8046"
+  },
+  {
+    "name": "Peas in a Pod!",
+    "id": "B8047"
+  },
+  {
+    "name": "Performance Gear Selector",
+    "id": "B8048"
+  },
+  {
+    "name": "Pile-Up",
+    "id": "B8049"
+  },
+  {
+    "name": "Playing Both Sides",
+    "id": "B8050"
+  },
+  {
+    "name": "Police Action",
+    "id": "B8051"
+  },
+  {
+    "name": "Razor Wings",
+    "id": "B8052"
+  },
+  {
+    "name": "Reactive Thrusters",
+    "id": "B8053"
+  },
+  {
+    "name": "Recon Reissue",
+    "id": "B8054"
+  },
+  {
+    "name": "Relax With a Cold One!",
+    "id": "B8055"
+  },
+  {
+    "name": "Revving Up",
+    "id": "B8056"
+  },
+  {
+    "name": "Riffraff Knick-Knacks",
+    "id": "B8057"
+  },
+  {
+    "name": "Severed Combiner Hand",
+    "id": "B8058"
+  },
+  {
+    "name": "Shanix Laundering",
+    "id": "B8059"
+  },
+  {
+    "name": "Shard of the Divine Light",
+    "id": "B8060"
+  },
+  {
+    "name": "Sitrep Update",
+    "id": "B8061"
+  },
+  {
+    "name": "Skimming Off the Top",
+    "id": "B8062"
+  },
+  {
+    "name": "Sparring Lessons",
+    "id": "B8063"
+  },
+  {
+    "name": "Spear of the Moment",
+    "id": "B8064"
+  },
+  {
+    "name": "Spread Democracy!",
+    "id": "B8065"
+  },
+  {
+    "name": "Summon the Courage",
+    "id": "B8066"
+  },
+  {
+    "name": "Superior Surveillance",
+    "id": "B8067"
+  },
+  {
+    "name": "Take the Shot",
+    "id": "B8068"
+  },
+  {
+    "name": "Terrorburster Shield",
+    "id": "B8069"
+  },
+  {
+    "name": "Terrorcon Enigma",
+    "id": "B8070"
+  },
+  {
+    "name": "The Power to Bite",
+    "id": "B8071"
+  },
+  {
+    "name": "Throttle",
+    "id": "B8072"
+  },
+  {
+    "name": "Too Short For This Ride",
+    "id": "B8073"
+  },
+  {
+    "name": "Traffic Checkpoint",
+    "id": "B8074"
+  },
+  {
+    "name": "Transfusion Cable",
+    "id": "B8075"
+  },
+  {
+    "name": "Tried and Executed",
+    "id": "B8076"
+  },
+  {
+    "name": "Two Foes, Two Fists",
+    "id": "B8077"
+  },
+  {
+    "name": "Unfathomable Motives",
+    "id": "B8078"
+  },
+  {
+    "name": "Untiring Parma Shield",
+    "id": "B8079"
+  },
+  {
+    "name": "Wave of Lightning",
+    "id": "B8080"
+  },
+  {
+    "name": "Well-Worn Armor",
+    "id": "B8081"
+  },
+  {
+    "name": "Ashtray, Come to Where the Flavor Is!",
+    "id": "C801"
+  },
+  {
+    "name": "Autobot Infinitus",
+    "id": "C802"
+  },
+  {
+    "name": "Autobot Roller, Scout Drone",
+    "id": "C803"
+  },
+  {
+    "name": "Bug Bite, The Renegade Who Had It Made",
+    "id": "C804"
+  },
+  {
+    "name": "Clench, Colossus of Obliteration",
+    "id": "C805"
+  },
+  {
+    "name": "Crasher, Fractious Fanatic",
+    "id": "C806"
+  },
+  {
+    "name": "Decepticon Wingthing, Loyal, Lethal Cohort",
+    "id": "C807"
+  },
+  {
+    "name": "Detritus, Now With Sleek, Sexy Handling!",
+    "id": "C808"
+  },
+  {
+    "name": "Gilthor, Wounded Retribution",
+    "id": "C809"
+  },
+  {
+    "name": "Greasestain, No Muss! No Fuss!",
+    "id": "C810"
+  },
+  {
+    "name": "High Bailiff Bollag, Court Knight",
+    "id": "C811"
+  },
+  {
+    "name": "Junker Drone",
+    "id": "C812"
+  },
+  {
+    "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
+    "id": "C813"
+  },
+  {
+    "name": "Junkion Nancy, Just Say No to Sparkplugs!",
+    "id": "C814"
+  },
+  {
+    "name": "Lord Kledji, Royal Ruler of Quintessa",
+    "id": "C815"
+  },
+  {
+    "name": "Loudmouth, Incendiary Control",
+    "id": "C816"
+  },
+  {
+    "name": "Megatron, Megalomaniacal Mariner",
+    "id": "C817"
+  },
+  {
+    "name": "Muck Sergeant Peck, Brackish Chain-Breaker",
+    "id": "C818"
+  },
+  {
+    "name": "Q-PTP Aculear Scope",
+    "id": "C819"
+  },
+  {
+    "name": "Q-RTR Arachnoid Array",
+    "id": "C820"
+  },
+  {
+    "name": "Quig",
+    "id": "C821"
+  },
+  {
+    "name": "Rum-Maj, Wreck-Gar Sold Separately!",
+    "id": "C822"
+  },
+  {
+    "name": "Scrapheap, It's Not Trash If It's Worth Cash!",
+    "id": "C823"
+  },
+  {
+    "name": "Scrapper Drone",
+    "id": "C824"
+  },
+  {
+    "name": "Sentinel Prime, Legacy of the Primes",
+    "id": "C825"
+  },
+  {
+    "name": "Sideswipe, Covert Clone",
+    "id": "C826"
+  },
+  {
+    "name": "Sinnertwin, Two-Faced Disgrace",
+    "id": "C827"
+  },
+  {
+    "name": "Solarbot, Enigmatic Sunsteader",
+    "id": "C828"
+  },
+  {
+    "name": "CY-47 Bridge Bulwark",
+    "id": "C829"
+  },
+  {
+    "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
+    "id": "C830"
+  },
+  {
+    "name": "Terrorcon Blot, Rank and Vile Rank and File",
+    "id": "C831"
+  },
+  {
+    "name": "Terrorcon Cutthroat, Shock and Cawww",
+    "id": "C832"
+  },
+  {
+    "name": "Terrorcon Hun-Gurrr, Eaters Digest",
+    "id": "C833"
+  },
+  {
+    "name": "Terrorcon Rippersnapper, Tooth and Nail",
+    "id": "C834"
+  },
+  {
+    "name": "Trasher Drone",
+    "id": "C835"
+  },
+  {
+    "name": "Tread Bolt, Devil of the Deep Blue Sky",
+    "id": "C836"
+  },
+  {
+    "name": "Waster Drone",
+    "id": "C837"
+  },
+  {
+    "name": "Wreck-Gar, The Big Cheese! Now With More Cheese!",
+    "id": "C838"
+  },
+  {
+    "name": "Abominus, Hellsparked Horror",
+    "id": "G14"
+  },
+  {
+    "name": "Roadmaster Prime Mode, Master of Chaos",
+    "id": "G15"
+  },
+  {
+    "name": "Scorpulator, Desert Rose",
+    "id": "G16"
+  },
+  {
+    "name": "Thunder Guts Gilthor, The One Who Claps",
+    "id": "G17"
+  },
+  {
+    "name": "A Very Cross Examination",
+    "id": "S801"
+  },
+  {
+    "name": "Alphastrike Counterforce",
+    "id": "S802"
+  },
+  {
+    "name": "Angolmois Infusion",
+    "id": "S803"
+  },
+  {
+    "name": "Barrel Rolling",
+    "id": "S804"
+  },
+  {
+    "name": "Blockbuster Moving Trailers",
+    "id": "S805"
+  },
+  {
+    "name": "Boater Suppression",
+    "id": "S806"
+  },
+  {
+    "name": "Cat's Cradle of Contingencies",
+    "id": "S807"
+  },
+  {
+    "name": "Cherish This World or Perish",
+    "id": "S808"
+  },
+  {
+    "name": "Combat Deck",
+    "id": "S809"
+  },
+  {
+    "name": "Don't Touch That Dial!",
+    "id": "S810"
+  },
+  {
+    "name": "Extermination Exercise",
+    "id": "S811"
+  },
+  {
+    "name": "Four the Selectors!",
+    "id": "S812"
+  },
+  {
+    "name": "Heroic Perseverance",
+    "id": "S813"
+  },
+  {
+    "name": "Ignore the Pain",
+    "id": "S814"
+  },
+  {
+    "name": "It's As Good As Used!",
+    "id": "S815"
+  },
+  {
+    "name": "I've Got Your Back",
+    "id": "S816"
+  },
+  {
+    "name": "Kakistocracy",
+    "id": "S817"
+  },
+  {
+    "name": "King of Pain",
+    "id": "S818"
+  },
+  {
+    "name": "Materiel War",
+    "id": "S819"
+  },
+  {
+    "name": "Me Grimlock Kick Butt!",
+    "id": "S820"
+  },
+  {
+    "name": "Me Grimlock King!",
+    "id": "S821"
+  },
+  {
+    "name": "Me Grimlock Mash Brains!",
+    "id": "S822"
+  },
+  {
+    "name": "Me Grimlock Say Execute Them!",
+    "id": "S823"
+  },
+  {
+    "name": "Me Grimlock Want to Munch Metal",
+    "id": "S824"
+  },
+  {
+    "name": "No Lords, No Masters",
+    "id": "S825"
+  },
+  {
+    "name": "Old War Stories",
+    "id": "S826"
+  },
+  {
+    "name": "Order in the Court",
+    "id": "S827"
+  },
+  {
+    "name": "Prosecutorial Overreach",
+    "id": "S828"
+  },
+  {
+    "name": "Put a Stinger in the Works",
+    "id": "S829"
+  },
+  {
+    "name": "Queen of the Junkyard",
+    "id": "S830"
+  },
+  {
+    "name": "Scrappy Spotlight",
+    "id": "S831"
+  },
+  {
+    "name": "Slice, Dice, and Julienne!",
+    "id": "S832"
+  },
+  {
+    "name": "Sonic Doom",
+    "id": "S833"
+  },
+  {
+    "name": "Spin to Deflect Stuff",
+    "id": "S834"
+  },
+  {
+    "name": "Stop the Tax and Spend!",
+    "id": "S835"
+  },
+  {
+    "name": "The City's Finest Views",
+    "id": "S836"
+  },
+  {
+    "name": "The Great Escape",
+    "id": "S837"
+  },
+  {
+    "name": "Third Party Brigade",
+    "id": "S838"
+  },
+  {
+    "name": "This Shall Be Your Ship",
+    "id": "S839"
+  },
+  {
+    "name": "Time for New Leadership",
+    "id": "S840"
+  },
+  {
+    "name": "Writhing in the Deep",
+    "id": "S841"
+  },
+  {
+    "name": "300-TT Crusher Claw",
+    "id": "B9001"
+  },
+  {
+    "name": "Aerial Superiority",
+    "id": "B9002"
+  },
+  {
+    "name": "Apex Armor",
+    "id": "B9003"
+  },
+  {
+    "name": "Beast Mode",
+    "id": "B9004"
+  },
+  {
+    "name": "Bellicosity",
+    "id": "B9005"
+  },
+  {
+    "name": "Cloaking Screen",
+    "id": "B9006"
+  },
+  {
+    "name": "Cloud Cover",
+    "id": "B9007"
+  },
+  {
+    "name": "Cosmic Rust Cannon",
+    "id": "B9008"
+  },
+  {
+    "name": "Cross-Counter",
+    "id": "B9009"
+  },
+  {
+    "name": "Dare to Believe",
+    "id": "B9010"
+  },
+  {
+    "name": "Enhanced Cyber Blade",
+    "id": "B9011"
+  },
+  {
+    "name": "Feral Tenacity",
+    "id": "B9012"
+  },
+  {
+    "name": "Grimlock's Sword",
+    "id": "B9013"
+  },
+  {
+    "name": "Heavy-Duty Plasma Blaster",
+    "id": "B9014"
+  },
+  {
+    "name": "Mecha Star",
+    "id": "B9015"
+  },
+  {
+    "name": "Nothin's Gonna Stand In Our Way",
+    "id": "B9016"
+  },
+  {
+    "name": "Particle Cannon of Galvatron",
+    "id": "B9017"
+  },
+  {
+    "name": "Scan the Vaults",
+    "id": "B9018"
+  },
+  {
+    "name": "Spoils of War",
+    "id": "B9019"
+  },
+  {
+    "name": "Starscream's Cape",
+    "id": "B9020"
+  },
+  {
+    "name": "Stasis Field",
+    "id": "B9021"
+  },
+  {
+    "name": "Stormfall Sword",
+    "id": "B9022"
+  },
+  {
+    "name": "The Touch",
+    "id": "B9023"
+  },
+  {
+    "name": "This is Bad Comedy",
+    "id": "B9024"
+  },
+  {
+    "name": "Trithyllium Plating",
+    "id": "B9025"
+  },
+  {
+    "name": "Twisted Logic",
+    "id": "B9026"
+  },
+  {
+    "name": "Vamparc Ribbon",
+    "id": "B9027"
+  },
+  {
+    "name": "Wanna Bet?",
+    "id": "B9028"
+  },
+  {
+    "name": "Beastbox, Savage Interrogator",
+    "id": "C901"
+  },
+  {
+    "name": "Cyclonus, Loyal Enforcer",
+    "id": "C902"
+  },
+  {
+    "name": "Galvatron, Maniacal Tyrant",
+    "id": "C903"
+  },
+  {
+    "name": "Ghost of Starscream, Annoying Apparition",
+    "id": "C904"
+  },
+  {
+    "name": "Grimlock, Dinobot King",
+    "id": "C905"
+  },
+  {
+    "name": "Huffer, Sullen Engineer",
+    "id": "C906"
+  },
+  {
+    "name": "P38 Fusion Blaster",
+    "id": "C907"
+  },
+  {
+    "name": "Red Wing, Thrillseeker",
+    "id": "C908"
+  },
+  {
+    "name": "Rewind, Data Collector",
+    "id": "C909"
+  },
+  {
+    "name": "Rodimus Prime, Worthy Leader",
+    "id": "C910"
+  },
+  {
+    "name": "Rumble, Demolition Expert",
+    "id": "C911"
+  },
+  {
+    "name": "Seaspray, Valiant Vessel",
+    "id": "C912"
+  },
+  {
+    "name": "Specialist Countdown, Transport • Space Explorer",
+    "id": "C913"
+  },
+  {
+    "name": "Squawktalk, Chatterbox Translator",
+    "id": "C914"
+  },
+  {
+    "name": "Wheelie, Rhyming Racer",
+    "id": "C915"
+  },
+  {
+    "name": "Windblade, Camien Champion",
+    "id": "C916"
+  },
+  {
+    "name": "Paddles, Gentle Giant",
+    "id": "CP2401"
+  },
+  {
+    "name": "Squawkbox, Passionate Musician",
+    "id": "G18"
+  },
+  {
+    "name": "Advanced Technology",
+    "id": "S901"
+  },
+  {
+    "name": "Arise, Rodimus Prime",
+    "id": "S902"
+  },
+  {
+    "name": "Arm the Lonely",
+    "id": "S903"
+  },
+  {
+    "name": "Battlefield Dissonance",
+    "id": "S904"
+  },
+  {
+    "name": "Brothers In Armor",
+    "id": "S905"
+  },
+  {
+    "name": "Bust Some Deceptichops!",
+    "id": "S906"
+  },
+  {
+    "name": "Can't Squish This",
+    "id": "S907"
+  },
+  {
+    "name": "Do It With Style!",
+    "id": "S908"
+  },
+  {
+    "name": "Drop Your Weapons",
+    "id": "S909"
+  },
+  {
+    "name": "Heat Resistant Body",
+    "id": "S910"
+  },
+  {
+    "name": "Made of Sterner Stuff",
+    "id": "S911"
+  },
+  {
+    "name": "Paranoia",
+    "id": "S912"
+  },
+  {
+    "name": "Quest for Fire",
+    "id": "S913"
+  },
+  {
+    "name": "Scout the Area",
+    "id": "S914"
+  },
+  {
+    "name": "Such Heroic Nonsense",
+    "id": "S915"
+  },
+  {
+    "name": "Electro-Stinger",
+    "id": "B9A001"
+  },
+  {
+    "name": "Imperator Claw",
+    "id": "B9A002"
+  },
+  {
+    "name": "Zarak Shield",
+    "id": "B9A003"
+  },
+  {
+    "name": "Scorponok, Brutal Warlord",
+    "id": "C9A01"
+  },
+  {
+    "name": "Lord Zarak, Ruler of Nebulon",
+    "id": "C9A02"
+  },
+  {
+    "name": "Combaticon Enigma",
+    "id": "B9B001"
+  },
+  {
+    "name": "Lock and Load",
+    "id": "B9B002"
+  },
+  {
+    "name": "United Front",
+    "id": "B9B003"
+  },
+  {
+    "name": "Unfriendly Fire",
+    "id": "B9B004"
+  },
+  {
+    "name": "Blast Off, Space Warrior",
+    "id": "C9B01"
+  },
+  {
+    "name": "Brawl, Ground Assault",
+    "id": "C9B02"
+  },
+  {
+    "name": "Onslaught, Combaticon Leader",
+    "id": "C9B03"
+  },
+  {
+    "name": "Swindle, Arms Dealer",
+    "id": "C9B04"
+  },
+  {
+    "name": "Vortex, Interrogator",
+    "id": "C9B05"
+  },
+  {
+    "name": "Bruticus, Unstoppable Giant",
+    "id": "G19"
+  },
+  {
+    "name": "Anti-Aircraft Ordnance",
+    "id": "B10001"
+  },
+  {
+    "name": "Cerebro Shell",
+    "id": "B10002"
+  },
+  {
+    "name": "Chaos of War",
+    "id": "B10003"
+  },
+  {
+    "name": "Deflection Barrier",
+    "id": "B10004"
+  },
+  {
+    "name": "Diagnostic Drone",
+    "id": "B10005"
+  },
+  {
+    "name": "Electrum Coating",
+    "id": "B10006"
+  },
+  {
+    "name": "Enemy, Wingthing Attack!",
+    "id": "B10007"
+  },
+  {
+    "name": "Energo Sword",
+    "id": "B10008"
+  },
+  {
+    "name": "First in, Last out",
+    "id": "B10009"
+  },
+  {
+    "name": "For Cybertron!",
+    "id": "B10010"
+  },
+  {
+    "name": "Freedom of Action",
+    "id": "B10011"
+  },
+  {
+    "name": "Fusion Pistol",
+    "id": "B10012"
+  },
+  {
+    "name": "HI Concussion Blaster",
+    "id": "B10013"
+  },
+  {
+    "name": "Hydraulic Grapple",
+    "id": "B10014"
+  },
+  {
+    "name": "Null-Ray Cannon",
+    "id": "B10015"
+  },
+  {
+    "name": "Obsessive Research",
+    "id": "B10016"
+  },
+  {
+    "name": "Overkill, Slugfest Attack!",
+    "id": "B10017"
+  },
+  {
+    "name": "Red Rust",
+    "id": "B10018"
+  },
+  {
+    "name": "Replenishment Maneuvers",
+    "id": "B10019"
+  },
+  {
+    "name": "Salvaged Cannon",
+    "id": "B10020"
+  },
+  {
+    "name": "Shore Bombardment",
+    "id": "B10021"
+  },
+  {
+    "name": "Subtle Activation",
+    "id": "B10022"
+  },
+  {
+    "name": "Surveillance Array",
+    "id": "B10023"
+  },
+  {
+    "name": "Take Down",
+    "id": "B10024"
+  },
+  {
+    "name": "Torture Chamber",
+    "id": "B10025"
+  },
+  {
+    "name": "Bob, Loveable Pet",
+    "id": "C1001"
+  },
+  {
+    "name": "Broadside, Air & Sea Assault",
+    "id": "C1002"
+  },
+  {
+    "name": "Cloudraker, Claustrophobic Sky Fighter",
+    "id": "C1003"
+  },
+  {
+    "name": "Enemy, Infuriating Infiltrator",
+    "id": "C1004"
+  },
+  {
+    "name": "Fastlane, Road Warrior",
+    "id": "C1005"
+  },
+  {
+    "name": "Hoist, Methodical Maintenance",
+    "id": "C1006"
+  },
+  {
+    "name": "Laserbeak, Impatient Interrogator",
+    "id": "C1007"
+  },
+  {
+    "name": "Overkill, Wanton Warrior",
+    "id": "C1008"
+  },
+  {
+    "name": "Rack 'N' Ruin, One Bot Wrecking Crew",
+    "id": "C1009"
+  },
+  {
+    "name": "Slugfest, Maniacal Messenger",
+    "id": "C1010"
+  },
+  {
+    "name": "Wildrider, Traffic Terror",
+    "id": "C1011"
+  },
+  {
+    "name": "...Always Bet on the Leader",
+    "id": "S1001"
+  },
+  {
+    "name": "A Tasty Morsel, Morsel",
+    "id": "S1002"
+  },
+  {
+    "name": "Eat My Dust!",
+    "id": "S1003"
+  },
+  {
+    "name": "Excellent!",
+    "id": "S1004"
+  },
+  {
+    "name": "Excuse Me!",
+    "id": "S1005"
+  },
+  {
+    "name": "Infernus",
+    "id": "S1006"
+  },
+  {
+    "name": "Letsgo-Letsgo-Letsgo-Go-Go!",
+    "id": "S1007"
+  },
+  {
+    "name": "Master Builder",
+    "id": "S1008"
+  },
+  {
+    "name": "Mortar Cannon",
+    "id": "S1009"
+  },
+  {
+    "name": "Obnoxiousness",
+    "id": "S1010"
+  },
+  {
+    "name": "One Good Shot",
+    "id": "S1011"
+  },
+  {
+    "name": "Operation: Interference",
+    "id": "S1012"
+  },
+  {
+    "name": "Solar Regeneration",
+    "id": "S1013"
+  },
+  {
+    "name": "Target: Acquired",
+    "id": "S1014"
+  },
+  {
+    "name": "The Dark Spark",
+    "id": "S1015"
+  },
+  {
+    "name": "Voracious Hunger",
+    "id": "S1016"
+  },
+  {
+    "name": "We've Gotta Push Back!",
+    "id": "S1017"
+  },
+  {
+    "name": "With Courage and Good Cheer",
+    "id": "S1018"
+  },
+  {
+    "name": "Wreck 'N' Rule",
+    "id": "S1019"
+  },
+  {
+    "name": "Zone Defense",
+    "id": "S1020"
+  },
+  {
+    "name": "Combat Reconfiguration",
+    "id": "B10A001"
+  },
+  {
+    "name": "Hypersonic Concussion Blaster",
+    "id": "B10A002"
+  },
+  {
+    "name": "Tactical Suppression",
+    "id": "B10A003"
+  },
+  {
+    "name": "Sixshot, Solo Transformer Assault Group",
+    "id": "C10A01"
+  },
+  {
+    "name": "Summon Sky Shadow!",
+    "id": "S001"
+  },
+  {
+    "name": "Bend to My Will",
+    "id": "BOL1001"
+  },
+  {
+    "name": "Colossal Proportions",
+    "id": "BOL1002"
+  },
+  {
+    "name": "Energon Harvest",
+    "id": "BOL1003"
+  },
+  {
+    "name": "Enhanced Talons",
+    "id": "BOL1004"
+  },
+  {
+    "name": "Hand of Doom",
+    "id": "BOL1005"
+  },
+  {
+    "name": "Imminent Chaos",
+    "id": "BOL1006"
+  },
+  {
+    "name": "Insignificance",
+    "id": "BOL1007"
+  },
+  {
+    "name": "Leashed Will",
+    "id": "BOL1008"
+  },
+  {
+    "name": "Menacing Gaze",
+    "id": "BOL1009"
+  },
+  {
+    "name": "Unicron, Chaos Bringer",
+    "id": "COL101"
+  },
+  {
+    "name": "Scourge, Decepticon Tracker",
+    "id": "COL102"
+  },
+  {
+    "name": "Sweeps, Minion",
+    "id": "COL103"
+  },
+  {
+    "name": "Cyclonus, Wild Soldier",
+    "id": "COL104"
+  },
+  {
+    "name": "Galvatron, Decepticon Warlord",
+    "id": "COL105"
+  },
+  {
+    "name": "Light Our Darkest Hour...",
+    "id": "SOL101"
+  },
+  {
+    "name": "Optimus Prime, Inspiring Leader",
+    "id": "COL201"
+  }
+  ]
+  }
