@@ -605,11 +605,13 @@
     },
     {
       "name": "Buzzsaw, Ravage, Frenzy Attack!",
-      "tfdsl": ""
+      "comment": "TODO: Test Frenzy effect",
+      "tfdsl": "if(all_friends(name=Buzzsaw).count>0)->draw(1);if(all_friends(name=Ravage).count>0)->damage(1,pick_enemy());if(all_friends(name=Frenzy).count>0)->scrap_upgrade(opponent_pick(opponent().upgrades,subtype=Armor))"
     },
     {
       "name": "Daring Counterattack",
-      "tfdsl": ""
+      "comment": "TODO: Test the ko +1 atk. Pierce works",
+      "tfdsl": "atk_eot(self().ko.count,pick_friend());if(all_friends(name=Blaster).count>0)->pierce_eot(6,previous_target())"
     },
     {
       "name": "Inner Groove",
@@ -635,7 +637,7 @@
       "name": "Blaster, Communications",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
-        "bot": "on-this-flip()->(deploy(this(),pick_under_this(),bot);scrap_deck(get_deck());play(previous_target(3)))"
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);scrap_deck(get_deck());play(previous_target(3)))"
       }
     },
     {
@@ -663,8 +665,8 @@
       "name": "Soundwave, Communications",
       "comment": "Partial Bot",
       "tfdsl": {
-        "alt": "place_under(this(),all_friends(trait='Mini-Cassette'))",
-        "bot": "on-this-flip()->deploy(this(),pick_under_this(trait='Mini-Cassette'))"
+        "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
+        "bot": "on-this-flip()->deploy(this(),pick_under_this(trait='Mini-Cassette'),bot)"
       }
     },
     {
