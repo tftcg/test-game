@@ -24,6 +24,7 @@
     button { font: inherit; }
 
     .page-header {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -34,6 +35,31 @@
 
     .page-header h1 { margin: 0; font-size: 1.15rem; }
     #status { margin: 0; color: #a9cce8; }
+    .deck-selectors {
+      position: absolute;
+      left: 50%;
+      display: flex;
+      gap: .75rem;
+      transform: translateX(-50%);
+    }
+    .deck-selectors label { display: flex; align-items: center; gap: .35rem; font-size: .8rem; }
+    .deck-selectors select {
+      padding: .35rem;
+      color: inherit;
+      background: #10151b;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+    }
+    #summon-button {
+      margin-left: auto;
+      padding: .4rem .75rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    #summon-button:disabled { cursor: not-allowed; opacity: .5; }
 
     .game-layout {
       display: grid;
@@ -216,12 +242,66 @@
       font-size: .9rem;
     }
     .preview-statline.damage { color: #ff9d9d; }
+
+    #text-prompt {
+      width: min(420px, calc(100vw - 2rem));
+      color: inherit;
+      background: #1a222c;
+      border: 1px solid #6687a5;
+      border-radius: .4rem;
+      box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
+    }
+    #text-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt form { display: grid; gap: .75rem; }
+    #text-prompt label { display: grid; gap: .35rem; }
+    #text-prompt input {
+      width: 100%;
+      padding: .5rem;
+      color: inherit;
+      background: #10151b;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+    }
+    #text-prompt button {
+      justify-self: end;
+      padding: .45rem .8rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <header class="page-header">
     <h1>Transformers TCG prototype</h1>
     <p id="status">Loading game...</p>
+    <div class="deck-selectors">
+      <label>
+        Player 1
+        <select id="human-deck">
+          <option selected value="0b706068.json">Wave 1 Starter</option>
+          <option value="135fecd5.json">Wave 2 Starter</option>
+          <option value="65f2f0bd.json">Metroplex</option>
+          <option value="026f3891.json">Constructicons</option>
+          <option value="b949f910.json">Blaster</option>
+          <option value="6398ef30.json">Soundwave</option>
+        </select>
+      </label>
+      <label>
+        Player 2
+        <select id="computer-deck">
+          <option value="0b706068.json">Wave 1 Starter</option>
+          <option selected value="135fecd5.json">Wave 2 Starter</option>
+          <option value="65f2f0bd.json">Metroplex</option>
+          <option value="026f3891.json">Constructicons</option>
+          <option value="b949f910.json">Blaster</option>
+          <option value="6398ef30.json">Soundwave</option>
+        </select>
+      </label>
+    </div>
+    <button id="summon-button" type="button" disabled>Summon</button>
   </header>
   <main class="game-layout">
     <aside class="control-column">
@@ -243,6 +323,15 @@
     <section id="game-state" aria-label="Game board"></section>
   </main>
   <aside id="card-preview" hidden aria-hidden="true"></aside>
+  <dialog id="text-prompt">
+    <form id="text-prompt-form">
+      <label>
+        <span id="text-prompt-message">Enter text</span>
+        <input id="text-prompt-input" type="text" required>
+      </label>
+      <button type="submit">Continue</button>
+    </form>
+  </dialog>
   <script type="module" src="./web.js"></script>
 </body>
 </html>

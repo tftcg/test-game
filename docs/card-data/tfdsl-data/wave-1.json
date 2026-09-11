@@ -75,8 +75,7 @@
     },
     {
       "name": "Cybertonium Bow",
-      "comment": "FAILS: on-attack-flip not implemented yet",
-      "tfdsl": "on-attack-flip(when(event.blue=event.orange))->atk_eob(event.blue)"
+      "tfdsl": "on-attached-after-attack-flip(when(event().flips.blue=event().flips.orange))->atk_eob(event().flips.blue,attached())"
     },
     {
       "name": "Data Bank",
@@ -149,7 +148,7 @@
     },
     {
       "name": "Hunker Down",
-      "tfdsl": "flip(all_friends(mode=bot,other_trait=Tank));scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
+      "tfdsl": "flip(all_friends(mode=bot,modes.count>1,other_trait=Tank));scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
     },
     {
       "name": "I Still Function!",
@@ -244,7 +243,7 @@
     },
     {
       "name": "Rapid Conversion",
-      "tfdsl": "flip(pick_friend())"
+      "tfdsl": "flip(pick_friend(modes.count>1))"
     },
     {
       "name": "Ready For Action",
@@ -260,7 +259,7 @@
     },
     {
       "name": "Roll Out!",
-      "tfdsl": "flip(all_friends(mode=bot))"
+      "tfdsl": "flip(all_friends(mode=bot,modes.count>1))"
     },
     {
       "name": "Salvage for Parts",
@@ -281,7 +280,7 @@
     },
     {
       "name": "Start Your Engines",
-      "tfdsl": "flip(all_friends(mode=bot,other_trait=Car));untap(pick_char(trait=Car))"
+      "tfdsl": "flip(all_friends(mode=bot,modes.count>1,other_trait=Car));untap(pick_char(trait=Car))"
     },
     {
       "name": "Static Laser of Ironhide",
@@ -342,7 +341,7 @@
     {
       "name": "Protected By Metroplex",
       "comment": "TODO: Implement modify()",
-      "tfdsl": "on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name='Metroplex, Autobot City',event.target.owner=attached().owner))"
+      "tfdsl": "instead(on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name='Metroplex, Autobot City',event.target.owner=attached().owner)))"
     },
     {
       "name": "Rally the City",
@@ -360,7 +359,6 @@
     {
       "name": "Arcee, Skilled Fighter",
       "tfdsl": {
-        "comment": "TODO: test bot",
         "alt": "on-this-flip()->repair(1,all_friends())",
         "bot": "static(pierce,this().atk)"
       }
@@ -404,12 +402,7 @@
       }
     },
     {
-      "name": "Bombshell, Insecticon Mind-Controller",
-      "tfdsl": {
-        "comment": "vanilla both",
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Bombshell, Insecticon Mind-Controller"
     },
     {
       "name": "Bumblebee, Courageous Scout",
@@ -449,9 +442,7 @@
     {
       "name": "Deadlock, Bounty Hunter",
       "tfdsl": {
-        "comment": "vanilla bot",
-        "alt": "",
-        "bot": ""
+        "alt": ""
       }
     },
     {
@@ -476,12 +467,7 @@
       }
     },
     {
-      "name": "Dinobot Slug, Hot-Headed Warrior",
-      "tfdsl": {
-        "comment": "vanilla both",
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Dinobot Slug, Hot-Headed Warrior"
     },
     {
       "name": "Dinobot Snarl, Desert Warrior",
@@ -493,8 +479,8 @@
     {
       "name": "Dinobot Swoop, Fearsome Flyer",
       "tfdsl": {
-        "comment": "TODO: Test",
-        "alt": "on-this-flip()->move(1,self(),pick_enemy())",
+        "comment": "ERROR: Erroring in test",
+        "alt": "on-this-flip()->move(1,this(),pick_enemy())",
         "bot": ""
       }
     },
@@ -515,9 +501,7 @@
     {
       "name": "Inferno, Fearless Firefighter",
       "tfdsl": {
-        "comment": "vanilla bot",
-        "alt": "on-this-flip()->return_upgrade(all(pick_char().upgrades))",
-        "bot": ""
+        "alt": "on-this-flip()->return_upgrade(all(pick_char().upgrades))"
       }
     },
     {
@@ -584,12 +568,7 @@
       }
     },
     {
-      "name": "Ramjet, Sky Smasher",
-      "tfdsl": {
-        "comment": "vanilla both",
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Ramjet, Sky Smasher"
     },
     {
       "name": "Ransack, Insecticon Commando",
@@ -600,12 +579,7 @@
       }
     },
     {
-      "name": "Sergeant Kup, Veteran Sergeant",
-      "tfdsl": {
-        "comment": "vanilla both",
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Sergeant Kup, Veteran Sergeant"
     },
     {
       "name": "Skywarp, Sneaky Prankster",
@@ -673,7 +647,7 @@
         "comment": "Using !Utility is a cheap way to do Armor OR Weapon but it will fail someday",
         "altDesired": "static(bold,when(exists(name=this().name,mode=alt)),1,find('Metroplex'))",
         "alt": "",
-        "bot": "on-this-flip(when(all_friends(name='Metroplex, Autobot City').count>0))->scrap_upgrade(pick_enemy_upgrade(trait!=Utility))"
+        "bot": "on-this-flip(when(all_friends(name='Metroplex, Autobot City').count>0))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
       }
     },
     {
@@ -702,9 +676,8 @@
     {
       "name": "Slipstream, Strategic Seeker",
       "tfdsl": {
-        "comment": "TODO: Test alt mode. bot mode needs colors implementing.",
-        "alt": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Plane))->move(event().attacker,event().defender)",
-        "bot": "on-this-after-attack-flip(when(colors.count>=3))->atk_eot(3,this())"
+        "alt": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Plane))->move(1,event().attacker,event().defender)",
+        "bot": "on-this-after-attack-flip(when(event().flips.colours.count>=3))->atk_eot(3,this())"
       }
     },
     {
@@ -715,12 +688,7 @@
       }
     },
     {
-      "name": "Ironhide, Veteran Autobot",
-      "tfdsl": {
-        "comment": "vanilla both",
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Ironhide, Veteran Autobot"
     },
     {
       "name": "Optimus Prime, Autobot Leader",
@@ -730,12 +698,7 @@
       }
     },
     {
-      "name": "Red Alert, Security Chief",
-      "tfdsl": {
-        "comment": "vanilla both",
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Red Alert, Security Chief"
     }
   ]
 }

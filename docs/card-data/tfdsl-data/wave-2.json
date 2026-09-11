@@ -119,7 +119,7 @@
     },
     {
       "name": "Escape Route",
-      "tfdsl": "flip(pick_friend(mode=bot),alt)"
+      "tfdsl": "flip(pick_friend(mode=bot,modes.count>1),alt)"
     },
     {
       "name": "Espionage",
@@ -224,7 +224,7 @@
     },
     {
       "name": "Rapid Conversion",
-      "tfdsl": "flip(pick_friend())"
+      "tfdsl": "flip(pick_friend(modes.count>1))"
     },
     {
       "name": "Reckless Charge",
@@ -366,7 +366,6 @@
     {
       "name": "Air Raid, Fearless Flyer",
       "tfdsl": {
-        "alt": "",
         "bot": ""
       }
     },
@@ -392,11 +391,7 @@
       }
     },
     {
-      "name": "Autobot Novastar, Search and Rescue",
-      "tfdsl": {
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Autobot Novastar, Search and Rescue"
     },
     {
       "name": "Autobot Springer, Aerial Defense",
@@ -424,7 +419,6 @@
     {
       "name": "Bluestreak, Reluctant Soldier",
       "tfdsl": {
-        "alt": "",
         "bot": "on-attached-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1,event().flips.white>=1))->flip(this(),alt)"
       }
     },
@@ -445,8 +439,7 @@
     {
       "name": "Breakdown, Paranoid Scout",
       "tfdsl": {
-        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=2))->atk_eot(2,this())",
-        "bot": ""
+        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=2))->atk_eot(2,this())"
       }
     },
     {
@@ -480,28 +473,24 @@
     {
       "name": "Dinobot Sludge, Dino Demolitions",
       "tfdsl": {
-        "alt": "",
         "bot": "on-this-attack(when(self().hand.count<opponent().hand.count))->draw(2)"
       }
     },
     {
       "name": "Dinobot Slug, Battering Ram",
       "tfdsl": {
-        "alt": "",
         "bot": ""
       }
     },
     {
       "name": "Dinobot Snarl, Spiked Battler",
       "tfdsl": {
-        "alt": "",
         "bot": ""
       }
     },
     {
       "name": "Dinobot Swoop, Bombardier",
       "tfdsl": {
-        "alt": "",
         "bot": ""
       }
     },
@@ -516,7 +505,6 @@
     {
       "name": "Divebomb, Aerial Assault",
       "tfdsl": {
-        "alt": "",
         "bot": ""
       }
     },
@@ -544,7 +532,6 @@
     {
       "name": "Grimlock, Powerful Commander",
       "tfdsl": {
-        "alt": "",
         "bot": ""
       }
     },
@@ -586,8 +573,7 @@
     {
       "name": "Predacon Headstrong, Ground Assault",
       "tfdsl": {
-        "alt": "brave()",
-        "bot": ""
+        "alt": "brave()"
       }
     },
     {
@@ -612,11 +598,7 @@
       }
     },
     {
-      "name": "Ruckus, Combat Assault",
-      "tfdsl": {
-        "alt": "",
-        "bot": ""
-      }
+      "name": "Ruckus, Combat Assault"
     },
     {
       "name": "Silverbolt, Aerialbot Leader",
@@ -773,8 +755,7 @@
     {
       "name": "Mixmaster, Materials Fabrication",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": ""
       }
     },
     {
@@ -800,7 +781,6 @@
     {
       "name": "Bumblebee, Least Likely, Most Dangerous",
       "tfdsl": {
-        "alt": "",
         "bot": "bold(1)"
       }
     },
@@ -814,14 +794,12 @@
     {
       "name": "Starscream, Decepticon Lieutenant",
       "tfdsl": {
-        "alt": "",
         "bot": "tough(1)"
       }
     },
     {
       "name": "Windblade, Defender of Truth",
       "tfdsl": {
-        "alt": "",
         "bot": "on-this-flip()->pierce_eot(2,this())"
       }
     }

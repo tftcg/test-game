@@ -1,0 +1,713 @@
+{
+  "set": {
+    "id": "a4e3a90a-e819-4561-bf23-51b5736d8020",
+    "name": "Wave 3",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "Anticipation Engine",
+      "tfdsl": ""
+    },
+    {
+      "name": "Backup Bag",
+      "tfdsl": ""
+    },
+    {
+      "name": "Basic Combat Protocol",
+      "tfdsl": "bold(1)"
+    },
+    {
+      "name": "Battering Ram",
+      "tfdsl": ""
+    },
+    {
+      "name": "Battlefield Report",
+      "tfdsl": ""
+    },
+    {
+      "name": "Battlefield Scan",
+      "tfdsl": ""
+    },
+    {
+      "name": "Bolster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Brainstorm",
+      "tfdsl": "play(pick_hand(type=Action));play(pick_hand(type=Action))"
+    },
+    {
+      "name": "Calculated Strike",
+      "tfdsl": "atk(2);pierce(2)"
+    },
+    {
+      "name": "Callous Leadership",
+      "tfdsl": ""
+    },
+    {
+      "name": "Combat Dagger",
+      "tfdsl": "bold(1)"
+    },
+    {
+      "name": "Compact Shield",
+      "tfdsl": "put_only(faction=Autobot)"
+    },
+    {
+      "name": "Covert Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dampening Field",
+      "tfdsl": ""
+    },
+    {
+      "name": "Defensive Formation",
+      "tfdsl": ""
+    },
+    {
+      "name": "Device Virus",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dismantle",
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
+    },
+    {
+      "name": "Dismantling Claw",
+      "tfdsl": ""
+    },
+    {
+      "name": "EM24 IR Laser Launcher"
+    },
+    {
+      "name": "Emergency Defense Field",
+      "tfdsl": ""
+    },
+    {
+      "name": "Emp Wave",
+      "tfdsl": ""
+    },
+    {
+      "name": "Energy Pack",
+      "tfdsl": "put_only(star>=11);health(4)"
+    },
+    {
+      "name": "Erratic Energy Grenade",
+      "tfdsl": ""
+    },
+    {
+      "name": "Extra Padding",
+      "tfdsl": ""
+    },
+    {
+      "name": "Firecon Flame",
+      "tfdsl": ""
+    },
+    {
+      "name": "Force Field",
+      "tfdsl": ""
+    },
+    {
+      "name": "Frag Toss",
+      "tfdsl": ""
+    },
+    {
+      "name": "Fuel Cache",
+      "tfdsl": ""
+    },
+    {
+      "name": "Full Loadout",
+      "tfdsl": ""
+    },
+    {
+      "name": "Heat of Battle",
+      "comment": "Needs testing.",
+      "tfdsl": "bold_eot(3,all_chars());tough_eot(3,all_chars())"
+    },
+    {
+      "name": "Heroic Team-Up",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hiding Spot",
+      "tfdsl": ""
+    },
+    {
+      "name": "HV Electron Breacher",
+      "tfdsl": "put_only(faction=Decepticon)"
+    },
+    {
+      "name": "Infiltrate",
+      "tfdsl": ""
+    },
+    {
+      "name": "Laser Cutlass",
+      "tfdsl": "put_only(star<=7);pierce(3)"
+    },
+    {
+      "name": "LV Gamma-Disruptor Launcher",
+      "tfdsl": ""
+    },
+    {
+      "name": "Ultra Magnus Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Medic!",
+      "tfdsl": "repair(2,pick_friend())"
+    },
+    {
+      "name": "Metal Detector",
+      "tfdsl": ""
+    },
+    {
+      "name": "Micro Capacitor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Pep Talk",
+      "tfdsl": "draw(2)"
+    },
+    {
+      "name": "Personal Targeting Drone",
+      "tfdsl": ""
+    },
+    {
+      "name": "Point-Defense System",
+      "tfdsl": ""
+    },
+    {
+      "name": "Pop a Wheelie",
+      "tfdsl": ""
+    },
+    {
+      "name": "Quartermaster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reactive Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reflex Circuits",
+      "tfdsl": ""
+    },
+    {
+      "name": "Repurpose",
+      "tfdsl": ""
+    },
+    {
+      "name": "Rock Toss",
+      "tfdsl": "damage(1, pick_enemy(tapped=tapped))"
+    },
+    {
+      "name": "RR Disruptor Blade",
+      "tfdsl": ""
+    },
+    {
+      "name": "Scavenge the Battlefield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Smoke Cloak",
+      "tfdsl": "tough(1)"
+    },
+    {
+      "name": "Smokethrower",
+      "tfdsl": "bold(2)"
+    },
+    {
+      "name": "Diagnosis",
+      "tfdsl": ""
+    },
+    {
+      "name": "Special Ops Mission",
+      "tfdsl": ""
+    },
+    {
+      "name": "Spinner Rims",
+      "tfdsl": ""
+    },
+    {
+      "name": "Squish them like Bugs",
+      "tfdsl": ""
+    },
+    {
+      "name": "Steady Shot",
+      "tfdsl": "atk_eot(2,pick_friend())"
+    },
+    {
+      "name": "Sturdy Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Take Cover",
+      "tfdsl": ""
+    },
+    {
+      "name": "Two-Pronged Attack",
+      "tfdsl": ""
+    },
+    {
+      "name": "Unconventional Flying Object",
+      "tfdsl": ""
+    },
+    {
+      "name": "Urban Camo",
+      "tfdsl": "tough(1)"
+    },
+    {
+      "name": "W-5 Gyro Blaster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Alpha Trion, Cybertronian Sage",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Captain Elita-1, Special Ops • Ranger",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Captain Starscream, Infantry • Air Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Captain Ironhide, Infantry • Bodyguard",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Captain Wheeljack, Engineering  Scientist",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "General Megatron, Infantry • Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "General Optimus Prime, Infantry • Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Major Prowl, Infantry • Strategist",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Major Shockwave, Applied Sciences • Scientist",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Major Soundwave, Espionage • Spy",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Major Ultra Magnus, Infantry • City Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Arcee, Special Ops • Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Firedrive, Ground Command • Artillery",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Private Flak, Artillery • Tactics",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Lionizer, Ground Command • Artillery",
+      "tfdsl": {
+        "bot": "bold(4)",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Private Mudslinger, Special Ops • Infiltration",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Pteraxadon, Air Command • Artillery",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Private Red Alert, Medical • Medic",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Red Heat, Infantry • Emergency Response",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Sideswipe, Infantry • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Stakeout, Infantry • Communications",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Top Shot, Artillery • Patrol Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Tote, Special Ops • Infiltration",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Trailbreaker, Infantry • Fortification & Defense",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Aimless, Air Force • Weapons",
+      "tfdsl": {
+        "bot": "",
+        "alt": ""
+      }
+    },
+    {
+      "name": "Raider Blowpipe, Air Force • Weapons",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Raider Cindersaur, Black Ops • Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Detour, Infantry • Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Flamefeather, Black Ops • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Ion Storm, Infantry • Rainmaker",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Laserbeak, Espionage • Interrogation",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Needlenose, Air Force • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Nightstick, Ground Force • Weapons",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Raider Ravage, Espionage • Saboteur",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Road Hugger, Infantry • Tactics",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Runabout, Infantry • Soldier",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Raider Runamuck, Infantry • Soldier",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Triggerhappy, Air Force • Gunner",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Visper, Infantry • Patrol Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Chromia, Special Ops • Counterintelligence",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Cog, Artillery • Mechanic",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Sergeant Hound, Infantry • Recon",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Skrapnel, Infantry • Electronic Warfare",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Skywarp, Black Ops • Seeker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Sparkstalker, Black Ops • Cryptology",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Specialist Flamewar, Special Ops • Hunter",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Specialist Ratchet, Engineering • Rescue & Repair",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Smashdown, Ground Command • Artillery",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Nightbird, Enigmatic Agent",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Buzzsaw, Ravage, Frenzy Attack!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Daring Counterattack",
+      "tfdsl": ""
+    },
+    {
+      "name": "Inner Groove",
+      "tfdsl": "put_only(trait='Mini-Cassette')"
+    },
+    {
+      "name": "Intercept Communications",
+      "tfdsl": ""
+    },
+    {
+      "name": "Interpret The Airwaves",
+      "tfdsl": ""
+    },
+    {
+      "name": "Obstructive Rhythm",
+      "tfdsl": ""
+    },
+    {
+      "name": "Recover Cassette",
+      "tfdsl": ""
+    },
+    {
+      "name": "Blaster, Communications",
+      "tfdsl": {
+        "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(),bot);scrap_deck(get_deck());play(previous_target(3)))"
+      }
+    },
+    {
+      "name": "Eject, Electronic Surveillance",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ramhorn, Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Steeljaw, Tracker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Soundwave, Communications",
+      "comment": "Partial Bot",
+      "tfdsl": {
+        "alt": "place_under(this(),all_friends(trait='Mini-Cassette'))",
+        "bot": "on-this-flip()->deploy(this(),pick_under_this(trait='Mini-Cassette'))"
+      }
+    },
+    {
+      "name": "Buzzsaw, Spy",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Frenzy, Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ravage, Saboteur",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Camshaft, Special Ops • Scout",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Downshift, Special Ops • Security Agent",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Overdrive, Special Ops • Strategist",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    }
+  ]
+}

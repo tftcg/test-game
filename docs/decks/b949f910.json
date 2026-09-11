@@ -1,0 +1,57 @@
+{
+    "id": "b949f910",
+    "warnings": [
+        "<span class=\"Info\" title=\"Deck construction rules used in normal, standard play\">Standard Play</span>: This sideboard has fewer than the 10&#127136; maximum."
+    ],
+    "errors": [],
+    "combiners": [],
+    "hasalpha": false,
+    "hasbeta": false,
+    "valid": false,
+    "user": -1,
+    "name": "[Preconstructed] Blaster Set",
+    "notes": "From the retail Blaster vs Soundwave Set, released on September 20, 2019.",
+    "public": 1,
+    "tournament": null,
+    "created": "2020-09-06 18:36:33",
+    "modified": "2020-10-05 02:52:04",
+    "deck": {
+        "user": -1,
+        "name": "[Preconstructed] Blaster Set",
+        "notes": "From the retail Blaster vs Soundwave Set, released on September 20, 2019.",
+        "public": 1,
+        "tournament": null,
+        "created": "2020-09-06 18:36:33",
+        "modified": "2020-10-05 02:52:04",
+        "characters": {
+            "C3A01": 1,
+            "C3A02": 1,
+            "C3A03": 1,
+            "C3A04": 1
+        },
+        "stratagems": [],
+        "battle": {
+            "B1030": 2,
+            "B1033": 2,
+            "B1039": 2,
+            "B1081": 2,
+            "B2006": 3,
+            "B2026": 3,
+            "B2034": 3,
+            "B2046": 3,
+            "B2081": 3,
+            "B3003": 2,
+            "B3026": 3,
+            "B3A005": 3,
+            "B3A006": 3,
+            "B3A007": 3,
+            "B3A002": 3
+        }
+    },
+    "sideboard": {
+        "characters": [],
+        "stratagems": [],
+        "battle": []
+    },
+    "outside": []
+}
