@@ -16,8 +16,7 @@
       "tfdsl": "on-put(when(attached().trait=Ranged))->damage(1,all_enemies())"
     },
     {
-      "name": "Armored Plating",
-      "tfdsl": ""
+      "name": "Armored Plating"
     },
     {
       "name": "Backup Plan",
@@ -230,8 +229,7 @@
       "tfdsl": "put_only(trait=Melee);bold(3)"
     },
     {
-      "name": "Primary Laser",
-      "tfdsl": ""
+      "name": "Primary Laser"
     },
     {
       "name": "Ramming Speed",

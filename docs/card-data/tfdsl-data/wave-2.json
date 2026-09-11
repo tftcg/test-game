@@ -22,8 +22,7 @@
       "tfdsl": ""
     },
     {
-      "name": "Armored Plating",
-      "tfdsl": ""
+      "name": "Armored Plating"
     },
     {
       "name": "Attack Drone",
@@ -219,8 +218,7 @@
       "tfdsl": "atk_eot(2,pick_friend(faction=Autobot));def_eot(-2,pick_enemy(faction=Decepticon))"
     },
     {
-      "name": "Primary Laser",
-      "tfdsl": ""
+      "name": "Primary Laser"
     },
     {
       "name": "Rapid Conversion",
@@ -788,7 +786,7 @@
       "name": "Megatron, Cybertronian Tyrant",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": ""
+        "bot": "on-upgrade()->atk_eot(1,this())"
       }
     },
     {
