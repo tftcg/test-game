@@ -263,7 +263,7 @@
     },
     {
       "name": "Salvage for Parts",
-      "tfdsl": "CUSTOM_salvage_for_parts()"
+      "tfdsl": ""
     },
     {
       "name": "Scrapper Gauntlets",
@@ -304,7 +304,7 @@
     },
     {
       "name": "Swarm!",
-      "tfdsl": "CUSTOM_swarm()"
+      "tfdsl": ""
     },
     {
       "name": "System Reboot",
@@ -341,16 +341,15 @@
     {
       "name": "Protected By Metroplex",
       "comment": "TODO: Implement modify()",
-      "tfdsl": "instead(on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name='Metroplex, Autobot City',event.target.owner=attached().owner)))"
+      "tfdsl": "instead(on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name=Metroplex,event.target.owner=attached().owner)))"
     },
     {
       "name": "Rally the City",
-      "comment": "BUG: The .count path isn't getting executed here, though it does parse",
-      "tfdsl": "if(all_friends(name='Metroplex, Autobot City').count>0)->draw(all_friends().count)"
+      "tfdsl": "if(all_friends(name=Metroplex).count>0)->draw(all_friends().count)"
     },
     {
       "name": "All-Out Attack",
-      "tfdsl": "CUSTOM_all_out_attack()"
+      "tfdsl": ""
     },
     {
       "name": "Tandem Targeting System",
@@ -607,7 +606,7 @@
       "name": "Sunstorm, Fusion Flyer",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "static(atk,this().owner.hand.count)"
       }
     },
     {
@@ -644,25 +643,24 @@
       "name": "Scamper, City Patrol",
       "altTxt": "Your Metroplex has Bold 1",
       "tfdsl": {
-        "comment": "Using !Utility is a cheap way to do Armor OR Weapon but it will fail someday",
-        "altDesired": "static(bold,when(exists(name=this().name,mode=alt)),1,find('Metroplex'))",
+        "altDesired": "static(bold,when(exists(name=this().name,mode=alt)),1,find(Metroplex))",
         "alt": "",
-        "bot": "on-this-flip(when(all_friends(name='Metroplex, Autobot City').count>0))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
+        "bot": "on-this-flip(when(all_friends(name=Metroplex).count>0))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
       }
     },
     {
       "name": "Six-Gun, Heavy Weapons Expert",
       "tfdsl": {
         "comment":  "Name needs to just be Metroplex",
-        "alt": "on-attack(when(event().attacker.owner=self(),event().attacker.name='Metroplex, Autobot City'))->damage(1,event().defender)",
-        "bot": "on-this-flip()->bold_eot(2,all_friends(name='Metroplex, Autobot City'))"
+        "alt": "on-attack(when(event().attacker.owner=self(),event().attacker.name=Metroplex))->damage(1,event().defender)",
+        "bot": "on-this-flip()->bold_eot(2,all_friends(name=Metroplex))"
       }
     },
     {
       "name": "Slammer, Combat Drone",
       "alttext": "Partial. Needs: Your Metroplex has Bold 1.",
       "tfdsl": {
-        "alt": "on-deploy(when(event().deployer.name='Metroplex, Autobot City'))->damage(1,all_enemies())"
+        "alt": "on-deploy(when(event().deployer.name=Metroplex))->damage(1,all_enemies())"
       }
     },
     {

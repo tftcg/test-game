@@ -309,7 +309,7 @@
       "name": "General Optimus Prime, Infantry • Leader",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "bold(1);tough(1);focus(1)"
       }
     },
     {
@@ -342,7 +342,7 @@
     {
       "name": "Private Arcee, Special Ops • Warrior",
       "tfdsl": {
-        "alt": "",
+        "alt": "focus(1)",
         "bot": ""
       }
     },
@@ -506,13 +506,13 @@
     {
       "name": "Raider Runabout, Infantry • Soldier",
       "tfdsl": {
-        "alt": ""
+        "alt": "on-this-flip()->(repair(1,this());repair(1,all_friends(name=Runamuck));flip(all_friends(mode=bot,name=Runamuck),alt))"
       }
     },
     {
       "name": "Raider Runamuck, Infantry • Soldier",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-flip()->(draw(1);flip(all_friends(mode=alt,name=Runabout),bot))"
       }
     },
     {
@@ -579,8 +579,8 @@
     {
       "name": "Specialist Flamewar, Special Ops • Hunter",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth()",
+        "bot": "focus(2)"
       }
     },
     {
@@ -684,7 +684,7 @@
     {
       "name": "Ravage, Saboteur",
       "tfdsl": {
-        "alt": "",
+        "alt": "stealth();on-this-flip()->pierce_eot(2,pick_friend())",
         "bot": ""
       }
     },
