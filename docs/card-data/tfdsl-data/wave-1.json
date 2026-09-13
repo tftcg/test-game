@@ -425,7 +425,8 @@
     {
       "name": "Chromia, Special Ops",
       "tfdsl": {
-        "alt": "",
+        "comment": "TODO: Test this",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(white>=1))",
         "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->draw(2)"
       }
     },
@@ -444,9 +445,10 @@
     },
     {
       "name": "Decepticon Shockwave, Cybertron Commander",
+      "comment": "TODO: Bug here that you are doing 1 damage to a char your opponent chose, not them doing it",
       "tfdsl": {
         "alt": "on-this-flip()->(each(all_players())->draw(2,it()))",
-        "bot": ""
+        "bot": "on-opponent-scrap-hand()->damage(1,opponent_pick(opponent().upgrades))"
       }
     },
     {
@@ -470,7 +472,7 @@
       "name": "Dinobot Snarl, Desert Warrior",
       "tfdsl": {
         "alt": "on-this-flip(when(self().hand.count=0))->draw(2)",
-        "bot": ""
+        "bot": "on-this-attack()->put_deck(pick_hand())"
       }
     },
     {
@@ -512,7 +514,7 @@
       "name": "Jetfire, Air Guardian",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": ""
+        "bot": "on-this-flip()->put_upgrade(this(),pick_scrap(subtype=Armor || subtype=Utility))"
       }
     },
     {
@@ -532,7 +534,8 @@
     {
       "name": "Megatron, Living Weapon",
       "tfdsl": {
-        "alt": "",
+        "comment": "TODO: Test this",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(subtype=Weapon))",
         "bot": ""
       }
     },
@@ -546,7 +549,7 @@
     {
       "name": "Optimus Prime, Battlefield Legend",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action))",
         "bot": ""
       }
     },

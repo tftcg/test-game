@@ -266,7 +266,7 @@
     {
       "name": "Alpha Trion, Cybertronian Sage",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action,orange>=1))",
         "bot": ""
       }
     },
@@ -480,7 +480,7 @@
     {
       "name": "Raider Needlenose, Air Force • Soldier",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(star=1))",
         "bot": ""
       }
     },
@@ -525,7 +525,7 @@
     {
       "name": "Raider Triggerhappy, Air Force • Gunner",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(subtype=Weapon))",
         "bot": ""
       }
     },
@@ -649,9 +649,10 @@
     },
     {
       "name": "Ramhorn, Warrior",
+      "comment": "Note that it's PT(2) because PT(1) is the flipped character",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-this-flip()->move_upgrade(pick_friendly_upgrade(subtype=Armor),pick_friend(id!=previous_target(2).attached_to.id))",
+        "bot": "on-this-defend()->play(pick_hand(subtype=Armor,white>=1))"
       }
     },
     {
