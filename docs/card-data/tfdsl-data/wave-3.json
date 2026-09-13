@@ -673,8 +673,8 @@
     {
       "name": "Buzzsaw, Spy",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-this-flip()->move_upgrade(pick_friendly_upgrade(subtype=Weapon),pick_friend(id!=previous_target(2).attached_to.id))",
+        "bot": "on-this-defend()->play(pick_hand(subtype=Weapon,blue>=1))"
       }
     },
     {

@@ -370,7 +370,7 @@
     {
       "name": "Alpha Bravo, Airborne Special Ops",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-attack(when(event().attacker.owner!=this().owner,event().attacker.trait=Plane))->damage(1,event().attacker)",
         "bot": "pierce(3)"
       }
     },

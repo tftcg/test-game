@@ -462,7 +462,7 @@
       "name": "Dinobot Sludge, Mighty Stomper",
       "tfdsl": {
         "alt": "",
-        "bot": "on-attack(when(event().attacker.trait=Dinobot))->repair(1,event().attacker)"
+        "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Dinobot))->repair(1,event().attacker)"
       }
     },
     {
@@ -653,7 +653,7 @@
       "name": "Six-Gun, Heavy Weapons Expert",
       "tfdsl": {
         "comment":  "Name needs to just be Metroplex",
-        "alt": "on-attack(when(event().attacker.owner=self(),event().attacker.name=Metroplex))->damage(1,event().defender)",
+        "alt": "on-attack(when(event().attacker.owner=this().owner,event().attacker.name=Metroplex))->damage(1,event().defender)",
         "bot": "on-this-flip()->bold_eot(2,all_friends(name=Metroplex))"
       }
     },
