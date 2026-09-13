@@ -111,7 +111,8 @@
     },
     {
       "name": "Emergency Maintenance",
-      "tfdsl": "repair(1,pick_friend());when(all_friends(zone=KO).star.sum>all_friends().star.sum)->repair(2,previous_target())"
+      "comment": ".sum is not implemented",
+      "tfdsl": "repair(1,pick_friend());when(all_friends(zone=KO).stars.sum>all_friends().stars.sum)->repair(2,previous_target())"
     },
     {
       "name": "Energon Axe",
@@ -127,7 +128,7 @@
     },
     {
       "name": "Force Field",
-      "tfdsl": "instead(on-attack-damage(when(event.damage>4))->modify(event.damage=4))"
+      "tfdsl": "instead(on-attack-damage(when(event().damage>4))->(scrap_upgrade(this());modify(event().damage:=4)))"
     },
     {
       "name": "Fusion Cannon of Megatron",
@@ -143,7 +144,7 @@
     },
     {
       "name": "Heroism",
-      "tfdsl": "on-attack-damage(when(event.target!=attached(),event.owner=attached().owner))->modify(event.target=attached())"
+      "tfdsl": "instead(on-attack-damage(when(event().target.owner=attached().owner,event().target!=attached()))->modify(event().target:=attached()))"
     },
     {
       "name": "Hunker Down",
@@ -152,7 +153,7 @@
     {
       "name": "I Still Function!",
       "comment": "Currently it can pick a non-character from the KO. Also... I think it will KO due to the ; before the repair",
-      "tfdsl": "return_from_ko(pick(self().ko,star<=12));repair(1,previous_target());on-end-turn()->ko(previous_target())"
+      "tfdsl": "return_from_ko(pick(self().ko,stars<=12));repair(1,previous_target());on-end-turn()->ko(previous_target())"
     },
     {
       "name": "Improvised Shield",
@@ -245,7 +246,7 @@
     },
     {
       "name": "Ready For Action",
-      "tfdsl": "untap(pick_friend(star<=10))"
+      "tfdsl": "untap(pick_friend(stars<=10))"
     },
     {
       "name": "Reinforced Plating",
@@ -339,7 +340,7 @@
     {
       "name": "Protected By Metroplex",
       "comment": "TODO: Implement modify()",
-      "tfdsl": "instead(on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name=Metroplex,event.target.owner=attached().owner)))"
+      "tfdsl": "instead(on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name=Metroplex,event.target.owner:=attached().owner)))"
     },
     {
       "name": "Rally the City",

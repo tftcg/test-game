@@ -92,7 +92,7 @@
     },
     {
       "name": "Energy Pack",
-      "tfdsl": "put_only(star>=11);health(4)"
+      "tfdsl": "put_only(stars>=11);health(4)"
     },
     {
       "name": "Erratic Energy Grenade",
@@ -108,7 +108,7 @@
     },
     {
       "name": "Force Field",
-      "tfdsl": ""
+      "tfdsl": "instead(on-attack-damage(when(event().damage>4))->(scrap_upgrade(this());modify(event().damage:=4)))"
     },
     {
       "name": "Frag Toss",
@@ -145,7 +145,7 @@
     },
     {
       "name": "Laser Cutlass",
-      "tfdsl": "put_only(star<=7);pierce(3)"
+      "tfdsl": "put_only(stars<=7);pierce(3)"
     },
     {
       "name": "LV Gamma-Disruptor Launcher",
@@ -480,7 +480,7 @@
     {
       "name": "Raider Needlenose, Air Force • Soldier",
       "tfdsl": {
-        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(star=1))",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(stars=1))",
         "bot": ""
       }
     },
