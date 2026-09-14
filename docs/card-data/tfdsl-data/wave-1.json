@@ -181,9 +181,8 @@
     },
     {
       "name": "Matrix of Leadership",
-      "comment": "FAILS: This currently doesn't work. You can't put an each() after an arrow and static doesn't take targets",
-      "tfdsl-old": "put_only(faction=Autobot);if(attached().trait=Leader)->each(other_friends())->(static(pierce,1,it());static(atk,1,it()))",
-      "tfdsl": "put_only(faction=Autobot);each(other_friends())->if(attached().trait=Leader)->(static(pierce,1,it());static(atk,1,it()))"
+      "comment": "BUG: Says Skipping Requirement when played - yet won't play if not an Autobot",
+      "tfdsl": "put_only(faction=Autobot);each(all_friends(id!=attached().id))->(static(pierce,when(attached().trait=Leader),1,target=it());static(atk,when(attached().trait=Leader),1,target=it()))"
     },
     {
       "name": "Medic!",
@@ -339,8 +338,8 @@
     },
     {
       "name": "Protected By Metroplex",
-      "comment": "TODO: Implement modify()",
-      "tfdsl": "instead(on-attack-damage(when(event.target=attached()))->modify(event.target=pick_char(name=Metroplex,event.target.owner:=attached().owner)))"
+      "comment": "TODO: Support direct damage, not just attack damage",
+      "tfdsl": "instead(on-attack-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)))"
     },
     {
       "name": "Rally the City",
@@ -365,7 +364,7 @@
       "name": "Autobot Cosmos, Recon & Communication",
       "tfdsl": {
         "comment": "Test alt",
-        "alt": "on-this-flip()->(scrap_hand(all_hand();draw(previous_target().length)",
+        "alt": "on-this-flip()->(scrap_hand(all_hand());draw(previous_target().count))",
         "bot": ""
       }
     },
@@ -488,7 +487,7 @@
       "name": "Flamewar, Veteran Decepticon",
       "tfdsl": {
         "alt": "on-this-flip()->bold_eot(1,all_friends())",
-        "bot": ""
+        "bot": "each(all_friends())->static(tough,1,target=it())"
       }
     },
     {
@@ -643,34 +642,30 @@
     },
     {
       "name": "Scamper, City Patrol",
-      "altTxt": "Your Metroplex has Bold 1",
       "tfdsl": {
-        "altDesired": "static(bold,when(exists(name=this().name,mode=alt)),1,find(Metroplex))",
-        "alt": "",
+        "alt": "static(bold,1,target=all_friends(name=Metroplex))",
         "bot": "on-this-flip(when(all_friends(name=Metroplex).count>0))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
       }
     },
     {
       "name": "Six-Gun, Heavy Weapons Expert",
       "tfdsl": {
-        "comment":  "Name needs to just be Metroplex",
         "alt": "on-attack(when(event().attacker.owner=this().owner,event().attacker.name=Metroplex))->damage(1,event().defender)",
         "bot": "on-this-flip()->bold_eot(2,all_friends(name=Metroplex))"
       }
     },
     {
       "name": "Slammer, Combat Drone",
-      "alttext": "Partial. Needs: Your Metroplex has Bold 1.",
       "tfdsl": {
-        "alt": "on-deploy(when(event().deployer.name=Metroplex))->damage(1,all_enemies())"
+        "alt": "static(bold,1,target=all_friends(name=Metroplex));on-deploy(when(event().deployer.name=Metroplex))->damage(1,all_enemies())"
       }
     },
     {
       "name": "Cliffjumper, Renegade Warrior",
       "tfdsl": {
         "comment": "Test alt mode. ko will need to be changed to only chars in the ko",
-        "alt": "on-flip(when(event().flipped.owner=this().owner,event.().flipped.mode=bot))->draw(1)",
-        "bot": "static(atk,self().ko.length)"
+        "alt": "on-flip(when(event().flipped.owner=this().owner,event().flipped.mode=bot))->draw(1)",
+        "bot": "static(atk,self().ko.count)"
       }
     },
     {

@@ -308,7 +308,7 @@
     {
       "name": "General Optimus Prime, Infantry • Leader",
       "tfdsl": {
-        "alt": "",
+        "alt": "each(all_friends(id!=this().id))->(static(bold,1,target=it());static(tough,1,target=it()))",
         "bot": "bold(1);tough(1);focus(1)"
       }
     },
@@ -356,7 +356,7 @@
     {
       "name": "Private Flak, Artillery • Tactics",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -370,7 +370,7 @@
     {
       "name": "Private Mudslinger, Special Ops • Infiltration",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -390,7 +390,7 @@
     {
       "name": "Private Red Heat, Infantry • Emergency Response",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -404,21 +404,21 @@
     {
       "name": "Private Stakeout, Infantry • Communications",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
     {
       "name": "Private Top Shot, Artillery • Patrol Leader",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
     {
       "name": "Private Tote, Special Ops • Infiltration",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -453,7 +453,7 @@
     {
       "name": "Raider Detour, Infantry • Demolitions",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -499,7 +499,7 @@
     {
       "name": "Raider Road Hugger, Infantry • Tactics",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -518,7 +518,7 @@
     {
       "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -532,7 +532,7 @@
     {
       "name": "Raider Visper, Infantry • Patrol Leader",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -619,6 +619,8 @@
     },
     {
       "name": "Intercept Communications",
+      "comment": "TODO: Second half of this",
+      "tfdslAlt": "play_only(starting_team(name=Soundwave)>0)->draw(2)",
       "tfdsl": ""
     },
     {
@@ -627,7 +629,7 @@
     },
     {
       "name": "Obstructive Rhythm",
-      "tfdsl": ""
+      "tfdsl": "static(tough, all_friends(trait='Mini-Cassette').count)"
     },
     {
       "name": "Recover Cassette",
@@ -658,8 +660,8 @@
     {
       "name": "Steeljaw, Tracker",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-flip()->bold_eot(1,all_friends())",
+        "bot": "bold(1);static(bold,1,target=all_friends(stars>=10))"
       }
     },
     {
@@ -688,7 +690,7 @@
       "name": "Ravage, Saboteur",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->pierce_eot(2,pick_friend())",
-        "bot": ""
+        "bot": "pierce(2);static(tough,1,target=all_friends(stars>=10))"
       }
     },
     {

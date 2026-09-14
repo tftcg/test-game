@@ -13,11 +13,11 @@
     },
     {
       "name": "Acute Reflexes",
-      "tfdsl": ""
+      "tfdsl": "focus(1);on-attached-after-battle-flip(when(event().flips.white>=1))->(atk_eot(1,attached());def_eot(1,attached()))"
     },
     {
       "name": "Adaptive Plating",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-defend-flip(when(event().flips.white>=1))->def_eot(2,attached())"
     },
     {
       "name": "Backfire",
@@ -53,11 +53,12 @@
     },
     {
       "name": "Crowbar",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-attack()->scrap_upgrade(this())"
     },
     {
       "name": "Crude Club",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "static(atk,when(),attached().upgrades.count)"
     },
     {
       "name": "Daring Escape",
@@ -85,7 +86,7 @@
     },
     {
       "name": "Erratic Cannon",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-attack-flip(when(event().flips.white>=1))->atk_eot(3,attached())"
     },
     {
       "name": "Even The Score",
@@ -93,7 +94,7 @@
     },
     {
       "name": "Fight For Position",
-      "tfdsl": ""
+      "tfdsl": "bold(2)"
     },
     {
       "name": "Guarded Posture"
@@ -120,7 +121,7 @@
     },
     {
       "name": "Immersed In Shadow",
-      "tfdsl": ""
+      "tfdsl": "static(stealth,when(attached().tapped=untapped))"
     },
     {
       "name": "Increased Durability",
@@ -140,11 +141,11 @@
     },
     {
       "name": "Kinetic Converter",
-      "tfdsl": ""
+      "tfdsl": "on-attached-flip()->draw(1)"
     },
     {
       "name": "Kinetic Intensifier Whip",
-      "tfdsl": ""
+      "tfdsl": "on-attached-flip()->bold(1)"
     },
     {
       "name": "Lucky Vest",
@@ -160,7 +161,7 @@
     },
     {
       "name": "New Orders",
-      "tfdsl": ""
+      "tfdsl": "untap(pick_friend(stars<=6))"
     },
     {
       "name": "Opportune Offensive",
@@ -188,11 +189,11 @@
     },
     {
       "name": "Pocket Processor",
-      "tfdsl": ""
+      "tfdsl": "on-start-turn()->draw(1)"
     },
     {
       "name": "Point Position",
-      "tfdsl": ""
+      "tfdsl": "static(brave,when(attached().tapped=untapped))"
     },
     {
       "name": "Relentless Invasion",
@@ -212,7 +213,7 @@
     },
     {
       "name": "Showing Off",
-      "tfdsl": ""
+      "tfdsl": "flip(pick_friend(modes.count>1));flip(previous_target())"
     },
     {
       "name": "Soldier's Blaster",
@@ -220,7 +221,7 @@
     },
     {
       "name": "Special Delivery",
-      "tfdsl": ""
+      "tfdsl": "move(1,pick_friend(),pick_enemy())"
     },
     {
       "name": "Stable Cover",
@@ -240,7 +241,7 @@
     },
     {
       "name": "Terrifying Resilience",
-      "tfdsl": ""
+      "tfdsl": "put_only(faction!=Autobot);tough(2)"
     },
     {
       "name": "Toolbox",
@@ -248,7 +249,7 @@
     },
     {
       "name": "Unflinching Courage",
-      "tfdsl": ""
+      "tfdsl": "put_only(faction!=Decepticon);bold(2)"
     },
     {
       "name": "Valuable Contract",
@@ -265,16 +266,16 @@
     {
       "name": "Captain Astrotrain, Space Force • Transport",
       "tfdsl": {
-        "alt 1": "",
-        "alt 2": "",
-        "bot": ""
+        "alt 1": "on-this-defends(when(this().upgrades.count>=1))->def_eot(1,this())",
+        "alt 2": "on-this-attacks(when(this().upgrades.count>=2))->atk_eot(2,this())",
+        "bot": "on-this-battles(when(this().upgrades.count>=3))->(atk_eot(3,this());def_eot(3,this()))"
       }
     },
     {
       "name": "Captain Impactor, Special Ops • Wrecker",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->bold_eot(1,all_friends())",
+        "bot": "bold(1)"
       }
     },
     {
@@ -294,7 +295,7 @@
     {
       "name": "Detritus, Arms Dealer",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->play(pick_hand(black>=1))",
         "bot": ""
       }
     },
@@ -334,7 +335,7 @@
     {
       "name": "Mudflap, Hired Muscle",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->plan(1)",
         "bot": ""
       }
     },
@@ -374,7 +375,7 @@
     {
       "name": "Private Fixit, Rescue Patrol • Medic",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -388,7 +389,7 @@
     {
       "name": "Private Highjump, Off-Road Patrol • Infiltration",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -402,21 +403,22 @@
     {
       "name": "Private Powertrain, Off-Road Patrol • Patrol Leader",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(stealth,when(this().tapped=untapped));static(bold,1,target=all_friends(trait='Off-Road Patrol'))",
+        "bot": "static(atk,ko_chars(trait='Off-Road Patrol').count);static(def,ko_chars(trait='Off-Road Patrol').count)"
       }
     },
     {
       "name": "Private Seawatch, Rescue Patrol • Search & Rescue",
+      "comment": "TODO: Alt mode lord ability",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(stealth,when(this().tapped=untapped))",
+        "bot": "static(atk,ko_chars(trait='Rescue Patrol').count);static(def,ko_chars(trait='Rescue Patrol').count)"
       }
     },
     {
       "name": "Private Sidetrack, Battle Patrol • Demolitions",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -430,8 +432,8 @@
     {
       "name": "Private Sunrunner, Battle Patrol • Air Defense",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(stealth,when(this().tapped=untapped));on-tap(when(event().tapped.trait='Battle Patrol',event().tapped.owner=this().owner))->damage(1,pick_enemy(tapped=tapped))",
+        "bot": "static(atk,ko_chars(trait='Battle Patrol').count);static(def,ko_chars(trait='Battle Patrol').count)"
       }
     },
     {
@@ -459,8 +461,8 @@
     {
       "name": "Raider Blackjack, Sports Car Patrol • Patrol Leader",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(stealth,when(this().tapped=untapped));on-untap(when(event().untapped.trait='Sports Car Patrol',event().untapped.owner=this().owner))->repair(1,event().untapped)",
+        "bot": "static(atk,ko_chars(trait='Sports Car Patrol').count);static(def,ko_chars(trait='Sports Car Patrol').count)"
       }
     },
     {
@@ -480,7 +482,7 @@
     {
       "name": "Raider Hyperdrive, Sports Car Patrol • Demolitions",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -501,7 +503,7 @@
     {
       "name": "Raider Nightflight, Air Strike Patrol • Spy",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
       }
     },
@@ -543,8 +545,8 @@
     {
       "name": "Raider Tailwind, Air Strike Patrol • Strategist",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(stealth,when(this().tapped=untapped));on-this-after-battle-flip(when(event().battler.trait='Air Strike Patrol',event().flips.green>=1))->(atk_eot(2,event().battler);def_eot(1,event().battler))",
+        "bot": "static(atk,ko_chars(trait='Air Strike Patrol').count);static(def,ko_chars(trait='Air Strike Patrol').count)"
       }
     },
     {
