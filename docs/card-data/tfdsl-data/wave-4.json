@@ -1,0 +1,677 @@
+{
+  "set": {
+    "id": "a240ede8-0307-4e0c-8040-e6b57af68a4e",
+    "name": "Wave 4",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "4-Wheel Drive",
+      "tfdsl": ""
+    },
+    {
+      "name": "Acute Reflexes",
+      "tfdsl": ""
+    },
+    {
+      "name": "Adaptive Plating",
+      "tfdsl": ""
+    },
+    {
+      "name": "Backfire",
+      "tfdsl": ""
+    },
+    {
+      "name": "Multi-Missile Pod",
+      "tfdsl": ""
+    },
+    {
+      "name": "Battlefield Incursion",
+      "tfdsl": ""
+    },
+    {
+      "name": "Blast Suit",
+      "tfdsl": ""
+    },
+    {
+      "name": "Composite Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Contract Contingency",
+      "tfdsl": ""
+    },
+    {
+      "name": "Conversion Engine",
+      "tfdsl": ""
+    },
+    {
+      "name": "Coup",
+      "tfdsl": ""
+    },
+    {
+      "name": "Crowbar",
+      "tfdsl": ""
+    },
+    {
+      "name": "Crude Club",
+      "tfdsl": ""
+    },
+    {
+      "name": "Daring Escape",
+      "tfdsl": ""
+    },
+    {
+      "name": "Decipher",
+      "tfdsl": ""
+    },
+    {
+      "name": "Defensive Configuration",
+      "tfdsl": ""
+    },
+    {
+      "name": "Designated Target",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dual Wield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Energy Transfer",
+      "tfdsl": ""
+    },
+    {
+      "name": "Erratic Cannon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Even The Score",
+      "tfdsl": ""
+    },
+    {
+      "name": "Fight For Position",
+      "tfdsl": ""
+    },
+    {
+      "name": "Guarded Posture"
+    },
+    {
+      "name": "Hazardous Shield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Head-On Collision",
+      "tfdsl": ""
+    },
+    {
+      "name": "Heroic Resolve",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hidden Fortification",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hijack",
+      "tfdsl": ""
+    },
+    {
+      "name": "Immersed In Shadow",
+      "tfdsl": ""
+    },
+    {
+      "name": "Increased Durability",
+      "tfdsl": "health(4)"
+    },
+    {
+      "name": "Indestructible Sword",
+      "tfdsl": ""
+    },
+    {
+      "name": "Involuntary Promotion",
+      "tfdsl": ""
+    },
+    {
+      "name": "Jam Signals",
+      "tfdsl": ""
+    },
+    {
+      "name": "Kinetic Converter",
+      "tfdsl": ""
+    },
+    {
+      "name": "Kinetic Intensifier Whip",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lucky Vest",
+      "tfdsl": ""
+    },
+    {
+      "name": "Medic's Protective Field",
+      "tfdsl": ""
+    },
+    {
+      "name": "Minor Medic Kit",
+      "tfdsl": "health(2)"
+    },
+    {
+      "name": "New Orders",
+      "tfdsl": ""
+    },
+    {
+      "name": "Opportune Offensive",
+      "tfdsl": ""
+    },
+    {
+      "name": "Opportune Repairs",
+      "tfdsl": ""
+    },
+    {
+      "name": "Overheat",
+      "tfdsl": ""
+    },
+    {
+      "name": "Overwhelming Advantage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Pincer Movement",
+      "tfdsl": ""
+    },
+    {
+      "name": "Plunder",
+      "tfdsl": ""
+    },
+    {
+      "name": "Pocket Processor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Point Position",
+      "tfdsl": ""
+    },
+    {
+      "name": "Relentless Invasion",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reprocess",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sabotaged Armaments",
+      "tfdsl": ""
+    },
+    {
+      "name": "Shoulder Holster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Showing Off",
+      "tfdsl": ""
+    },
+    {
+      "name": "Soldier's Blaster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Special Delivery",
+      "tfdsl": ""
+    },
+    {
+      "name": "Stable Cover",
+      "tfdsl": ""
+    },
+    {
+      "name": "Step Forward",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sturdy Javelin",
+      "tfdsl": ""
+    },
+    {
+      "name": "Swerve",
+      "tfdsl": ""
+    },
+    {
+      "name": "Terrifying Resilience",
+      "tfdsl": ""
+    },
+    {
+      "name": "Toolbox",
+      "tfdsl": ""
+    },
+    {
+      "name": "Unflinching Courage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Valuable Contract",
+      "tfdsl": ""
+    },
+    {
+      "name": "War of Attrition",
+      "tfdsl": ""
+    },
+    {
+      "name": "Wedge Formation",
+      "tfdsl": ""
+    },
+    {
+      "name": "Captain Astrotrain, Space Force • Transport",
+      "tfdsl": {
+        "alt 1": "",
+        "alt 2": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Captain Impactor, Special Ops • Wrecker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Captain Jetfire, Engineering • Air Guardian",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Deadlock, Soldier of Fortune",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Detritus, Arms Dealer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Lockdown, Bounty Hunter",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "General Optimus Prime, Galactic Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Lord Megatron, Conqueror of Cybertron",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "MTX-M2 Anti-Gravity Cannon",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "MTX-S2A Guided Missile Launcher",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Mudflap, Hired Muscle",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Octone, Capricious Agitator",
+      "tfdsl": {
+        "alt 1": "",
+        "alt 2": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Omega Supreme (Base), Transport • City Defender",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Omega Supreme (Spaceship), Transport • City Defender",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Omega Supreme (Tank), Transport • City Defender",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Private Dazzlestrike, Ground Command • Artillery",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Private Fixit, Rescue Patrol • Medic",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Greenlight, Special Ops • Recon",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Highjump, Off-Road Patrol • Infiltration",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Hot Rod, Infantry • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Powertrain, Off-Road Patrol • Patrol Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Seawatch, Rescue Patrol • Search & Rescue",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Sidetrack, Battle Patrol • Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Smokescreen, Special Ops • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Sunrunner, Battle Patrol • Air Defense",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Private Turbo Board, Air Command • Evac",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Private Vanguard, Ground Command • Advance Guard",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Raider Apeface, Espionage • Commando",
+      "tfdsl": {
+        "alt 1": "",
+        "alt 2": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Blackjack, Sports Car Patrol • Patrol Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Caliburst, Air Force  Weapons",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Raider Chop Shop, Infantry • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Hyperdrive, Sports Car Patrol • Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Kickback, Infantry • Soldier",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Needler, Ground Force • Demolitions",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Raider Nightflight, Air Strike Patrol • Spy",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Nova Storm, Infantry  Combustion Specialist",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Ratbat, Spy Patrol • Fuel Scout",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Rumble, Spy Patrol • Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Sights, Air Force • Artillery",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Raider Spinister, Infantry • Aerial Assault",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Tailwind, Air Strike Patrol • Strategist",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Barricade, Infantry • Enforcer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Crosshairs, Artillery • Weapons Supervisor",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Mirage, Special Ops • Spy",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Soundblaster, Weapons • Arms Dealer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Springer, Special Ops • Aerial Defense",
+      "tfdsl": {
+        "alt 1": "",
+        "alt 2": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Thundercracker, Infantry • Seeker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Skytread (Plane), Special Ops • Soldier",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Skytread (Tank), Special Ops • Soldier",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Specialist Sandstorm, Special Ops • Advance Guard",
+      "tfdsl": {
+        "alt 1": "",
+        "alt 2": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "TTC-HD Turret Armor",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "TTC-HP Oblivio Launcher",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Captain Omega Supreme, Transport • City Defender",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Raider Brunt, Weapons • Soldier",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Raider Skytread, Special Ops • Soldier",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Sergeant Six-Gun, Artillery • Soldier",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Trypticon, Assault Base",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Brunt, Artillery Drone",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Full-Tilt, Base Recon",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Wipe-Out, Devoted Minion",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    }
+  ]
+}
