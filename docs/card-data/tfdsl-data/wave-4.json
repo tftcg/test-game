@@ -74,7 +74,7 @@
     },
     {
       "name": "Designated Target",
-      "tfdsl": ""
+      "tfdsl": "pierce_eot(2,all_friends())"
     },
     {
       "name": "Dual Wield",
@@ -105,7 +105,8 @@
     },
     {
       "name": "Head-On Collision",
-      "tfdsl": ""
+      "comment": "TODO: This won't work for alt1/alt2 characters",
+      "tfdsl": "choose(pick_friend());static(atk,when(event().attacker=previous_target(),event().attacker.mode=alt),3,target=previous_target())"
     },
     {
       "name": "Heroic Resolve",
@@ -607,9 +608,9 @@
     {
       "name": "Specialist Sandstorm, Special Ops • Advance Guard",
       "tfdsl": {
-        "alt 1": "",
-        "alt 2": "",
-        "bot": ""
+        "alt 1": "static(atk,when(event().attacker=this(),event().defender.trait=Melee),2)",
+        "alt 2": "static(def,when(event().defender=this(),event().attacker.trait=Ranged),2)",
+        "bot": "on-this-flip()->damage(1,pick_enemy(trait=Specialist))"
       }
     },
     {

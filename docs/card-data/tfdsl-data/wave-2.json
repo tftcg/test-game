@@ -9,16 +9,17 @@
   "cards": [
     {
       "name": "Aerialbot Enigma",
-      "comment": "Partial",
+      "comment": "TODO: Test",
       "tfdsl": "if(all_friends(name=Superion).count>0)->damage(1,all_enemies());combine(5,'Superion, Sky Protector',bot,Aerialbots)"
     },
     {
       "name": "Aerialbot Formation",
-      "comment": "Partial",
-      "tfdsl": "put_only(trait=Aerialbot)"
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(trait=Aerialbot);static(akt,all_friends(trait=Aerialbots,tapped=tapped))"
     },
     {
       "name": "Ancient Wisdom",
+      "comment": "This needs to set an ancient-wisdom-player value",
       "tfdsl": ""
     },
     {
@@ -26,7 +27,7 @@
     },
     {
       "name": "Attack Drone",
-      "comment": "Partial",
+      "comment": "TODO: Need to implement 'can put 3' abilities",
       "tfdsl": "on-put()->play(pick_hand(name='Attack Drone'))"
     },
     {
@@ -61,7 +62,7 @@
     },
     {
       "name": "Confidence",
-      "comment": "Partial",
+      "comment": "TODO: Autobot starting team ability",
       "tfdsl": "draw(2);scrap_hand(pick_hand(count=2))"
     },
     {
@@ -70,7 +71,7 @@
     },
     {
       "name": "Cornered!",
-      "comment": "Implement opponent_flip()",
+      "comment": "TODO: Implement opponent_flip()",
       "tfdsl": "opponent_flip(pick_enemy(mode=bot))"
     },
     {
@@ -80,8 +81,8 @@
     },
     {
       "name": "Decepticon Crown",
-      "comment": "Partial",
-      "tfdsl": "put_only(faction=Decepticon)"
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(faction=Decepticon);on-attack(when(event().attacker.owner=this.owner(),event().attacker.faction=Decepticon))->plan(1)"
     },
     {
       "name": "Defensive Driving",
@@ -89,7 +90,7 @@
     },
     {
       "name": "Dinobot Enigma",
-      "comment": "Partial",
+      "comment": "TODO: Test",
       "tfdsl": "if(all_friends(name=Volcanicus).count>0)->bold_eot(2,pick_friend(name=Volcanicus));combine('Volcanicus, Fiery Champion',5,bot,Dinobot)"
     },
     {
@@ -130,7 +131,7 @@
     },
     {
       "name": "Field Communicator",
-      "tfdsl": "on-put(when(attached().trait=Specialist))->(scrap_deck(get_deck());play(previous_target()))"
+      "tfdsl": "on-put(when(attached().trait=Specialist))->(scrap_deck(get_deck());if(confirm())->play(previous_target()))"
     },
     {
       "name": "Field Repair",
@@ -155,8 +156,7 @@
     },
     {
       "name": "Heavy-Handed",
-      "comment": "Partial",
-      "tfdsl": "atk_eot(2,pick_friend())"
+      "tfdsl": "atk_eot(2,pick_friend());static(pierce,when(event().attacker=previous_target(),event().attacker.stars>event().defender.stars),4,target=previous_target())"
     },
     {
       "name": "Improvised Shield",
@@ -178,7 +178,7 @@
     },
     {
       "name": "Leap of Faith",
-      "tfdsl": "scrap_deck(get_deck());play(previous_target());scrap_deck(get_deck());play(previous_target(2))"
+      "tfdsl": "scrap_deck(get_deck());if(confirm())->play(previous_target());scrap_deck(get_deck());if(confirm())->play(previous_target(2))"
     },
     {
       "name": "Marksmanship",
@@ -210,8 +210,8 @@
     },
     {
       "name": "Predacon Enigma",
-      "comment": "Partial",
-      "tfdsl": "if(all_friends(name=Predaking).count>0)->(draw(1);play(pick_hand(type=Upgrade)));combine('Predaking, Ferocious Hunter',5,bot,Predacon)"
+      "comment": "TODO: Test",
+      "tfdsl": "if(all_friends(name=Predaking).count>0)->(draw(1);if(confirm())->play(pick_hand(type=Upgrade)));combine('Predaking, Ferocious Hunter',5,bot,Predacon)"
     },
     {
       "name": "Press the Advantage",
@@ -242,6 +242,7 @@
     },
     {
       "name": "Scrounge",
+      "comment": "TODO: Need to be able to filter previous_target() for subtype=upgrade",
       "tfdsl": ""
     },
     {
@@ -321,7 +322,7 @@
     },
     {
       "name": "Tech Research",
-      "comment": "TODO: This needs to put a token into the this-turn-context. ",
+      "comment": "TODO: This needs to put a token into the context. ",
       "tfdsl": "set(techresearch=played)"
     },
     {
@@ -335,7 +336,7 @@
     },
     {
       "name": "Underhanded Tactics",
-      "comment": "Partial",
+      "comment": "TODO: How to do an if-it's-ko'd?",
       "tfdsl": "damage(1,pick_enemy())"
     },
     {
@@ -344,6 +345,7 @@
     },
     {
       "name": "Unleash Potential",
+      "comment": "This will need to access an ancient-wisdom played set value",
       "tfdsl": ""
     },
     {
@@ -443,7 +445,7 @@
     {
       "name": "Bumblebee, Trusted Lieutenant",
       "tfdsl": {
-        "alt": "on-this-flip()->play(pick_hand(type=Action))",
+        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action)))",
         "bot": ""
       }
     },
@@ -543,7 +545,7 @@
     {
       "name": "Megatron, Arrogant Ruler",
       "tfdsl": {
-        "alt": "on-this-flip()->play(pick_hand(type=Upgrade))",
+        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Upgrade)))",
         "bot": ""
       }
     },
@@ -583,9 +585,10 @@
     },
     {
       "name": "Prowl, Strategic Mastermind",
+      "comment": "TODO: Need to implement a specific KO Flip Event. Also need to make sure flips in the KO do not evaluate their text, and that a flip in the KO does not fire a FLIP event but a KO_FLIP event",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": ""
+        "bot": "on-this-ko-flip(when(this().zone=this().owner.ko))->scrap_upgrade(pick_upgrade(subtype=Weapon))"
       }
     },
     {
@@ -689,9 +692,9 @@
     },
     {
       "name": "Superion, Sky Protector",
-      "comment": "Partial",
+      "comment": "TODO: Test. And implement combine events.",
       "tfdsl": {
-        "combiner": "bold(1);tough(2);pierce(3)"
+        "combiner": "bold(1);tough(2);pierce(3);on-this-combine()->damage(3,pick_enemy())"
       }
     },
     {

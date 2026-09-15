@@ -5,7 +5,8 @@
   "cards": [
     {
       "name": "Aerial Recon",
-      "tfdsl": "put_only(trait=Plane);on-attached-battle()->focus(1)"
+      "comment": "TODO: Technically this shouldn't give Focus to the attached but should just be an effect",
+      "tfdslNotYet": "put_only(trait=Plane);on-attached-battle()->focus(1)"
     },
     {
       "name": "Agility of Bumblebee",
@@ -40,7 +41,7 @@
     },
     {
       "name": "Brainstorm",
-      "tfdsl": "play(pick_hand(type=Action));play(pick_hand(type=Action))"
+      "tfdsl": "if(confirm())->play(pick_hand(type=Action));if(confirm())->play(pick_hand(type=Action))"
     },
     {
       "name": "Bug Bomb",
@@ -83,7 +84,7 @@
     {
       "name": "Data Pad",
       "comment": "Would be lovely to just say 'plan(1)'",
-      "tfdsl": "on-attached-attack()->(draw(1);plan(pick_hand()))"
+      "tfdsl": "on-attached-attack()->(draw(1);if(confirm())->plan(pick_hand()))"
     },
     {
       "name": "Debilitating Crystal",
@@ -190,15 +191,15 @@
     },
     {
       "name": "Multi-Mission Gear",
-      "tfdsl": "on-put(when(attached().trait=Specialist))->play(pick_hand(type=Action))"
+      "tfdsl": "on-put(when(attached().trait=Specialist))->(if(confirm())->play(pick_hand(type=Action)))"
     },
     {
       "name": "Multi-Tool",
-      "tfdsl": "on-put(when(attached().trait=Specialist))->play(pick_hand(type=Upgrade))"
+      "tfdsl": "on-put(when(attached().trait=Specialist))->(if(confirm())->play(pick_hand(type=Upgrade)))"
     },
     {
       "name": "New Designs",
-      "tfdsl": "play(pick_hand(type=Upgrade))"
+      "tfdsl": "if(confirm())->play(pick_hand(type=Upgrade))"
     },
     {
       "name": "Null-Ray of Starscream",
@@ -314,7 +315,7 @@
     },
     {
       "name": "The Bigger They Are",
-      "tfdsl": "atk_eot(2,pick_friend());on-attack(when(attacker=previous_target(),defender.stars>attacker.stars))->pierce_eob(4)"
+      "tfdsl": "atk_eot(2,pick_friend());static(pierce,when(event().attacker=previous_target(),event().attacker.stars<event().defender.stars),4,target=previous_target())"
     },
     {
       "name": "Thermal Weaponry",
@@ -351,7 +352,8 @@
     },
     {
       "name": "Tandem Targeting System",
-      "tfdsl": "on-play(when(play-source=hand()))->scrap_play('Tandem Targeting System')"
+      "comment": "Not sure this is all implemented",
+      "tfdsl": "on-play(when(play-source=hand()))->(if(confirm())->scrap_play('Tandem Targeting System'))"
     },
     {
       "name": "Arcee, Skilled Fighter",
@@ -386,7 +388,7 @@
     {
       "name": "Autobot Mirage, Lone Wolf",
       "tfdsl": {
-        "alt": "on-this-flip()->play(pick_hand(type=Action))",
+        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action)))",
         "comment": "TODO: Needs to only untap on the first attack",
         "bot": "on-attached-after-attack-flip(when(event().flips.white>=3))->untap(this())"
       }
@@ -395,7 +397,7 @@
       "name": "Barrage, Merciless Insecticon",
       "tfdsl": {
         "alt": "on-this-flip()->pierce_eot(2,pick_friend())",
-        "bot": ""
+        "bot": "static(bold,when(event().attacker=this(),event().defender.damage>=1),2)"
       }
     },
     {
@@ -412,7 +414,7 @@
       "name": "Bumblebee, Legendary Warrior",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "static(atk,when(all_friends().count=1),2);static(def,when(all_friends().count=1),2)"
       }
     },
     {
@@ -454,7 +456,7 @@
     {
       "name": "Demolisher, Devoted Decepticon",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->draw(all_friends(id!=this().id,trait=Tank).count)",
         "bot": ""
       }
     },
@@ -472,7 +474,7 @@
       "name": "Dinobot Snarl, Desert Warrior",
       "tfdsl": {
         "alt": "on-this-flip(when(self().hand.count=0))->draw(2)",
-        "bot": "on-this-attack()->put_deck(pick_hand())"
+        "bot": "on-this-attack()->(if(confirm())->put_deck(pick_hand()))"
       }
     },
     {
@@ -507,7 +509,7 @@
       "name": "Insecticon Skrapnel, Insecticon Leader",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "instead(on-attack-damage(when(event().damage>3))->modify(event().damage:=3))"
       }
     },
     {
@@ -564,7 +566,7 @@
       "name": "Prowl, Military Strategist",
       "tfdsl": {
         "alt": "on-this-flip()->bold_eot(2,all_friends(trait=Car))",
-        "bot": ""
+        "bot": "on-friend-ko(when(event().ko.trait=Car))->repair(3,pick_friend())"
       }
     },
     {
@@ -663,7 +665,7 @@
     {
       "name": "Cliffjumper, Renegade Warrior",
       "tfdsl": {
-        "comment": "Test alt mode. ko will need to be changed to only chars in the ko",
+        "comment": "Alt Mode needs to know they were a car, even though they've now flipped. Also needs to be an other_friends. ko will need to be changed to only chars in the ko",
         "alt": "on-flip(when(event().flipped.owner=this().owner,event().flipped.mode=bot))->draw(1)",
         "bot": "static(atk,self().ko.count)"
       }

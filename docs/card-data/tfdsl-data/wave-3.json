@@ -37,11 +37,11 @@
     },
     {
       "name": "Brainstorm",
-      "tfdsl": "play(pick_hand(type=Action));play(pick_hand(type=Action))"
+      "tfdsl": "if(confirm())->play(pick_hand(type=Action));if(confirm())->play(pick_hand(type=Action))"
     },
     {
       "name": "Calculated Strike",
-      "tfdsl": "atk(2);pierce(2)"
+      "tfdsl": "atk_eot(2,pick_friend());pierce_eot(2,pick_friend())"
     },
     {
       "name": "Callous Leadership",
@@ -653,20 +653,20 @@
       "name": "Ramhorn, Warrior",
       "comment": "Note that it's PT(2) because PT(1) is the flipped character",
       "tfdsl": {
-        "alt": "stealth();on-this-flip()->move_upgrade(pick_friendly_upgrade(subtype=Armor),pick_friend(id!=previous_target(2).attached_to.id))",
+        "alt": "stealth();on-this-flip()->(if(confirm())->move_upgrade(pick_friendly_upgrade(subtype=Armor),pick_friend(id!=previous_target(2).attached_to.id)))",
         "bot": "on-this-defend()->play(pick_hand(subtype=Armor,white>=1))"
       }
     },
     {
       "name": "Steeljaw, Tracker",
       "tfdsl": {
-        "alt": "stealth();on-flip()->bold_eot(1,all_friends())",
+        "alt": "stealth();on-this-flip()->bold_eot(1,all_friends())",
         "bot": "bold(1);static(bold,1,target=all_friends(stars>=10))"
       }
     },
     {
       "name": "Soundwave, Communications",
-      "comment": "Partial Bot",
+      "comment": "TODO: Implement the bot second effect",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
         "bot": "on-this-flip()->deploy(this(),pick_under_this(trait='Mini-Cassette'),bot)"
@@ -675,7 +675,7 @@
     {
       "name": "Buzzsaw, Spy",
       "tfdsl": {
-        "alt": "stealth();on-this-flip()->move_upgrade(pick_friendly_upgrade(subtype=Weapon),pick_friend(id!=previous_target(2).attached_to.id))",
+        "alt": "stealth();on-this-flip()->(if(confirm())->move_upgrade(pick_friendly_upgrade(subtype=Weapon),pick_friend(id!=previous_target(2).attached_to.id)))",
         "bot": "on-this-defend()->play(pick_hand(subtype=Weapon,blue>=1))"
       }
     },

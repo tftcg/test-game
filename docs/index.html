@@ -257,7 +257,7 @@
       font-size: .8rem;
     }
 
-    #text-prompt {
+    #text-prompt, #confirm-prompt {
       width: min(420px, calc(100vw - 2rem));
       color: inherit;
       background: #1a222c;
@@ -265,7 +265,7 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #text-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt::backdrop, #confirm-prompt::backdrop { background: rgb(0 0 0 / 60%); }
     #text-prompt form { display: grid; gap: .75rem; }
     #text-prompt label { display: grid; gap: .35rem; }
     #text-prompt input {
@@ -278,6 +278,31 @@
     }
     #text-prompt button {
       justify-self: end;
+      padding: .45rem .8rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    #confirm-prompt {
+      text-align: center;
+    }
+    #confirm-prompt h2 { margin: 0 0 .75rem; font-size: 1.1rem; }
+    #confirm-card {
+      display: block;
+      width: min(190px, 100%);
+      margin: 0 auto 1rem;
+      border: 1px solid #8298aa;
+      border-radius: .2rem;
+    }
+    .confirm-actions {
+      display: flex;
+      justify-content: center;
+      gap: .75rem;
+    }
+    .confirm-actions button {
+      min-width: 5rem;
       padding: .45rem .8rem;
       color: inherit;
       background: #263748;
@@ -345,6 +370,14 @@
       </label>
       <button type="submit">Continue</button>
     </form>
+  </dialog>
+  <dialog id="confirm-prompt">
+    <h2>Do this?</h2>
+    <img id="confirm-card" hidden>
+    <div class="confirm-actions">
+      <button id="confirm-yes" type="button">Yes</button>
+      <button id="confirm-no" type="button">No</button>
+    </div>
   </dialog>
   <script type="module" src="./web.js"></script>
 </body>
