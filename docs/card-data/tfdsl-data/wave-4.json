@@ -262,7 +262,7 @@
     },
     {
       "name": "Wedge Formation",
-      "tfdsl": ""
+      "tfdsl": "if(all_friends(trait=Melee)>0)->repair(1,pick_friend(trait=Melee));if(all_friends(trait=Ranged)>0)->draw(1);if(all_friends(trait=Specialist)>0)->plan(1)"
     },
     {
       "name": "Captain Astrotrain, Space Force • Transport",
@@ -532,8 +532,8 @@
     {
       "name": "Raider Sights, Air Force • Artillery",
       "tfdsl": {
-        "bot": "",
-        "upgrade": ""
+        "bot": "focus(1)",
+        "upgrade": "focus(2)"
       }
     },
     {

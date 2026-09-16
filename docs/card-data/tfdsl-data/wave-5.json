@@ -1,0 +1,746 @@
+{
+  "set": {
+    "id": "4ddbcc4c-be2e-415c-b0af-9e27510578b3",
+    "name": "Wave 5",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "Belligerence",
+      "tfdsl": ""
+    },
+    {
+      "name": "Blade Flurry",
+      "tfdsl": "atk_eot(2,pick_friend());if(previous_target().upgrades.subtype=Weapon)->atk_eot(2,previous_target())"
+    },
+    {
+      "name": "Brass Knuckles",
+      "tfdsl": "bold(2)"
+    },
+    {
+      "name": "Camien Crash",
+      "tfdsl": "damage(1,pick_friend();damage(2,pick_enemy())"
+    },
+    {
+      "name": "Concealing Contrails",
+      "tfdsl": ""
+    },
+    {
+      "name": "Conversion Expertise",
+      "tfdsl": "static(tough,when(attached().mode=alt),1);static(bold,when(attached().mode=bot),1)"
+    },
+    {
+      "name": "Counterespionage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Crystal of Power",
+      "tfdsl": "on-attached-after-battle()->scrap_upgrade(this())"
+    },
+    {
+      "name": "Decoy Flares",
+      "comment": "TODO: Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed",
+      "tfdsl": "on-attached-defend()->(if(confirm())->(scrap_upgrade(this();def_eot(2,attached())))"
+    },
+    {
+      "name": "Disassemble",
+      "tfdsl": "scrap_upgrade(pick_upgrade(subtype=Armor || subtype=Weapon))"
+    },
+    {
+      "name": "Electro-Optical Visor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Emergency Barricade",
+      "comment": "BUG: This is Grenade Launcher language. Fusion really needs to be on-attached-attack() and set up a delayed effect. Ugh",
+      "tfdsl": "on-attached-after-defend()->scrap_upgrade(this())"
+    },
+    {
+      "name": "Emergency Repair Patch",
+      "tfdsl": ""
+    },
+    {
+      "name": "End Hostilities",
+      "tfdsl": ""
+    },
+    {
+      "name": "Energon Mace",
+      "tfdsl": ""
+    },
+    {
+      "name": "Enhanced Power Cell",
+      "tfdsl": "health(3)"
+    },
+    {
+      "name": "Escape Capsule",
+      "tfdsl": ""
+    },
+    {
+      "name": "Fusion Borer",
+      "comment": "BUG: This is Grenade Launcher language. Fusion really needs to be on-attached-attack() and set up a delayed effect. Ugh",
+      "tfdsl": "on-attached-after-attack()->scrap_upgrade(this())"
+    },
+    {
+      "name": "Ghost Shield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Grav-Inhibitor",
+      "tfdsl": "pierce(3)"
+    },
+    {
+      "name": "Hand-to-Hand Combat",
+      "tfdsl": ""
+    },
+    {
+      "name": "Handheld Blaster",
+      "tfdsl": "bold(1)"
+    },
+    {
+      "name": "Headbutt",
+      "tfdsl": ""
+    },
+    {
+      "name": "High Five",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hit and Run",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hold the Line",
+      "tfdsl": ""
+    },
+    {
+      "name": "Holomatter Projector",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hull Down",
+      "tfdsl": ""
+    },
+    {
+      "name": "Improvised Shield",
+      "tfdsl": "tough(1)"
+    },
+    {
+      "name": "Industrial-grade Phase Charge",
+      "comment": "TODO: Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed",
+      "tfdsl": "on-attached-attack()->(if(confirm())->(scrap_upgrade(this();atk_eot(3,attached())))"
+    },
+    {
+      "name": "Intrusion Countermeasures Software",
+      "tfdsl": ""
+    },
+    {
+      "name": "Junk Cannon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Laser Scalpel",
+      "tfdsl": "pierce(1)"
+    },
+    {
+      "name": "Last Stand",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lock on Target",
+      "tfdsl": "bold(4)"
+    },
+    {
+      "name": "Lose the Initiative",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lucky Dodge",
+      "tfdsl": ""
+    },
+    {
+      "name": "Magnetic Dysfunction Ray",
+      "tfdsl": "damage(1,all_chars());damage(1,all_chars(faction=Autobot))"
+    },
+    {
+      "name": "Master of Metallikato",
+      "tfdsl": ""
+    },
+    {
+      "name": "Master Sword",
+      "tfdsl": ""
+    },
+    {
+      "name": "Mission Briefing",
+      "tfdsl": ""
+    },
+    {
+      "name": "Nitro Booster",
+      "tfdsl": "on-attached-attack(when(event().attacker.atk<=3))->(untap(attached());scrap_upgrade(this()))"
+    },
+    {
+      "name": "Overrule",
+      "tfdsl": ""
+    },
+    {
+      "name": "Paralyzo Box",
+      "tfdsl": ""
+    },
+    {
+      "name": "Plasma Horns",
+      "tfdsl": ""
+    },
+    {
+      "name": "Precision Fire",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reflect Damage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Regenerative Core",
+      "tfdsl": ""
+    },
+    {
+      "name": "Scout Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Scouting Mission",
+      "comment": "TODO: test - does draw() take a 2nd param?",
+      "tfdsl": "damage(1,pick_char());draw(2,previous_target().owner)"
+    },
+    {
+      "name": "Sharpened Talons"
+    },
+    {
+      "name": "Sonic Stun-Gun",
+      "tfdsl": ""
+    },
+    {
+      "name": "Speed Trap",
+      "tfdsl": ""
+    },
+    {
+      "name": "Spiked Bracelet",
+      "tfdsl": "tough(2)"
+    },
+    {
+      "name": "Spy Satellite Uplink",
+      "tfdsl": ""
+    },
+    {
+      "name": "Spymaster's Ruse",
+      "tfdsl": ""
+    },
+    {
+      "name": "Staggering Might",
+      "tfdsl": "static(bold,when(attached().stars>=16),1);static(tough,when(attached().stars>=16),1)"
+    },
+    {
+      "name": "Supporting Fire",
+      "tfdsl": "atk_eot(1,pick_friend());can_atk_untapped(scope=eot,true,previous_target())"
+    },
+    {
+      "name": "Temporal Quagmire",
+      "tfdsl": ""
+    },
+    {
+      "name": "Triangulator",
+      "tfdsl": ""
+    },
+    {
+      "name": "Tripwire",
+      "tfdsl": ""
+    },
+    {
+      "name": "Trithyllium Shield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Turn the Tide",
+      "tfdsl": ""
+    },
+    {
+      "name": "Versatility",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aerial Enhancements"
+    },
+    {
+      "name": "All-Out"
+    },
+    {
+      "name": "Better Things To Do Than Die"
+    },
+    {
+      "name": "Bike Gang"
+    },
+    {
+      "name": "Camien Toughness"
+    },
+    {
+      "name": "Data Protection"
+    },
+    {
+      "name": "Duty & Honor"
+    },
+    {
+      "name": "Heroic Spotlight"
+    },
+    {
+      "name": "Infiltration"
+    },
+    {
+      "name": "Jurassic Punch"
+    },
+    {
+      "name": "Master Converter"
+    },
+    {
+      "name": "Me Grimlock, You Grimlock!"
+    },
+    {
+      "name": "Metallikato Stance"
+    },
+    {
+      "name": "More Guns"
+    },
+    {
+      "name": "Orbital Strike"
+    },
+    {
+      "name": "Pop-Up Attack"
+    },
+    {
+      "name": "Resilience"
+    },
+    {
+      "name": "Revenge"
+    },
+    {
+      "name": "Sabotage"
+    },
+    {
+      "name": "Saturation Bombing"
+    },
+    {
+      "name": "Science Officer"
+    },
+    {
+      "name": "Sky Shadow Sync"
+    },
+    {
+      "name": "Stealth Mission"
+    },
+    {
+      "name": "Strategic Airlift"
+    },
+    {
+      "name": "Swap Heads"
+    },
+    {
+      "name": "Systems Enhancement"
+    },
+    {
+      "name": "The Usurper"
+    },
+    {
+      "name": "Villainous Spotlight"
+    },
+    {
+      "name": "Weapons Cache"
+    },
+    {
+      "name": "Who's Next?"
+    },
+    {
+      "name": "Apex",
+      "tfdsl": {
+        "head": "stealth()",
+        "bot": "stealth()"
+      }
+    },
+    {
+      "name": "Autobot Gears, Transport & Reconnaissance",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Nautica, Camien Engineer",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Autobot Outback, Gunner",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Stylor",
+      "tfdsl": {
+        "head": "def(1)"
+      }
+    },
+    {
+      "name": "Autobot Teslor",
+      "tfdsl": {
+        "head": "focus(1)",
+        "bot": "focus(1)"
+      }
+    },
+    {
+      "name": "Autobot Whirl, Aerial Assault",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Beachcomber, Geologist",
+      "tfdsl": {
+        "alt": "",
+        "bot": "focus(1)"
+      }
+    },
+    {
+      "name": "Bludgeon, Electric Warrior",
+      "tfdsl": {
+        "alt": "pierce(1);tough(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Brainstorm, Biomechanical Engineer",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Brawn, Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Brisko",
+      "tfdsl": {
+        "head": "health(3)"
+      }
+    },
+    {
+      "name": "Chasm",
+      "tfdsl": {
+        "head": "atk(2)"
+      }
+    },
+    {
+      "name": "Chromedome, Computer Programmer",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Clobber",
+      "tfdsl": {
+        "head": "bold(3)",
+        "bot": "bold(3)"
+      }
+    },
+    {
+      "name": "Crankcase, Data Collector",
+      "tfdsl": {
+        "alt": "on-this-flip()->draw(1)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Decepticon Pounce, Infiltrator",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Decepticon Quake, Ground Assault",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Doomshot",
+      "tfdsl": {
+        "head": "brave()",
+        "bot": "brave()"
+      }
+    },
+    {
+      "name": "Fangry, Sky Tracker",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Flameout",
+      "tfdsl": {
+        "head": "bold(2)",
+        "bot": "bold(2)"
+      }
+    },
+    {
+      "name": "Flintlock",
+      "tfdsl": {
+        "head": "tough(3)",
+        "bot": "tough(3)"
+      }
+    },
+    {
+      "name": "Freezeout",
+      "tfdsl": {
+        "head": "tough(2)",
+        "bot": "tough(2)"
+      }
+    },
+    {
+      "name": "Grax",
+      "tfdsl": {
+        "head": "health(5)"
+      }
+    },
+    {
+      "name": "Horri-Bull, Ground Trooper",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Kreb",
+      "tfdsl": {
+        "head": "health(2)"
+      }
+    },
+    {
+      "name": "Megatron, Fallen Hero",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Mindwipe, Hypnotist",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Monxo",
+      "tfdsl": {
+        "head": "atk(1)"
+      }
+    },
+    {
+      "name": "Nightracer, Gunner",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ominus",
+      "tfdsl": {
+        "head": "pierce(4)",
+        "bot": "pierce(4)"
+      }
+    },
+    {
+      "name": "Optimus Prime, Legendary Warrior",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Parsec",
+      "tfdsl": {
+        "head": "bold(1)",
+        "bot": "bold(1)"
+      }
+    },
+    {
+      "name": "Roadbuster, Ground Assault Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sergeant Kup, Wrecker Leader",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Skullsmasher, Swamp Warrior",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Sky Shadow (Plane)",
+      "tfdsl": {
+        "alt": "bold(2)"
+      }
+    },
+    {
+      "name": "Sky Shadow (Tank)",
+      "tfdsl": {
+        "alt": "tough(2)"
+      }
+    },
+    {
+      "name": "Topspin, Air & Space Assault",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Tracks, Autobot Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Twin Twist, Demolitions",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Vorath",
+      "tfdsl": {
+        "head": "tough(1)",
+        "bot": "tough(1)"
+      }
+    },
+    {
+      "name": "Windcharger, Autobot Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Windsweeper, Air Defense",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Wingspan, Data Processor",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Wolfwire, Ground Tracker",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Sky Shadow, Elite Warrior",
+      "tfdsl": {
+        "combiner body": ""
+      }
+    },
+    {
+      "name": "Tidal Wave, Dark Fleet",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Arcana",
+      "tfdsl": {
+        "head": "def(2)"
+      }
+    },
+    {
+      "name": "Tidal Wave, Dark Fleet (Aircraft Carrier)",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Tidal Wave, Dark Fleet (Transport)",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Tidal Wave, Dark Fleet (Battleship)",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Convex",
+      "tfdsl": {
+        "head": "safeguard(3)",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Perceptor, Precise Sniper",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Fortress Maximus, Great War Veteran",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Cerebros, City Commander",
+      "tfdsl": {
+        "head": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Emissary",
+      "tfdsl": {
+        "head": "focus(2)",
+        "bot": "focus(2)"
+      }
+    }
+  ]
+}

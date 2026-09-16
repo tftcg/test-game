@@ -43,6 +43,25 @@
       transform: translateX(-50%);
     }
     .deck-selectors label { display: flex; align-items: center; gap: .35rem; font-size: .8rem; }
+    .deck-selectors .deck-load-button {
+      display: inline-grid;
+      width: 1.9rem;
+      height: 1.9rem;
+      place-items: center;
+      padding: 0;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .deck-load-button input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
     .deck-selectors select {
       padding: .35rem;
       color: inherit;
@@ -257,7 +276,7 @@
       font-size: .8rem;
     }
 
-    #text-prompt, #confirm-prompt {
+    #text-prompt, #confirm-prompt, #reorder-prompt {
       width: min(420px, calc(100vw - 2rem));
       color: inherit;
       background: #1a222c;
@@ -265,7 +284,7 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #text-prompt::backdrop, #confirm-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop { background: rgb(0 0 0 / 60%); }
     #text-prompt form { display: grid; gap: .75rem; }
     #text-prompt label { display: grid; gap: .35rem; }
     #text-prompt input {
@@ -325,6 +344,51 @@
       border-radius: .25rem;
       cursor: pointer;
     }
+    #reorder-prompt { width: min(760px, calc(100vw - 2rem)); }
+    #reorder-prompt h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+    #reorder-instructions { margin: 0 0 .8rem; color: #b7c7d6; }
+    #reorder-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .6rem;
+      margin-bottom: 1rem;
+    }
+    .reorder-card {
+      position: relative;
+      width: 112px;
+      height: 157px;
+      overflow: hidden;
+      border: 2px solid #8298aa;
+      border-radius: .2rem;
+      cursor: grab;
+    }
+    .reorder-card:active { cursor: grabbing; }
+    .reorder-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .reorder-card input {
+      position: absolute;
+      z-index: 1;
+      top: .35rem;
+      left: .35rem;
+      width: 1.15rem;
+      height: 1.15rem;
+      accent-color: #d87b45;
+    }
+    .reorder-card.scrapped {
+      opacity: .48;
+      border-color: #d87b45;
+    }
+    #reorder-confirm {
+      display: block;
+      min-width: 6rem;
+      margin-left: auto;
+      padding: .45rem .8rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -342,6 +406,10 @@
           <option value="b949f910.json">Blaster</option>
           <option value="6398ef30.json">Soundwave</option>
         </select>
+        <label class="deck-load-button" title="Load deck from file">
+          ⚙
+          <input id="human-deck-file" type="file" accept=".json,application/json">
+        </label>
       </label>
       <label>
         Player 2
@@ -353,6 +421,10 @@
           <option value="b949f910.json">Blaster</option>
           <option value="6398ef30.json">Soundwave</option>
         </select>
+        <label class="deck-load-button" title="Load deck from file">
+          ⚙
+          <input id="computer-deck-file" type="file" accept=".json,application/json">
+        </label>
       </label>
     </div>
     <button id="summon-button" type="button" disabled>Summon</button>
@@ -394,6 +466,12 @@
       <button id="confirm-yes" type="button">Yes</button>
       <button id="confirm-no" type="button">No</button>
     </div>
+  </dialog>
+  <dialog id="reorder-prompt">
+    <h2 id="reorder-title">Reorder cards</h2>
+    <p id="reorder-instructions"></p>
+    <div id="reorder-cards"></div>
+    <button id="reorder-confirm" type="button">Confirm</button>
   </dialog>
   <script type="module" src="./web.js"></script>
 </body>

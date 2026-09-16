@@ -439,7 +439,7 @@
     {
       "name": "Raider Blowpipe, Air Force • Weapons",
       "tfdsl": {
-        "bot": "",
+        "bot": "focus(1)",
         "upgrade": ""
       }
     },

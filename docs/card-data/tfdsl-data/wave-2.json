@@ -595,7 +595,7 @@
       "name": "Razorclaw, Predacon Leader",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": ""
+        "bot": "on-this-flip()->can_atk_untapped(scope=eot,true,this())"
       }
     },
     {

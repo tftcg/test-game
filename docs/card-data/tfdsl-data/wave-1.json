@@ -6,7 +6,7 @@
     {
       "name": "Aerial Recon",
       "comment": "TODO: Technically this shouldn't give Focus to the attached but should just be an effect",
-      "tfdslNotYet": "put_only(trait=Plane);on-attached-battle()->focus(1)"
+      "tfdsl": "put_only(trait=Plane);on-attached-battle()->focus(1)"
     },
     {
       "name": "Agility of Bumblebee",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Blast Shield",
-      "tfdsl": "on-after-defend()->scrap_upgrade(this())"
+      "tfdsl": "on-attached-after-defend()->scrap_upgrade(this())"
     },
     {
       "name": "Body Armor",
@@ -271,7 +271,8 @@
     {
       "name": "Security Checkpoint",
       "comment": "TODO: Needs to include revealing the hand",
-      "tfdsl": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))"
+      "tfdslFuture": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))",
+      "tfdsl": ""
     },
     {
       "name": "Shock Absorbers",
@@ -413,7 +414,7 @@
     {
       "name": "Bumblebee, Legendary Warrior",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->can_atk_untapped(scope=eot,true,this())",
         "bot": "static(atk,when(all_friends().count=1),2);static(def,when(all_friends().count=1),2)"
       }
     },
@@ -508,7 +509,7 @@
     {
       "name": "Insecticon Skrapnel, Insecticon Leader",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(ko(pick_friend(trait=Insecticon));tap(pick_enemy(stars<=13))))",
         "bot": "instead(on-attack-damage(when(event().damage>3))->modify(event().damage:=3))"
       }
     },
