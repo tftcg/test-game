@@ -52,8 +52,8 @@
     },
     {
       "name": "Bumpers",
-      "comment": "Partial",
-      "tfdsl": "put_only(trait=Car)"
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(trait=Car);instead(on-damage-move(event().move_to=attached())->do_nothing())"
     },
     {
       "name": "Combat Commands",
@@ -86,7 +86,7 @@
     },
     {
       "name": "Defensive Driving",
-      "tfdsl": ""
+      "tfdsl": "instead(on-attached-damage()->modify(event().amount:=event().amount - 1))"
     },
     {
       "name": "Dinobot Enigma",
@@ -99,7 +99,7 @@
     },
     {
       "name": "Enemy Combat Analysis",
-      "tfdsl": ""
+      "tfdsl": "static(atk,when(event().attacker.stars=event().defender.stars,attached()=event().attacker || attached()=event().defender),2);static(atk,when(event().attacker.stars=event().defender.stars,attached()=event().attacker || attached()=event().defender),2)"
     },
     {
       "name": "Energized Field",
@@ -126,7 +126,7 @@
     },
     {
       "name": "Evasive Maneuvers",
-      "tfdsl": ""
+      "tfdsl": "tough(3);on-attached-after-defend()->scrap_upgrade(this())"
     },
     {
       "name": "Field Communicator",
@@ -185,7 +185,7 @@
     },
     {
       "name": "Master Plan",
-      "tfdsl": ""
+      "tfdsl": "plan(6)"
     },
     {
       "name": "Mining Pick",
@@ -365,7 +365,7 @@
     {
       "name": "Air Raid, Fearless Flyer",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-attack-damage(when(event().attacking=this()))->scrap_upgrade(pick_enemy_upgrade())"
       }
     },
     {
@@ -518,7 +518,7 @@
       "name": "Fireflight, Sky High Recon",
       "tfdsl": {
         "alt": "brave()",
-        "bot": ""
+        "bot": "static(atk,when(this().damage>=4),1)"
       }
     },
     {
@@ -723,11 +723,11 @@
     },
     {
       "name": "Reclaim",
-      "tfdsl": ""
+      "tfdsl": "put_deck(pick_scrap(type=Upgrade));if(tower().counter>=3)->draw(1)"
     },
     {
       "name": "Work Overtime",
-      "tfdsl": ""
+      "tfdsl": "draw(4 - self().hand.count)"
     },
     {
       "name": "Bonecrusher, Demolitions",
