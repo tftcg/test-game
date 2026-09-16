@@ -114,8 +114,7 @@
       "tfdsl": "on-put()->scrap_upgrade(pick_enemy_upgrade(subtype=Weapon))"
     },
     {
-      "name": "Erratic Lightning",
-      "tfdsl": ""
+      "name": "Erratic Lightning"
     },
     {
       "name": "Escape Route",
@@ -712,17 +711,15 @@
     },
     {
       "name": "Builder's Tools",
-      "comment": "Partial",
-      "tfdsl": "put_only(trait=Constructicon)"
+      "tfdsl": "put_only(trait=Constructicon);on-attached-attack()->tower(1)"
     },
     {
       "name": "Constructicon Enigma",
-      "comment": "Partial",
-      "tfdsl": "combine('Devastator, Towering Warrior',6,bot,Constructicon)"
+      "tfdsl": "if(all_friends(name=Devastator).count>0)->(repair(1,previous_target());tower(1));combine('Devastator, Towering Warrior',6,bot,Constructicon)"
     },
     {
       "name": "Heavy Landing",
-      "tfdsl": ""
+      "tfdsl": "if(tower().counter<6)->damage(1,pick_enemy());if(tower().counter>=6)->damage(3,pick_enemy())"
     },
     {
       "name": "Reclaim",
@@ -735,48 +732,50 @@
     {
       "name": "Bonecrusher, Demolitions",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand());tower(1)))",
         "bot": "pierce(2)"
       }
     },
     {
       "name": "Hook, Surgical Engineer",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand());tower(1)))",
         "bot": "pierce(1)"
       }
     },
     {
       "name": "Longhaul, Transport",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand());tower(1)))",
         "bot": "bold(1)"
       }
     },
     {
       "name": "Mixmaster, Materials Fabrication",
       "tfdsl": {
-        "alt": ""
+        "alt": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand());tower(1)))"
       }
     },
     {
       "name": "Scavenger, Mining and Salvage",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand());tower(1)))",
         "bot": "tough(1)"
       }
     },
     {
       "name": "Scrapper, Constructicon Foreman",
+      "comment": "TODO: Scrapper still has an effect when he's in the KO. Which ugh.",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "tower()",
+        "bot": "on-ko(when(event().ko.owner=this().owner,event().ko.trait=Constructicon))->tower(1)"
       }
     },
     {
       "name": "Devastator, Towering Warrior",
+      "comment": "TODO: Rather than setting base atk to 10, it gives him +4 atk",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "on-this-combine()->repair(tower().counter,this());static(bold,when(tower().counter>=6),2);static(atk,when(tower().counter>=10),4)"
       }
     },
     {

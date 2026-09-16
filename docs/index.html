@@ -222,6 +222,25 @@
       font-size: .6rem;
     }
     .card-statline.damage { color: #ff9d9d; }
+    .card-counter, .preview-card-counter {
+      position: absolute;
+      display: grid;
+      min-width: 1.35rem;
+      min-height: 1.35rem;
+      place-items: center;
+      padding: .1rem .25rem;
+      color: white;
+      background: #7b3b20;
+      border: 1px solid #ffbd7a;
+      border-radius: 50%;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .card-counter {
+      top: .2rem;
+      left: .2rem;
+      font-size: .7rem;
+    }
 
     .upgrade-row { display: flex; justify-content: center; gap: .25rem; width: 100%; }
     .upgrade-slot { width: 38px; min-height: 48px; text-align: center; font-size: .55rem; color: #9eabb7; }
@@ -261,6 +280,11 @@
       font-size: .9rem;
     }
     .preview-statline.damage { color: #ff9d9d; }
+    .preview-card-counter {
+      top: .55rem;
+      right: .55rem;
+      font-size: 1rem;
+    }
     .preview-abilities {
       position: absolute;
       top: .55rem;

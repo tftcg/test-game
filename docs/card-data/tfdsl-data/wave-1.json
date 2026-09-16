@@ -153,7 +153,7 @@
     },
     {
       "name": "I Still Function!",
-      "comment": "Currently it can pick a non-character from the KO. Also... I think it will KO due to the ; before the repair",
+      "comment": "Currently it can pick a non-character from the KO. Also... I think it will KO due to the ; before the repair. Also - TODO: return_from_ko; maybe this always heals? or passes in how much damage to have on it?",
       "tfdsl": "return_from_ko(pick(self().ko,stars<=12));repair(1,previous_target());on-end-turn()->ko(previous_target())"
     },
     {
