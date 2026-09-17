@@ -619,13 +619,11 @@
     },
     {
       "name": "Intercept Communications",
-      "comment": "TODO: Second half of this",
-      "tfdslAlt": "play_only(starting_team(name=Soundwave)>0)->draw(2)",
-      "tfdsl": ""
+      "tfdsl": "play_only(starting_team(name=Soundwave)>0);draw(2);put_opponent_deck(pick_opponent_scrap())"
     },
     {
       "name": "Interpret The Airwaves",
-      "tfdsl": ""
+      "tfdsl": "play_only(starting_team(name=Blaster)>0);reorder_deck(5)"
     },
     {
       "name": "Obstructive Rhythm",
@@ -633,10 +631,11 @@
     },
     {
       "name": "Recover Cassette",
-      "tfdsl": ""
+      "tfdsl": "play_only(starting_team(name=Blaster || name=Soundwave)>0);if(confirm())->(place_under(pick_friend(name=Blaster || name=Soundwave),pick_friend(trait='Mini-Cassette'));repair(2,pick_friend());ko(this()))"
     },
     {
       "name": "Blaster, Communications",
+      "comment": "TODO: What happens when nothing under Blaster?",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
         "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);scrap_deck(get_deck());play(previous_target(3)))"
@@ -645,8 +644,8 @@
     {
       "name": "Eject, Electronic Surveillance",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-this-flip()->do_focus(self(),2)",
+        "bot": "on-this-defend()->no_bold_eot(true,all_enemies())"
       }
     },
     {
@@ -666,10 +665,10 @@
     },
     {
       "name": "Soundwave, Communications",
-      "comment": "TODO: Implement the bot second effect",
+      "comment": "TODO: What happens when nothing under Soundwave?",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
-        "bot": "on-this-flip()->deploy(this(),pick_under_this(trait='Mini-Cassette'),bot)"
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);put_opponent_deck(pick_opponent_hand()))"
       }
     },
     {
@@ -682,8 +681,8 @@
     {
       "name": "Frenzy, Warrior",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-this-flip()->do_focus(opponent(),2)",
+        "bot": "on-this-attack()->no_tough_eot(true,all_enemies())"
       }
     },
     {
