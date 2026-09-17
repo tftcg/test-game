@@ -364,7 +364,7 @@
       "name": "Private Lionizer, Ground Command • Artillery",
       "tfdsl": {
         "bot": "bold(4)",
-        "upgrade": ""
+        "upgrade": "bold(4);on-attached-attack()->plan(1)"
       }
     },
     {
@@ -452,6 +452,7 @@
     },
     {
       "name": "Raider Detour, Infantry • Demolitions",
+      "botFuture": "on-this-flip()->(pay(scrap_hand(pick_hand(blue>=1)))->draw(2))",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -517,6 +518,7 @@
     },
     {
       "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
+      "botFuture": "on-this-flip()->(pay(scrap_hand(pick_hand(green>=1,count=3)))->bold_eot(3,pick_friend()))",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""

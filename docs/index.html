@@ -185,6 +185,34 @@
     .card-row.scrollable { overflow-x: auto; min-width: 100%; height: calc(100% - 1.2rem); }
     .character-row { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: .75rem; height: calc(100% - 1.2rem); overflow: auto; }
     .character-stack { display: grid; grid-template-rows: 170px 50px; justify-items: center; min-width: 126px; }
+    .character-card-stack {
+      --head-card-width: 72px;
+      position: relative;
+      isolation: isolate;
+      width: 120px;
+      height: 168px;
+    }
+    .character-card-stack > .card.character {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+    .character-card-stack > .card.character-head {
+      position: absolute;
+      z-index: 0;
+      width: var(--head-card-width);
+      top: -15.6px;
+      left: 23px;
+    }
+    .character-card-stack.body-mode .character-head {
+      --head-card-width: 82px;
+      top: -57.2px;
+      left: calc(120px - var(--head-card-width));
+    }
+    .player-mat.opponent .character-card-stack.body-mode .character-head {
+      left: 0;
+    }
 
     .card {
       position: relative;

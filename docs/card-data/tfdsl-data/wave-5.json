@@ -21,7 +21,7 @@
     },
     {
       "name": "Camien Crash",
-      "tfdsl": "damage(1,pick_friend();damage(2,pick_enemy())"
+      "tfdsl": "damage(1,pick_friend());damage(2,pick_enemy())"
     },
     {
       "name": "Concealing Contrails",
@@ -42,7 +42,7 @@
     {
       "name": "Decoy Flares",
       "comment": "TODO: Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed",
-      "tfdsl": "on-attached-defend()->(if(confirm())->(scrap_upgrade(this();def_eot(2,attached())))"
+      "tfdsl": "on-attached-defend()->(if(confirm())->(scrap_upgrade(this());def_eot(2,attached())))"
     },
     {
       "name": "Disassemble",
@@ -129,7 +129,7 @@
     {
       "name": "Industrial-grade Phase Charge",
       "comment": "TODO: Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed",
-      "tfdsl": "on-attached-attack()->(if(confirm())->(scrap_upgrade(this();atk_eot(3,attached())))"
+      "tfdsl": "on-attached-attack()->(if(confirm())->(scrap_upgrade(this());atk_eot(3,attached())))"
     },
     {
       "name": "Intrusion Countermeasures Software",

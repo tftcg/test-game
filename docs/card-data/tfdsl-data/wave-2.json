@@ -251,7 +251,7 @@
     },
     {
       "name": "Security Console",
-      "tfdsl": "on-attached-defend()->(draw(1);plan(pick_hand()))"
+      "tfdsl": "on-attached-defend()->(draw(1);plan(1))"
     },
     {
       "name": "Sentinel Enigma",

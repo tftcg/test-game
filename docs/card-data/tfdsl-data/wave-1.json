@@ -63,7 +63,7 @@
     {
       "name": "Computer Sabotage",
       "comment": "INSTEAD: scrap_all_but(3, opponent) ??",
-      "tfdsl": "scrap_hand(-3,opponent)"
+      "tfdslBad": "scrap_hand(-3,opponent)"
     },
     {
       "name": "Crushing Size",
@@ -83,8 +83,7 @@
     },
     {
       "name": "Data Pad",
-      "comment": "Would be lovely to just say 'plan(1)'",
-      "tfdsl": "on-attached-attack()->(draw(1);if(confirm())->plan(pick_hand()))"
+      "tfdsl": "on-attached-attack()->(draw(1);if(confirm())->plan(1))"
     },
     {
       "name": "Debilitating Crystal",
