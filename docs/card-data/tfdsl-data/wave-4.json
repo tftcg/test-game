@@ -21,7 +21,7 @@
     },
     {
       "name": "Backfire",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend(event().defender.faction=Decepticon))->revealed(damage(event().attacker.upgrades.count,event().attacker))"
     },
     {
       "name": "Multi-Missile Pod",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Hidden Fortification",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(tough_eob(3,event().defender))"
     },
     {
       "name": "Hijack",
@@ -138,7 +138,7 @@
     },
     {
       "name": "Jam Signals",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(card.blue>=1))))->revealed(scrap_hand(event().card))"
     },
     {
       "name": "Kinetic Converter",
@@ -206,7 +206,7 @@
     },
     {
       "name": "Sabotaged Armaments",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(scrap_upgrade(all(event().attacker.upgrades,subtype=Weapon)))"
     },
     {
       "name": "Shoulder Holster",
@@ -214,7 +214,7 @@
     },
     {
       "name": "Showing Off",
-      "tfdsl": "flip(pick_friend(modes.count>1));flip(previous_target())"
+      "tfdsl": "flip(pick_friend(other_modes.count>0));flip(previous_target())"
     },
     {
       "name": "Soldier's Blaster",
@@ -226,11 +226,11 @@
     },
     {
       "name": "Stable Cover",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(def_eob(1,event().defender);no_pierce_eob(true,event().attacker))"
     },
     {
       "name": "Step Forward",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-opponent-attacker-chosen())->revealed(brave_eot(true,pick_friend(faction=Autobot)))"
     },
     {
       "name": "Sturdy Javelin",
@@ -238,7 +238,7 @@
     },
     {
       "name": "Swerve",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(flip(event().defender,alt))"
     },
     {
       "name": "Terrifying Resilience",

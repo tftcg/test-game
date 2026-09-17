@@ -202,6 +202,7 @@
     .card.small { width: 42px; height: 59px; }
     .card.character { width: 120px; height: 168px; }
     .card.tapped { transform: rotate(-90deg) scale(.78); }
+    .card.horizontal { transform: rotate(90deg); }
     .card-code {
       position: absolute;
       right: .15rem;
@@ -300,7 +301,7 @@
       font-size: .8rem;
     }
 
-    #text-prompt, #confirm-prompt, #reorder-prompt {
+    #text-prompt, #confirm-prompt, #reorder-prompt, #mode-prompt, #card-pick-prompt {
       width: min(420px, calc(100vw - 2rem));
       color: inherit;
       background: #1a222c;
@@ -308,7 +309,7 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop { background: rgb(0 0 0 / 60%); }
     #text-prompt form { display: grid; gap: .75rem; }
     #text-prompt label { display: grid; gap: .35rem; }
     #text-prompt input {
@@ -340,7 +341,7 @@
       border-radius: .2rem;
       cursor: zoom-in;
     }
-    #confirm-card-preview {
+    #confirm-card-preview, #mode-card-preview, #card-pick-preview {
       position: fixed;
       z-index: 1;
       width: 280px;
@@ -352,8 +353,8 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #confirm-card-preview[hidden] { display: none; }
-    #confirm-card-preview img { width: 100%; height: 100%; object-fit: cover; }
+    #confirm-card-preview[hidden], #mode-card-preview[hidden], #card-pick-preview[hidden] { display: none; }
+    #confirm-card-preview img, #mode-card-preview img, #card-pick-preview img { width: 100%; height: 100%; object-fit: cover; }
     .confirm-actions {
       display: flex;
       justify-content: center;
@@ -403,6 +404,73 @@
       border-color: #d87b45;
     }
     #reorder-confirm {
+      display: block;
+      min-width: 6rem;
+      margin-left: auto;
+      padding: .45rem .8rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    #mode-prompt { width: min(760px, calc(100vw - 2rem)); }
+    #mode-prompt h2 { margin: 0 0 .8rem; font-size: 1.1rem; }
+    #mode-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .75rem;
+    }
+    .mode-option {
+      display: grid;
+      grid-template-rows: 157px auto;
+      width: 112px;
+      padding: 0;
+      overflow: hidden;
+      color: inherit;
+      background: #263748;
+      border: 2px solid #8298aa;
+      border-radius: .2rem;
+      cursor: pointer;
+    }
+    .mode-option:hover, .mode-option:focus-visible {
+      border-color: #a9cce8;
+      background: #35506a;
+    }
+    .mode-option img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .mode-option span { padding: .35rem; text-align: center; }
+    #card-pick-prompt { width: min(760px, calc(100vw - 2rem)); }
+    #card-pick-prompt h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+    #card-pick-instructions { margin: 0 0 .8rem; color: #b7c7d6; }
+    #card-pick-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .6rem;
+      margin-bottom: 1rem;
+    }
+    .card-pick-option {
+      position: relative;
+      width: 112px;
+      height: 157px;
+      overflow: hidden;
+      border: 2px solid #8298aa;
+      border-radius: .2rem;
+      cursor: pointer;
+    }
+    .card-pick-option:has(input:checked) { border-color: #a9cce8; }
+    .card-pick-option img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .card-pick-option input {
+      position: absolute;
+      z-index: 1;
+      top: .35rem;
+      left: .35rem;
+      width: 1.15rem;
+      height: 1.15rem;
+      accent-color: #a9cce8;
+    }
+    #card-pick-confirm {
       display: block;
       min-width: 6rem;
       margin-left: auto;
@@ -496,6 +564,18 @@
     <p id="reorder-instructions"></p>
     <div id="reorder-cards"></div>
     <button id="reorder-confirm" type="button">Confirm</button>
+  </dialog>
+  <dialog id="mode-prompt">
+    <h2>Choose a mode for <span id="mode-character"></span></h2>
+    <div id="mode-options"></div>
+    <aside id="mode-card-preview" hidden aria-hidden="true"></aside>
+  </dialog>
+  <dialog id="card-pick-prompt">
+    <h2 id="card-pick-title">Choose a card</h2>
+    <p id="card-pick-instructions"></p>
+    <div id="card-pick-options"></div>
+    <button id="card-pick-confirm" type="button">Confirm</button>
+    <aside id="card-pick-preview" hidden aria-hidden="true"></aside>
   </dialog>
   <script type="module" src="./web.js"></script>
 </body>

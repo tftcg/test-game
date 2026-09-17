@@ -1,0 +1,208 @@
+{
+  "set": {
+    "id": "16cc506a-dfa3-47dc-b78c-4c92085e0f38",
+    "name": "Wave 7",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "Agile Formation",
+      "tfdsl": ""
+    },
+    {
+      "name": "Armor Piercing Munitions",
+      "tfdsl": ""
+    },
+    {
+      "name": "Camien Grace",
+      "tfdsl": ""
+    },
+    {
+      "name": "Combat Drop",
+      "tfdsl": ""
+    },
+    {
+      "name": "Contemplation",
+      "tfdsl": ""
+    },
+    {
+      "name": "Corrupt Construction",
+      "tfdsl": "atk_eot(2,pick_friend(trait=Constructicon));tower(1)"
+    },
+    {
+      "name": "Die Autobots!",
+      "tfdsl": "atk_eot(2,pick_friend(faction=Decepticon));def_eot(-2,pick_enemy(faction=Autobot))"
+    },
+    {
+      "name": "Electro-Static Shielding",
+      "tfdsl": ""
+    },
+    {
+      "name": "Enhanced Fusion Cannon",
+      "tfdsl": "put_only(name=Megatron);pierce(2)"
+    },
+    {
+      "name": "Evasive Action",
+      "tfdsl": ""
+    },
+    {
+      "name": "Fearless",
+      "tfdsl": "atk_eot(2,pick_friend(trait=Melee));repair(1,previous_target())"
+    },
+    {
+      "name": "Foreman's Ingenuity",
+      "tfdsl": ""
+    },
+    {
+      "name": "Impetuous Stand",
+      "tfdsl": ""
+    },
+    {
+      "name": "Rage",
+      "tfdsl": "put_only(trait=Melee);bold(1);on-tap()->damage(1,pick_enemy(tapped=tapped))"
+    },
+    {
+      "name": "Rapid Response Cycle",
+      "tfdsl": ""
+    },
+    {
+      "name": "Revving the Engine",
+      "tfdsl": ""
+    },
+    {
+      "name": "Robust",
+      "tfdsl": ""
+    },
+    {
+      "name": "Scatter Blaster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Towering Presence",
+      "tfdsl": "bold_eot(2,pick_friend(trait=Constructicon));if(all_friends(name=Devastator)>0)->tap(pick_enemy(stars<=14))"
+    },
+    {
+      "name": "Trithyllium Drill",
+      "tfdsl": ""
+    },
+    {
+      "name": "All Hail Megatron!"
+    },
+    {
+      "name": "Artillery Support"
+    },
+    {
+      "name": "Covert"
+    },
+    {
+      "name": "Durable Decepticon"
+    },
+    {
+      "name": "Fully Loaded"
+    },
+    {
+      "name": "Holomatter Mastery"
+    },
+    {
+      "name": "Impervious"
+    },
+    {
+      "name": "Malevolent Architect"
+    },
+    {
+      "name": "Obfuscating Cloud"
+    },
+    {
+      "name": "One Tough Bug!"
+    },
+    {
+      "name": "Out of the Way Hot Rod!"
+    },
+    {
+      "name": "Road Warriors"
+    },
+    {
+      "name": "Silent Hunter"
+    },
+    {
+      "name": "Soundwave Superior"
+    },
+    {
+      "name": "Sulfuric Deluge"
+    },
+    {
+      "name": "Assault Protocol"
+    },
+    {
+      "name": "Banzai-Tron, Crystalocution Master",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bludgeon, Metallikato Monster",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Brainstorm, Haunted Schemer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Fangry, Cursed Nightmare",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Hardhead, Grave Mistakes",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Highbrow, Appallingly Astute",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Hoist, Fearless Rescuer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Megatron/Ratchet, Twisted Amalgamation",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Wolfwire, Lying In Wait",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Nightbird, Tera-Kura Construct",
+      "tfdsl": {
+        "bot": ""
+      }
+    }
+  ]
+}

@@ -149,7 +149,7 @@
     },
     {
       "name": "Hunker Down",
-      "tfdsl": "flip(all_friends(mode=bot,modes.count>1,other_trait=Tank));scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
+      "tfdsl": "flip(all_friends(mode=bot,other_modes.count>0,other_trait=Tank));scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
     },
     {
       "name": "I Still Function!",
@@ -242,7 +242,7 @@
     },
     {
       "name": "Rapid Conversion",
-      "tfdsl": "flip(pick_friend(modes.count>1))"
+      "tfdsl": "flip(pick_friend(other_modes.count>0))"
     },
     {
       "name": "Ready For Action",
@@ -258,7 +258,7 @@
     },
     {
       "name": "Roll Out!",
-      "tfdsl": "flip(all_friends(mode=bot,modes.count>1))"
+      "tfdsl": "flip(all_friends(mode=bot,other_modes.count>0))"
     },
     {
       "name": "Salvage for Parts",
@@ -280,7 +280,7 @@
     },
     {
       "name": "Start Your Engines",
-      "tfdsl": "flip(all_friends(mode=bot,modes.count>1,other_trait=Car));untap(pick_char(trait=Car))"
+      "tfdsl": "flip(all_friends(mode=bot,other_modes.count>0,other_trait=Car));untap(pick_char(trait=Car))"
     },
     {
       "name": "Static Laser of Ironhide",

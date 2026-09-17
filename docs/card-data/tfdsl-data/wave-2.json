@@ -118,7 +118,7 @@
     },
     {
       "name": "Escape Route",
-      "tfdsl": "flip(pick_friend(mode=bot,modes.count>1),alt)"
+      "tfdsl": "flip(pick_friend(mode=bot,other_modes.count>0),alt)"
     },
     {
       "name": "Espionage",
@@ -221,7 +221,7 @@
     },
     {
       "name": "Rapid Conversion",
-      "tfdsl": "flip(pick_friend(modes.count>1))"
+      "tfdsl": "flip(pick_friend(other_modes.count>0))"
     },
     {
       "name": "Reckless Charge",

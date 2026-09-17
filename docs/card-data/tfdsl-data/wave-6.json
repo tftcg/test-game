@@ -1,0 +1,578 @@
+{
+  "set": {
+    "id": "ee692b0f-89ac-5475-69eb-4ea2b667ddbf",
+    "name": "Wave 6",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "All-Out Attack",
+      "tfdsl": ""
+    },
+    {
+      "name": "Ancient Security Tentacle",
+      "tfdsl": ""
+    },
+    {
+      "name": "Angolmois Surge",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aquatic Maneuvers",
+      "tfdsl": ""
+    },
+    {
+      "name": "Are These Wires Important?",
+      "tfdsl": ""
+    },
+    {
+      "name": "Armed To The Teeth",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aspect of Bitterness",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aspect of Death",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aspect of Doubt",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aspect of Laughter",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aspect of Rage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Assuming Control",
+      "tfdsl": ""
+    },
+    {
+      "name": "Black Mail",
+      "tfdsl": ""
+    },
+    {
+      "name": "Bomb Removal Protocol",
+      "tfdsl": ""
+    },
+    {
+      "name": "CNA-Encoded Armory",
+      "tfdsl": ""
+    },
+    {
+      "name": "Demolition Derby",
+      "tfdsl": ""
+    },
+    {
+      "name": "Discordant Cacophony",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dreadful Feast",
+      "tfdsl": ""
+    },
+    {
+      "name": "\"Dutch\"",
+      "tfdsl": ""
+    },
+    {
+      "name": "Energy Conversion Field",
+      "tfdsl": ""
+    },
+    {
+      "name": "Forked Tentacle",
+      "tfdsl": ""
+    },
+    {
+      "name": "Gift of Innermost Energon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Give Me Your Face",
+      "tfdsl": ""
+    },
+    {
+      "name": "Guilty or Innocent",
+      "tfdsl": ""
+    },
+    {
+      "name": "Insurance Write-Off",
+      "tfdsl": ""
+    },
+    {
+      "name": "Judicial Discretion",
+      "tfdsl": ""
+    },
+    {
+      "name": "Litigious Tentacle",
+      "tfdsl": ""
+    },
+    {
+      "name": "Loading The Cannon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lose The Battle...",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lost In Transit",
+      "tfdsl": ""
+    },
+    {
+      "name": "Maceration Laser",
+      "tfdsl": ""
+    },
+    {
+      "name": "Manipulate Time",
+      "tfdsl": ""
+    },
+    {
+      "name": "Masher Mace",
+      "tfdsl": ""
+    },
+    {
+      "name": "Motorcycle Chase",
+      "tfdsl": ""
+    },
+    {
+      "name": "Occupation",
+      "tfdsl": ""
+    },
+    {
+      "name": "Open Agenda",
+      "tfdsl": ""
+    },
+    {
+      "name": "Opportune Protection",
+      "tfdsl": ""
+    },
+    {
+      "name": "Photon Charge",
+      "tfdsl": ""
+    },
+    {
+      "name": "Polarity Gauntlet",
+      "tfdsl": ""
+    },
+    {
+      "name": "Polydermal Graft",
+      "tfdsl": "put_only(trait=Melee);on-put()->damage(1,attached());health(4)"
+    },
+    {
+      "name": "Prime's New Arm",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reroute Enemy Vectors",
+      "tfdsl": ""
+    },
+    {
+      "name": "Scrounging For Energon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Secret Missive",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sharkticon Matrix",
+      "tfdsl": ""
+    },
+    {
+      "name": "Shield Crash",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sidecar Artillery",
+      "tfdsl": ""
+    },
+    {
+      "name": "Squid Pro Quo",
+      "tfdsl": ""
+    },
+    {
+      "name": "Stim Shock",
+      "tfdsl": ""
+    },
+    {
+      "name": "Subcontractor Agreement",
+      "tfdsl": ""
+    },
+    {
+      "name": "Tetrinite Micro-Lining",
+      "tfdsl": ""
+    },
+    {
+      "name": "The Dweller Awakens",
+      "tfdsl": ""
+    },
+    {
+      "name": "Thermal Sealant",
+      "tfdsl": ""
+    },
+    {
+      "name": "Touch of Quintessa",
+      "tfdsl": ""
+    },
+    {
+      "name": "Turnabout Snare",
+      "tfdsl": ""
+    },
+    {
+      "name": "Underbase Fragment",
+      "tfdsl": ""
+    },
+    {
+      "name": "United Against Tyranny",
+      "tfdsl": ""
+    },
+    {
+      "name": "Universal Greeting",
+      "tfdsl": ""
+    },
+    {
+      "name": "Unsavory Leftovers",
+      "tfdsl": ""
+    },
+    {
+      "name": "Vorpal Fangs",
+      "tfdsl": ""
+    },
+    {
+      "name": "What Lies Beyond",
+      "tfdsl": ""
+    },
+    {
+      "name": "Whipped Into Shape",
+      "tfdsl": ""
+    },
+    {
+      "name": "Brace For Impact"
+    },
+    {
+      "name": "Brutal Conditioning"
+    },
+    {
+      "name": "Buried Banquet"
+    },
+    {
+      "name": "Cantankerous Attitude"
+    },
+    {
+      "name": "Cerebro-Shell Shock"
+    },
+    {
+      "name": "Colossal Cannons"
+    },
+    {
+      "name": "Dark Regeneration"
+    },
+    {
+      "name": "Death Crystal Cannon"
+    },
+    {
+      "name": "Energon Reclamation"
+    },
+    {
+      "name": "Enterprising Spotlight"
+    },
+    {
+      "name": "Forbidden Sorcery"
+    },
+    {
+      "name": "Hit Me With That Beat"
+    },
+    {
+      "name": "In The Name of Slingshot"
+    },
+    {
+      "name": "Indigestion"
+    },
+    {
+      "name": "Kneel Before Us"
+    },
+    {
+      "name": "Localized Tremors"
+    },
+    {
+      "name": "Magnetic Boomerang"
+    },
+    {
+      "name": "Mass Displacement Drive"
+    },
+    {
+      "name": "Nebulous Spotlight"
+    },
+    {
+      "name": "Orbital Command"
+    },
+    {
+      "name": "Pit of Judgement"
+    },
+    {
+      "name": "Quite A Haul"
+    },
+    {
+      "name": "Sound The Alarm"
+    },
+    {
+      "name": "Squeeze Play"
+    },
+    {
+      "name": "Stuck On You"
+    },
+    {
+      "name": "The Last Line of Defense"
+    },
+    {
+      "name": "The Solo Job"
+    },
+    {
+      "name": "Thermal Reciprocation"
+    },
+    {
+      "name": "Third Party Brigade"
+    },
+    {
+      "name": "This Gun For Hire"
+    },
+    {
+      "name": "Triggercon-Vention"
+    },
+    {
+      "name": "Up In Smoke"
+    },
+    {
+      "name": "V2 Sonicsurge Drone Armor"
+    },
+    {
+      "name": "Off-Road Cycle"
+    },
+    {
+      "name": "Verdant Aegis"
+    },
+    {
+      "name": "Allicon Aronik, Killer Croc",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Allicon Eyuk, Bog Scavenger",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Alpha Sentinel, Dark Guardian Relic",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Armada, Herald of Shrouds",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Countdown, Aerospace Commander",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Pipes, Idiosyncratic Collector",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Powerglide, Haughty Show-Off",
+      "tfdsl": {
+        "alt": "",
+        "upgrade": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Axor, Opportunistic Fencer",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Crashbash, Ocean Terror",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Decepticon Doublecrosser, Shield Brothers",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Decepticon Exhaust, Consumptive Condottiere",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Deliberata, Judger and The Judged",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "General Ghyrik, Grievous Executioner",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Gilthor, Chained Amalgamation",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Inquisitor Drebzik, Exhaustive Interrogator",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Klementia, Medical Magistrate",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Lokos",
+      "tfdsl": {
+        "head": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Mind Control Collar",
+      "tfdsl": {
+        "head": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Mind Control Helmet",
+      "tfdsl": {
+        "head": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Nacelle, Eager Aerospace Engineer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Optimus Prime, Dark Awakening",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Rabblerouser, Aerial Onslaught",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Red Wizard, Ruler of Menonia",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Savage Wheelie, Rhymer Climber",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sharkticon Biter, Brazen Berserker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sharkticon Chomp, Craving Carnivore",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sharkticon Gnaw, Gluttonous Gourmand",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sharkticon Peck, Protoform Pup",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Shockblast, Galactic Man",
+      "tfdsl": {
+        "alt": "",
+        "upgrade": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Slitherfang, Poisonous Protection",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Tow-Line, Signals Engineer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    }
+  ]
+}

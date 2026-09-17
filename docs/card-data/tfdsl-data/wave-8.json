@@ -1,0 +1,739 @@
+{
+  "set": {
+    "id": "6a330f1f-a9da-4e9f-92cc-d0c2a67ea752",
+    "name": "Wave 8",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "38-Amp Ionic Plate",
+      "tfdsl": ""
+    },
+    {
+      "name": "Abrogate",
+      "tfdsl": ""
+    },
+    {
+      "name": "Anti-Grav Cell",
+      "tfdsl": ""
+    },
+    {
+      "name": "Armor Axe"
+    },
+    {
+      "name": "Auxiliary Fuel Tank",
+      "tfdsl": ""
+    },
+    {
+      "name": "Bracing Up",
+      "tfdsl": ""
+    },
+    {
+      "name": "Caring is Sharing!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Cooling of Tensions",
+      "tfdsl": ""
+    },
+    {
+      "name": "Custom Junkion Saddle",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dare to Be Stupid!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Decelerator Laser",
+      "tfdsl": ""
+    },
+    {
+      "name": "Depower-Linx",
+      "tfdsl": ""
+    },
+    {
+      "name": "Diffraction Sword",
+      "tfdsl": ""
+    },
+    {
+      "name": "Drill Fingers",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dual Smokestacks",
+      "tfdsl": ""
+    },
+    {
+      "name": "Escapology",
+      "tfdsl": ""
+    },
+    {
+      "name": "Everything Must Go!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Explosive Disposal",
+      "tfdsl": ""
+    },
+    {
+      "name": "Extended Duration Mission",
+      "tfdsl": ""
+    },
+    {
+      "name": "Half-Track Trickery",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hand of Adaptus",
+      "tfdsl": ""
+    },
+    {
+      "name": "Happy Motoring!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Head Case",
+      "tfdsl": ""
+    },
+    {
+      "name": "Head of State",
+      "tfdsl": ""
+    },
+    {
+      "name": "High Beam Headlights",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hodgepodge Panoply",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hot Seat",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hurry Hurry Hurry!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Imminent Breakthrough",
+      "tfdsl": ""
+    },
+    {
+      "name": "Inexorable Force",
+      "tfdsl": ""
+    },
+    {
+      "name": "Junkyard Turbofox",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lagartan Spaulders",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lie in Wait",
+      "tfdsl": ""
+    },
+    {
+      "name": "Locking it Up",
+      "tfdsl": ""
+    },
+    {
+      "name": "Me Grimlock Need New Strategy",
+      "tfdsl": ""
+    },
+    {
+      "name": "Mirror Response Mode",
+      "tfdsl": ""
+    },
+    {
+      "name": "Monofiber Filament",
+      "tfdsl": ""
+    },
+    {
+      "name": "Muster the Will",
+      "tfdsl": ""
+    },
+    {
+      "name": "Mystical Bond",
+      "tfdsl": ""
+    },
+    {
+      "name": "Ninety Day Warranty!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Nucleon Exposure",
+      "tfdsl": ""
+    },
+    {
+      "name": "Nudge Gun",
+      "tfdsl": ""
+    },
+    {
+      "name": "Pack Behavior",
+      "tfdsl": ""
+    },
+    {
+      "name": "Passenger Coverage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Patrol Bolas",
+      "tfdsl": ""
+    },
+    {
+      "name": "Patrol the Perimeter",
+      "tfdsl": ""
+    },
+    {
+      "name": "Peas in a Pod!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Performance Gear Selector",
+      "tfdsl": ""
+    },
+    {
+      "name": "Pile-Up",
+      "tfdsl": ""
+    },
+    {
+      "name": "Playing Both Sides",
+      "tfdsl": ""
+    },
+    {
+      "name": "Police Action",
+      "tfdsl": ""
+    },
+    {
+      "name": "Razor Wings",
+      "tfdsl": ""
+    },
+    {
+      "name": "Reactive Thrusters",
+      "tfdsl": ""
+    },
+    {
+      "name": "Recon Reissue",
+      "tfdsl": ""
+    },
+    {
+      "name": "Relax With a Cold One!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Revving Up",
+      "tfdsl": ""
+    },
+    {
+      "name": "Riffraff Knick-Knacks",
+      "tfdsl": ""
+    },
+    {
+      "name": "Severed Combiner Hand",
+      "tfdsl": ""
+    },
+    {
+      "name": "Shanix Laundering",
+      "tfdsl": ""
+    },
+    {
+      "name": "Shard of the Divine Light",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sitrep Update",
+      "tfdsl": ""
+    },
+    {
+      "name": "Skimming Off the Top",
+      "tfdsl": ""
+    },
+    {
+      "name": "Sparring Lessons",
+      "tfdsl": ""
+    },
+    {
+      "name": "Spear of the Moment",
+      "tfdsl": ""
+    },
+    {
+      "name": "Spread Democracy!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Summon the Courage",
+      "tfdsl": ""
+    },
+    {
+      "name": "Superior Surveillance",
+      "tfdsl": ""
+    },
+    {
+      "name": "Take the Shot",
+      "tfdsl": ""
+    },
+    {
+      "name": "Terrorburster Shield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Terrorcon Enigma",
+      "tfdsl": ""
+    },
+    {
+      "name": "The Power to Bite",
+      "tfdsl": ""
+    },
+    {
+      "name": "Throttle",
+      "tfdsl": ""
+    },
+    {
+      "name": "Too Short For This Ride",
+      "tfdsl": ""
+    },
+    {
+      "name": "Traffic Checkpoint",
+      "tfdsl": ""
+    },
+    {
+      "name": "Transfusion Cable",
+      "tfdsl": ""
+    },
+    {
+      "name": "Tried and Executed",
+      "tfdsl": ""
+    },
+    {
+      "name": "Two Foes, Two Fists",
+      "tfdsl": ""
+    },
+    {
+      "name": "Unfathomable Motives",
+      "tfdsl": ""
+    },
+    {
+      "name": "Untiring Parma Shield"
+    },
+    {
+      "name": "Wave of Lightning",
+      "tfdsl": ""
+    },
+    {
+      "name": "Well-Worn Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "A Very Cross Examination"
+    },
+    {
+      "name": "Alphastrike Counterforce"
+    },
+    {
+      "name": "Angolmois Infusion"
+    },
+    {
+      "name": "Barrel Rolling"
+    },
+    {
+      "name": "Blockbuster Moving Trailers"
+    },
+    {
+      "name": "Boater Suppression"
+    },
+    {
+      "name": "Cat's Cradle of Contingencies"
+    },
+    {
+      "name": "Cherish This World or Perish"
+    },
+    {
+      "name": "Combat Deck"
+    },
+    {
+      "name": "Don't Touch That Dial!"
+    },
+    {
+      "name": "Extermination Exercise"
+    },
+    {
+      "name": "Four the Selectors!"
+    },
+    {
+      "name": "Heroic Perseverance"
+    },
+    {
+      "name": "Ignore the Pain"
+    },
+    {
+      "name": "It's As Good As Used!"
+    },
+    {
+      "name": "I've Got Your Back"
+    },
+    {
+      "name": "Kakistocracy"
+    },
+    {
+      "name": "King of Pain"
+    },
+    {
+      "name": "Materiel War"
+    },
+    {
+      "name": "Me Grimlock Kick Butt!"
+    },
+    {
+      "name": "Me Grimlock King!"
+    },
+    {
+      "name": "Me Grimlock Mash Brains!"
+    },
+    {
+      "name": "Me Grimlock Say Execute Them!"
+    },
+    {
+      "name": "Me Grimlock Want to Munch Metal"
+    },
+    {
+      "name": "No Lords, No Masters"
+    },
+    {
+      "name": "Old War Stories"
+    },
+    {
+      "name": "Order in the Court"
+    },
+    {
+      "name": "Prosecutorial Overreach"
+    },
+    {
+      "name": "Put a Stinger in the Works"
+    },
+    {
+      "name": "Queen of the Junkyard"
+    },
+    {
+      "name": "Scrappy Spotlight"
+    },
+    {
+      "name": "Slice, Dice, and Julienne!"
+    },
+    {
+      "name": "Sonic Doom"
+    },
+    {
+      "name": "Spin to Deflect Stuff"
+    },
+    {
+      "name": "Stop the Tax and Spend!"
+    },
+    {
+      "name": "The City's Finest Views"
+    },
+    {
+      "name": "The Great Escape"
+    },
+    {
+      "name": "Third Party Brigade"
+    },
+    {
+      "name": "This Shall Be Your Ship"
+    },
+    {
+      "name": "Time for New Leadership"
+    },
+    {
+      "name": "Writhing in the Deep"
+    },
+    {
+      "name": "Ashtray, Come to Where the Flavor Is!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Infinitus",
+      "tfdsl": {
+        "head": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Autobot Roller, Scout Drone",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Bug Bite, The Renegade Who Had It Made",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Clench, Colossus of Obliteration",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Crasher, Fractious Fanatic",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Decepticon Wingthing, Loyal, Lethal Cohort",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Detritus, Now With Sleek, Sexy Handling!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Gilthor, Wounded Retribution",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Greasestain, No Muss! No Fuss!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "High Bailiff Bollag, Court Knight",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Junker Drone",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Junkion Nancy, Just Say No to Sparkplugs!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Lord Kledji, Royal Ruler of Quintessa",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Loudmouth, Incendiary Control",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Megatron, Megalomaniacal Mariner",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Muck Sergeant Peck, Brackish Chain-Breaker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Q-PTP Aculear Scope",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Q-RTR Arachnoid Array",
+      "tfdsl": {
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Quig",
+      "tfdsl": {
+        "head": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Rum-Maj, Wreck-Gar Sold Separately!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Scrapheap, It's Not Trash If It's Worth Cash!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Scrapper Drone",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Sentinel Prime, Legacy of the Primes",
+      "tfdsl": {
+        "alt 1": "",
+        "alt 2": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Sideswipe, Covert Clone",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Sinnertwin, Two-Faced Disgrace",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Solarbot, Enigmatic Sunsteader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Soundbarrier, Grudging Foot Soldier Support",
+      "tfdsl": {
+        "bot": "",
+        "upgrade": ""
+      }
+    },
+    {
+      "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Terrorcon Blot, Rank and Vile Rank and File",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Terrorcon Cutthroat, Shock and Cawww",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Terrorcon Hun-Gurrr, Eaters Digest",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Terrorcon Rippersnapper, Tooth and Nail",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Trasher Drone",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Tread Bolt, Devil of the Deep Blue Sky",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Waster Drone",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Wreck-Gar, The Big Cheese! Now With More Cheese!",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Abominus, Hellsparked Horror",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Roadmaster Prime Mode, Master of Chaos",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Scorpulator, Desert Rose",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Thunder Guts Gilthor, The One Who Claps",
+      "tfdsl": {
+        "combiner": ""
+      }
+    }
+  ]
+}

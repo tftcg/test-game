@@ -1,0 +1,245 @@
+{
+  "set": {
+    "id": "b6128c63-c932-4abe-83b5-c9119b0a6915",
+    "name": "Wave 10",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "Anti-Aircraft Ordnance",
+      "tfdsl": ""
+    },
+    {
+      "name": "Cerebro Shell",
+      "tfdsl": ""
+    },
+    {
+      "name": "Chaos of War",
+      "tfdsl": ""
+    },
+    {
+      "name": "Deflection Barrier",
+      "tfdsl": ""
+    },
+    {
+      "name": "Diagnostic Drone",
+      "tfdsl": ""
+    },
+    {
+      "name": "Electrum Coating"
+    },
+    {
+      "name": "Enemy, Wingthing Attack!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Energo Sword",
+      "tfdsl": ""
+    },
+    {
+      "name": "First in, Last out",
+      "tfdsl": ""
+    },
+    {
+      "name": "For Cybertron!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Freedom of Action",
+      "tfdsl": ""
+    },
+    {
+      "name": "Fusion Pistol",
+      "tfdsl": "pierce(1)"
+    },
+    {
+      "name": "HI Concussion Blaster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Hydraulic Grapple",
+      "tfdsl": ""
+    },
+    {
+      "name": "Null-Ray Cannon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Obsessive Research",
+      "tfdsl": ""
+    },
+    {
+      "name": "Overkill, Slugfest Attack!",
+      "tfdsl": ""
+    },
+    {
+      "name": "Red Rust",
+      "tfdsl": ""
+    },
+    {
+      "name": "Replenishment Maneuvers",
+      "tfdsl": ""
+    },
+    {
+      "name": "Salvaged Cannon"
+    },
+    {
+      "name": "Shore Bombardment",
+      "tfdsl": ""
+    },
+    {
+      "name": "Subtle Activation",
+      "tfdsl": ""
+    },
+    {
+      "name": "Surveillance Array",
+      "tfdsl": ""
+    },
+    {
+      "name": "Take Down",
+      "tfdsl": ""
+    },
+    {
+      "name": "Torture Chamber",
+      "tfdsl": ""
+    },
+    {
+      "name": "...Always Bet on the Leader"
+    },
+    {
+      "name": "A Tasty Morsel, Morsel"
+    },
+    {
+      "name": "Eat My Dust!"
+    },
+    {
+      "name": "Excellent!"
+    },
+    {
+      "name": "Excuse Me!"
+    },
+    {
+      "name": "Infernus"
+    },
+    {
+      "name": "Letsgo-Letsgo-Letsgo-Go-Go!"
+    },
+    {
+      "name": "Master Builder"
+    },
+    {
+      "name": "Mortar Cannon"
+    },
+    {
+      "name": "Obnoxiousness"
+    },
+    {
+      "name": "One Good Shot"
+    },
+    {
+      "name": "Operation: Interference"
+    },
+    {
+      "name": "Solar Regeneration"
+    },
+    {
+      "name": "Target: Acquired"
+    },
+    {
+      "name": "The Dark Spark"
+    },
+    {
+      "name": "Voracious Hunger"
+    },
+    {
+      "name": "We've Gotta Push Back!"
+    },
+    {
+      "name": "With Courage and Good Cheer"
+    },
+    {
+      "name": "Wreck 'N' Rule"
+    },
+    {
+      "name": "Zone Defense"
+    },
+    {
+      "name": "Bob, Loveable Pet",
+      "tfdsl": {
+        "alt": ""
+      }
+    },
+    {
+      "name": "Broadside, Air and Sea Assault",
+      "tfdsl": {
+        "alt 1": "",
+        "bot": "",
+        "alt 2": ""
+      }
+    },
+    {
+      "name": "Cloudraker, Claustrophobic Sky Fighter",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Enemy, Infuriating Infiltrator",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Fastlane, Road Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Hoist, Methodical Maintenance",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Laserbeak, Impatient Interrogator",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Overkill, Wanton Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Rack 'N' Ruin, One Bot Wrecking Crew",
+      "tfdsl": {
+        "bot": ""
+      }
+    },
+    {
+      "name": "Slugfest, Maniacal Messenger",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Wildrider, Traffic Terror",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    }
+  ]
+}

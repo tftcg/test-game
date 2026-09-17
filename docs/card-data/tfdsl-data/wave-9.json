@@ -1,0 +1,376 @@
+{
+  "set": {
+    "id": "588a21f5-83e3-46c2-9ddd-32629796aed5",
+    "name": "Wave 9",
+    "gameId": "9e5b4567-f7f7-4c16-99bd-45449217eb7b",
+    "gameVersion": "0.0.0.1",
+    "version": "0.0.0.1"
+  },
+  "cards": [
+    {
+      "name": "300-TT Crusher Claw",
+      "tfdsl": ""
+    },
+    {
+      "name": "Aerial Superiority",
+      "tfdsl": ""
+    },
+    {
+      "name": "Apex Armor",
+      "tfdsl": ""
+    },
+    {
+      "name": "Beast Mode",
+      "tfdsl": ""
+    },
+    {
+      "name": "Bellicosity",
+      "tfdsl": ""
+    },
+    {
+      "name": "Cloaking Screen",
+      "tfdsl": ""
+    },
+    {
+      "name": "Cloud Cover",
+      "tfdsl": ""
+    },
+    {
+      "name": "Cosmic Rust Cannon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Cross-Counter",
+      "tfdsl": ""
+    },
+    {
+      "name": "Dare to Believe",
+      "tfdsl": ""
+    },
+    {
+      "name": "Enhanced Cyber Blade",
+      "tfdsl": ""
+    },
+    {
+      "name": "Feral Tenacity",
+      "tfdsl": ""
+    },
+    {
+      "name": "Grimlock's Sword",
+      "tfdsl": ""
+    },
+    {
+      "name": "Heavy-Duty Plasma Blaster",
+      "tfdsl": ""
+    },
+    {
+      "name": "Mecha Star",
+      "tfdsl": ""
+    },
+    {
+      "name": "Nothin's Gonna Stand In Our Way",
+      "tfdsl": ""
+    },
+    {
+      "name": "Particle Cannon of Galvatron",
+      "tfdsl": ""
+    },
+    {
+      "name": "Scan the Vaults",
+      "tfdsl": ""
+    },
+    {
+      "name": "Spoils of War",
+      "tfdsl": ""
+    },
+    {
+      "name": "Starscream's Cape",
+      "tfdsl": ""
+    },
+    {
+      "name": "Stasis Field",
+      "tfdsl": ""
+    },
+    {
+      "name": "Stormfall Sword",
+      "tfdsl": ""
+    },
+    {
+      "name": "The Touch",
+      "tfdsl": ""
+    },
+    {
+      "name": "This is Bad Comedy",
+      "tfdsl": ""
+    },
+    {
+      "name": "Trithyllium Plating",
+      "tfdsl": ""
+    },
+    {
+      "name": "Twisted Logic",
+      "tfdsl": ""
+    },
+    {
+      "name": "Vamparc Ribbon",
+      "tfdsl": ""
+    },
+    {
+      "name": "Wanna Bet?",
+      "tfdsl": ""
+    },
+    {
+      "name": "Electro-Stinger",
+      "tfdsl": ""
+    },
+    {
+      "name": "Imperator Claw",
+      "tfdsl": ""
+    },
+    {
+      "name": "Zarak Shield",
+      "tfdsl": ""
+    },
+    {
+      "name": "Combaticon Enigma",
+      "tfdsl": ""
+    },
+    {
+      "name": "Lock and Load",
+      "tfdsl": ""
+    },
+    {
+      "name": "United Front",
+      "tfdsl": ""
+    },
+    {
+      "name": "Unfriendly Fire",
+      "tfdsl": ""
+    },
+    {
+      "name": "Advanced Technology"
+    },
+    {
+      "name": "Arise, Rodimus Prime"
+    },
+    {
+      "name": "Arm the Lonely"
+    },
+    {
+      "name": "Battlefield Dissonance"
+    },
+    {
+      "name": "Brothers In Armor"
+    },
+    {
+      "name": "Bust Some Deceptichops!"
+    },
+    {
+      "name": "Can't Squish This"
+    },
+    {
+      "name": "Do It With Style!"
+    },
+    {
+      "name": "Drop Your Weapons"
+    },
+    {
+      "name": "Heat Resistant Body"
+    },
+    {
+      "name": "Made of Sterner Stuff"
+    },
+    {
+      "name": "Paranoia"
+    },
+    {
+      "name": "Quest for Fire"
+    },
+    {
+      "name": "Scout the Area"
+    },
+    {
+      "name": "Such Heroic Nonsense"
+    },
+    {
+      "name": "Beastbox, Savage Interrogator",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Cyclonus, Loyal Enforcer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Galvatron, Maniacal Tyrant",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Ghost of Starscream, Annoying Apparition",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Grimlock, Dinobot King",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Huffer, Sullen Engineer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Megatron, Bane of Cybertron",
+      "tfdsl": {
+        "bot": "",
+        "alt": ""
+      }
+    },
+    {
+      "name": "Red Wing, Thrillseeker",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Rewind, Data Collector",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Rodimus Prime, Worthy Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Rumble, Demolition Expert",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Seaspray, Valiant Vessel",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Specialist Countdown, Transport • Space Explorer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Squawktalk, Chatterbox Translator",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Wheelie, Rhyming Racer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Windblade, Camien Champion",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Squawkbox, Passionate Musician",
+      "tfdsl": {
+        "combiner": ""
+      }
+    },
+    {
+      "name": "Paddles, Gentle Giant",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Scorponok, Brutal Warlord",
+      "tfdsl": {
+        "alt": "",
+        "body": ""
+      }
+    },
+    {
+      "name": "Lord Zarak, Ruler of Nebulos",
+      "tfdsl": {
+        "head": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Blast Off, Space Warrior",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Brawl, Ground Assault",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Onslaught, Combaticon Leader",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Swindle, Arms Dealer",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Vortex, Interrogator",
+      "tfdsl": {
+        "alt": "",
+        "bot": ""
+      }
+    },
+    {
+      "name": "Bruticus, Unstoppable Giant",
+      "tfdsl": {
+        "combiner": ""
+      }
+    }
+  ]
+}

@@ -120,7 +120,7 @@
     },
     {
       "name": "Hull Down",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(tough_eot(4,event().defender))"
     },
     {
       "name": "Improvised Shield",
@@ -181,7 +181,7 @@
     },
     {
       "name": "Overrule",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(card.white>=1))))->revealed(scrap_hand(event().card))"
     },
     {
       "name": "Paralyzo Box",

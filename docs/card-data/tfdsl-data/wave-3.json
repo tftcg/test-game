@@ -25,7 +25,7 @@
     },
     {
       "name": "Battlefield Report",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(draw(2);put_deck(pick_hand()))"
     },
     {
       "name": "Battlefield Scan",
@@ -33,7 +33,7 @@
     },
     {
       "name": "Bolster",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(play(pick_hand(subtype=Armor)))"
     },
     {
       "name": "Brainstorm",
@@ -65,7 +65,7 @@
     },
     {
       "name": "Defensive Formation",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(def_eot(1,all_friends()))"
     },
     {
       "name": "Device Virus",
@@ -133,7 +133,7 @@
     },
     {
       "name": "Hiding Spot",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-opponent-attacker-chosen())->revealed(stealth_eot(true,pick_friend()))"
     },
     {
       "name": "HV Electron Breacher",
@@ -141,7 +141,7 @@
     },
     {
       "name": "Infiltrate",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(card.orange>=1))))->revealed(scrap_hand(event().card))"
     },
     {
       "name": "Laser Cutlass",
