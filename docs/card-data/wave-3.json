@@ -3313,7 +3313,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 2,
           "def": 1,
           "health": null,
@@ -3690,7 +3690,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 4,
           "def": null,
           "health": null,
@@ -4024,7 +4024,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 2,
           "def": null,
           "health": null,

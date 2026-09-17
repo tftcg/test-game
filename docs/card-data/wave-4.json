@@ -2330,7 +2330,7 @@
       "modes": [
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 1,
           "def": null,
           "health": null,
@@ -2355,7 +2355,7 @@
       "modes": [
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 3,
           "def": null,
           "health": null,
@@ -2571,7 +2571,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 3,
           "def": null,
           "health": null,
@@ -2995,7 +2995,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Utility",
           "atk": 1,
           "def": 1,
           "health": null,
@@ -3036,7 +3036,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Armor",
           "atk": null,
           "def": 2,
           "health": null,
@@ -3179,7 +3179,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 3,
           "def": null,
           "health": null,
@@ -3347,7 +3347,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Armor",
           "atk": null,
           "def": 2,
           "health": null,
@@ -3554,7 +3554,7 @@
         },
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Utility",
           "atk": 1,
           "def": 1,
           "health": null,
@@ -4037,7 +4037,7 @@
       "modes": [
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Armor",
           "atk": null,
           "def": 2,
           "health": null,
@@ -4062,7 +4062,7 @@
       "modes": [
         {
           "type": "Character",
-          "subtype": "Upgrade Mode",
+          "subtype": "Weapon",
           "atk": 3,
           "def": null,
           "health": null,
