@@ -9,59 +9,60 @@
   "cards": [
     {
       "name": "300-TT Crusher Claw",
-      "tfdsl": ""
+      "tfdsl": "pierce(2);on-put(when(attached().trait=Guardian || attached().stars>=19))->tap(pick_enemy(faction=Decepticon,stars<=10))"
     },
     {
       "name": "Aerial Superiority",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());on-attack(when(event().attacker=previous_target(),event().attacker.trait=Plane || event().attacker.trait=Helicopter || event().attacker.trait=Spaceship,event().defender.trait=Truck || event().defender.trait=Car || event().defender.trait=Tank))->(atk_eob(4,event().attacker);pierce_eob(4,event().attacker))"
     },
     {
       "name": "Apex Armor",
-      "tfdsl": ""
+      "tfdsl": "put_only(faction=Autobot);on-attached-after-defend-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->(move(1,attached(),event().attacker);repair(1,attached());damage(1,event().attacker))"
     },
     {
       "name": "Beast Mode",
-      "tfdsl": ""
+      "needs": "Grouping alternative trait-and-mode attack conditions"
     },
     {
       "name": "Bellicosity",
-      "tfdsl": ""
+      "needs": "Changing flipped battle icon colors"
     },
     {
       "name": "Cloaking Screen",
-      "tfdsl": ""
+      "tfdsl": "static(stealth,when(attached().tapped=untapped))"
     },
     {
       "name": "Cloud Cover",
-      "tfdsl": ""
+      "needs": "Preventing damage counters from moving between characters"
     },
     {
       "name": "Cosmic Rust Cannon",
-      "tfdsl": ""
+      "needs": "Resolving an optional scrap-or-damage choice after battle"
     },
     {
       "name": "Cross-Counter",
-      "tfdsl": ""
+      "needs": "Calculating damage as the difference between characters' DEF and ATK"
     },
     {
       "name": "Dare to Believe",
-      "tfdsl": ""
+      "tfdsl": "draw(1);bold_eot(1,pick_friend())"
     },
     {
       "name": "Enhanced Cyber Blade",
-      "tfdsl": ""
+      "needs": "Setting a character's base DEF for a battle"
     },
     {
       "name": "Feral Tenacity",
-      "tfdsl": ""
+      "needs": "Adding, counting, and removing named counters on an Upgrade"
     },
     {
       "name": "Grimlock's Sword",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Dinobot);bold(3);pierce(3)"
     },
     {
       "name": "Heavy-Duty Plasma Blaster",
-      "tfdsl": ""
+      "comment": "Proposal - why can't it use an || inside the when?",
+      "tfdsl": "put_only(faction!=Decepticon);on-put(when(attached().trait=Guardian))->(damage(2,pick_enemy());damage(1,all_enemies(id!=previous_target().id)));on-put(when(attached().trait!=Guardian,attached().mode=combiner,attached().stars>=18))->(damage(2,pick_enemy());damage(1,all_enemies(id!=previous_target().id)))"
     },
     {
       "name": "Mecha Star",
@@ -69,109 +70,116 @@
     },
     {
       "name": "Nothin's Gonna Stand In Our Way",
-      "tfdsl": ""
+      "needs": "Counting cards with a specific name played during a turn"
     },
     {
       "name": "Particle Cannon of Galvatron",
-      "tfdsl": ""
+      "tfdsl": "put_only(name=Galvatron);bold(1)"
     },
     {
       "name": "Scan the Vaults",
-      "tfdsl": ""
+      "tfdsl": "draw(1+all(self().scrap,name='Scan the Vaults').count)"
     },
     {
       "name": "Spoils of War",
-      "tfdsl": ""
+      "needs": "Choosing up to five characters that share a trait"
     },
     {
       "name": "Starscream's Cape",
-      "tfdsl": ""
+      "needs": "Increasing numbers in a character's printed text box"
     },
     {
       "name": "Stasis Field",
-      "tfdsl": ""
+      "needs": "Flipping an opponent's character"
     },
     {
       "name": "Stormfall Sword",
-      "tfdsl": ""
+      "tfdsl": "pierce(2);static(tough,when(attached().name=Windblade),1)"
     },
     {
       "name": "The Touch",
-      "tfdsl": ""
+      "tfdsl": "bold_eot(3,pick_friend(faction=Autobot,trait=Leader));if(previous_target().upgrades.name='Matrix of Leadership')->repair(3,previous_target())"
     },
     {
       "name": "This is Bad Comedy",
-      "tfdsl": ""
+      "needs": "Choosing between alternative effects"
     },
     {
       "name": "Trithyllium Plating",
-      "tfdsl": ""
+      "comment": "BUG: Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?",
+      "tfdsl": "on-play(when(play-source=hand()))->(if(confirm())->play(pick_scrap(name=this().name)));static(pierce,when(event().defender=attached()),0-2,target=event().attacker)"
     },
     {
       "name": "Twisted Logic",
-      "tfdsl": ""
+      "needs": "Reordering cards on top of an opponent's deck"
     },
     {
       "name": "Vamparc Ribbon",
-      "tfdsl": ""
+      "tfdsl": "on-attached-attack-damage(when(event().damage>=5))->repair(2,attached())"
     },
     {
       "name": "Wanna Bet?",
-      "tfdsl": ""
+      "needs": "Replacing battle cards being put under an enemy character with scrapping them"
     },
     {
       "name": "Electro-Stinger",
-      "tfdsl": ""
+      "tfdsl": "pierce(2);on-put(when(attached().name=Scorponok))->damage(2,pick_enemy())"
     },
     {
       "name": "Imperator Claw",
-      "tfdsl": ""
+      "comment": "Proposal - TODO: Still need the '2 can fit in 1 slot'",
+      "tfdsl": "put_only(faction!=Autobot);on-attached-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->damage(1,all_chars(stars<attached().stars))"
     },
     {
       "name": "Zarak Shield",
-      "tfdsl": ""
+      "needs": "Limiting attack damage from a single attack"
     },
     {
       "name": "Combaticon Enigma",
-      "tfdsl": ""
+      "needs": "Combining only characters in a specified mode"
     },
     {
       "name": "Lock and Load",
-      "tfdsl": ""
+      "comment": "Proposal - why is the choose outside of the confirm? Also it is a play_upgrade not a put_upgrade",
+      "tfdsl": "choose(pick_friend(faction=Decepticon));if(confirm())->(put_upgrade(previous_target(),pick_hand(type=Upgrade,black>=1));atk_eot(1,previous_target()))"
     },
     {
       "name": "United Front",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());atk_eot(2,previous_target());if(previous_target().mode=combiner)->repair(2,previous_target())"
     },
     {
       "name": "Unfriendly Fire",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Combaticon);on-attached-after-defend-flip(when(event().flips.colours.count>=3))->damage(1,pick_enemy())"
     },
     {
       "name": "Advanced Technology"
     },
     {
       "name": "Arise, Rodimus Prime",
+      "front-needs": "Revealing a named card from the deck before the game",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Arm the Lonely",
+      "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick_friend(fullname=this().target),pick(self().ko,trait='Battle Master'));flip(this())))"
       }
     },
     {
       "name": "Battlefield Dissonance",
+      "front-needs": "Combining specific named characters from the battlefield and KO area",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Brothers In Armor",
+      "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick_friend(fullname=this().target),pick(self().ko,trait='Battle Master'));flip(this())))"
       }
     },
     {
@@ -182,18 +190,21 @@
     },
     {
       "name": "Can't Squish This",
+      "front-needs": "Reducing Pierce by a variable amount based on hand size",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Do It With Style!",
+      "front-needs": "Replacing text in a character's printed ability",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Drop Your Weapons",
+      "front-needs": "Setting a character's base ATK for a battle",
       "tfdsl": {
         "front": ""
       }
@@ -201,7 +212,7 @@
     {
       "name": "Heat Resistant Body",
       "tfdsl": {
-        "front": ""
+        "front": "on-flip(when(event().flipped.fullname=this().target,event().flipped.mode=bot))->repair(1,pick_friend(faction=Autobot))"
       }
     },
     {
@@ -209,72 +220,84 @@
     },
     {
       "name": "Paranoia",
+      "front-needs": "Granting a character a triggered ability",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Quest for Fire",
+      "front-needs": "Revealing a named card from the deck before the game",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Scout the Area",
+      "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-turn()->(if(confirm())->(deploy(pick_friend(fullname=this().target),pick(pick_friend(fullname=this().target).under));flip(this())))"
       }
     },
     {
       "name": "Such Heroic Nonsense",
+      "front-needs": "Swapping a hand card for a specific battle card flipped during a battle",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Beastbox, Savage Interrogator",
+      "alt-needs": "Revealing and playing the top card of an opponent's deck",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-attack(when(event().defender.faction=Autobot))->atk_eot(2,this())"
       }
     },
     {
       "name": "Cyclonus, Loyal Enforcer",
+      "comment": "NOTE: This is relying on pick_hand not being a cancel. Needs a pay()",
+      "bot-needs": "Redirecting attack damage from another character",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(white>=1));move(2,this(),pick_enemy())))",
         "bot": ""
       }
     },
     {
       "name": "Galvatron, Maniacal Tyrant",
+      "comment": "TODO: Test, especially bot mode",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(if(confirm())->scrap_upgrade(pick_enemy_upgrade()))",
+        "bot": "on-this-after-attack-flip(when(this().upgrades.white>=1,this().upgrades.blue>=1,this().upgrades.green>=1,event().flips.white>=1,event().flips.orange>=1,event().flips.black>=1))->damage(4,pick_enemy())"
       }
     },
     {
       "name": "Ghost of Starscream, Annoying Apparition",
+      "alt-needs": "Returning a KO character to the battlefield and moving its Upgrades",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-attack()->(if(confirm())->tap(pick_enemy()))"
       }
     },
     {
       "name": "Grimlock, Dinobot King",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->(damage(1,all_chars());damage(1,all_chars(faction=Decepticon)))",
+        "bot": "bold(3)"
       }
     },
     {
       "name": "Huffer, Sullen Engineer",
+      "comment": "NOTE: Again needs a pay() for the If You Dos",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand());move_to(self().hand,pick_scrap(blue>=1,subtype=Utility))))",
+        "bot": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));if(confirm())->play(pick_hand(type=Upgrade))))"
       }
     },
     {
       "name": "Megatron, Bane of Cybertron",
+      "bot-needs": "Detecting a character KO'd by one of your cards without damage",
+      "alt-needs": "Replacing Upgrade slot conflicts and a character leaving the battlefield",
       "tfdsl": {
         "bot": "",
         "alt": ""
@@ -282,13 +305,16 @@
     },
     {
       "name": "Red Wing, Thrillseeker",
+      "bot-needs": "Resolving a Revenge effect that makes an opponent scrap a hand card",
       "tfdsl": {
-        "alt": "",
+        "alt": "tough(1)",
         "bot": ""
       }
     },
     {
       "name": "Rewind, Data Collector",
+      "alt-needs": "Returning a random card from the scrap pile to hand",
+      "bot-needs": "Playing a specific battle card flipped during an attack",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -297,33 +323,37 @@
     {
       "name": "Rodimus Prime, Worthy Leader",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(name='Matrix of Leadership'))",
+        "bot": "static(atk,when(this().upgrades.name='Matrix of Leadership'),1);static(pierce,when(this().upgrades.name='Matrix of Leadership'),2)"
       }
     },
     {
       "name": "Rumble, Demolition Expert",
+      "comment": "NOTE: Needs a pay() rather than relying on pick_hand",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-this-flip()->scrap_upgrade(opponent_pick(opponent().upgrades))",
+        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(blue>=1));atk_eot(2,this())))"
       }
     },
     {
       "name": "Seaspray, Valiant Vessel",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(stealth,when(this().tapped=untapped))",
+        "bot": "on-this-battle(when(event().other_battler.mode=bot))->(atk_eot(1,this());def_eot(1,this()))"
       }
     },
     {
       "name": "Specialist Countdown, Transport • Space Explorer",
+      "bot-needs": "Paying a tap-and-scrap activation cost and changing draw count for combiner mode",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(all_friends(name='Omega Supreme').count>0))",
         "bot": ""
       }
     },
     {
       "name": "Squawktalk, Chatterbox Translator",
+      "alt-needs": "Choosing an icon color and revealing an opponent's top deck card",
+      "bot-needs": "Having each player choose and scrap a card from their hand",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -331,13 +361,16 @@
     },
     {
       "name": "Wheelie, Rhyming Racer",
+      "bot-needs": "Paying a tap-and-scrap activation cost and branching on a scrapped card's icon count",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(event().attacker.faction=Decepticon || event().attacker.faction=Quintesson))",
         "bot": ""
       }
     },
     {
       "name": "Windblade, Camien Champion",
+      "alt-needs": "Taking selected cards from the top of the deck and bottom-decking the rest",
+      "bot-needs": "Replacing attack damage with half that damage rounded up",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -345,12 +378,15 @@
     },
     {
       "name": "Squawkbox, Passionate Musician",
+      "combiner-needs": "Tracking cards scrapped by each player and resolving an opponent's optional hand scrap",
       "tfdsl": {
         "combiner": ""
       }
     },
     {
       "name": "Paddles, Gentle Giant",
+      "alt-needs": "Preventing and redirecting a limited amount of attack damage",
+      "bot-needs": "Checking for a damaged or KO'd character across the battlefield and KO area",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -358,6 +394,8 @@
     },
     {
       "name": "Scorponok, Brutal Warlord",
+      "alt-needs": "Revealing a named card from the deck before the game",
+      "body-needs": "Playing a specific Upgrade flipped during an attack after battle",
       "tfdsl": {
         "alt": "",
         "body": ""
@@ -365,6 +403,8 @@
     },
     {
       "name": "Lord Zarak, Ruler of Nebulos",
+      "head-needs": "Deploying this character when a named character is KO'd",
+      "bot-needs": "Detecting deployment from under a named character",
       "tfdsl": {
         "head": "",
         "bot": ""
@@ -373,19 +413,21 @@
     {
       "name": "Blast Off, Space Warrior",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-attack(when(event().defender.trait=Tank || event().defender.trait=Truck))->atk_eot(2,this())",
+        "bot": "on-this-flip()->damage(1,pick_enemy(trait=Ranged))"
       }
     },
     {
       "name": "Brawl, Ground Assault",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "brave()",
+        "bot": "static(def,when(this().damage>=4),1)"
       }
     },
     {
       "name": "Onslaught, Combaticon Leader",
+      "alt-needs": "Granting abilities conditionally to each character in a group",
+      "bot-needs": "Preventing enemies from using Plan",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -393,6 +435,8 @@
     },
     {
       "name": "Swindle, Arms Dealer",
+      "alt-needs": "Counting Upgrades played during a turn",
+      "bot-needs": "Choosing another character that shares a trait with this character",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -400,13 +444,15 @@
     },
     {
       "name": "Vortex, Interrogator",
+      "bot-needs": "Revealing a random card from an opponent's hand",
       "tfdsl": {
-        "alt": "",
+        "alt": "pierce(2)",
         "bot": ""
       }
     },
     {
       "name": "Bruticus, Unstoppable Giant",
+      "combiner-needs": "Tracking whether this character was combined this turn and counting black battle cards flipped",
       "tfdsl": {
         "combiner": ""
       }
