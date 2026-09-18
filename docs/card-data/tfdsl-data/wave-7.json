@@ -9,23 +9,27 @@
   "cards": [
     {
       "name": "Agile Formation",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Optional top-deck inspection and scrapping"
     },
     {
       "name": "Armor Piercing Munitions",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "A selected character's this-turn attack trigger"
     },
     {
       "name": "Camien Grace",
-      "tfdsl": ""
+      "tfdsl": "on-put()->draw(1);static(focus,when(attached().name=Chromia || attached().name=Nautica || attached().name=Novastar || attached().name=Windblade),1)"
     },
     {
       "name": "Combat Drop",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action flipping a defender to a specified mode"
     },
     {
       "name": "Contemplation",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Selecting zero to three hand cards and drawing once per card scrapped"
     },
     {
       "name": "Corrupt Construction",
@@ -33,11 +37,12 @@
     },
     {
       "name": "Die Autobots!",
-      "tfdsl": "atk_eot(2,pick_friend(faction=Decepticon));def_eot(-2,pick_enemy(faction=Autobot))"
+      "tfdsl": "atk_eot(2,pick_friend(faction=Decepticon));def_eot(0-2,pick_enemy(faction=Autobot))"
     },
     {
       "name": "Electro-Static Shielding",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing an opponent's black battle icons with white icons for a battle"
     },
     {
       "name": "Enhanced Fusion Cannon",
@@ -45,7 +50,8 @@
     },
     {
       "name": "Evasive Action",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action damage replacement with a trait-qualified target"
     },
     {
       "name": "Fearless",
@@ -53,11 +59,13 @@
     },
     {
       "name": "Foreman's Ingenuity",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "A starting-team play restriction and conditionally playing a card returned from scrap"
     },
     {
       "name": "Impetuous Stand",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Moving a scrapped enemy Upgrade from its owner's scrap pile to the bottom of their deck"
     },
     {
       "name": "Rage",
@@ -65,19 +73,22 @@
     },
     {
       "name": "Rapid Response Cycle",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Granting a trait while an upgraded character is in a specific mode"
     },
     {
       "name": "Revving the Engine",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Tracking the third copy played in a turn and playing another copy"
     },
     {
       "name": "Robust",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Allowing an Armor in Weapon or Utility slots"
     },
     {
       "name": "Scatter Blaster",
-      "tfdsl": ""
+      "tfdsl": "static(atk,when(event().attacker=attached(),event().defender.trait=Melee),2)"
     },
     {
       "name": "Towering Presence",
@@ -85,65 +96,126 @@
     },
     {
       "name": "Trithyllium Drill",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Triggering when a card is put from hand on top of a deck"
     },
     {
       "name": "All Hail Megatron!"
     },
     {
-      "name": "Artillery Support"
+      "name": "Artillery Support",
+      "front-needs": "Temporary Pierce reduction at end of battle for a mode-qualified defender",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Covert"
+      "name": "Covert",
+      "tfdsl": {
+        "front": "static(stealth,true,target=all_friends(fullname=this().target))"
+      }
     },
     {
-      "name": "Durable Decepticon"
+      "name": "Durable Decepticon",
+      "front-needs": "Repairing once per card placed under a combiner, capped at five",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Fully Loaded"
+      "name": "Fully Loaded",
+      "front-needs": "Playing a scrapped top-deck Upgrade directly onto a named character and capping a dynamic health bonus",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Holomatter Mastery"
+      "name": "Holomatter Mastery",
+      "front-needs": "Pre-game named-card search and a named-card play trigger",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Impervious"
+      "name": "Impervious",
+      "front-needs": "Replacing an Armor scrap with an optional Armor scrap from hand",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Malevolent Architect"
+      "name": "Malevolent Architect",
+      "front-needs": "First-turn-only Tower counter removal and granting abilities to targeted characters",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Obfuscating Cloud"
+      "name": "Obfuscating Cloud",
+      "front-needs": "Pre-game deck-to-character Upgrade placement and conditional Safeguard for other characters",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
       "name": "One Tough Bug!"
     },
     {
-      "name": "Out of the Way Hot Rod!"
+      "name": "Out of the Way Hot Rod!",
+      "front-needs": "Optional non-attack damage redirection to another character",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Road Warriors"
+      "name": "Road Warriors",
+      "tfdsl": {
+        "front": "static(health,1,target=all_friends(trait=Omnibot));static(def,1,target=all_friends(trait=Omnibot));on-friend-upgrade(when(event().attached.trait=Omnibot,event().attached.trait=Car))->(draw(1);scrap_hand(pick_hand()))"
+      }
     },
     {
-      "name": "Silent Hunter"
+      "name": "Silent Hunter",
+      "front-needs": "Pre-game deck-to-character Upgrade placement and post-battle damage",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Soundwave Superior"
+      "name": "Soundwave Superior",
+      "front-needs": "Triggering when a Secret Action is played",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Sulfuric Deluge"
+      "name": "Sulfuric Deluge",
+      "front-needs": "Mode-conditional static ability on a Stratagem target",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Assault Protocol"
+      "name": "Assault Protocol",
+      "front-needs": "Flipping a Stratagem",
+      "back-needs": "Flipping a Stratagem",
+      "tfdsl": {
+        "front": "",
+        "back": ""
+      }
     },
     {
       "name": "Banzai-Tron, Crystalocution Master",
+      "comment": "TODO: Test",
+      "alt-needs": "Character battles triggers spanning attacks and defenses",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-flip(when(opponent().scrap.count>=20))->(if(confirm())->play(pick_hand(subtype=Weapon)))"
       }
     },
     {
       "name": "Bludgeon, Metallikato Monster",
+      "alt-needs": "Comparing battle-icon color counts with an opponent and resolving effects at end of battle",
+      "bot-needs": "Conditioning an attack trigger on the battle-icon count of a card scrapped from hand",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -151,13 +223,16 @@
     },
     {
       "name": "Brainstorm, Haunted Schemer",
+      "bot-needs": "Dynamically granting Focus to exactly tapped friendly characters",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->return_upgrade(pick_enemy_upgrade())",
         "bot": ""
       }
     },
     {
       "name": "Fangry, Cursed Nightmare",
+      "alt-needs": "Scrapping an opponent's battle card without applying its icons",
+      "bot-needs": "Start-turn effects that scrap another player's deck",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -165,6 +240,8 @@
     },
     {
       "name": "Hardhead, Grave Mistakes",
+      "alt-needs": "Moving a Weapon from another character and inspecting that Weapon's battle-icon count",
+      "bot-needs": "Replacing opposing scrap recursion or play by moving the card to the KO area",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -172,6 +249,8 @@
     },
     {
       "name": "Highbrow, Appallingly Astute",
+      "alt-needs": "Post-battle damage conditioned on defense flip icons",
+      "bot-needs": "Counting Actions played in a turn and a forced end-of-turn mode flip",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -179,20 +258,26 @@
     },
     {
       "name": "Hoist, Fearless Rescuer",
+      "comment": "Proposal - should an on-put-upgrade be added?",
+      "alt-needs": "Revealing a top-deck card and moving it to hand only if it has a matching subtype",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on(event=put-upgrade,when(event().attached.owner=this().owner,event().attached.faction=Autobot,event().played.subtype=Utility))->repair(1,event().attached)"
       }
     },
     {
       "name": "Megatron/Ratchet, Twisted Amalgamation",
+      "comment": "Proposal - feels like the choose can merge into the damage",
+      "bot-needs": "Preventing enemy repair and counting distinct names among green Upgrades",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(choose(pick_enemy());damage(1,previous_target());if(previous_target().faction=Autobot || previous_target().faction=Decepticon)->repair(1,this()))",
         "bot": ""
       }
     },
     {
       "name": "Wolfwire, Lying In Wait",
+      "alt-needs": "Triggering when an opponent plays a green card",
+      "bot-needs": "Scrapping an opponent's deck and testing the color of a card scrapped this way",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -200,8 +285,9 @@
     },
     {
       "name": "Nightbird, Tera-Kura Construct",
+      "comment": "This is cheating to tie to this event, but I'm not aware of any reason why a battler would change between on-this-battle and on-this-after-battle",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-after-battle(when(event().other_battler.trait=Melee))->damage(1,event().other_battler)"
       }
     }
   ]

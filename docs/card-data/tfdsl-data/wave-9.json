@@ -65,7 +65,7 @@
     },
     {
       "name": "Mecha Star",
-      "tfdsl": ""
+      "tfdsl": "pierce(2);on-attached-attack()->(on-attached-after-attack()->scrap_upgrade(this()))"
     },
     {
       "name": "Nothin's Gonna Stand In Our Way",
@@ -151,46 +151,85 @@
       "name": "Advanced Technology"
     },
     {
-      "name": "Arise, Rodimus Prime"
+      "name": "Arise, Rodimus Prime",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Arm the Lonely"
+      "name": "Arm the Lonely",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Battlefield Dissonance"
+      "name": "Battlefield Dissonance",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Brothers In Armor"
+      "name": "Brothers In Armor",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Bust Some Deceptichops!"
+      "name": "Bust Some Deceptichops!",
+      "tfdsl": {
+        "front" : "on-battle(when(event().battler.fullname=this().target,event().other_battler.faction=Decepticon))->(bold_eob(2,event().battler);tough_eob(2,event().battler))"
+      }
     },
     {
-      "name": "Can't Squish This"
+      "name": "Can't Squish This",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Do It With Style!"
+      "name": "Do It With Style!",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Drop Your Weapons"
+      "name": "Drop Your Weapons",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Heat Resistant Body"
+      "name": "Heat Resistant Body",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
       "name": "Made of Sterner Stuff"
     },
     {
-      "name": "Paranoia"
+      "name": "Paranoia",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Quest for Fire"
+      "name": "Quest for Fire",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Scout the Area"
+      "name": "Scout the Area",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Such Heroic Nonsense"
+      "name": "Such Heroic Nonsense",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
       "name": "Beastbox, Savage Interrogator",

@@ -9,11 +9,11 @@
   "cards": [
     {
       "name": "Anticipation Engine",
-      "tfdsl": ""
+      "needs": "Revealing the top deck card and conditionally playing it by card type"
     },
     {
       "name": "Backup Bag",
-      "tfdsl": ""
+      "needs": "Replacing an attempted scrap of another attached Upgrade with scrapping this Upgrade"
     },
     {
       "name": "Basic Combat Protocol",
@@ -21,7 +21,7 @@
     },
     {
       "name": "Battering Ram",
-      "tfdsl": ""
+      "needs": "Forcing an opponent to flip a damaged character to its other mode"
     },
     {
       "name": "Battlefield Report",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Battlefield Scan",
-      "tfdsl": ""
+      "needs": "Temporarily preventing enemies from using Brave and Stealth"
     },
     {
       "name": "Bolster",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Callous Leadership",
-      "tfdsl": ""
+      "tfdsl": "move(5,pick_friend(faction=Decepticon,trait=Leader,stars>=8),pick_friend(id!=previous_target().id))"
     },
     {
       "name": "Combat Dagger",
@@ -57,11 +57,13 @@
     },
     {
       "name": "Covert Armor",
-      "tfdsl": ""
+      "comment": "Proposal - NO. This is a static effect.",
+      "tfdslBad": "put_only(trait=Melee);on-attached-defend(when(event().attacker.trait=Specialist))->def_eob(1,attached())",
+      "tfdsl": "put_only(trait=Melee);static(def,when(event().defender=attached(),event().attacker.trait=Specialist),1)"
     },
     {
       "name": "Dampening Field",
-      "tfdsl": ""
+      "needs": "Limiting the number of battle cards an opponent can flip during a battle"
     },
     {
       "name": "Defensive Formation",
@@ -69,7 +71,7 @@
     },
     {
       "name": "Device Virus",
-      "tfdsl": ""
+      "tfdsl": "scrap_upgrade(pick_friendly_upgrade());scrap_upgrade(pick_enemy_upgrade(subtype=previous_target().subtype,count=2))"
     },
     {
       "name": "Dismantle",
@@ -77,18 +79,18 @@
     },
     {
       "name": "Dismantling Claw",
-      "tfdsl": ""
+      "needs": "Triggering when an Upgrade is scrapped from a character"
     },
     {
       "name": "EM24 IR Laser Launcher"
     },
     {
       "name": "Emergency Defense Field",
-      "tfdsl": ""
+      "needs": "Replacing even attack damage and detecting a defense that takes no attack damage"
     },
     {
       "name": "Emp Wave",
-      "tfdsl": ""
+      "needs": "Tapping every character"
     },
     {
       "name": "Energy Pack",
@@ -96,15 +98,16 @@
     },
     {
       "name": "Erratic Energy Grenade",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "on-start-turn(when(event().player=this().owner))->damage(1,attached());on-attached-ko()->damage(2,all_enemies())"
     },
     {
       "name": "Extra Padding",
-      "tfdsl": ""
+      "needs": "Allowing up to three named Armors in one Armor slot"
     },
     {
       "name": "Firecon Flame",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Firecon);static(bold,1,target=all_friends(trait=Firecon))"
     },
     {
       "name": "Force Field",
@@ -112,15 +115,15 @@
     },
     {
       "name": "Frag Toss",
-      "tfdsl": ""
+      "tfdsl": "damage(1,opponent_pick(opponent().chars));if(all(self().starting_team,faction=Decepticon).count=self().starting_team.count)->damage(1,previous_target())"
     },
     {
       "name": "Fuel Cache",
-      "tfdsl": ""
+      "needs": "Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors"
     },
     {
       "name": "Full Loadout",
-      "tfdsl": ""
+      "needs": "Playing selected Upgrades from hand onto a previously selected character"
     },
     {
       "name": "Heat of Battle",
@@ -129,7 +132,8 @@
     },
     {
       "name": "Heroic Team-Up",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "tap(pick_friend(faction=Autobot,tapped=untapped));atk_eot(previous_target().atk,pick_friend(faction=Autobot,tapped=untapped))"
     },
     {
       "name": "Hiding Spot",
@@ -149,11 +153,11 @@
     },
     {
       "name": "LV Gamma-Disruptor Launcher",
-      "tfdsl": ""
+      "needs": "Allowing up to two named Weapons in one Weapon slot"
     },
     {
       "name": "Ultra Magnus Armor",
-      "tfdsl": ""
+      "tfdsl": "put_only(faction=Autobot);instead(on-attached-damage()->modify(event().amount:=event().amount-1))"
     },
     {
       "name": "Medic!",
@@ -161,11 +165,11 @@
     },
     {
       "name": "Metal Detector",
-      "tfdsl": ""
+      "needs": "Revealing the top deck card and conditionally playing it by card type"
     },
     {
       "name": "Micro Capacitor",
-      "tfdsl": ""
+      "needs": "Triggering when the upgraded character uses a TAP ability"
     },
     {
       "name": "Pep Talk",
@@ -173,31 +177,33 @@
     },
     {
       "name": "Personal Targeting Drone",
-      "tfdsl": ""
+      "needs": "Triggering when an Upgrade is scrapped from a character"
     },
     {
       "name": "Point-Defense System",
-      "tfdsl": ""
+      "comment": "BUG: Technically this should be checking has(pierce) rather than pierce>0. Does it matter?",
+      "tfdsl": "on-attached-defend(when(event().attacker.pierce>0))->no_pierce_eob(2,event().attacker)"
     },
     {
       "name": "Pop a Wheelie",
-      "tfdsl": ""
+      "needs": "Flipping characters to a specified mode and granting a restricted extra attack"
     },
     {
       "name": "Quartermaster",
-      "tfdsl": ""
+      "needs": "Choosing between distinct effects and putting a Battle Master Upgrade from the KO area onto a selected character"
     },
     {
       "name": "Reactive Armor",
-      "tfdsl": ""
+      "needs": "Triggering when an Upgrade is scrapped from a character"
     },
     {
       "name": "Reflex Circuits",
-      "tfdsl": ""
+      "tfdslBad": "put_only(trait=Ranged);on-attached-defend(when(event().attacker.trait=Melee))->def_eob(1,attached())",
+      "tfdsl": "put_only(trait=Ranged);static(def,when(event().defender=attached(),event().attacker.trait=Melee),1)"
     },
     {
       "name": "Repurpose",
-      "tfdsl": ""
+      "tfdsl": "scrap_hand(pick_hand());draw(2)"
     },
     {
       "name": "Rock Toss",
@@ -205,11 +211,11 @@
     },
     {
       "name": "RR Disruptor Blade",
-      "tfdsl": ""
+      "needs": "Persisting attack flip results for a conditional post-battle scrap"
     },
     {
       "name": "Scavenge the Battlefield",
-      "tfdsl": ""
+      "needs": "Replacing Upgrade scrapping during a character KO and moving any number of those Upgrades to another character"
     },
     {
       "name": "Smoke Cloak",
@@ -221,19 +227,19 @@
     },
     {
       "name": "Diagnosis",
-      "tfdsl": ""
+      "tfdsl": "repair(1,pick_friend());if(all(self().starting_team,faction=Autobot).count=self().starting_team.count)->draw(1)"
     },
     {
       "name": "Special Ops Mission",
-      "tfdsl": ""
+      "tfdsl": "if(confirm())->play(pick_hand(type='Secret Action'));if(confirm())->play(pick_hand(type='Secret Action'))"
     },
     {
       "name": "Spinner Rims",
-      "tfdsl": ""
+      "needs": "Flipping an extra battle card"
     },
     {
       "name": "Squish them like Bugs",
-      "tfdsl": ""
+      "needs": "A delayed attack-damage effect conditioned on the selected character's stars"
     },
     {
       "name": "Steady Shot",
@@ -241,19 +247,20 @@
     },
     {
       "name": "Sturdy Armor",
-      "tfdsl": ""
+      "tfdslBad": "put_only(trait=Specialist);on-attached-defend(when(event().attacker.trait=Ranged))->def_eob(1,attached())",
+      "tfdsl": "put_only(trait=Specialist);static(def,when(event().defender=attached(),event().attacker.trait=Ranged),1)"
     },
     {
       "name": "Take Cover",
-      "tfdsl": ""
+      "needs": "Preventing all non-attack damage to the controller's characters for the turn"
     },
     {
       "name": "Two-Pronged Attack",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());if(previous_target().trait=Tank)->scrap_hand(opponent_pick_opponent_hand(count=2));if(previous_target().trait=Plane)->damage(2,opponent_pick(opponent().chars))"
     },
     {
       "name": "Unconventional Flying Object",
-      "tfdsl": ""
+      "needs": "Flipping a character to specified modes in sequence"
     },
     {
       "name": "Urban Camo",
@@ -261,10 +268,11 @@
     },
     {
       "name": "W-5 Gyro Blaster",
-      "tfdsl": ""
+      "needs": "Limiting each player's number of battle-card flips during a battle"
     },
     {
       "name": "Alpha Trion, Cybertronian Sage",
+      "bot-needs": "Playing a qualifying Action from this character's just-flipped battle cards",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action,orange>=1))",
         "bot": ""
@@ -272,6 +280,8 @@
     },
     {
       "name": "Captain Elita-1, Special Ops • Ranger",
+      "alt-needs": "Moving a chosen amount of damage without KOing the destination character",
+      "bot-needs": "Scrapping and optionally playing successive top deck cards",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -279,13 +289,16 @@
     },
     {
       "name": "Captain Starscream, Infantry • Air Commander",
+      "bot-needs": "Triggering when an Upgrade is scrapped from an enemy character",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->damage(1,pick_enemy(upgrades.count=0))",
         "bot": ""
       }
     },
     {
       "name": "Captain Ironhide, Infantry • Bodyguard",
+      "alt-needs": "Preventing non-attack damage from an opponent's card",
+      "bot-needs": "Swapping an attached Weapon with a qualifying Weapon from hand",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -293,6 +306,8 @@
     },
     {
       "name": "Captain Wheeljack, Engineering  Scientist",
+      "alt-needs": "Searching the deck for a named card before the game begins",
+      "bot-needs": "Counting Actions played during the turn",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -301,8 +316,8 @@
     {
       "name": "General Megatron, Infantry • Leader",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->damage(all_friendly_upgrades(subtype=Weapon).count,pick_enemy())",
+        "bot": "on-start-turn(when(event().player=this().owner,this().upgrades.count>=3))->damage(1,all_enemies())"
       }
     },
     {
@@ -315,11 +330,13 @@
     {
       "name": "Major Prowl, Infantry • Strategist",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-attack(when(event().defender.upgrades.subtype=Weapon))->damage(2,event().defender)"
       }
     },
     {
       "name": "Major Shockwave, Applied Sciences • Scientist",
+      "alt-needs": "Inspecting the top deck card at any time",
+      "bot-needs": "Playing a qualifying card directly from the top of the deck",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -327,27 +344,30 @@
     },
     {
       "name": "Major Soundwave, Espionage • Spy",
+      "bot-needs": "Untapping every matching character",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(def,1,target=all_friends(trait='Spy Patrol'))",
         "bot": ""
       }
     },
     {
       "name": "Major Ultra Magnus, Infantry • City Commander",
+      "alt-needs": "Searching the deck for a named Upgrade before the game begins",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-after-attack-flip(when(event().flips.orange>=2,event().flips.blue>=2))->damage(1,all_chars())"
       }
     },
     {
       "name": "Private Arcee, Special Ops • Warrior",
       "tfdsl": {
         "alt": "focus(1)",
-        "bot": ""
+        "bot": "static(bold,when(this().upgrades.subtype=Weapon),1);static(tough,when(this().upgrades.subtype=Weapon),1)"
       }
     },
     {
       "name": "Private Firedrive, Ground Command • Artillery",
+      "upgrade-needs": "Scrapping any chosen number of hand cards for a matching attack bonus and moving a leaving Battle Master to the KO area",
       "tfdsl": {
         "bot": "on-this-attack()->draw(1)",
         "upgrade": ""
@@ -355,6 +375,7 @@
     },
     {
       "name": "Private Flak, Artillery • Tactics",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -369,6 +390,7 @@
     },
     {
       "name": "Private Mudslinger, Special Ops • Infiltration",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -376,6 +398,7 @@
     },
     {
       "name": "Private Pteraxadon, Air Command • Artillery",
+      "upgrade-needs": "Setting base DEF and moving a leaving Battle Master to the KO area",
       "tfdsl": {
         "upgrade": ""
       }
@@ -383,12 +406,13 @@
     {
       "name": "Private Red Alert, Medical • Medic",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->repair(1,pick_friend())",
+        "bot": "on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->atk_eot(3,this())"
       }
     },
     {
       "name": "Private Red Heat, Infantry • Emergency Response",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost and swapping all Upgrades between characters",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -396,6 +420,8 @@
     },
     {
       "name": "Private Sideswipe, Infantry • Soldier",
+      "alt-needs": "Multiplying a temporary bonus by the number of KO characters",
+      "bot-needs": "Detecting another friendly character KO during the opponent's turn",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -403,6 +429,7 @@
     },
     {
       "name": "Private Stakeout, Infantry • Communications",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost and flipping a character to its other mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -410,6 +437,7 @@
     },
     {
       "name": "Private Top Shot, Artillery • Patrol Leader",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -417,6 +445,7 @@
     },
     {
       "name": "Private Tote, Special Ops • Infiltration",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -424,9 +453,10 @@
     },
     {
       "name": "Private Trailbreaker, Infantry • Fortification & Defense",
+      "alt-needs": "Searching the deck for a named Upgrade before the game begins",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "static(brave,when(this().upgrades.subtype=Armor),true)"
       }
     },
     {
@@ -438,6 +468,7 @@
     },
     {
       "name": "Raider Blowpipe, Air Force • Weapons",
+      "upgrade-needs": "Calculating distinct battle-icon colors and moving a leaving Battle Master to the KO area",
       "tfdsl": {
         "bot": "focus(1)",
         "upgrade": ""
@@ -446,13 +477,14 @@
     {
       "name": "Raider Cindersaur, Black Ops • Demolitions",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action,orange>=1)))",
+        "bot": "on-this-after-attack-flip(when(event().flips.orange>=4))->damage(2,pick_enemy(tapped=tapped))"
       }
     },
     {
       "name": "Raider Detour, Infantry • Demolitions",
       "botFuture": "on-this-flip()->(pay(scrap_hand(pick_hand(blue>=1)))->draw(2))",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -460,26 +492,29 @@
     },
     {
       "name": "Raider Flamefeather, Black Ops • Soldier",
+      "bot-needs": "Capping a defense bonus based on flipped battle icons",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->bold_eot(1,all_friends(trait=Firecon))",
         "bot": ""
       }
     },
     {
       "name": "Raider Ion Storm, Infantry • Rainmaker",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-attack()->return_upgrade(pick(event().defender.upgrades))"
       }
     },
     {
       "name": "Raider Laserbeak, Espionage • Interrogation",
+      "bot-needs": "Activated TAP abilities that play a Secret Action",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(draw(1);scrap_hand(pick_hand()))",
         "bot": ""
       }
     },
     {
       "name": "Raider Needlenose, Air Force • Soldier",
+      "bot-needs": "Triggering when a played battle card has an exact star value",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(stars=1))",
         "bot": ""
@@ -493,12 +528,14 @@
     },
     {
       "name": "Raider Ravage, Espionage • Saboteur",
+      "bot-needs": "Activated TAP abilities",
       "tfdsl": {
         "bot": ""
       }
     },
     {
       "name": "Raider Road Hugger, Infantry • Tactics",
+      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -519,6 +556,7 @@
     {
       "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
       "botFuture": "on-this-flip()->(pay(scrap_hand(pick_hand(green>=1,count=3)))->bold_eot(3,pick_friend()))",
+      "bot-needs": "Activated TAP abilities with a three-card hand-scrap cost and same-name condition",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -528,11 +566,12 @@
       "name": "Raider Triggerhappy, Air Force • Gunner",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(subtype=Weapon))",
-        "bot": ""
+        "bot": "pierce(4)"
       }
     },
     {
       "name": "Raider Visper, Infantry • Patrol Leader",
+      "bot-needs": "Activated TAP abilities with a three-card hand-scrap cost and same-name condition",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -541,12 +580,13 @@
     {
       "name": "Sergeant Chromia, Special Ops • Counterintelligence",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(subtype=Armor,blue>=1)))",
+        "bot": "on-this-after-defend-flip(when(event().flips.blue>=2))->draw(1)"
       }
     },
     {
       "name": "Sergeant Cog, Artillery • Mechanic",
+      "upgrade-needs": "Playing an Upgrade onto each friendly character and moving a leaving Battle Master to the KO area",
       "tfdsl": {
         "upgrade": ""
       }
@@ -554,18 +594,21 @@
     {
       "name": "Sergeant Hound, Infantry • Recon",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-upgrade()->atk_eot(2,this())"
       }
     },
     {
       "name": "Sergeant Skrapnel, Infantry • Electronic Warfare",
+      "bot-needs": "Triggering when an Upgrade is scrapped from a friendly character",
       "tfdsl": {
-        "alt": "",
+        "alt": "brave()",
         "bot": ""
       }
     },
     {
       "name": "Sergeant Skywarp, Black Ops • Seeker",
+      "alt-needs": "Returning up to two differently named Secret Actions from the scrap pile",
+      "bot-needs": "Triggering when a Secret Action is played",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -574,8 +617,8 @@
     {
       "name": "Sergeant Sparkstalker, Black Ops • Cryptology",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->scrap_upgrade(pick_enemy_upgrade(subtype=Armor))",
+        "bot": "on-this-after-attack-flip(when(event().flips.orange>=3))->draw(2)"
       }
     },
     {
@@ -587,6 +630,8 @@
     },
     {
       "name": "Specialist Ratchet, Engineering • Rescue & Repair",
+      "alt-needs": "Searching the deck for a named card before the game begins",
+      "bot-needs": "Triggering on repaired damage and using the repaired amount",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -594,14 +639,16 @@
     },
     {
       "name": "Private Smashdown, Ground Command • Artillery",
+      "upgrade-needs": "Comparing each player's battle-icon colors and moving a leaving Battle Master to the KO area",
       "tfdsl": {
         "upgrade": ""
       }
     },
     {
       "name": "Nightbird, Enigmatic Agent",
+      "bot-needs": "Detecting lethal attack damage and resolving a Bounty ability that plays an opponent's scrap Action",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-opponent-play-action()->damage(1,opponent_pick(opponent().chars))",
         "bot": ""
       }
     },
@@ -696,23 +743,29 @@
     },
     {
       "name": "Private Camshaft, Special Ops • Scout",
+      "comment": "TODO: Test",
+      "alt-needs": "Playing an Upgrade onto a selected character at the start of the first turn",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-friend-defend(when(event().defender.trait=Omnibot,event().defender.upgrades.subtype=Armor))->tough_eob(all_friends(trait=Omnibot,upgrades.subtype=Armor).count,event().defender)"
       }
     },
     {
       "name": "Private Downshift, Special Ops • Security Agent",
+      "comment": "TODO: Test",
+      "alt-needs": "Playing an Upgrade onto a selected character at the start of the first turn",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Omnibot,event().attacker.upgrades.subtype=Weapon))->bold_eot(all_friends(trait=Omnibot,upgrades.subtype=Weapon).count,event().attacker)"
       }
     },
     {
       "name": "Sergeant Overdrive, Special Ops • Strategist",
+      "comment": "TODO: Test",
+      "alt-needs": "Playing an Upgrade onto a selected character at the start of the first turn",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-battle(when(event().battler.owner=this().owner,event().battler.trait=Omnibot,event().battler.upgrades.subtype=Utility))->focus_eob(all_friends(trait=Omnibot,upgrades.subtype=Utility).count,event().battler)"
       }
     }
   ]

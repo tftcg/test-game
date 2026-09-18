@@ -9,7 +9,8 @@
   "cards": [
     {
       "name": "Belligerence",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing individual battle-icon colors for either player during a battle"
     },
     {
       "name": "Blade Flurry",
@@ -25,7 +26,8 @@
     },
     {
       "name": "Concealing Contrails",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action replacement of flipped battle-icon colors"
     },
     {
       "name": "Conversion Expertise",
@@ -33,11 +35,12 @@
     },
     {
       "name": "Counterespionage",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Naming cards and inspecting face-down enemy Secret Actions"
     },
     {
       "name": "Crystal of Power",
-      "tfdsl": "on-attached-after-battle()->scrap_upgrade(this())"
+      "tfdsl": "on-attached-battle()->(on-attached-after-battle()->scrap_upgrade(this()))"
     },
     {
       "name": "Decoy Flares",
@@ -46,16 +49,16 @@
     },
     {
       "name": "Disassemble",
-      "tfdsl": "scrap_upgrade(pick_upgrade(subtype=Armor || subtype=Weapon))"
+      "comment": "BUG: THe previous_target seems to be undefined",
+      "tfdsl": "scrap_upgrade(pick_upgrade(subtype=Armor || subtype=Weapon));draw(1,previous_target().owner)"
     },
     {
       "name": "Electro-Optical Visor",
-      "tfdsl": ""
+      "tfdsl": "on-put(when(attached().faction=Decepticon))->scrap_hand(opponent_pick_opponent_hand(faction=Autobot))"
     },
     {
       "name": "Emergency Barricade",
-      "comment": "BUG: This is Grenade Launcher language. Fusion really needs to be on-attached-attack() and set up a delayed effect. Ugh",
-      "tfdsl": "on-attached-after-defend()->scrap_upgrade(this())"
+      "tfdsl": "on-attached-defend()->(on-attached-after-defend()->scrap_upgrade(this()))"
     },
     {
       "name": "Emergency Repair Patch",
@@ -63,7 +66,8 @@
     },
     {
       "name": "End Hostilities",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action replacement of flipped battle-icon colors"
     },
     {
       "name": "Energon Mace",
@@ -75,16 +79,17 @@
     },
     {
       "name": "Escape Capsule",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Moving all upgrades to a character deployed from an upgraded head"
     },
     {
       "name": "Fusion Borer",
-      "comment": "BUG: This is Grenade Launcher language. Fusion really needs to be on-attached-attack() and set up a delayed effect. Ugh",
-      "tfdsl": "on-attached-after-attack()->scrap_upgrade(this())"
+      "tfdsl": "pierce(3);on-attached-attack()->(on-attached-after-attack()->scrap_upgrade(this()))"
     },
     {
       "name": "Ghost Shield",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing an opponent-caused scrap with a same-subtype Upgrade from hand"
     },
     {
       "name": "Grav-Inhibitor",
@@ -92,7 +97,8 @@
     },
     {
       "name": "Hand-to-Hand Combat",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());on-attack(when(event().attacker=previous_target(),event().attacker.upgrades.subtype!=Weapon))->(atk_eob(3,event().attacker);scrap_upgrade(all(event().defender.upgrades,subtype=Weapon)))",
+      "comment": "TODO: Test"
     },
     {
       "name": "Handheld Blaster",
@@ -100,23 +106,27 @@
     },
     {
       "name": "Headbutt",
-      "tfdsl": ""
+      "tfdsl": "tap(pick_friend(mode=body));tap(pick_enemy(stars<=10,mode=bot || mode=body))",
+      "comment": "TODO: Test"
     },
     {
       "name": "High Five",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Testing whether two chosen characters share any trait"
     },
     {
       "name": "Hit and Run",
-      "tfdsl": ""
+      "tfdsl": "flip(pick_friend(mode=bot));move(1,previous_target(),pick_enemy(mode=alt))"
     },
     {
       "name": "Hold the Line",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Capping attack damage by the attacker’s star count for a battle"
     },
     {
       "name": "Holomatter Projector",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Preventing non-attack damage from opponent card effects"
     },
     {
       "name": "Hull Down",
@@ -133,11 +143,13 @@
     },
     {
       "name": "Intrusion Countermeasures Software",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing opponent-turn hand scrapping with drawing cards"
     },
     {
       "name": "Junk Cannon",
-      "tfdsl": ""
+      "tfdsl": "on(event=put-upgrade,when(event().attached=attached()))->atk_eot(2,attached())",
+      "comment": "TODO: Test"
     },
     {
       "name": "Laser Scalpel",
@@ -145,7 +157,8 @@
     },
     {
       "name": "Last Stand",
-      "tfdsl": ""
+      "tfdsl": "atk_eot(5,pick_friend());on-eot()->ko(previous_target())",
+      "comment": "TODO: Test"
     },
     {
       "name": "Lock on Target",
@@ -153,11 +166,13 @@
     },
     {
       "name": "Lose the Initiative",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing a single opponent untap with a star-count-limited friendly untap"
     },
     {
       "name": "Lucky Dodge",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing odd attack damage with zero damage"
     },
     {
       "name": "Magnetic Dysfunction Ray",
@@ -165,15 +180,17 @@
     },
     {
       "name": "Master of Metallikato",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());on(event=after-attack-flip,when(event().attacker=previous_target()))->atk_eob(event().flips.colours.count,previous_target())",
+      "comment": "TODO: Test"
     },
     {
       "name": "Master Sword",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing an opponent-caused scrap with a same-subtype Upgrade from hand"
     },
     {
       "name": "Mission Briefing",
-      "tfdsl": ""
+      "tfdsl": "draw(all(self().chars,mode=bot || mode=body).count)"
     },
     {
       "name": "Nitro Booster",
@@ -185,27 +202,32 @@
     },
     {
       "name": "Paralyzo Box",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Choosing a battle-icon color and testing an opponent deck card against that choice"
     },
     {
       "name": "Plasma Horns",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-attack-flip()->(if(event().flips.white>=4)->scrap_upgrade(this());if(event().flips.white<4)->atk_eot(event().flips.white,attached()))",
+      "comment": "TODO: Test"
     },
     {
       "name": "Precision Fire",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Choosing a character mode as a runtime selector"
     },
     {
       "name": "Reflect Damage",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing non-attack damage with equivalent non-attack damage to an enemy"
     },
     {
       "name": "Regenerative Core",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Moving damage from a character to an Upgrade and tracking damage on that Upgrade"
     },
     {
       "name": "Scout Armor",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Truck || trait=Tank || trait=Wrecker || trait=Constructicon);on-attached-ko()->draw(2)"
     },
     {
       "name": "Scouting Mission",
@@ -217,11 +239,13 @@
     },
     {
       "name": "Sonic Stun-Gun",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Triggering when a player plays any green battle card"
     },
     {
       "name": "Speed Trap",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing a second Action play and preventing further Action plays that turn"
     },
     {
       "name": "Spiked Bracelet",
@@ -229,11 +253,13 @@
     },
     {
       "name": "Spy Satellite Uplink",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Preventing Brave and Stealth use against the upgraded character"
     },
     {
       "name": "Spymaster's Ruse",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Linking a played Secret Action to this card and exempting both from end-turn scrapping"
     },
     {
       "name": "Staggering Might",
@@ -245,108 +271,205 @@
     },
     {
       "name": "Temporal Quagmire",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Capping each player’s battle-card flips for a battle"
     },
     {
       "name": "Triangulator",
-      "tfdsl": ""
+      "tfdsl": "focus(1);on-put()->(if(confirm())->play(pick_hand(name=\"Triangulator\")))",
+      "needs": "Needs ability to put 3 of a thing on a thing"
     },
     {
       "name": "Tripwire",
-      "tfdsl": ""
+      "tfdsl": "damage(1,pick_enemy());if(previous_target().stars<=5)->tap(previous_target())",
+      "comment": "TODO: Test"
     },
     {
       "name": "Trithyllium Shield",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Reducing the defending Decepticon Leader’s Pierce total during a battle"
     },
     {
       "name": "Turn the Tide",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Pairing equal-size character selections and assigning each damage transfer to a distinct target"
     },
     {
       "name": "Versatility",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Detecting a character’s first attack of the turn"
     },
     {
-      "name": "Aerial Enhancements"
+      "name": "Aerial Enhancements",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Granting a trait to a named character only while it is in a specified mode"
     },
     {
-      "name": "All-Out"
+      "name": "All-Out",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Once-per-game Stratagem effects that flip the Stratagem after resolving"
     },
     {
-      "name": "Better Things To Do Than Die"
+      "name": "Better Things To Do Than Die",
+      "tfdsl": {
+        "front": "on-flip(when(event().flipped.name=this().target))->repair(1,event().flipped)"
+      }
     },
     {
-      "name": "Bike Gang"
+      "name": "Bike Gang",
+      "tfdsl": {
+        "front": "on(event=after-attack-flip,when(event().attacker.trait=Motorcycle,event().flips.white>=2,self().chars.name=this().target))->atk_eob(2,event().attacker)"
+      }
     },
     {
-      "name": "Camien Toughness"
+      "name": "Camien Toughness",
+      "tfdsl": {
+        "front": "static(def,1,target=all_friends(name=this().target));static(health,1,target=all_friends(name=this().target))"
+      }
     },
     {
-      "name": "Data Protection"
+      "name": "Data Protection",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Preventing opponent cards from causing hand scrapping"
     },
     {
-      "name": "Duty & Honor"
+      "name": "Duty & Honor",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Tracking a named team character KO across the game for conditional abilities"
     },
     {
       "name": "Heroic Spotlight"
     },
     {
-      "name": "Infiltration"
+      "name": "Infiltration",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Once-per-game Stratagem effects that flip the Stratagem after resolving"
     },
     {
-      "name": "Jurassic Punch"
+      "name": "Jurassic Punch",
+      "tfdsl": {
+        "front": "on-attack(when(event().attacker.name=this().target,event().defender.stars<event().attacker.stars))->bold_eob(event().attacker.stars - event().defender.stars,event().attacker)"
+      }
     },
     {
-      "name": "Master Converter"
+      "name": "Master Converter",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Granting traits to a named character only while it is in either alternate mode"
     },
     {
-      "name": "Me Grimlock, You Grimlock!"
+      "name": "Me Grimlock, You Grimlock!",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Granting a trait to the body beneath a named head character"
     },
     {
-      "name": "Metallikato Stance"
+      "name": "Metallikato Stance",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Testing all flipped cards for icon counts and moving a selected flipped card after battle"
     },
     {
-      "name": "More Guns"
+      "name": "More Guns",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Once-per-game return of a KO’d Weaponizer in Upgrade mode to the battlefield as an Upgrade"
     },
     {
-      "name": "Orbital Strike"
+      "name": "Orbital Strike",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Dynamically replacing printed card text and deck-construction conditions"
     },
     {
-      "name": "Pop-Up Attack"
+      "name": "Pop-Up Attack",
+      "tfdsl": {
+        "front": "on-attack(when(event().attacker.trait=Helicopter,self().chars.name=this().target))->plan(1)"
+      },
+      "comment": "TODO: Test"
     },
     {
-      "name": "Resilience"
+      "name": "Resilience",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Reading an attacker’s total Bold value during a battle"
     },
     {
-      "name": "Revenge"
+      "name": "Revenge",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Applying a damage-tiered Bold value to a named character"
     },
     {
-      "name": "Sabotage"
+      "name": "Sabotage",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Suppressing opponent triggered abilities while an enemy is upgraded"
     },
     {
-      "name": "Saturation Bombing"
+      "name": "Saturation Bombing",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Once-per-game Stratagem effects that flip the Stratagem after resolving"
     },
     {
       "name": "Science Officer"
     },
     {
-      "name": "Sky Shadow Sync"
+      "name": "Sky Shadow Sync",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Combining named characters with a component outside the game"
     },
     {
       "name": "Stealth Mission"
     },
     {
-      "name": "Strategic Airlift"
+      "name": "Strategic Airlift",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Triggering when an Upgrade is scrapped and placing that Upgrade beneath a named character"
     },
     {
-      "name": "Swap Heads"
+      "name": "Swap Heads",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Swapping heads between characters and flipping a once-per-game Stratagem"
     },
     {
-      "name": "Systems Enhancement"
+      "name": "Systems Enhancement",
+      "tfdsl": {
+        "front": "on(event=put-upgrade,when(event().attached.name=this().target))->(draw(1);scrap_hand(pick_hand()))"
+      }
     },
     {
-      "name": "The Usurper"
+      "name": "The Usurper",
+      "tfdsl": {
+        "front": "static(health,when(all_friends(name=this().target).upgrades.name='Decepticon Crown'),4,target=all_friends(name=this().target))"
+      },
+      "comment": "TODO: Test"
     },
     {
       "name": "Villainous Spotlight"
@@ -355,7 +478,11 @@
       "name": "Weapons Cache"
     },
     {
-      "name": "Who's Next?"
+      "name": "Who's Next?",
+      "tfdsl": {
+        "front": ""
+      },
+      "front-needs": "Detecting attack damage sufficient to KO the defender with required Weapon, Armor, and Utility attachments"
     },
     {
       "name": "Apex",
@@ -368,22 +495,27 @@
       "name": "Autobot Gears, Transport & Reconnaissance",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-this-flip()->return_upgrade(pick_enemy_upgrade())"
+      },
+      "alt-needs": "Moving an enemy Upgrade to a different enemy character"
     },
     {
       "name": "Autobot Nautica, Camien Engineer",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-defend-flip(when(event().attacker.trait=Car || event().attacker.trait=Truck || event().attacker.trait=Tank,event().flips.blue>=1))->def_eob(event().flips.blue,this())",
         "body": ""
-      }
+      },
+      "comment": "TODO: Test. And body should just be Ramhorn",
+      "body-needs": "Playing an Armor from hand directly onto this character while defending"
     },
     {
       "name": "Autobot Outback, Gunner",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));draw(2)))",
         "bot": ""
-      }
+      },
+      "comment": "NOTE: This is relying on pick_hand not being cancellable. Needs a pay()",
+      "bot-needs": "Replacing Upgrade scrapping with a same-subtype Upgrade from hand"
     },
     {
       "name": "Autobot Stylor",
@@ -401,36 +533,41 @@
     {
       "name": "Autobot Whirl, Aerial Assault",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-attack-flip(when(event().flips.blue>=1))->damage(1,all_enemies(id!=event().defender.id))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Capping attack damage from a single Ranged attacker"
     },
     {
       "name": "Beachcomber, Geologist",
       "tfdsl": {
         "alt": "",
         "bot": "focus(1)"
-      }
+      },
+      "alt-needs": "Naming a card and comparing the top deck card to that name"
     },
     {
       "name": "Bludgeon, Electric Warrior",
       "tfdsl": {
         "alt": "pierce(1);tough(1)",
         "bot": ""
-      }
+      },
+      "bot-needs": "Detecting non-attack damage to an enemy character"
     },
     {
       "name": "Brainstorm, Biomechanical Engineer",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(get_deck();if(previous_target().type=Upgrade)->(if(confirm())->play(previous_target())))",
         "body": ""
-      }
+      },
+      "comment": "TODO: Test this. This really needs a self-reveal()",
+      "body-needs": "Selecting a flipped Upgrade and putting it into hand after the battle"
     },
     {
       "name": "Brawn, Demolitions",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-after-attack-flip(when(event().defender.stars>this().stars))->pierce_eob(event().flips.colours.count,this())",
+        "bot": "on-this-after-defend-flip(when(event().attacker.stars>this().stars))->def_eob(event().flips.colours.count,this())"
       }
     },
     {
@@ -448,9 +585,10 @@
     {
       "name": "Chromedome, Computer Programmer",
       "tfdsl": {
-        "alt": "",
-        "body": ""
-      }
+        "alt": "on-this-attack(when(all(opponent().ko,type=Action).count>=3))->atk_eot(3,this())",
+        "body": "on-this-flip()->scrap_hand(pick_opponent_hand(type=Action))"
+      },
+      "comment": "Proposal - No - that scrapped body effect needs to send the Action to the KO"
     },
     {
       "name": "Clobber",
@@ -463,7 +601,7 @@
       "name": "Crankcase, Data Collector",
       "tfdsl": {
         "alt": "on-this-flip()->draw(1)",
-        "bot": ""
+        "bot": "on-this-attack(when(self().hand.count>=5))->atk_eob(3,this())"
       }
     },
     {
@@ -471,14 +609,17 @@
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Counting face-up and face-down Secret Actions for a dynamic attack bonus",
+      "bot-needs": "Reordering selected Secret Actions from the top of the deck while returning the rest"
     },
     {
       "name": "Decepticon Quake, Ground Assault",
       "tfdsl": {
-        "alt": "",
-        "body": ""
-      }
+        "alt": "static(atk,when(self().chars.count=1),2)",
+        "body": "on-ko()->damage(1,all_chars(id!=event().ko.id))"
+      },
+      "comment": "TODO: Test. Test a lot."
     },
     {
       "name": "Doomshot",
@@ -490,9 +631,10 @@
     {
       "name": "Fangry, Sky Tracker",
       "tfdsl": {
-        "alt": "",
-        "body": ""
-      }
+        "alt": "static(bold,when(event().attacker=this(),event().defender.stars>this().stars),2)",
+        "body": "static(tough,when(event().defender=this(),event().attacker.stars<this().stars),2)"
+      },
+      "comment": "TODO: Test"
     },
     {
       "name": "Flameout",
@@ -524,9 +666,10 @@
     {
       "name": "Horri-Bull, Ground Trooper",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move(1,this(),pick_enemy())",
         "body": ""
-      }
+      },
+      "body-needs": "Triggering when a player plays any black battle card"
     },
     {
       "name": "Kreb",
@@ -538,15 +681,18 @@
       "name": "Megatron, Fallen Hero",
       "tfdsl": {
         "alt": "",
-        "body": ""
-      }
+        "body": "on-this-flip()->atk_eot(2,this())"
+      },
+      "alt-needs": "Carrying an orange flip condition forward to deal damage after the battle"
     },
     {
       "name": "Mindwipe, Hypnotist",
       "tfdsl": {
         "alt": "",
-        "body": ""
-      }
+        "body": "on-this-after-attack-flip(when(event().flips.black>=1))->(if(opponent().hand.count>=1)->scrap_hand(opponent_pick_opponent_hand());if(opponent().hand.count=0)->draw(1))"
+      },
+      "comment": "Proposal - checking the opponent has a card shouldn't be here - things need to just fail gracefully",
+      "alt-needs": "Choosing a battle-icon color and scrapping an opponent hand card matching that choice"
     },
     {
       "name": "Monxo",
@@ -559,7 +705,9 @@
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Detecting face-up and face-down Secret Actions for a conditional team ability",
+      "bot-needs": "Detecting face-up and face-down Secret Actions for a conditional team ability"
     },
     {
       "name": "Ominus",
@@ -571,9 +719,10 @@
     {
       "name": "Optimus Prime, Legendary Warrior",
       "tfdsl": {
-        "alt": "",
-        "body": ""
-      }
+        "alt": "on-this-flip()->(draw(1);if(self().hand.count<opponent().hand.count)->draw(1))",
+        "body": "on-this-attack()->(repair(1,pick_friend());if(self().chars.count<opponent().chars.count)->repair(1,previous_target()))"
+      },
+      "comment": "TODO Test"
     },
     {
       "name": "Parsec",
@@ -585,22 +734,24 @@
     {
       "name": "Roadbuster, Ground Assault Commander",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on(event=put-upgrade,when(event().attached=this(),event().played.subtype=Armor))->repair(1,this())",
+        "bot": "on(event=put-upgrade,when(event().attached=this(),event().played.subtype=Weapon))->damage(1,pick_enemy())"
       }
     },
     {
       "name": "Sergeant Kup, Wrecker Leader",
       "tfdsl": {
         "alt": "",
-        "body": ""
-      }
+        "body": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(icons.blue>=1));scrap_upgrade(pick_enemy_upgrade())))"
+      },
+      "comment": "NOTE: This is relying on pick_hand not being cancellable. This really needs a pay()",
+      "alt-needs": "Detecting the source owner’s turn for Wrecker damage triggers"
     },
     {
       "name": "Skullsmasher, Swamp Warrior",
       "tfdsl": {
-        "alt": "",
-        "body": ""
+        "alt": "static(pierce,when(event().attacker=this(),event().defender.faction=Autobot),3)",
+        "body": "on-tap(when(event().tapped.owner=opponent(),event().tapped.stars<this().stars))->damage(1,event().tapped);on-tap(when(event().tapped.owner=opponent(),event().tapped.stars>this().stars))->damage(1,this())"
       }
     },
     {
@@ -619,22 +770,25 @@
       "name": "Topspin, Air & Space Assault",
       "tfdsl": {
         "alt": "",
-        "body": ""
-      }
+        "body": "on-this-after-attack-flip(when(event().flips.white>=1))->draw(1)"
+      },
+      "alt-needs": "Reading a character’s total Bold value during a battle"
     },
     {
       "name": "Tracks, Autobot Warrior",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-this-attack()->damage(1,pick_enemy(trait!=Car,trait!=Plane))"
+      },
+      "alt-needs": "Testing whether a chosen character shares any trait with this character"
     },
     {
       "name": "Twin Twist, Demolitions",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->pierce_eot(3,this())",
         "body": ""
-      }
+      },
+      "body-needs": "Tracking how many times a character flipped this turn"
     },
     {
       "name": "Vorath",
@@ -647,40 +801,44 @@
       "name": "Windcharger, Autobot Warrior",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-this-flip()->(draw(1);plan(1))"
+      },
+      "alt-needs": "Detecting the player’s first turn of the game"
     },
     {
       "name": "Windsweeper, Air Defense",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-attack()->(if(starting_team(trait=Plane).count>=2)->move(2,this(),event().defender);if(starting_team(trait=Plane).count<2)->move(1,this(),event().defender))",
+        "bot": "on-attack(when(event().attacker.owner=self(),event().attacker.id!=this().id))->(if(confirm())->move(1,event().attacker,this()))"
       }
     },
     {
       "name": "Wingspan, Data Processor",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->draw(1);static(def,this().under.count)",
         "bot": ""
-      }
+      },
+      "bot-needs": "Triggering when an Upgrade is scrapped from this character and placing it beneath this character"
     },
     {
       "name": "Wolfwire, Ground Tracker",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(icons.green>=1));draw(2)))",
         "body": ""
-      }
+      },
+      "comment": "NOTE: This is relying on pick_hand not being cancelled. Needs pay()",
+      "body-needs": "Replacing the post-battle green-card hand swap with a selected flipped card"
     },
     {
       "name": "Sky Shadow, Elite Warrior",
       "tfdsl": {
-        "combiner body": ""
+        "combiner body": "bold(2);tough(2);on-this-combine()->damage(3,pick_enemy(faction=Autobot))"
       }
     },
     {
       "name": "Tidal Wave, Dark Fleet",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "on-this-combine()->tap(pick_enemy())"
       }
     },
     {
@@ -693,47 +851,54 @@
       "name": "Tidal Wave, Dark Fleet (Aircraft Carrier)",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Granting an extra attack restricted to a character deployed from this card"
     },
     {
       "name": "Tidal Wave, Dark Fleet (Transport)",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Granting an extra attack restricted to a character deployed from this card"
     },
     {
       "name": "Tidal Wave, Dark Fleet (Battleship)",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Tracking the second character KO and named starting-team components for combining"
     },
     {
       "name": "Convex",
       "tfdsl": {
         "head": "safeguard(3)",
-        "bot": ""
+        "bot": "safeguard(3)"
       }
     },
     {
       "name": "Perceptor, Precise Sniper",
       "tfdsl": {
         "alt": "",
-        "body": ""
-      }
+        "body": "static(atk,this().under.count)"
+      },
+      "alt-needs": "Splitting revealed deck cards into opponent-chosen piles and placing a chosen pile beneath this character"
     },
     {
       "name": "Fortress Maximus, Great War Veteran",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-defend-flip(when(event().flips.white>=1,event().flips.blue>=1))->damage(1,event().attacker)",
         "body": ""
-      }
+      },
+      "comment": "Good, but need to also cover attaching Cerebros to him. Though maybe that's a deck requirement",
+      "body-needs": "Carrying attack-flip color conditions forward to flip this character after the battle"
     },
     {
       "name": "Cerebros, City Commander",
       "tfdsl": {
         "head": "",
-        "body": ""
-      }
+        "body": "bold(1);tough(1);on-this-after-battle-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->(if(confirm())->put_upgrade(this(),pick_scrap(type=Upgrade)))"
+      },
+      "head-needs": "Deploying this head in body mode when Fortress Maximus is KO’d, including after the last character is KO’d"
     },
     {
       "name": "Emissary",

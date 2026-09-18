@@ -210,7 +210,8 @@
     },
     {
       "name": "Peace through Tyranny",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Taking an extra turn after the current turn."
     },
     {
       "name": "Photon Bomb",
@@ -261,7 +262,8 @@
     },
     {
       "name": "Salvage for Parts",
-      "tfdsl": ""
+      "comment": "TODO: Test...not sure how well the previous_target will work here",
+      "tfdsl": "each(all_chars())->(scrap_upgrade(all(it().upgrades));repair(previous_target().count,it()))"
     },
     {
       "name": "Scrapper Gauntlets",
@@ -271,7 +273,8 @@
       "name": "Security Checkpoint",
       "comment": "TODO: Needs to include revealing the hand",
       "tfdslFuture": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Revealing each player's hand before scrapping its upgrades."
     },
     {
       "name": "Shock Absorbers",
@@ -299,11 +302,13 @@
     },
     {
       "name": "Swap Parts",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Swapping all upgrades between two chosen characters."
     },
     {
       "name": "Swarm!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Flipping battle cards based on starting-team traits and resolving effects for each flipped icon."
     },
     {
       "name": "System Reboot",
@@ -348,7 +353,8 @@
     },
     {
       "name": "All-Out Attack",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Allowing each untapped character to attack during the turn."
     },
     {
       "name": "Tandem Targeting System",
@@ -368,13 +374,14 @@
         "comment": "Test alt",
         "alt": "on-this-flip()->(scrap_hand(all_hand());draw(previous_target().count))",
         "bot": ""
-      }
+      },
+      "bot-needs": "A deck reshuffle event while this character is attacking."
     },
     {
       "name": "Autobot Hound, Long-Range Scout",
-      "altTxt": "When you flip to this mode 🠪 You may scrap a card from your hand that has at least W. If you do, draw 2 cards.",
+      "comment": "NOTE: This is relying on the pick_hand not currently having a cancel option. Ideally this needs a pay()",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(white>=1));draw(2)))",
         "bot": "on-this-after-battle-flip(when(event().flips.white>=1))->(atk_eot(1,this());def_eot(1,this()))"
       }
     },
@@ -383,7 +390,8 @@
       "tfdsl": {
         "alt": "",
         "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->pierce(2,this())"
-      }
+      },
+      "alt-needs": "A conditional attack-damage replacement based on defense flips and the attacker's Pierce."
     },
     {
       "name": "Autobot Mirage, Lone Wolf",
@@ -408,7 +416,8 @@
       "tfdsl": {
         "alt": "on-this-flip()->(draw(1);put_deck(pick_hand()))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Flipping additional battle cards after attack or defense flips."
     },
     {
       "name": "Bumblebee, Legendary Warrior",
@@ -419,9 +428,10 @@
     },
     {
       "name": "Chop Shop, Sneaky Insecticon",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(each(all(this().upgrades))->(scrap_upgrade(it());draw(1);repair(1,pick_friend(trait=Insecticon))))",
+        "bot": "on-this-attack()->(if(confirm())->move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this()))"
       }
     },
     {
@@ -434,8 +444,9 @@
     },
     {
       "name": "Darkmount, Cruel Overlord",
+      "comment": "NOTE: This is relying on pick_hand not being cancellable. Really it needs a pay()",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand());damage(2,pick_enemy())))",
         "bot": "on-this-defend(when(event().attacker.trait=Ranged))->def_eob(2,this())"
       }
     },
@@ -443,7 +454,8 @@
       "name": "Deadlock, Bounty Hunter",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Tracking a chosen enemy until it is KO'd during the turn."
     },
     {
       "name": "Decepticon Shockwave, Cybertron Commander",
@@ -458,14 +470,16 @@
       "tfdsl": {
         "alt": "on-this-flip()->draw(all_friends(id!=this().id,trait=Tank).count)",
         "bot": ""
-      }
+      },
+      "bot-needs": "Flipping additional battle cards equal to this character's DEF."
     },
     {
       "name": "Dinobot Sludge, Mighty Stomper",
       "tfdsl": {
         "alt": "",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Dinobot))->repair(1,event().attacker)"
-      }
+      },
+      "alt-needs": "Moving an arbitrary number of damage counters from multiple characters."
     },
     {
       "name": "Dinobot Slug, Hot-Headed Warrior"
@@ -497,7 +511,8 @@
       "tfdsl": {
         "alt": "on-this-flip()->bold_eot(3,pick_friend(trait=Dinobot))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Redirecting excess attack damage after a KO to an opponent-chosen character."
     },
     {
       "name": "Inferno, Fearless Firefighter",
@@ -522,14 +537,16 @@
     {
       "name": "Kickback, Cunning Insecticon",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack-damage(when(event().damage>0))->repair(1,pick_friend(trait=Insecticon))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Flipping additional battle cards based on other Insecticons in the starting team."
     },
     {
       "name": "Megatron, Decepticon Leader",
+      "comment": "NOTE: This is relying on pick_hand not being cancellable. Really it needs a pay()",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand());scrap_upgrade(pick_enemy_upgrade())))",
         "bot": "pierce(3)"
       }
     },
@@ -539,21 +556,24 @@
         "comment": "TODO: Test this",
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(subtype=Weapon))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Allowing Weapon upgrades to occupy Armor and Utility slots."
     },
     {
       "name": "Nemesis Prime, Dark Clone",
       "tfdsl": {
         "alt": "on-this-flip()->damage(2,opponent_pick(opponent().chars))",
         "bot": ""
-      }
+      },
+      "bot-needs": "A deck reshuffle trigger, placing the bottom deck card face down under this character, and scaling ATK by cards under it."
     },
     {
       "name": "Optimus Prime, Battlefield Legend",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Selecting and playing an Action from the battle cards flipped for this attack."
     },
     {
       "name": "Optimus Prime, Freedom Fighter",
@@ -588,7 +608,9 @@
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Revealing the top card of each player's deck.",
+      "bot-needs": "A conditional attack-damage replacement triggered by defense flips."
     },
     {
       "name": "Starscream, Air Commander",
@@ -607,8 +629,9 @@
     },
     {
       "name": "Sunstorm, Fusion Flyer",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip(when(self().hand.count<3))->draw(3-self().hand.count)",
         "bot": "static(atk,this().owner.hand.count)"
       }
     },
@@ -622,10 +645,10 @@
     },
     {
       "name": "Wheeljack, Weapons Inventor",
-      "botTxt": "While you have a Weapon in your scrap pile 🠪 This has Bold 3.",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-friend-upgrade(when(event().attached.trait=Car))->(draw(1);scrap_hand(pick_hand()))",
-        "bot": ""
+        "bot": "static(bold,when(self().scrap.subtype=Weapon),3)"
       }
     },
     {

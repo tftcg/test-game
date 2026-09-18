@@ -9,45 +9,53 @@
   "cards": [
     {
       "name": "Anti-Aircraft Ordnance",
+      "needs": "Replacement effects that distinguish non-attack damage from an opponent card",
       "tfdsl": ""
     },
     {
       "name": "Cerebro Shell",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "choose(pick_enemy());damage(1,previous_target());brave_eot(previous_target());if(starting_team(name=Bombshell || name=Bugbite || name=Salvo).count>0)->def_eot(0-all_enemies(id!=previous_target().id).count,previous_target())"
     },
     {
       "name": "Chaos of War",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(bold_eot(3,all_chars());tough_eot(3,all_chars()))"
     },
     {
       "name": "Deflection Barrier",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "reveal(on-friend-defend())->revealed(tough_eob(1,event().defender);pierce_eob(0-event().defender.tough,event().attacker))"
     },
     {
       "name": "Diagnostic Drone",
-      "tfdsl": ""
+      "tfdsl": "static(health,when(attached().trait=Specialist),2);on-attached-defend(when(attached().trait=Melee))->(scrap_upgrade(this());repair(2,pick_friend()))"
     },
     {
       "name": "Electrum Coating"
     },
     {
       "name": "Enemy, Wingthing Attack!",
-      "tfdsl": ""
+      "tfdsl": "if(all_friends(name=Enemy).count>0)->move(1,all_friends(name=Enemy),pick_enemy());if(all_friends(name=Wingthing).count>0)->(draw(1);plan(1))"
     },
     {
       "name": "Energo Sword",
-      "tfdsl": ""
+      "comment": "Preferring the rewrite because technically a 'bot body combiner' would incorrectly get +3 if such a thing existed",
+      "tfdslOrig": "static(atk,when(attached().trait=Dinobot),1);static(atk,when(attached().mode=bot),1);static(atk,when(attached().mode=body),1);static(atk,when(attached().mode=combiner),1)",
+      "tfdsl": "static(atk,when(attached().trait=Dinobot),1);static(atk,when(attached().mode=bot || attached().mode=body || attached().mode=combiner),1)"
     },
     {
       "name": "First in, Last out",
+      "needs": "End-of-turn conditional static abilities on a selected character",
       "tfdsl": ""
     },
     {
       "name": "For Cybertron!",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "atk_eot(2,pick_friend(faction=Autobot || faction=Decepticon));def_eot(0-2,pick_enemy(faction!=Autobot,faction!=Decepticon))"
     },
     {
       "name": "Freedom of Action",
+      "needs": "Player-selected destination modes for multiple character flips",
       "tfdsl": ""
     },
     {
@@ -56,145 +64,226 @@
     },
     {
       "name": "HI Concussion Blaster",
+      "needs": "Inspecting and selecting cards from an opponent hand",
       "tfdsl": ""
     },
     {
       "name": "Hydraulic Grapple",
-      "tfdsl": ""
+      "comment": "Proposal missed the _eob on pierce",
+      "tfdsl": "on-attached-battle()->plan(1);on-attached-after-attack-flip(when(event().flips.white>=2))->pierce_eob(2,attached())"
     },
     {
       "name": "Null-Ray Cannon",
+      "needs": "Upgrade requirements for a character having a named mode and multiple copies in one slot",
       "tfdsl": ""
     },
     {
       "name": "Obsessive Research",
-      "tfdsl": ""
+      "tfdsl": "draw(3)"
     },
     {
       "name": "Overkill, Slugfest Attack!",
-      "tfdsl": ""
+      "tfdsl": "if(all_friends(name=Overkill).count>0)->scrap_upgrade(opponent_pick(opponent().upgrades));if(all_friends(name=Slugfest).count>0)->(draw(2);scrap_hand(pick_hand()))"
     },
     {
       "name": "Red Rust",
+      "needs": "Rolling Action scrap triggers and turn-scoped listeners for enemy flips",
       "tfdsl": ""
     },
     {
       "name": "Replenishment Maneuvers",
-      "tfdsl": ""
+      "tfdsl": "each(pick_friend())->(if(it().trait=Boat)->repair(2,pick_friend(id!=it().id));if(it().trait=Helicopter)->(draw(1);if(confirm())->play(pick_hand(type=Upgrade))))"
     },
     {
       "name": "Salvaged Cannon"
     },
     {
       "name": "Shore Bombardment",
-      "tfdsl": ""
+      "comment": "Proposal - need to query if this is N x 1, or N damage being done",
+      "tfdsl": "if(confirm())->tap(pick_friend(trait=Boat,tapped=untapped));damage(all_friends(trait=Boat,tapped=tapped).count,all_enemies(trait!=Helicopter,trait!=Plane,trait!=Spaceship))"
     },
     {
       "name": "Subtle Activation",
+      "needs": "Activating a character TAP ability outside its normal timing",
       "tfdsl": ""
     },
     {
       "name": "Surveillance Array",
-      "tfdsl": ""
+      "tfdsl": "static(focus,when(attached().trait=Ranged),2);on-attached-battle(when(attached().trait=Specialist))->(scrap_upgrade(this());draw(2))"
     },
     {
       "name": "Take Down",
-      "tfdsl": ""
+      "comment": "Proposal - curious use of each to create a variable. Makes me wonder if choose(); should have been an -> and set an it()",
+      "tfdsl": "each(pick_enemy())->(move(1,pick_char(id!=it().id),it());if(it().stars<=5)->tap(it()))"
     },
     {
       "name": "Torture Chamber",
-      "tfdsl": ""
+      "tfdsl": "on-start-turn(when(event().player=this().owner))->(damage(1,attached());draw(1))"
     },
     {
       "name": "...Always Bet on the Leader"
     },
     {
-      "name": "A Tasty Morsel, Morsel"
+      "name": "A Tasty Morsel, Morsel",
+      "tfdsl": {
+        "front": "static(atk,1,target=all_friends(trait=Insecticon));static(health,3,target=all_friends(trait=Insecticon))"
+      }
     },
     {
-      "name": "Eat My Dust!"
+      "name": "Eat My Dust!",
+      "front-needs": "Adding/removing traits and card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Excellent!"
+      "name": "Excellent!",
+      "front-needs": "Playing a selected battle card from attack flips",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Excuse Me!"
+      "name": "Excuse Me!",
+      "front-needs": "Dynamic mode-scoped targeted static abilities",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Infernus"
+      "name": "Infernus",
+      "tfdsl": {
+        "front": "static(atk,1,target=all_friends(trait=Firecon));static(def,1,target=all_friends(trait=Firecon))"
+      }
     },
     {
       "name": "Letsgo-Letsgo-Letsgo-Go-Go!"
     },
     {
-      "name": "Master Builder"
+      "name": "Master Builder",
+      "tfdsl": {
+        "front": "static(bold,1,target=all_friends(fullname=this().target));static(tough,1,target=all_friends(fullname=this().target))"
+      }
     },
     {
-      "name": "Mortar Cannon"
+      "name": "Mortar Cannon",
+      "front-needs": "Adding/removing traits and card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Obnoxiousness"
+      "name": "Obnoxiousness",
+      "front-needs": "Card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "One Good Shot"
+      "name": "One Good Shot",
+      "tfdsl": {
+        "front": "static(atk,1,target=all_friends(trait='Battle Patrol',stars=4));static(health,1,target=all_friends(trait='Battle Patrol',stars=4))"
+      }
     },
     {
-      "name": "Operation: Interference"
+      "name": "Operation: Interference",
+      "front-needs": "Dynamic mode-scoped targeted static abilities",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Solar Regeneration"
+      "name": "Solar Regeneration",
+      "front-needs": "This needs pay(..) semantics for the if-you-do",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Target: Acquired"
+      "name": "Target: Acquired",
+      "front-needs": "Card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "The Dark Spark"
+      "name": "The Dark Spark",
+      "front-needs": "First-turn-only events and card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Voracious Hunger"
+      "name": "Voracious Hunger",
+      "front-needs": "Deck searching and card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "We've Gotta Push Back!"
+      "name": "We've Gotta Push Back!",
+      "front-needs": "Adding traits and card-text replacement effects",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "With Courage and Good Cheer"
+      "name": "With Courage and Good Cheer",
+      "tfdsl": {
+        "front": "on-before-begin-game()->damage(4,all_friends(trait=Dinobot));static(def,1,target=all_friends(fullname='Volcanicus, Fiery Champion'))"
+      }
     },
     {
-      "name": "Wreck 'N' Rule"
+      "name": "Wreck 'N' Rule",
+      "front-needs": "Adding traits",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
-      "name": "Zone Defense"
+      "name": "Zone Defense",
+      "front-needs": "Dynamic mode-scoped targeted static abilities",
+      "tfdsl": {
+        "front": ""
+      }
     },
     {
       "name": "Bob, Loveable Pet",
+      "alt-needs": "Suppressing card ability triggers from a specific KO event",
       "tfdsl": {
         "alt": ""
       }
     },
     {
       "name": "Broadside, Air and Sea Assault",
+      "alt 2-needs": "Station requirements and station enter/leave events",
       "tfdsl": {
-        "alt 1": "",
-        "bot": "",
+        "alt 1": "on-this-flip()->move(1,this(),pick_enemy())",
+        "bot": "on-this-flip()->pierce_eot(3,this())",
         "alt 2": ""
       }
     },
     {
       "name": "Cloudraker, Claustrophobic Sky Fighter",
+      "alt-needs": "Preventing card-caused flips and damage-counter movement",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "static(atk,when(event().attacker=this(),event().attacker.stars>event().defender.stars),event().attacker.stars - event().defender.stars)"
       }
     },
     {
       "name": "Enemy, Infuriating Infiltrator",
+      "bot-needs": "Card-text replacement effects",
       "tfdsl": {
-        "alt": "",
+        "alt": "stealth();on-this-flip()->move(2,this(),pick_friend(stars>=10))",
         "bot": ""
       }
     },
     {
       "name": "Fastlane, Road Warrior",
+      "alt-needs": "Counting Rolling Actions for a temporary ability",
+      "bot-needs": "Looking at, selecting from, and reordering top deck cards",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -202,13 +291,17 @@
     },
     {
       "name": "Hoist, Methodical Maintenance",
+      "alt-needs": "Selecting a qualifying flipped battle card and retaining it under a character",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "focus(1);on-this-flip()->(if(confirm())->play(pick_under_this()))"
       }
     },
     {
       "name": "Laserbeak, Impatient Interrogator",
+      "alt-needs": "Inspecting opponent hidden zones",
+      "bot-needs": "Remaining-health predicates and dynamic targeted statics",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -216,29 +309,31 @@
     },
     {
       "name": "Overkill, Wanton Warrior",
+      "bot-needs": "Remaining-health predicates for a conditional static ability",
       "tfdsl": {
-        "alt": "",
+        "alt": "stealth();on-this-flip()->(damage(1,this());damage(1,pick_enemy()))",
         "bot": ""
       }
     },
     {
       "name": "Rack 'N' Ruin, One Bot Wrecking Crew",
+      "comment": "Proposal - check similar ones, do I always do .origin?",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-attack-damage(when(event().origin=this()))->damage(3,pick_enemy(id!=event().target.id,stars<=event().target.stars))"
       }
     },
     {
       "name": "Slugfest, Maniacal Messenger",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "stealth();on-this-flip()->(draw(1);plan(1))",
+        "bot": "on-this-battle()->plan(1)"
       }
     },
     {
       "name": "Wildrider, Traffic Terror",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "brave()",
+        "bot": "on-this-attack(when(event().attacker.damage>=3))->damage(1,event().defender)"
       }
     }
   ]

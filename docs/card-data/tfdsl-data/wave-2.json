@@ -20,7 +20,8 @@
     {
       "name": "Ancient Wisdom",
       "comment": "This needs to set an ancient-wisdom-player value",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Per-turn state recording that Ancient Wisdom was played."
     },
     {
       "name": "Armored Plating"
@@ -36,7 +37,7 @@
     },
     {
       "name": "Bad Attitude",
-      "tfdsl": ""
+      "tfdsl": "if(starting_team(faction=Decepticon).count=self().starting_team.count)->(repair(1,all_friends());damage(1,all_chars(faction=Autobot)))"
     },
     {
       "name": "Bashing Shield",
@@ -82,7 +83,7 @@
     {
       "name": "Decepticon Crown",
       "comment": "TODO: Test",
-      "tfdsl": "put_only(faction=Decepticon);on-attack(when(event().attacker.owner=this.owner(),event().attacker.faction=Decepticon))->plan(1)"
+      "tfdsl": "put_only(faction=Decepticon);on-attack(when(event().attacker.owner=this().owner,event().attacker.faction=Decepticon))->plan(1)"
     },
     {
       "name": "Defensive Driving",
@@ -122,7 +123,8 @@
     },
     {
       "name": "Espionage",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Choosing a battle-icon color and filtering an opponent hand by that chosen color."
     },
     {
       "name": "Evasive Maneuvers",
@@ -147,7 +149,8 @@
     },
     {
       "name": "Fog of War",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Each player independently choosing cards to keep before scrapping the rest of their hand."
     },
     {
       "name": "Handheld Blaster",
@@ -173,7 +176,8 @@
     },
     {
       "name": "Inverted!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing flipped orange and blue battle icons with one another."
     },
     {
       "name": "Leap of Faith",
@@ -189,11 +193,13 @@
     },
     {
       "name": "Mining Pick",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "An event for a card moving from a hand to the top of its owner's deck."
     },
     {
       "name": "Mounted Missiles",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Placing this Weapon in an Armor or Utility slot."
     },
     {
       "name": "Noble's Blaster",
@@ -214,7 +220,7 @@
     },
     {
       "name": "Press the Advantage",
-      "tfdsl": "atk_eot(2,pick_friend(faction=Autobot));def_eot(-2,pick_enemy(faction=Decepticon))"
+      "tfdsl": "atk_eot(2,pick_friend(faction=Autobot));def_eot(0-2,pick_enemy(faction=Decepticon))"
     },
     {
       "name": "Primary Laser"
@@ -229,7 +235,8 @@
     },
     {
       "name": "Recon System",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Increasing a battle flip and choosing a flipped card to scrap before its battle icons are used."
     },
     {
       "name": "Rest and Relaxation",
@@ -242,7 +249,8 @@
     {
       "name": "Scrounge",
       "comment": "TODO: Need to be able to filter previous_target() for subtype=upgrade",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Filtering the scrapped top card by Upgrade before offering it to play."
     },
     {
       "name": "Secret Dealings",
@@ -269,7 +277,8 @@
     },
     {
       "name": "Spare Parts",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "An upgrade-scrap replacement event exposing the scrapped upgrade's subtype and the opposing card source."
     },
     {
       "name": "Sparring Gear",
@@ -281,7 +290,8 @@
     },
     {
       "name": "Steamroll",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Attack-damage event data for excess damage from a KO and redistributing that excess to an opponent-selected other character."
     },
     {
       "name": "Stunticon Enigma",
@@ -345,7 +355,8 @@
     {
       "name": "Unleash Potential",
       "comment": "This will need to access an ancient-wisdom played set value",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Per-turn state recording that Ancient Wisdom was played and selecting owned battle cards outside the game."
     },
     {
       "name": "Vandalize",
@@ -357,8 +368,10 @@
     },
     {
       "name": "Acid Storm, Toxic Terror",
+      "comment": "TODO: Test",
+      "bot-needs": "An ongoing global effect that prevents enemies from using Bold.",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->repair(all(opponent().scrap,orange>=2).count,this())",
         "bot": ""
       }
     },
@@ -380,14 +393,16 @@
       "tfdsl": {
         "alt": "tough(1)",
         "bot": ""
-      }
+      },
+      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
     },
     {
       "name": "Autobot Mirage, Counterintelligence",
       "tfdsl": {
         "alt": "pierce(2)",
         "bot": ""
-      }
+      },
+      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
     },
     {
       "name": "Autobot Novastar, Search and Rescue"
@@ -405,7 +420,8 @@
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "bot-needs": "Checking named character mode and zone conditions and combining the named Blackwing and Dreadwind components."
     },
     {
       "name": "Blitzwing, Relentless Foe",
@@ -426,14 +442,16 @@
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Starting an additional attack against a newly selected untapped enemy after attack damage."
     },
     {
       "name": "Bombshell, Decepticon Psy Ops",
       "tfdsl": {
         "alt": "on-this-flip()->draw(1)",
         "bot": ""
-      }
+      },
+      "bot-needs": "A mandatory variable hand-scrap cost equal to the defender's star count."
     },
     {
       "name": "Breakdown, Paranoid Scout",
@@ -445,8 +463,9 @@
       "name": "Bumblebee, Trusted Lieutenant",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action)))",
-        "bot": ""
-      }
+        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(type=Action));draw(2)))"
+      },
+      "comment": "NOTE: This relies on pick_hand not having a cancel option"
     },
     {
       "name": "Dead End, Doomed Loner",
@@ -465,8 +484,8 @@
     {
       "name": "Decepticon Venin, Insecticon Tyrant",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-friend-ko(when(event().ko.trait=Insecticon))->scrap_hand(opponent_pick(opponent().hand,count=2))",
+        "bot": "static(pierce,when(opponent().hand.count=0),3,target=all_friends(trait=Insecticon))"
       }
     },
     {
@@ -479,19 +498,21 @@
       "name": "Dinobot Slug, Battering Ram",
       "tfdsl": {
         "bot": ""
-      }
+      },
+      "bot-needs": "Replacing the first white-icon battle flip with three extra battle cards."
     },
     {
       "name": "Dinobot Snarl, Spiked Battler",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-attack()->plan(2)"
       }
     },
     {
       "name": "Dinobot Swoop, Bombardier",
       "tfdsl": {
         "bot": ""
-      }
+      },
+      "bot-needs": "Selecting a green-icon battle card flipped during the current attack after that attack."
     },
     {
       "name": "Dirge, Doombringer",
@@ -499,20 +520,23 @@
       "tfdsl": {
         "alt": "",
         "bot": "pierce(1)"
-      }
+      },
+      "alt-needs": "A temporary attack bonus calculated from the opponent KO area's character count."
     },
     {
       "name": "Divebomb, Aerial Assault",
       "tfdsl": {
         "bot": ""
-      }
+      },
+      "bot-needs": "Revealing a random opponent hand card before conditionally scrapping it."
     },
     {
       "name": "Dreadwind, Air Defense",
       "tfdsl": {
         "alt": "pierce(2)",
         "bot": ""
-      }
+      },
+      "bot-needs": "Checking named character mode and zone conditions and combining the named Blackwing and Dreadwind components."
     },
     {
       "name": "Fireflight, Sky High Recon",
@@ -525,40 +549,45 @@
       "name": "Grapple, Autobot Architect",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-this-after-battle-flip(when(event().flips.colours.count=4))->(atk_eot(4,this());def_eot(4,this()))"
+      },
+      "alt-needs": "Counting distinct battle-icon colors among all cards discarded from a hand."
     },
     {
       "name": "Grimlock, Powerful Commander",
       "tfdsl": {
         "bot": ""
-      }
+      },
+      "bot-needs": "Selecting an owned Dinobot character outside the game and placing it in the KO area in alt mode."
     },
     {
       "name": "Ironhide, Steadfast Brawler",
       "tfdsl": {
         "alt": "bold(1)",
         "bot": ""
-      }
+      },
+      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
     },
     {
       "name": "Megatron, Arrogant Ruler",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Upgrade)))",
-        "bot": ""
-      }
+        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));draw(2)))"
+      },
+      "comment": "NOTE: This relies on pick_hand not having a cancel option"
     },
     {
       "name": "Motormaster, Stunticon Leader",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "instead(on-this-defend()->(if(confirm())->modify(event().defender:=pick_friend(trait=Stunticon))))"
+      },
+      "alt-needs": "Replacement context that distinguishes non-attack damage from an opponent card and prevents it for other characters."
     },
     {
       "name": "Offroad, All-Terrain Soldier",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-enemy-attack(trait=Car)->damage(1,previous_target())",
         "bot": "on-this-flip()->repair(1,this())"
       }
     },
@@ -566,8 +595,9 @@
       "name": "Optimus Prime, Gleaming Commander",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->(if(confirm())->flip(pick(self().ko)))"
+      },
+      "alt-needs": "Selecting up to three different owned Sentinel characters outside the game and placing them in the KO area in alt mode."
     },
     {
       "name": "Predacon Headstrong, Ground Assault",
@@ -579,7 +609,7 @@
       "name": "Predacon Rampage, Savage Hunter",
       "tfdsl": {
         "alt": "pierce(2)",
-        "bot": ""
+        "bot": "on-enemy-ko()->repair(1,all_friends(trait=Predacon))"
       }
     },
     {
@@ -587,7 +617,7 @@
       "comment": "TODO: Need to implement a specific KO Flip Event. Also need to make sure flips in the KO do not evaluate their text, and that a flip in the KO does not fire a FLIP event but a KO_FLIP event",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": "on-this-ko-flip(when(this().zone=this().owner.ko))->scrap_upgrade(pick_upgrade(subtype=Weapon))"
+        "bot": "on-this-ko-flip()->scrap_upgrade(pick_upgrade(subtype=Weapon))"
       }
     },
     {
@@ -619,26 +649,31 @@
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Filtering scrap cards by the absence of all normal and hybrid battle icons.",
+      "bot-needs": "Once-per-turn trigger gating across battle-card play and flip events."
     },
     {
       "name": "Starscream, Decepticon King",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Filtering scrap cards by whether their rules grant Plan.",
+      "bot-needs": "Triggering on a named battle card flip while this character battles."
     },
     {
       "name": "Sunstreaker, Bold Warrior",
       "tfdsl": {
         "alt": "tough(1)",
         "bot": ""
-      }
+      },
+      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
     },
     {
       "name": "Thrust, Supersonic Interceptor",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-attack(when(event().attacker.owner=this().owner,event().attacker!=this(),this().tapped=untapped))->(if(confirm())->(tap(this());atk_eot(this().atk,event().attacker)))",
         "bot": ""
       }
     },
@@ -646,8 +681,9 @@
       "name": "Torox, Fueler",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-this-flip()->(draw(1);plan(1))"
+      },
+      "alt-needs": "Preventing enemy characters from being repaired."
     },
     {
       "name": "Warpath, Confident Sharpshooter",
@@ -655,20 +691,23 @@
       "tfdsl": {
         "alt": "",
         "bot": "pierce(2)"
-      }
+      },
+      "alt-needs": "Damage calculated from opponent scrap cards with multiple blue battle icons and assigned by opponent selection."
     },
     {
       "name": "Windblade, Combiner Hunter",
       "tfdsl": {
         "alt": "",
         "bot": "on-this-attack(when(event().defender.mode='combiner'))->pierce_eot(4,all_friends())"
-      }
+      },
+      "alt-needs": "Revealing the top deck card without moving it, then conditionally playing it."
     },
     {
       "name": "Dreadwing, Sky Destroyer",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Supporting two Weapon, two Armor, and two Utility slots."
     },
     {
       "name": "Menasor, Menacing Colossus",
@@ -680,14 +719,15 @@
     {
       "name": "Optimus Maximus, Ultimate Defender",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "on-this-battle()->(draw(1);plan(1))"
       }
     },
     {
       "name": "Predaking, Ferocious Hunter",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Supporting five Weapon slots on a combined character."
     },
     {
       "name": "Superion, Sky Protector",
@@ -700,14 +740,17 @@
       "name": "Volcanicus, Fiery Champion",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Tracking the turn a character combined for an attack trigger."
     },
     {
       "name": "Omega Supreme, Autobot Defense Base",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Choosing exactly one of two effects when this character flips.",
+      "bot-needs": "Splitting a single attack-damage event across characters while preserving attack-damage semantics."
     },
     {
       "name": "Builder's Tools",
