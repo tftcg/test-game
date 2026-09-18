@@ -498,7 +498,7 @@
       "name": "Raider Needler, Ground Force • Demolitions",
       "tfdsl": {
         "bot": "",
-        "upgrade": ""
+        "upgrade": "pierce(2)"
       }
     },
     {

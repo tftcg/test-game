@@ -349,7 +349,7 @@
     {
       "name": "Private Firedrive, Ground Command • Artillery",
       "tfdsl": {
-        "bot": "",
+        "bot": "on-this-attack()->draw(1)",
         "upgrade": ""
       }
     },
@@ -432,8 +432,8 @@
     {
       "name": "Raider Aimless, Air Force • Weapons",
       "tfdsl": {
-        "bot": "",
-        "alt": ""
+        "bot": "tough(3)",
+        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=3))->damage(3,event().defender)"
       }
     },
     {
@@ -488,7 +488,7 @@
     {
       "name": "Raider Nightstick, Ground Force • Weapons",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "on-attached-after-attack-flip(when(event().flips.black>=2))->scrap_hand(opponent_pick_opponent_hand())"
       }
     },
     {

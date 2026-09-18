@@ -59,7 +59,7 @@
     },
     {
       "name": "Emergency Repair Patch",
-      "tfdsl": ""
+      "tfdsl": "on-put(when(faction=Autobot))->repair(1,attached())"
     },
     {
       "name": "End Hostilities",
@@ -67,7 +67,7 @@
     },
     {
       "name": "Energon Mace",
-      "tfdsl": ""
+      "tfdsl": "static(atk,when(event().defender.faction=Autobot),1);static(pierce,when(event().defender.faction=Autobot,event().defender.trait=Leader),3)"
     },
     {
       "name": "Enhanced Power Cell",
