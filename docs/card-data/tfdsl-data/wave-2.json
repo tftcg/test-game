@@ -58,8 +58,8 @@
     },
     {
       "name": "Combat Commands",
-      "comment": "Partial",
-      "tfdsl": "put_only(trait=Sentinel)"
+      "tfdslFuture": "put_only(trait=Sentinel)",
+      "tfdsl": ""
     },
     {
       "name": "Confidence",
@@ -144,8 +144,7 @@
     },
     {
       "name": "Focus Fire",
-      "comment": "Partial",
-      "tfdsl": "bold(1,pick_friend())"
+      "tfdsl": ""
     },
     {
       "name": "Fog of War",
@@ -254,8 +253,7 @@
     },
     {
       "name": "Secret Dealings",
-      "comment": "Partial",
-      "tfdsl": "draw(1)"
+      "tfdsl": ""
     },
     {
       "name": "Security Console",
@@ -263,8 +261,8 @@
     },
     {
       "name": "Sentinel Enigma",
-      "comment": "Partial",
-      "tfdsl": "combine('Optimus Maximus, Ultimate Defender',6,bot,Sentinel)"
+      "tfdslFuture": "combine('Optimus Maximus, Ultimate Defender',6,bot,Sentinel)",
+      "tfdsl": ""
     },
     {
       "name": "Smelt",
@@ -272,8 +270,7 @@
     },
     {
       "name": "Sonic Scramble",
-      "comment": "Partial",
-      "tfdsl": "scrap_hand(opponent_pick(opponent().hand))"
+      "tfdsl": ""
     },
     {
       "name": "Spare Parts",
@@ -295,13 +292,13 @@
     },
     {
       "name": "Stunticon Enigma",
-      "comment": "Partial",
-      "tfdsl": "if(all_friends(name=Menasor).count>0)->draw(2);combine('Menasor, Menacing Colossus',5,bot,Stunticon)"
+      "tfdslFuture": "if(all_friends(name=Menasor).count>0)->draw(2);combine('Menasor, Menacing Colossus',5,bot,Stunticon)",
+      "tfdsl": ""
     },
     {
       "name": "Stunticon Swagger",
-      "comment": "Partial",
-      "tfdsl": "put_only(trait=Stunticon)"
+      "tfdslFuture": "put_only(trait=Stunticon)",
+      "tfdsl": ""
     },
     {
       "name": "Superior Cannon",
@@ -321,8 +318,8 @@
     },
     {
       "name": "Swindled",
-      "comment": "Partial",
-      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2))"
+      "tfdslFuture": "draw(2);scrap_hand(pick_hand(count=2))",
+      "tfdsl": ""
     },
     {
       "name": "Tackle",
@@ -340,8 +337,8 @@
     },
     {
       "name": "Tooth and Claw",
-      "comment": "Partial",
-      "tfdsl": "put_only(trait=Predacon)"
+      "tfdslFuture": "put_only(trait=Predacon)",
+      "tfdsl": ""
     },
     {
       "name": "Underhanded Tactics",
@@ -516,10 +513,9 @@
     },
     {
       "name": "Dirge, Doombringer",
-      "comment": "Partial",
       "tfdsl": {
         "alt": "",
-        "bot": "pierce(1)"
+        "bot": ""
       },
       "alt-needs": "A temporary attack bonus calculated from the opponent KO area's character count."
     },
@@ -687,10 +683,9 @@
     },
     {
       "name": "Warpath, Confident Sharpshooter",
-      "comment": "Partial",
       "tfdsl": {
         "alt": "",
-        "bot": "pierce(2)"
+        "bot": ""
       },
       "alt-needs": "Damage calculated from opponent scrap cards with multiple blue battle icons and assigned by opponent selection."
     },
@@ -711,9 +706,8 @@
     },
     {
       "name": "Menasor, Menacing Colossus",
-      "comment": "Partial",
       "tfdsl": {
-        "combiner": "bold(1);tough(1);pierce(1)"
+        "combiner": ""
       }
     },
     {
