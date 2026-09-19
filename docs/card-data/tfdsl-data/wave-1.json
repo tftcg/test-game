@@ -49,8 +49,8 @@
     },
     {
       "name": "Cargo Trailer",
-      "comment": "FAILS: No such thing as slot_utility(3, this())",
-      "tfdsl": "put_only(trait=Truck);static(atk,all_upgrades(attached().upgrade.name='Cargo Trailer').count);slot_utility(3,this())"
+      "comment": "TODO: need something like slot_utility(3, this())",
+      "tfdsl": "put_only(trait=Truck);static(atk,all_upgrades(attached().upgrade.name='Cargo Trailer').count)"
     },
     {
       "name": "Collateral Damage",

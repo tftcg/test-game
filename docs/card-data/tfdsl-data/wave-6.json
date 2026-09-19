@@ -9,159 +9,196 @@
   "cards": [
     {
       "name": "All-Out Attack",
+      "needs": "Granting an additional attack to a selected untapped character while tracking whether it has already attacked this turn.",
       "tfdsl": ""
     },
     {
       "name": "Ancient Security Tentacle",
+      "needs": "Preventing damage-counter movement to the upgraded character and allowing three Tentacles in one Weapon slot.",
       "tfdsl": ""
     },
     {
       "name": "Angolmois Surge",
+      "needs": "Chaos counters on a named starting-team character.",
       "tfdsl": ""
     },
     {
       "name": "Aquatic Maneuvers",
+      "needs": "A revealed Secret Action that persists through the battle to react to later blue battle flips.",
       "tfdsl": ""
     },
     {
       "name": "Are These Wires Important?",
+      "needs": "Selecting characters by printed base name (Dazzlestrike, Lionizer, Ravage, Steeljaw, or Trypticon) in addition to traits.",
       "tfdsl": ""
     },
     {
       "name": "Armed To The Teeth",
+      "needs": "Allowing any number of Weapon plays in one turn.",
       "tfdsl": ""
     },
     {
       "name": "Aspect of Bitterness",
+      "needs": "Detecting an upgrade leaving the battlefield.",
       "tfdsl": ""
     },
     {
       "name": "Aspect of Death",
+      "needs": "Counters on an Upgrade and a leave-battlefield trigger.",
       "tfdsl": ""
     },
     {
       "name": "Aspect of Doubt",
+      "needs": "Restricting an upgrade to characters that have a bot mode.",
       "tfdsl": ""
     },
     {
       "name": "Aspect of Laughter",
+      "needs": "Replacing a green-card scrap effect by reducing the amount scrapped.",
       "tfdsl": ""
     },
     {
       "name": "Aspect of Rage",
-      "tfdsl": ""
+      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on-put()->(move(1,attached(),pick_char(id!=attached().id));damage(1,pick_char()))"
     },
     {
       "name": "Assuming Control",
+      "needs": "Adding a KO character's ATK to a selected named character and moving this Action to KO.",
       "tfdsl": ""
     },
     {
       "name": "Black Mail",
+      "needs": "Checking survival after attack damage and moving damage to another friendly character.",
       "tfdsl": ""
     },
     {
       "name": "Bomb Removal Protocol",
+      "needs": "A replacement effect that redirects a variable number of damage counters to an upgrade, with an upgrade counter threshold.",
       "tfdsl": ""
     },
     {
       "name": "CNA-Encoded Armory",
+      "needs": "Returning a selected Upgrade from scrap to hand.",
       "tfdsl": ""
     },
     {
       "name": "Demolition Derby",
+      "needs": "Tracking a battlefield character-count condition through attack damage and granting an extra attack.",
       "tfdsl": ""
     },
     {
       "name": "Discordant Cacophony",
+      "needs": "Replacing opponent attacker selection with a different attacker.",
       "tfdsl": ""
     },
     {
       "name": "Dreadful Feast",
+      "needs": "Selecting three same-team characters and moving damage from two sources to a third.",
       "tfdsl": ""
     },
     {
       "name": "\"Dutch\"",
+      "needs": "Tracking the first white battle icon and flipping an extra battle card.",
       "tfdsl": ""
     },
     {
       "name": "Energy Conversion Field",
+      "needs": "Replacing non-attack multi-character damage with all-character repair.",
       "tfdsl": ""
     },
     {
       "name": "Forked Tentacle",
+      "needs": "Changing TAP ability option counts and the Tentacle slot-capacity rule.",
       "tfdsl": ""
     },
     {
       "name": "Gift of Innermost Energon",
+      "needs": "Detecting KOs from simultaneous damage and repairing the actual aggregate damage dealt.",
       "tfdsl": ""
     },
     {
       "name": "Give Me Your Face",
+      "needs": "A turn-duration Action trigger for enemy Titan Master deployments.",
       "tfdsl": ""
     },
     {
       "name": "Guilty or Innocent",
+      "needs": "Choosing between a base-DEF override and Tough suppression for a selected character.",
       "tfdsl": ""
     },
     {
       "name": "Insurance Write-Off",
+      "needs": "Checking and revealing drawn Quintesson cards.",
       "tfdsl": ""
     },
     {
       "name": "Judicial Discretion",
+      "needs": "Player choice between damage or repair and conditionally repeating that choice.",
       "tfdsl": ""
     },
     {
       "name": "Litigious Tentacle",
+      "needs": "The Tentacle slot-capacity rule.",
       "tfdsl": ""
     },
     {
       "name": "Loading The Cannon",
+      "needs": "Comparing post-battle attack damage against pre-flip DEF and moving a Secret Action to KO.",
       "tfdsl": ""
     },
     {
       "name": "Lose The Battle...",
+      "needs": "Returning a Weapon from scrap to hand.",
       "tfdsl": ""
     },
     {
       "name": "Lost In Transit",
+      "needs": "Replacing a black Action play by scrapping and cancelling it.",
       "tfdsl": ""
     },
     {
       "name": "Maceration Laser",
-      "tfdsl": ""
+      "tfdsl": "put_only(faction=Quintesson);on-attached-attack(when(event().defender.faction!=attached().faction))->pierce_eob(2,attached())"
     },
     {
       "name": "Manipulate Time",
+      "needs": "Conditional multicolor and upgrade-icon checks plus attack-damage prevention and mass untap.",
       "tfdsl": ""
     },
     {
       "name": "Masher Mace",
+      "needs": "Triggering when this Weapon is scrapped from its Sharkticon and returning it to hand.",
       "tfdsl": ""
     },
     {
       "name": "Motorcycle Chase",
-      "tfdsl": ""
+      "comment": "TODO: Test. I'm feeling previous_target() needs to be (2) as it's giving Brave to the wrong char",
+      "tfdsl": "tap(pick_friend(trait=Motorcycle,tapped=untapped));tap(opponent_pick(opponent().chars,tapped=untapped,stars<=10));brave_eot(true,previous_target())"
     },
     {
       "name": "Occupation",
+      "needs": "Playing a green card after checking a Quintesson-only starting team.",
       "tfdsl": ""
     },
     {
       "name": "Open Agenda",
+      "needs": "Revealing cards, selecting up to two for hand, and bottom-decking the rest in a chosen order.",
       "tfdsl": ""
     },
     {
       "name": "Opportune Protection",
+      "needs": "Replacing damage to split up to three damage counters to another character.",
       "tfdsl": ""
     },
     {
       "name": "Photon Charge",
+      "needs": "Tracking an attack-declaration condition through delayed after-battle effects and scrapping the source.",
       "tfdsl": ""
     },
     {
       "name": "Polarity Gauntlet",
-      "tfdsl": ""
+      "comment": "Card Text bug - need to find out if it's EOB or EOT",
+      "tfdsl": "on-attached-defend()->bold_eob(0 - event().attacker.def,event().attacker)"
     },
     {
       "name": "Polydermal Graft",
@@ -169,130 +206,153 @@
     },
     {
       "name": "Prime's New Arm",
+      "needs": "Preventing opponent cards from scrapping this upgrade.",
       "tfdsl": ""
     },
     {
       "name": "Reroute Enemy Vectors",
+      "needs": "An attack-damage replacement that reduces a selected enemy's damage by half.",
       "tfdsl": ""
     },
     {
       "name": "Scrounging For Energon",
+      "needs": "Choosing a battle-icon color and conditionally inspecting the opponent's top deck card.",
       "tfdsl": ""
     },
     {
       "name": "Secret Missive",
+      "needs": "Returning a green Secret Action from scrap to hand.",
       "tfdsl": ""
     },
     {
       "name": "Sharkticon Matrix",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Leader);each(all_friends(faction=Quintesson,trait=Melee))->(static(pierce,1,target=it());static(atk,1,target=it()))"
     },
     {
       "name": "Shield Crash",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());if(previous_target().def<previous_target().atk)->(atk_eot(previous_target().def - previous_target().atk,previous_target());def_eot(previous_target().atk - previous_target().def,previous_target()));if(previous_target().def>=previous_target().atk)->(atk_eot(previous_target().def - previous_target().atk,previous_target());def_eot(previous_target().atk - previous_target().def,previous_target()))"
     },
     {
       "name": "Sidecar Artillery",
+      "needs": "Tracking an attack ATK condition through delayed after-battle effects and scrapping the source.",
       "tfdsl": ""
     },
     {
       "name": "Squid Pro Quo",
+      "needs": "Moving a chosen amount of up to two damage counters and boosting from the actual amount moved.",
       "tfdsl": ""
     },
     {
       "name": "Stim Shock",
+      "needs": "Filtering characters by Bold total and modifying that total.",
       "tfdsl": ""
     },
     {
       "name": "Subcontractor Agreement",
+      "needs": "Using a Bounty ability from another card.",
       "tfdsl": ""
     },
     {
       "name": "Tetrinite Micro-Lining",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(def_eob(2,event().defender);if(event().defender.upgrades.subtype=Armor)->pierce_eob(0-4,event().attacker))"
     },
     {
       "name": "The Dweller Awakens",
+      "needs": "Choosing between two revealed Secret Action effects.",
       "tfdsl": ""
     },
     {
       "name": "Thermal Sealant",
-      "tfdsl": ""
+      "comment": "NOTE: Technically this needs a has(pierce) of some kind because this just gave it negative pierce if it didn't have any. Which can effect some things like Jazz",
+      "tfdsl": "on-attached-after-defend-flip()->pierce_eob(0 - event().flips.orange,event().attacker)"
     },
     {
       "name": "Touch of Quintessa",
+      "needs": "Overkill attack-damage replacement and counting green battle icons flipped by both players.",
       "tfdsl": ""
     },
     {
       "name": "Turnabout Snare",
+      "needs": "Swapping base ATK and base DEF until end of battle.",
       "tfdsl": ""
     },
     {
       "name": "Underbase Fragment",
+      "needs": "Returning cards from scrap by a named card or a substring of the card name.",
       "tfdsl": ""
     },
     {
       "name": "United Against Tyranny",
-      "tfdsl": ""
+      "tfdsl": "atk_eot(2,pick_friend(faction=Autobot));def_eot(0-2,pick_enemy(faction=Decepticon))"
     },
     {
       "name": "Universal Greeting",
+      "needs": "Making a separate modal choice for each of two selected characters.",
       "tfdsl": ""
     },
     {
       "name": "Unsavory Leftovers",
+      "needs": "Returning a color- and type-filtered Upgrade from scrap to hand.",
       "tfdsl": ""
     },
     {
       "name": "Vorpal Fangs",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-attack-flip()->(if(event().flips.green>=4)->scrap_upgrade(this());if(event().flips.green<4)->def_eob(0-event().flips.green,event().defender))"
     },
     {
       "name": "What Lies Beyond",
+      "needs": "Detecting returns from KO and damage-free KOs, then skipping an extra turn.",
       "tfdsl": ""
     },
     {
       "name": "Whipped Into Shape",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend(event().defender.trait=Melee))->revealed(damage(1,event().defender);def_eob(4,event().defender))"
     },
     {
       "name": "Brace For Impact",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-defend(event().defender.name=this().target,event().defender.mode=alt,event().defender.upgrades.subtype=Armor)->flip(event().defender);on-attack(when(event().attacker.owner=this().owner,event().attacker.name=this().target,event().attacker.mode=bot,event().attacker.upgrades.subtype=Weapon))->flip(event().attacker)"
       }
     },
     {
       "name": "Brutal Conditioning",
+      "front-needs": "Once-per-game placement of a Stratagem on a damaged character and Stratagem counters.",
+      "back-needs": "Moving a Stratagem to KO when the character it is on is KO'd.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Buried Banquet",
+      "front-needs": "Moving a color-filtered Upgrade from an opponent's scrap pile to their KO area.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Cantankerous Attitude",
+      "front-needs": "A delayed after-battle optional upgrade scrap followed by damage-counter movement.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Cerebro-Shell Shock",
+      "front-needs": "Limiting the number of battle cards an attacker can flip.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Colossal Cannons",
+      "front-needs": "Selecting an enemy that shares any faction with a multi-faction defender after named attack damage.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Dark Regeneration",
+      "front-needs": "Moving any chosen number of damage counters while preventing the destination from being KO'd.",
       "tfdsl": {
         "front": ""
       }
@@ -300,11 +360,12 @@
     {
       "name": "Death Crystal Cannon",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-attack(when(event().attacker.stars>=7,all_friends(name=this().target).count>0))->damage(all(self().ko,name='Loading The Cannon').count,event().defender)"
       }
     },
     {
       "name": "Energon Reclamation",
+      "front-needs": "Fuel counters on a Stratagem and their spend-to-repair effect.",
       "tfdsl": {
         "front": ""
       }
@@ -317,42 +378,49 @@
     },
     {
       "name": "Hit Me With That Beat",
+      "front-needs": "Capping attack damage from one attack based on pre-existing damage counters.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "In The Name of Slingshot",
+      "front-needs": "Deploying a named character from outside the game and applying damage to exactly four characters.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Indigestion",
+      "front-needs": "Granting a once-per-game TAP ability that scraps cards from under a character and scales damage from the count.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Kneel Before Us",
+      "front-needs": "Targeting the character a Head-mode character is on.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Localized Tremors",
+      "front-needs": "Counting simultaneous enemy untaps and comparing their DEF with a named character.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Magnetic Boomerang",
+      "front-needs": "Detecting an opponent card scrapping an Upgrade from a named character and returning that Upgrade to hand.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Mass Displacement Drive",
+      "front-needs": "Temporarily modifying a character's STAR value while it is in a specified mode.",
       "tfdsl": {
         "front": ""
       }
@@ -362,24 +430,29 @@
     },
     {
       "name": "Orbital Command",
+      "front-needs": "Adding a trait to a named character and deploying a named character from outside the game.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Pit of Judgement",
+      "front-needs": "Initializing and spending Stratagem counters, then returning a character from KO to the battlefield.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Quite A Haul",
+      "front-needs": "Using a Mercenary's Bounty ability after it KOs an enemy with attack damage.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Sound The Alarm",
+      "front-needs": "Flipping a Stratagem, adding its stats to a chosen character, and returning cards from scrap by text.",
+      "back-needs": "Moving a Stratagem to KO when the character it is on is KO'd.",
       "tfdsl": {
         "front": ""
       }
@@ -389,12 +462,14 @@
     },
     {
       "name": "Stuck On You",
+      "front-needs": "Adding an Armor slot and playing an Armor from scrap or KO once per game.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "The Last Line of Defense",
+      "front-needs": "Adding a Utility slot to a named character.",
       "tfdsl": {
         "front": ""
       }
@@ -404,48 +479,59 @@
     },
     {
       "name": "Thermal Reciprocation",
+      "front-needs": "Thermal counters on a Stratagem and spending a chosen number to deal matching damage.",
+      "back-needs": "Thermal counters on a Stratagem and spending a chosen number to deal matching damage.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Third Party Brigade",
+      "front-needs": "Deploying a named character from outside the game and scrapping the first black battle card without using its icons.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "This Gun For Hire",
+      "front-needs": "Replacing a named character's faction and detecting play of its Upgrade side.",
+      "back-needs": "Replacing a named Upgrade's factions and editing its printed text.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Triggercon-Vention",
+      "front-needs": "Modifying a named character's printed damage-move amount.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Up In Smoke",
+      "front-needs": "Searching the deck before the game and counting named upgrades for a dynamic Pierce value.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "V2 Sonicsurge Drone Armor",
+      "comment": "TODO: Test this",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-defend(when(event().defender.name!=this().target,all(this().owner.chars,name=this().target,mode=alt,tapped=untapped).count>0))->(if(confirm())->(choose(pick(this().owner.chars,name=this().target,mode=alt,tapped=untapped));tap(previous_target());def_eot(previous_target().def,event().defender)))"
       }
     },
     {
       "name": "Off-Road Cycle",
+      "front-needs": "Fence counters on a Stratagem and flipping it at a counter threshold.",
+      "back-needs": "Returning a named Weapon from scrap to hand when an Action Master takes a Station.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Verdant Aegis",
+      "front-needs": "Capping damage from a single attack based on an Upgrade color-count condition.",
       "tfdsl": {
         "front": ""
       }
@@ -453,19 +539,22 @@
     {
       "name": "Allicon Aronik, Killer Croc",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-defend()->(plan(1);if(event().attacker.trait!=Specialist)->no_pierce_eob(true,event().attacker))",
+        "bot": "on-this-after-attack-flip(when(event().flips.blue>=1))->atk_eob(this().damage,this())"
       }
     },
     {
       "name": "Allicon Eyuk, Bog Scavenger",
+      "alt-needs": "Returning a green Upgrade from scrap to hand.",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-after-attack-flip(when(event().defender.trait!=Melee,event().flips.blue>=1))->atk_eob(event().flips.blue,this())"
       }
     },
     {
       "name": "Alpha Sentinel, Dark Guardian Relic",
+      "alt-needs": "Checking that all untapped enemies meet a STAR threshold and scaling DEF from other characters.",
+      "bot-needs": "Choosing between two after-attack-damage effects, each contingent on self-damage.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -473,6 +562,8 @@
     },
     {
       "name": "Armada, Herald of Shrouds",
+      "alt-needs": "Scaling multiple stats from untapped trait-filtered characters.",
+      "bot-needs": "Detecting TAP ability use and single-character opponent untaps, then selecting a matching-STAR character to untap and flipping this character.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -480,6 +571,8 @@
     },
     {
       "name": "Autobot Countdown, Aerospace Commander",
+      "alt-needs": "Checking attack-damage survival and moving damage from this or a Guardian to the attacker.",
+      "bot-needs": "Calculating the lowest ATK and DEF among qualifying KO characters.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -487,6 +580,8 @@
     },
     {
       "name": "Autobot Pipes, Idiosyncratic Collector",
+      "alt-needs": "Replacing attack damage to split two damage to this character.",
+      "bot-needs": "Tracking a once-per-turn upgrade-scrap trigger, revealing the deck top, and matching battle-icon counts.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -494,6 +589,9 @@
     },
     {
       "name": "Autobot Powerglide, Haughty Show-Off",
+      "alt-needs": "Swapping a hand card with a flipped blue Weapon and playing this character's Upgrade side on KO.",
+      "upgrade-needs": "Detecting defender black flips and replacing this Upgrade leaving the battlefield with moving it to KO.",
+      "bot-needs": "Replacing incoming damage-counter movement with redirect-and-repair and playing this character's Upgrade side on KO.",
       "tfdsl": {
         "alt": "",
         "upgrade": "",
@@ -502,19 +600,23 @@
     },
     {
       "name": "Axor, Opportunistic Fencer",
+      "bot-needs": "Moving a selected Weapon or Armor after another character's battle and using that character's Bounty ability.",
       "tfdsl": {
         "bot": ""
       }
     },
     {
       "name": "Crashbash, Ocean Terror",
+      "body-needs": "Detecting attack-damage survival and moving that damage from an enemy to a different enemy.",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-attack-flip(when(event().flips.orange<=this().def))->atk_eob(2,this())",
         "body": ""
       }
     },
     {
       "name": "Decepticon Doublecrosser, Shield Brothers",
+      "bot-needs": "Granting an extra targeted attack against a newly deployed Titan Master, including attacking it while untapped.",
+      "upgrade-needs": "Replacing this Upgrade leaving the battlefield with moving it to KO.",
       "tfdsl": {
         "bot": "",
         "upgrade": ""
@@ -522,6 +624,8 @@
     },
     {
       "name": "Decepticon Exhaust, Consumptive Condottiere",
+      "alt-needs": "Tracking damage taken and damage-counter movement during the turn for dynamic stats.",
+      "bot-needs": "Using this character's Bounty ability after it KOs an enemy with attack damage.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -529,18 +633,22 @@
     },
     {
       "name": "Deliberata, Judger and The Judged",
+      "bot-needs": "TAP ability modal choice with top-deck reveal/scrap outcomes and a variable hand-scrap cost.",
       "tfdsl": {
         "bot": ""
       }
     },
     {
       "name": "General Ghyrik, Grievous Executioner",
+      "bot-needs": "Dynamic enemy-health reduction during the owner's turn and scaling Bold/Pierce from a target's Utility battle icons.",
       "tfdsl": {
         "bot": ""
       }
     },
     {
       "name": "Gilthor, Chained Amalgamation",
+      "alt-needs": "Counting Tentacles across the battlefield for Bold and selecting an enemy's specific flip mode.",
+      "bot-needs": "Counting Tentacles for DEF and suppressing black-card Pierce for a battle.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -548,12 +656,14 @@
     },
     {
       "name": "Inquisitor Drebzik, Exhaustive Interrogator",
+      "bot-needs": "TAP ability modal choice with opponent deck manipulation and suppression of a Titan Master's head bonus.",
       "tfdsl": {
         "bot": ""
       }
     },
     {
       "name": "Klementia, Medical Magistrate",
+      "bot-needs": "TAP ability modal choice with card-color-dependent repair and Tentacle-count-based ATK modification.",
       "tfdsl": {
         "bot": ""
       }
@@ -561,12 +671,14 @@
     {
       "name": "Lokos",
       "tfdsl": {
-        "head": "",
-        "bot": ""
+        "head": "on-this-battle()->plan(2)",
+        "bot": "on-this-battle()->plan(2)"
       }
     },
     {
       "name": "Mind Control Collar",
+      "head-needs": "Choosing one of three temporary battle abilities.",
+      "bot-needs": "KOing this deployed character without causing other character abilities to trigger.",
       "tfdsl": {
         "head": "",
         "bot": ""
@@ -574,6 +686,8 @@
     },
     {
       "name": "Mind Control Helmet",
+      "head-needs": "Choosing between two temporary battle abilities or Plan.",
+      "bot-needs": "KOing this deployed character without causing other character abilities to trigger.",
       "tfdsl": {
         "head": "",
         "bot": ""
@@ -581,6 +695,8 @@
     },
     {
       "name": "Nacelle, Eager Aerospace Engineer",
+      "alt-needs": "Filtering characters by absence of printed abilities for a static team bonus.",
+      "bot-needs": "Allowing an additional Upgrade play each turn with a printed-ability restriction.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -588,6 +704,8 @@
     },
     {
       "name": "Optimus Prime, Dark Awakening",
+      "alt-needs": "Returning a green card from scrap to hand.",
+      "bot-needs": "Applying different dynamic stat bonuses from each faction-bearing Upgrade by subtype and faction sharing.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -595,13 +713,16 @@
     },
     {
       "name": "Rabblerouser, Aerial Onslaught",
+      "alt-needs": "Looking at the deck top and optionally putting it into hand.",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-attack(when(event().defender.faction=Junkion))->atk_eob(3,this());on-friend-attack(when(event().attacker.trait=Plane))->plan(1)"
       }
     },
     {
       "name": "Red Wizard, Ruler of Menonia",
+      "alt-needs": "Swapping a hand card with a flipped no-icon card.",
+      "bot-needs": "Inspecting the opponent's hand and swapping it with revealed deck cards before reordering their deck.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -609,6 +730,8 @@
     },
     {
       "name": "Savage Wheelie, Rhymer Climber",
+      "alt-needs": "Searching the deck before the game and scaling an attack reduction by the minimum orange icons each player flipped.",
+      "bot-needs": "Scaling a DEF reduction by the minimum blue icons each player flipped.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -616,6 +739,8 @@
     },
     {
       "name": "Sharkticon Biter, Brazen Berserker",
+      "alt-needs": "Granting an additional attack to another Sharkticon after a multicolor flip.",
+      "bot-needs": "Detecting a character returning from KO to the battlefield.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -623,6 +748,8 @@
     },
     {
       "name": "Sharkticon Chomp, Craving Carnivore",
+      "alt-needs": "Restricting a selected untap target to a character that has a bot mode.",
+      "bot-needs": "Playing a green Upgrade from hand on flipping to this mode.",
       "tfdsl": {
         "alt": "",
         "bot": ""
@@ -630,20 +757,25 @@
     },
     {
       "name": "Sharkticon Gnaw, Gluttonous Gourmand",
+      "bot-needs": "Revealing a non-green hand card and placing it under this character.",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(health,this().under.count);on-this-flip()->draw(1)",
         "bot": ""
       }
     },
     {
       "name": "Sharkticon Peck, Protoform Pup",
+      "alt-needs": "Detecting multiple simultaneous friendly untaps and returning an orange card from scrap to hand.",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-flip()->bold_eot(1,all_friends(trait=Sharkticon || trait=Allicon))"
       }
     },
     {
       "name": "Shockblast, Galactic Man",
+      "alt-needs": "Playing this character's Upgrade side on KO.",
+      "upgrade-needs": "Conditional Bounty use and replacing this Upgrade leaving the battlefield with moving it to KO.",
+      "bot-needs": "Revealing and reordering the opponent's top deck cards and playing this character's Upgrade side on KO.",
       "tfdsl": {
         "alt": "",
         "upgrade": "",
@@ -652,13 +784,16 @@
     },
     {
       "name": "Slitherfang, Poisonous Protection",
+      "upgrade-needs": "Replacing this Upgrade leaving the battlefield with moving it to KO.",
       "tfdsl": {
-        "bot": "",
+        "bot": "on-this-after-attack()->damage(1,event().defender)",
         "upgrade": ""
       }
     },
     {
       "name": "Tow-Line, Signals Engineer",
+      "alt-needs": "Tracking the first Action played each turn.",
+      "bot-needs": "Returning a face-up Action from the played area to hand.",
       "tfdsl": {
         "alt": "",
         "bot": ""
