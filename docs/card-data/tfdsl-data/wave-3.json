@@ -9,11 +9,13 @@
   "cards": [
     {
       "name": "Anticipation Engine",
-      "needs": "Revealing the top deck card and conditionally playing it by card type"
+      "needs": "Revealing the top deck card and conditionally playing it by card type",
+      "tfdsl": ""
     },
     {
       "name": "Backup Bag",
-      "needs": "Replacing an attempted scrap of another attached Upgrade with scrapping this Upgrade"
+      "needs": "Replacing an attempted scrap of another attached Upgrade with scrapping this Upgrade",
+      "tfdsl": ""
     },
     {
       "name": "Basic Combat Protocol",
@@ -29,7 +31,8 @@
     },
     {
       "name": "Battlefield Scan",
-      "needs": "Temporarily preventing enemies from using Brave and Stealth"
+      "needs": "Temporarily preventing enemies from using Brave and Stealth",
+      "tfdsl": ""
     },
     {
       "name": "Bolster",
@@ -63,7 +66,8 @@
     },
     {
       "name": "Dampening Field",
-      "needs": "Limiting the number of battle cards an opponent can flip during a battle"
+      "needs": "Limiting the number of battle cards an opponent can flip during a battle",
+      "tfdsl": ""
     },
     {
       "name": "Defensive Formation",
@@ -79,18 +83,21 @@
     },
     {
       "name": "Dismantling Claw",
-      "needs": "Triggering when an Upgrade is scrapped from a character"
+      "needs": "Triggering when an Upgrade is scrapped from a character",
+      "tfdsl": ""
     },
     {
       "name": "EM24 IR Laser Launcher"
     },
     {
       "name": "Emergency Defense Field",
-      "needs": "Replacing even attack damage and detecting a defense that takes no attack damage"
+      "needs": "Replacing even attack damage and detecting a defense that takes no attack damage",
+      "tfdsl": ""
     },
     {
       "name": "Emp Wave",
-      "needs": "Tapping every character"
+      "needs": "Tapping every character",
+      "tfdsl": ""
     },
     {
       "name": "Energy Pack",
@@ -103,7 +110,8 @@
     },
     {
       "name": "Extra Padding",
-      "needs": "Allowing up to three named Armors in one Armor slot"
+      "needs": "Allowing up to three named Armors in one Armor slot",
+      "tfdsl": ""
     },
     {
       "name": "Firecon Flame",
@@ -119,11 +127,13 @@
     },
     {
       "name": "Fuel Cache",
-      "needs": "Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors"
+      "needs": "Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors",
+      "tfdsl": ""
     },
     {
       "name": "Full Loadout",
-      "needs": "Playing selected Upgrades from hand onto a previously selected character"
+      "needs": "Playing selected Upgrades from hand onto a previously selected character",
+      "tfdsl": ""
     },
     {
       "name": "Heat of Battle",
@@ -153,7 +163,8 @@
     },
     {
       "name": "LV Gamma-Disruptor Launcher",
-      "needs": "Allowing up to two named Weapons in one Weapon slot"
+      "needs": "Allowing up to two named Weapons in one Weapon slot",
+      "tfdsl": ""
     },
     {
       "name": "Ultra Magnus Armor",
@@ -165,11 +176,13 @@
     },
     {
       "name": "Metal Detector",
-      "needs": "Revealing the top deck card and conditionally playing it by card type"
+      "needs": "Revealing the top deck card and conditionally playing it by card type",
+      "tfdsl": ""
     },
     {
       "name": "Micro Capacitor",
-      "needs": "Triggering when the upgraded character uses a TAP ability"
+      "needs": "Triggering when the upgraded character uses a TAP ability",
+      "tfdsl": ""
     },
     {
       "name": "Pep Talk",
@@ -177,7 +190,8 @@
     },
     {
       "name": "Personal Targeting Drone",
-      "needs": "Triggering when an Upgrade is scrapped from a character"
+      "needs": "Triggering when an Upgrade is scrapped from a character",
+      "tfdsl": ""
     },
     {
       "name": "Point-Defense System",
@@ -186,15 +200,18 @@
     },
     {
       "name": "Pop a Wheelie",
-      "needs": "Flipping characters to a specified mode and granting a restricted extra attack"
+      "needs": "Flipping characters to a specified mode and granting a restricted extra attack",
+      "tfdsl": ""
     },
     {
       "name": "Quartermaster",
-      "needs": "Choosing between distinct effects and putting a Battle Master Upgrade from the KO area onto a selected character"
+      "needs": "Choosing between distinct effects and putting a Battle Master Upgrade from the KO area onto a selected character",
+      "tfdsl": ""
     },
     {
       "name": "Reactive Armor",
-      "needs": "Triggering when an Upgrade is scrapped from a character"
+      "needs": "Triggering when an Upgrade is scrapped from a character",
+      "tfdsl": ""
     },
     {
       "name": "Reflex Circuits",
@@ -211,11 +228,13 @@
     },
     {
       "name": "RR Disruptor Blade",
-      "needs": "Persisting attack flip results for a conditional post-battle scrap"
+      "needs": "Persisting attack flip results for a conditional post-battle scrap",
+      "tfdsl": ""
     },
     {
       "name": "Scavenge the Battlefield",
-      "needs": "Replacing Upgrade scrapping during a character KO and moving any number of those Upgrades to another character"
+      "needs": "Replacing Upgrade scrapping during a character KO and moving any number of those Upgrades to another character",
+      "tfdsl": ""
     },
     {
       "name": "Smoke Cloak",
@@ -235,11 +254,13 @@
     },
     {
       "name": "Spinner Rims",
-      "needs": "Flipping an extra battle card"
+      "needs": "Flipping an extra battle card",
+      "tfdsl": ""
     },
     {
       "name": "Squish them like Bugs",
-      "needs": "A delayed attack-damage effect conditioned on the selected character's stars"
+      "needs": "A delayed attack-damage effect conditioned on the selected character's stars",
+      "tfdsl": ""
     },
     {
       "name": "Steady Shot",
@@ -252,7 +273,8 @@
     },
     {
       "name": "Take Cover",
-      "needs": "Preventing all non-attack damage to the controller's characters for the turn"
+      "needs": "Preventing all non-attack damage to the controller's characters for the turn",
+      "tfdsl": ""
     },
     {
       "name": "Two-Pronged Attack",
@@ -260,7 +282,8 @@
     },
     {
       "name": "Unconventional Flying Object",
-      "needs": "Flipping a character to specified modes in sequence"
+      "needs": "Flipping a character to specified modes in sequence",
+      "tfdsl": ""
     },
     {
       "name": "Urban Camo",
@@ -268,7 +291,8 @@
     },
     {
       "name": "W-5 Gyro Blaster",
-      "needs": "Limiting each player's number of battle-card flips during a battle"
+      "needs": "Limiting each player's number of battle-card flips during a battle",
+      "tfdsl": ""
     },
     {
       "name": "Alpha Trion, Cybertronian Sage",
