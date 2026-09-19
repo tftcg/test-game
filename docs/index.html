@@ -498,7 +498,7 @@
       height: 1.15rem;
       accent-color: #a9cce8;
     }
-    #card-pick-confirm {
+    #card-pick-confirm, #card-pick-skip {
       display: block;
       min-width: 6rem;
       margin-left: auto;
@@ -509,6 +509,7 @@
       border-radius: .25rem;
       cursor: pointer;
     }
+    #card-pick-skip[hidden] { display: none; }
   </style>
 </head>
 <body>
@@ -603,7 +604,13 @@
     <p id="card-pick-instructions"></p>
     <div id="card-pick-options"></div>
     <button id="card-pick-confirm" type="button">Confirm</button>
+    <button id="card-pick-skip" type="button" hidden>Skip</button>
     <aside id="card-pick-preview" hidden aria-hidden="true"></aside>
+  </dialog>
+  <dialog id="engine-error">
+    <h2 id="engine-error-title">Game error</h2>
+    <p id="engine-error-message"></p>
+    <button id="engine-error-confirm" type="button">OK</button>
   </dialog>
   <script type="module" src="./web.js"></script>
 </body>
