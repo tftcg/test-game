@@ -9,331 +9,402 @@
   "cards": [
     {
       "name": "38-Amp Ionic Plate",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Testing whether a damage-counter total is odd"
     },
     {
       "name": "Abrogate",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Revealing a matching card from hand and cancelling and returning a played Action"
     },
     {
       "name": "Anti-Grav Cell",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Detecting use of an attached character's TAP ability and scrapping this Upgrade"
     },
     {
       "name": "Armor Axe"
     },
     {
       "name": "Auxiliary Fuel Tank",
-      "tfdsl": ""
+      "tfdsl": "health(2);static(health,when(attached().trait=Titan || attached().trait=Guardian || attached().stars>=18),2)"
     },
     {
       "name": "Bracing Up",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Caring is Sharing!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action attack-damage replacement with optional variable Upgrade sacrifice, proportional repair, and moving this card to KO"
     },
     {
       "name": "Cooling of Tensions",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Limiting the number of battle cards each player may flip per battle"
     },
     {
       "name": "Custom Junkion Saddle",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Stations, station occupancy requirements, and granting a Station from an Upgrade"
     },
     {
       "name": "Dare to Be Stupid!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action attack-damage replacement setting damage from the target's ATK"
     },
     {
       "name": "Decelerator Laser",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Granting Bandit to the defender conditionally on the attached attacker's Bandit keyword"
     },
     {
       "name": "Depower-Linx",
-      "tfdsl": ""
+      "tfdsl": "if(all_friends(trait=Ranged).count>0)->(choose(pick_enemy());if(previous_target().mode=combiner)->damage(2,previous_target());if(previous_target().mode!=bot,previous_target().mode!=alt)->damage(2,previous_target()))"
     },
     {
       "name": "Diffraction Sword",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Counters on an Upgrade and a non-attack-damage replacement that adds and checks them"
     },
     {
       "name": "Drill Fingers",
-      "tfdsl": ""
+      "comment": "TODO: Implement Oppress!!",
+      "tfdsl": "on-put(when(attached().trait=Specialist))->damage(1,attached());static(atk,when(attached().trait=Specialist),1);oppress(1)"
     },
     {
       "name": "Dual Smokestacks",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Opponent choice between multi-target and selected damage effects"
     },
     {
       "name": "Escapology",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Temporary immunity to Oppress"
     },
     {
       "name": "Everything Must Go!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "A delayed attack trigger for a chosen character, post-battle optional scrap, and using an Upgrade stat-box value"
     },
     {
       "name": "Explosive Disposal",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Tracking a scrapped opposing Upgrade, moving it to KO, and its stat-box total"
     },
     {
       "name": "Extended Duration Mission",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support. Tracking a revealed Secret Action through battle and replaying it after battle"
     },
     {
       "name": "Half-Track Trickery",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Forced flip to a specific mode and conditional follow-up based on a selected character"
     },
     {
       "name": "Hand of Adaptus",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Counting characters that have an alt mode rather than their current mode"
     },
     {
       "name": "Happy Motoring!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support. Stations and flipping multiple characters to another mode after battle"
     },
     {
       "name": "Head Case",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Reassigning Titan Master bonuses between characters"
     },
     {
       "name": "Head of State",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Selecting battle cards to scrap without icons and scaling temporary stats by that selection"
     },
     {
       "name": "High Beam Headlights",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Player choice between temporary keywords in an attacker-selection window"
     },
     {
       "name": "Hodgepodge Panoply",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Granting the attacker Drifter during a conditional defense"
     },
     {
       "name": "Hot Seat",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support. Characters leaving Stations"
     },
     {
       "name": "Hurry Hurry Hurry!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Enforcing a compulsory additional attacker with prior-attack tracking"
     },
     {
       "name": "Imminent Breakthrough",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support. Treating cards as though a named card was played this turn"
     },
     {
       "name": "Inexorable Force",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Immunity to opponent tapping and Oppress"
     },
     {
       "name": "Junkyard Turbofox",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Interrupting Upgrade returns across zones and swapping a matching star-cost Upgrade"
     },
     {
       "name": "Lagartan Spaulders",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Optional replacement-cost discard of a Green card when this Upgrade would be scrapped"
     },
     {
       "name": "Lie in Wait",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Locking it Up",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Me Grimlock Need New Strategy",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Moving named Stratagems between KO, outside the game, and the battlefield with shared targets"
     },
     {
       "name": "Mirror Response Mode",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Counting shared traits with the battling enemy"
     },
     {
       "name": "Monofiber Filament",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Additional Upgrade slot capacity"
     },
     {
       "name": "Muster the Will",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Mystical Bond",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Stations and playing an Upgrade from scrap"
     },
     {
       "name": "Ninety Day Warranty!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Distributing pending attack damage among any number of characters"
     },
     {
       "name": "Nucleon Exposure",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing opponent-forced flips and turn-wide flip prevention"
     },
     {
       "name": "Nudge Gun",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Selecting and tapping or untapping Rolling Actions"
     },
     {
       "name": "Pack Behavior",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Revenge-triggered movement to another character and additional Upgrade slot capacity"
     },
     {
       "name": "Passenger Coverage",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action attack-damage replacement transferring damage after base DEF calculation across Station occupants"
     },
     {
       "name": "Patrol Bolas",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Stations, counters, and moving an Upgrade to a Station occupant"
     },
     {
       "name": "Patrol the Perimeter",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(tough_eob(2,event().defender))"
     },
     {
       "name": "Peas in a Pod!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Selecting another character distinct from an earlier selection with conditional star thresholds"
     },
     {
       "name": "Performance Gear Selector",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-defend-flip(when(event().flips.white>=4))->scrap_upgrade(this());on-attached-after-defend-flip(when(event().flips.white<4))->def_eob(event().flips.white,attached())"
     },
     {
       "name": "Pile-Up",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Selecting a player's Rolling Actions"
     },
     {
       "name": "Playing Both Sides",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Tracking starting-team conditions and creating a delayed chosen-target trigger with player choice"
     },
     {
       "name": "Police Action",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Scrapping an arbitrary Rolling Action and suppressing its effect"
     },
     {
       "name": "Razor Wings",
-      "tfdsl": ""
+      "tfdsl": "on-put(when(attached().trait=Melee))->damage(1,all_enemies(tapped=tapped))"
     },
     {
       "name": "Reactive Thrusters",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Capping Black Pierce contribution based on the attacker's base ATK"
     },
     {
       "name": "Recon Reissue",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Moving a selected Upgrade between characters or putting a qualifying KO Upgrade onto a character"
     },
     {
       "name": "Relax With a Cold One!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "A delayed trigger for a chosen character and bulk returning the defender's Upgrades"
     },
     {
       "name": "Revving Up",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Riffraff Knick-Knacks",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Additional Upgrade slot capacity and counters on an Upgrade"
     },
     {
       "name": "Severed Combiner Hand",
-      "tfdsl": ""
+      "tfdsl": "on-attached-defend(when(event().attacker.stars>=17))->(def_eob(1,attached());pierce_eob(0-2,event().attacker))"
     },
     {
       "name": "Shanix Laundering",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "A conditional Upgrade scrap cost followed by revealing specific deck cards to hand"
     },
     {
       "name": "Shard of the Divine Light",
-      "tfdsl": ""
+      "tfdsl": "on-put()->repair(1,attached());health(4)"
     },
     {
       "name": "Sitrep Update",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Replacing the scrap of a face-down Secret Action"
     },
     {
       "name": "Skimming Off the Top",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "each(all_players())->draw(1,it());if(starting_team(trait=Mercenary || trait=Junkion).count>0)->draw(1)"
     },
     {
       "name": "Sparring Lessons",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend(faction=Autobot,count=2));damage(1,previous_target());repair(2,previous_target())",
+      "comment": "TODO: Test"
     },
     {
       "name": "Spear of the Moment",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-attack-flip(when(event().flips.white>=4))->scrap_upgrade(this());on-attached-after-attack-flip(when(event().flips.white<4))->pierce_eob(event().flips.white,attached())"
     },
     {
       "name": "Spread Democracy!",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support. Delayed battle-limited triggers on a specified enemy"
     },
     {
       "name": "Summon the Courage",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Superior Surveillance",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Enforcing a play requirement based on a named card played this turn"
     },
     {
       "name": "Take the Shot",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support"
     },
     {
       "name": "Terrorburster Shield",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Capping attack damage for a battle based on the defender's stars"
     },
     {
       "name": "Terrorcon Enigma",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Opponent-controlled flipping and combining characters"
     },
     {
       "name": "The Power to Bite",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Secret Action trigger on lethal attack damage and damage calculated from combat stats"
     },
     {
       "name": "Throttle",
-      "tfdsl": ""
+      "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));tap(pick_enemy(previous_target().health<=health,tapped=untapped))",
+      "comment": "TODO: Test"
     },
     {
       "name": "Too Short For This Ride",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Characters leaving Stations and temporary Station-entry prevention"
     },
     {
       "name": "Traffic Checkpoint",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Selecting and tapping a player's Rolling Actions"
     },
     {
       "name": "Transfusion Cable",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Additional Upgrade slot capacity and removing a printed trait"
     },
     {
       "name": "Tried and Executed",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Returning a filtered Upgrade from scrap to hand"
     },
     {
       "name": "Two Foes, Two Fists",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Rolling Action support. Resolving excess attack damage and selecting a tapped or untapped recipient"
     },
     {
       "name": "Unfathomable Motives",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Cancelling a played Action while resolving a Secret Action"
     },
     {
       "name": "Untiring Parma Shield"
     },
     {
       "name": "Wave of Lightning",
-      "tfdsl": ""
+      "tfdsl": "damage(1,all_enemies());if(all_friends(faction=Quintesson,trait=Ranged).count>0)->damage(1,all_enemies())"
     },
     {
       "name": "Well-Worn Armor",
-      "tfdsl": ""
+      "tfdsl": "",
+      "needs": "Counting non-attack damage instances received this turn"
     },
     {
       "name": "A Very Cross Examination",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Stations and the Interrogation Console Station effect"
     },
     {
       "name": "Alphastrike Counterforce"
@@ -342,169 +413,204 @@
       "name": "Angolmois Infusion",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Counters on a Stratagem, main-phase conditional combining, and Stratagem-side flipping",
+      "back-needs": "Counters on a Stratagem and scaling a named character's DEF by those counters"
     },
     {
       "name": "Barrel Rolling",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Counting tapped Rolling Actions"
     },
     {
       "name": "Blockbuster Moving Trailers",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Stations and counting characters in Stations"
     },
     {
       "name": "Boater Suppression",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Starting-team composition checks and Stratagem-side flipping",
+      "back-needs": "Computing a temporary keyword total from character star counts and Stratagem-side flipping"
     },
     {
       "name": "Cat's Cradle of Contingencies",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "First-turn timing, playing multiple Rolling Actions, and counting the cards played",
+      "back-needs": "Tracking Rolling Actions untapped this turn"
     },
     {
       "name": "Cherish This World or Perish",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Counters on a Stratagem and combining named characters"
     },
     {
       "name": "Combat Deck",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Stations and their game-start and untap effects",
+      "back-needs": "Stations and their untap and Station-entry effects"
     },
     {
       "name": "Don't Touch That Dial!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Suppressing the battle effects of selected White icons"
     },
     {
       "name": "Extermination Exercise",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Stations and conditional temporary opposing-character stat reductions"
     },
     {
       "name": "Four the Selectors!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Horde keyword support"
     },
     {
       "name": "Heroic Perseverance",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Conditional attack-damage replacement"
     },
     {
       "name": "Ignore the Pain",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Storing damage on a Stratagem and moving it between the Stratagem and a character"
     },
     {
       "name": "It's As Good As Used!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Revealing multiple hand cards and allowing an opponent to choose one to play onto a character"
     },
     {
       "name": "I've Got Your Back",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Delayed after-battle effects, tracking all-character tapped state, and Stratagem-side flipping"
     },
     {
       "name": "Kakistocracy",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Main-phase timing, Stations, and tapping or untapping Rolling Actions"
     },
     {
       "name": "King of Pain",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Removing text from a character and tracking played Upgrade sides",
+      "back-needs": "Modifying printed card text and named Upgrade text"
     },
     {
       "name": "Materiel War",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Once-per-turn tracking and detecting an opponent-caused scrap of a character with Revenge"
     },
     {
       "name": "Me Grimlock Kick Butt!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Named-character attack conditions and Stratagem-side flipping",
+      "back-needs": "Temporary global stat modifiers and Stratagem-side flipping after battle"
     },
     {
       "name": "Me Grimlock King!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Replacing printed card text"
     },
     {
       "name": "Me Grimlock Mash Brains!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Opponent hand reveal of a count based on a character trait and scrapping a revealed card"
     },
     {
       "name": "Me Grimlock Say Execute Them!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Named-character conditions and temporary enemy HEALTH and DEF reductions"
     },
     {
       "name": "Me Grimlock Want to Munch Metal",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Replacing printed keyword text"
     },
     {
       "name": "No Lords, No Masters",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Putting a Stratagem onto a character and moving it to KO when that character is KO'd"
     },
     {
       "name": "Old War Stories",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Counters on a Stratagem, tracking weapons played this turn, and playing Weapons onto multiple characters"
     },
     {
       "name": "Order in the Court",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Detecting use of a TAP ability and Stratagem-side flipping",
+      "back-needs": "Stratagem-side flipping when all characters untap"
     },
     {
       "name": "Prosecutorial Overreach",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Once-per-turn tracking of Tentacle upgrades and playing another Tentacle"
     },
     {
       "name": "Put a Stinger in the Works",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Deploying a named character from outside the game in a specified mode before the game"
     },
     {
       "name": "Queen of the Junkyard",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Counters on a Stratagem, deck reshuffle detection, and scaling a named character's ATK by those counters"
     },
     {
       "name": "Scrappy Spotlight"
@@ -513,223 +619,273 @@
       "name": "Slice, Dice, and Julienne!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Detecting an opponent drawing cards during your turn and granting temporary ATK to Road Drones"
     },
     {
       "name": "Sonic Doom",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Removing printed text from a named character mode"
     },
     {
       "name": "Spin to Deflect Stuff",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Non-attack-damage replacement followed by damage to an enemy"
     },
     {
       "name": "Stop the Tax and Spend!",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Replacing a multi-card deck scrap with a single-card deck scrap"
     },
     {
       "name": "The City's Finest Views",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Granting Stations to a trait and resolving Station-entry effects"
     },
     {
       "name": "The Great Escape",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Storing damage on a Stratagem and tracking characters KO'd by that Stratagem"
     },
     {
       "name": "Third Party Brigade",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Deploying a named character from outside the game in a specified mode and scrapping the first Black battle card without its icons"
     },
     {
       "name": "This Shall Be Your Ship",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Tracking multiple listed game events and Stratagem-side flipping",
+      "back-needs": "Returning a qualifying KO character to the battlefield and Stations"
     },
     {
       "name": "Time for New Leadership",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Tracking a character KO during the opponent's turn and delayed conditional repair"
     },
     {
       "name": "Writhing in the Deep",
       "tfdsl": {
         "front": ""
-      }
+      },
+      "front-needs": "Tracking characters KO'd during the previous turn, variable Green-card discards, returning characters from KO, and delayed KO"
     },
     {
       "name": "Ashtray, Come to Where the Flavor Is!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Detecting cards with no battle icons and Stations",
+      "bot-needs": "Counting icon combinations in an opponent scrap pile and opponent-selected repeated damage"
     },
     {
       "name": "Autobot Infinitus",
       "tfdsl": {
-        "head": "",
-        "bot": ""
-      }
+        "head": "oppress(1)",
+        "bot": "oppress(1)"
+      },
+      "comment": "Implement Oppress"
     },
     {
       "name": "Autobot Roller, Scout Drone",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Treating a character as though it had another name and revealing and conditionally playing the top deck card"
     },
     {
       "name": "Bug Bite, The Renegade Who Had It Made",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Returning an Upgrade from scrap based on shared battle-icon colors and card types",
+      "bot-needs": "Attack-damage lethal detection, Bounty resolution, and conditional effects based on an opponent-selected hand card"
     },
     {
       "name": "Clench, Colossus of Obliteration",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Scrapping a battle card without its icons and choosing an icon color to calculate damage",
+      "bot-needs": "Optional variable hand scrapping and scaling a temporary stat by the number scrapped"
     },
     {
       "name": "Crasher, Fractious Fanatic",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Detecting simultaneous non-attack damage and choosing between multi-character repair or enemy damage",
+      "bot-needs": "Selecting a trait on the defender and damaging other enemies sharing that trait"
     },
     {
       "name": "Decepticon Wingthing, Loyal, Lethal Cohort",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Moving damage between selected characters while excluding the source target",
+      "bot-needs": "Detecting cards put from hand onto a deck"
     },
     {
       "name": "Detritus, Now With Sleek, Sexy Handling!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Deploying a uniquely named character from outside the game",
+      "bot-needs": "Playing an Upgrade followed by combining a dynamically qualified group"
     },
     {
       "name": "Gilthor, Wounded Retribution",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Per-turn tracking of characters taking non-attack damage",
+      "bot-needs": "Reading stat-box values of an Upgrade when it is scrapped"
     },
     {
       "name": "Greasestain, No Muss! No Fuss!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Stations and moving damage to a character in a Station",
+      "bot-needs": "Conditional Station-based damage"
     },
     {
       "name": "High Bailiff Bollag, Court Knight",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      }
+        "alt": "oppress(1);static(atk,all(opponent().ko,type=Upgrade).count)",
+        "bot": "on(event=put-upgrade,when(event().attached.owner=opponent(),event().played.subtype=Weapon))->atk_eot(0-2,event().attached)"
+      },
+      "comment": "Implement Oppress"
     },
     {
       "name": "Junker Drone",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Suppressing character KO triggers and detecting return to the battlefield"
     },
     {
       "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Limiting battle flips and Stations",
+      "bot-needs": "Selecting an opponent battle card to scrap without its icons and repairing by selected icon count"
     },
     {
       "name": "Junkion Nancy, Just Say No to Sparkplugs!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Characters with a specified alternate mode and Stations",
+      "bot-needs": "Detecting a character leaving a Station"
     },
     {
       "name": "Lord Kledji, Royal Ruler of Quintessa",
       "tfdsl": {
         "bot": ""
-      }
+      },
+      "bot-needs": "TAP ability choices that discard a Green card as a cost and affect Rolling Actions or enemy Upgrades"
     },
     {
       "name": "Loudmouth, Incendiary Control",
       "tfdsl": {
         "alt": "",
         "body": ""
-      }
+      },
+      "alt-needs": "Moving scrapped cards to KO and returning a same-named Upgrade from scrap",
+      "body-needs": "Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap"
     },
     {
       "name": "Megatron, Megalomaniacal Mariner",
+      "comment": "TODO: This needs a pay() as it has an If you do",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(health,all(self().ko,trait=Allicon || trait=Sharkticon).count);on-friend-attack(when(event().attacker.id!=this().id,event().attacker.trait=Allicon || event().attacker.trait=Sharkticon))->(if(confirm())->(damage(1,event().attacker);atk_eot(1,event().attacker)))",
         "bot": ""
-      }
+      },
+      "bot-needs": "Revealing multiple deck cards and playing one after a conditional self-damage effect"
     },
     {
       "name": "Muck Sergeant Peck, Brackish Chain-Breaker",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Triggering after qualifying attack damage and playing a Rolling Action",
+      "bot-needs": "Moving damage between characters while preventing either from being KO'd"
     },
     {
       "name": "Q-PTP Aculear Scope",
       "tfdsl": {
         "upgrade": ""
-      }
+      },
+      "upgrade-needs": "Assembling paired cards, additional Weapon slot capacity, and replacing a leave-play event with a move to KO"
     },
     {
       "name": "Q-RTR Arachnoid Array",
       "tfdsl": {
         "upgrade": ""
-      }
+      },
+      "upgrade-needs": "Assembling paired cards, Revenge relocation, and replacing a leave-play event with a move to KO"
     },
     {
       "name": "Quig",
       "tfdsl": {
-        "head": "",
-        "bot": ""
-      }
+        "head": "on-this-defend(when(event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)",
+        "bot": "on-this-defend(when(event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)"
+      },
+      "comment": "TODO: Test"
     },
     {
       "name": "Rum-Maj, Wreck-Gar Sold Separately!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Stations and conditional global stat and keyword effects",
+      "bot-needs": "Counting battle cards flipped for conditional temporary effects"
     },
     {
       "name": "Scrapheap, It's Not Trash If It's Worth Cash!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Stations and playing a qualifying Upgrade from scrap",
+      "bot-needs": "Post-battle Upgrade replacement from scrap with a different-name condition"
     },
     {
       "name": "Scrapper Drone",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Suppressing character KO triggers and detecting return to the battlefield"
     },
     {
       "name": "Sentinel Prime, Legacy of the Primes",
@@ -737,120 +893,149 @@
         "alt 1": "",
         "alt 2": "",
         "body": ""
-      }
+      },
+      "alt 1-needs": "Granting a keyword to other characters conditionally on this character's keyword",
+      "alt 2-needs": "Increasing this character's keyword total conditionally on that keyword",
+      "body-needs": "Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities"
     },
     {
       "name": "Sideswipe, Covert Clone",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Conditional attacker keyword checks and replacing an Upgrade scrap with a different Upgrade",
+      "bot-needs": "Finding the highest stat-box values among filtered KO Upgrades"
     },
     {
       "name": "Sinnertwin, Two-Faced Disgrace",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-attack-damage(when(event().origin=this()))->damage(1,pick_enemy(id!=event().target.id))"
+      },
+      "alt-needs": "Secret Action-style reveal and cancellation while an opponent plays an Upgrade"
     },
     {
       "name": "Solarbot, Enigmatic Sunsteader",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped));static(def,when(this().tapped=untapped),0-1);static(brave,when(this().tapped=tapped));static(def,when(this().tapped=tapped),1)",
         "bot": ""
-      }
+      },
+      "bot-needs": "Counting cards under the defender, head-mode characters on the defender, and Stations when calculating temporary ATK"
     },
     {
       "name": "Soundbarrier, Grudging Foot Soldier Support",
       "tfdsl": {
         "bot": "",
         "upgrade": ""
-      }
+      },
+      "bot-needs": "Capping a Black icon's Pierce contribution",
+      "upgrade-needs": "Replacing a leave-play event with a move to KO"
     },
     {
       "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Conditional attack-damage redistribution with rounded division and starting-team checks",
+      "bot-needs": "Once-per-turn tracking and rounded division when moving damage"
     },
     {
       "name": "Terrorcon Blot, Rank and Vile Rank and File",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Secret Action-style reveal and cancellation while an opponent plays an Action",
+      "bot-needs": "Non-attack-damage replacement conditional on the source card's owner"
     },
     {
       "name": "Terrorcon Cutthroat, Shock and Cawww",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      }
+        "bot": "on-friend-ko(when(event().ko.trait=Terrorcon))->untap(pick_friend(trait=Terrorcon,stars=4))"
+      },
+      "comment": "TODO: Test",
+      "alt-needs": "Revealing Secret Actions from hand and returning an opponent's face-down Secret Action"
     },
     {
       "name": "Terrorcon Hun-Gurrr, Eaters Digest",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Player choice between damage and conditional repair after self-damage",
+      "bot-needs": "Discarding a card as a cost and scaling temporary DEF by Orange flips with a cap"
     },
     {
       "name": "Terrorcon Rippersnapper, Tooth and Nail",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Simultaneously tapping this character and an enemy, followed by a conditional keyword check",
+      "bot-needs": "Checking defender Tough and counting Actions and Upgrades played this turn"
     },
     {
       "name": "Trasher Drone",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Suppressing character KO triggers, detecting return to the battlefield, and moving a filtered opponent-scrap Upgrade to KO"
     },
     {
       "name": "Tread Bolt, Devil of the Deep Blue Sky",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Revealing, selectively retaining, ordering, and scrapping multiple deck cards",
+      "bot-needs": "Detecting deck reshuffles and placing cards under a character"
     },
     {
       "name": "Waster Drone",
       "tfdsl": {
         "alt": ""
-      }
+      },
+      "alt-needs": "Suppressing character KO triggers, detecting return to the battlefield, and moving an Upgrade between distinct enemies"
     },
     {
       "name": "Wreck-Gar, The Big Cheese! Now With More Cheese!",
       "tfdsl": {
         "alt": "",
         "bot": ""
-      }
+      },
+      "alt-needs": "Other-character targeting and Stations",
+      "bot-needs": "Checking an attached Upgrade's keyword and applying conditional stats"
     },
     {
       "name": "Abominus, Hellsparked Horror",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Counting distinct Upgrade types and opponent-controlled character flipping"
     },
     {
       "name": "Roadmaster Prime Mode, Master of Chaos",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Per-player hand scrapping and draws based on the other player's scrapped-card count, plus deployment of combined characters on KO"
     },
     {
       "name": "Scorpulator, Desert Rose",
       "tfdsl": {
         "bot": ""
-      }
+      },
+      "bot-needs": "Choosing a trait from a character and damaging every character with that trait"
     },
     {
       "name": "Thunder Guts Gilthor, The One Who Claps",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Odd attack-damage detection and Stations"
     }
   ]
 }

@@ -21,7 +21,7 @@
     },
     {
       "name": "Battering Ram",
-      "needs": "Forcing an opponent to flip a damaged character to its other mode"
+      "tfdsl": "put_only(trait=Truck);on-attack-damage(when(event().origin=attached(),event().damage>0))->flip(event().target)"
     },
     {
       "name": "Battlefield Report",
