@@ -123,7 +123,7 @@
     },
     {
       "name": "Frag Toss",
-      "tfdsl": "damage(1,opponent_pick(opponent().chars));if(all(self().starting_team,faction=Decepticon).count=self().starting_team.count)->damage(1,previous_target())"
+      "tfdsl": "damage(1,opponent_pick(opponent().chars));if(starting_team(faction!=Decepticon).count=0)->damage(1,previous_target())"
     },
     {
       "name": "Fuel Cache",
@@ -246,7 +246,7 @@
     },
     {
       "name": "Diagnosis",
-      "tfdsl": "repair(1,pick_friend());if(all(self().starting_team,faction=Autobot).count=self().starting_team.count)->draw(1)"
+      "tfdsl": "repair(1,pick_friend());if(starting_team(faction!=Autobot).count=0)->draw(1)"
     },
     {
       "name": "Special Ops Mission",

@@ -105,8 +105,7 @@
     },
     {
       "name": "Hand of Adaptus",
-      "tfdsl": "",
-      "needs": "Counting characters that have an alt mode rather than their current mode"
+      "tfdsl": "draw(all(self().chars,other_modes=alt,mode=bot || mode=body).count)"
     },
     {
       "name": "Happy Motoring!",

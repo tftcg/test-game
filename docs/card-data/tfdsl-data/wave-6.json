@@ -192,8 +192,8 @@
     },
     {
       "name": "Photon Charge",
-      "needs": "Tracking an attack-declaration condition through delayed after-battle effects and scrapping the source.",
-      "tfdsl": ""
+      "comment": "BUG: Engine requests reorder without data; was on Brawn. Not clear why as the three events below are at different times",
+      "tfdsl": "on-attached-attack(when(attached().def<=1))->damage(1,attached());on-attached-attack-damage(when(event().damage>0))->damage(1,pick_enemy(id!=event().target.id));on-attached-after-attack()->scrap_upgrade(this())"
     },
     {
       "name": "Polarity Gauntlet",

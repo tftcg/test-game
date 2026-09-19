@@ -37,7 +37,7 @@
     },
     {
       "name": "Bad Attitude",
-      "tfdsl": "if(starting_team(faction=Decepticon).count=self().starting_team.count)->(repair(1,all_friends());damage(1,all_chars(faction=Autobot)))"
+      "tfdsl": "if(starting_team(faction!=Decepticon).count=0)->(repair(1,all_friends());damage(1,all_chars(faction=Autobot)))"
     },
     {
       "name": "Bashing Shield",
@@ -318,8 +318,7 @@
     },
     {
       "name": "Swindled",
-      "tfdslFuture": "draw(2);scrap_hand(pick_hand(count=2))",
-      "tfdsl": ""
+      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Decepticon).count=0)->(if(confirm())->play(pick_hand(type=Upgrade)))"
     },
     {
       "name": "Tackle",
