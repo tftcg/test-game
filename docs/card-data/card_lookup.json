@@ -1517,7 +1517,7 @@
     "id": "C312"
   },
   {
-    "name": "Duo-Charge Electrostatic Photon Cannon",
+    "name": "Private Firedrive, Ground Command • Artillery",
     "id": "C313"
   },
   {
@@ -1533,7 +1533,7 @@
     "id": "C316"
   },
   {
-    "name": "Binary Edgewing Scythe",
+    "name": "Private Pteraxadon, Air Command • Artillery",
     "id": "C317"
   },
   {
@@ -1565,11 +1565,11 @@
     "id": "C324"
   },
   {
-    "name": "Manifold Ion Particle Blaster, Weapon",
+    "name": "Raider Aimless, Air Force • Weapons",
     "id": "C325"
   },
   {
-    "name": "Dual-Impact Shatterblast Compression Cannon",
+    "name": "Raider Blowpipe, Air Force • Weapons",
     "id": "C326"
   },
   {
@@ -1597,7 +1597,7 @@
     "id": "C332"
   },
   {
-    "name": "Black Beam Blaster",
+    "name": "Raider Nightstick, Ground Force • Weapons",
     "id": "C333"
   },
   {
@@ -1633,7 +1633,7 @@
     "id": "C341"
   },
   {
-    "name": "Heavy Force Defensebreaker Cannon",
+    "name": "Sergeant Cog, Artillery • Mechanic",
     "id": "C342"
   },
   {
@@ -1661,7 +1661,7 @@
     "id": "C348"
   },
   {
-    "name": "Airquake Hammerclaw",
+    "name": "Private Smashdown, Ground Command • Artillery",
     "id": "CP1903"
   },
   {
@@ -2133,7 +2133,7 @@
     "id": "C415"
   },
   {
-    "name": "Shadowsteel Iceblade",
+    "name": "Private Dazzlestrike, Ground Command • Artillery",
     "id": "C416"
   },
   {
@@ -2173,11 +2173,11 @@
     "id": "C425"
   },
   {
-    "name": "Anti-Gravity Turbo Pack",
+    "name": "Private Turbo Board, Air Command • Evac",
     "id": "C426"
   },
   {
-    "name": "Anti-Ballistic Turret Helmet",
+    "name": "Private Vanguard, Ground Command • Advance Guard",
     "id": "C427"
   },
   {
@@ -2189,7 +2189,7 @@
     "id": "C429"
   },
   {
-    "name": "Oxidation Cannon",
+    "name": "Raider Caliburst, Air Force Weapons",
     "id": "C430"
   },
   {
@@ -2205,7 +2205,7 @@
     "id": "C433"
   },
   {
-    "name": "Steelbite Incisor Mask",
+    "name": "Raider Needler, Ground Force • Demolitions",
     "id": "C434"
   },
   {
@@ -2225,7 +2225,7 @@
     "id": "C438"
   },
   {
-    "name": "Multi-Maneuver Glider Wings",
+    "name": "Raider Sights, Air Force • Artillery",
     "id": "C439"
   },
   {
@@ -3209,7 +3209,7 @@
     "id": "C609"
   },
   {
-    "name": "Crossguard 2X",
+    "name": "Decepticon Doublecrosser, Shield Brothers",
     "id": "C610"
   },
   {
@@ -3289,7 +3289,7 @@
     "id": "C629"
   },
   {
-    "name": "UD-04 Globo Guard",
+    "name": "Slitherfang, Poisonous Protection",
     "id": "C630"
   },
   {
@@ -4061,7 +4061,7 @@
     "id": "C828"
   },
   {
-    "name": "CY-47 Bridge Bulwark",
+    "name": "Soundbarrier, Grudging Foot Soldier Support",
     "id": "C829"
   },
   {
@@ -4417,7 +4417,7 @@
     "id": "C906"
   },
   {
-    "name": "P38 Fusion Blaster",
+    "name": "Megatron, Bane of Cybertron",
     "id": "C907"
   },
   {
