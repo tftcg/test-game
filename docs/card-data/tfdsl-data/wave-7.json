@@ -59,8 +59,7 @@
     },
     {
       "name": "Foreman's Ingenuity",
-      "tfdsl": "",
-      "needs": "A starting-team play restriction and conditionally playing a card returned from scrap"
+      "tfdsl": "play_only(starting_team(trait!=Constructicon).count=0);move_to(self().hand,pick_scrap(name=\"Builder's Tools\" || name='Construction Enigma' || name='Heavy Landing' || name='Reclaim'));if(tower().counter>=6)->(if(confirm())->play(previous_target()))"
     },
     {
       "name": "Impetuous Stand",

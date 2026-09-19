@@ -79,7 +79,7 @@
     },
     {
       "name": "Data Bank",
-      "tfdsl": "on-start-turn()->draw(1)"
+      "tfdsl": "on-start-turn(when(event().player=this().owner))->draw(1)"
     },
     {
       "name": "Data Pad",
@@ -688,8 +688,8 @@
     {
       "name": "Cliffjumper, Renegade Warrior",
       "tfdsl": {
-        "comment": "Alt Mode needs to know they were a car, even though they've now flipped. Also needs to be an other_friends. ko will need to be changed to only chars in the ko",
-        "alt": "on-flip(when(event().flipped.owner=this().owner,event().flipped.mode=bot))->draw(1)",
+        "comment": "ko will need to be changed to only chars in the ko",
+        "alt": "on-flip(when(event().flipped.owner=this().owner,event().flipped.mode=bot,event().flipped.other_modes=Car))->draw(1)",
         "bot": "static(atk,self().ko.count)"
       }
     },

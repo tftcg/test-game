@@ -198,7 +198,7 @@
     {
       "name": "Polarity Gauntlet",
       "comment": "Card Text bug - need to find out if it's EOB or EOT",
-      "tfdsl": "on-attached-defend()->bold_eob(0 - event().attacker.def,event().attacker)"
+      "tfdsl": "on-attached-defend()->bold_eot(0 - event().attacker.def,event().attacker)"
     },
     {
       "name": "Polydermal Graft",
@@ -235,6 +235,7 @@
     {
       "name": "Sidecar Artillery",
       "needs": "Tracking an attack ATK condition through delayed after-battle effects and scrapping the source.",
+      "tfdslNotWork": "on-this-attack(when(event().attacker.atk<=3))->(on-this-after-attack()->(damage(2,pick_enemy());scrap_upgrade(this())))",
       "tfdsl": ""
     },
     {
