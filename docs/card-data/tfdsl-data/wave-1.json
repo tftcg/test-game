@@ -62,8 +62,7 @@
     },
     {
       "name": "Computer Sabotage",
-      "comment": "INSTEAD: scrap_all_but(3, opponent) ??",
-      "tfdslBad": "scrap_hand(-3,opponent)"
+      "tfdsl": "scrap_hand(opponent_pick_opponent_hand(count=opponent().hand.count-3))"
     },
     {
       "name": "Crushing Size",
@@ -569,7 +568,7 @@
       "name": "Optimus Prime, Battlefield Legend",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action))",
-        "bot": ""
+        "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(self().flips,type=Action)))"
       },
       "bot-needs": "Selecting and playing an Action from the battle cards flipped for this attack."
     },
