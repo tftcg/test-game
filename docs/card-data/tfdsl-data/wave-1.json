@@ -415,9 +415,8 @@
       "name": "Bumblebee, Courageous Scout",
       "tfdsl": {
         "alt": "on-this-flip()->(draw(1);put_deck(pick_hand()))",
-        "bot": ""
-      },
-      "bot-needs": "Flipping additional battle cards after attack or defense flips."
+        "bot": "on-this-battle-flip(when(event().flips.white>=2),once())->flip_extra(2)"
+      }
     },
     {
       "name": "Bumblebee, Legendary Warrior",
@@ -469,9 +468,8 @@
       "name": "Demolisher, Devoted Decepticon",
       "tfdsl": {
         "alt": "on-this-flip()->draw(all_friends(id!=this().id,trait=Tank).count)",
-        "bot": ""
-      },
-      "bot-needs": "Flipping additional battle cards equal to this character's DEF."
+        "bot": "on-this-attack-flip(once())->flip_extra(this().def)"
+      }
     },
     {
       "name": "Dinobot Sludge, Mighty Stomper",
@@ -538,7 +536,7 @@
       "name": "Kickback, Cunning Insecticon",
       "tfdsl": {
         "alt": "on-this-attack-damage(when(event().damage>0))->repair(1,pick_friend(trait=Insecticon))",
-        "bot": ""
+        "bot": "on-this-attack-flip(once())->flip_extra(all_friends(trait=Insecticon,id!=this().id).count + all_friends(trait=Insecticon,id!=this().id).count)"
       },
       "bot-needs": "Flipping additional battle cards based on other Insecticons in the starting team."
     },

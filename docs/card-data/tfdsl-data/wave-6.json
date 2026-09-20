@@ -510,6 +510,7 @@
     },
     {
       "name": "Up In Smoke",
+      "begin": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Smoke Cloak')))",
       "front-needs": "Searching the deck before the game and counting named upgrades for a dynamic Pierce value.",
       "tfdsl": {
         "front": ""

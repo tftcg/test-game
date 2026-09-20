@@ -330,10 +330,9 @@
     },
     {
       "name": "Captain Wheeljack, Engineering  Scientist",
-      "alt-needs": "Searching the deck for a named card before the game begins",
       "bot-needs": "Counting Actions played during the turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Brainstorm')))",
         "bot": ""
       }
     },
@@ -654,11 +653,9 @@
     },
     {
       "name": "Specialist Ratchet, Engineering • Rescue & Repair",
-      "alt-needs": "Searching the deck for a named card before the game begins",
-      "bot-needs": "Triggering on repaired damage and using the repaired amount",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Medic!')))",
+        "bot": "on-repair(when(event().origin.owner=this().owner))->atk_eot(1,this())"
       }
     },
     {

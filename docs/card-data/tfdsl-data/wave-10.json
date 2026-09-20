@@ -215,7 +215,8 @@
     },
     {
       "name": "Voracious Hunger",
-      "front-needs": "Deck searching and card-text replacement effects",
+      "front-needs": "Card-text replacement effects",
+      "fronStart": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Battlefield Incursion')))",
       "tfdsl": {
         "front": ""
       }
@@ -301,10 +302,9 @@
     {
       "name": "Laserbeak, Impatient Interrogator",
       "alt-needs": "Inspecting opponent hidden zones",
-      "bot-needs": "Remaining-health predicates and dynamic targeted statics",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-attack(when(event().defender.health - event().defender.damage <= 3))->damage(1,event().defender);each(all_friends(faction=Decepticon,trait=Leader))->static(focus,1,target=it())"
       }
     },
     {

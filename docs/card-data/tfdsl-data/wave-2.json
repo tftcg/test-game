@@ -493,9 +493,8 @@
     {
       "name": "Dinobot Slug, Battering Ram",
       "tfdsl": {
-        "bot": ""
-      },
-      "bot-needs": "Replacing the first white-icon battle flip with three extra battle cards."
+        "bot": "on-this-attack-flip(when(event().flips.white>=1),once())->flip_extra(1)"
+      }
     },
     {
       "name": "Dinobot Snarl, Spiked Battler",

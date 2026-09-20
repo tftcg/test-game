@@ -131,6 +131,7 @@
     {
       "name": "Holomatter Mastery",
       "front-needs": "Pre-game named-card search and a named-card play trigger",
+      "frontStart": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Holomatter Projector')))",
       "tfdsl": {
         "front": ""
       }
@@ -151,9 +152,9 @@
     },
     {
       "name": "Obfuscating Cloud",
-      "front-needs": "Pre-game deck-to-character Upgrade placement and conditional Safeguard for other characters",
+      "comment": "BUG: Safeguard for friends not working yet",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-game()->(if(confirm())->put_upgrade(pick_friend(fullname=this().target),pick_deck(name='Smokethrower')));static(safeguard,when(all(all_friends(fullname=this().target).upgrades,name='Smokethrower').count>0),3)"
       }
     },
     {
@@ -239,10 +240,9 @@
     },
     {
       "name": "Hardhead, Grave Mistakes",
-      "alt-needs": "Moving a Weapon from another character and inspecting that Weapon's battle-icon count",
       "bot-needs": "Replacing opposing scrap recursion or play by moving the card to the KO area",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this());if(previous_target(2).icon_count>=2)->damage(2,pick_enemy()))",
         "bot": ""
       }
     },
@@ -284,9 +284,9 @@
     },
     {
       "name": "Nightbird, Tera-Kura Construct",
-      "comment": "This is cheating to tie to this event, but I'm not aware of any reason why a battler would change between on-this-battle and on-this-after-battle",
+      "comment": "BUG: This should be setup by an on-this-battle. It also needs the damage to still happen even if Nightbird is KO'd. Needs new feature support",
       "tfdsl": {
-        "bot": "on-this-after-battle(when(event().other_battler.trait=Melee))->damage(1,event().other_battler)"
+        "bot": "focus(1);on-this-after-battle(when(event().other_battler.trait=Melee))->damage(1,event().other_battler)"
       }
     }
   ]
