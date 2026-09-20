@@ -131,14 +131,14 @@
     },
     {
       "name": "Eat My Dust!",
-      "front-needs": "Adding/removing traits and card-text replacement effects",
+      "front-needs": "Adding/removing traits and card-text replacement effects - TODO: Need a 'replace(foo,bar)' DSL that targets a characters DSL/mode",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Excellent!",
-      "front-needs": "Playing a selected battle card from attack flips",
+      "front-needs": "Playing a selected battle card from attack flips - See OPBL",
       "tfdsl": {
         "front": ""
       }

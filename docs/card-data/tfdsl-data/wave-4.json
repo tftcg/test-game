@@ -508,10 +508,9 @@
     {
       "name": "Private Vanguard, Ground Command • Advance Guard",
       "bot-needs": "Capping attack damage based on flipped battle icons",
-      "upgrade-needs": "Replacing this upgrade leaving the battlefield with placement in the KO area",
       "tfdsl": {
         "bot": "",
-        "upgrade": ""
+        "upgrade": "on-put()->damage(1,pick_enemy(tapped=tapped)"
       }
     },
     {
