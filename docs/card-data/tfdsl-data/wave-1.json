@@ -507,9 +507,8 @@
       "name": "Grimlock, Dinobot Leader",
       "tfdsl": {
         "alt": "on-this-flip()->bold_eot(3,pick_friend(trait=Dinobot))",
-        "bot": ""
-      },
-      "bot-needs": "Redirecting excess attack damage after a KO to an opponent-chosen character."
+        "bot": "on-this-attack-overkill()->damage(event().overkill,opponent_pick_opponent_char())"
+      }
     },
     {
       "name": "Inferno, Fearless Firefighter",
@@ -569,8 +568,7 @@
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action))",
         "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(self().flips,type=Action)))"
-      },
-      "bot-needs": "Selecting and playing an Action from the battle cards flipped for this attack."
+      }
     },
     {
       "name": "Optimus Prime, Freedom Fighter",
