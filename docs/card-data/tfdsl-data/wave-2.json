@@ -710,7 +710,8 @@
       "name": "Menasor, Menacing Colossus",
       "tfdsl": {
         "combiner": ""
-      }
+      },
+      "combiner-needs": "Give the player a you may play an extra action on each of your turns."
     },
     {
       "name": "Optimus Maximus, Ultimate Defender",

@@ -294,7 +294,7 @@
     },
     {
       "name": "Wedge Formation",
-      "tfdsl": "if(all_friends(trait=Melee)>0)->repair(1,pick_friend(trait=Melee));if(all_friends(trait=Ranged)>0)->draw(1);if(all_friends(trait=Specialist)>0)->plan(1)"
+      "tfdsl": "if(all_friends(trait=Melee).count>0)->repair(1,pick_friend(trait=Melee));if(all_friends(trait=Ranged).count>0)->draw(1);if(all_friends(trait=Specialist).count>0)->plan(1)"
     },
     {
       "name": "Captain Astrotrain, Space Force • Transport",
