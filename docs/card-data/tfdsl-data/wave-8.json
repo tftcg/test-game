@@ -214,8 +214,8 @@
     },
     {
       "name": "Pack Behavior",
-      "tfdsl": "",
-      "needs": "Revenge-triggered movement to another character and additional Upgrade slot capacity"
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(trait=Predacon || trait=Seacon || trait=Terrorcon);bold(1);revenge(put_upgrade(pick_friend(),this())"
     },
     {
       "name": "Passenger Coverage",

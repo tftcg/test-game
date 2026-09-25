@@ -31,7 +31,7 @@
     },
     {
       "name": "Battlefield Incursion",
-      "tfdsl": "deploy(pick_friend(name='Trypticon, Assault Base'),pick(pick_friend(name='Trypticon, Assault Base').under))"
+      "tfdsl": "deploy(all_friends(fullname='Trypticon, Assault Base'),pick(all_friends(fullname='Trypticon, Assault Base').under))"
     },
     {
       "name": "Blast Suit",
@@ -114,8 +114,7 @@
     },
     {
       "name": "Hazardous Shield",
-      "tfdsl": "",
-      "needs": "Revenge triggers"
+      "tfdsl": "revenge(scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon)))"
     },
     {
       "name": "Head-On Collision",
@@ -334,7 +333,7 @@
       "bot-needs": "Detecting KO attack damage and using a Bounty ability",
       "tfdsl": {
         "alt": "on-this-flip()->play(pick_hand(black>=1))",
-        "bot": ""
+        "bot": "bounty(repair(3,this()))"
       }
     },
     {
@@ -596,10 +595,9 @@
     },
     {
       "name": "Raider Rumble, Spy Patrol • Demolitions",
-      "alt-needs": "Revenge triggers",
       "bot-needs": "Activated abilities that require tapping",
       "tfdsl": {
-        "alt": "",
+        "alt": "revenge(damage(2,pick_enemy()))",
         "bot": ""
       }
     },
@@ -753,27 +751,23 @@
     },
     {
       "name": "Brunt, Artillery Drone",
-      "alt-needs": "Revenge triggers",
+      "comment": "Note: Parser doesn't like having a raw if inside revenge, needs to be hidden in a (..)",
       "tfdsl": {
-        "alt": ""
+        "alt": "revenge((if(all_friends(name=Trypticon).count>0)->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))))"
       }
     },
     {
       "name": "Full-Tilt, Base Recon",
-      "alt-needs": "Revenge triggers",
-      "bot-needs": "Revenge triggers",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "revenge((if(all_friends(name=Trypticon).count>0)->damage(1,pick_enemy())))",
+        "bot": "revenge((if(all_friends(name=Trypticon).count>0)->damage(2,pick_enemy())))"
       }
     },
     {
       "name": "Wipe-Out, Devoted Minion",
-      "alt-needs": "Revenge triggers",
-      "bot-needs": "Revenge triggers",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "revenge((if(all_friends(name=Trypticon).count>0)->draw(1)))",
+        "bot": "revenge((if(all_friends(name=Trypticon).count>0)->draw(2)))"
       }
     }
   ]

@@ -307,10 +307,10 @@
     },
     {
       "name": "Red Wing, Thrillseeker",
-      "bot-needs": "Resolving a Revenge effect that makes an opponent scrap a hand card",
+      "comment": "TODO: Test bot mode",
       "tfdsl": {
         "alt": "tough(1)",
-        "bot": ""
+        "bot": "revenge(scrap_hand(opponent_pick_opponent_hand()))"
       }
     },
     {

@@ -127,7 +127,7 @@
     },
     {
       "name": "Force Field",
-      "tfdsl": "instead(on-attack-damage(when(event().damage>4))->(scrap_upgrade(this());modify(event().damage:=4)))"
+      "tfdsl": "instead(on-attached-attack-damaged(when(event().damage>4))->(scrap_upgrade(this());modify(event().damage:=4)))"
     },
     {
       "name": "Fusion Cannon of Megatron",
