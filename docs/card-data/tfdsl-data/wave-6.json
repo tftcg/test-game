@@ -627,10 +627,9 @@
     {
       "name": "Decepticon Exhaust, Consumptive Condottiere",
       "alt-needs": "Tracking damage taken and damage-counter movement during the turn for dynamic stats.",
-      "bot-needs": "Using this character's Bounty ability after it KOs an enemy with attack damage.",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "bounty(move(1,this(),pick_enemy()))"
       }
     },
     {

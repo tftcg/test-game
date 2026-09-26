@@ -145,8 +145,8 @@
     },
     {
       "name": "Indestructible Sword",
-      "tfdsl": "",
-      "needs": "An event for an upgrade being scrapped from a character"
+      "comment": "BUG: Not returning",
+      "tfdsl": "on-this-scrapped()->move_to(self().hand,this())"
     },
     {
       "name": "Involuntary Promotion",

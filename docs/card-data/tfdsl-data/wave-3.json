@@ -83,8 +83,7 @@
     },
     {
       "name": "Dismantling Claw",
-      "needs": "Triggering when an Upgrade is scrapped from a character",
-      "tfdsl": ""
+      "tfdsl": "on-this-scrapped()->scrap_upgrade(pick_enemy_upgrade(subtype=Weapon))"
     },
     {
       "name": "EM24 IR Laser Launcher"
@@ -190,8 +189,7 @@
     },
     {
       "name": "Personal Targeting Drone",
-      "needs": "Triggering when an Upgrade is scrapped from a character",
-      "tfdsl": ""
+      "tfdsl": "pierce(1);on-this-scrapped()->scrap_upgrade(pick_enemy_upgrade(subtype=Utility))"
     },
     {
       "name": "Point-Defense System",
@@ -210,8 +208,7 @@
     },
     {
       "name": "Reactive Armor",
-      "needs": "Triggering when an Upgrade is scrapped from a character",
-      "tfdsl": ""
+      "tfdsl": "on-this-scrapped()->scrap_upgrade(pick_enemy_upgrade(subtype=Armor))"
     },
     {
       "name": "Reflex Circuits",

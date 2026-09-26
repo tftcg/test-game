@@ -392,17 +392,15 @@
       "name": "Autobot Hot Rod, Impulsive Fighter",
       "tfdsl": {
         "alt": "tough(1)",
-        "bot": ""
-      },
-      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
+        "bot": "on-this-ko-flip()->damage(1,pick_enemy())"
+      }
     },
     {
       "name": "Autobot Mirage, Counterintelligence",
       "tfdsl": {
         "alt": "pierce(2)",
-        "bot": ""
-      },
-      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
+        "bot": "on-this-ko-flip()->scrap_hand(pick_opponent_hand(type=Action))"
+      }
     },
     {
       "name": "Autobot Novastar, Search and Rescue"
@@ -562,9 +560,8 @@
       "name": "Ironhide, Steadfast Brawler",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": ""
-      },
-      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
+        "bot": "on-this-ko-flip()->pierce_eot(2,all_friends())"
+      }
     },
     {
       "name": "Megatron, Arrogant Ruler",
@@ -612,7 +609,6 @@
     },
     {
       "name": "Prowl, Strategic Mastermind",
-      "comment": "TODO: Need to implement a specific KO Flip Event. Also need to make sure flips in the KO do not evaluate their text, and that a flip in the KO does not fire a FLIP event but a KO_FLIP event",
       "tfdsl": {
         "alt": "bold(1)",
         "bot": "on-this-ko-flip()->scrap_upgrade(pick_upgrade(subtype=Weapon))"
@@ -664,9 +660,8 @@
       "name": "Sunstreaker, Bold Warrior",
       "tfdsl": {
         "alt": "tough(1)",
-        "bot": ""
-      },
-      "bot-needs": "A KO-area flip event that evaluates only the flipped character's bot-mode effect."
+        "bot": "on-this-ko-flip()->draw(1)"
+      }
     },
     {
       "name": "Thrust, Supersonic Interceptor",
