@@ -55,8 +55,7 @@
     },
     {
       "name": "Freedom of Action",
-      "needs": "Player-selected destination modes for multiple character flips",
-      "tfdsl": ""
+      "tfdsl": "flip(all_friends(trait=Wrecker))"
     },
     {
       "name": "Fusion Pistol",
@@ -238,7 +237,7 @@
       "name": "Wreck 'N' Rule",
       "front-needs": "Adding traits",
       "tfdsl": {
-        "front": ""
+        "front": "trait(Wrecker,all_friends(fullname=this().target))"
       }
     },
     {

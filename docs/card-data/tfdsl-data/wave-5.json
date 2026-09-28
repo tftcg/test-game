@@ -302,9 +302,8 @@
     {
       "name": "Aerial Enhancements",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Granting a trait to a named character only while it is in a specified mode"
+        "front": "trait(Plane,all_friends(fullname=this().target),alt)"
+      }
     },
     {
       "name": "All-Out",
@@ -363,8 +362,9 @@
     },
     {
       "name": "Master Converter",
+      "comment": "BUG: Currently alt1/alt2 are not considered equal to alt so this won't work",
       "tfdsl": {
-        "front": ""
+        "front": "trait(Tank,all_friends(fullname=this().target),alt);trait(Plane,all_friends(fullname=this().target),alt)"
       },
       "front-needs": "Granting traits to a named character only while it is in either alternate mode"
     },

@@ -19,8 +19,8 @@
     },
     {
       "name": "Angolmois Surge",
-      "needs": "Chaos counters on a named starting-team character.",
-      "tfdsl": ""
+      "comment": "TODO: Chaos Counters ignored until Unicron implemented",
+      "tfdsl": "damage(1,pick_friend(trait=Melee));atk_eot(4,previous_target())"
     },
     {
       "name": "Aquatic Maneuvers",
@@ -431,9 +431,9 @@
     },
     {
       "name": "Orbital Command",
-      "front-needs": "Adding a trait to a named character and deploying a named character from outside the game.",
+      "comment": "BUG: When the combiner enters the battlefield, nothing makes this update to give him Guardian",
       "tfdsl": {
-        "front": ""
+        "front": "trait(Guardian,all_friends(fullname=this().target));on-start-game()->summon_friend('Autobot Countdown, Aerospace Commander')"
       }
     },
     {

@@ -31,8 +31,8 @@
     },
     {
       "name": "Bracing Up",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "comment": "NOTE: Implemented as Durable as much simpler",
+      "tfdsl": "scrap(on-friend-defend())->when_scrapped(def_eot(1,event().defender);durable_eot(1,event().defender))"
     },
     {
       "name": "Caring is Sharing!",
@@ -164,13 +164,11 @@
     },
     {
       "name": "Lie in Wait",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "tfdsl": "scrap(on-friend-defend())->when_scrapped(tough_eot(1,event().defender))"
     },
     {
       "name": "Locking it Up",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "tfdsl": "scrap(on-friend-battle())->when_scrapped(oppress_eot(1,event().attacker))"
     },
     {
       "name": "Me Grimlock Need New Strategy",
@@ -189,8 +187,8 @@
     },
     {
       "name": "Muster the Will",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "comment": "NOTE: Implemented as Durable as much simpler",
+      "tfdsl": "scrap(on-friend-defend())->when_scrapped(def_eot(2,event().defender);durable_eot(1,event().defender))"
     },
     {
       "name": "Mystical Bond",
@@ -276,8 +274,7 @@
     },
     {
       "name": "Revving Up",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "tfdsl": "scrap(on-friend-attack())->when_scrapped(atk_eot(1,event().attacker);pierce_eot(1,event().attacker))"
     },
     {
       "name": "Riffraff Knick-Knacks",
@@ -323,8 +320,7 @@
     },
     {
       "name": "Summon the Courage",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "tfdsl": "scrap(on-friend-attack())->when_scrapped(atk_eot(2,event().attacker);pierce_eot(1,event().attacker))"
     },
     {
       "name": "Superior Surveillance",
@@ -333,8 +329,7 @@
     },
     {
       "name": "Take the Shot",
-      "tfdsl": "",
-      "needs": "Rolling Action support"
+      "tfdsl": "scrap(on-friend-attack())->when_scrapped(bold_eot(1,event().attacker))"
     },
     {
       "name": "Terrorburster Shield",
