@@ -762,27 +762,24 @@
     {
       "name": "Private Camshaft, Special Ops • Scout",
       "comment": "TODO: Test",
-      "alt-needs": "Playing an Upgrade onto a selected character at the start of the first turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-first-turn()->(if(confirm())->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Armor)))",
         "bot": "on-friend-defend(when(event().defender.trait=Omnibot,event().defender.upgrades.subtype=Armor))->tough_eob(all_friends(trait=Omnibot,upgrades.subtype=Armor).count,event().defender)"
       }
     },
     {
       "name": "Private Downshift, Special Ops • Security Agent",
       "comment": "TODO: Test",
-      "alt-needs": "Playing an Upgrade onto a selected character at the start of the first turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-first-turn()->(if(confirm())->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Weapon)))",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Omnibot,event().attacker.upgrades.subtype=Weapon))->bold_eot(all_friends(trait=Omnibot,upgrades.subtype=Weapon).count,event().attacker)"
       }
     },
     {
       "name": "Sergeant Overdrive, Special Ops • Strategist",
       "comment": "TODO: Test",
-      "alt-needs": "Playing an Upgrade onto a selected character at the start of the first turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-first-turn()->(if(confirm())->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Utility)))",
         "bot": "on-battle(when(event().battler.owner=this().owner,event().battler.trait=Omnibot,event().battler.upgrades.subtype=Utility))->focus_eob(all_friends(trait=Omnibot,upgrades.subtype=Utility).count,event().battler)"
       }
     }
