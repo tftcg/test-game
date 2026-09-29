@@ -144,9 +144,8 @@
     },
     {
       "name": "Excuse Me!",
-      "front-needs": "Dynamic mode-scoped targeted static abilities",
       "tfdsl": {
-        "front": ""
+        "front": "static(bold,when(all_friends(fullname=this().target).mode=alt),2,target=all_friends(fullname=this().target))"
       }
     },
     {
@@ -242,9 +241,8 @@
     },
     {
       "name": "Zone Defense",
-      "front-needs": "Dynamic mode-scoped targeted static abilities",
       "tfdsl": {
-        "front": ""
+        "front": "static(bold,when(all_friends(fullname=this().target).mode=bot),1,target=all_friends(fullname=this().target))"
       }
     },
     {

@@ -1090,7 +1090,7 @@
       "size": "small",
       "number": "S05",
       "rarity": "Common",
-      "stratagemTarget": "Dinobot Slug, Hotheaded Warrior",
+      "stratagemTarget": "Dinobot Slug, Hot-Headed Warrior",
       "sides": [
         {
           "type": "Stratagem",
@@ -1102,7 +1102,7 @@
             "Autobot"
           ],
           "traits": [],
-          "text": "If you have Dinobot Sludge, Mighty Stomper and Grimlock, Dinobot Leader on your starting team > Your starting [STAR] limit increases by 3.\n\nWhile your Dinobot Slug, Hotheaded Warrior is in alt mode > He has [Bold 2].\n\n",
+          "text": "If you have Dinobot Sludge, Mighty Stomper and Grimlock, Dinobot Leader on your starting team > Your starting [STAR] limit increases by 3.\n\nWhile your Dinobot Slug, Hot-Headed Warrior is in alt mode > He has [Bold 2].\n\n",
           "side": "front",
           "stars": 1
         },

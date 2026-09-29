@@ -256,8 +256,7 @@
     },
     {
       "name": "Squish them like Bugs",
-      "needs": "A delayed attack-damage effect conditioned on the selected character's stars",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());on-attack-damage(when(event().origin=previous_target(),event().target.stars<previous_target().stars))->damage(1,all_enemies(stars<previous_target().stars))"
     },
     {
       "name": "Steady Shot",
@@ -293,19 +292,18 @@
     },
     {
       "name": "Alpha Trion, Cybertronian Sage",
-      "bot-needs": "Playing a qualifying Action from this character's just-flipped battle cards",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action,orange>=1))",
-        "bot": ""
+        "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(self().flips,type=Action,blue>=1)))"
       }
     },
     {
       "name": "Captain Elita-1, Special Ops • Ranger",
       "alt-needs": "Moving a chosen amount of damage without KOing the destination character",
-      "bot-needs": "Scrapping and optionally playing successive top deck cards",
+      "comment": "BUG: Confirm is failing. Presumably due to being on opponent's turn",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-ko()->(scrap_deck(get_deck());if(confirm())->play(previous_target());scrap_deck(get_deck());if(confirm())->play(previous_target(2)))"
       }
     },
     {

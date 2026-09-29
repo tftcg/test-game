@@ -387,11 +387,10 @@
     },
     {
       "name": "Octone, Capricious Agitator",
-      "bot-needs": "Detecting KO attack damage and using a Bounty ability",
       "tfdsl": {
         "alt 1": "on-this-flip()->damage(1,opponent_pick(opponent().chars,faction=Autobot));static(atk,when(event().attacker=this(),event().defender.faction=Autobot),3)",
         "alt 2": "on-this-flip()->damage(1,opponent_pick(opponent().chars,faction=Decepticon));static(atk,when(event().attacker=this(),event().defender.faction=Decepticon),3)",
-        "bot": ""
+        "bot": "bounty(damage(2,pick_enemy()))"
       }
     },
     {
