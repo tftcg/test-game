@@ -370,9 +370,9 @@
     {
       "name": "Autobot Cosmos, Recon & Communication",
       "tfdsl": {
-        "comment": "Test alt",
+        "comment": "BUG: 1. The alt flip is only drawing one when discarding five. 2. The reshuffle event doesn't have any attack info.",
         "alt": "on-this-flip()->(scrap_hand(all_hand());draw(previous_target().count))",
-        "bot": ""
+        "bot": "on-reshuffle(when(event().attacker=this()))->(if(event().defender.stars<=12)->ko(event().defender))"
       },
       "bot-needs": "A deck reshuffle event while this character is attacking."
     },
@@ -444,7 +444,7 @@
       "name": "Darkmount, Cruel Overlord",
       "comment": "NOTE: This is relying on pick_hand not being cancellable. Really it needs a pay()",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand());damage(2,pick_enemy())))",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(exact=1));if(done())->damage(2,pick_enemy())))",
         "bot": "on-this-defend(when(event().attacker.trait=Ranged))->def_eob(2,this())"
       }
     },

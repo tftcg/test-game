@@ -408,10 +408,9 @@
     },
     {
       "name": "Private Mudslinger, Special Ops • Infiltration",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,black>=1)))->move(1,pick_friend(),pick_enemy())"
       }
     },
     {
@@ -546,9 +545,8 @@
     },
     {
       "name": "Raider Ravage, Espionage • Saboteur",
-      "bot-needs": "Activated TAP abilities",
       "tfdsl": {
-        "bot": ""
+        "bot": "tap_ability()->(choose(pick_enemy());if(previous_target().def<=3)->damage(1,previous_target());if(previous_target().def>=4)->damage(2,previous_target()))"
       }
     },
     {
