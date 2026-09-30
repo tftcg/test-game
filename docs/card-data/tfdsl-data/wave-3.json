@@ -393,10 +393,9 @@
     },
     {
       "name": "Private Flak, Artillery • Tactics",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,orange>=1)))->(if(confirm())->play(pick_hand(type=Upgrade)))"
       }
     },
     {
@@ -446,26 +445,23 @@
     },
     {
       "name": "Private Stakeout, Infantry • Communications",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost and flipping a character to its other mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,white>=1)))->flip(pick_friend())"
       }
     },
     {
       "name": "Private Top Shot, Artillery • Patrol Leader",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,orange>=1)))->(draw(2);put_deck(pick_hand()))"
       }
     },
     {
       "name": "Private Tote, Special Ops • Infiltration",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,black>=1)))->untap(pick_friend(stars<=6))"
       }
     },
     {
@@ -500,11 +496,9 @@
     },
     {
       "name": "Raider Detour, Infantry • Demolitions",
-      "botFuture": "on-this-flip()->(pay(scrap_hand(pick_hand(blue>=1)))->draw(2))",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,blue>=1)))->draw(2)"
       }
     },
     {
@@ -523,10 +517,9 @@
     },
     {
       "name": "Raider Laserbeak, Espionage • Interrogation",
-      "bot-needs": "Activated TAP abilities that play a Secret Action",
       "tfdsl": {
         "alt": "on-this-flip()->(draw(1);scrap_hand(pick_hand()))",
-        "bot": ""
+        "bot": "tap_ability()->(if(confirm())->play(pick_hand(type='Secret Action')))"
       }
     },
     {
@@ -551,10 +544,9 @@
     },
     {
       "name": "Raider Road Hugger, Infantry • Tactics",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,blue>=1)))->atk_eot(3,pick_friend())"
       }
     },
     {
@@ -571,11 +563,10 @@
     },
     {
       "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
-      "botFuture": "on-this-flip()->(pay(scrap_hand(pick_hand(green>=1,count=3)))->bold_eot(3,pick_friend()))",
-      "bot-needs": "Activated TAP abilities with a three-card hand-scrap cost and same-name condition",
+      "comment": "TODO: Need to do the 'if all three are the same name' on bot mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->bold_eot(3,pick_friend())"
       }
     },
     {
@@ -587,10 +578,10 @@
     },
     {
       "name": "Raider Visper, Infantry • Patrol Leader",
-      "bot-needs": "Activated TAP abilities with a three-card hand-scrap cost and same-name condition",
+      "comment": "TODO: Need to do the 'if all three are the same name' on bot mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->scrap_hand(opponent_pick_opponent_hand(count=3))"
       }
     },
     {

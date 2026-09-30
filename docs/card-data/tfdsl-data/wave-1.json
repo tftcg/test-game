@@ -327,6 +327,7 @@
     },
     {
       "name": "Treasure Hunt",
+      "comment": "BUG: This is broken. scrap_deck probably changed",
       "tfdsl": "scrap_deck(4);scrap_to_hand(all(previous_target(), type=Upgrade))"
     },
     {

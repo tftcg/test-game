@@ -425,10 +425,10 @@
     },
     {
       "name": "Private Fixit, Rescue Patrol • Medic",
-      "bot-needs": "Activated abilities that require tapping and scrapping cards from hand",
+      "comment": "BUG: The scrap_hand(it()) isn't working",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,white>=1)))->(each(all_players())->(scrap_hand(it().hand);draw(4,it())))"
       }
     },
     {
@@ -442,7 +442,8 @@
     },
     {
       "name": "Private Highjump, Off-Road Patrol • Infiltration",
-      "bot-needs": "Activated abilities that require tapping and scrapping cards from hand",
+      "comment": "BUG: Can't have two prerequisites currently for a tap_ability",
+      "botFuture": "tap_ability(scrap_hand(pick_hand(exact=1,black>=1)),scrap_hand(pick_hand(exact=1)))->draw(2)",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": ""
@@ -474,10 +475,10 @@
     },
     {
       "name": "Private Sidetrack, Battle Patrol • Demolitions",
-      "bot-needs": "Activated abilities that require tapping and scrapping cards from hand",
+      "comment": "TODO: Test. The previous_target() may pick up the scrapped blue card. BUG: Currently broken because Treasure Hunt is",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,blue>=1)))->(scrap_deck(4);scrap_to_hand(all(previous_target(2), type=Upgrade)))"
       }
     },
     {
@@ -545,10 +546,9 @@
     },
     {
       "name": "Raider Hyperdrive, Sports Car Patrol • Demolitions",
-      "bot-needs": "Activated abilities that require tapping and scrapping cards from hand",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,blue>=1)))->(draw(3);scrap_hand(pick_hand(count=2)))"
       }
     },
     {
@@ -570,10 +570,10 @@
     },
     {
       "name": "Raider Nightflight, Air Strike Patrol • Spy",
-      "bot-needs": "Activated abilities that require tapping, scrapping cards from hand, and comparing their names",
+      "comment": "TODO: Need to do the 'if all three are the same name' on bot mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->damage(3,opponent_pick(opponent().chars))"
       }
     },
     {
@@ -594,10 +594,9 @@
     },
     {
       "name": "Raider Rumble, Spy Patrol • Demolitions",
-      "bot-needs": "Activated abilities that require tapping",
       "tfdsl": {
         "alt": "revenge(damage(2,pick_enemy()))",
-        "bot": ""
+        "bot": "tap_ability()->return_upgrade(pick_enemy_upgrade())"
       }
     },
     {
