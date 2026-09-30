@@ -132,7 +132,7 @@
     },
     {
       "name": "Field Communicator",
-      "tfdsl": "on-put(when(attached().trait=Specialist))->(scrap_deck(get_deck());if(confirm())->play(previous_target()))"
+      "tfdsl": "on-put(when(attached().trait=Specialist))->(scrap_deck(top_deck());if(confirm())->play(previous_target()))"
     },
     {
       "name": "Field Repair",
@@ -180,7 +180,7 @@
     },
     {
       "name": "Leap of Faith",
-      "tfdsl": "scrap_deck(get_deck());if(confirm())->play(previous_target());scrap_deck(get_deck());if(confirm())->play(previous_target(2))"
+      "tfdsl": "scrap_deck(top_deck());if(confirm())->play(previous_target());scrap_deck(top_deck());if(confirm())->play(previous_target(2))"
     },
     {
       "name": "Marksmanship",

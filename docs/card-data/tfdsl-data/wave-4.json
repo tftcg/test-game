@@ -475,10 +475,9 @@
     },
     {
       "name": "Private Sidetrack, Battle Patrol • Demolitions",
-      "comment": "TODO: Test. The previous_target() may pick up the scrapped blue card. BUG: Currently broken because Treasure Hunt is",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,blue>=1)))->(scrap_deck(4);scrap_to_hand(all(previous_target(2), type=Upgrade)))"
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,orange>=1)))->(scrap_deck(top_deck(count=4));move_to(self().hand,all(previous_target(2), type=Upgrade)))"
       }
     },
     {

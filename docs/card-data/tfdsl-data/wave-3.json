@@ -303,7 +303,7 @@
       "comment": "BUG: Confirm is failing. Presumably due to being on opponent's turn",
       "tfdsl": {
         "alt": "",
-        "bot": "on-this-ko()->(scrap_deck(get_deck());if(confirm())->play(previous_target());scrap_deck(get_deck());if(confirm())->play(previous_target(2)))"
+        "bot": "on-this-ko()->(scrap_deck(top_deck());if(confirm())->play(previous_target());scrap_deck(top_deck());if(confirm())->play(previous_target(2)))"
       }
     },
     {
@@ -692,7 +692,7 @@
       "comment": "TODO: What happens when nothing under Blaster?",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
-        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);scrap_deck(get_deck());play(previous_target(3)))"
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);scrap_deck(top_deck());play(previous_target(3)))"
       }
     },
     {

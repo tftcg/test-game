@@ -327,8 +327,7 @@
     },
     {
       "name": "Treasure Hunt",
-      "comment": "BUG: This is broken. scrap_deck probably changed",
-      "tfdsl": "scrap_deck(4);scrap_to_hand(all(previous_target(), type=Upgrade))"
+      "tfdsl": "scrap_deck(top_deck(count=4));move_to(self().hand,all(previous_target(), type=Upgrade))"
     },
     {
       "name": "Turbo Boosters",
