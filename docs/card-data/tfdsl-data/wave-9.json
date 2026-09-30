@@ -21,11 +21,13 @@
     },
     {
       "name": "Beast Mode",
-      "needs": "Grouping alternative trait-and-mode attack conditions"
+      "needs": "Grouping alternative trait-and-mode attack conditions",
+      "tfdsl": ""
     },
     {
       "name": "Bellicosity",
-      "needs": "Changing flipped battle icon colors"
+      "needs": "Changing flipped battle icon colors",
+      "tfdsl": ""
     },
     {
       "name": "Cloaking Screen",
@@ -33,15 +35,18 @@
     },
     {
       "name": "Cloud Cover",
-      "needs": "Preventing damage counters from moving between characters"
+      "needs": "Preventing damage counters from moving between characters",
+      "tfdsl": ""
     },
     {
       "name": "Cosmic Rust Cannon",
-      "needs": "Resolving an optional scrap-or-damage choice after battle"
+      "needs": "Resolving an optional scrap-or-damage choice after battle",
+      "tfdsl": ""
     },
     {
       "name": "Cross-Counter",
-      "needs": "Calculating damage as the difference between characters' DEF and ATK"
+      "needs": "Calculating damage as the difference between characters' DEF and ATK",
+      "tfdsl": ""
     },
     {
       "name": "Dare to Believe",
@@ -49,11 +54,13 @@
     },
     {
       "name": "Enhanced Cyber Blade",
-      "needs": "Setting a character's base DEF for a battle"
+      "needs": "Setting a character's base DEF for a battle",
+      "tfdsl": ""
     },
     {
       "name": "Feral Tenacity",
-      "needs": "Adding, counting, and removing named counters on an Upgrade"
+      "needs": "Adding, counting, and removing named counters on an Upgrade",
+      "tfdsl": ""
     },
     {
       "name": "Grimlock's Sword",
@@ -70,7 +77,8 @@
     },
     {
       "name": "Nothin's Gonna Stand In Our Way",
-      "needs": "Counting cards with a specific name played during a turn"
+      "needs": "Counting cards with a specific name played during a turn",
+      "tfdsl": ""
     },
     {
       "name": "Particle Cannon of Galvatron",
@@ -82,15 +90,18 @@
     },
     {
       "name": "Spoils of War",
-      "needs": "Choosing up to five characters that share a trait"
+      "needs": "Choosing up to five characters that share a trait",
+      "tfdsl": ""
     },
     {
       "name": "Starscream's Cape",
-      "needs": "Increasing numbers in a character's printed text box"
+      "needs": "Increasing numbers in a character's printed text box",
+      "tfdsl": ""
     },
     {
       "name": "Stasis Field",
-      "needs": "Flipping an opponent's character"
+      "needs": "Flipping an opponent's character",
+      "tfdsl": ""
     },
     {
       "name": "Stormfall Sword",
@@ -102,7 +113,8 @@
     },
     {
       "name": "This is Bad Comedy",
-      "needs": "Choosing between alternative effects"
+      "needs": "Choosing between alternative effects",
+      "tfdsl": ""
     },
     {
       "name": "Trithyllium Plating",
@@ -111,7 +123,8 @@
     },
     {
       "name": "Twisted Logic",
-      "needs": "Reordering cards on top of an opponent's deck"
+      "needs": "Reordering cards on top of an opponent's deck",
+      "tfdsl": ""
     },
     {
       "name": "Vamparc Ribbon",
@@ -120,7 +133,8 @@
     },
     {
       "name": "Wanna Bet?",
-      "needs": "Replacing battle cards being put under an enemy character with scrapping them"
+      "needs": "Replacing battle cards being put under an enemy character with scrapping them",
+      "tfdsl": ""
     },
     {
       "name": "Electro-Stinger",
@@ -133,11 +147,13 @@
     },
     {
       "name": "Zarak Shield",
-      "needs": "Limiting attack damage from a single attack"
+      "needs": "Limiting attack damage from a single attack",
+      "tfdsl": ""
     },
     {
       "name": "Combaticon Enigma",
-      "needs": "Combining only characters in a specified mode"
+      "needs": "Combining only characters in a specified mode",
+      "tfdsl": ""
     },
     {
       "name": "Lock and Load",
