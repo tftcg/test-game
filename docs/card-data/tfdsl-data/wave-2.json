@@ -58,8 +58,7 @@
     },
     {
       "name": "Combat Commands",
-      "tfdslFuture": "put_only(trait=Sentinel)",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Sentinel);on-attached-attack()->(flip(pick_friend_ko(trait=Sentinel));flip(previous_target()))"
     },
     {
       "name": "Confidence",
@@ -247,9 +246,7 @@
     },
     {
       "name": "Scrounge",
-      "comment": "TODO: Need to be able to filter previous_target() for subtype=upgrade",
-      "tfdsl": "",
-      "needs": "Filtering the scrapped top card by Upgrade before offering it to play."
+      "tfdsl": "scrap_deck(top_deck());play(all(previous_target(), type=Upgrade))"
     },
     {
       "name": "Secret Dealings",
@@ -641,7 +638,7 @@
     {
       "name": "Skywarp, Teleporting Seeker",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(icon_count=0))",
         "bot": ""
       },
       "alt-needs": "Filtering scrap cards by the absence of all normal and hybrid battle icons.",
