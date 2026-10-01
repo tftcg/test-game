@@ -301,8 +301,7 @@
     },
     {
       "name": "Swap Parts",
-      "tfdsl": "",
-      "needs": "Swapping all upgrades between two chosen characters."
+      "tfdsl": "swap_upgrades()"
     },
     {
       "name": "Swarm!",

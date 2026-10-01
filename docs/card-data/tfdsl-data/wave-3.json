@@ -428,10 +428,9 @@
     },
     {
       "name": "Private Red Heat, Infantry • Emergency Response",
-      "bot-needs": "Activated TAP abilities with a hand-scrap cost and swapping all Upgrades between characters",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,white>=1)))->swap_upgrades()"
       }
     },
     {
