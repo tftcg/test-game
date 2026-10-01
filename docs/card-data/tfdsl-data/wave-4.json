@@ -261,7 +261,6 @@
     },
     {
       "name": "Sturdy Javelin",
-      "comment": "TODO: Test as it's a classic",
       "tfdsl": "static(atk,when(attached().trait=Melee),2);on-attached-attack(when(attached().trait=Ranged))->(scrap_upgrade(this());damage(2,pick_enemy()))"
     },
     {

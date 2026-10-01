@@ -142,7 +142,7 @@
     },
     {
       "name": "Imperator Claw",
-      "comment": "Proposal - TODO: Still need the '2 can fit in 1 slot'",
+      "comment": "TODO: Still need the '2 can fit in 1 slot'",
       "tfdsl": "put_only(faction!=Autobot);on-attached-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->damage(1,all_chars(stars<attached().stars))"
     },
     {

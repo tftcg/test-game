@@ -231,7 +231,7 @@
     },
     {
       "name": "Scouting Mission",
-      "comment": "TODO: test - does draw() take a 2nd param?",
+      "comment": "BUG: errors, not finding the owner of the damaged char", 
       "tfdsl": "damage(1,pick_char());draw(2,previous_target().owner)"
     },
     {
@@ -722,7 +722,7 @@
         "alt": "on-this-flip()->(draw(1);if(self().hand.count<opponent().hand.count)->draw(1))",
         "body": "on-this-attack()->(repair(1,pick_friend());if(self().chars.count<opponent().chars.count)->repair(1,previous_target()))"
       },
-      "comment": "TODO Test"
+      "comment": "TODO: Test"
     },
     {
       "name": "Parsec",

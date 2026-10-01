@@ -414,9 +414,8 @@
       "name": "Blackwing, Aerial Attacker",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      },
-      "bot-needs": "Checking named character mode and zone conditions and combining the named Blackwing and Dreadwind components."
+        "bot": "on-eot(when(all_friends(fullname='Dreadwind, Air Defense').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
+      }
     },
     {
       "name": "Blitzwing, Relentless Foe",
@@ -527,9 +526,8 @@
       "name": "Dreadwind, Air Defense",
       "tfdsl": {
         "alt": "pierce(2)",
-        "bot": ""
-      },
-      "bot-needs": "Checking named character mode and zone conditions and combining the named Blackwing and Dreadwind components."
+        "bot": "on-eot(when(all_friends(fullname='Blackwing, Aerial Attacker').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
+      }
     },
     {
       "name": "Fireflight, Sky High Recon",
