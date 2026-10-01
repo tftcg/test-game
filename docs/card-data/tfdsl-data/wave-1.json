@@ -623,7 +623,6 @@
     },
     {
       "name": "Sunstorm, Fusion Flyer",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip(when(self().hand.count<3))->draw(3-self().hand.count)",
         "bot": "static(atk,this().owner.hand.count)"
@@ -632,14 +631,12 @@
     {
       "name": "Thundercracker, Mach Warrior",
       "tfdsl": {
-        "comment": "Test. Bot mode not implemented yet",
         "alt": "on-this-flip()->damage(2,pick_enemy(trait=Melee))",
-        "bot": "on-play()->atk_eot(1)"
+        "bot": "on-play-action()->atk_eot(1,this())"
       }
     },
     {
       "name": "Wheeljack, Weapons Inventor",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-friend-upgrade(when(event().attached.trait=Car))->(draw(1);scrap_hand(pick_hand()))",
         "bot": "static(bold,when(self().scrap.subtype=Weapon),3)"
