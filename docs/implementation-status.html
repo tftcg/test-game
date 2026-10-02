@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 826/1467 (56.3%)</p>
+  <p>TFDSL completion: 827/1467 (56.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>205</td><td>84</td><td>124</td><td>208</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>206</td><td>83</td><td>124</td><td>207</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>364</td><td>0</td><td>230</td><td>230</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>48</td><td>0</td><td>109</td><td>109</td></tr>
 </tbody>
@@ -41,14 +41,11 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th></tr></thead>
 <tbody>
-<tr><th scope="row">Autobot Hound, Long-Range Scout</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This is relying on the pick_hand not currently having a cancel option. Ideally this needs a pay()</td></tr>
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
 <tr><th scope="row">Chop Shop, Sneaky Insecticon</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td></tr>
-<tr><th scope="row">Darkmount, Cruel Overlord</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This is relying on pick_hand not being cancellable. Really it needs a pay()</td></tr>
 <tr><th scope="row">Deadlock, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
 <tr><th scope="row">Decepticon Shockwave, Cybertron Commander</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Bug here that you are doing 1 damage to a char your opponent chose, not them doing it</td></tr>
 <tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
-<tr><th scope="row">Megatron, Decepticon Leader</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This is relying on pick_hand not being cancellable. Really it needs a pay()</td></tr>
 <tr><th scope="row">Megatron, Living Weapon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
 <tr><th scope="row">Nemesis Prime, Dark Clone</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td></tr>
@@ -67,11 +64,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 2</h2>
-  <p>TFDSL completion: 143/184 (77.7%)</p>
+  <p>TFDSL completion: 144/184 (78.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>44</td><td>8</td><td>12</td><td>20</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>45</td><td>7</td><td>12</td><td>19</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>69</td><td>0</td><td>17</td><td>17</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -84,7 +81,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Blitzwing, Relentless Foe</th><td>Character</td><td>bug</td><td>3/3</td><td class="comment">When Blitzwing flips on his effect, his stealth/brave isn&#39;t reevaluating</td></tr>
 <tr><th scope="row">Blurr, Fastest Bot in the Galaxy</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
 <tr><th scope="row">Bombshell, Decepticon Psy Ops</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
-<tr><th scope="row">Bumblebee, Trusted Lieutenant</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This relies on pick_hand not having a cancel option</td></tr>
 <tr><th scope="row">Devastator, Towering Warrior</th><td>Character</td><td>todo</td><td>1/1</td><td class="comment">Rather than setting base atk to 10, it gives him +4 atk</td></tr>
 <tr><th scope="row">Dinobot Swoop, Bombardier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
 <tr><th scope="row">Dirge, Doombringer</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td></tr>
@@ -92,11 +88,9 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Dreadwing, Sky Destroyer</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
 <tr><th scope="row">Grimlock, Powerful Commander</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
-<tr><th scope="row">Megatron, Arrogant Ruler</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This relies on pick_hand not having a cancel option</td></tr>
 <tr><th scope="row">Menasor, Menacing Colossus</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
 <tr><th scope="row">Motormaster, Stunticon Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
 <tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td></tr>
-<tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>
 <tr><th scope="row">Predaking, Ferocious Hunter</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td></tr>
 <tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Scrapper still has an effect when he&#39;s in the KO. Which ugh.</td></tr>
 <tr><th scope="row">Skywarp, Teleporting Seeker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td></tr>

@@ -457,9 +457,8 @@
       "name": "Bumblebee, Trusted Lieutenant",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action)))",
-        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(type=Action));draw(2)))"
-      },
-      "comment": "NOTE: This relies on pick_hand not having a cancel option"
+        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(exact=1,type=Action));if(done())->draw(2)))"
+      }
     },
     {
       "name": "Dead End, Doomed Loner",
@@ -562,9 +561,8 @@
       "name": "Megatron, Arrogant Ruler",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Upgrade)))",
-        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));draw(2)))"
-      },
-      "comment": "NOTE: This relies on pick_hand not having a cancel option"
+        "bot": "on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(exact=1,type=Upgrade));if(done())->draw(2)))"
+      }
     },
     {
       "name": "Motormaster, Stunticon Leader",
@@ -584,7 +582,7 @@
     {
       "name": "Optimus Prime, Gleaming Commander",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-game(when(starting_team(trait!=Sentinel).count=0))->CUSTOM_sentinel_ko_summon()",
         "bot": "on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->(if(confirm())->flip(pick(self().ko)))"
       },
       "alt-needs": "Selecting up to three different owned Sentinel characters outside the game and placing them in the KO area in alt mode."

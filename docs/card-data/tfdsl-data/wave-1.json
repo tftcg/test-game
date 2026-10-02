@@ -376,9 +376,8 @@
     },
     {
       "name": "Autobot Hound, Long-Range Scout",
-      "comment": "NOTE: This is relying on the pick_hand not currently having a cancel option. Ideally this needs a pay()",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(white>=1));draw(2)))",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(exact=1,white>=1));if(done())->draw(2)))",
         "bot": "on-this-after-battle-flip(when(event().flips.white>=1))->(atk_eot(1,this());def_eot(1,this()))"
       }
     },
@@ -440,7 +439,6 @@
     },
     {
       "name": "Darkmount, Cruel Overlord",
-      "comment": "NOTE: This is relying on pick_hand not being cancellable. Really it needs a pay()",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(exact=1));if(done())->damage(2,pick_enemy())))",
         "bot": "on-this-defend(when(event().attacker.trait=Ranged))->def_eob(2,this())"
@@ -538,9 +536,8 @@
     },
     {
       "name": "Megatron, Decepticon Leader",
-      "comment": "NOTE: This is relying on pick_hand not being cancellable. Really it needs a pay()",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand());scrap_upgrade(pick_enemy_upgrade())))",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(exact=1));if(done())->scrap_upgrade(pick_enemy_upgrade())))",
         "bot": "pierce(3)"
       }
     },
