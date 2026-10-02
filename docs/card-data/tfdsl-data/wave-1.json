@@ -58,7 +58,7 @@
     },
     {
       "name": "Combat Training",
-      "tfdsl": "static(bold,when(attached().upgrade.subtype=Weapon),1);static(tough,when(attached().upgrade.subtype=Armor),1)"
+      "tfdsl": "static(bold,when(attached().upgrades.subtype=Weapon),1);static(tough,when(attached().upgrades.subtype=Armor),1)"
     },
     {
       "name": "Computer Sabotage",
