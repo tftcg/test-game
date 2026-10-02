@@ -107,7 +107,7 @@
     },
     {
       "name": "Fight For Position",
-      "tfdsl": "bold(2)"
+      "tfdsl": "bold_eot(2,pick_friend())"
     },
     {
       "name": "Guarded Posture"

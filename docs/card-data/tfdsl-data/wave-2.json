@@ -134,6 +134,7 @@
     },
     {
       "name": "Field Repair",
+      "comment": "TODO: Implement the Plan 1 if it's an Autobot",
       "tfdsl": "repair(1,pick_friend())"
     },
     {
