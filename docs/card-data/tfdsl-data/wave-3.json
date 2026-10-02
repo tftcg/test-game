@@ -695,6 +695,7 @@
     },
     {
       "name": "Eject, Electronic Surveillance",
+      "comment": "NOTE: We agreed to treat Eject's alt mode as a Focus ability",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->do_focus(self(),2)",
         "bot": "on-this-defend()->no_bold_eot(true,all_enemies())"

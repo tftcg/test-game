@@ -417,10 +417,11 @@
     },
     {
       "name": "Blitzwing, Relentless Foe",
+      "comment": "BUG: When Blitzwing flips on his effect, his stealth/brave isn't reevaluating",
       "tfdsl": {
         "alt 1": "brave()",
         "alt 2": "stealth()",
-        "bot": "on-attached-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1))->flip(this())"
+        "bot": "on-this-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1),once())->draw(1);on-this-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1))->flip(this())"
       }
     },
     {

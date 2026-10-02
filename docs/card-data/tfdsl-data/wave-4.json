@@ -297,9 +297,9 @@
     {
       "name": "Captain Astrotrain, Space Force • Transport",
       "tfdsl": {
-        "alt 1": "on-this-defends(when(this().upgrades.count>=1))->def_eot(1,this())",
-        "alt 2": "on-this-attacks(when(this().upgrades.count>=2))->atk_eot(2,this())",
-        "bot": "on-this-battles(when(this().upgrades.count>=3))->(atk_eot(3,this());def_eot(3,this()))"
+        "alt 1": "on-this-defend(when(this().upgrades.count>=1))->def_eot(1,this())",
+        "alt 2": "on-this-attack(when(this().upgrades.count>=2))->atk_eot(2,this())",
+        "bot": "on-this-battle(when(this().upgrades.count>=3))->(atk_eob(3,this());def_eob(3,this()))"
       }
     },
     {
