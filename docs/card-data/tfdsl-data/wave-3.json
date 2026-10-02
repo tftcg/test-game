@@ -688,10 +688,9 @@
     },
     {
       "name": "Blaster, Communications",
-      "comment": "TODO: What happens when nothing under Blaster?",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
-        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);scrap_deck(top_deck());play(previous_target(3)))"
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);if(done())->(scrap_deck(top_deck());play(previous_target(3))))"
       }
     },
     {
@@ -718,10 +717,9 @@
     },
     {
       "name": "Soundwave, Communications",
-      "comment": "TODO: What happens when nothing under Soundwave?",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
-        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);put_opponent_deck(pick_opponent_hand()))"
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);if(done())->(put_opponent_deck(pick_opponent_hand())))"
       }
     },
     {

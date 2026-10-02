@@ -62,8 +62,7 @@
     },
     {
       "name": "Confidence",
-      "comment": "TODO: Autobot starting team ability",
-      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2))"
+      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Autobot).count=0)->(if(confirm())->play(pick_hand(type=Action)))"
     },
     {
       "name": "Cooling Vents",
@@ -164,8 +163,7 @@
     },
     {
       "name": "Inferno Breath",
-      "comment": "TODO: Need to test the case when you can't pick a friend, does the if previous target work. Also need a better way to express that",
-      "tfdsl": "tap(pick_friend(stars<=10,tapped=untapped));if(previous_target()!=0)->damage(3,pick_enemy())"
+      "tfdsl": "tap(pick_friend(stars>=5,tapped=untapped));if(done())->damage(3,pick_enemy())"
     },
     {
       "name": "Intelligence Mission",
@@ -718,7 +716,7 @@
     },
     {
       "name": "Superion, Sky Protector",
-      "comment": "TODO: Test. And implement combine events.",
+      "comment": "TODO: Test.",
       "tfdsl": {
         "combiner": "bold(1);tough(2);pierce(3);on-this-combine()->damage(3,pick_enemy())"
       }

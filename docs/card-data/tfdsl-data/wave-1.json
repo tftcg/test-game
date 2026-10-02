@@ -356,8 +356,7 @@
     },
     {
       "name": "Tandem Targeting System",
-      "comment": "Not sure this is all implemented",
-      "tfdsl": "on-play(when(play-source=hand()))->(if(confirm())->scrap_play('Tandem Targeting System'))"
+      "tfdsl": "on-play-upgrade(when(event().play_source=hand))->(if(confirm())->play(pick_scrap(name='Tandem Targeting System')))"
     },
     {
       "name": "Arcee, Skilled Fighter",
