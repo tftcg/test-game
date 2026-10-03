@@ -143,7 +143,7 @@
     },
     {
       "name": "Focus Fire",
-      "tfdsl": ""
+      "tfdsl": "bold_eot(all(self().actions,name='Focus Fire').count,pick_friend());if(confirm())->play(pick_hand(name='Focus Fire'))"
     },
     {
       "name": "Fog of War",
@@ -412,7 +412,6 @@
     {
       "name": "Blackwing, Aerial Attacker",
       "tfdsl": {
-        "alt": "",
         "bot": "on-eot(when(all_friends(fullname='Dreadwind, Air Defense').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
       }
     },
@@ -502,7 +501,7 @@
     {
       "name": "Dinobot Swoop, Bombardier",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-after-attack()->move_to(self().hand,pick(self().flips,green>=1))"
       },
       "bot-needs": "Selecting a green-icon battle card flipped during the current attack after that attack."
     },
@@ -581,11 +580,11 @@
     },
     {
       "name": "Optimus Prime, Gleaming Commander",
+      "comment": "NOTE: Currently all sentinels you don't have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don't have preselected",
       "tfdsl": {
         "alt": "on-start-game(when(starting_team(trait!=Sentinel).count=0))->CUSTOM_sentinel_ko_summon()",
         "bot": "on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->(if(confirm())->flip(pick(self().ko)))"
-      },
-      "alt-needs": "Selecting up to three different owned Sentinel characters outside the game and placing them in the KO area in alt mode."
+      }
     },
     {
       "name": "Predacon Headstrong, Ground Assault",
