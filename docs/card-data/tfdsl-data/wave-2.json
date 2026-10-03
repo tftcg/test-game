@@ -412,7 +412,7 @@
     {
       "name": "Blackwing, Aerial Attacker",
       "tfdsl": {
-        "bot": "on-eot(when(all_friends(fullname='Dreadwind, Air Defense').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
+        "bot": "on-eot(when(event().player=this().owner,all_friends(fullname='Dreadwind, Air Defense').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
       }
     },
     {
@@ -524,7 +524,7 @@
       "name": "Dreadwind, Air Defense",
       "tfdsl": {
         "alt": "pierce(2)",
-        "bot": "on-eot(when(all_friends(fullname='Blackwing, Aerial Attacker').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
+        "bot": "on-eot(when(event().player=this().owner,all_friends(fullname='Blackwing, Aerial Attacker').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
       }
     },
     {
