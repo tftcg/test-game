@@ -355,11 +355,9 @@
     },
     {
       "name": "Lord Megatron, Conqueror of Cybertron",
-      "alt-needs": "Scrapping cards from an opponent's deck",
-      "bot-needs": "An opponent deck reshuffle event",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->scrap_deck(opponent_top_deck(count=this().def))",
+        "bot": "on-opponent-reshuffle()->damage(this().atk,opponent_pick_opponent_char())"
       }
     },
     {

@@ -128,7 +128,6 @@
     },
     {
       "name": "Vamparc Ribbon",
-      "comment": "TODO: Doesn't seem to be working",
       "tfdsl": "on-attached-attack-damage(when(event().damage>=5))->repair(2,attached())"
     },
     {
