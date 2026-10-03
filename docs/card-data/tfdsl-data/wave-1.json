@@ -5,8 +5,8 @@
   "cards": [
     {
       "name": "Aerial Recon",
-      "comment": "TODO: Technically this shouldn't give Focus to the attached but should just be an effect",
-      "tfdsl": "put_only(trait=Plane);on-attached-battle()->focus(1)"
+      "comment": "TODO: Technically this shouldn't give focus_eob(1) to the attached but should just be an effect",
+      "tfdsl": "put_only(trait=Plane);on-attached-battle()->focus_eob(1,attached())"
     },
     {
       "name": "Agility of Bumblebee",
