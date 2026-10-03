@@ -9,13 +9,11 @@
   "cards": [
     {
       "name": "Aerialbot Enigma",
-      "comment": "TODO: Test",
-      "tfdsl": "if(all_friends(name=Superion).count>0)->damage(1,all_enemies());combine(5,'Superion, Sky Protector',bot,Aerialbots)"
+      "tfdsl": "if(all_friends(name=Superion).count>0)->damage(1,all_enemies());combine('Superion, Sky Protector',5,bot,Aerialbot)"
     },
     {
       "name": "Aerialbot Formation",
-      "comment": "TODO: Test",
-      "tfdsl": "put_only(trait=Aerialbot);static(akt,all_friends(trait=Aerialbots,tapped=tapped))"
+      "tfdsl": "put_only(trait=Aerialbot);static(atk,all_friends(trait=Aerialbot,tapped=tapped,id!=attached().id).count)"
     },
     {
       "name": "Ancient Wisdom",
