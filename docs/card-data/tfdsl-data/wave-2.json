@@ -102,7 +102,7 @@
     },
     {
       "name": "Energized Field",
-      "tfdsl": "on-attached-after-defend-flip(when(event().flips.orange>0))->damage(1, event().attacker)"
+      "tfdsl": "on-attached-after-defend-flip(when(event().flips.orange>=1))->damage(1, event().attacker)"
     },
     {
       "name": "Energon Slingshot",
