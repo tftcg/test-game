@@ -40,7 +40,7 @@
     },
     {
       "name": "Brainstorm",
-      "tfdsl": "if(confirm())->play(pick_hand(type=Action));if(confirm())->play(pick_hand(type=Action))"
+      "tfdsl": "if(confirm('Play Action?'))->play(pick_hand(type=Action));if(confirm('Play Action?'))->play(pick_hand(type=Action))"
     },
     {
       "name": "Calculated Strike",
@@ -109,8 +109,7 @@
     },
     {
       "name": "Extra Padding",
-      "needs": "Allowing up to three named Armors in one Armor slot",
-      "tfdsl": ""
+      "tfdsl": "tough(1);share_slot(3);if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Firecon Flame",
@@ -131,8 +130,7 @@
     },
     {
       "name": "Full Loadout",
-      "needs": "Playing selected Upgrades from hand onto a previously selected character",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend()); if(confirm('Play Weapon?'))->play_upgrade(previous_target(),pick_hand(subtype=Weapon)); if(confirm('Play Armor?'))->play_upgrade(previous_target(),pick_hand(subtype=Armor)); if(confirm('Play Utility?'))->play_upgrade(previous_target(),pick_hand(subtype=Utility))"
     },
     {
       "name": "Heat of Battle",
@@ -247,7 +245,7 @@
     },
     {
       "name": "Special Ops Mission",
-      "tfdsl": "if(confirm())->play(pick_hand(type='Secret Action'));if(confirm())->play(pick_hand(type='Secret Action'))"
+      "tfdsl": "if(confirm('Play Secret Action?'))->play(pick_hand(type='Secret Action'));if(confirm('Play Secret Action?'))->play(pick_hand(type='Secret Action'))"
     },
     {
       "name": "Spinner Rims",
@@ -294,7 +292,7 @@
       "name": "Alpha Trion, Cybertronian Sage",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action,orange>=1))",
-        "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(self().flips,type=Action,blue>=1)))"
+        "bot": "on-this-after-attack-flip()->(if(confirm('Play Flipped Blue Action?'))->play(pick(self().flips,type=Action,blue>=1)))"
       }
     },
     {
@@ -303,7 +301,7 @@
       "comment": "BUG: Confirm is failing. Presumably due to being on opponent's turn",
       "tfdsl": {
         "alt": "",
-        "bot": "on-this-ko()->(scrap_deck(top_deck());if(confirm())->play(previous_target());scrap_deck(top_deck());if(confirm())->play(previous_target(2)))"
+        "bot": "on-this-ko()->(scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target());scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target(2)))"
       }
     },
     {
@@ -327,7 +325,7 @@
       "name": "Captain Wheeljack, Engineering  Scientist",
       "bot-needs": "Counting Actions played during the turn",
       "tfdsl": {
-        "alt": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Brainstorm')))",
+        "alt": "on-start-game()->(if(confirm('Move Brainstorm to Hand?'))->move_to(self().hand,pick_deck(name='Brainstorm')))",
         "bot": ""
       }
     },
@@ -395,7 +393,7 @@
       "name": "Private Flak, Artillery • Tactics",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,orange>=1)))->(if(confirm())->play(pick_hand(type=Upgrade)))"
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,orange>=1)))->(if(confirm('Play Upgrade?'))->play(pick_hand(type=Upgrade)))"
       }
     },
     {
@@ -489,7 +487,7 @@
     {
       "name": "Raider Cindersaur, Black Ops • Demolitions",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action,orange>=1)))",
+        "alt": "on-this-flip()->(if(confirm('Play Orange Action?'))->play(pick_hand(type=Action,orange>=1)))",
         "bot": "on-this-after-attack-flip(when(event().flips.orange>=4))->damage(2,pick_enemy(tapped=tapped))"
       }
     },
@@ -518,7 +516,7 @@
       "name": "Raider Laserbeak, Espionage • Interrogation",
       "tfdsl": {
         "alt": "on-this-flip()->(draw(1);scrap_hand(pick_hand()))",
-        "bot": "tap_ability()->(if(confirm())->play(pick_hand(type='Secret Action')))"
+        "bot": "tap_ability()->(if(confirm('Play Secret Action?'))->play(pick_hand(type='Secret Action')))"
       }
     },
     {
@@ -586,7 +584,7 @@
     {
       "name": "Sergeant Chromia, Special Ops • Counterintelligence",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->play(pick_hand(subtype=Armor,blue>=1)))",
+        "alt": "on-this-flip()->(if(confirm('Play Blue Armor?'))->play(pick_hand(subtype=Armor,blue>=1)))",
         "bot": "on-this-after-defend-flip(when(event().flips.blue>=2))->draw(1)"
       }
     },
@@ -637,7 +635,7 @@
     {
       "name": "Specialist Ratchet, Engineering • Rescue & Repair",
       "tfdsl": {
-        "alt": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Medic!')))",
+        "alt": "on-start-game()->(if(confirm('Move Medic! to Hand?'))->move_to(self().hand,pick_deck(name='Medic!')))",
         "bot": "on-repair(when(event().origin.owner=this().owner))->atk_eot(1,this())"
       }
     },
@@ -684,7 +682,7 @@
     },
     {
       "name": "Recover Cassette",
-      "tfdsl": "play_only(starting_team(name=Blaster || name=Soundwave)>0);if(confirm())->(place_under(pick_friend(name=Blaster || name=Soundwave),pick_friend(trait='Mini-Cassette'));repair(2,pick_friend());ko(this()))"
+      "tfdsl": "play_only(starting_team(name=Blaster || name=Soundwave)>0);if(confirm('Place Mini-Cassette Under Cassette Player?'))->(place_under(pick_friend(name=Blaster || name=Soundwave),pick_friend(trait='Mini-Cassette'));repair(2,pick_friend());ko(this()))"
     },
     {
       "name": "Blaster, Communications",
@@ -705,8 +703,8 @@
       "name": "Ramhorn, Warrior",
       "comment": "Note that it's PT(2) because PT(1) is the flipped character",
       "tfdsl": {
-        "alt": "stealth();on-this-flip()->(if(confirm())->move_upgrade(pick_friendly_upgrade(subtype=Armor),pick_friend(id!=previous_target(2).attached_to.id)))",
-        "bot": "on-this-defend()->play(pick_hand(subtype=Armor,white>=1))"
+        "alt": "stealth();on-this-flip()->(if(confirm('Move Armor?'))->move_upgrade(pick_friendly_upgrade(subtype=Armor),pick_friend(id!=previous_target(2).attached_to.id)))",
+        "bot": "on-this-defend()->(if(confirm('Play White Armor?'))->play(pick_hand(subtype=Armor,white>=1)))"
       }
     },
     {
@@ -726,8 +724,8 @@
     {
       "name": "Buzzsaw, Spy",
       "tfdsl": {
-        "alt": "stealth();on-this-flip()->(if(confirm())->move_upgrade(pick_friendly_upgrade(subtype=Weapon),pick_friend(id!=previous_target(2).attached_to.id)))",
-        "bot": "on-this-defend()->play(pick_hand(subtype=Weapon,blue>=1))"
+        "alt": "stealth();on-this-flip()->(if(confirm('Move Weapon?'))->move_upgrade(pick_friendly_upgrade(subtype=Weapon),pick_friend(id!=previous_target(2).attached_to.id)))",
+        "bot": "on-this-defend()->(if(confirm('Play Blue Weapon?'))->play(pick_hand(subtype=Weapon,blue>=1)))"
       }
     },
     {
@@ -748,7 +746,7 @@
       "name": "Private Camshaft, Special Ops • Scout",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "on-start-first-turn()->(if(confirm())->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Armor)))",
+        "alt": "on-start-first-turn()->(if(confirm('Play Armor?'))->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Armor)))",
         "bot": "on-friend-defend(when(event().defender.trait=Omnibot,event().defender.upgrades.subtype=Armor))->tough_eob(all_friends(trait=Omnibot,upgrades.subtype=Armor).count,event().defender)"
       }
     },
@@ -756,7 +754,7 @@
       "name": "Private Downshift, Special Ops • Security Agent",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "on-start-first-turn()->(if(confirm())->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Weapon)))",
+        "alt": "on-start-first-turn()->(if(confirm('Play Weapon?'))->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Weapon)))",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Omnibot,event().attacker.upgrades.subtype=Weapon))->bold_eot(all_friends(trait=Omnibot,upgrades.subtype=Weapon).count,event().attacker)"
       }
     },
@@ -764,7 +762,7 @@
       "name": "Sergeant Overdrive, Special Ops • Strategist",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "on-start-first-turn()->(if(confirm())->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Utility)))",
+        "alt": "on-start-first-turn()->(if(confirm('Play Utility?'))->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Utility)))",
         "bot": "on-battle(when(event().battler.owner=this().owner,event().battler.trait=Omnibot,event().battler.upgrades.subtype=Utility))->focus_eob(all_friends(trait=Omnibot,upgrades.subtype=Utility).count,event().battler)"
       }
     }

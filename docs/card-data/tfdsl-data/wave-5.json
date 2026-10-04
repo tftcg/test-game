@@ -276,8 +276,7 @@
     },
     {
       "name": "Triangulator",
-      "tfdsl": "focus(1);on-put()->(if(confirm())->play(pick_hand(name=\"Triangulator\")))",
-      "needs": "Needs ability to put 3 of a thing on a thing"
+      "tfdsl": "focus(1);share_slot(3);if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Tripwire",

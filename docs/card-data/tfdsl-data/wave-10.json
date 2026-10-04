@@ -73,8 +73,7 @@
     },
     {
       "name": "Null-Ray Cannon",
-      "needs": "Upgrade requirements for a character having a named mode and multiple copies in one slot",
-      "tfdsl": ""
+      "tfdsl": "put_only(stars>=6,all_traits=Plane,faction=Decepticon);share_slot(2);on-attached-attack()->move(1,attached(),event().defender)"
     },
     {
       "name": "Obsessive Research",

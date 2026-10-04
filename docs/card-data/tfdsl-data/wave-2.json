@@ -26,8 +26,7 @@
     },
     {
       "name": "Attack Drone",
-      "comment": "TODO: Need to implement 'can put 3' abilities",
-      "tfdsl": "on-put()->play(pick_hand(name='Attack Drone'))"
+      "tfdsl": "share_slot(3);if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Backup Beam",
@@ -141,7 +140,7 @@
     },
     {
       "name": "Focus Fire",
-      "tfdsl": "bold_eot(all(self().actions,name='Focus Fire').count,pick_friend());if(confirm())->play(pick_hand(name='Focus Fire'))"
+      "tfdsl": "bold_eot(all(self().actions,name='Focus Fire').count,pick_friend());if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Fog of War",
@@ -193,8 +192,7 @@
     },
     {
       "name": "Mounted Missiles",
-      "tfdsl": "",
-      "needs": "Placing this Weapon in an Armor or Utility slot."
+      "tfdsl": "allow_in_slot('Weapon','Armor');allow_in_slot('Weapon','Utility')"
     },
     {
       "name": "Noble's Blaster",
@@ -687,9 +685,8 @@
     {
       "name": "Dreadwing, Sky Destroyer",
       "tfdsl": {
-        "combiner": ""
-      },
-      "combiner-needs": "Supporting two Weapon, two Armor, and two Utility slots."
+        "combiner": "add_slot('Weapon',1);add_slot('Armor',1);add_slot('Utility',1)"
+      }
     },
     {
       "name": "Menasor, Menacing Colossus",
@@ -707,13 +704,11 @@
     {
       "name": "Predaking, Ferocious Hunter",
       "tfdsl": {
-        "combiner": ""
-      },
-      "combiner-needs": "Supporting five Weapon slots on a combined character."
+        "combiner": "add_slot('Weapon',4)"
+      }
     },
     {
       "name": "Superion, Sky Protector",
-      "comment": "TODO: Test.",
       "tfdsl": {
         "combiner": "bold(1);tough(2);pierce(3);on-this-combine()->damage(3,pick_enemy())"
       }

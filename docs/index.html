@@ -184,7 +184,7 @@
     .card-row { display: flex; align-items: flex-start; gap: .4rem; min-width: max-content; }
     .card-row.scrollable { overflow-x: auto; min-width: 100%; height: calc(100% - 1.2rem); }
     .character-row { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: .75rem; height: calc(100% - 1.2rem); overflow: auto; }
-    .character-stack { display: grid; grid-template-rows: 170px 50px; justify-items: center; min-width: 126px; }
+    .character-stack { display: grid; grid-template-rows: 170px auto; align-content: start; justify-items: center; min-width: 126px; }
     .character-card-stack {
       --head-card-width: 72px;
       position: relative;
@@ -272,8 +272,11 @@
     }
 
     .upgrade-row { display: flex; justify-content: center; gap: .25rem; width: 100%; }
-    .upgrade-slot { width: 38px; min-height: 48px; text-align: center; font-size: .55rem; color: #9eabb7; }
-    .upgrade-slot .card { margin-top: .1rem; }
+    .upgrade-slot { flex: 0 0 42px; min-height: 48px; text-align: center; font-size: .55rem; color: #9eabb7; }
+    .upgrade-cards { --upgrade-card-height: 59px; display: flex; flex-direction: column; margin-top: .1rem; }
+    .upgrade-cards .card.small { height: var(--upgrade-card-height); margin: 0; }
+    .upgrade-cards .card + .card { margin-top: calc(var(--upgrade-card-height) * -.8); }
+    .upgrade-cards .shared-slot-copy img { opacity: .35; }
     .empty-slot { display: block; height: 42px; border: 1px dashed #536474; border-radius: .15rem; }
 
     .pile { display: flex; align-items: flex-start; min-width: max-content; }
@@ -592,7 +595,7 @@
     </form>
   </dialog>
   <dialog id="confirm-prompt">
-    <h2>Do this?</h2>
+    <h2 id="confirm-message">Do this?</h2>
     <img id="confirm-card" hidden>
     <aside id="confirm-card-preview" hidden aria-hidden="true"></aside>
     <div class="confirm-actions">

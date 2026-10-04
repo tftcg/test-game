@@ -49,8 +49,7 @@
     },
     {
       "name": "Cargo Trailer",
-      "comment": "TODO: need something like slot_utility(3, this())",
-      "tfdsl": "put_only(trait=Truck);static(atk,all_upgrades(attached().upgrade.name='Cargo Trailer').count)"
+      "tfdsl": "put_only(trait=Truck);share_slot(3);static(atk,all_upgrades_on_attached(name=this().name).count)"
     },
     {
       "name": "Collateral Damage",
@@ -546,9 +545,8 @@
       "tfdsl": {
         "comment": "TODO: Test this",
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(subtype=Weapon))",
-        "bot": ""
-      },
-      "bot-needs": "Allowing Weapon upgrades to occupy Armor and Utility slots."
+        "bot": "allow_in_slot('Weapon','Armor');allow_in_slot('Weapon','Utility')"
+      }
     },
     {
       "name": "Nemesis Prime, Dark Clone",

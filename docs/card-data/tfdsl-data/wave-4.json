@@ -88,8 +88,9 @@
     },
     {
       "name": "Dual Wield",
-      "tfdsl": "",
-      "needs": "Granting an extra Weapon slot and playing an Upgrade from scrap"
+      "tfdslFuture": "add_slot(scope=eot,'Weapon',1,pick_friend())",
+      "needs": "Optional play of a Weapon from scrap when the chosen character is a Mercenary",
+      "tfdsl": ""
     },
     {
       "name": "Energy Transfer",
@@ -235,8 +236,9 @@
     },
     {
       "name": "Shoulder Holster",
-      "tfdsl": "",
-      "needs": "Granting an extra Weapon slot and revealing then playing a top-deck Weapon"
+      "tfdslFuture": "add_slot('Weapon',1)",
+      "needs": "Revealing then playing a top-deck Weapon",
+      "tfdsl": ""
     },
     {
       "name": "Showing Off",
@@ -369,9 +371,8 @@
     },
     {
       "name": "MTX-S2A Guided Missile Launcher",
-      "upgrade-needs": "Allowing an upgrade in an Armor or Utility slot and replacing it leaving the battlefield with placement in the KO area",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "allow_in_slot('Weapon','Armor');allow_in_slot('Weapon','Utility')"
       }
     },
     {
