@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 841/1467 (57.3%)</p>
+  <p>TFDSL completion: 845/1467 (57.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>211</td><td>83</td><td>119</td><td>202</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>375</td><td>0</td><td>219</td><td>219</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>45</td><td>3</td><td>109</td><td>112</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>214</td><td>82</td><td>117</td><td>199</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>375</td><td>1</td><td>218</td><td>219</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>46</td><td>3</td><td>108</td><td>111</td></tr>
 </tbody>
 </table>
 </section>
@@ -188,12 +188,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 100/174 (57.5%)</p>
+  <p>TFDSL completion: 103/174 (59.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>25</td><td>11</td><td>24</td><td>35</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>38</td><td>0</td><td>26</td><td>26</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>28</td><td>10</td><td>22</td><td>32</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>38</td><td>1</td><td>25</td><td>26</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -223,7 +223,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
 <tr><th scope="row">Raider Caliburst, Air Force  Weapons</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Tracking opponent card draws during their turn<br>upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
 <tr><th scope="row">Raider Chop Shop, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Checking that a scrapped card has no battle icons other than green</td></tr>
-<tr><th scope="row">Raider Kickback, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Proposal - No, firstly it&#39;s not bold, and secondly flip+2 shouldn&#39;t use tough/bold mechanics</td><td class="comment"></td></tr>
+<tr><th scope="row">Raider Kickback, Infantry • Soldier</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test alt mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Needler, Ground Force • Demolitions</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemy characters from being repaired</td></tr>
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revenge triggers and looking at an opponent&#39;s hand before selecting a card<br>bot-needs: Activated abilities and counting different battle-icon colors on a revealed deck card</td></tr>
@@ -236,8 +236,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Springer, Special Ops • Aerial Defense</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">bot-needs: Playing an Action and an Upgrade from hand after flipping to this mode</td></tr>
 <tr><th scope="row">Sergeant Thundercracker, Infantry • Seeker</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing a top-deck card and moving damage once for each black icon on it<br>bot-needs: Selecting and revealing a variable number of opponent hand cards based on flipped black icons</td></tr>
-<tr><th scope="row">Skytread (Plane), Special Ops • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Revenge triggers, combining named Skytread characters, and placing cards from hand face down under the combiner</td></tr>
-<tr><th scope="row">Skytread (Tank), Special Ops • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Revenge triggers, combining named Skytread characters, and placing cards from hand face down under the combiner</td></tr>
 <tr><th scope="row">Trypticon, Assault Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Choosing between temporary ATK and repair after KO&#39;ing another character</td></tr>
 <tr><th scope="row">TTC-HD Turret Armor</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
 <tr><th scope="row">TTC-HP Oblivio Launcher</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
@@ -268,7 +266,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Pincer Movement</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting a restricted extra attack against the same enemy</td></tr>
 <tr><th scope="row">Relentless Invasion</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning named KO characters to the battlefield, granting attacks, and placing them under Trypticon at end of turn</td></tr>
 <tr><th scope="row">Reprocess</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Shoulder Holster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing then playing a top-deck Weapon</td></tr>
+<tr><th scope="row">Shoulder Holster</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment">Need to implement the top decking of a Weapon</td><td class="comment">needs: Revealing then playing a top-deck Weapon</td></tr>
 <tr><th scope="row">Soldier&#39;s Blaster</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test against multi-factional characters</td><td class="comment"></td></tr>
 <tr><th scope="row">Toolbox</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing repair amounts</td></tr>
 <tr><th scope="row">Valuable Contract</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Using a Bounty ability and selecting an owned battle card outside the game</td></tr>
@@ -278,13 +276,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 5</h2>
-  <p>TFDSL completion: 120/188 (63.8%)</p>
+  <p>TFDSL completion: 121/188 (64.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>33</td><td>19</td><td>5</td><td>24</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>39</td><td>0</td><td>25</td><td>25</td></tr>
-<tr><th scope="row">Stratagem</th><td>30</td><td>13</td><td>1</td><td>16</td><td>17</td></tr>
+<tr><th scope="row">Stratagem</th><td>30</td><td>14</td><td>1</td><td>15</td><td>16</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -292,7 +290,7 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Autobot Gears, Transport &amp; Reconnaissance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Moving an enemy Upgrade to a different enemy character</td></tr>
-<tr><th scope="row">Autobot Nautica, Camien Engineer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test. And body should just be Ramhorn</td><td class="comment">body-needs: Playing an Armor from hand directly onto this character while defending</td></tr>
+<tr><th scope="row">Autobot Nautica, Camien Engineer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Need to be able to force the play of an Armor onto this character</td></tr>
 <tr><th scope="row">Autobot Outback, Gunner</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">This is relying on pick_hand not being cancellable. Needs a pay()</td><td class="comment">bot-needs: Replacing Upgrade scrapping with a same-subtype Upgrade from hand</td></tr>
 <tr><th scope="row">Autobot Whirl, Aerial Assault</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage from a single Ranged attacker</td></tr>
 <tr><th scope="row">Beachcomber, Geologist</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Naming a card and comparing the top deck card to that name</td></tr>
@@ -302,7 +300,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Decepticon Pounce, Infiltrator</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting face-up and face-down Secret Actions for a dynamic attack bonus<br>bot-needs: Reordering selected Secret Actions from the top of the deck while returning the rest</td></tr>
 <tr><th scope="row">Decepticon Quake, Ground Assault</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. Test a lot.</td><td class="comment"></td></tr>
 <tr><th scope="row">Fangry, Sky Tracker</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Fortress Maximus, Great War Veteran</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Good, but need to also cover attaching Cerebros to him. Though maybe that&#39;s a deck requirement</td><td class="comment">body-needs: Carrying attack-flip color conditions forward to flip this character after the battle</td></tr>
+<tr><th scope="row">Fortress Maximus, Great War Veteran</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Need to automatically attach Cerebros to him and it errors when deployed</td><td class="comment">body-needs: Carrying attack-flip color conditions forward to flip this character after the battle</td></tr>
 <tr><th scope="row">Horri-Bull, Ground Trooper</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Triggering when a player plays any black battle card</td></tr>
 <tr><th scope="row">Megatron, Fallen Hero</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Carrying an orange flip condition forward to deal damage after the battle</td></tr>
 <tr><th scope="row">Mindwipe, Hypnotist</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Proposal - checking the opponent has a card shouldn&#39;t be here - things need to just fail gracefully</td><td class="comment">alt-needs: Choosing a battle-icon color and scrapping an opponent hand card matching that choice</td></tr>
@@ -368,7 +366,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Revenge</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Applying a damage-tiered Bold value to a named character</td></tr>
 <tr><th scope="row">Sabotage</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppressing opponent triggered abilities while an enemy is upgraded</td></tr>
 <tr><th scope="row">Saturation Bombing</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game Stratagem effects that flip the Stratagem after resolving</td></tr>
-<tr><th scope="row">Sky Shadow Sync</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Combining named characters with a component outside the game</td></tr>
+<tr><th scope="row">Sky Shadow Sync</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">For some reason, on-friend-ko fails here even though it worked when put on Skytread</td><td class="comment"></td></tr>
 <tr><th scope="row">Strategic Airlift</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Triggering when an Upgrade is scrapped and placing that Upgrade beneath a named character</td></tr>
 <tr><th scope="row">Swap Heads</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Swapping heads between characters and flipping a once-per-game Stratagem</td></tr>
 <tr><th scope="row">The Usurper</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

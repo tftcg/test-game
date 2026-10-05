@@ -435,10 +435,10 @@
     },
     {
       "name": "Sky Shadow Sync",
+      "comment": "BUG: For some reason, on-friend-ko fails here even though it worked when put on Skytread",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Combining named characters with a component outside the game"
+        "front": "on-friend-ko(when(event().ko.fullname='Sky Shadow (Plane)' || event().ko.fullname='Sky Shadow (Tank)'))->(combine('Sky Shadow, Elite Warrior',2,alt,'Sky Shadow (Plane)','Sky Shadow (Tank)');summon_friend('Ominus'))"
+      }
     },
     {
       "name": "Stealth Mission"
@@ -504,8 +504,7 @@
         "alt": "on-this-after-defend-flip(when(event().attacker.trait=Car || event().attacker.trait=Truck || event().attacker.trait=Tank,event().flips.blue>=1))->def_eob(event().flips.blue,this())",
         "body": ""
       },
-      "comment": "TODO: Test. And body should just be Ramhorn",
-      "body-needs": "Playing an Armor from hand directly onto this character while defending"
+      "body-needs": "Need to be able to force the play of an Armor onto this character"
     },
     {
       "name": "Autobot Outback, Gunner",
@@ -887,13 +886,13 @@
         "alt": "on-this-after-defend-flip(when(event().flips.white>=1,event().flips.blue>=1))->damage(1,event().attacker)",
         "body": ""
       },
-      "comment": "Good, but need to also cover attaching Cerebros to him. Though maybe that's a deck requirement",
+      "comment": "BUG: Need to automatically attach Cerebros to him and it errors when deployed",
       "body-needs": "Carrying attack-flip color conditions forward to flip this character after the battle"
     },
     {
       "name": "Cerebros, City Commander",
       "tfdsl": {
-        "head": "",
+        "head": "bold(1);tough(1)",
         "body": "bold(1);tough(1);on-this-after-battle-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->(if(confirm())->put_upgrade(this(),pick_scrap(type=Upgrade)))"
       },
       "head-needs": "Deploying this head in body mode when Fortress Maximus is KO’d, including after the last character is KO’d"

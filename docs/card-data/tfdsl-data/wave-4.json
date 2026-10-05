@@ -236,9 +236,9 @@
     },
     {
       "name": "Shoulder Holster",
-      "tfdslFuture": "add_slot('Weapon',1)",
+      "comment": "TODO: Need to implement the top decking of a Weapon",
       "needs": "Revealing then playing a top-deck Weapon",
-      "tfdsl": ""
+      "tfdsl": "add_slot('Weapon',1)"
     },
     {
       "name": "Showing Off",
@@ -550,10 +550,9 @@
     },
     {
       "name": "Raider Kickback, Infantry • Soldier",
-      "comment": "Proposal - No, firstly it's not bold, and secondly flip+2 shouldn't use tough/bold mechanics",
+      "comment": "TODO: Test alt mode",
       "tfdsl": {
-        "altBad": "on-this-defend()->bold_eob(starting_team(trait=Insecticon).count,this())",
-        "alt": "",
+        "alt": "on-this-defend-flip(once())->flip_extra(all_friends(trait=Insecticon).count)",
         "bot": "on(event=after-attack-flip,when(event().attacker.trait=Insecticon,event().flips.blue>=1))->damage(1,event().defender)"
       }
     },
@@ -674,16 +673,14 @@
     },
     {
       "name": "Skytread (Plane), Special Ops • Soldier",
-      "alt-needs": "Revenge triggers, combining named Skytread characters, and placing cards from hand face down under the combiner",
       "tfdsl": {
-        "alt": ""
+        "alt": "revenge((combine('Raider Skytread, Special Ops • Soldier',2,alt,'Skytread (Plane), Special Ops • Soldier','Skytread (Tank), Special Ops • Soldier');place_under(previous_target(),all_hand())))"
       }
     },
     {
       "name": "Skytread (Tank), Special Ops • Soldier",
-      "alt-needs": "Revenge triggers, combining named Skytread characters, and placing cards from hand face down under the combiner",
       "tfdsl": {
-        "alt": ""
+        "alt": "revenge((combine('Raider Skytread, Special Ops • Soldier',2,alt,'Skytread (Plane), Special Ops • Soldier','Skytread (Tank), Special Ops • Soldier');place_under(previous_target(),all_hand())))"
       }
     },
     {
