@@ -5,7 +5,7 @@
   "cards": [
     {
       "name": "Aerial Recon",
-      "comment": "TODO: Technically this shouldn't give focus_eob(1) to the attached but should just be an effect",
+      "comment": "NOTE: Technically this shouldn't give focus_eob(1) to the attached but should just be an effect",
       "tfdsl": "put_only(trait=Plane);on-attached-battle()->focus_eob(1,attached())"
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "name": "I Still Function!",
-      "comment": "TODO: Currently it can pick a non-character from the KO. Also the returned character insta-dies.",
+      "comment": "BUG: Currently it can pick a non-character from the KO. Also the returned character insta-dies.",
       "tfdsl": "return_from_ko(pick(self().ko,stars<=12));repair(1,previous_target());on-end-turn()->ko(previous_target())"
     },
     {
@@ -448,7 +448,7 @@
     },
     {
       "name": "Decepticon Shockwave, Cybertron Commander",
-      "comment": "TODO: Bug here that you are doing 1 damage to a char your opponent chose, not them doing it",
+      "comment": "NOTE: Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it",
       "tfdsl": {
         "alt": "on-this-flip()->(each(all_players())->draw(2,it()))",
         "bot": "on-opponent-scrap-hand()->damage(1,opponent_pick(opponent().upgrades))"

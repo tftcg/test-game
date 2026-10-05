@@ -144,8 +144,8 @@
     },
     {
       "name": "Imminent Breakthrough",
-      "tfdsl": "",
-      "needs": "Rolling Action support. Treating cards as though a named card was played this turn"
+      "comment": "NOTE: As there isn't a 'during your turn' event, making this start of turn. Potentiallty later it can be an actionable ability",
+      "tfdsl": "scrap(on-start-turn())->set_flag_eot('tech research')"
     },
     {
       "name": "Inexorable Force",
@@ -324,8 +324,7 @@
     },
     {
       "name": "Superior Surveillance",
-      "tfdsl": "",
-      "needs": "Enforcing a play requirement based on a named card played this turn"
+      "tfdsl": "play_only(this().owner.flags='tech research');oppress(3)"
     },
     {
       "name": "Take the Shot",

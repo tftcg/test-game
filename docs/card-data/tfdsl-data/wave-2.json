@@ -292,21 +292,15 @@
     },
     {
       "name": "Superior Cannon",
-      "needs": "Card has been played token",
-      "tfdslFuture": "play_only(this-turn().techresearch=played);bold(4)",
-      "tfdsl": ""
+      "tfdsl": "play_only(this().owner.flags='tech research');bold(4)"
     },
     {
       "name": "Superior Jetpack",
-      "needs": "Card has been played token",
-      "tfdslFuture": "play_only(this-turn().techresearch=played);pierce(4)",
-      "tfdsl": ""
+      "tfdsl": "play_only(this().owner.flags='tech research');pierce(4)"
     },
     {
       "name": "Superior Plating",
-      "needs": "Card has been played token",
-      "tfdslFuture": "play_only(this-turn().techresearch=played);tough(4)",
-      "tfdsl": ""
+      "tfdsl": "play_only(this().owner.flags='tech research');tough(4)"
     },
     {
       "name": "Surprise Attack",
@@ -323,9 +317,7 @@
     },
     {
       "name": "Tech Research",
-      "needs": "Card has been played token",
-      "tfdslFuture": "set(techresearch=played)",
-      "tfdsl": ""
+      "tfdsl": "set_flag_eot('tech research')"
     },
     {
       "name": "Testify",
