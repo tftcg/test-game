@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 833/1467 (56.8%)</p>
+  <p>TFDSL completion: 834/1467 (56.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>209</td><td>85</td><td>119</td><td>204</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>210</td><td>84</td><td>119</td><td>203</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>370</td><td>0</td><td>224</td><td>224</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>45</td><td>3</td><td>109</td><td>112</td></tr>
 </tbody>
@@ -28,11 +28,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 1</h2>
-  <p>TFDSL completion: 160/170 (94.1%)</p>
+  <p>TFDSL completion: 161/170 (94.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>51</td><td>45</td><td>4</td><td>2</td><td>6</td></tr>
+<tr><th scope="row">Character</th><td>51</td><td>46</td><td>3</td><td>2</td><td>5</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>83</td><td>0</td><td>3</td><td>3</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -46,7 +46,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Deadlock, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Tracking a chosen enemy until it is KO&#39;d during the turn. Needs an eot event listener.</td></tr>
 <tr><th scope="row">Decepticon Shockwave, Cybertron Commander</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Bug here that you are doing 1 damage to a char your opponent chose, not them doing it</td><td class="comment"></td></tr>
 <tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Needs a text entry to say how many counters to move, which needs to take a max</td></tr>
-<tr><th scope="row">Kickback, Cunning Insecticon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Flipping additional battle cards based on other Insecticons in the starting team.</td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top card of each player&#39;s deck.<br>bot-needs: A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage</td></tr>
 <tr><th scope="row">Aerial Recon</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Technically this shouldn&#39;t give focus_eob(1) to the attached but should just be an effect</td><td class="comment"></td></tr>
 <tr><th scope="row">All-Out Attack</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing each untapped character to attack during the turn - probably a player flag for custom code in the options function. Also has to remember which characters have attacked this turn</td></tr>

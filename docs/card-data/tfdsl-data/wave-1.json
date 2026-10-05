@@ -526,8 +526,7 @@
       "tfdsl": {
         "alt": "on-this-attack-damage(when(event().damage>0))->repair(1,pick_friend(trait=Insecticon))",
         "bot": "on-this-attack-flip(once())->flip_extra(all_friends(trait=Insecticon,id!=this().id).count + all_friends(trait=Insecticon,id!=this().id).count)"
-      },
-      "bot-needs": "Flipping additional battle cards based on other Insecticons in the starting team."
+      }
     },
     {
       "name": "Megatron, Decepticon Leader",
