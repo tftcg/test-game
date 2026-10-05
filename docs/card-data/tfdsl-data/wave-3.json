@@ -48,6 +48,7 @@
     },
     {
       "name": "Callous Leadership",
+      "comment": "TODO: Needs an integer entry to choose between 0 and 5",
       "tfdsl": "move(5,pick_friend(faction=Decepticon,trait=Leader,stars>=8),pick_friend(id!=previous_target().id))"
     },
     {

@@ -179,7 +179,6 @@
     },
     {
       "name": "Matrix of Leadership",
-      "comment": "BUG: Says Skipping Requirement when played - yet won't play if not an Autobot",
       "tfdsl": "put_only(faction=Autobot);each(all_friends(id!=attached().id))->(static(pierce,when(attached().trait=Leader),1,target=it());static(atk,when(attached().trait=Leader),1,target=it()))"
     },
     {
@@ -209,7 +208,7 @@
     {
       "name": "Peace through Tyranny",
       "tfdsl": "",
-      "needs": "Taking an extra turn after the current turn."
+      "needs": "Needs to store a flag on the player that the turn handler is listening to"
     },
     {
       "name": "Photon Bomb",
@@ -270,9 +269,7 @@
     {
       "name": "Security Checkpoint",
       "comment": "TODO: Needs to include revealing the hand",
-      "tfdslFuture": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))",
-      "tfdsl": "",
-      "needs": "Revealing each player's hand before scrapping its upgrades."
+      "tfdsl": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))"
     },
     {
       "name": "Shock Absorbers",
@@ -305,7 +302,7 @@
     {
       "name": "Swarm!",
       "tfdsl": "",
-      "needs": "Flipping battle cards based on starting-team traits and resolving effects for each flipped icon."
+      "needs": "Needs to flip cards outside of Combat. Probably a custom implementation"
     },
     {
       "name": "System Reboot",
@@ -341,8 +338,8 @@
     },
     {
       "name": "Protected By Metroplex",
-      "comment": "TODO: Support direct damage, not just attack damage",
-      "tfdsl": "instead(on-attack-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)))"
+      "comment": "TODO: Test direct damage",
+      "tfdsl": "instead(on-attack-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)));instead(on-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)))"
     },
     {
       "name": "Rally the City",
@@ -351,7 +348,7 @@
     {
       "name": "All-Out Attack",
       "tfdsl": "",
-      "needs": "Allowing each untapped character to attack during the turn."
+      "needs": "Allowing each untapped character to attack during the turn - probably a player flag for custom code in the options function. Also has to remember which characters have attacked this turn"
     },
     {
       "name": "Tandem Targeting System",
@@ -366,8 +363,8 @@
     },
     {
       "name": "Autobot Cosmos, Recon & Communication",
+      "comment": "BUG: 1. The alt flip is only drawing one when discarding five. 2. The reshuffle event doesn't have any attack info.",
       "tfdsl": {
-        "comment": "BUG: 1. The alt flip is only drawing one when discarding five. 2. The reshuffle event doesn't have any attack info.",
         "alt": "on-this-flip()->(scrap_hand(all_hand());draw(previous_target().count))",
         "bot": "on-reshuffle(when(event().attacker=this()))->(if(event().defender.stars<=12)->ko(event().defender))"
       },
@@ -386,7 +383,7 @@
         "alt": "",
         "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->pierce(2,this())"
       },
-      "alt-needs": "A conditional attack-damage replacement based on defense flips and the attacker's Pierce."
+      "alt-needs": "Needs a has(pierce) DSL primitive"
     },
     {
       "name": "Autobot Mirage, Lone Wolf",
@@ -422,7 +419,6 @@
     },
     {
       "name": "Chop Shop, Sneaky Insecticon",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->(each(all(this().upgrades))->(scrap_upgrade(it());draw(1);repair(1,pick_friend(trait=Insecticon))))",
         "bot": "on-this-attack()->(if(confirm())->move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this()))"
@@ -448,7 +444,7 @@
       "tfdsl": {
         "alt": ""
       },
-      "alt-needs": "Tracking a chosen enemy until it is KO'd during the turn."
+      "alt-needs": "Tracking a chosen enemy until it is KO'd during the turn. Needs an eot event listener."
     },
     {
       "name": "Decepticon Shockwave, Cybertron Commander",
@@ -471,7 +467,7 @@
         "alt": "",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Dinobot))->repair(1,event().attacker)"
       },
-      "alt-needs": "Moving an arbitrary number of damage counters from multiple characters."
+      "alt-needs": "Needs a text entry to say how many counters to move, which needs to take a max"
     },
     {
       "name": "Dinobot Slug, Hot-Headed Warrior"
@@ -552,9 +548,8 @@
       "name": "Nemesis Prime, Dark Clone",
       "tfdsl": {
         "alt": "on-this-flip()->damage(2,opponent_pick(opponent().chars))",
-        "bot": ""
-      },
-      "bot-needs": "A deck reshuffle trigger, placing the bottom deck card face down under this character, and scaling ATK by cards under it."
+        "bot": "on-reshuffle()->place_under(this(),bottom_deck());static(atk,this().under.count)"
+      }
     },
     {
       "name": "Optimus Prime, Battlefield Legend",
@@ -598,7 +593,7 @@
         "bot": ""
       },
       "alt-needs": "Revealing the top card of each player's deck.",
-      "bot-needs": "A conditional attack-damage replacement triggered by defense flips."
+      "bot-needs": "A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage"
     },
     {
       "name": "Starscream, Air Commander",

@@ -349,7 +349,7 @@
     {
       "name": "General Optimus Prime, Galactic Commander",
       "alt-needs": "Granting Utility slots and revealing then playing a top-deck Action",
-      "bot-needs": "Granting Utility slots and playing a flipped Upgrade after battle",
+      "bot-needs": "Need to be able to direct the target of a played card onto this()",
       "tfdsl": {
         "alt": "",
         "bot": ""
