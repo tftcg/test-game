@@ -172,10 +172,8 @@
     },
     {
       "name": "Arise, Rodimus Prime",
-      "front-needs": "Revealing a named card from the deck before the game",
-      "frontStart": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Matrix of Leadership')))",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Matrix of Leadership')));share_slot(3,'Matrix of Leadership',all_friends(fullname='Rodimus Prime, Worthy Leader'))"
       }
     },
     {
@@ -244,7 +242,6 @@
     },
     {
       "name": "Quest for Fire",
-      "front-needs": "Revealing a named card from the deck before the game",
       "tfdsl": {
         "front": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Firecon Flame')));static(health,2,target=all_friends(trait=Firecon))"
       }
