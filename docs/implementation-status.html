@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 846/1467 (57.7%)</p>
+  <p>TFDSL completion: 849/1467 (57.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>413</td><td>215</td><td>81</td><td>117</td><td>198</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>375</td><td>1</td><td>218</td><td>219</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>46</td><td>3</td><td>108</td><td>111</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>377</td><td>1</td><td>216</td><td>217</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>47</td><td>3</td><td>107</td><td>110</td></tr>
 </tbody>
 </table>
 </section>
@@ -74,7 +74,6 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Acid Storm, Toxic Terror</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: An ongoing global effect that prevents enemies from using Bold.</td></tr>
-<tr><th scope="row">Blitzwing, Relentless Foe</th><td>Character</td><td>bug</td><td>3/3</td><td class="comment">When Blitzwing flips on his effect, his stealth/brave isn&#39;t reevaluating</td><td class="comment"></td></tr>
 <tr><th scope="row">Blurr, Fastest Bot in the Galaxy</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Starting an additional attack against a newly selected untapped enemy after attack damage.</td></tr>
 <tr><th scope="row">Bombshell, Decepticon Psy Ops</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: A mandatory variable hand-scrap cost equal to the defender&#39;s star count.</td></tr>
 <tr><th scope="row">Devastator, Towering Warrior</th><td>Character</td><td>todo</td><td>1/1</td><td class="comment">Rather than setting base atk to 10, it gives him +4 atk</td><td class="comment"></td></tr>
@@ -276,12 +275,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 5</h2>
-  <p>TFDSL completion: 122/188 (64.9%)</p>
+  <p>TFDSL completion: 123/188 (65.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>34</td><td>18</td><td>5</td><td>23</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>39</td><td>0</td><td>25</td><td>25</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>40</td><td>0</td><td>24</td><td>24</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>14</td><td>1</td><td>15</td><td>16</td></tr>
 </tbody>
 </table>
@@ -327,7 +326,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Headbutt</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">High Five</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Testing whether two chosen characters share any trait</td></tr>
 <tr><th scope="row">Hold the Line</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping attack damage by the attacker’s star count for a battle</td></tr>
-<tr><th scope="row">Holomatter Projector</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing non-attack damage from opponent card effects</td></tr>
+<tr><th scope="row">Holomatter Projector</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Industrial-grade Phase Charge</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed</td><td class="comment"></td></tr>
 <tr><th scope="row">Intrusion Countermeasures Software</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent-turn hand scrapping with drawing cards</td></tr>
 <tr><th scope="row">Junk Cannon</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -365,7 +364,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Revenge</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Applying a damage-tiered Bold value to a named character</td></tr>
 <tr><th scope="row">Sabotage</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppressing opponent triggered abilities while an enemy is upgraded</td></tr>
 <tr><th scope="row">Saturation Bombing</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game Stratagem effects that flip the Stratagem after resolving</td></tr>
-<tr><th scope="row">Sky Shadow Sync</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">For some reason, on-friend-ko fails here even though it worked when put on Skytread</td><td class="comment"></td></tr>
 <tr><th scope="row">Strategic Airlift</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Triggering when an Upgrade is scrapped and placing that Upgrade beneath a named character</td></tr>
 <tr><th scope="row">Swap Heads</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Swapping heads between characters and flipping a once-per-game Stratagem</td></tr>
 <tr><th scope="row">The Usurper</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -780,13 +778,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 10</h2>
-  <p>TFDSL completion: 37/62 (59.7%)</p>
+  <p>TFDSL completion: 39/62 (62.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>11</td><td>3</td><td>6</td><td>2</td><td>8</td></tr>
-<tr><th scope="row">Battlecard</th><td>25</td><td>20</td><td>0</td><td>5</td><td>5</td></tr>
-<tr><th scope="row">Stratagem</th><td>20</td><td>9</td><td>1</td><td>10</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>25</td><td>21</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><th scope="row">Stratagem</th><td>20</td><td>10</td><td>1</td><td>9</td><td>10</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -801,7 +799,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Selecting a qualifying flipped battle card and retaining it under a character</td></tr>
 <tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting opponent hidden zones</td></tr>
 <tr><th scope="row">Overkill, Wanton Warrior</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Remaining-health predicates for a conditional static ability</td></tr>
-<tr><th scope="row">Anti-Aircraft Ordnance</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacement effects that distinguish non-attack damage from an opponent card</td></tr>
+<tr><th scope="row">Anti-Aircraft Ordnance</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cerebro Shell</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">First in, Last out</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: End-of-turn conditional static abilities on a selected character</td></tr>
@@ -810,7 +808,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
 <tr><th scope="row">Eat My Dust!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects - TODO: Need a &#39;replace(foo,bar)&#39; DSL that targets a characters DSL/mode</td></tr>
-<tr><th scope="row">Excellent!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing a selected battle card from attack flips - See OPBL</td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Card-text replacement effects</td></tr>
 <tr><th scope="row">Operation: Interference</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Dynamic mode-scoped targeted static abilities</td></tr>

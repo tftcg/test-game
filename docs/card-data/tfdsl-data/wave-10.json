@@ -9,8 +9,8 @@
   "cards": [
     {
       "name": "Anti-Aircraft Ordnance",
-      "needs": "Replacement effects that distinguish non-attack damage from an opponent card",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(trait=Boat);instead(on-attached-damage(event().origin.owner != this().owner)->modify(event().amount:=event().amount - 1))"
     },
     {
       "name": "Cerebro Shell",
@@ -136,9 +136,8 @@
     },
     {
       "name": "Excellent!",
-      "front-needs": "Playing a selected battle card from attack flips - See OPBL",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-after-attack-flip(when(event().attacker.fullname=this().target,event().attacker.mode=bot))->(if(confirm('Play a flipped weapon?'))->play_upgrade(all_friends(fullname=this().target),pick(self().flips,subtype=Weapon)));static(def,when(all_friends(fullname=this().target).mode=alt),1,target=all_friends(fullname=this().target))"
       }
     },
     {

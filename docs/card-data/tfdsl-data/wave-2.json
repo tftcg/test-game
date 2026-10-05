@@ -82,7 +82,7 @@
     },
     {
       "name": "Defensive Driving",
-      "tfdsl": "instead(on-attached-damage()->modify(event().amount:=event().amount - 1))"
+      "tfdsl": "instead(on-attached-damage(when(event().origin.owner != this().owner))->modify(event().amount:=event().amount - 1))"
     },
     {
       "name": "Dinobot Enigma",
@@ -405,7 +405,6 @@
     },
     {
       "name": "Blitzwing, Relentless Foe",
-      "comment": "BUG: When Blitzwing flips on his effect, his stealth/brave isn't reevaluating",
       "tfdsl": {
         "alt 1": "brave()",
         "alt 2": "stealth()",

@@ -125,8 +125,8 @@
     },
     {
       "name": "Holomatter Projector",
-      "tfdsl": "",
-      "needs": "Preventing non-attack damage from opponent card effects"
+      "comment": "TODO: Test",
+      "tfdsl": "instead(on-attached-damage(event().origin.owner != this().owner)->do_nothing())"
     },
     {
       "name": "Hull Down",
@@ -435,7 +435,6 @@
     },
     {
       "name": "Sky Shadow Sync",
-      "comment": "BUG: For some reason, on-friend-ko fails here even though it worked when put on Skytread",
       "tfdsl": {
         "front": "on-friend-ko(when(event().ko.fullname='Sky Shadow (Plane)' || event().ko.fullname='Sky Shadow (Tank)'))->(combine('Sky Shadow, Elite Warrior',2,alt,'Sky Shadow (Plane)','Sky Shadow (Tank)');summon_friend('Ominus'))"
       }
