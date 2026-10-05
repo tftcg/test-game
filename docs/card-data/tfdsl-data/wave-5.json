@@ -893,9 +893,8 @@
       "name": "Cerebros, City Commander",
       "tfdsl": {
         "head": "bold(1);tough(1)",
-        "body": "bold(1);tough(1);on-this-after-battle-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->(if(confirm())->put_upgrade(this(),pick_scrap(type=Upgrade)))"
-      },
-      "head-needs": "Deploying this head in body mode when Fortress Maximus is KO’d, including after the last character is KO’d"
+        "body": "bold(1);tough(1);on-this-after-battle-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->(if(confirm())->play_upgrade(this(),pick_scrap(type=Upgrade)))"
+      }
     },
     {
       "name": "Emissary",
