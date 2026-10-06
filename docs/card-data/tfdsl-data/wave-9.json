@@ -232,9 +232,8 @@
     },
     {
       "name": "Paranoia",
-      "front-needs": "Granting a character a triggered ability",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-flip(when(event().flipped.fullname=this().target))->(if(confirm('Scrap a card to repair 1 to all?'))->(scrap_hand(pick_hand(exact=1));if(done())->repair(1,all_friends())))"
       }
     },
     {

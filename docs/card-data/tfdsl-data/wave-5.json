@@ -217,8 +217,7 @@
     },
     {
       "name": "Reflect Damage",
-      "tfdsl": "",
-      "needs": "Replacing non-attack damage with equivalent non-attack damage to an enemy"
+      "tfdsl": "reveal(instead(on-friend-damage()))->revealed(damage(event().amount,pick_enemy()))"
     },
     {
       "name": "Regenerative Core",

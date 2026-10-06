@@ -282,8 +282,7 @@
     },
     {
       "name": "Stunticon Enigma",
-      "tfdslFuture": "if(all_friends(name=Menasor).count>0)->draw(2);combine('Menasor, Menacing Colossus',5,bot,Stunticon)",
-      "tfdsl": ""
+      "tfdsl": "if(all_friends(name=Menasor).count>0)->draw(2);combine('Menasor, Menacing Colossus',5,bot,Stunticon)"
     },
     {
       "name": "Stunticon Swagger",
@@ -325,8 +324,7 @@
     },
     {
       "name": "Tooth and Claw",
-      "tfdslFuture": "put_only(trait=Predacon)",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Predacon);allow_in_slot('Weapon','Armor')"
     },
     {
       "name": "Underhanded Tactics",

@@ -276,8 +276,8 @@
     },
     {
       "name": "Unconventional Flying Object",
-      "needs": "Flipping a character to specified modes in sequence",
-      "tfdsl": ""
+      "comment": "TODO: It ought to flip back to alt explicitly, but avoiding that until alt1/alt2 being equal to alt is implemented",
+      "tfdsl": "flip(pick_friend(trait=Spaceship),bot);flip(previous_target())"
     },
     {
       "name": "Urban Camo",
@@ -601,10 +601,9 @@
     },
     {
       "name": "Sergeant Skrapnel, Infantry • Electronic Warfare",
-      "bot-needs": "Triggering when an Upgrade is scrapped from a friendly character",
       "tfdsl": {
         "alt": "brave()",
-        "bot": ""
+        "bot": "on-friend-scrapped()->repair(1,this())"
       }
     },
     {
@@ -632,6 +631,7 @@
     },
     {
       "name": "Specialist Ratchet, Engineering • Rescue & Repair",
+      "comment": "BUG: Is getting +1 atk when a repair is attempted on a zero damage character",
       "tfdsl": {
         "alt": "on-start-game()->(if(confirm('Move Medic! to Hand?'))->move_to(self().hand,pick_deck(name='Medic!')))",
         "bot": "on-repair(when(event().origin.owner=this().owner))->atk_eot(1,this())"

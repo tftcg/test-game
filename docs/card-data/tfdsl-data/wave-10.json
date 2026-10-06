@@ -232,7 +232,6 @@
     },
     {
       "name": "Wreck 'N' Rule",
-      "front-needs": "Adding traits",
       "tfdsl": {
         "front": "trait(Wrecker,all_friends(fullname=this().target))"
       }
