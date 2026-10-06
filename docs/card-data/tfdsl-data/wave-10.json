@@ -304,10 +304,9 @@
     },
     {
       "name": "Overkill, Wanton Warrior",
-      "bot-needs": "Remaining-health predicates for a conditional static ability",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->(damage(1,this());damage(1,pick_enemy()))",
-        "bot": ""
+        "bot": "on-this-defend(when(event().attacker.trait=Melee))->damage(1,event().attacker);static(bold,when(event().defender.health - event().defender.damage<=3),2)"
       }
     },
     {

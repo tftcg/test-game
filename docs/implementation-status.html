@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 851/1467 (58.0%)</p>
+  <p>TFDSL completion: 857/1467 (58.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>215</td><td>81</td><td>117</td><td>198</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>377</td><td>1</td><td>216</td><td>217</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>49</td><td>2</td><td>106</td><td>108</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>216</td><td>81</td><td>116</td><td>197</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>380</td><td>1</td><td>213</td><td>214</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>50</td><td>2</td><td>105</td><td>107</td></tr>
 </tbody>
 </table>
 </section>
@@ -711,13 +711,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 9</h2>
-  <p>TFDSL completion: 52/98 (53.1%)</p>
+  <p>TFDSL completion: 57/98 (58.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>26</td><td>9</td><td>8</td><td>9</td><td>17</td></tr>
-<tr><th scope="row">Battlecard</th><td>35</td><td>19</td><td>0</td><td>16</td><td>16</td></tr>
-<tr><th scope="row">Stratagem</th><td>15</td><td>9</td><td>0</td><td>6</td><td>6</td></tr>
+<tr><th scope="row">Character</th><td>26</td><td>9</td><td>9</td><td>8</td><td>17</td></tr>
+<tr><th scope="row">Battlecard</th><td>35</td><td>22</td><td>0</td><td>13</td><td>13</td></tr>
+<tr><th scope="row">Stratagem</th><td>15</td><td>10</td><td>0</td><td>5</td><td>5</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -732,7 +732,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Huffer, Sullen Engineer</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Again needs a pay() for the If You Dos</td><td class="comment"></td></tr>
 <tr><th scope="row">Lord Zarak, Ruler of Nebulos</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Zarak has to go on Scorponok. Skipping enforcing that</td><td class="comment">bot-needs: Detecting deployment from under a named character</td></tr>
 <tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
-<tr><th scope="row">Onslaught, Combaticon Leader</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting abilities conditionally to each character in a group<br>bot-needs: Preventing enemies from using Plan</td></tr>
+<tr><th scope="row">Onslaught, Combaticon Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Plan</td></tr>
 <tr><th scope="row">Paddles, Gentle Giant</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing and redirecting a limited amount of attack damage<br>bot-needs: Checking for a damaged or KO&#39;d character across the battlefield and KO area</td></tr>
 <tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Returning a random card from the scrap pile to hand<br>bot-needs: Playing a specific battle card flipped during an attack</td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
@@ -747,23 +747,19 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Beast Mode</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Grouping alternative trait-and-mode attack conditions</td></tr>
 <tr><th scope="row">Bellicosity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing flipped battle icon colors</td></tr>
 <tr><th scope="row">Cloud Cover</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing damage counters from moving between characters</td></tr>
-<tr><th scope="row">Combaticon Enigma</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Combining only characters in a specified mode</td></tr>
-<tr><th scope="row">Cosmic Rust Cannon</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Resolving an optional scrap-or-damage choice after battle</td></tr>
+<tr><th scope="row">Cosmic Rust Cannon</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Resolving an optional scrap-or-damage choice after battle - else statement? if(!done())?</td></tr>
 <tr><th scope="row">Cross-Counter</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Calculating damage as the difference between characters&#39; DEF and ATK</td></tr>
 <tr><th scope="row">Enhanced Cyber Blade</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Setting a character&#39;s base DEF for a battle</td></tr>
 <tr><th scope="row">Feral Tenacity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Adding, counting, and removing named counters on an Upgrade</td></tr>
-<tr><th scope="row">Imperator Claw</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Still need the &#39;2 can fit in 1 slot&#39;</td><td class="comment"></td></tr>
 <tr><th scope="row">Nothin&#39;s Gonna Stand In Our Way</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting cards with a specific name played during a turn</td></tr>
 <tr><th scope="row">Spoils of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing up to five characters that share a trait</td></tr>
 <tr><th scope="row">Starscream&#39;s Cape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Increasing numbers in a character&#39;s printed text box</td></tr>
-<tr><th scope="row">Stasis Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Flipping an opponent&#39;s character</td></tr>
 <tr><th scope="row">This is Bad Comedy</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing between alternative effects</td></tr>
 <tr><th scope="row">Trithyllium Plating</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Twisted Logic</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reordering cards on top of an opponent&#39;s deck</td></tr>
 <tr><th scope="row">Wanna Bet?</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing battle cards being put under an enemy character with scrapping them</td></tr>
-<tr><th scope="row">Zarak Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting attack damage from a single attack</td></tr>
+<tr><th scope="row">Zarak Shield</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test force field effect. NOTE: This predicates on &#39;Lord Zarak, Ruler of Nebulos&#39; because &#39;Lord&#39; is a squishy prefix; will need fixing if another Zarak is added</td><td class="comment"></td></tr>
 <tr><th scope="row">Arm the Lonely</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test - make sure flipping works and that there is a working flip_cleaner</td><td class="comment"></td></tr>
-<tr><th scope="row">Battlefield Dissonance</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Combining specific named characters from the battlefield and KO area</td></tr>
 <tr><th scope="row">Brothers In Armor</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test - make sure flipping works and that there is a working flip_cleaner</td><td class="comment"></td></tr>
 <tr><th scope="row">Can&#39;t Squish This</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Reducing Pierce by a variable amount based on hand size</td></tr>
 <tr><th scope="row">Do It With Style!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing text in a character&#39;s printed ability</td></tr>
@@ -776,11 +772,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 10</h2>
-  <p>TFDSL completion: 39/62 (62.9%)</p>
+  <p>TFDSL completion: 40/62 (64.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>11</td><td>3</td><td>6</td><td>2</td><td>8</td></tr>
+<tr><th scope="row">Character</th><td>11</td><td>4</td><td>5</td><td>2</td><td>7</td></tr>
 <tr><th scope="row">Battlecard</th><td>25</td><td>21</td><td>0</td><td>4</td><td>4</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>10</td><td>1</td><td>9</td><td>10</td></tr>
 </tbody>
@@ -796,7 +792,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Fastlane, Road Warrior</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting Rolling Actions for a temporary ability<br>bot-needs: Looking at, selecting from, and reordering top deck cards</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Selecting a qualifying flipped battle card and retaining it under a character</td></tr>
 <tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting opponent hidden zones</td></tr>
-<tr><th scope="row">Overkill, Wanton Warrior</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Remaining-health predicates for a conditional static ability</td></tr>
 <tr><th scope="row">Anti-Aircraft Ordnance</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cerebro Shell</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

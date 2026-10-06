@@ -126,7 +126,7 @@
     {
       "name": "Holomatter Projector",
       "comment": "TODO: Test",
-      "tfdsl": "instead(on-attached-damage(event().origin.owner != this().owner)->do_nothing())"
+      "tfdsl": "instead(on-attached-damage(when(event().origin.owner != this().owner))->do_nothing())"
     },
     {
       "name": "Hull Down",

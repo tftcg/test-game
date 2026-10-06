@@ -40,7 +40,8 @@
     },
     {
       "name": "Cosmic Rust Cannon",
-      "needs": "Resolving an optional scrap-or-damage choice after battle",
+      "needs": "Resolving an optional scrap-or-damage choice after battle - else statement? if(!done())?",
+      "tfdslFuture": "on-attached-attack()->damage(1,attached());on-attached-after-attack()->(if(confirm('Scrap Upgrade?'))->scrap_upgrade(pick_upgrade()))",
       "tfdsl": ""
     },
     {
@@ -100,8 +101,7 @@
     },
     {
       "name": "Stasis Field",
-      "needs": "Flipping an opponent's character",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend(when(event().attacker.mode=bot || event().attacker.mode=body)))->revealed(flip(event().attacker))"
     },
     {
       "name": "Stormfall Sword",
@@ -141,18 +141,16 @@
     },
     {
       "name": "Imperator Claw",
-      "comment": "TODO: Still need the '2 can fit in 1 slot'",
-      "tfdsl": "put_only(faction!=Autobot);on-attached-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->damage(1,all_chars(stars<attached().stars))"
+      "tfdsl": "put_only(faction!=Autobot);share_slot(2,when(attached().faction=Decepticon,attached().trait=Titan));on-attached-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->damage(1,all_chars(stars<attached().stars))"
     },
     {
       "name": "Zarak Shield",
-      "needs": "Limiting attack damage from a single attack",
-      "tfdsl": ""
+      "comment": "TODO: Test force field effect. NOTE: This predicates on 'Lord Zarak, Ruler of Nebulos' because 'Lord' is a squishy prefix; will need fixing if another Zarak is added",
+      "tfdsl": "static(def,when(attached().trait=Titan,1));instead(on-attached-attack-damaged(when(event().damage>4,attached().fullname='Lord Zarak, Ruler of Nebulos'))->(scrap_upgrade(this());modify(event().damage:=4)))"
     },
     {
       "name": "Combaticon Enigma",
-      "needs": "Combining only characters in a specified mode",
-      "tfdsl": ""
+      "tfdsl": "if(all_friends(name=Bruticus).count>0)->pierce_eot(2,pick_friend(name=Bruticus));combine('Bruticus, Unstoppable Giant',5,bot,Combaticon)"
     },
     {
       "name": "Lock and Load",
@@ -185,9 +183,8 @@
     },
     {
       "name": "Battlefield Dissonance",
-      "front-needs": "Combining specific named characters from the battlefield and KO area",
       "tfdsl": {
-        "front": ""
+        "front": "on-eot(when(all_friends(fullname='Beastbox, Savage Interrogator').mode=bot,all_friends(fullname='Squawktalk, Chatterbox Translator').mode=bot))->(if(confirm('Scrap two cards to form Squawkbox?'))->(scrap_hand(pick_hand(exact=2));if(done())->combine('Squawkbox, Passionate Musician',2,bot,'Beastbox, Savage Interrogator','Squawktalk, Chatterbox Translator')))"
       }
     },
     {
@@ -438,10 +435,9 @@
     },
     {
       "name": "Onslaught, Combaticon Leader",
-      "alt-needs": "Granting abilities conditionally to each character in a group",
       "bot-needs": "Preventing enemies from using Plan",
       "tfdsl": {
-        "alt": "",
+        "alt": "each(all_friends(trait=Combaticon))->(static(bold,when(all_friendly_upgrades(attached_to.id=it().id,black>=1).count>=1),1,target=it()));each(all_friends(trait=Combaticon))->(static(tough,when(all_friendly_upgrades(attached_to.id=it().id,black>=1).count>=1),1,target=it()))",
         "bot": ""
       }
     },
