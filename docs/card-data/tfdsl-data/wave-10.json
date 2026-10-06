@@ -190,9 +190,9 @@
     },
     {
       "name": "Solar Regeneration",
-      "front-needs": "This needs pay(..) semantics for the if-you-do",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-defend(when(event().defender.fullname=this().target,event().defender.mode=bot))->(if(confirm('Scrap 3 to Repair 3?'))->(scrap_hand(pick_hand(exact=3));if(done())->repair(3,all_friends(fullname=this().target))))"
       }
     },
     {
