@@ -314,10 +314,9 @@
     },
     {
       "name": "Captain Ironhide, Infantry • Bodyguard",
-      "alt-needs": "Preventing non-attack damage from an opponent's card",
       "bot-needs": "Swapping an attached Weapon with a qualifying Weapon from hand",
       "tfdsl": {
-        "alt": "",
+        "alt": "instead(on-this-damage(when(event().origin.owner != this().owner))->do_nothing())",
         "bot": ""
       }
     },
@@ -360,10 +359,9 @@
     },
     {
       "name": "Major Soundwave, Espionage • Spy",
-      "bot-needs": "Untapping every matching character",
       "tfdsl": {
         "alt": "static(def,1,target=all_friends(trait='Spy Patrol'))",
-        "bot": ""
+        "bot": "on-this-attack()->untap(all_friends(trait='Spy Patrol'))"
       }
     },
     {
