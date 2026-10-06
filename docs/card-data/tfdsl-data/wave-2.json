@@ -490,7 +490,7 @@
       "tfdsl": {
         "bot": "on-this-after-attack()->move_to(self().hand,pick(self().flips,green>=1))"
       },
-      "bot-needs": "Selecting a green-icon battle card flipped during the current attack after that attack."
+      "comment": "TODO: Test in game. Unit test passes"
     },
     {
       "name": "Dirge, Doombringer",

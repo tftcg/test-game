@@ -161,8 +161,8 @@
     },
     {
       "name": "LV Gamma-Disruptor Launcher",
-      "needs": "Allowing up to two named Weapons in one Weapon slot",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(name=Shockwave);share_slot(2);on-put()->scrap_hand(opponent_pick_opponent_hand())"
     },
     {
       "name": "Ultra Magnus Armor",
@@ -250,8 +250,7 @@
     },
     {
       "name": "Spinner Rims",
-      "needs": "Flipping an extra battle card",
-      "tfdsl": ""
+      "tfdsl": "on-attached-battle-flip(when(event().flips.white>=1),once())->flip_extra(1)"
     },
     {
       "name": "Squish them like Bugs",

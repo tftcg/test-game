@@ -23,8 +23,7 @@
     },
     {
       "name": "Combat Drop",
-      "tfdsl": "",
-      "needs": "Secret Action flipping a defender to a specified mode"
+      "tfdsl": "reveal(on-friend-defend(when(event().defender.trait=Plane || event().defender.trait=Helicopter || event().defender.trait=Spaceship)))->revealed(flip(event().defender);def_eob(1,event().defender))"
     },
     {
       "name": "Contemplation",
@@ -82,8 +81,7 @@
     },
     {
       "name": "Robust",
-      "tfdsl": "",
-      "needs": "Allowing an Armor in Weapon or Utility slots"
+      "tfdsl": "allow_in_slot('Armor','Weapon');allow_in_slot('Armor','Utility')"
     },
     {
       "name": "Scatter Blaster",
@@ -130,10 +128,8 @@
     },
     {
       "name": "Holomatter Mastery",
-      "front-needs": "Pre-game named-card search and a named-card play trigger",
-      "frontStart": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Holomatter Projector')))",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Holomatter Projector')));on-play-upgrade(when(event().played.name='Holomatter Projector',all_friends(fullname=this().target).count>=1))->(draw(2);scrap_hand(pick_hand(count=1)))"
       }
     },
     {
