@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 866/1467 (59.0%)</p>
+  <p>TFDSL completion: 868/1467 (59.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>218</td><td>80</td><td>115</td><td>195</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>220</td><td>78</td><td>115</td><td>193</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>384</td><td>1</td><td>209</td><td>210</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>52</td><td>2</td><td>103</td><td>105</td></tr>
 </tbody>
@@ -120,11 +120,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 3</h2>
-  <p>TFDSL completion: 145/182 (79.7%)</p>
+  <p>TFDSL completion: 146/182 (80.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>61</td><td>43</td><td>12</td><td>6</td><td>18</td></tr>
+<tr><th scope="row">Character</th><td>61</td><td>44</td><td>11</td><td>6</td><td>17</td></tr>
 <tr><th scope="row">Battlecard</th><td>71</td><td>55</td><td>0</td><td>16</td><td>16</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -140,7 +140,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Eject, Electronic Surveillance</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">We agreed to treat Eject&#39;s alt mode as a Focus ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
 <tr><th scope="row">Major Ultra Magnus, Infantry • City Commander</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Searching the deck for a named Upgrade before the game begins</td></tr>
-<tr><th scope="row">Nightbird, Enigmatic Agent</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting lethal attack damage and resolving a Bounty ability that plays an opponent&#39;s scrap Action</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Downshift, Special Ops • Security Agent</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Firedrive, Ground Command • Artillery</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Scrapping any chosen number of hand cards for a matching attack bonus and moving a leaving Battle Master to the KO area</td></tr>
@@ -185,11 +184,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 103/174 (59.2%)</p>
+  <p>TFDSL completion: 104/174 (59.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>28</td><td>10</td><td>22</td><td>32</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>29</td><td>9</td><td>22</td><td>31</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>38</td><td>1</td><td>25</td><td>26</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -201,7 +200,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Captain Jetfire, Engineering • Air Guardian</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top five deck cards, moving their Upgrades to hand, and scrapping the rest<br>bot-needs: Playing a revealed Upgrade from hand onto the deck and flipping an additional battle card</td></tr>
 <tr><th scope="row">Captain Omega Supreme, Transport • City Defender</th><td>Character</td><td>note</td><td>1/1</td><td class="comment">This depends on pick_hand not passing unless you can complete the task</td><td class="comment"></td></tr>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Stealth only against specified factions and preventing those factions from using Stealth<br>bot-needs: Detecting KO attack damage and using a Bounty ability that flips this character</td></tr>
-<tr><th scope="row">Detritus, Arms Dealer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting KO attack damage and using a Bounty ability</td></tr>
 <tr><th scope="row">General Optimus Prime, Galactic Commander</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Utility slots and revealing then playing a top-deck Action<br>bot-needs: Need to be able to direct the target of a played card onto this()</td></tr>
 <tr><th scope="row">Lockdown, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Scaling ATK by twice the number of cards under this character<br>bot-needs: Scaling ATK by twice the number of cards under this character and using a Bounty ability</td></tr>
 <tr><th scope="row">MTX-M2 Anti-Gravity Cannon</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>

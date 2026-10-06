@@ -646,10 +646,9 @@
     },
     {
       "name": "Nightbird, Enigmatic Agent",
-      "bot-needs": "Detecting lethal attack damage and resolving a Bounty ability that plays an opponent's scrap Action",
       "tfdsl": {
         "alt": "on-opponent-play-action()->damage(1,opponent_pick(opponent().chars))",
-        "bot": ""
+        "bot": "bounty(play(pick_opponent_scrap(type=Action)))"
       }
     },
     {

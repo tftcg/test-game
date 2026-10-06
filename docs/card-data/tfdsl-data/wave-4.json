@@ -331,7 +331,6 @@
     },
     {
       "name": "Detritus, Arms Dealer",
-      "bot-needs": "Detecting KO attack damage and using a Bounty ability",
       "tfdsl": {
         "alt": "on-this-flip()->play(pick_hand(black>=1))",
         "bot": "bounty(repair(3,this()))"
