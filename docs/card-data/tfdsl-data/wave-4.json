@@ -392,23 +392,20 @@
     },
     {
       "name": "Omega Supreme (Base), Transport • City Defender",
-      "alt-needs": "Scrapping cards from an opponent's deck",
       "tfdsl": {
-        "alt": ""
+        "alt": "on-this-defend()->(damage(2,event().attacker);scrap_deck(opponent_top_deck(count=2)))"
       }
     },
     {
       "name": "Omega Supreme (Spaceship), Transport • City Defender",
-      "alt-needs": "An opponent deck reshuffle event and combining named Omega Supreme characters",
       "tfdsl": {
-        "alt": ""
+        "alt": "on-this-attack()->(if(self().hand.count>=2)->(if(confirm())->(scrap_hand(pick_hand(exact=2));if(done())->scrap_upgrade(pick_enemy_upgrade()))));on-opponent-reshuffle()->combine('Captain Omega Supreme, Transport • City Defender',3,alt,'Omega Supreme (Base), Transport • City Defender','Omega Supreme (Spaceship), Transport • City Defender','Omega Supreme (Tank), Transport • City Defender')"
       }
     },
     {
       "name": "Omega Supreme (Tank), Transport • City Defender",
-      "alt-needs": "An opponent deck reshuffle event and combining named Omega Supreme characters",
       "tfdsl": {
-        "alt": ""
+        "alt": "on-this-attack()->(if(self().hand.count>=2)->(if(confirm())->(scrap_hand(pick_hand(exact=2));if(done())->damage(1,pick_enemy()))));on-opponent-reshuffle()->combine('Captain Omega Supreme, Transport • City Defender',3,alt,'Omega Supreme (Base), Transport • City Defender','Omega Supreme (Spaceship), Transport • City Defender','Omega Supreme (Tank), Transport • City Defender')"
       }
     },
     {
@@ -706,9 +703,8 @@
     },
     {
       "name": "Captain Omega Supreme, Transport • City Defender",
-      "comment": "NOTE: This depends on pick_hand not passing unless you can complete the task",
       "tfdsl": {
-        "combiner": "pierce(4);on-this-attack()->(if(confirm())->(scrap_hand(pick_hand(count=4));scrap_upgrade(all(event().defender.upgrades));damage(1,all_enemies())))"
+        "combiner": "pierce(4);on-this-attack()->(if(self().hand.count>=4)->(if(confirm())->(scrap_hand(pick_hand(exact=4));if(done())->(scrap_upgrade(all(event().defender.upgrades));damage(1,all_enemies())))))"
       }
     },
     {

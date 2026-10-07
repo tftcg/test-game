@@ -179,8 +179,7 @@
     },
     {
       "name": "Micro Capacitor",
-      "needs": "Triggering when the upgraded character uses a TAP ability",
-      "tfdsl": ""
+      "tfdsl": "on-attached-tap-ability()->(untap(attached());scrap_upgrade(this()))"
     },
     {
       "name": "Pep Talk",

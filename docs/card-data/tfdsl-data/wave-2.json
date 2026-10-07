@@ -550,10 +550,9 @@
     {
       "name": "Motormaster, Stunticon Leader",
       "tfdsl": {
-        "alt": "",
+        "alt": "instead(on-damage(when(event().damaged.owner=this().owner,event().damaged!=this(),event().origin.owner!=this().owner))->do_nothing())",
         "bot": "instead(on-this-defend()->(if(confirm())->modify(event().defender:=pick_friend(trait=Stunticon))))"
-      },
-      "alt-needs": "Replacement context that distinguishes non-attack damage from an opponent card and prevents it for other characters."
+      }
     },
     {
       "name": "Offroad, All-Terrain Soldier",
@@ -649,10 +648,9 @@
     {
       "name": "Torox, Fueler",
       "tfdsl": {
-        "alt": "",
+        "alt": "instead(on-repair(when(event().repaired.owner!=this().owner))->do_nothing())",
         "bot": "on-this-flip()->(draw(1);plan(1))"
-      },
-      "alt-needs": "Preventing enemy characters from being repaired."
+      }
     },
     {
       "name": "Warpath, Confident Sharpshooter",

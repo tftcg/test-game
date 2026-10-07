@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 881/1467 (60.1%)</p>
+  <p>TFDSL completion: 887/1467 (60.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>222</td><td>76</td><td>115</td><td>191</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>388</td><td>1</td><td>205</td><td>206</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>227</td><td>74</td><td>112</td><td>186</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>389</td><td>1</td><td>204</td><td>205</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>59</td><td>1</td><td>97</td><td>98</td></tr>
 </tbody>
 </table>
@@ -60,11 +60,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 2</h2>
-  <p>TFDSL completion: 155/184 (84.2%)</p>
+  <p>TFDSL completion: 157/184 (85.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>49</td><td>6</td><td>9</td><td>15</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>51</td><td>4</td><td>9</td><td>13</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>76</td><td>0</td><td>10</td><td>10</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -82,13 +82,11 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Counting distinct battle-icon colors among all cards discarded from a hand.</td></tr>
 <tr><th scope="row">Grimlock, Powerful Commander</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Selecting an owned Dinobot character outside the game and placing it in the KO area in alt mode.</td></tr>
 <tr><th scope="row">Menasor, Menacing Colossus</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Give the player a you may play an extra action on each of your turns.</td></tr>
-<tr><th scope="row">Motormaster, Stunticon Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Replacement context that distinguishes non-attack damage from an opponent card and prevents it for other characters.</td></tr>
 <tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Choosing exactly one of two effects when this character flips.<br>bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
 <tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Currently all sentinels you don&#39;t have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don&#39;t have preselected</td><td class="comment"></td></tr>
 <tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Scrapper still has an effect when he&#39;s in the KO. Which ugh.</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Teleporting Seeker</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by the absence of all normal and hybrid battle icons.<br>bot-needs: Once-per-turn trigger gating across battle-card play and flip events.</td></tr>
 <tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.<br>bot-needs: Triggering on a named battle card flip while this character battles.</td></tr>
-<tr><th scope="row">Torox, Fueler</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing enemy characters from being repaired.</td></tr>
 <tr><th scope="row">Volcanicus, Fiery Champion</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Tracking the turn a character combined for an attack trigger.</td></tr>
 <tr><th scope="row">Warpath, Confident Sharpshooter</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Damage calculated from opponent scrap cards with multiple blue battle icons and assigned by opponent selection.</td></tr>
 <tr><th scope="row">Windblade, Combiner Hunter</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top deck card without moving it, then conditionally playing it.</td></tr>
@@ -117,12 +115,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 3</h2>
-  <p>TFDSL completion: 148/182 (81.3%)</p>
+  <p>TFDSL completion: 149/182 (81.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>61</td><td>45</td><td>10</td><td>6</td><td>16</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>56</td><td>0</td><td>15</td><td>15</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>57</td><td>0</td><td>14</td><td>14</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -167,7 +165,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">LV Gamma-Disruptor Launcher</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Metal Detector</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing the top deck card and conditionally playing it by card type</td></tr>
-<tr><th scope="row">Micro Capacitor</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Triggering when the upgraded character uses a TAP ability</td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Pop a Wheelie</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Flipping characters to a specified mode and granting a restricted extra attack</td></tr>
 <tr><th scope="row">Quartermaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing between distinct effects and putting a Battle Master Upgrade from the KO area onto a selected character</td></tr>
@@ -181,11 +178,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 104/174 (59.8%)</p>
+  <p>TFDSL completion: 107/174 (61.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>29</td><td>9</td><td>22</td><td>31</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>32</td><td>9</td><td>19</td><td>28</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>38</td><td>1</td><td>25</td><td>26</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -195,15 +192,11 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Captain Jetfire, Engineering • Air Guardian</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top five deck cards, moving their Upgrades to hand, and scrapping the rest<br>bot-needs: Playing a revealed Upgrade from hand onto the deck and flipping an additional battle card</td></tr>
-<tr><th scope="row">Captain Omega Supreme, Transport • City Defender</th><td>Character</td><td>note</td><td>1/1</td><td class="comment">This depends on pick_hand not passing unless you can complete the task</td><td class="comment"></td></tr>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Stealth only against specified factions and preventing those factions from using Stealth<br>bot-needs: Detecting KO attack damage and using a Bounty ability that flips this character</td></tr>
 <tr><th scope="row">General Optimus Prime, Galactic Commander</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Utility slots and revealing then playing a top-deck Action<br>bot-needs: Need to be able to direct the target of a played card onto this()</td></tr>
 <tr><th scope="row">Lockdown, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Scaling ATK by twice the number of cards under this character<br>bot-needs: Scaling ATK by twice the number of cards under this character and using a Bounty ability</td></tr>
 <tr><th scope="row">MTX-M2 Anti-Gravity Cannon</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
 <tr><th scope="row">Mudflap, Hired Muscle</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting KO attack damage and using a Bounty ability to reveal and play a top-deck card</td></tr>
-<tr><th scope="row">Omega Supreme (Base), Transport • City Defender</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Scrapping cards from an opponent&#39;s deck</td></tr>
-<tr><th scope="row">Omega Supreme (Spaceship), Transport • City Defender</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: An opponent deck reshuffle event and combining named Omega Supreme characters</td></tr>
-<tr><th scope="row">Omega Supreme (Tank), Transport • City Defender</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: An opponent deck reshuffle event and combining named Omega Supreme characters</td></tr>
 <tr><th scope="row">Private Dazzlestrike, Ground Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Brave<br>upgrade-needs: Events for an upgrade being removed from a character or leaving the battlefield</td></tr>
 <tr><th scope="row">Private Fixit, Rescue Patrol • Medic</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">The scrap_hand(it()) isn&#39;t working</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
