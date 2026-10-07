@@ -65,7 +65,7 @@
     },
     {
       "name": "Crushing Size",
-      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Utility));when(previous_success=false)->draw(1);pierce(1)"
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Utility));if(done()=false)->draw(1);pierce(1)"
     },
     {
       "name": "Crushing Treads",
@@ -105,7 +105,7 @@
     },
     {
       "name": "Drill Arms",
-      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Armor));when(previous_success=false)->draw(1)"
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Armor));if(done()=false)->draw(1)"
     },
     {
       "name": "Emergency Maintenance",
@@ -264,7 +264,7 @@
     },
     {
       "name": "Scrapper Gauntlets",
-      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Weapon));when(previous_success=false)->draw(1)"
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Weapon));if(done()=false)->draw(1)"
     },
     {
       "name": "Security Checkpoint",
