@@ -531,9 +531,8 @@
     },
     {
       "name": "Raider Chop Shop, Infantry • Soldier",
-      "alt-needs": "Checking that a scrapped card has no battle icons other than green",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(exact=1,green>=1));if(done())->(repair(1,all_friends());if(previous_target().orange=0,previous_target().blue=0,previous_target().white=0,previous_target().black=0)->repair(1,all_friends()))))",
         "bot": "on-this-after-attack-flip(when(event().flips.green>=1))->repair(1,this())"
       }
     },
@@ -554,9 +553,8 @@
     },
     {
       "name": "Raider Needler, Ground Force • Demolitions",
-      "bot-needs": "Preventing enemy characters from being repaired",
       "tfdsl": {
-        "bot": "",
+        "bot": "instead(on-repair(when(event().repaired.owner!=this().owner))->do_nothing())",
         "upgrade": "pierce(2)"
       }
     },

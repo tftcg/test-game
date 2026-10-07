@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 900/1467 (61.3%)</p>
+  <p>TFDSL completion: 902/1467 (61.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>233</td><td>69</td><td>111</td><td>180</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>235</td><td>67</td><td>111</td><td>178</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>391</td><td>1</td><td>202</td><td>203</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>63</td><td>0</td><td>94</td><td>94</td></tr>
 </tbody>
@@ -28,11 +28,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 713/898 (79.4%)</p>
+  <p>TFDSL completion: 715/898 (79.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>214</td><td>39</td><td>40</td><td>79</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>216</td><td>37</td><td>40</td><td>77</td></tr>
 <tr><th scope="row">Battlecard</th><td>371</td><td>297</td><td>1</td><td>73</td><td>74</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>20</td><td>0</td><td>10</td><td>10</td></tr>
 </tbody>
@@ -88,7 +88,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Acid Storm, Toxic Terror</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: An ongoing global effect that prevents enemies from using Bold.</td></tr>
 <tr><th scope="row">Blurr, Fastest Bot in the Galaxy</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Starting an additional attack against a newly selected untapped enemy after attack damage.</td></tr>
 <tr><th scope="row">Devastator, Towering Warrior</th><td>Character</td><td>todo</td><td>1/1</td><td class="comment">Rather than setting base atk to 10, it gives him +4 atk</td><td class="comment"></td></tr>
-<tr><th scope="row">Dinobot Swoop, Bombardier</th><td>Character</td><td>todo</td><td>1/1</td><td class="comment">Test in game. Unit test passes</td><td class="comment"></td></tr>
 <tr><th scope="row">Dirge, Doombringer</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: A temporary attack bonus calculated from the opponent KO area&#39;s character count.</td></tr>
 <tr><th scope="row">Divebomb, Aerial Assault</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Revealing a random opponent hand card before conditionally scrapping it.</td></tr>
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Counting distinct battle-icon colors among all cards discarded from a hand.</td></tr>
@@ -109,7 +108,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Decepticon Crown</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Dinobot Enigma</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Espionage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing a battle-icon color and filtering an opponent hand by that chosen color.</td></tr>
-<tr><th scope="row">Field Repair</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Implement the Plan 1 if it&#39;s an Autobot</td><td class="comment"></td></tr>
 <tr><th scope="row">Fog of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Each player independently choosing cards to keep before scrapping the rest of their hand.</td></tr>
 <tr><th scope="row">Intelligence Mission</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Find a better way of doing the PT!=0</td><td class="comment"></td></tr>
 <tr><th scope="row">Inverted!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing flipped orange and blue battle icons with one another.</td></tr>
@@ -184,11 +182,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 107/174 (61.5%)</p>
+  <p>TFDSL completion: 109/174 (62.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>32</td><td>9</td><td>19</td><td>28</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>34</td><td>7</td><td>19</td><td>26</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>38</td><td>1</td><td>25</td><td>26</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -213,9 +211,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Private Vanguard, Ground Command • Advance Guard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
 <tr><th scope="row">Raider Caliburst, Air Force  Weapons</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Tracking opponent card draws during their turn<br>upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
-<tr><th scope="row">Raider Chop Shop, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Checking that a scrapped card has no battle icons other than green</td></tr>
 <tr><th scope="row">Raider Kickback, Infantry • Soldier</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test alt mode</td><td class="comment"></td></tr>
-<tr><th scope="row">Raider Needler, Ground Force • Demolitions</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemy characters from being repaired</td></tr>
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revenge triggers and looking at an opponent&#39;s hand before selecting a card<br>bot-needs: Activated abilities and counting different battle-icon colors on a revealed deck card</td></tr>
 <tr><th scope="row">Raider Skytread, Special Ops • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Returning a card from under this character to hand</td></tr>

@@ -131,8 +131,7 @@
     },
     {
       "name": "Field Repair",
-      "comment": "TODO: Implement the Plan 1 if it's an Autobot",
-      "tfdsl": "repair(1,pick_friend())"
+      "tfdsl": "repair(1,pick_friend());if(previous_target().faction=Autobot)->plan(1)"
     },
     {
       "name": "Fling",
@@ -486,8 +485,7 @@
       "name": "Dinobot Swoop, Bombardier",
       "tfdsl": {
         "bot": "on-this-after-attack()->move_to(self().hand,pick(self().flips,green>=1))"
-      },
-      "comment": "TODO: Test in game. Unit test passes"
+      }
     },
     {
       "name": "Dirge, Doombringer",
