@@ -677,7 +677,7 @@
       "name": "Blaster, Communications",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
-        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);if(done())->(scrap_deck(top_deck());play(previous_target(3))))"
+        "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);if(done())->(scrap_deck(top_deck());play(previous_target(2))))"
       }
     },
     {
