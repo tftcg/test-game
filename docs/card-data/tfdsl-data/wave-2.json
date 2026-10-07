@@ -557,7 +557,7 @@
     {
       "name": "Offroad, All-Terrain Soldier",
       "tfdsl": {
-        "alt": "on-enemy-attack(trait=Car)->damage(1,previous_target())",
+        "alt": "on-enemy-attack(trait=Car)->damage(1,event().attacker)",
         "bot": "on-this-flip()->repair(1,this())"
       }
     },

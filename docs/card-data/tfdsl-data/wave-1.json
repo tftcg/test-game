@@ -281,7 +281,7 @@
     },
     {
       "name": "Static Laser of Ironhide",
-      "tfdsl": "on-attached-attack(when(attacker.name!=Ironhide))->damage(2,previous_target())"
+      "tfdsl": "on-attached-attack(when(attacker.name!=Ironhide))->damage(2,event().attacker)"
     },
     {
       "name": "Strafing Run",

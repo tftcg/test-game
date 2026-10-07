@@ -49,7 +49,6 @@
     },
     {
       "name": "Disassemble",
-      "comment": "BUG: THe previous_target seems to be undefined",
       "tfdsl": "scrap_upgrade(pick_upgrade(subtype=Armor || subtype=Weapon));draw(1,previous_target().owner)"
     },
     {
@@ -284,8 +283,7 @@
     },
     {
       "name": "Trithyllium Shield",
-      "tfdsl": "",
-      "needs": "Reducing the defending Decepticon Leader’s Pierce total during a battle"
+      "tfdsl": "on-attached-defend(when(event().attacker.faction=Decepticon))->(def_eob(1,attached());if(event().attacker.trait=Leader)->pierce_eob(0-3,event().attacker))"
     },
     {
       "name": "Turn the Tide",
@@ -338,9 +336,8 @@
     {
       "name": "Duty & Honor",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Tracking a named team character KO across the game for conditional abilities"
+        "front": "on-friend-ko(when(event().ko.fullname!=this().target))->set_flag('duty & honor');static(brave,when(this().owner.flags='duty & honor'),true,target=all_friends(fullname=this().target));static(focus,when(this().owner.flags='duty & honor'),1,target=all_friends(fullname=this().target));static(bold,when(this().owner.flags='duty & honor'),1,target=all_friends(fullname=this().target));static(tough,when(this().owner.flags='duty & honor'),1,target=all_friends(fullname=this().target))"
+      }
     },
     {
       "name": "Heroic Spotlight"
@@ -363,8 +360,7 @@
       "comment": "BUG: Currently alt1/alt2 are not considered equal to alt so this won't work",
       "tfdsl": {
         "front": "trait(Tank,all_friends(fullname=this().target),alt);trait(Plane,all_friends(fullname=this().target),alt)"
-      },
-      "front-needs": "Granting traits to a named character only while it is in either alternate mode"
+      }
     },
     {
       "name": "Me Grimlock, You Grimlock!",
@@ -442,9 +438,8 @@
     {
       "name": "Strategic Airlift",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Triggering when an Upgrade is scrapped and placing that Upgrade beneath a named character"
+        "front": "on-friend-scrapped(when(all_friends(fullname=this().target).count>=1,event().from.owner=this().owner,event().from.fullname!=this().target))->place_under(all_friends(fullname=this().target),event().scrapped)"
+      }
     },
     {
       "name": "Swap Heads",
@@ -475,9 +470,8 @@
     {
       "name": "Who's Next?",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Detecting attack damage sufficient to KO the defender with required Weapon, Armor, and Utility attachments"
+        "front": "on-friend-after-attack(when(event().attacker.fullname=this().target,event().overkill>=0,event().attacker.upgrades.subtype=Weapon,event().attacker.upgrades.subtype=Armor,event().attacker.upgrades.subtype=Utility))->untap(event().attacker)"
+      }
     },
     {
       "name": "Apex",
@@ -489,10 +483,9 @@
     {
       "name": "Autobot Gears, Transport & Reconnaissance",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(opponent().chars.count>=2,opponent().upgrades.count>=1)->move_upgrade(pick_enemy_upgrade(),pick_enemy(id!=previous_target().attached_to.id)))",
         "bot": "on-this-flip()->return_upgrade(pick_enemy_upgrade())"
-      },
-      "alt-needs": "Moving an enemy Upgrade to a different enemy character"
+      }
     },
     {
       "name": "Autobot Nautica, Camien Engineer",

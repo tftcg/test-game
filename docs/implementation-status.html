@@ -16,13 +16,25 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 894/1467 (60.9%)</p>
+  <p>TFDSL completion: 900/1467 (61.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>232</td><td>70</td><td>111</td><td>181</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>390</td><td>1</td><td>203</td><td>204</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>59</td><td>1</td><td>97</td><td>98</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>233</td><td>69</td><td>111</td><td>180</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>391</td><td>1</td><td>202</td><td>203</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>63</td><td>0</td><td>94</td><td>94</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Waves 1 to 5</h2>
+  <p>TFDSL completion: 713/898 (79.4%)</p>
+<table>
+<thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
+<tbody>
+<tr><th scope="row">Character</th><td>293</td><td>214</td><td>39</td><td>40</td><td>79</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>297</td><td>1</td><td>73</td><td>74</td></tr>
+<tr><th scope="row">Stratagem</th><td>30</td><td>20</td><td>0</td><td>10</td><td>10</td></tr>
 </tbody>
 </table>
 </section>
@@ -255,20 +267,19 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 5</h2>
-  <p>TFDSL completion: 126/188 (67.0%)</p>
+  <p>TFDSL completion: 132/188 (70.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>57</td><td>34</td><td>18</td><td>5</td><td>23</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>41</td><td>0</td><td>23</td><td>23</td></tr>
-<tr><th scope="row">Stratagem</th><td>30</td><td>16</td><td>1</td><td>13</td><td>14</td></tr>
+<tr><th scope="row">Character</th><td>57</td><td>35</td><td>17</td><td>5</td><td>22</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>42</td><td>0</td><td>22</td><td>22</td></tr>
+<tr><th scope="row">Stratagem</th><td>30</td><td>20</td><td>0</td><td>10</td><td>10</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Autobot Gears, Transport &amp; Reconnaissance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Moving an enemy Upgrade to a different enemy character</td></tr>
 <tr><th scope="row">Autobot Nautica, Camien Engineer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Need to be able to force the play of an Armor onto this character</td></tr>
 <tr><th scope="row">Autobot Outback, Gunner</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">This is relying on pick_hand not being cancellable. Needs a pay()</td><td class="comment">bot-needs: Replacing Upgrade scrapping with a same-subtype Upgrade from hand</td></tr>
 <tr><th scope="row">Autobot Whirl, Aerial Assault</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage from a single Ranged attacker</td></tr>
@@ -298,7 +309,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Concealing Contrails</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action replacement of flipped battle-icon colors</td></tr>
 <tr><th scope="row">Counterespionage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Naming cards and inspecting face-down enemy Secret Actions</td></tr>
 <tr><th scope="row">Decoy Flares</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed</td><td class="comment"></td></tr>
-<tr><th scope="row">Disassemble</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">THe previous_target seems to be undefined</td><td class="comment"></td></tr>
 <tr><th scope="row">End Hostilities</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action replacement of flipped battle-icon colors</td></tr>
 <tr><th scope="row">Escape Capsule</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving all upgrades to a character deployed from an upgraded head</td></tr>
 <tr><th scope="row">Ghost Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent-caused scrap with a same-subtype Upgrade from hand</td></tr>
@@ -326,14 +336,12 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Spymaster&#39;s Ruse</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Linking a played Secret Action to this card and exempting both from end-turn scrapping</td></tr>
 <tr><th scope="row">Temporal Quagmire</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping each player’s battle-card flips for a battle</td></tr>
 <tr><th scope="row">Tripwire</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Trithyllium Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reducing the defending Decepticon Leader’s Pierce total during a battle</td></tr>
 <tr><th scope="row">Turn the Tide</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Pairing equal-size character selections and assigning each damage transfer to a distinct target</td></tr>
 <tr><th scope="row">Versatility</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting a character’s first attack of the turn</td></tr>
 <tr><th scope="row">All-Out</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game Stratagem effects that flip the Stratagem after resolving</td></tr>
 <tr><th scope="row">Data Protection</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Preventing opponent cards from causing hand scrapping</td></tr>
-<tr><th scope="row">Duty &amp; Honor</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Tracking a named team character KO across the game for conditional abilities</td></tr>
 <tr><th scope="row">Infiltration</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game Stratagem effects that flip the Stratagem after resolving</td></tr>
-<tr><th scope="row">Master Converter</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment">Currently alt1/alt2 are not considered equal to alt so this won&#39;t work</td><td class="comment">front-needs: Granting traits to a named character only while it is in either alternate mode</td></tr>
+<tr><th scope="row">Master Converter</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Currently alt1/alt2 are not considered equal to alt so this won&#39;t work</td><td class="comment"></td></tr>
 <tr><th scope="row">Me Grimlock, You Grimlock!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Granting a trait to the body beneath a named head character</td></tr>
 <tr><th scope="row">Metallikato Stance</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Testing all flipped cards for icon counts and moving a selected flipped card after battle</td></tr>
 <tr><th scope="row">More Guns</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game return of a KO’d Weaponizer in Upgrade mode to the battlefield as an Upgrade</td></tr>
@@ -341,10 +349,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Pop-Up Attack</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sabotage</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppressing opponent triggered abilities while an enemy is upgraded</td></tr>
 <tr><th scope="row">Saturation Bombing</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game Stratagem effects that flip the Stratagem after resolving</td></tr>
-<tr><th scope="row">Strategic Airlift</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Triggering when an Upgrade is scrapped and placing that Upgrade beneath a named character</td></tr>
 <tr><th scope="row">Swap Heads</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Swapping heads between characters and flipping a once-per-game Stratagem</td></tr>
 <tr><th scope="row">The Usurper</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Who&#39;s Next?</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Detecting attack damage sufficient to KO the defender with required Weapon, Armor, and Utility attachments</td></tr>
 </tbody>
 </table>
 </section>
