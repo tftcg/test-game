@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 875/1467 (59.6%)</p>
+  <p>TFDSL completion: 880/1467 (60.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>413</td><td>221</td><td>77</td><td>115</td><td>192</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>388</td><td>1</td><td>205</td><td>206</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>54</td><td>1</td><td>102</td><td>103</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>59</td><td>1</td><td>97</td><td>98</td></tr>
 </tbody>
 </table>
 </section>
@@ -269,13 +269,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 5</h2>
-  <p>TFDSL completion: 124/188 (66.0%)</p>
+  <p>TFDSL completion: 126/188 (67.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>34</td><td>18</td><td>5</td><td>23</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>41</td><td>0</td><td>23</td><td>23</td></tr>
-<tr><th scope="row">Stratagem</th><td>30</td><td>14</td><td>1</td><td>15</td><td>16</td></tr>
+<tr><th scope="row">Stratagem</th><td>30</td><td>16</td><td>1</td><td>13</td><td>14</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -353,8 +353,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">More Guns</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game return of a KO’d Weaponizer in Upgrade mode to the battlefield as an Upgrade</td></tr>
 <tr><th scope="row">Orbital Strike</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Dynamically replacing printed card text and deck-construction conditions</td></tr>
 <tr><th scope="row">Pop-Up Attack</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Resilience</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Reading an attacker’s total Bold value during a battle</td></tr>
-<tr><th scope="row">Revenge</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Applying a damage-tiered Bold value to a named character</td></tr>
 <tr><th scope="row">Sabotage</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppressing opponent triggered abilities while an enemy is upgraded</td></tr>
 <tr><th scope="row">Saturation Bombing</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-game Stratagem effects that flip the Stratagem after resolving</td></tr>
 <tr><th scope="row">Strategic Airlift</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Triggering when an Upgrade is scrapped and placing that Upgrade beneath a named character</td></tr>
@@ -493,13 +491,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 7</h2>
-  <p>TFDSL completion: 21/54 (38.9%)</p>
+  <p>TFDSL completion: 22/54 (40.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>10</td><td>1</td><td>5</td><td>4</td><td>9</td></tr>
 <tr><th scope="row">Battlecard</th><td>20</td><td>11</td><td>0</td><td>9</td><td>9</td></tr>
-<tr><th scope="row">Stratagem</th><td>16</td><td>6</td><td>0</td><td>10</td><td>10</td></tr>
+<tr><th scope="row">Stratagem</th><td>16</td><td>7</td><td>0</td><td>9</td><td>9</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -534,20 +532,19 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Obfuscating Cloud</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Safeguard for friends not working yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Out of the Way Hot Rod!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Optional non-attack damage redirection to another character</td></tr>
 <tr><th scope="row">Silent Hunter</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Pre-game deck-to-character Upgrade placement and post-battle damage</td></tr>
-<tr><th scope="row">Soundwave Superior</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Triggering when a Secret Action is played</td></tr>
 <tr><th scope="row">Sulfuric Deluge</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Mode-conditional static ability on a Stratagem target</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Wave 8</h2>
-  <p>TFDSL completion: 34/199 (17.1%)</p>
+  <p>TFDSL completion: 35/199 (17.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>3</td><td>4</td><td>35</td><td>39</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>26</td><td>0</td><td>55</td><td>55</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>2</td><td>0</td><td>39</td><td>39</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>3</td><td>0</td><td>38</td><td>38</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -688,7 +685,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Queen of the Junkyard</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Counters on a Stratagem, deck reshuffle detection, and scaling a named character&#39;s ATK by those counters</td></tr>
 <tr><th scope="row">Slice, Dice, and Julienne!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Detecting an opponent drawing cards during your turn and granting temporary ATK to Road Drones</td></tr>
 <tr><th scope="row">Sonic Doom</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Removing printed text from a named character mode</td></tr>
-<tr><th scope="row">Spin to Deflect Stuff</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Non-attack-damage replacement followed by damage to an enemy</td></tr>
 <tr><th scope="row">Stop the Tax and Spend!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing a multi-card deck scrap with a single-card deck scrap</td></tr>
 <tr><th scope="row">The City&#39;s Finest Views</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Granting Stations to a trait and resolving Station-entry effects</td></tr>
 <tr><th scope="row">The Great Escape</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Storing damage on a Stratagem and tracking characters KO&#39;d by that Stratagem</td></tr>
@@ -761,13 +757,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 10</h2>
-  <p>TFDSL completion: 42/62 (67.7%)</p>
+  <p>TFDSL completion: 43/62 (69.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>11</td><td>4</td><td>5</td><td>2</td><td>7</td></tr>
 <tr><th scope="row">Battlecard</th><td>25</td><td>21</td><td>0</td><td>4</td><td>4</td></tr>
-<tr><th scope="row">Stratagem</th><td>20</td><td>12</td><td>0</td><td>8</td><td>8</td></tr>
+<tr><th scope="row">Stratagem</th><td>20</td><td>13</td><td>0</td><td>7</td><td>7</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -792,7 +788,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Eat My Dust!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects - TODO: Need a &#39;replace(foo,bar)&#39; DSL that targets a characters DSL/mode</td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Card-text replacement effects</td></tr>
-<tr><th scope="row">Operation: Interference</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Dynamic mode-scoped targeted static abilities</td></tr>
 <tr><th scope="row">Solar Regeneration</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Target: Acquired</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Card-text replacement effects</td></tr>
 <tr><th scope="row">The Dark Spark</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: First-turn-only events and card-text replacement effects</td></tr>

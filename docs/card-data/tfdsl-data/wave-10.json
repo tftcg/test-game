@@ -183,9 +183,8 @@
     },
     {
       "name": "Operation: Interference",
-      "front-needs": "Dynamic mode-scoped targeted static abilities",
       "tfdsl": {
-        "front": ""
+        "front": "static(def,when(all_friends(trait='Spy Patrol',mode=alt).count>0,all_friends(fullname=this().target,mode=bot).count>0),1,target=all_friends(fullname=this().target))"
       }
     },
     {

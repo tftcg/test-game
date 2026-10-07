@@ -625,9 +625,8 @@
     {
       "name": "Spin to Deflect Stuff",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Non-attack-damage replacement followed by damage to an enemy"
+        "front": "instead(on-damage(when(event().damaged.owner=this().owner,event().damaged.trait=Helicopter,event().origin.owner!=this().owner))->(modify(event().amount:=event().amount - 1);damage(1,pick_enemy())))"
+      }
     },
     {
       "name": "Stop the Tax and Spend!",

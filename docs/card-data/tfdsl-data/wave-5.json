@@ -404,16 +404,14 @@
     {
       "name": "Resilience",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Reading an attacker’s total Bold value during a battle"
+        "front": "on-friend-defend(when(event().defender.fullname=this().target))->def_eob(event().attacker.bold,event().defender)"
+      }
     },
     {
       "name": "Revenge",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Applying a damage-tiered Bold value to a named character"
+        "front": "static(bold,when(all_friends(fullname=this().target).damage>=1,all_friends(fullname=this().target).damage<=5),1,target=all_friends(fullname=this().target));static(bold,when(all_friends(fullname=this().target).damage>=6,all_friends(fullname=this().target).damage<=10),2,target=all_friends(fullname=this().target));static(bold,when(all_friends(fullname=this().target).damage>=11),3,target=all_friends(fullname=this().target))"
+      }
     },
     {
       "name": "Sabotage",

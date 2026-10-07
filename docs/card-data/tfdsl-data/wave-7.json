@@ -178,9 +178,8 @@
     },
     {
       "name": "Soundwave Superior",
-      "front-needs": "Triggering when a Secret Action is played",
       "tfdsl": {
-        "front": ""
+        "front": "on-play-action(when(event().player=this().owner,event().card.type='Secret Action',all_friends(fullname=this().target).count>0))->damage(1,pick_enemy())"
       }
     },
     {
