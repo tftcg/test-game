@@ -427,9 +427,8 @@
       "name": "Bombshell, Decepticon Psy Ops",
       "tfdsl": {
         "alt": "on-this-flip()->draw(1)",
-        "bot": ""
-      },
-      "bot-needs": "A mandatory variable hand-scrap cost equal to the defender's star count."
+        "bot": "on-this-attack()->(if(self().hand.count>=event().defender.stars)->(if(confirm())->(scrap_hand(pick_hand(exact=event().defender.stars));if(done())->ko(event().defender))))"
+      }
     },
     {
       "name": "Breakdown, Paranoid Scout",
