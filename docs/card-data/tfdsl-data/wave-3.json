@@ -96,8 +96,7 @@
     },
     {
       "name": "Emp Wave",
-      "needs": "Tapping every character",
-      "tfdsl": ""
+      "tfdsl": "tap(all_chars())"
     },
     {
       "name": "Energy Pack",
@@ -305,10 +304,9 @@
     },
     {
       "name": "Captain Starscream, Infantry • Air Commander",
-      "bot-needs": "Triggering when an Upgrade is scrapped from an enemy character",
       "tfdsl": {
         "alt": "on-this-flip()->damage(1,pick_enemy(upgrades.count=0))",
-        "bot": ""
+        "bot": "on-enemy-scrapped()->damage(1,event().from)"
       }
     },
     {
@@ -365,9 +363,8 @@
     },
     {
       "name": "Major Ultra Magnus, Infantry • City Commander",
-      "alt-needs": "Searching the deck for a named Upgrade before the game begins",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-game()->(if(confirm('Put Ultra Magnus Armor on Ultra Magnus?'))->put_upgrade(this(),pick_deck(name='Ultra Magnus Armor')));brave()",
         "bot": "on-this-after-attack-flip(when(event().flips.orange>=2,event().flips.blue>=2))->damage(1,all_chars())"
       }
     },
@@ -460,9 +457,8 @@
     },
     {
       "name": "Private Trailbreaker, Infantry • Fortification & Defense",
-      "alt-needs": "Searching the deck for a named Upgrade before the game begins",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-start-game()->(if(confirm('Move Force Field to Hand?'))->move_to(self().hand,pick_deck(name='Force Field')))",
         "bot": "static(brave,when(this().upgrades.subtype=Armor),true)"
       }
     },
@@ -475,10 +471,9 @@
     },
     {
       "name": "Raider Blowpipe, Air Force • Weapons",
-      "upgrade-needs": "Calculating distinct battle-icon colors and moving a leaving Battle Master to the KO area",
       "tfdsl": {
         "bot": "focus(1)",
-        "upgrade": ""
+        "upgrade": "on-attached-after-attack-flip()->atk_eot(event().flips.colours.count,attached())"
       }
     },
     {
@@ -518,10 +513,9 @@
     },
     {
       "name": "Raider Needlenose, Air Force • Soldier",
-      "bot-needs": "Triggering when a played battle card has an exact star value",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(stars=1))",
-        "bot": ""
+        "bot": "on-play-action(when(event().card.stars=1))->damage(1,pick_enemy());on-play-upgrade(when(event().played.stars=1))->damage(1,pick_enemy())"
       }
     },
     {
@@ -608,10 +602,9 @@
     {
       "name": "Sergeant Skywarp, Black Ops • Seeker",
       "alt-needs": "Returning up to two differently named Secret Actions from the scrap pile",
-      "bot-needs": "Triggering when a Secret Action is played",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-play-action(when(event().card.type='Secret Action')->draw(1)"
       }
     },
     {

@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 887/1467 (60.5%)</p>
+  <p>TFDSL completion: 894/1467 (60.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>227</td><td>74</td><td>112</td><td>186</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>389</td><td>1</td><td>204</td><td>205</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>232</td><td>70</td><td>111</td><td>181</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>390</td><td>1</td><td>203</td><td>204</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>59</td><td>1</td><td>97</td><td>98</td></tr>
 </tbody>
 </table>
@@ -115,12 +115,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 3</h2>
-  <p>TFDSL completion: 149/182 (81.9%)</p>
+  <p>TFDSL completion: 156/182 (85.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>61</td><td>45</td><td>10</td><td>6</td><td>16</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>57</td><td>0</td><td>14</td><td>14</td></tr>
+<tr><th scope="row">Character</th><td>61</td><td>50</td><td>6</td><td>5</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>58</td><td>0</td><td>13</td><td>13</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -130,26 +130,21 @@ thead { background: #f3f4f6; }
 <tbody>
 <tr><th scope="row">Captain Elita-1, Special Ops • Ranger</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Confirm is failing. Presumably due to being on opponent&#39;s turn</td><td class="comment">alt-needs: Moving a chosen amount of damage without KOing the destination character</td></tr>
 <tr><th scope="row">Captain Ironhide, Infantry • Bodyguard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Swapping an attached Weapon with a qualifying Weapon from hand</td></tr>
-<tr><th scope="row">Captain Starscream, Infantry • Air Commander</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Triggering when an Upgrade is scrapped from an enemy character</td></tr>
 <tr><th scope="row">Captain Wheeljack, Engineering  Scientist</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Counting Actions played during the turn</td></tr>
 <tr><th scope="row">Eject, Electronic Surveillance</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">We agreed to treat Eject&#39;s alt mode as a Focus ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
-<tr><th scope="row">Major Ultra Magnus, Infantry • City Commander</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Searching the deck for a named Upgrade before the game begins</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Downshift, Special Ops • Security Agent</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Firedrive, Ground Command • Artillery</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Scrapping any chosen number of hand cards for a matching attack bonus and moving a leaving Battle Master to the KO area</td></tr>
 <tr><th scope="row">Private Pteraxadon, Air Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Setting base DEF and moving a leaving Battle Master to the KO area</td></tr>
 <tr><th scope="row">Private Sideswipe, Infantry • Soldier</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Multiplying a temporary bonus by the number of KO characters<br>bot-needs: Detecting another friendly character KO during the opponent&#39;s turn</td></tr>
 <tr><th scope="row">Private Smashdown, Ground Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Comparing each player&#39;s battle-icon colors and moving a leaving Battle Master to the KO area</td></tr>
-<tr><th scope="row">Private Trailbreaker, Infantry • Fortification &amp; Defense</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Searching the deck for a named Upgrade before the game begins</td></tr>
-<tr><th scope="row">Raider Blowpipe, Air Force • Weapons</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Calculating distinct battle-icon colors and moving a leaving Battle Master to the KO area</td></tr>
 <tr><th scope="row">Raider Flamefeather, Black Ops • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping a defense bonus based on flipped battle icons</td></tr>
-<tr><th scope="row">Raider Needlenose, Air Force • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Triggering when a played battle card has an exact star value</td></tr>
 <tr><th scope="row">Raider Storm Cloud, Infantry  Electronic Warfare</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Visper, Infantry • Patrol Leader</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Cog, Artillery • Mechanic</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Playing an Upgrade onto each friendly character and moving a leaving Battle Master to the KO area</td></tr>
 <tr><th scope="row">Sergeant Overdrive, Special Ops • Strategist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Sergeant Skywarp, Black Ops • Seeker</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Returning up to two differently named Secret Actions from the scrap pile<br>bot-needs: Triggering when a Secret Action is played</td></tr>
+<tr><th scope="row">Sergeant Skywarp, Black Ops • Seeker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Returning up to two differently named Secret Actions from the scrap pile</td></tr>
 <tr><th scope="row">Specialist Ratchet, Engineering • Rescue &amp; Repair</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Is getting +1 atk when a repair is attempted on a zero damage character</td><td class="comment"></td></tr>
 <tr><th scope="row">Anticipation Engine</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing the top deck card and conditionally playing it by card type</td></tr>
 <tr><th scope="row">Backup Bag</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an attempted scrap of another attached Upgrade with scrapping this Upgrade</td></tr>
@@ -159,7 +154,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Dampening Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting the number of battle cards an opponent can flip during a battle</td></tr>
 <tr><th scope="row">Daring Counterattack</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the ko +1 atk. Pierce works</td><td class="comment"></td></tr>
 <tr><th scope="row">Emergency Defense Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing even attack damage and detecting a defense that takes no attack damage</td></tr>
-<tr><th scope="row">Emp Wave</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tapping every character</td></tr>
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Fuel Cache</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors</td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
