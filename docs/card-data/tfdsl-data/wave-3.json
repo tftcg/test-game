@@ -675,6 +675,7 @@
     },
     {
       "name": "Blaster, Communications",
+      "comment": "BUG: This is scrapping the top card. It should just be trying to play it. If it can't, it stays there",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
         "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);if(done())->(scrap_deck(top_deck());play(previous_target(2))))"

@@ -598,11 +598,9 @@
     },
     {
       "name": "Raider Spinister, Infantry • Aerial Assault",
-      "alt-needs": "Granting an additional Weapon slot",
-      "bot-needs": "Granting an additional Weapon slot",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "add_slot(Weapon,1);static(atk,when(this().upgrades.trait='Battle Master'),3)",
+        "bot": "add_slot(Weapon,1);on-this-flip()->atk_eot(3,pick_friend(trait='Battle Master'))"
       }
     },
     {
@@ -623,11 +621,9 @@
     },
     {
       "name": "Sergeant Crosshairs, Artillery • Weapons Supervisor",
-      "alt-needs": "Granting additional Armor slots",
-      "bot-needs": "Granting additional Armor slots",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "add_slot(Armor,1);on-this-flip()->(if(this().damage=1)->move(1,this(),pick_friend(trait='Battle Master'));if(this().damage>=2)->move(2,this(),pick_friend(trait='Battle Master')))",
+        "bot": "add_slot(Armor,1);static(def,when(this().upgrades.trait='Battle Master'),2)"
       }
     },
     {

@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 902/1467 (61.5%)</p>
+  <p>TFDSL completion: 906/1467 (61.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>235</td><td>67</td><td>111</td><td>178</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>237</td><td>67</td><td>109</td><td>176</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>391</td><td>1</td><td>202</td><td>203</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>63</td><td>0</td><td>94</td><td>94</td></tr>
 </tbody>
@@ -28,11 +28,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 715/898 (79.6%)</p>
+  <p>TFDSL completion: 719/898 (80.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>216</td><td>37</td><td>40</td><td>77</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>218</td><td>37</td><td>38</td><td>75</td></tr>
 <tr><th scope="row">Battlecard</th><td>371</td><td>297</td><td>1</td><td>73</td><td>74</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>20</td><td>0</td><td>10</td><td>10</td></tr>
 </tbody>
@@ -138,6 +138,7 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
+<tr><th scope="row">Blaster, Communications</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This is scrapping the top card. It should just be trying to play it. If it can&#39;t, it stays there</td><td class="comment"></td></tr>
 <tr><th scope="row">Captain Elita-1, Special Ops • Ranger</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Confirm is failing. Presumably due to being on opponent&#39;s turn</td><td class="comment">alt-needs: Moving a chosen amount of damage without KOing the destination character</td></tr>
 <tr><th scope="row">Captain Ironhide, Infantry • Bodyguard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Swapping an attached Weapon with a qualifying Weapon from hand</td></tr>
 <tr><th scope="row">Captain Wheeljack, Engineering  Scientist</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Counting Actions played during the turn</td></tr>
@@ -182,11 +183,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 109/174 (62.6%)</p>
+  <p>TFDSL completion: 113/174 (64.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>34</td><td>7</td><td>19</td><td>26</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>36</td><td>7</td><td>17</td><td>24</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>38</td><td>1</td><td>25</td><td>26</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -215,9 +216,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revenge triggers and looking at an opponent&#39;s hand before selecting a card<br>bot-needs: Activated abilities and counting different battle-icon colors on a revealed deck card</td></tr>
 <tr><th scope="row">Raider Skytread, Special Ops • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Returning a card from under this character to hand</td></tr>
-<tr><th scope="row">Raider Spinister, Infantry • Aerial Assault</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting an additional Weapon slot<br>bot-needs: Granting an additional Weapon slot</td></tr>
 <tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: Selecting a flipped battle card with no battle icons after battle and placing it under this character</td></tr>
-<tr><th scope="row">Sergeant Crosshairs, Artillery • Weapons Supervisor</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Granting additional Armor slots<br>bot-needs: Granting additional Armor slots</td></tr>
 <tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top deck card and branching on its battle icons without moving it<br>bot-needs: Counting face-up and face-down Secret Actions</td></tr>
 <tr><th scope="row">Sergeant Six-Gun, Artillery • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Reading a scrapped Weapon&#39;s printed ATK stat and granting that much ATK</td></tr>
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
