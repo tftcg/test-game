@@ -290,7 +290,7 @@
       "name": "Alpha Trion, Cybertronian Sage",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(type=Action,orange>=1))",
-        "bot": "on-this-after-attack-flip()->(if(confirm('Play Flipped Blue Action?'))->play(pick(self().flips,type=Action,blue>=1)))"
+        "bot": "on-this-after-attack-flip()->(if(confirm('Play Flipped Blue Action?'))->play(pick(event().flips.cards,type=Action,blue>=1)))"
       }
     },
     {

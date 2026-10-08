@@ -144,8 +144,7 @@
     },
     {
       "name": "Indestructible Sword",
-      "comment": "BUG: Not returning",
-      "tfdsl": "on-this-scrapped()->move_to(self().hand,this())"
+      "tfdsl": "on-this-scrapped()->move_to(this().owner.hand,this())"
     },
     {
       "name": "Involuntary Promotion",
@@ -319,10 +318,9 @@
     {
       "name": "Deadlock, Soldier of Fortune",
       "alt-needs": "Granting Stealth only against specified factions and preventing those factions from using Stealth",
-      "bot-needs": "Detecting KO attack damage and using a Bounty ability that flips this character",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "bounty((flip(this());draw(2)))"
       }
     },
     {
@@ -344,10 +342,9 @@
     {
       "name": "General Optimus Prime, Galactic Commander",
       "alt-needs": "Granting Utility slots and revealing then playing a top-deck Action",
-      "bot-needs": "Need to be able to direct the target of a played card onto this()",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-after-attack(when(event().flips.orange>=1,event().flips.blue>=1))->(if(confirm('Play flipped upgrade on Galaxy Prime?'))->play_upgrade(pick(event().flips.cards,type=Upgrade),this()))"
       }
     },
     {
@@ -486,10 +483,9 @@
     {
       "name": "Private Turbo Board, Air Command • Evac",
       "bot-needs": "Preventing an opponent from playing more than a specified number of cards during their turn",
-      "upgrade-needs": "Playing a selected flipped battle card after battle and replacing this upgrade leaving the battlefield with placement in the KO area",
       "tfdsl": {
         "bot": "",
-        "upgrade": ""
+        "upgrade": "on-attached-after-battle(when(event().flips.orange>=1,event().flips.blue>=1))->play(pick(event().flips.cards,orange>=1 || blue>=1))"
       }
     },
     {

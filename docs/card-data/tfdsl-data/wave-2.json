@@ -222,7 +222,8 @@
     },
     {
       "name": "Reckless Charge",
-      "tfdsl": "atk_eot(4,pick_friend());on-eot()->damage(3,previous_target())"
+      "comment": "NOTE: each(..) is used here because previous_target doesn't survive through events but it() will",
+      "tfdsl": "each(pick_friend())->(atk_eot(4,it());on-eot()->damage(3,it()))"
     },
     {
       "name": "Recon System",
@@ -483,7 +484,7 @@
     {
       "name": "Dinobot Swoop, Bombardier",
       "tfdsl": {
-        "bot": "on-this-after-attack()->move_to(self().hand,pick(self().flips,green>=1))"
+        "bot": "on-this-after-attack()->move_to(self().hand,pick(event().flips.cards,green>=1))"
       }
     },
     {

@@ -365,9 +365,8 @@
     {
       "name": "Me Grimlock, You Grimlock!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Granting a trait to the body beneath a named head character"
+        "front": "trait(Dinobot,all_friends(head.fullname=this().target))"
+      }
     },
     {
       "name": "Metallikato Stance",
@@ -491,9 +490,8 @@
       "name": "Autobot Nautica, Camien Engineer",
       "tfdsl": {
         "alt": "on-this-after-defend-flip(when(event().attacker.trait=Car || event().attacker.trait=Truck || event().attacker.trait=Tank,event().flips.blue>=1))->def_eob(event().flips.blue,this())",
-        "body": ""
-      },
-      "body-needs": "Need to be able to force the play of an Armor onto this character"
+        "body": "on-this-defend()->(if(confirm('Play Armor on Nautica?'))->play_upgrade(pick_hand(subtype=Armor),this()))"
+      }
     },
     {
       "name": "Autobot Outback, Gunner",
@@ -537,9 +535,8 @@
       "name": "Bludgeon, Electric Warrior",
       "tfdsl": {
         "alt": "pierce(1);tough(1)",
-        "bot": ""
-      },
-      "bot-needs": "Detecting non-attack damage to an enemy character"
+        "bot": "on-damage(when(event().damaged.owner!=this().owner,event().amount>0))->def_eot(0-1,event().damaged)"
+      }
     },
     {
       "name": "Brainstorm, Biomechanical Engineer",
@@ -652,11 +649,11 @@
     },
     {
       "name": "Horri-Bull, Ground Trooper",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->move(1,this(),pick_enemy())",
-        "body": ""
-      },
-      "body-needs": "Triggering when a player plays any black battle card"
+        "body": "on-play-action(when(event().played.black>=1))->(damage(1,pick_enemy());damage(1,this()))"
+      }
     },
     {
       "name": "Kreb",
@@ -756,10 +753,9 @@
     {
       "name": "Topspin, Air & Space Assault",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-defend()->tough_eot(this().bold,this())",
         "body": "on-this-after-attack-flip(when(event().flips.white>=1))->draw(1)"
-      },
-      "alt-needs": "Reading a character’s total Bold value during a battle"
+      }
     },
     {
       "name": "Tracks, Autobot Warrior",
