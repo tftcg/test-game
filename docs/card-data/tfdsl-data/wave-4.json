@@ -723,21 +723,21 @@
       "name": "Brunt, Artillery Drone",
       "comment": "Note: Parser doesn't like having a raw if inside revenge, needs to be hidden in a (..)",
       "tfdsl": {
-        "alt": "revenge((if(all_friends(name=Trypticon).count>0)->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))))"
+        "alt": "revenge((if(exists_friend(name=Trypticon))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))))"
       }
     },
     {
       "name": "Full-Tilt, Base Recon",
       "tfdsl": {
-        "alt": "revenge((if(all_friends(name=Trypticon).count>0)->damage(1,pick_enemy())))",
-        "bot": "revenge((if(all_friends(name=Trypticon).count>0)->damage(2,pick_enemy())))"
+        "alt": "revenge((if(exists_friend(name=Trypticon))->damage(1,pick_enemy())))",
+        "bot": "revenge((if(exists_friend(name=Trypticon))->damage(2,pick_enemy())))"
       }
     },
     {
       "name": "Wipe-Out, Devoted Minion",
       "tfdsl": {
-        "alt": "revenge((if(all_friends(name=Trypticon).count>0)->draw(1)))",
-        "bot": "revenge((if(all_friends(name=Trypticon).count>0)->draw(2)))"
+        "alt": "revenge((if(exists_friend(name=Trypticon))->draw(1)))",
+        "bot": "revenge((if(exists_friend(name=Trypticon))->draw(2)))"
       }
     }
   ]

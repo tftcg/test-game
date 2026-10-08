@@ -343,7 +343,7 @@
     },
     {
       "name": "Rally the City",
-      "tfdsl": "if(all_friends(name=Metroplex).count>0)->draw(all_friends().count)"
+      "tfdsl": "if(exists_friend(name=Metroplex))->draw(all_friends().count)"
     },
     {
       "name": "All-Out Attack",
@@ -648,7 +648,7 @@
       "name": "Scamper, City Patrol",
       "tfdsl": {
         "alt": "static(bold,1,target=all_friends(name=Metroplex))",
-        "bot": "on-this-flip(when(all_friends(name=Metroplex).count>0))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
+        "bot": "on-this-flip(when(exists_friend(name=Metroplex)))->scrap_upgrade(pick_enemy_upgrade(subtype=Armor || subtype=Weapon))"
       }
     },
     {
