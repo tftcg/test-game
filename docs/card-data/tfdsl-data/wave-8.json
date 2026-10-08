@@ -213,7 +213,7 @@
     {
       "name": "Pack Behavior",
       "comment": "TODO: Test",
-      "tfdsl": "put_only(trait=Predacon || trait=Seacon || trait=Terrorcon);bold(1);revenge(put_upgrade(pick_friend(),this())"
+      "tfdsl": "put_only(trait=Predacon || trait=Seacon || trait=Terrorcon);bold(1);revenge(put_upgrade(this(),pick_friend()))"
     },
     {
       "name": "Passenger Coverage",

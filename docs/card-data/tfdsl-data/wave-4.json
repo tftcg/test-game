@@ -88,7 +88,7 @@
     },
     {
       "name": "Dual Wield",
-      "tfdsl": "add_slot(scope=eot,'Weapon',1,pick_friend());if(previous_target().faction=Mercenary)->(if(confirm('Play Weapon from scrap?'))->play_upgrade(previous_target(),pick_scrap(subtype=Weapon)))"
+      "tfdsl": "add_slot(scope=eot,'Weapon',1,pick_friend());if(previous_target().faction=Mercenary)->(if(confirm('Play Weapon from scrap?'))->play_upgrade(pick_scrap(subtype=Weapon),previous_target()))"
     },
     {
       "name": "Energy Transfer",
@@ -634,7 +634,7 @@
       "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->(move_upgrade(pick(this().upgrades,subtype=Weapon),pick_friend(id!=previous_target().attached_to.id));atk_eot(1,previous_target())))",
-        "bot": "on-this-attack()->(if(confirm())->put_upgrade(this(),pick_scrap(subtype=Weapon,black>=1)))"
+        "bot": "on-this-attack()->(if(confirm())->put_upgrade(pick_scrap(subtype=Weapon,black>=1),this()))"
       }
     },
     {

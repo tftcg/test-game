@@ -137,7 +137,7 @@
     {
       "name": "Excellent!",
       "tfdsl": {
-        "front": "on-friend-after-attack-flip(when(event().attacker.fullname=this().target,event().attacker.mode=bot))->(if(confirm('Play a flipped weapon?'))->play_upgrade(all_friends(fullname=this().target),pick(self().flips,subtype=Weapon)));static(def,when(all_friends(fullname=this().target).mode=alt),1,target=all_friends(fullname=this().target))"
+        "front": "on-friend-after-attack-flip(when(event().attacker.fullname=this().target,event().attacker.mode=bot))->(if(confirm('Play a flipped weapon?'))->play_upgrade( pick(self().flips,subtype=Weapon), all_friends(fullname=this().target)));static(def,when(all_friends(fullname=this().target).mode=alt),1,target=all_friends(fullname=this().target))"
       }
     },
     {

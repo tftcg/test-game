@@ -155,7 +155,7 @@
     {
       "name": "Lock and Load",
       "comment": "Proposal - why is the choose outside of the confirm? Also it is a play_upgrade not a put_upgrade",
-      "tfdsl": "choose(pick_friend(faction=Decepticon));if(confirm())->(put_upgrade(previous_target(),pick_hand(type=Upgrade,black>=1));atk_eot(1,previous_target()))"
+      "tfdsl": "choose(pick_friend(faction=Decepticon));if(confirm())->(put_upgrade(pick_hand(type=Upgrade,black>=1),previous_target());atk_eot(1,previous_target()))"
     },
     {
       "name": "United Front",
@@ -178,7 +178,7 @@
       "name": "Arm the Lonely",
       "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick_friend(fullname=this().target),pick(self().ko,trait='Battle Master'));flip(this())))"
+        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
       }
     },
     {
@@ -191,7 +191,7 @@
       "name": "Brothers In Armor",
       "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick_friend(fullname=this().target),pick(self().ko,trait='Battle Master'));flip(this())))"
+        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
       }
     },
     {

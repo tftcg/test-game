@@ -130,7 +130,7 @@
     },
     {
       "name": "Full Loadout",
-      "tfdsl": "choose(pick_friend()); if(confirm('Play Weapon?'))->play_upgrade(previous_target(),pick_hand(subtype=Weapon)); if(confirm('Play Armor?'))->play_upgrade(previous_target(),pick_hand(subtype=Armor)); if(confirm('Play Utility?'))->play_upgrade(previous_target(),pick_hand(subtype=Utility))"
+      "tfdsl": "choose(pick_friend()); if(confirm('Play Weapon?'))->play_upgrade(pick_hand(subtype=Weapon),previous_target()); if(confirm('Play Armor?'))->play_upgrade(pick_hand(subtype=Armor),previous_target()); if(confirm('Play Utility?'))->play_upgrade(pick_hand(subtype=Utility),previous_target())"
     },
     {
       "name": "Heat of Battle",
@@ -364,7 +364,7 @@
     {
       "name": "Major Ultra Magnus, Infantry • City Commander",
       "tfdsl": {
-        "alt": "on-start-game()->(if(confirm('Put Ultra Magnus Armor on Ultra Magnus?'))->put_upgrade(this(),pick_deck(name='Ultra Magnus Armor')));brave()",
+        "alt": "on-start-game()->(if(confirm('Put Ultra Magnus Armor on Ultra Magnus?'))->put_upgrade(pick_deck(name='Ultra Magnus Armor'),this()));brave()",
         "bot": "on-this-after-attack-flip(when(event().flips.orange>=2,event().flips.blue>=2))->damage(1,all_chars())"
       }
     },
@@ -736,7 +736,7 @@
       "name": "Private Camshaft, Special Ops • Scout",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "on-start-first-turn()->(if(confirm('Play Armor?'))->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Armor)))",
+        "alt": "on-start-first-turn()->(if(confirm('Play Armor?'))->play_upgrade(pick_hand(subtype=Armor),pick_char(trait=Omnibot)))",
         "bot": "on-friend-defend(when(event().defender.trait=Omnibot,event().defender.upgrades.subtype=Armor))->tough_eob(all_friends(trait=Omnibot,upgrades.subtype=Armor).count,event().defender)"
       }
     },
@@ -744,7 +744,7 @@
       "name": "Private Downshift, Special Ops • Security Agent",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "on-start-first-turn()->(if(confirm('Play Weapon?'))->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Weapon)))",
+        "alt": "on-start-first-turn()->(if(confirm('Play Weapon?'))->play_upgrade(pick_hand(subtype=Weapon),pick_char(trait=Omnibot)))",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Omnibot,event().attacker.upgrades.subtype=Weapon))->bold_eot(all_friends(trait=Omnibot,upgrades.subtype=Weapon).count,event().attacker)"
       }
     },
@@ -752,7 +752,7 @@
       "name": "Sergeant Overdrive, Special Ops • Strategist",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "on-start-first-turn()->(if(confirm('Play Utility?'))->play_upgrade(pick_char(trait=Omnibot),pick_hand(subtype=Utility)))",
+        "alt": "on-start-first-turn()->(if(confirm('Play Utility?'))->play_upgrade(pick_hand(subtype=Utility),pick_char(trait=Omnibot)))",
         "bot": "on-battle(when(event().battler.owner=this().owner,event().battler.trait=Omnibot,event().battler.upgrades.subtype=Utility))->focus_eob(all_friends(trait=Omnibot,upgrades.subtype=Utility).count,event().battler)"
       }
     }

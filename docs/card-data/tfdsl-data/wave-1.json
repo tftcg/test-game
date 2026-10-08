@@ -518,7 +518,7 @@
       "name": "Jetfire, Air Guardian",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": "on-this-flip()->put_upgrade(this(),pick_scrap(subtype=Armor || subtype=Utility))"
+        "bot": "on-this-flip()->put_upgrade(pick_scrap(subtype=Armor || subtype=Utility),this())"
       }
     },
     {
