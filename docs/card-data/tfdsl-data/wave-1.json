@@ -525,7 +525,7 @@
       "name": "Kickback, Cunning Insecticon",
       "tfdsl": {
         "alt": "on-this-attack-damage(when(event().damage>0))->repair(1,pick_friend(trait=Insecticon))",
-        "bot": "on-this-attack-flip(once())->flip_extra(all_friends(trait=Insecticon,id!=this().id).count + all_friends(trait=Insecticon,id!=this().id).count)"
+        "bot": "on-this-attack-flip(once())->flip_extra(starting_team(trait=Insecticon,id!=this().id).count + starting_team(trait=Insecticon,id!=this().id).count)"
       }
     },
     {

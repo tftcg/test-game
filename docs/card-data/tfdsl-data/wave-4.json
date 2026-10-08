@@ -545,9 +545,8 @@
     },
     {
       "name": "Raider Kickback, Infantry • Soldier",
-      "comment": "TODO: Test alt mode",
       "tfdsl": {
-        "alt": "on-this-defend-flip(once())->flip_extra(all_friends(trait=Insecticon).count)",
+        "alt": "on-this-defend-flip(once())->flip_extra(starting_team(trait=Insecticon).count)",
         "bot": "on(event=after-attack-flip,when(event().attacker.trait=Insecticon,event().flips.blue>=1))->damage(1,event().defender)"
       }
     },
