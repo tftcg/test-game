@@ -363,7 +363,7 @@
     },
     {
       "name": "Autobot Cosmos, Recon & Communication",
-      "comment": "BUG: 1. The alt flip is only drawing one when discarding five. 2. The reshuffle event doesn't have any attack info.",
+      "comment": "BUG: The reshuffle event doesn't have any attack info.",
       "tfdsl": {
         "alt": "on-this-flip()->(scrap_hand(all_hand());draw(previous_target().count))",
         "bot": "on-reshuffle(when(event().attacker=this()))->(if(event().defender.stars<=12)->ko(event().defender))"

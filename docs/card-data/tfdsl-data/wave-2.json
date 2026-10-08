@@ -164,8 +164,7 @@
     },
     {
       "name": "Intelligence Mission",
-      "comment": "TODO: Find a better way of doing the PT!=0",
-      "tfdsl": "tap(pick_friend(trait=Specialist,tapped=untapped,stars>=5));if(previous_target()!=0)->draw(3)"
+      "tfdsl": "tap(pick_friend(trait=Specialist,tapped=untapped,stars>=5));if(done())->draw(3)"
     },
     {
       "name": "Inverted!",
@@ -310,8 +309,8 @@
     },
     {
       "name": "Tackle",
-      "comment": "TODO: Debug previous_target().stars - can it take paths?",
-      "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));tap(pick_enemy(previous_target().stars<=stars))"
+      "comment": "BUG: Can tap characters with more stars",
+      "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));tap(pick_enemy(previous_target().stars<=stars,tapped=untapped))"
     },
     {
       "name": "Tech Research",

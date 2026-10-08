@@ -185,13 +185,11 @@
     },
     {
       "name": "Opportune Offensive",
-      "tfdsl": "",
-      "needs": "Enforcing a play-only requirement for a Mercenary starting team"
+      "tfdsl": "play_only(starting_team(faction=Mercenary).count>0);atk_eot(3,pick_friend(faction=Decepticon));pierce_eot(3,previous_target())"
     },
     {
       "name": "Opportune Repairs",
-      "tfdsl": "",
-      "needs": "Enforcing a play-only requirement for a Mercenary starting team"
+      "tfdsl": "play_only(starting_team(faction=Mercenary).count>0);repair(3,pick_friend(faction=Autobot))"
     },
     {
       "name": "Overheat",

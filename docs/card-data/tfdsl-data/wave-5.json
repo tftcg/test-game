@@ -519,11 +519,11 @@
     },
     {
       "name": "Autobot Whirl, Aerial Assault",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-after-attack-flip(when(event().flips.blue>=1))->damage(1,all_enemies(id!=event().defender.id))",
-        "bot": ""
-      },
-      "bot-needs": "Capping attack damage from a single Ranged attacker"
+        "bot": "instead(on-this-attack-damaged(when(event().damage>5,event().attacker.trait=Ranged))->modify(event().damage:=5))"
+      }
     },
     {
       "name": "Beachcomber, Geologist",
