@@ -293,7 +293,7 @@
       position: fixed;
       z-index: 10;
       width: 280px;
-      height: 392px;
+      height: auto;
       overflow: hidden;
       pointer-events: none;
       background: #090d12;
@@ -302,7 +302,18 @@
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
     #card-preview[hidden] { display: none; }
-    #card-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .preview-image { position: relative; height: 392px; }
+    .preview-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .preview-dsl {
+      margin: 0;
+      padding: .65rem;
+      border-top: 1px solid #d4e0e9;
+      color: #e3edf5;
+      font-size: .75rem;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
     .preview-statline {
       position: absolute;
       right: .55rem;
@@ -377,7 +388,7 @@
       position: fixed;
       z-index: 1;
       width: 280px;
-      height: 392px;
+      height: auto;
       overflow: hidden;
       pointer-events: none;
       background: #090d12;
@@ -386,7 +397,6 @@
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
     #confirm-card-preview[hidden], #mode-card-preview[hidden], #card-pick-preview[hidden] { display: none; }
-    #confirm-card-preview img, #mode-card-preview img, #card-pick-preview img { width: 100%; height: 100%; object-fit: cover; }
     .confirm-actions {
       display: flex;
       justify-content: center;

@@ -46,8 +46,7 @@
     },
     {
       "name": "Cross-Counter",
-      "needs": "Calculating damage as the difference between characters' DEF and ATK",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-after-defend-flip())->revealed(if(event().defender.def>event().attacker.atk)->damage(event().defender.def - event().attacker.atk,event().attacker))"
     },
     {
       "name": "Dare to Believe",
@@ -323,10 +322,10 @@
     {
       "name": "Rewind, Data Collector",
       "alt-needs": "Returning a random card from the scrap pile to hand",
-      "bot-needs": "Playing a specific battle card flipped during an attack",
+      "comment": "TODO: Test bot mode",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(event().flips.cards,black>=1,subtype=Utility)))"
       }
     },
     {

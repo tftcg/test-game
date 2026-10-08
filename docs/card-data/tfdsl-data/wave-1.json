@@ -667,9 +667,8 @@
     {
       "name": "Cliffjumper, Renegade Warrior",
       "tfdsl": {
-        "comment": "ko will need to be changed to only chars in the ko",
-        "alt": "on-flip(when(event().flipped.owner=this().owner,event().flipped.mode=bot,event().flipped.other_modes=Car))->draw(1)",
-        "bot": "static(atk,self().ko.count)"
+        "alt": "on-flip(when(event().flipped.owner=this().owner,event().flipped.id!=this().id,event().flipped.mode=bot,event().flipped.all_traits=Car))->draw(1)",
+        "bot": "static(atk,ko_chars(all_traits=Car).count)"
       }
     },
     {

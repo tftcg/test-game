@@ -715,7 +715,7 @@
       "name": "Buzzsaw, Spy",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->(if(confirm('Move Weapon?'))->move_upgrade(pick_friendly_upgrade(subtype=Weapon),pick_friend(id!=previous_target(2).attached_to.id)))",
-        "bot": "on-this-defend()->(if(confirm('Play Blue Weapon?'))->play(pick_hand(subtype=Weapon,blue>=1)))"
+        "bot": "on-this-attack()->(if(confirm('Play Blue Weapon?'))->play(pick_hand(subtype=Weapon,blue>=1)))"
       }
     },
     {

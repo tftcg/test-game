@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 920/1467 (62.7%)</p>
+  <p>TFDSL completion: 922/1467 (62.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>243</td><td>65</td><td>105</td><td>170</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>394</td><td>2</td><td>198</td><td>200</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>243</td><td>66</td><td>104</td><td>170</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>395</td><td>2</td><td>197</td><td>199</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>64</td><td>0</td><td>93</td><td>93</td></tr>
 </tbody>
 </table>
@@ -674,12 +674,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 9</h2>
-  <p>TFDSL completion: 58/98 (59.2%)</p>
+  <p>TFDSL completion: 60/98 (61.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>26</td><td>9</td><td>9</td><td>8</td><td>17</td></tr>
-<tr><th scope="row">Battlecard</th><td>35</td><td>22</td><td>0</td><td>13</td><td>13</td></tr>
+<tr><th scope="row">Character</th><td>26</td><td>9</td><td>10</td><td>7</td><td>17</td></tr>
+<tr><th scope="row">Battlecard</th><td>35</td><td>23</td><td>0</td><td>12</td><td>12</td></tr>
 <tr><th scope="row">Stratagem</th><td>15</td><td>11</td><td>0</td><td>4</td><td>4</td></tr>
 </tbody>
 </table>
@@ -697,7 +697,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
 <tr><th scope="row">Onslaught, Combaticon Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Plan</td></tr>
 <tr><th scope="row">Paddles, Gentle Giant</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing and redirecting a limited amount of attack damage<br>bot-needs: Checking for a damaged or KO&#39;d character across the battlefield and KO area</td></tr>
-<tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Returning a random card from the scrap pile to hand<br>bot-needs: Playing a specific battle card flipped during an attack</td></tr>
+<tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test bot mode</td><td class="comment">alt-needs: Returning a random card from the scrap pile to hand</td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Playing a specific Upgrade flipped during an attack after battle</td></tr>
 <tr><th scope="row">Specialist Countdown, Transport • Space Explorer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Paying a tap-and-scrap activation cost and changing draw count for combiner mode</td></tr>
@@ -711,7 +711,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Bellicosity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing flipped battle icon colors</td></tr>
 <tr><th scope="row">Cloud Cover</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing damage counters from moving between characters</td></tr>
 <tr><th scope="row">Cosmic Rust Cannon</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Resolving an optional scrap-or-damage choice after battle - else statement? if(!done())?</td></tr>
-<tr><th scope="row">Cross-Counter</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Calculating damage as the difference between characters&#39; DEF and ATK</td></tr>
 <tr><th scope="row">Enhanced Cyber Blade</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Setting a character&#39;s base DEF for a battle</td></tr>
 <tr><th scope="row">Feral Tenacity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Adding, counting, and removing named counters on an Upgrade</td></tr>
 <tr><th scope="row">Nothin&#39;s Gonna Stand In Our Way</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting cards with a specific name played during a turn</td></tr>
