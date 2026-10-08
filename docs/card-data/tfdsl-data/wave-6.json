@@ -177,8 +177,9 @@
     },
     {
       "name": "Occupation",
-      "needs": "Playing a green card after checking a Quintesson-only starting team.",
-      "tfdsl": ""
+      "needs": "TODO: Test",
+      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Quintesson).count=0)->(if(confirm('Play a Green icon card?'))->play(pick_hand(green>=1)))"
+
     },
     {
       "name": "Open Agenda",

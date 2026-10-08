@@ -59,7 +59,7 @@
     },
     {
       "name": "Confidence",
-      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Autobot).count=0)->(if(confirm())->play(pick_hand(type=Action)))"
+      "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Autobot).count=0)->(if(confirm('Play Action?'))->play(pick_hand(type=Action)))"
     },
     {
       "name": "Cooling Vents",

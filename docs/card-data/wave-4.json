@@ -2734,7 +2734,7 @@
             "Car",
             "Melee"
           ],
-          "text": "[Safeguard 3]\nWhen you shuffle your deck and this doesn't have a battle card under him > Put the bottom card of your deck face down under him.",
+          "text": "[Safeguard 3]\nWhen you reshuffle your deck and this doesn't have a battle card under him > Put the bottom card of your deck face down under him.",
           "mode": "alt"
         },
         {

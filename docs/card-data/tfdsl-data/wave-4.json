@@ -88,9 +88,7 @@
     },
     {
       "name": "Dual Wield",
-      "tfdslFuture": "add_slot(scope=eot,'Weapon',1,pick_friend())",
-      "needs": "Optional play of a Weapon from scrap when the chosen character is a Mercenary",
-      "tfdsl": ""
+      "tfdsl": "add_slot(scope=eot,'Weapon',1,pick_friend());if(previous_target().faction=Mercenary)->(if(confirm('Play Weapon from scrap?'))->play_upgrade(previous_target(),pick_scrap(subtype=Weapon)))"
     },
     {
       "name": "Energy Transfer",
@@ -443,10 +441,9 @@
     },
     {
       "name": "Private Hot Rod, Infantry • Soldier",
-      "alt-needs": "A deck reshuffle event and placing the bottom deck card face down under this character",
       "bot-needs": "Allowing an extra Action play each turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "safeguard(3);on-reshuffle(when(this().under.count=0))->place_under(this(),bottom_deck())",
         "bot": ""
       }
     },
@@ -610,7 +607,7 @@
     {
       "name": "Sergeant Barricade, Infantry • Enforcer",
       "comment": "TODO: Test",
-      "bot-needs": "Selecting a flipped battle card with no battle icons after battle and placing it under this character",
+      "bot-needs": "A delayed after-battle effect registered when this battles with no cards underneath, lasting only for that battle. Selecting an iconless flipped battle card and placing it under this character are already supported.",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_under_this()))",
         "bot": ""
@@ -642,11 +639,10 @@
     },
     {
       "name": "Sergeant Springer, Special Ops • Aerial Defense",
-      "bot-needs": "Playing an Action and an Upgrade from hand after flipping to this mode",
       "tfdsl": {
         "alt 1": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(type=Action));draw(2)))",
         "alt 2": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));draw(2)))",
-        "bot": ""
+        "bot": "on-this-flip(when(this().owner.hand.count>=7))->(if(confirm('Play Action?'))->play(pick_hand(type=Action));if(confirm('Play Upgrade?'))->play(pick_hand(type=Upgrade)))"
       }
     },
     {

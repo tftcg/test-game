@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 909/1467 (62.0%)</p>
+  <p>TFDSL completion: 912/1467 (62.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>238</td><td>66</td><td>109</td><td>175</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>393</td><td>1</td><td>200</td><td>201</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>239</td><td>66</td><td>108</td><td>174</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>394</td><td>2</td><td>198</td><td>200</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>63</td><td>0</td><td>94</td><td>94</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 722/898 (80.4%)</p>
+  <p>TFDSL completion: 725/898 (80.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>219</td><td>36</td><td>38</td><td>74</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>299</td><td>1</td><td>71</td><td>72</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>220</td><td>36</td><td>37</td><td>73</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>300</td><td>1</td><td>70</td><td>71</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>20</td><td>0</td><td>10</td><td>10</td></tr>
 </tbody>
 </table>
@@ -182,12 +182,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 115/174 (66.1%)</p>
+  <p>TFDSL completion: 118/174 (67.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>36</td><td>7</td><td>17</td><td>24</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>40</td><td>1</td><td>23</td><td>24</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>37</td><td>7</td><td>16</td><td>23</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>41</td><td>1</td><td>22</td><td>23</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -205,7 +205,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Private Fixit, Rescue Patrol • Medic</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">The scrap_hand(it()) isn&#39;t working</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
 <tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
-<tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: A deck reshuffle event and placing the bottom deck card face down under this character<br>bot-needs: Allowing an extra Action play each turn</td></tr>
+<tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Private Seawatch, Rescue Patrol • Search &amp; Rescue</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Alt mode lord ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Turbo Board, Air Command • Evac</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing an opponent from playing more than a specified number of cards during their turn<br>upgrade-needs: Playing a selected flipped battle card after battle and replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
 <tr><th scope="row">Private Vanguard, Ground Command • Advance Guard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage based on flipped battle icons</td></tr>
@@ -214,11 +214,10 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revenge triggers and looking at an opponent&#39;s hand before selecting a card<br>bot-needs: Activated abilities and counting different battle-icon colors on a revealed deck card</td></tr>
 <tr><th scope="row">Raider Skytread, Special Ops • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Returning a card from under this character to hand</td></tr>
-<tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: Selecting a flipped battle card with no battle icons after battle and placing it under this character</td></tr>
+<tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: A delayed after-battle effect registered when this battles with no cards underneath, lasting only for that battle. Selecting an iconless flipped battle card and placing it under this character are already supported.</td></tr>
 <tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top deck card and branching on its battle icons without moving it<br>bot-needs: Counting face-up and face-down Secret Actions</td></tr>
 <tr><th scope="row">Sergeant Six-Gun, Artillery • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Reading a scrapped Weapon&#39;s printed ATK stat and granting that much ATK</td></tr>
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Sergeant Springer, Special Ops • Aerial Defense</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">bot-needs: Playing an Action and an Upgrade from hand after flipping to this mode</td></tr>
 <tr><th scope="row">Sergeant Thundercracker, Infantry • Seeker</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing a top-deck card and moving damage once for each black icon on it<br>bot-needs: Selecting and revealing a variable number of opponent hand cards based on flipped black icons</td></tr>
 <tr><th scope="row">Trypticon, Assault Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Choosing between temporary ATK and repair after KO&#39;ing another character</td></tr>
 <tr><th scope="row">TTC-HD Turret Armor</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
@@ -233,7 +232,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty</td></tr>
 <tr><th scope="row">Decipher</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting face-up and face-down enemy Secret Actions</td></tr>
 <tr><th scope="row">Defensive Configuration</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting an extra Armor slot and revealing then playing a top-deck Armor</td></tr>
-<tr><th scope="row">Dual Wield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Optional play of a Weapon from scrap when the chosen character is a Mercenary</td></tr>
 <tr><th scope="row">Energy Transfer</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving a chosen number of damage counters without KO&#39;ing the destination</td></tr>
 <tr><th scope="row">Even The Score</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting excess attack damage that would KO a character</td></tr>
 <tr><th scope="row">Head-On Collision</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This won&#39;t work for alt1/alt2 characters</td><td class="comment"></td></tr>
@@ -352,7 +350,7 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>31</td><td>2</td><td>7</td><td>22</td><td>29</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>14</td><td>0</td><td>48</td><td>48</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>14</td><td>1</td><td>47</td><td>48</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>9</td><td>0</td><td>26</td><td>26</td></tr>
 </tbody>
 </table>
@@ -421,7 +419,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Manipulate Time</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Conditional multicolor and upgrade-icon checks plus attack-damage prevention and mass untap.</td></tr>
 <tr><th scope="row">Masher Mace</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Triggering when this Weapon is scrapped from its Sharkticon and returning it to hand.</td></tr>
 <tr><th scope="row">Motorcycle Chase</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test. I&#39;m feeling previous_target() needs to be (2) as it&#39;s giving Brave to the wrong char</td><td class="comment"></td></tr>
-<tr><th scope="row">Occupation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Playing a green card after checking a Quintesson-only starting team.</td></tr>
+<tr><th scope="row">Occupation</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: TODO: Test</td></tr>
 <tr><th scope="row">Open Agenda</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing cards, selecting up to two for hand, and bottom-decking the rest in a chosen order.</td></tr>
 <tr><th scope="row">Opportune Protection</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing damage to split up to three damage counters to another character.</td></tr>
 <tr><th scope="row">Photon Charge</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Engine requests reorder without data; was on Brawn. Not clear why as the three events below are at different times</td><td class="comment"></td></tr>
