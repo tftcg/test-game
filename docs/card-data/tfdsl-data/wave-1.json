@@ -21,7 +21,7 @@
     },
     {
       "name": "Backup Plan",
-      "tfdsl": "scrap_hand();draw(3)"
+      "tfdsl": "scrap_hand(this().owner.hand);draw(3)"
     },
     {
       "name": "Battle Ready",
@@ -89,7 +89,7 @@
     },
     {
       "name": "Dino-Chomp!",
-      "tfdsl": "scrap_hand();bold_eot(5,pick_friend(trait=Dinobot))"
+      "tfdsl": "scrap_hand(this().owner.hand);bold_eot(5,pick_friend(trait=Dinobot))"
     },
     {
       "name": "Disarm",
