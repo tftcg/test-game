@@ -548,9 +548,8 @@
     },
     {
       "name": "Allicon Eyuk, Bog Scavenger",
-      "alt-needs": "Returning a green Upgrade from scrap to hand.",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(green>=1))",
         "bot": "on-this-after-attack-flip(when(event().defender.trait!=Melee,event().flips.blue>=1))->atk_eob(event().flips.blue,this())"
       }
     },

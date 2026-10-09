@@ -116,7 +116,7 @@
     },
     {
       "name": "Torture Chamber",
-      "tfdsl": "on-start-turn(when(event().player=this().owner))->(damage(1,attached());draw(1))"
+      "tfdsl": "on-start-turn()->(damage(1,attached());draw(1))"
     },
     {
       "name": "...Always Bet on the Leader"

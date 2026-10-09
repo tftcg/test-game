@@ -77,7 +77,7 @@
     },
     {
       "name": "Data Bank",
-      "tfdsl": "on-start-turn(when(event().player=this().owner))->draw(1)"
+      "tfdsl": "on-start-turn()->draw(1)"
     },
     {
       "name": "Data Pad",

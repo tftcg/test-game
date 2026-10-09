@@ -177,7 +177,7 @@
       "name": "Arm the Lonely",
       "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
+        "front": "on-start-turn(when(self().ko.trait='Battle Master'))->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
       }
     },
     {
@@ -190,7 +190,7 @@
       "name": "Brothers In Armor",
       "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
-        "front": "on-start-turn()->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
+        "front": "on-start-turn(when(self().ko.trait='Battle Master'))->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
       }
     },
     {

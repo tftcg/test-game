@@ -105,7 +105,7 @@
     {
       "name": "Erratic Energy Grenade",
       "comment": "TODO: Test",
-      "tfdsl": "on-start-turn(when(event().player=this().owner))->damage(1,attached());on-attached-ko()->damage(2,all_enemies())"
+      "tfdsl": "on-start-turn()->damage(1,attached());on-attached-ko()->damage(2,all_enemies())"
     },
     {
       "name": "Extra Padding",
@@ -328,7 +328,7 @@
       "name": "General Megatron, Infantry • Leader",
       "tfdsl": {
         "alt": "on-this-flip()->damage(all_friendly_upgrades(subtype=Weapon).count,pick_enemy())",
-        "bot": "on-start-turn(when(event().player=this().owner,this().upgrades.count>=3))->damage(1,all_enemies())"
+        "bot": "on-start-turn(this().upgrades.count>=3))->damage(1,all_enemies())"
       }
     },
     {
