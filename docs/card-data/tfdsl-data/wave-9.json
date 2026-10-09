@@ -266,10 +266,9 @@
     {
       "name": "Cyclonus, Loyal Enforcer",
       "comment": "NOTE: This is relying on pick_hand not being a cancel. Needs a pay()",
-      "bot-needs": "Redirecting attack damage from another character",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(white>=1));move(2,this(),pick_enemy())))",
-        "bot": ""
+        "bot": "instead(on-attack-damage(when(event().target.owner=this().owner,event().target!=this(),event().target.trait=Leader,event().target.stars>=10,event().target.faction=Decepticon || event().target.trait=Unicronian))->(if(confirm())->modify(event().target:=this())))"
       }
     },
     {

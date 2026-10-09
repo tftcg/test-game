@@ -215,10 +215,9 @@
     },
     {
       "name": "Brainstorm, Haunted Schemer",
-      "bot-needs": "Dynamically granting Focus to exactly tapped friendly characters",
       "tfdsl": {
         "alt": "on-this-flip()->return_upgrade(pick_enemy_upgrade())",
-        "bot": ""
+        "bot": "each(all_friends())->static(focus,when(it().tapped=tapped),1,target=it())"
       }
     },
     {

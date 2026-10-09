@@ -413,9 +413,8 @@
     {
       "name": "Barrel Rolling",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Counting tapped Rolling Actions"
+        "front": "static(def,all(self().actions,subtype='Rolling Action',tapped=tapped).count,target=all_friends(fullname=this().target))"
+      }
     },
     {
       "name": "Blockbuster Moving Trailers",

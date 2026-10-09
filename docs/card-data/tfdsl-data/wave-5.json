@@ -227,7 +227,6 @@
     },
     {
       "name": "Scouting Mission",
-      "comment": "BUG: errors, not finding the owner of the damaged char", 
       "tfdsl": "damage(1,pick_char());draw(2,previous_target().owner)"
     },
     {
