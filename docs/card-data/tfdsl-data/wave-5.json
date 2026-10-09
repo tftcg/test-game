@@ -177,7 +177,7 @@
     },
     {
       "name": "Master of Metallikato",
-      "tfdsl": "choose(pick_friend());on(event=after-attack-flip,when(event().attacker=previous_target()))->atk_eob(event().flips.colours.count,previous_target())",
+      "tfdsl": "choose(pick_friend());on(event=after-attack-flip,when(event().attacker=chosen()))->atk_eob(event().flips.colours.count,chosen())",
       "comment": "TODO: Test"
     },
     {

@@ -179,7 +179,7 @@
     {
       "name": "Soundwave Superior",
       "tfdsl": {
-        "front": "on-play-action(when(event().player=this().owner,event().card.type='Secret Action',all_friends(fullname=this().target).count>0))->damage(1,pick_enemy())"
+        "front": "on-play-action(when(event().player=this().owner,event().card.subtype='Secret Action',all_friends(fullname=this().target).count>0))->damage(1,pick_enemy())"
       }
     },
     {

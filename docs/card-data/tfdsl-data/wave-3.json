@@ -243,7 +243,7 @@
     },
     {
       "name": "Special Ops Mission",
-      "tfdsl": "if(confirm('Play Secret Action?'))->play(pick_hand(type='Secret Action'));if(confirm('Play Secret Action?'))->play(pick_hand(type='Secret Action'))"
+      "tfdsl": "if(confirm('Play Secret Action?'))->play(pick_hand(subtype='Secret Action'));if(confirm('Play Secret Action?'))->play(pick_hand(subtype='Secret Action'))"
     },
     {
       "name": "Spinner Rims",
@@ -507,7 +507,7 @@
       "name": "Raider Laserbeak, Espionage • Interrogation",
       "tfdsl": {
         "alt": "on-this-flip()->(draw(1);scrap_hand(pick_hand()))",
-        "bot": "tap_ability()->(if(confirm('Play Secret Action?'))->play(pick_hand(type='Secret Action')))"
+        "bot": "tap_ability()->(if(confirm('Play Secret Action?'))->play(pick_hand(subtype='Secret Action')))"
       }
     },
     {
@@ -603,7 +603,7 @@
       "alt-needs": "Returning up to two differently named Secret Actions from the scrap pile",
       "tfdsl": {
         "alt": "",
-        "bot": "on-play-action(when(event().card.type='Secret Action')->draw(1)"
+        "bot": "on-play-action(when(event().card.subtype='Secret Action')->draw(1)"
       }
     },
     {
