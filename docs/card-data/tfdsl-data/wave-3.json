@@ -160,7 +160,6 @@
     },
     {
       "name": "LV Gamma-Disruptor Launcher",
-      "comment": "TODO: Test",
       "tfdsl": "put_only(name=Shockwave);share_slot(2);on-put()->scrap_hand(opponent_pick_opponent_hand())"
     },
     {

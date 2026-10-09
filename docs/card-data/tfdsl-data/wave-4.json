@@ -223,7 +223,7 @@
     {
       "name": "Reprocess",
       "comment": "TODO: Test",
-      "tfdsl": "choose(pick(all_chars(upgrades.count>0)));scrap_upgrade(pick(previous_target().upgrades));repair(2,previous_target(2))"
+      "tfdsl": "choose(pick(all_chars(upgrades.count>0)));scrap_upgrade(pick(previous_target(2).upgrades));repair(2,previous_target(2))"
     },
     {
       "name": "Sabotaged Armaments",
@@ -420,7 +420,6 @@
     },
     {
       "name": "Private Greenlight, Special Ops • Recon",
-      "comment": "TODO: Test",
       "alt-needs": "Preventing an opponent's cards from scrapping this character's Upgrades",
       "tfdsl": {
         "alt": "",

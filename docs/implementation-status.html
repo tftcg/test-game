@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 922/1467 (62.8%)</p>
+  <p>TFDSL completion: 923/1467 (62.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>243</td><td>66</td><td>104</td><td>170</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>244</td><td>65</td><td>104</td><td>169</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>395</td><td>2</td><td>197</td><td>199</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>64</td><td>0</td><td>93</td><td>93</td></tr>
 </tbody>
@@ -168,7 +168,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Fuel Cache</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors</td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">LV Gamma-Disruptor Launcher</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Metal Detector</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing the top deck card and conditionally playing it by card type</td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Pop a Wheelie</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Flipping characters to a specified mode and granting a restricted extra attack</td></tr>
@@ -204,7 +203,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Mudflap, Hired Muscle</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting KO attack damage and using a Bounty ability to reveal and play a top-deck card</td></tr>
 <tr><th scope="row">Private Dazzlestrike, Ground Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Brave<br>upgrade-needs: Events for an upgrade being removed from a character or leaving the battlefield</td></tr>
 <tr><th scope="row">Private Fixit, Rescue Patrol • Medic</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">The scrap_hand(it()) isn&#39;t working</td><td class="comment"></td></tr>
-<tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
+<tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
 <tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Private Seawatch, Rescue Patrol • Search &amp; Rescue</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Alt mode lord ability</td><td class="comment"></td></tr>
@@ -674,11 +673,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 9</h2>
-  <p>TFDSL completion: 60/98 (61.2%)</p>
+  <p>TFDSL completion: 61/98 (62.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>26</td><td>9</td><td>10</td><td>7</td><td>17</td></tr>
+<tr><th scope="row">Character</th><td>26</td><td>10</td><td>9</td><td>7</td><td>16</td></tr>
 <tr><th scope="row">Battlecard</th><td>35</td><td>23</td><td>0</td><td>12</td><td>12</td></tr>
 <tr><th scope="row">Stratagem</th><td>15</td><td>11</td><td>0</td><td>4</td><td>4</td></tr>
 </tbody>
@@ -700,13 +699,12 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test bot mode</td><td class="comment">alt-needs: Returning a random card from the scrap pile to hand</td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Playing a specific Upgrade flipped during an attack after battle</td></tr>
-<tr><th scope="row">Specialist Countdown, Transport • Space Explorer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Paying a tap-and-scrap activation cost and changing draw count for combiner mode</td></tr>
 <tr><th scope="row">Squawkbox, Passionate Musician</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Tracking cards scrapped by each player and resolving an opponent&#39;s optional hand scrap</td></tr>
 <tr><th scope="row">Squawktalk, Chatterbox Translator</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Choosing an icon color and revealing an opponent&#39;s top deck card<br>bot-needs: Having each player choose and scrap a card from their hand</td></tr>
 <tr><th scope="row">Swindle, Arms Dealer</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting Upgrades played during a turn<br>bot-needs: Choosing another character that shares a trait with this character</td></tr>
 <tr><th scope="row">Vortex, Interrogator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Revealing a random card from an opponent&#39;s hand</td></tr>
 <tr><th scope="row">Wheelie, Rhyming Racer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Paying a tap-and-scrap activation cost and branching on a scrapped card&#39;s icon count</td></tr>
-<tr><th scope="row">Windblade, Camien Champion</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Taking selected cards from the top of the deck and bottom-decking the rest<br>bot-needs: Replacing attack damage with half that damage rounded up</td></tr>
+<tr><th scope="row">Windblade, Camien Champion</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Taking selected cards from the top of the deck and bottom-decking the rest<br>bot-needs: Replacing attack damage with half that damage rounded up - either attack damage needs to see flips, or it&#39;s a temporary trigger. Probably the former</td></tr>
 <tr><th scope="row">Beast Mode</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Grouping alternative trait-and-mode attack conditions</td></tr>
 <tr><th scope="row">Bellicosity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing flipped battle icon colors</td></tr>
 <tr><th scope="row">Cloud Cover</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing damage counters from moving between characters</td></tr>

@@ -352,10 +352,9 @@
     },
     {
       "name": "Specialist Countdown, Transport • Space Explorer",
-      "bot-needs": "Paying a tap-and-scrap activation cost and changing draw count for combiner mode",
       "tfdsl": {
         "alt": "static(stealth,when(all_friends(name='Omega Supreme').count>0))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1)))->(if(exists_friend(name='Omega Supreme'))->draw(3);if(all_friends(name='Omega Supreme').count=0)->draw(2);put_deck(pick_hand()))"
       }
     },
     {
@@ -378,7 +377,7 @@
     {
       "name": "Windblade, Camien Champion",
       "alt-needs": "Taking selected cards from the top of the deck and bottom-decking the rest",
-      "bot-needs": "Replacing attack damage with half that damage rounded up",
+      "bot-needs": "Replacing attack damage with half that damage rounded up - either attack damage needs to see flips, or it's a temporary trigger. Probably the former",
       "tfdsl": {
         "alt": "",
         "bot": ""
