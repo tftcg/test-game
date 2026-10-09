@@ -64,7 +64,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">I Still Function!</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Currently it can pick a non-character from the KO. Also the returned character insta-dies.</td><td class="comment"></td></tr>
 <tr><th scope="row">Peace through Tyranny</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Needs to store a flag on the player that the turn handler is listening to</td></tr>
 <tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test direct damage</td><td class="comment"></td></tr>
-<tr><th scope="row">Salvage for Parts</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test...not sure how well the previous_target will work here</td><td class="comment"></td></tr>
+<tr><th scope="row">Salvage for Parts</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Counting for healing... is counting all characters, not upgrades scrapped from characters. And its healling, ALL characters too</td><td class="comment"></td></tr>
 <tr><th scope="row">Security Checkpoint</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Needs to include revealing the hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Swarm!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Needs to flip cards outside of Combat. Probably a custom implementation</td></tr>
 </tbody>
@@ -293,16 +293,14 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Belligerence</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing individual battle-icon colors for either player during a battle</td></tr>
 <tr><th scope="row">Concealing Contrails</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action replacement of flipped battle-icon colors</td></tr>
 <tr><th scope="row">Counterespionage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Naming cards and inspecting face-down enemy Secret Actions</td></tr>
-<tr><th scope="row">Decoy Flares</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed</td><td class="comment"></td></tr>
 <tr><th scope="row">End Hostilities</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action replacement of flipped battle-icon colors</td></tr>
 <tr><th scope="row">Escape Capsule</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving all upgrades to a character deployed from an upgraded head</td></tr>
 <tr><th scope="row">Ghost Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent-caused scrap with a same-subtype Upgrade from hand</td></tr>
-<tr><th scope="row">Hand-to-Hand Combat</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Headbutt</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">High Five</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Testing whether two chosen characters share any trait</td></tr>
+<tr><th scope="row">Hand-to-Hand Combat</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Not working</td><td class="comment"></td></tr>
+<tr><th scope="row">High Five</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Comparing whether two chosen characters share any trait</td></tr>
 <tr><th scope="row">Hold the Line</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping attack damage by the attacker’s star count for a battle</td></tr>
 <tr><th scope="row">Holomatter Projector</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Industrial-grade Phase Charge</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed</td><td class="comment"></td></tr>
+<tr><th scope="row">Industrial-grade Phase Charge</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This works. But it probably shouldn&#39;t. Is attached() not getting cleansed by scrap_upgrade?</td><td class="comment"></td></tr>
 <tr><th scope="row">Intrusion Countermeasures Software</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent-turn hand scrapping with drawing cards</td></tr>
 <tr><th scope="row">Junk Cannon</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Last Stand</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

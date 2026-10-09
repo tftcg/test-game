@@ -259,7 +259,7 @@
     },
     {
       "name": "Salvage for Parts",
-      "comment": "TODO: Test...not sure how well the previous_target will work here",
+      "comment": "BUG: Counting for healing... is counting all characters, not upgrades scrapped from characters. And its healling, ALL characters too",
       "tfdsl": "each(all_chars())->(scrap_upgrade(all(it().upgrades));repair(previous_target().count,it()))"
     },
     {

@@ -44,7 +44,6 @@
     },
     {
       "name": "Decoy Flares",
-      "comment": "TODO: Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed",
       "tfdsl": "on-attached-defend()->(if(confirm())->(scrap_upgrade(this());def_eot(2,attached())))"
     },
     {
@@ -97,7 +96,7 @@
     {
       "name": "Hand-to-Hand Combat",
       "tfdsl": "choose(pick_friend());on-attack(when(event().attacker=previous_target(),event().attacker.upgrades.subtype!=Weapon))->(atk_eob(3,event().attacker);scrap_upgrade(all(event().defender.upgrades,subtype=Weapon)))",
-      "comment": "TODO: Test"
+      "comment": "BUG: Not working"
     },
     {
       "name": "Handheld Blaster",
@@ -105,13 +104,12 @@
     },
     {
       "name": "Headbutt",
-      "tfdsl": "tap(pick_friend(mode=body));tap(pick_enemy(stars<=10,mode=bot || mode=body))",
-      "comment": "TODO: Test"
+      "tfdsl": "tap(pick_friend(mode=body));tap(pick_enemy(stars<=10,mode=bot || mode=body))"
     },
     {
       "name": "High Five",
       "tfdsl": "",
-      "needs": "Testing whether two chosen characters share any trait"
+      "needs": "Comparing whether two chosen characters share any trait"
     },
     {
       "name": "Hit and Run",
@@ -137,7 +135,7 @@
     },
     {
       "name": "Industrial-grade Phase Charge",
-      "comment": "TODO: Test, is attached() evaluated before the scrap? I think now. previous_target() may be needed",
+      "comment": "TODO: This works. But it probably shouldn't. Is attached() not getting cleansed by scrap_upgrade?",
       "tfdsl": "on-attached-attack()->(if(confirm())->(scrap_upgrade(this());atk_eot(3,attached())))"
     },
     {
