@@ -74,8 +74,7 @@
     },
     {
       "name": "Decipher",
-      "tfdsl": "",
-      "needs": "Counting face-up and face-down enemy Secret Actions"
+      "tfdsl": "each(all(opponent().actions,subtype='Secret Action'))->damage(1,all_enemies())"
     },
     {
       "name": "Defensive Configuration",
@@ -101,8 +100,7 @@
     },
     {
       "name": "Even The Score",
-      "tfdsl": "",
-      "needs": "Detecting excess attack damage that would KO a character"
+      "tfdsl": "reveal(on-friend-attack-damaged(when(event().target.faction=Decepticon,event().overkill>0)))->revealed(damage(event().overkill,event().origin);move_to(self().ko,this()))"
     },
     {
       "name": "Fight For Position",
@@ -122,8 +120,7 @@
     },
     {
       "name": "Heroic Resolve",
-      "tfdsl": "",
-      "needs": "Replacing lethal attack damage with damage that leaves a character at 1 HEALTH"
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.faction=Autobot,event().damage+event().target.damage>=event().target.health))))->revealed(modify(event().damage:=event().target.health - event().target.damage - 1);move_to(self().ko,this()))"
     },
     {
       "name": "Hidden Fortification",
@@ -165,8 +162,7 @@
     },
     {
       "name": "Lucky Vest",
-      "tfdsl": "",
-      "needs": "Capping attack damage based on the number of battle-icon colors flipped"
+      "tfdsl": "instead(on-attached-attack-damaged(when(event().def_flips.colours.count>=4,event().damage>4))->modify(event().damage:=4))"
     },
     {
       "name": "Medic's Protective Field",
@@ -195,8 +191,7 @@
     },
     {
       "name": "Overwhelming Advantage",
-      "tfdsl": "",
-      "needs": "Checking all five battle-icon colors among a character's Upgrades and battle flips"
+      "tfdsl": "each(all_friends(faction=Decepticon))->plan(1);on-friend-after-attack-flip(when(exists_card(event().attacker.upgrades,white>=1),exists_card(event().attacker.upgrades,orange>=1),exists_card(event().attacker.upgrades,black>=1),exists_card(event().attacker.upgrades,blue>=1),exists_card(event().attacker.upgrades,green>=1),event().flips.colours.count=5))->damage(15,pick_enemy())"
     },
     {
       "name": "Pincer Movement",
@@ -270,8 +265,7 @@
     },
     {
       "name": "Toolbox",
-      "tfdsl": "",
-      "needs": "Replacing repair amounts"
+      "tfdsl": "instead(on-attached-repair()->modify(event().amount:=event().amount+1))"
     },
     {
       "name": "Unflinching Courage",
@@ -332,11 +326,9 @@
     },
     {
       "name": "Lockdown, Bounty Hunter",
-      "alt-needs": "Scaling ATK by twice the number of cards under this character",
-      "bot-needs": "Scaling ATK by twice the number of cards under this character and using a Bounty ability",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(atk,this().under.count+this().under.count);on-this-flip(when(this().under.count+this().upgrades.count>0))->(draw(this().under.count+this().upgrades.count);scrap_hand(pick_hand(count=this().under.count+this().upgrades.count)))",
+        "bot": "static(atk,this().under.count+this().under.count);bounty(place_under(this(),bottom_deck()))"
       }
     },
     {

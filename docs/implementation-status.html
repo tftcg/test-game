@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 923/1467 (62.9%)</p>
+  <p>TFDSL completion: 931/1467 (63.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>244</td><td>65</td><td>104</td><td>169</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>395</td><td>2</td><td>197</td><td>199</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>245</td><td>65</td><td>103</td><td>168</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>401</td><td>2</td><td>191</td><td>193</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>64</td><td>0</td><td>93</td><td>93</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 733/898 (81.6%)</p>
+  <p>TFDSL completion: 741/898 (82.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>224</td><td>35</td><td>34</td><td>69</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>300</td><td>1</td><td>70</td><td>71</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>225</td><td>35</td><td>33</td><td>68</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>306</td><td>1</td><td>64</td><td>65</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>21</td><td>0</td><td>9</td><td>9</td></tr>
 </tbody>
 </table>
@@ -182,12 +182,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 121/174 (69.5%)</p>
+  <p>TFDSL completion: 129/174 (74.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>37</td><td>10</td><td>13</td><td>23</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>41</td><td>1</td><td>22</td><td>23</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>38</td><td>10</td><td>12</td><td>22</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>47</td><td>1</td><td>16</td><td>17</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -198,7 +198,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Captain Jetfire, Engineering • Air Guardian</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top five deck cards, moving their Upgrades to hand, and scrapping the rest<br>bot-needs: Playing a revealed Upgrade from hand onto the deck and flipping an additional battle card</td></tr>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Stealth only against specified factions and preventing those factions from using Stealth</td></tr>
 <tr><th scope="row">General Optimus Prime, Galactic Commander</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Utility slots and revealing then playing a top-deck Action</td></tr>
-<tr><th scope="row">Lockdown, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Scaling ATK by twice the number of cards under this character<br>bot-needs: Scaling ATK by twice the number of cards under this character and using a Bounty ability</td></tr>
 <tr><th scope="row">MTX-M2 Anti-Gravity Cannon</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
 <tr><th scope="row">Mudflap, Hired Muscle</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting KO attack damage and using a Bounty ability to reveal and play a top-deck card</td></tr>
 <tr><th scope="row">Private Dazzlestrike, Ground Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Brave<br>upgrade-needs: Events for an upgrade being removed from a character or leaving the battlefield</td></tr>
@@ -230,24 +229,18 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Coup</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing and using a Bounty ability on a battlefield card</td></tr>
 <tr><th scope="row">Crude Club</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty</td></tr>
-<tr><th scope="row">Decipher</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting face-up and face-down enemy Secret Actions</td></tr>
 <tr><th scope="row">Defensive Configuration</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting an extra Armor slot and revealing then playing a top-deck Armor</td></tr>
 <tr><th scope="row">Energy Transfer</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving a chosen number of damage counters without KO&#39;ing the destination</td></tr>
-<tr><th scope="row">Even The Score</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting excess attack damage that would KO a character</td></tr>
 <tr><th scope="row">Head-On Collision</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This won&#39;t work for alt1/alt2 characters</td><td class="comment"></td></tr>
-<tr><th scope="row">Heroic Resolve</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing lethal attack damage with damage that leaves a character at 1 HEALTH</td></tr>
 <tr><th scope="row">Hijack</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking opponent card draws during their turn and replacing a draw</td></tr>
 <tr><th scope="row">Involuntary Promotion</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning a KO character to the battlefield and transferring all damage counters and Upgrades</td></tr>
-<tr><th scope="row">Lucky Vest</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping attack damage based on the number of battle-icon colors flipped</td></tr>
 <tr><th scope="row">Multi-Missile Pod</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing multiple upgrades in one Weapon slot and counting Multi-Missile Pods scrapped during a battle</td></tr>
 <tr><th scope="row">Overheat</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Suppressing specific battle icon effects for a battle</td></tr>
-<tr><th scope="row">Overwhelming Advantage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Checking all five battle-icon colors among a character&#39;s Upgrades and battle flips</td></tr>
 <tr><th scope="row">Pincer Movement</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting a restricted extra attack against the same enemy</td></tr>
 <tr><th scope="row">Relentless Invasion</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning named KO characters to the battlefield, granting attacks, and placing them under Trypticon at end of turn</td></tr>
 <tr><th scope="row">Reprocess</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Shoulder Holster</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment">Need to implement the top decking of a Weapon</td><td class="comment">needs: Revealing then playing a top-deck Weapon</td></tr>
 <tr><th scope="row">Soldier&#39;s Blaster</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test against multi-factional characters</td><td class="comment"></td></tr>
-<tr><th scope="row">Toolbox</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing repair amounts</td></tr>
 <tr><th scope="row">Valuable Contract</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Using a Bounty ability and selecting an owned battle card outside the game</td></tr>
 <tr><th scope="row">War of Attrition</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking the third copy played in a turn and playing another copy</td></tr>
 </tbody>
@@ -296,7 +289,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">End Hostilities</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action replacement of flipped battle-icon colors</td></tr>
 <tr><th scope="row">Escape Capsule</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving all upgrades to a character deployed from an upgraded head</td></tr>
 <tr><th scope="row">Ghost Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent-caused scrap with a same-subtype Upgrade from hand</td></tr>
-<tr><th scope="row">Hand-to-Hand Combat</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Not working</td><td class="comment"></td></tr>
+<tr><th scope="row">Hand-to-Hand Combat</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test. Previous bug fixed.</td><td class="comment"></td></tr>
 <tr><th scope="row">High Five</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Comparing whether two chosen characters share any trait</td></tr>
 <tr><th scope="row">Hold the Line</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping attack damage by the attacker’s star count for a battle</td></tr>
 <tr><th scope="row">Holomatter Projector</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

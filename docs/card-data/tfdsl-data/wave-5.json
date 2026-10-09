@@ -95,8 +95,8 @@
     },
     {
       "name": "Hand-to-Hand Combat",
-      "tfdsl": "choose(pick_friend());on-attack(when(event().attacker=previous_target(),event().attacker.upgrades.subtype!=Weapon))->(atk_eob(3,event().attacker);scrap_upgrade(all(event().defender.upgrades,subtype=Weapon)))",
-      "comment": "BUG: Not working"
+      "tfdsl": "choose(pick_friend());on-attack(when(event().attacker=chosen(),event().attacker.upgrades.subtype!=Weapon))->(atk_eob(3,event().attacker);scrap_upgrade(all(event().defender.upgrades,subtype=Weapon)))",
+      "comment": "TODO: Test. Previous bug fixed."
     },
     {
       "name": "Handheld Blaster",
@@ -467,7 +467,7 @@
     {
       "name": "Who's Next?",
       "tfdsl": {
-        "front": "on-friend-after-attack(when(event().attacker.fullname=this().target,event().overkill>=0,event().attacker.upgrades.subtype=Weapon,event().attacker.upgrades.subtype=Armor,event().attacker.upgrades.subtype=Utility))->untap(event().attacker)"
+        "front": "on-friend-attack-damage(when(event().origin.fullname=this().target,event().overkill>=0,event().origin.upgrades.subtype=Weapon,event().origin.upgrades.subtype=Armor,event().origin.upgrades.subtype=Utility))->untap(event().origin)"
       }
     },
     {

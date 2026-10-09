@@ -498,7 +498,7 @@
       "name": "Grimlock, Dinobot Leader",
       "tfdsl": {
         "alt": "on-this-flip()->bold_eot(3,pick_friend(trait=Dinobot))",
-        "bot": "on-this-attack-overkill()->damage(event().overkill,opponent_pick_opponent_char())"
+        "bot": "on-this-attack-damage(when(event().overkill>0))->damage(event().overkill,opponent_pick_opponent_char(id!=event().target.id))"
       }
     },
     {
