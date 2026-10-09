@@ -587,7 +587,7 @@
     {
       "name": "Raider Tailwind, Air Strike Patrol • Strategist",
       "tfdsl": {
-        "alt": "static(stealth,when(this().tapped=untapped));on-this-after-battle-flip(when(event().battler.trait='Air Strike Patrol',event().flips.green>=1))->(atk_eot(2,event().battler);def_eot(1,event().battler))",
+        "alt": "static(stealth,when(this().tapped=untapped));on-friend-after-battle-flip(when(event().battler.trait='Air Strike Patrol',event().flips.green>=1))->(atk_eot(2,event().battler);def_eot(1,event().battler))",
         "bot": "static(atk,ko_chars(trait='Air Strike Patrol').count);static(def,ko_chars(trait='Air Strike Patrol').count)"
       }
     },

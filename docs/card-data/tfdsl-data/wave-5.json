@@ -301,10 +301,10 @@
     },
     {
       "name": "All-Out",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Once-per-game Stratagem effects that flip the Stratagem after resolving"
+        "front": "on-friend-attack(when(event().attacker.fullname=this().target,event().attacker.owner.chars.count=1))->(atk_eob(3,event().attacker);flip(this()))"
+      }
     },
     {
       "name": "Better Things To Do Than Die",
@@ -342,10 +342,10 @@
     },
     {
       "name": "Infiltration",
+      "comment": "BUG: Image fails to load, but this is really a tf.cards issue",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Once-per-game Stratagem effects that flip the Stratagem after resolving"
+        "front": "on-friend-flip(when(event().flipped.fullname=this().target,event().flipped.mode=alt))->(if(confirm('Play up to 2 Secret Actions?'))->(play(pick_hand(subtype='Secret Action'));play(pick_hand(subtype='Secret Action'));flip(this())))"
+      }
     },
     {
       "name": "Jurassic Punch",
@@ -415,10 +415,10 @@
     },
     {
       "name": "Saturation Bombing",
+      "comment": "BUG: Image fails to load, but this is really a tf.cards issue",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Once-per-game Stratagem effects that flip the Stratagem after resolving"
+        "front": "on-friend-flip(when(event().flipped.fullname=this().target,event().flipped.mode=alt,event().flipped.damage>=all_enemies().count))->(each(all_enemies())->move(1,event().flipped,it());flip(this()))"
+      }
     },
     {
       "name": "Science Officer"
