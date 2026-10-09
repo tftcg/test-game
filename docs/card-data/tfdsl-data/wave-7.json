@@ -141,9 +141,8 @@
     },
     {
       "name": "Malevolent Architect",
-      "front-needs": "First-turn-only Tower counter removal and granting abilities to targeted characters",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-first-turn()->(if(tower().counter>0)->tower(0-1));if(starting_team(trait!=Constructicon).count=0)->(static(health,2,target=all_friends(trait=Constructicon));on-friend-flip(when(event().flipped.trait=Constructicon,event().flipped.mode=bot))->draw(1));each(all_friends(fullname='Devastator, Towering Warrior'))->static(tough,it().bold,target=it())"
       }
     },
     {
@@ -200,10 +199,8 @@
     },
     {
       "name": "Banzai-Tron, Crystalocution Master",
-      "comment": "TODO: Test",
-      "alt-needs": "Character battles triggers spanning attacks and defenses",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-battle()->(scrap_deck(get(self().deck,count=3,from=top));scrap_deck(get(opponent().deck,count=3,from=top)))",
         "bot": "on-this-flip(when(opponent().scrap.count>=20))->(if(confirm())->play(pick_hand(subtype=Weapon)))"
       }
     },
@@ -270,11 +267,9 @@
     },
     {
       "name": "Wolfwire, Lying In Wait",
-      "alt-needs": "Triggering when an opponent plays a green card",
-      "bot-needs": "Scrapping an opponent's deck and testing the color of a card scrapped this way",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-opponent-play-action(when(event().card.green>=1,opponent().scrap.count>=20))->damage(1,pick_enemy());on(event=play-upgrade,when(event().player=opponent(),event().played.green>=1,opponent().scrap.count>=20))->damage(1,pick_enemy())",
+        "bot": "on-this-flip()->(scrap_deck(get(opponent().deck,count=3,from=top));if(exists_card(previous_target(),green>=1))->draw(1))"
       }
     },
     {

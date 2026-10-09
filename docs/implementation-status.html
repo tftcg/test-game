@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 935/1467 (63.7%)</p>
+  <p>TFDSL completion: 940/1467 (64.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>246</td><td>64</td><td>103</td><td>167</td></tr>
+<tr><th scope="row">Character</th><td>413</td><td>249</td><td>62</td><td>102</td><td>164</td></tr>
 <tr><th scope="row">Battlecard</th><td>594</td><td>401</td><td>2</td><td>191</td><td>193</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>67</td><td>0</td><td>90</td><td>90</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>68</td><td>0</td><td>89</td><td>89</td></tr>
 </tbody>
 </table>
 </section>
@@ -331,11 +331,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 6</h2>
-  <p>TFDSL completion: 30/156 (19.2%)</p>
+  <p>TFDSL completion: 31/156 (19.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>3</td><td>6</td><td>22</td><td>28</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>4</td><td>5</td><td>22</td><td>27</td></tr>
 <tr><th scope="row">Battlecard</th><td>62</td><td>14</td><td>1</td><td>47</td><td>48</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>9</td><td>0</td><td>26</td><td>26</td></tr>
 </tbody>
@@ -350,7 +350,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Autobot Pipes, Idiosyncratic Collector</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing attack damage to split two damage to this character.<br>bot-needs: Tracking a once-per-turn upgrade-scrap trigger, revealing the deck top, and matching battle-icon counts.</td></tr>
 <tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>Character</td><td>unimplemented</td><td>0/3</td><td class="comment"></td><td class="comment">alt-needs: Swapping a hand card with a flipped blue Weapon and playing this character&#39;s Upgrade side on KO.<br>upgrade-needs: Detecting defender black flips and replacing this Upgrade leaving the battlefield with moving it to KO.<br>bot-needs: Replacing incoming damage-counter movement with redirect-and-repair and playing this character&#39;s Upgrade side on KO.</td></tr>
 <tr><th scope="row">Axor, Opportunistic Fencer</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Moving a selected Weapon or Armor after another character&#39;s battle and using that character&#39;s Bounty ability.</td></tr>
-<tr><th scope="row">Crashbash, Ocean Terror</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Detecting attack-damage survival and moving that damage from an enemy to a different enemy.</td></tr>
 <tr><th scope="row">Decepticon Doublecrosser, Shield Brothers</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Granting an extra targeted attack against a newly deployed Titan Master, including attacking it while untapped.<br>upgrade-needs: Replacing this Upgrade leaving the battlefield with moving it to KO.</td></tr>
 <tr><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Tracking damage taken and damage-counter movement during the turn for dynamic stats.</td></tr>
 <tr><th scope="row">Deliberata, Judger and The Judged</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: TAP ability modal choice with top-deck reveal/scrap outcomes and a variable hand-scrap cost.</td></tr>
@@ -457,20 +456,19 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 7</h2>
-  <p>TFDSL completion: 22/54 (40.7%)</p>
+  <p>TFDSL completion: 26/54 (48.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>10</td><td>1</td><td>5</td><td>4</td><td>9</td></tr>
+<tr><th scope="row">Character</th><td>10</td><td>3</td><td>4</td><td>3</td><td>7</td></tr>
 <tr><th scope="row">Battlecard</th><td>20</td><td>11</td><td>0</td><td>9</td><td>9</td></tr>
-<tr><th scope="row">Stratagem</th><td>16</td><td>7</td><td>0</td><td>9</td><td>9</td></tr>
+<tr><th scope="row">Stratagem</th><td>16</td><td>8</td><td>0</td><td>8</td><td>8</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Banzai-Tron, Crystalocution Master</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Character battles triggers spanning attacks and defenses</td></tr>
 <tr><th scope="row">Bludgeon, Metallikato Monster</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Comparing battle-icon color counts with an opponent and resolving effects at end of battle<br>bot-needs: Conditioning an attack trigger on the battle-icon count of a card scrapped from hand</td></tr>
 <tr><th scope="row">Brainstorm, Haunted Schemer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Dynamically granting Focus to exactly tapped friendly characters</td></tr>
 <tr><th scope="row">Fangry, Cursed Nightmare</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Scrapping an opponent&#39;s battle card without applying its icons<br>bot-needs: Start-turn effects that scrap another player&#39;s deck</td></tr>
@@ -479,7 +477,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Hoist, Fearless Rescuer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Proposal - should an on-put-upgrade be added?</td><td class="comment">alt-needs: Revealing a top-deck card and moving it to hand only if it has a matching subtype</td></tr>
 <tr><th scope="row">Megatron/Ratchet, Twisted Amalgamation</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Proposal - feels like the choose can merge into the damage</td><td class="comment">bot-needs: Preventing enemy repair and counting distinct names among green Upgrades</td></tr>
 <tr><th scope="row">Nightbird, Tera-Kura Construct</th><td>Character</td><td>bug</td><td>1/1</td><td class="comment">This should be setup by an on-this-battle. It also needs the damage to still happen even if Nightbird is KO&#39;d. Needs new feature support</td><td class="comment"></td></tr>
-<tr><th scope="row">Wolfwire, Lying In Wait</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Triggering when an opponent plays a green card<br>bot-needs: Scrapping an opponent&#39;s deck and testing the color of a card scrapped this way</td></tr>
 <tr><th scope="row">Agile Formation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Optional top-deck inspection and scrapping</td></tr>
 <tr><th scope="row">Armor Piercing Munitions</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A selected character&#39;s this-turn attack trigger</td></tr>
 <tr><th scope="row">Contemplation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting zero to three hand cards and drawing once per card scrapped</td></tr>
@@ -494,7 +491,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Durable Decepticon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Repairing once per card placed under a combiner, capped at five</td></tr>
 <tr><th scope="row">Fully Loaded</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing a scrapped top-deck Upgrade directly onto a named character and capping a dynamic health bonus</td></tr>
 <tr><th scope="row">Impervious</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing an Armor scrap with an optional Armor scrap from hand</td></tr>
-<tr><th scope="row">Malevolent Architect</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: First-turn-only Tower counter removal and granting abilities to targeted characters</td></tr>
 <tr><th scope="row">Obfuscating Cloud</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Safeguard for friends not working yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Out of the Way Hot Rod!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Optional non-attack damage redirection to another character</td></tr>
 <tr><th scope="row">Silent Hunter</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Pre-game deck-to-character Upgrade placement and post-battle damage</td></tr>
