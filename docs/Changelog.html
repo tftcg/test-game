@@ -5,7 +5,7 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TODO, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (724)</h2>
+<h2>Implemented cards (727)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
 <tr><td>2026-10-09</td><th scope="row">Decipher</th><td>Wave 4</td><td>Battlecard</td><td>complete</td><td><code>5749d78f1560</code></td></tr>
 <tr><td>2026-10-09</td><th scope="row">Even The Score</th><td>Wave 4</td><td>Battlecard</td><td>complete</td><td><code>5749d78f1560</code></td></tr>
@@ -14,6 +14,9 @@
 <tr><td>2026-10-09</td><th scope="row">Lucky Vest</th><td>Wave 4</td><td>Battlecard</td><td>complete</td><td><code>5749d78f1560</code></td></tr>
 <tr><td>2026-10-09</td><th scope="row">Overwhelming Advantage</th><td>Wave 4</td><td>Battlecard</td><td>complete</td><td><code>5749d78f1560</code></td></tr>
 <tr><td>2026-10-09</td><th scope="row">Toolbox</th><td>Wave 4</td><td>Battlecard</td><td>complete</td><td><code>5749d78f1560</code></td></tr>
+<tr><td>2026-10-09</td><th scope="row">All-Out</th><td>Wave 5</td><td>Stratagem</td><td>todo</td><td><code>ac957e807748</code></td></tr>
+<tr><td>2026-10-09</td><th scope="row">Infiltration</th><td>Wave 5</td><td>Stratagem</td><td>bug</td><td><code>ac957e807748</code></td></tr>
+<tr><td>2026-10-09</td><th scope="row">Saturation Bombing</th><td>Wave 5</td><td>Stratagem</td><td>bug</td><td><code>ac957e807748</code></td></tr>
 <tr><td>2026-10-09</td><th scope="row">Allicon Eyuk, Bog Scavenger</th><td>Wave 6</td><td>Character</td><td>complete</td><td><code>219100af794e</code></td></tr>
 <tr><td>2026-10-08</td><th scope="row">Autobot Nautica, Camien Engineer</th><td>Wave 5</td><td>Character</td><td>complete</td><td><code>5aaae1fbfa00</code></td></tr>
 <tr><td>2026-10-08</td><th scope="row">Bludgeon, Electric Warrior</th><td>Wave 5</td><td>Character</td><td>complete</td><td><code>5aaae1fbfa00</code></td></tr>
@@ -732,7 +735,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (440)</h2>
+<h2>No implementation date observed (437)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>Wave 1</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Deadlock, Bounty Hunter</th><td>Wave 1</td><td>Character</td><td>unimplemented</td></tr>
@@ -866,14 +869,11 @@
 <tr><th scope="row">Temporal Quagmire</th><td>Wave 5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Turn the Tide</th><td>Wave 5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Versatility</th><td>Wave 5</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">All-Out</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Data Protection</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
-<tr><th scope="row">Infiltration</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Metallikato Stance</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">More Guns</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Orbital Strike</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sabotage</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
-<tr><th scope="row">Saturation Bombing</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Swap Heads</th><td>Wave 5</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Alpha Sentinel, Dark Guardian Relic</th><td>Wave 6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Armada, Herald of Shrouds</th><td>Wave 6</td><td>Character</td><td>unimplemented</td></tr>
