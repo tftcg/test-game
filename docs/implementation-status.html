@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 952/1476 (64.5%)</p>
+  <p>TFDSL completion: 951/1476 (64.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>251</td><td>61</td><td>102</td><td>163</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>250</td><td>62</td><td>102</td><td>164</td></tr>
 <tr><th scope="row">Battlecard</th><td>597</td><td>405</td><td>3</td><td>189</td><td>192</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>69</td><td>0</td><td>88</td><td>88</td></tr>
 </tbody>
@@ -28,11 +28,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 747/898 (83.2%)</p>
+  <p>TFDSL completion: 746/898 (83.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>225</td><td>35</td><td>33</td><td>68</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>224</td><td>36</td><td>33</td><td>69</td></tr>
 <tr><th scope="row">Battlecard</th><td>371</td><td>309</td><td>1</td><td>61</td><td>62</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>24</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
@@ -70,11 +70,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 2</h2>
-  <p>TFDSL completion: 157/184 (85.3%)</p>
+  <p>TFDSL completion: 156/184 (84.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>51</td><td>4</td><td>9</td><td>13</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>50</td><td>5</td><td>9</td><td>14</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>76</td><td>0</td><td>10</td><td>10</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -93,7 +93,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Menasor, Menacing Colossus</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Give the player a you may play an extra action on each of your turns.</td></tr>
 <tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Choosing exactly one of two effects when this character flips.<br>bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
 <tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Currently all sentinels you don&#39;t have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don&#39;t have preselected</td><td class="comment"></td></tr>
-<tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Scrapper still has an effect when he&#39;s in the KO. Which ugh.</td><td class="comment"></td></tr>
+<tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Scrapper still has an effect when he&#39;s in the KO. Which ugh.</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Teleporting Seeker</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by the absence of all normal and hybrid battle icons.<br>bot-needs: Once-per-turn trigger gating across battle-card play and flip events.</td></tr>
 <tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.<br>bot-needs: Triggering on a named battle card flip while this character battles.</td></tr>
 <tr><th scope="row">Volcanicus, Fiery Champion</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Tracking the turn a character combined for an attack trigger.</td></tr>

@@ -770,9 +770,10 @@
     {
       "name": "Scrapper, Constructicon Foreman",
       "comment": "TODO: Scrapper still has an effect when he's in the KO. Which ugh.",
+      "botPast": "on-ko(when(event().ko.owner=this().owner,event().ko.trait=Constructicon))->tower(1)",
       "tfdsl": {
         "alt": "tower()",
-        "bot": "on-ko(when(event().ko.owner=this().owner,event().ko.trait=Constructicon))->tower(1)"
+        "bot": ""
       }
     },
     {
