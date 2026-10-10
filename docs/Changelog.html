@@ -5,12 +5,16 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TODO, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (746)</h2>
+<h2>Implemented cards (750)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
 <tr><td>2026-10-10</td><th scope="row">Divebomb, Aerial Assault</th><td>Wave 2</td><td>Character</td><td>complete</td><td><code>d75d53c62375</code></td></tr>
 <tr><td>2026-10-10</td><th scope="row">Windblade, Combiner Hunter</th><td>Wave 2</td><td>Character</td><td>complete</td><td><code>af2b7129b468</code></td></tr>
 <tr><td>2026-10-10</td><th scope="row">Anticipation Engine</th><td>Wave 3</td><td>Battlecard</td><td>complete</td><td><code>af2b7129b468</code></td></tr>
 <tr><td>2026-10-10</td><th scope="row">Metal Detector</th><td>Wave 3</td><td>Battlecard</td><td>complete</td><td><code>af2b7129b468</code></td></tr>
+<tr><td>2026-10-10</td><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Wave 4</td><td>Character</td><td>todo</td><td><code>bdc025d10c71</code></td></tr>
+<tr><td>2026-10-10</td><th scope="row">Shoulder Holster</th><td>Wave 4</td><td>Battlecard</td><td>todo</td><td><code>bdc025d10c71</code></td></tr>
+<tr><td>2026-10-10</td><th scope="row">Hoist, Fearless Rescuer</th><td>Wave 7</td><td>Character</td><td>todo</td><td><code>bdc025d10c71</code></td></tr>
+<tr><td>2026-10-10</td><th scope="row">Beastbox, Savage Interrogator</th><td>Wave 9</td><td>Character</td><td>todo</td><td><code>bdc025d10c71</code></td></tr>
 <tr><td>2026-10-10</td><th scope="row">Vortex, Interrogator</th><td>Wave 9</td><td>Character</td><td>complete</td><td><code>d75d53c62375</code></td></tr>
 <tr><td>2026-10-09</td><th scope="row">Peace through Tyranny</th><td>Wave 1</td><td>Battlecard</td><td>complete</td><td><code>789d4cab6d7c</code></td></tr>
 <tr><td>2026-10-09</td><th scope="row">Swarm!</th><td>Wave 1</td><td>Battlecard</td><td>complete</td><td><code>789d4cab6d7c</code></td></tr>
@@ -551,7 +555,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Decoy Flares</th><td>Wave 5</td><td>Battlecard</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">Disassemble</th><td>Wave 5</td><td>Battlecard</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">Doomshot</th><td>Wave 5</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
-<tr><td>On or before 2026-09-20</td><th scope="row">Electro-Optical Visor</th><td>Wave 5</td><td>Battlecard</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
+<tr><td>On or before 2026-09-20</td><th scope="row">Electro-Optical Visor</th><td>Wave 5</td><td>Battlecard</td><td>todo</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">Emergency Barricade</th><td>Wave 5</td><td>Battlecard</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">Emergency Repair Patch</th><td>Wave 5</td><td>Battlecard</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">Emissary</th><td>Wave 5</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
@@ -754,7 +758,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (422)</h2>
+<h2>No implementation date observed (418)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>Wave 1</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Deadlock, Bounty Hunter</th><td>Wave 1</td><td>Character</td><td>unimplemented</td></tr>
@@ -820,7 +824,6 @@
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Wave 4</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Raider Skytread, Special Ops • Soldier</th><td>Wave 4</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Wave 4</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Wave 4</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sergeant Six-Gun, Artillery • Soldier</th><td>Wave 4</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sergeant Thundercracker, Infantry • Seeker</th><td>Wave 4</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Trypticon, Assault Base</th><td>Wave 4</td><td>Character</td><td>partial</td></tr>
@@ -839,7 +842,6 @@
 <tr><th scope="row">Overheat</th><td>Wave 4</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Pincer Movement</th><td>Wave 4</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Relentless Invasion</th><td>Wave 4</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Shoulder Holster</th><td>Wave 4</td><td>Battlecard</td><td>partial</td></tr>
 <tr><th scope="row">Valuable Contract</th><td>Wave 4</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">War of Attrition</th><td>Wave 4</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Autobot Outback, Gunner</th><td>Wave 5</td><td>Character</td><td>partial</td></tr>
@@ -992,7 +994,6 @@
 <tr><th scope="row">Fangry, Cursed Nightmare</th><td>Wave 7</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Hardhead, Grave Mistakes</th><td>Wave 7</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Highbrow, Appallingly Astute</th><td>Wave 7</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">Hoist, Fearless Rescuer</th><td>Wave 7</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Megatron/Ratchet, Twisted Amalgamation</th><td>Wave 7</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Agile Formation</th><td>Wave 7</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Armor Piercing Munitions</th><td>Wave 7</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1142,7 +1143,6 @@
 <tr><th scope="row">This Shall Be Your Ship</th><td>Wave 8</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Time for New Leadership</th><td>Wave 8</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Writhing in the Deep</th><td>Wave 8</td><td>Stratagem</td><td>unimplemented</td></tr>
-<tr><th scope="row">Beastbox, Savage Interrogator</th><td>Wave 9</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Bruticus, Unstoppable Giant</th><td>Wave 9</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Ghost of Starscream, Annoying Apparition</th><td>Wave 9</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Lord Zarak, Ruler of Nebulos</th><td>Wave 9</td><td>Character</td><td>partial</td></tr>
