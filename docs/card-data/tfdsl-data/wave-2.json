@@ -773,7 +773,7 @@
       "botPast": "on-ko(when(event().ko.owner=this().owner,event().ko.trait=Constructicon))->tower(1)",
       "tfdsl": {
         "alt": "tower()",
-        "bot": ""
+        "bot": "do_nothing()"
       }
     },
     {
