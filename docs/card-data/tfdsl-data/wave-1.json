@@ -150,8 +150,8 @@
     },
     {
       "name": "I Still Function!",
-      "comment": "BUG: Currently it can pick a non-character from the KO. Also the returned character insta-dies.",
-      "tfdsl": "return_from_ko(pick(self().ko,stars<=12));repair(1,previous_target());on-end-turn()->ko(previous_target())"
+      "comment": "TODO: Test",
+      "tfdsl": "choose(pick(self().ko,stars<=12));return_from_ko(chosen(),chosen().damage-1);on-end-turn()->ko(chosen())"
     },
     {
       "name": "Improvised Shield",

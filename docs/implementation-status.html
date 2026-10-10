@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 943/1467 (64.3%)</p>
+  <p>TFDSL completion: 944/1467 (64.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>413</td><td>251</td><td>60</td><td>102</td><td>162</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>401</td><td>2</td><td>191</td><td>193</td></tr>
+<tr><th scope="row">Battlecard</th><td>594</td><td>402</td><td>2</td><td>190</td><td>192</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>69</td><td>0</td><td>88</td><td>88</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 744/898 (82.9%)</p>
+  <p>TFDSL completion: 745/898 (83.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>293</td><td>225</td><td>35</td><td>33</td><td>68</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>306</td><td>1</td><td>64</td><td>65</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>307</td><td>1</td><td>63</td><td>64</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>24</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
 </table>
@@ -61,7 +61,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top card of each player&#39;s deck.<br>bot-needs: A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage</td></tr>
 <tr><th scope="row">Aerial Recon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this shouldn&#39;t give focus_eob(1) to the attached but should just be an effect</td><td class="comment"></td></tr>
 <tr><th scope="row">All-Out Attack</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing each untapped character to attack during the turn - probably a player flag for custom code in the options function. Also has to remember which characters have attacked this turn</td></tr>
-<tr><th scope="row">I Still Function!</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Currently it can pick a non-character from the KO. Also the returned character insta-dies.</td><td class="comment"></td></tr>
+<tr><th scope="row">I Still Function!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Peace through Tyranny</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Needs to store a flag on the player that the turn handler is listening to</td></tr>
 <tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test direct damage</td><td class="comment"></td></tr>
 <tr><th scope="row">Salvage for Parts</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Counting for healing... is counting all characters, not upgrades scrapped from characters. And its healling, ALL characters too</td><td class="comment"></td></tr>
@@ -182,12 +182,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 129/174 (74.1%)</p>
+  <p>TFDSL completion: 130/174 (74.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>60</td><td>38</td><td>10</td><td>12</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>47</td><td>1</td><td>16</td><td>17</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>48</td><td>1</td><td>15</td><td>16</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -205,7 +205,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
 <tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
-<tr><th scope="row">Private Seawatch, Rescue Patrol • Search &amp; Rescue</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Alt mode lord ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Turbo Board, Air Command • Evac</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing an opponent from playing more than a specified number of cards during their turn</td></tr>
 <tr><th scope="row">Private Vanguard, Ground Command • Advance Guard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
@@ -233,7 +232,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Energy Transfer</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving a chosen number of damage counters without KO&#39;ing the destination</td></tr>
 <tr><th scope="row">Head-On Collision</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This won&#39;t work for alt1/alt2 characters</td><td class="comment"></td></tr>
 <tr><th scope="row">Hijack</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking opponent card draws during their turn and replacing a draw</td></tr>
-<tr><th scope="row">Involuntary Promotion</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning a KO character to the battlefield and transferring all damage counters and Upgrades</td></tr>
 <tr><th scope="row">Multi-Missile Pod</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing multiple upgrades in one Weapon slot and counting Multi-Missile Pods scrapped during a battle</td></tr>
 <tr><th scope="row">Overheat</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Suppressing specific battle icon effects for a battle</td></tr>
 <tr><th scope="row">Pincer Movement</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting a restricted extra attack against the same enemy</td></tr>

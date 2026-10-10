@@ -145,8 +145,7 @@
     },
     {
       "name": "Involuntary Promotion",
-      "tfdsl": "",
-      "needs": "Returning a KO character to the battlefield and transferring all damage counters and Upgrades"
+      "tfdsl": "choose(pick_friend());if(exists_card(self().ko,stars<=chosen().stars))->(return_from_ko(pick(self().ko,stars<=chosen().stars),0);move(chosen().damage,chosen(),previous_target(2));move_upgrade(chosen().upgrades,previous_target(2));ko(chosen()))"
     },
     {
       "name": "Jam Signals",
@@ -444,9 +443,8 @@
     },
     {
       "name": "Private Seawatch, Rescue Patrol • Search & Rescue",
-      "comment": "TODO: Alt mode lord ability",
       "tfdsl": {
-        "alt": "static(stealth,when(this().tapped=untapped))",
+        "alt": "static(stealth,when(this().tapped=untapped));on-friend-battle-flip(when(event().battler.trait='Rescue Patrol',event().flips.white>=2),once())->flip_extra(3)",
         "bot": "static(atk,ko_chars(trait='Rescue Patrol').count);static(def,ko_chars(trait='Rescue Patrol').count)"
       }
     },
