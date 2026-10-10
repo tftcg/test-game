@@ -267,8 +267,7 @@
     },
     {
       "name": "Security Checkpoint",
-      "comment": "TODO: Needs to include revealing the hand",
-      "tfdsl": "each(all_players())->scrap_hand(all(it().hand,type=Upgrade))"
+      "tfdsl": "each(all_players())->(reveal_cards(it().hand);scrap_hand(all(it().hand,type=Upgrade)))"
     },
     {
       "name": "Shock Absorbers",
@@ -586,10 +585,9 @@
     {
       "name": "Skywarp, Sneaky Prankster",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(each(all_players())->reveal_cards(get(it().deck,from=top)))",
         "bot": ""
       },
-      "alt-needs": "Revealing the top card of each player's deck.",
       "bot-needs": "A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage"
     },
     {

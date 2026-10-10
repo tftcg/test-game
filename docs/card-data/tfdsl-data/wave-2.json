@@ -498,9 +498,8 @@
     {
       "name": "Divebomb, Aerial Assault",
       "tfdsl": {
-        "bot": ""
-      },
-      "bot-needs": "Revealing a random opponent hand card before conditionally scrapping it."
+        "bot": "on-this-flip()->(reveal_cards(get(opponent().hand,from=random));scrap_hand(previous_target()))"
+      }
     },
     {
       "name": "Dreadwind, Air Defense",
@@ -769,8 +768,7 @@
     },
     {
       "name": "Scrapper, Constructicon Foreman",
-      "comment": "TODO: Scrapper still has an effect when he's in the KO. Which ugh.",
-      "botPast": "on-ko(when(event().ko.owner=this().owner,event().ko.trait=Constructicon))->tower(1)",
+      "comment": "NOTE: Scrapper's bot mode lives in the Tower rather than on him",
       "tfdsl": {
         "alt": "tower()",
         "bot": "do_nothing()"

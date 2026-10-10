@@ -448,10 +448,9 @@
     },
     {
       "name": "Vortex, Interrogator",
-      "bot-needs": "Revealing a random card from an opponent's hand",
       "tfdsl": {
         "alt": "pierce(2)",
-        "bot": ""
+        "bot": "on-this-flip()->(reveal_cards(get(opponent().hand,from=random));if(previous_target().type=Upgrade)->scrap_hand(previous_target()))"
       }
     },
     {
