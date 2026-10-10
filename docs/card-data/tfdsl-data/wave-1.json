@@ -259,8 +259,8 @@
     },
     {
       "name": "Salvage for Parts",
-      "comment": "BUG: Counting for healing... is counting all characters, not upgrades scrapped from characters. And its healling, ALL characters too",
-      "tfdsl": "each(all_chars())->(scrap_upgrade(all(it().upgrades));repair(previous_target().count,it()))"
+      "comment": "TODO: Test. Rewritten DSL",
+      "tfdsl": "each(all_upgrades())->(choose(all_chars(id=it().attached_to.id));scrap_upgrade(it());repair(1,chosen()))"
     },
     {
       "name": "Scrapper Gauntlets",
