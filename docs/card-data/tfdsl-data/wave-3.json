@@ -9,8 +9,7 @@
   "cards": [
     {
       "name": "Anticipation Engine",
-      "needs": "Revealing the top deck card and conditionally playing it by card type",
-      "tfdsl": ""
+      "tfdsl": "on-attached-attack()->(reveal_cards(top_deck());if(previous_target().type=Action)->(if(confirm('Play Action?'))->play(previous_target())))"
     },
     {
       "name": "Backup Bag",
@@ -172,8 +171,7 @@
     },
     {
       "name": "Metal Detector",
-      "needs": "Revealing the top deck card and conditionally playing it by card type",
-      "tfdsl": ""
+      "tfdsl": "on-attached-attack()->(reveal_cards(top_deck());if(previous_target().type=Upgrade)->(if(confirm('Play Upgrade?'))->play(previous_target())))"
     },
     {
       "name": "Micro Capacitor",

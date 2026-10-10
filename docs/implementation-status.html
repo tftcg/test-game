@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 955/1476 (64.7%)</p>
+  <p>TFDSL completion: 958/1476 (64.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>253</td><td>61</td><td>100</td><td>161</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>405</td><td>3</td><td>189</td><td>192</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>254</td><td>60</td><td>100</td><td>160</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>407</td><td>3</td><td>187</td><td>190</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>69</td><td>0</td><td>88</td><td>88</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 749/898 (83.4%)</p>
+  <p>TFDSL completion: 752/898 (83.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>226</td><td>36</td><td>31</td><td>67</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>309</td><td>1</td><td>61</td><td>62</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>227</td><td>35</td><td>31</td><td>66</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>311</td><td>1</td><td>59</td><td>60</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>24</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
 </table>
@@ -69,11 +69,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 2</h2>
-  <p>TFDSL completion: 158/184 (85.9%)</p>
+  <p>TFDSL completion: 159/184 (86.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>52</td><td>4</td><td>8</td><td>12</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>53</td><td>3</td><td>8</td><td>11</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>76</td><td>0</td><td>10</td><td>10</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -96,7 +96,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.<br>bot-needs: Triggering on a named battle card flip while this character battles.</td></tr>
 <tr><th scope="row">Volcanicus, Fiery Champion</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Tracking the turn a character combined for an attack trigger.</td></tr>
 <tr><th scope="row">Warpath, Confident Sharpshooter</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Damage calculated from opponent scrap cards with multiple blue battle icons and assigned by opponent selection.</td></tr>
-<tr><th scope="row">Windblade, Combiner Hunter</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing the top deck card without moving it, then conditionally playing it.</td></tr>
 <tr><th scope="row">Ancient Wisdom</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment">This needs to set an ancient-wisdom-player value</td><td class="comment">needs: Per-turn state recording that Ancient Wisdom was played.</td></tr>
 <tr><th scope="row">Bumpers</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cornered!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Implement opponent_flip()</td><td class="comment"></td></tr>
@@ -121,12 +120,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 3</h2>
-  <p>TFDSL completion: 156/182 (85.7%)</p>
+  <p>TFDSL completion: 158/182 (86.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>61</td><td>50</td><td>6</td><td>5</td><td>11</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>58</td><td>0</td><td>13</td><td>13</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>60</td><td>0</td><td>11</td><td>11</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -153,7 +152,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Sergeant Overdrive, Special Ops • Strategist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Skywarp, Black Ops • Seeker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Returning up to two differently named Secret Actions from the scrap pile</td></tr>
 <tr><th scope="row">Specialist Ratchet, Engineering • Rescue &amp; Repair</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Is getting +1 atk when a repair is attempted on a zero damage character</td><td class="comment"></td></tr>
-<tr><th scope="row">Anticipation Engine</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing the top deck card and conditionally playing it by card type</td></tr>
 <tr><th scope="row">Backup Bag</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an attempted scrap of another attached Upgrade with scrapping this Upgrade</td></tr>
 <tr><th scope="row">Battlefield Scan</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Temporarily preventing enemies from using Brave and Stealth</td></tr>
 <tr><th scope="row">Buzzsaw, Ravage, Frenzy Attack!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test Frenzy effect</td><td class="comment"></td></tr>
@@ -164,7 +162,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Fuel Cache</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors</td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Metal Detector</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Revealing the top deck card and conditionally playing it by card type</td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Pop a Wheelie</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Flipping characters to a specified mode and granting a restricted extra attack</td></tr>
 <tr><th scope="row">Quartermaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing between distinct effects and putting a Battle Master Upgrade from the KO area onto a selected character</td></tr>

@@ -660,10 +660,9 @@
     {
       "name": "Windblade, Combiner Hunter",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target().colours.count>=2)->(if(confirm('Play it?'))->play(previous_target())))",
         "bot": "on-this-attack(when(event().defender.mode='combiner'))->pierce_eot(4,all_friends())"
-      },
-      "alt-needs": "Revealing the top deck card without moving it, then conditionally playing it."
+      }
     },
     {
       "name": "Dreadwing, Sky Destroyer",
