@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 946/1467 (64.5%)</p>
+  <p>TFDSL completion: 952/1476 (64.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>413</td><td>251</td><td>60</td><td>102</td><td>162</td></tr>
-<tr><th scope="row">Battlecard</th><td>594</td><td>404</td><td>2</td><td>188</td><td>190</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>251</td><td>61</td><td>102</td><td>163</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>405</td><td>3</td><td>189</td><td>192</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>69</td><td>0</td><td>88</td><td>88</td></tr>
 </tbody>
 </table>
@@ -710,12 +710,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 10</h2>
-  <p>TFDSL completion: 43/62 (69.4%)</p>
+  <p>TFDSL completion: 49/71 (69.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>11</td><td>4</td><td>5</td><td>2</td><td>7</td></tr>
-<tr><th scope="row">Battlecard</th><td>25</td><td>21</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><th scope="row">Character</th><td>12</td><td>4</td><td>6</td><td>2</td><td>8</td></tr>
+<tr><th scope="row">Battlecard</th><td>28</td><td>22</td><td>1</td><td>5</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>13</td><td>0</td><td>7</td><td>7</td></tr>
 </tbody>
 </table>
@@ -730,14 +730,18 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Fastlane, Road Warrior</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting Rolling Actions for a temporary ability<br>bot-needs: Looking at, selecting from, and reordering top deck cards</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Selecting a qualifying flipped battle card and retaining it under a character</td></tr>
 <tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting opponent hidden zones</td></tr>
+<tr><th scope="row">Sixshot, Solo Transformer Assault Group</th><td>Character</td><td>partial</td><td>5/6</td><td class="comment"></td><td class="comment">bot-needs: Bot mode needs revealing cards from the top of the deck</td></tr>
 <tr><th scope="row">Anti-Aircraft Ordnance</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cerebro Shell</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
+<tr><th scope="row">Combat Reconfiguration</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">First in, Last out</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: End-of-turn conditional static abilities on a selected character</td></tr>
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">HI Concussion Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Inspecting and selecting cards from an opponent hand</td></tr>
+<tr><th scope="row">Hypersonic Concussion Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing one of two options on attack</td></tr>
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
+<tr><th scope="row">Tactical Suppression</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Sixshot is not currently getting &#39;Unaffected by Oppress this turn&#39;</td></tr>
 <tr><th scope="row">Eat My Dust!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects - TODO: Need a &#39;replace(foo,bar)&#39; DSL that targets a characters DSL/mode</td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Card-text replacement effects</td></tr>

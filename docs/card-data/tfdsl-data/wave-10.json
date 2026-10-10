@@ -327,6 +327,33 @@
         "alt": "brave()",
         "bot": "on-this-attack(when(event().attacker.damage>=3))->damage(1,event().defender)"
       }
+    },
+    {
+      "name": "Combat Reconfiguration",
+      "comment": "NOTE: Currently using modes>=3 rather than alt>=2",
+      "tfdsl": "scrap(on-friend-battle(when(event().battler.modes.count>=3)))->when_scrapped(flip(event().battler))"
+    },
+    {
+      "name": "Hypersonic Concussion Blaster",
+      "tfdsl": "",
+      "needs": "Choosing one of two options on attack"
+    },
+    {
+      "name": "Tactical Suppression",
+      "needs": "Sixshot is not currently getting 'Unaffected by Oppress this turn'",
+      "tfdsl": "reveal(on-friend-battle())->revealed(oppress_eot(2,event().battler);if(event().battler.name=Sixshot)->(bold_eot(2,event().battler);tough_eot(2,event().battler)))"
+    },
+    {
+      "name": "Sixshot, Solo Transformer Assault Group",
+      "tfdsl": {
+        "alt 1": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->scrap_upgrade(opponent_pick(opponent().upgrades))",
+        "alt 2": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->atk_eot(2,this())",
+        "alt 3": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->draw(1)",
+        "alt 4": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->pierce_eot(3,this())",
+        "alt 5": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->damage(1,pick_enemy())",
+        "bot":   "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())))"
+      },
+      "bot-needs": "Bot mode needs revealing cards from the top of the deck"
     }
   ]
 }

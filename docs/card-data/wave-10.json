@@ -1933,6 +1933,210 @@
           "stars": null
         }
       ]
+    },
+    {
+      "id": "48701C7D-D61B-42A5-867D-796CA38B9F97",
+      "name": "Combat Reconfiguration",
+      "size": "small",
+      "number": "001",
+      "rarity": "Rare",
+      "type": "Rolling Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [],
+      "traits": [],
+      "text": "[Scrap] > When one of your characters with more than one alt mode battles.\n\n[When Scrapped] > Flip that character to another mode.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 1,
+        "green": 1,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "510AF9E1-E3B5-470E-A185-F22B67C8401D",
+      "name": "Hypersonic Concussion Blaster",
+      "size": "small",
+      "number": "002",
+      "rarity": "Rare",
+      "type": "Upgrade",
+      "subtype": "Weapon",
+      "atk": 2,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "Put on [Decepticons] only.\n\nUp to 2 Hypersonic Concussion Blasters can fit in 1 of Sixshot's Weapons slots.\n\nWhen the upgraded character attacks > Choose one:\n[BULLET] Look at the top card of your deck. You may scrap it.\n[BULLET] You may put a card from your hand on top of your deck.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "407CE24C-C10B-452B-8B1C-968C35059A5A",
+      "name": "Tactical Suppression",
+      "size": "small",
+      "number": "003",
+      "rarity": "Rare",
+      "type": "Secret Action",
+      "subtype": null,
+      "atk": null,
+      "def": null,
+      "health": null,
+      "faction": [
+        "Decepticon"
+      ],
+      "traits": [],
+      "text": "[Reveal] > When one of your characters battles.\n\n[When Revealed] > That character gets [Oppress 2] until end of turn. If that character is Sixshot, he gets [Bold 2], [Tough 2], and is unaffected by [Oppress] this turn.",
+      "stars": 0,
+      "icons": {
+        "orange": 0,
+        "blue": 0,
+        "white": 0,
+        "green": 0,
+        "black": 1
+      },
+      "hybridIcons": {
+        "hybridOrange": 0,
+        "hybridBlue": 0,
+        "hybridWhite": 0,
+        "hybridGreen": 0,
+        "hybridBlack": 0
+      }
+    },
+    {
+      "id": "BEAD69B2-B66A-48B5-B96B-9C2E823AA626",
+      "name": "Sixshot, Solo Transformer Assault Group",
+      "size": "standard",
+      "number": "T01",
+      "rarity": "Super Rare",
+      "stars": 15,
+      "modes": [
+        {
+          "type": "Character",
+          "subtype": "Alt 1 Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 19,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Beast",
+            "Melee"
+          ],
+          "text": "When you flip to this mode > Your opponent chooses one of their upgrades and scraps it.\n\nAfter this battles > You may scrap a card from your hand. If you do, flip this to another mode.",
+          "mode": "alt 1"
+        },
+        {
+          "type": "Character",
+          "subtype": "Alt 2 Mode",
+          "atk": 6,
+          "def": 0,
+          "health": 19,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > This gets +2 [ATK] until end of turn.\n\nAfter this battles > You may scrap a card from your hand. If you do, flip this to another mode.",
+          "mode": "alt 2"
+        },
+        {
+          "type": "Character",
+          "subtype": "Alt 3 Mode",
+          "atk": 5,
+          "def": 2,
+          "health": 19,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Truck",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Draw a card.\n\nAfter this battles > You may scrap a card from your hand. If you do, flip this to another mode.",
+          "mode": "alt 3"
+        },
+        {
+          "type": "Character",
+          "subtype": "Alt 4 Mode",
+          "atk": 4,
+          "def": 3,
+          "health": 19,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Tank",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > This gets [Pierce 3] until end of turn.\n\nAfter this battles > You may scrap a card from your hand. If you do, flip this to another mode.",
+          "mode": "alt 4"
+        },
+        {
+          "type": "Character",
+          "subtype": "Alt 5 Mode",
+          "atk": 6,
+          "def": 1,
+          "health": 19,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Spaceship",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Do 1 damage to an enemy.\n\nAfter this battles > You may scrap a card from your hand. If you do, flip this to another mode.",
+          "mode": "alt 5"
+        },
+        {
+          "type": "Character",
+          "subtype": "Bot Mode",
+          "atk": 7,
+          "def": 2,
+          "health": 19,
+          "faction": [
+            "Decepticon"
+          ],
+          "traits": [
+            "Leader",
+            "Ranged"
+          ],
+          "text": "When you flip to this mode > Reveal the top 2 cards of your deck. You may play a [Decepticon] card from among them. Put the rest back on top in any order.\n\nAfter this battles > You may scrap a card from your hand. If you do, flip this to another mode.",
+          "mode": "bot"
+        }
+      ]
     }
   ]
 }
