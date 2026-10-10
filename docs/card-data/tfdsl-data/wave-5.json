@@ -52,7 +52,8 @@
     },
     {
       "name": "Electro-Optical Visor",
-      "tfdsl": "on-put(when(attached().faction=Decepticon))->scrap_hand(opponent_pick_opponent_hand(faction=Autobot))"
+      "comment": "TODO: Test",
+      "tfdsl": "on-put(when(attached().faction=Decepticon))->(reveal_cards(opponent().hand);scrap_hand(opponent_pick_opponent_hand(faction=Autobot)))"
     },
     {
       "name": "Emergency Barricade",

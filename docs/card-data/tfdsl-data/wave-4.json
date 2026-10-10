@@ -157,7 +157,7 @@
     },
     {
       "name": "Kinetic Intensifier Whip",
-      "tfdsl": "on-attached-flip()->bold(1)"
+      "tfdsl": "on-attached-flip()->bold(2)"
     },
     {
       "name": "Lucky Vest",
@@ -225,9 +225,8 @@
     },
     {
       "name": "Shoulder Holster",
-      "comment": "TODO: Need to implement the top decking of a Weapon",
-      "needs": "Revealing then playing a top-deck Weapon",
-      "tfdsl": "add_slot('Weapon',1)"
+      "comment": "TODO: Test",
+      "tfdsl": "add_slot('Weapon',1);reveal_cards(top_deck());if(previous_target().subtype=Weapon)->play(previous_target(),attached())"
     },
     {
       "name": "Showing Off",
@@ -607,11 +606,10 @@
     },
     {
       "name": "Sergeant Mirage, Special Ops • Spy",
-      "alt-needs": "Revealing the top deck card and branching on its battle icons without moving it",
-      "bot-needs": "Counting face-up and face-down Secret Actions",
+      "comment": "TODO: Test both sides",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target().blue>=1)->draw(2);if(previous_target().blue=0)->draw(1))",
+        "bot": "static(tough,when(this().owner.actions.subtype='Secret Action'),2)"
       }
     },
     {

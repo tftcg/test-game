@@ -248,10 +248,9 @@
     },
     {
       "name": "Hoist, Fearless Rescuer",
-      "comment": "Proposal - should an on-put-upgrade be added?",
-      "alt-needs": "Revealing a top-deck card and moving it to hand only if it has a matching subtype",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target.subtype=Armor || previous_target.subtype=Utility)->move_to(self().hand,previous_target()))",
         "bot": "on(event=put-upgrade,when(event().attached.owner=this().owner,event().attached.faction=Autobot,event().played.subtype=Utility))->repair(1,event().attached)"
       }
     },

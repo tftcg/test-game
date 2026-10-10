@@ -257,9 +257,9 @@
     },
     {
       "name": "Beastbox, Savage Interrogator",
-      "alt-needs": "Revealing and playing the top card of an opponent's deck",
+      "comment": "TODO: Test alt",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(reveal_cards(opponent_top_deck());if(previous_target().type=Action)->(if(confirm('Play Opponent Action?'))->play(previous_target())))",
         "bot": "on-this-attack(when(event().defender.faction=Autobot))->atk_eot(2,this())"
       }
     },
