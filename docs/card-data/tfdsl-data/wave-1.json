@@ -207,8 +207,7 @@
     },
     {
       "name": "Peace through Tyranny",
-      "tfdsl": "",
-      "needs": "Needs to store a flag on the player that the turn handler is listening to"
+      "tfdsl": "if(confirm('KO bot?'))->(ko(pick_friend(stars>=6));set_flag_eot('extra_turn'))"
     },
     {
       "name": "Photon Bomb",
@@ -301,8 +300,7 @@
     },
     {
       "name": "Swarm!",
-      "tfdsl": "",
-      "needs": "Needs to flip cards outside of Combat. Probably a custom implementation"
+      "tfdsl": "CUSTOM_swarm(starting_team(trait=Insecticon).count)"
     },
     {
       "name": "System Reboot",
