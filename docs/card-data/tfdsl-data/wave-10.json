@@ -63,8 +63,7 @@
     },
     {
       "name": "HI Concussion Blaster",
-      "needs": "Inspecting and selecting cards from an opponent hand",
-      "tfdsl": ""
+      "tfdsl": "on-put(when(event().attached.name='Soundwave' || event().attached.name='Soundblaster'))->(put_deck_top(opponent(),pick_opponent_hand()))"
     },
     {
       "name": "Hydraulic Grapple",

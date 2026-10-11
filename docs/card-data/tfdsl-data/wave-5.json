@@ -685,11 +685,9 @@
     {
       "name": "Nightracer, Gunner",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Detecting face-up and face-down Secret Actions for a conditional team ability",
-      "bot-needs": "Detecting face-up and face-down Secret Actions for a conditional team ability"
+        "alt": "each(all_friends())->static(tough,when(exists_card(this().owner.actions,subtype='Secret Action')),1,target=it())",
+        "bot": "each(all_friends())->static(bold,when(exists_card(this().owner.actions,subtype='Secret Action')),1,target=it())"
+      }
     },
     {
       "name": "Ominus",

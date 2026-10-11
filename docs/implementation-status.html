@@ -16,23 +16,23 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 985/1476 (66.7%)</p>
+  <p>TFDSL completion: 988/1476 (66.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>266</td><td>58</td><td>90</td><td>148</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>412</td><td>2</td><td>183</td><td>185</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>267</td><td>58</td><td>89</td><td>147</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>413</td><td>2</td><td>182</td><td>184</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>69</td><td>0</td><td>88</td><td>88</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 773/898 (86.1%)</p>
+  <p>TFDSL completion: 775/898 (86.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>236</td><td>34</td><td>23</td><td>57</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>237</td><td>34</td><td>22</td><td>56</td></tr>
 <tr><th scope="row">Battlecard</th><td>371</td><td>315</td><td>0</td><td>56</td><td>56</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>24</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
@@ -230,11 +230,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 5</h2>
-  <p>TFDSL completion: 141/188 (75.0%)</p>
+  <p>TFDSL completion: 143/188 (76.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>57</td><td>40</td><td>12</td><td>5</td><td>17</td></tr>
+<tr><th scope="row">Character</th><td>57</td><td>41</td><td>12</td><td>4</td><td>16</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>42</td><td>0</td><td>22</td><td>22</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>24</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
@@ -254,7 +254,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Horri-Bull, Ground Trooper</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Megatron, Fallen Hero</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Carrying an orange flip condition forward to deal damage after the battle</td></tr>
 <tr><th scope="row">Mindwipe, Hypnotist</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Proposal - checking the opponent has a card shouldn&#39;t be here - things need to just fail gracefully</td><td class="comment">alt-needs: Choosing a battle-icon color and scrapping an opponent hand card matching that choice</td></tr>
-<tr><th scope="row">Nightracer, Gunner</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Detecting face-up and face-down Secret Actions for a conditional team ability<br>bot-needs: Detecting face-up and face-down Secret Actions for a conditional team ability</td></tr>
 <tr><th scope="row">Optimus Prime, Legendary Warrior</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Perceptor, Precise Sniper</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Splitting revealed deck cards into opponent-chosen piles and placing a chosen pile beneath this character</td></tr>
 <tr><th scope="row">Sergeant Kup, Wrecker Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">This is relying on pick_hand not being cancellable. This really needs a pay()</td><td class="comment">alt-needs: Detecting the source owner’s turn for Wrecker damage triggers</td></tr>
@@ -694,12 +693,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 10</h2>
-  <p>TFDSL completion: 49/71 (69.0%)</p>
+  <p>TFDSL completion: 50/71 (70.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>12</td><td>4</td><td>6</td><td>2</td><td>8</td></tr>
-<tr><th scope="row">Battlecard</th><td>28</td><td>22</td><td>1</td><td>5</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>28</td><td>23</td><td>1</td><td>4</td><td>5</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>13</td><td>0</td><td>7</td><td>7</td></tr>
 </tbody>
 </table>
@@ -721,7 +720,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">First in, Last out</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: End-of-turn conditional static abilities on a selected character</td></tr>
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">HI Concussion Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Inspecting and selecting cards from an opponent hand</td></tr>
 <tr><th scope="row">Hypersonic Concussion Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing one of two options on attack</td></tr>
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
