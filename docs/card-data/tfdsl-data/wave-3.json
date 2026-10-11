@@ -124,8 +124,7 @@
     },
     {
       "name": "Fuel Cache",
-      "needs": "Revealing multiple deck cards and conditionally moving all of them by their combined battle-icon colors",
-      "tfdsl": ""
+      "tfdsl": "reveal_cards(top_deck(count=3));if(exists_card(previous_target(),white>=1),exists_card(previous_target(),blue>=1),exists_card(previous_target(),orange>=1))->draw(3);if(exists_card(previous_target(),white>=1)=false || exists_card(previous_target(),blue>=1)=false || exists_card(previous_target(),orange>=1)=false)->scrap_deck(previous_target())"
     },
     {
       "name": "Full Loadout",

@@ -78,8 +78,8 @@
     },
     {
       "name": "Defensive Configuration",
-      "tfdsl": "",
-      "needs": "Granting an extra Armor slot and revealing then playing a top-deck Armor"
+      "comment": "TODO: Test",
+      "tfdsl": "add_slot('Armor',1);reveal_cards(top_deck());if(previous_target().subtype=Armor)->play(previous_target(),attached())"
     },
     {
       "name": "Designated Target",
@@ -300,11 +300,9 @@
     },
     {
       "name": "Captain Jetfire, Engineering • Air Guardian",
-      "alt-needs": "Revealing the top five deck cards, moving their Upgrades to hand, and scrapping the rest",
-      "bot-needs": "Playing a revealed Upgrade from hand onto the deck and flipping an additional battle card",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(reveal_cards(top_deck(count=5));move_to(self().hand,all(previous_target(),type=Upgrade));scrap_deck(all(previous_target(),type!=Upgrade)))",
+        "bot": "on-this-battle()->(draw(1);if(confirm('Reveal Upgrade?'))->(reveal_cards(pick_hand(count=1,type=Upgrade));if(done())->(put_deck(previous_target());flip_extra(1))))"
       }
     },
     {
@@ -331,10 +329,9 @@
     },
     {
       "name": "General Optimus Prime, Galactic Commander",
-      "alt-needs": "Granting Utility slots and revealing then playing a top-deck Action",
       "tfdsl": {
-        "alt": "",
-        "bot": "on-this-after-attack(when(event().flips.orange>=1,event().flips.blue>=1))->(if(confirm('Play flipped upgrade on Galaxy Prime?'))->play_upgrade(pick(event().flips.cards,type=Upgrade),this()))"
+        "alt": "add_slot('Utility',2);on-this-flip()->(reveal_cards(top_deck());if(previous_target().type=Action)->(if(confirm('Play Action from Top of Deck?'))->play(previous_target())))",
+        "bot": "add_slot('Utility',2);on-this-after-attack(when(event().flips.orange>=1,event().flips.blue>=1))->(if(confirm('Play flipped upgrade on Galaxy Prime?'))->play_upgrade(pick(event().flips.cards,type=Upgrade),this()))"
       }
     },
     {
@@ -359,10 +356,10 @@
     },
     {
       "name": "Mudflap, Hired Muscle",
-      "bot-needs": "Detecting KO attack damage and using a Bounty ability to reveal and play a top-deck card",
+      "comment": "TODO: Test bounty",
       "tfdsl": {
         "alt": "on-this-flip()->plan(1)",
-        "bot": ""
+        "bot": "bounty((reveal_cards(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target())))"
       }
     },
     {
@@ -554,10 +551,9 @@
     {
       "name": "Raider Ratbat, Spy Patrol • Fuel Scout",
       "alt-needs": "Revenge triggers and looking at an opponent's hand before selecting a card",
-      "bot-needs": "Activated abilities and counting different battle-icon colors on a revealed deck card",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "tap_ability()->(reveal_cards(top_deck());each(all_friends())->repair(previous_target().colours.count,it()))"
       }
     },
     {
@@ -630,11 +626,9 @@
     },
     {
       "name": "Sergeant Thundercracker, Infantry • Seeker",
-      "alt-needs": "Revealing a top-deck card and moving damage once for each black icon on it",
-      "bot-needs": "Selecting and revealing a variable number of opponent hand cards based on flipped black icons",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(reveal_cards(top_deck());repeat(previous_target().black)->move(1,pick_friend(trait=Plane),pick_enemy()))",
+        "bot": "on-this-after-attack-flip(when(event().flips.black>=1))->(reveal_cards(opponent_pick_opponent_hand(count=event().flips.black));scrap_hand(pick(previous_target())))"
       }
     },
     {

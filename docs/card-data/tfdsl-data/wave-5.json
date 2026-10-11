@@ -539,10 +539,10 @@
     {
       "name": "Brainstorm, Biomechanical Engineer",
       "tfdsl": {
-        "alt": "on-this-flip()->(top_deck();if(previous_target().type=Upgrade)->(if(confirm())->play(previous_target())))",
+        "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target().type=Upgrade)->(if(confirm('Play Upgrade?'))->play(previous_target())))",
         "body": ""
       },
-      "comment": "TODO: Test this. This really needs a self-reveal()",
+      "comment": "TODO: Test alt. Really this needs a reveal_cards option to mute non-owners",
       "body-needs": "Selecting a flipped Upgrade and putting it into hand after the battle"
     },
     {

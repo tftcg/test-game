@@ -351,9 +351,9 @@
         "alt 3": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->draw(1)",
         "alt 4": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->pierce_eot(3,this())",
         "alt 5": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->damage(1,pick_enemy())",
-        "bot":   "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())))"
+        "bot":   "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->(reveal_cards(top_deck(count=2));if(exists_card(previous_target(),faction=Decepticon))->(if(confirm('Play Decepticon card?'))->play(pick(previous_target(),faction=Decepticon))))"
       },
-      "bot-needs": "Bot mode needs revealing cards from the top of the deck"
+      "bot-needs": "Bot mode needs reordering cards after reveal"
     }
   ]
 }
