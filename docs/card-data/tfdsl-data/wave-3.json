@@ -423,10 +423,9 @@
     },
     {
       "name": "Private Sideswipe, Infantry • Soldier",
-      "alt-needs": "Multiplying a temporary bonus by the number of KO characters",
       "bot-needs": "Detecting another friendly character KO during the opponent's turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(atk_eot(all(opponent().ko,type=Character).count,this());atk_eot(all(opponent().ko,type=Character).count,this()))",
         "bot": ""
       }
     },
@@ -597,10 +596,9 @@
     },
     {
       "name": "Sergeant Skywarp, Black Ops • Seeker",
-      "alt-needs": "Returning up to two differently named Secret Actions from the scrap pile",
       "tfdsl": {
-        "alt": "",
-        "bot": "on-play-action(when(event().card.subtype='Secret Action')->draw(1)"
+        "alt": "on-this-flip()->(move_to(self().hand,pick_scrap(subtype='Secret Action'));move_to(self().hand,pick_scrap(subtype='Secret Action',name!=previous_target().name)))",
+        "bot": "on-play-action(when(event().card.subtype='Secret Action'))->draw(1)"
       }
     },
     {

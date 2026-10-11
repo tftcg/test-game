@@ -62,8 +62,7 @@
     },
     {
       "name": "Impetuous Stand",
-      "tfdsl": "",
-      "needs": "Moving a scrapped enemy Upgrade from its owner's scrap pile to the bottom of their deck"
+      "tfdsl": "scrap_upgrade(pick_enemy_upgrade());if(done())->(put_deck_bottom(previous_target().owner,previous_target());draw(1,previous_target().owner))"
     },
     {
       "name": "Rage",
@@ -206,11 +205,9 @@
     },
     {
       "name": "Bludgeon, Metallikato Monster",
-      "alt-needs": "Comparing battle-icon color counts with an opponent and resolving effects at end of battle",
-      "bot-needs": "Conditioning an attack trigger on the battle-icon count of a card scrapped from hand",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-after-defend-flip(when(event().flips.colours.count > event().atk_flips.colours.count))->(def_eob(1,this());damage(1,event().attacker))",
+        "bot": "on-this-attack(when(event().defender.stars<=12))->(if(this().owner.hand.count>0)->(if(confirm('Scrap Card From Hand?'))->scrap_hand(pick_hand(exact=1));if(done())->draw(1);if(previous_target().colours.count>=2)->atk_eob(2,this())))"
       }
     },
     {
@@ -223,10 +220,10 @@
     {
       "name": "Fangry, Cursed Nightmare",
       "alt-needs": "Scrapping an opponent's battle card without applying its icons",
-      "bot-needs": "Start-turn effects that scrap another player's deck",
+      "comment": "NOTE: The bot mode should be able to be written more simply",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-start-turn()->scrap_deck(get(self().deck,from=top,count=3));on-opponent-start-turn()->scrap_deck(get(opponent().deck,from=top,count=3))"
       }
     },
     {

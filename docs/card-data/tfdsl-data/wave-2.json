@@ -17,9 +17,7 @@
     },
     {
       "name": "Ancient Wisdom",
-      "comment": "This needs to set an ancient-wisdom-player value",
-      "tfdsl": "",
-      "needs": "Per-turn state recording that Ancient Wisdom was played."
+      "tfdsl": "set_flag_eot('ancient wisdom');scrap_deck(top_deck(count=2));if(exists_card(previous_target(),type=Action))->move_to(self().hand,pick(previous_target(),type=Action));if(exists_card(previous_target(),type=Upgrade))->move_to(self().hand,pick(previous_target(),type=Upgrade))"
     },
     {
       "name": "Armored Plating"
@@ -67,8 +65,7 @@
     },
     {
       "name": "Cornered!",
-      "comment": "TODO: Implement opponent_flip()",
-      "tfdsl": "opponent_flip(pick_enemy(mode=bot))"
+      "tfdsl": "flip(pick_enemy(mode=bot))"
     },
     {
       "name": "Crash Landing",
@@ -490,10 +487,9 @@
     {
       "name": "Dirge, Doombringer",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "A temporary attack bonus calculated from the opponent KO area's character count."
+        "alt": "on-this-flip()->atk_eot(all(opponent().ko,type=Character).count,this())",
+        "bot": "pierce(1);on-this-attack-damage(when(event().overkill=0))->untap(this())"
+      }
     },
     {
       "name": "Divebomb, Aerial Assault",
@@ -517,11 +513,11 @@
     },
     {
       "name": "Grapple, Autobot Architect",
+      "comment": "NOTE: alt mode's DSL is ugly because there is no way to count distinct colours across an array of Battlecards, only flips",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(if(confirm('Scrap Hand?'))->(scrap_hand(all_hand());if((previous_target().colours=blue,previous_target().colours=white,previous_target().colours=black,previous_target().colours=green,previous_target().colours!=orange) || (previous_target().colours=orange,previous_target().colours=white,previous_target().colours=black,previous_target().colours=green,previous_target().colours!=blue) || (previous_target().colours=orange,previous_target().colours=blue,previous_target().colours=black,previous_target().colours=green,previous_target().colours!=white) || (previous_target().colours=orange,previous_target().colours=blue,previous_target().colours=white,previous_target().colours=green,previous_target().colours!=black) || (previous_target().colours=orange,previous_target().colours=blue,previous_target().colours=white,previous_target().colours=black,previous_target().colours!=green))->damage(4,pick_enemy())))",
         "bot": "on-this-after-battle-flip(when(event().flips.colours.count=4))->(atk_eot(4,this());def_eot(4,this()))"
-      },
-      "alt-needs": "Counting distinct battle-icon colors among all cards discarded from a hand."
+      }
     },
     {
       "name": "Grimlock, Powerful Commander",
@@ -616,7 +612,6 @@
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(icon_count=0))",
         "bot": ""
       },
-      "alt-needs": "Filtering scrap cards by the absence of all normal and hybrid battle icons.",
       "bot-needs": "Once-per-turn trigger gating across battle-card play and flip events."
     },
     {
@@ -652,10 +647,10 @@
     {
       "name": "Warpath, Confident Sharpshooter",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->damage(all(opponent().scrap,blue>=2).count,opponent_pick_opponent_char())",
         "bot": ""
       },
-      "alt-needs": "Damage calculated from opponent scrap cards with multiple blue battle icons and assigned by opponent selection."
+      "bot-needs": "Disable opponent using Tough"
     },
     {
       "name": "Windblade, Combiner Hunter",

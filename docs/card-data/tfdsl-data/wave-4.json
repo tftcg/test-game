@@ -680,9 +680,8 @@
     },
     {
       "name": "Raider Skytread, Special Ops • Soldier",
-      "combiner-needs": "Returning a card from under this character to hand",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "on-this-attack()->(if(this().under.count>0)->(if(confirm('Return Card From Under Skytread?'))->(move_to(self().hand,get(this().under,from=random));move(1,this(),event().defender))))"
       }
     },
     {
