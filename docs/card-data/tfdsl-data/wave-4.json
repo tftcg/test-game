@@ -55,8 +55,7 @@
     },
     {
       "name": "Coup",
-      "tfdsl": "",
-      "needs": "Choosing and using a Bounty ability on a battlefield card"
+      "tfdsl": "reveal(on-ko())->revealed(do_bounty(pick_friend(bounty>0)))"
     },
     {
       "name": "Crowbar",
@@ -128,8 +127,7 @@
     },
     {
       "name": "Hijack",
-      "tfdsl": "",
-      "needs": "Tracking opponent card draws during their turn and replacing a draw"
+      "tfdsl": "reveal(instead(on(event=draw,when(event().player=opponent(),event().draw_count=2))))->revealed(instead(on(event=draw,when(event().player=opponent()))->draw(1,self()));draw(1,self()))"
     },
     {
       "name": "Immersed In Shadow",
@@ -398,7 +396,6 @@
     },
     {
       "name": "Private Fixit, Rescue Patrol • Medic",
-      "comment": "BUG: The scrap_hand(it()) isn't working",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
         "bot": "tap_ability(scrap_hand(pick_hand(exact=1,white>=1)))->(each(all_players())->(scrap_hand(it().hand);draw(4,it())))"
@@ -466,9 +463,8 @@
     },
     {
       "name": "Private Turbo Board, Air Command • Evac",
-      "bot-needs": "Preventing an opponent from playing more than a specified number of cards during their turn",
       "tfdsl": {
-        "bot": "",
+        "bot": "instead(on-opponent-play-action(when(all(opponent().played).count>=2))->do_nothing());instead(on(event=play-upgrade,when(event().player=opponent(),all(opponent().played).count>=2))->do_nothing())",
         "upgrade": "on-attached-after-battle(when(event().flips.orange>=1,event().flips.blue>=1))->play(pick(event().flips.cards,orange>=1 || blue>=1))"
       }
     },
@@ -549,7 +545,7 @@
     },
     {
       "name": "Raider Ratbat, Spy Patrol • Fuel Scout",
-      "alt-needs": "Revenge triggers and looking at an opponent's hand before selecting a card",
+      "alt-needs": "Name an icon colour",
       "tfdsl": {
         "alt": "",
         "bot": "tap_ability()->(reveal_cards(top_deck());each(all_friends())->repair(previous_target().colours.count,it()))"

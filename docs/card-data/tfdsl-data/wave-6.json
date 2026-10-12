@@ -713,9 +713,8 @@
     },
     {
       "name": "Rabblerouser, Aerial Onslaught",
-      "alt-needs": "Looking at the deck top and optionally putting it into hand.",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack(when(event().defender.faction=Quintesson))->atk_eob(3,this());on-this-flip()->(reveal_cards(top_deck(),mute_opponents=true);if(confirm('Draw card?'))->move_to(self().hand,top_deck()))",
         "bot": "on-this-attack(when(event().defender.faction=Junkion))->atk_eob(3,this());on-friend-attack(when(event().attacker.trait=Plane))->plan(1)"
       }
     },

@@ -13,8 +13,7 @@
     },
     {
       "name": "Backup Bag",
-      "needs": "Replacing an attempted scrap of another attached Upgrade with scrapping this Upgrade",
-      "tfdsl": ""
+      "tfdsl": "instead(on(event=scrap-upgrade,when(event().from=this().attached_to,event().scrapped!=this(),(event().scrapped.subtype=Weapon || event().scrapped.subtype=Armor),event().cause.owner=this().owner))->scrap_upgrade(this()))"
     },
     {
       "name": "Basic Combat Protocol",
@@ -307,10 +306,9 @@
     },
     {
       "name": "Captain Ironhide, Infantry • Bodyguard",
-      "bot-needs": "Swapping an attached Weapon with a qualifying Weapon from hand",
       "tfdsl": {
         "alt": "instead(on-this-damage(when(event().origin.owner != this().owner))->do_nothing())",
-        "bot": ""
+        "bot": "on-this-attack(when(exists_card(this().upgrades,subtype=Weapon),exists_card(self().hand,subtype=Weapon,blue>=1)))->(if(confirm('Swap Weapon?'))->(choose(pick_hand(subtype=Weapon,blue>=1));return_upgrade(pick(this().upgrades,subtype=Weapon));put_upgrade(chosen(),this())))"
       }
     },
     {

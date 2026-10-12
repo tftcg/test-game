@@ -9,8 +9,7 @@
   "cards": [
     {
       "name": "Agile Formation",
-      "tfdsl": "",
-      "needs": "Needs a reveal_cards that mutes non-owners"
+      "tfdsl": "if(all_friends(trait=Melee).count>0)->(reveal_cards(top_deck(),mute_opponents=true);if(confirm('Scrap the Card?'))->scrap_deck(top_deck()));if(all_friends(trait=Ranged).count>0)->damage(1,pick_enemy());if(all_friends(trait=Specialist).count>0)->(draw(1);scrap_hand(pick_hand()))"
     },
     {
       "name": "Armor Piercing Munitions",

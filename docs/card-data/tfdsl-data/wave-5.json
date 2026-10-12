@@ -327,9 +327,8 @@
     {
       "name": "Data Protection",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Preventing opponent cards from causing hand scrapping"
+        "front": "instead(on(event=scrap-hand,when(event().player=this().owner,event().by=opponent(),exists_card(this().owner.chars,fullname=this().target)))->do_nothing())"
+      }
     },
     {
       "name": "Duty & Honor",
@@ -539,10 +538,9 @@
     {
       "name": "Brainstorm, Biomechanical Engineer",
       "tfdsl": {
-        "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target().type=Upgrade)->(if(confirm('Play Upgrade?'))->play(previous_target())))",
+        "alt": "on-this-flip()->(reveal_cards(top_deck(),mute_opponents=true);if(previous_target().type=Upgrade)->(if(confirm('Play Upgrade?'))->play(previous_target())))",
         "body": ""
       },
-      "comment": "TODO: Test alt. Really this needs a reveal_cards option to mute non-owners",
       "body-needs": "Selecting a flipped Upgrade and putting it into hand after the battle"
     },
     {

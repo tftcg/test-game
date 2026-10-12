@@ -261,8 +261,7 @@
     },
     {
       "name": "Spare Parts",
-      "tfdsl": "",
-      "needs": "An upgrade-scrap replacement event exposing the scrapped upgrade's subtype and the opposing card source."
+      "tfdsl": "instead(on(event=scrap-upgrade,when(event().from=this().attached_to,event().scrapped!=this(),(event().scrapped.subtype=Weapon || event().scrapped.subtype=Armor),event().cause.owner=opponent()))->scrap_upgrade(this()))"
     },
     {
       "name": "Sparring Gear",
@@ -283,6 +282,7 @@
     {
       "name": "Stunticon Swagger",
       "tfdslFuture": "put_only(trait=Stunticon)",
+      "needs": "An ongoing global effect that prevents enemies from using Bold/Tough.",
       "tfdsl": ""
     },
     {
