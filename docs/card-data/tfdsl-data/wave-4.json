@@ -90,8 +90,7 @@
     },
     {
       "name": "Energy Transfer",
-      "tfdsl": "",
-      "needs": "Moving a chosen number of damage counters without KO'ing the destination"
+      "tfdsl": "choose(pick_friend());choose(pick_friend(id!=previous_target(1).id));choose(range(0,previous_target(1).damage));move_no_ko(chosen(),previous_target(1),previous_target(2))"
     },
     {
       "name": "Erratic Cannon",

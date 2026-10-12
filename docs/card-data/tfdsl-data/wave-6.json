@@ -217,8 +217,7 @@
     },
     {
       "name": "Scrounging For Energon",
-      "needs": "Choosing a battle-icon color and conditionally inspecting the opponent's top deck card.",
-      "tfdsl": ""
+      "tfdsl": "choose(icons());reveal_cards(opponent_top_deck());if(opponent_top_deck().colours=chosen())->(draw(2);scrap_hand(opponent_pick_opponent_hand()))"
     },
     {
       "name": "Secret Missive",

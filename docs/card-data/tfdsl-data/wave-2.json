@@ -115,8 +115,7 @@
     },
     {
       "name": "Espionage",
-      "tfdsl": "",
-      "needs": "Choosing a battle-icon color and filtering an opponent hand by that chosen color."
+      "tfdsl": "choose(icons());reveal_cards(opponent().hand);scrap_hand(pick(opponent().hand,colours=chosen()))"
     },
     {
       "name": "Evasive Maneuvers",

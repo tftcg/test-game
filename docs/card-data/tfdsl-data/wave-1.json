@@ -460,11 +460,11 @@
     },
     {
       "name": "Dinobot Sludge, Mighty Stomper",
+      "comment": "NOTE: while you can tell Sludge to move enough damage to KO him, move_no_ko will refuse to move that much",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip(when(exists_friend(trait=Dinobot,id!=this().id)))->(choose(pick_friend(trait=Dinobot,id!=this().id));choose(range(0,chosen().damage));move_no_ko(chosen(),previous_target(),this()))",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Dinobot))->repair(1,event().attacker)"
-      },
-      "alt-needs": "Needs a text entry to say how many counters to move, which needs to take a max"
+      }
     },
     {
       "name": "Dinobot Slug, Hot-Headed Warrior"
@@ -479,7 +479,6 @@
     {
       "name": "Dinobot Swoop, Fearsome Flyer",
       "tfdsl": {
-        "comment": "ERROR: Erroring in test",
         "alt": "on-this-flip()->move(1,this(),pick_enemy())",
         "bot": ""
       }

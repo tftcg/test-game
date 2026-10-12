@@ -46,8 +46,7 @@
     },
     {
       "name": "Callous Leadership",
-      "comment": "TODO: Needs an integer entry to choose between 0 and 5",
-      "tfdsl": "move(5,pick_friend(faction=Decepticon,trait=Leader,stars>=8),pick_friend(id!=previous_target().id))"
+      "tfdsl":"choose(range(0,5));move(chosen(),pick_friend(faction=Decepticon,trait=Leader,stars>=8),pick_friend(id!=previous_target(2).id))"
     },
     {
       "name": "Combat Dagger",
@@ -290,10 +289,9 @@
     },
     {
       "name": "Captain Elita-1, Special Ops • Ranger",
-      "alt-needs": "Moving a chosen amount of damage without KOing the destination character",
       "comment": "BUG: Confirm is failing. Presumably due to being on opponent's turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip(when(exists_friend(id!=this().id)))->(choose(pick_friend(id!=this().id));choose(range(0,chosen().damage));move_no_ko(chosen(),previous_target(),this()))",
         "bot": "on-this-ko()->(scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target());scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target(2)))"
       }
     },

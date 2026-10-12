@@ -200,8 +200,7 @@
     },
     {
       "name": "Paralyzo Box",
-      "tfdsl": "",
-      "needs": "Choosing a battle-icon color and testing an opponent deck card against that choice"
+      "tfdsl": "on-attached-attack()->(choose(icons());reveal_cards(opponent_top_deck());if(opponent_top_deck().colours=chosen())->atk_eob(4,attached()))"
     },
     {
       "name": "Plasma Horns",
@@ -667,11 +666,10 @@
     {
       "name": "Mindwipe, Hypnotist",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(choose(icons());reveal_cards(opponent().hand);scrap_hand(pick(opponent().hand,colours=chosen())))",
         "body": "on-this-after-attack-flip(when(event().flips.black>=1))->(if(opponent().hand.count>=1)->scrap_hand(opponent_pick_opponent_hand());if(opponent().hand.count=0)->draw(1))"
       },
-      "comment": "Proposal - checking the opponent has a card shouldn't be here - things need to just fail gracefully",
-      "alt-needs": "Choosing a battle-icon color and scrapping an opponent hand card matching that choice"
+      "comment": "TODO: Test. NOTE: Checking the opponent has a card shouldn't be here on body mode - things need to just fail gracefully"
     },
     {
       "name": "Monxo",
