@@ -146,7 +146,7 @@
     },
     {
       "name": "Hunker Down",
-      "tfdsl": "flip(all_friends(mode=bot,other_modes.count>0,other_trait=Tank));scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
+      "tfdsl": "trait_flip(all_friends(mode=bot,other_modes.count>0,other_traits=Tank),Tank);scrap_play(all_friends(trait=Tank),pick_scrap(subtype=Armor))"
     },
     {
       "name": "I Still Function!",
@@ -275,7 +275,7 @@
     },
     {
       "name": "Start Your Engines",
-      "tfdsl": "flip(all_friends(mode=bot,other_modes.count>0,other_trait=Car));untap(pick_friend(trait=Car))"
+      "tfdsl": "trait_flip(all_friends(mode=bot,other_modes.count>0,other_traits=Car),Car);untap(pick_friend(trait=Car))"
     },
     {
       "name": "Static Laser of Ironhide",
