@@ -589,10 +589,9 @@
     {
       "name": "Decepticon Pounce, Infiltrator",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(atk,all(this().owner.actions,subtype='Secret Action').count);static(atk,all(this().owner.actions,subtype='Secret Action').count)",
         "bot": ""
       },
-      "alt-needs": "Counting face-up and face-down Secret Actions for a dynamic attack bonus",
       "bot-needs": "Reordering selected Secret Actions from the top of the deck while returning the rest"
     },
     {

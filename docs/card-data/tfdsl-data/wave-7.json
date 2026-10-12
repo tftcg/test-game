@@ -10,7 +10,7 @@
     {
       "name": "Agile Formation",
       "tfdsl": "",
-      "needs": "Optional top-deck inspection and scrapping"
+      "needs": "Needs a reveal_cards that mutes non-owners"
     },
     {
       "name": "Armor Piercing Munitions",

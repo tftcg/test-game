@@ -275,7 +275,8 @@
     },
     {
       "name": "Fastlane, Road Warrior",
-      "alt-needs": "Counting Rolling Actions for a temporary ability",
+        "altFuture": "on-this-defend()->def_eob(all(this().owner.actions,subtype='Rolling Action').count)",
+      "alt-needs": "Needs debugging - first DSL attempt is failing",
       "bot-needs": "Looking at, selecting from, and reordering top deck cards",
       "tfdsl": {
         "alt": "",

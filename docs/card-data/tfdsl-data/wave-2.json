@@ -257,7 +257,7 @@
     },
     {
       "name": "Sonic Scramble",
-      "tfdsl": ""
+      "tfdsl": "scrap_hand(opponent_pick_opponent_hand());if(all(self().played,name=this().name).count=3)->draw(3);if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Spare Parts",
@@ -579,7 +579,7 @@
       "name": "Prowl, Strategic Mastermind",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": "on-this-ko-flip()->scrap_upgrade(pick_upgrade(subtype=Weapon))"
+        "bot": "on-this-ko-flip()->scrap_enemy_upgrade(pick_upgrade(subtype=Weapon))"
       }
     },
     {

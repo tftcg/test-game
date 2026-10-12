@@ -148,8 +148,8 @@
     },
     {
       "name": "Lose The Battle...",
-      "needs": "Returning a Weapon from scrap to hand.",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "reveal(on-friend-defend())->revealed(move_to(self().hand,pick_scrap(subtype=Weapon)))"
     },
     {
       "name": "Lost In Transit",
@@ -177,7 +177,7 @@
     },
     {
       "name": "Occupation",
-      "needs": "TODO: Test",
+      "comment": "TODO: Test",
       "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Quintesson).count=0)->(if(confirm('Play a Green icon card?'))->play(pick_hand(green>=1)))"
 
     },
