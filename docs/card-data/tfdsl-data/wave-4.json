@@ -343,9 +343,8 @@
     },
     {
       "name": "MTX-M2 Anti-Gravity Cannon",
-      "upgrade-needs": "Replacing this upgrade leaving the battlefield with placement in the KO area",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "pierce(4)"
       }
     },
     {
@@ -653,16 +652,14 @@
     },
     {
       "name": "TTC-HD Turret Armor",
-      "upgrade-needs": "Replacing this upgrade leaving the battlefield with placement in the KO area",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "tough(1)"
       }
     },
     {
       "name": "TTC-HP Oblivio Launcher",
-      "upgrade-needs": "Replacing this upgrade leaving the battlefield with placement in the KO area",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "bold(1)"
       }
     },
     {
@@ -675,7 +672,7 @@
       "name": "Raider Brunt, Weapons • Soldier",
       "bot-needs": "Capping enemy Bold and Tough totals",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-ko()->summon_weaponizer('TTC-HD Turret Armor','TTC-HP Oblivio Launcher')"
       }
     },
     {
@@ -688,7 +685,7 @@
       "name": "Sergeant Six-Gun, Artillery • Soldier",
       "bot-needs": "Reading a scrapped Weapon's printed ATK stat and granting that much ATK",
       "tfdsl": {
-        "bot": ""
+        "bot": "on-this-ko()->summon_weaponizer('MTX-M2 Anti-Gravity Cannon','MTX-S2A Guided Missile Launcher')"
       }
     },
     {
