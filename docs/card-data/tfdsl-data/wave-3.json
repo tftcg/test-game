@@ -315,10 +315,9 @@
     },
     {
       "name": "Captain Wheeljack, Engineering  Scientist",
-      "bot-needs": "Counting Actions played during the turn",
       "tfdsl": {
         "alt": "on-start-game()->(if(confirm('Move Brainstorm to Hand?'))->move_to(self().hand,pick_deck(name='Brainstorm')))",
-        "bot": ""
+        "bot": "on-play-action(when(all(self().played,type=Action).count=3))->draw(1)"
       }
     },
     {

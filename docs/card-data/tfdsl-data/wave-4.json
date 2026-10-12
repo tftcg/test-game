@@ -276,8 +276,8 @@
     },
     {
       "name": "War of Attrition",
-      "tfdsl": "",
-      "needs": "Tracking the third copy played in a turn and playing another copy"
+      "comment": "TODO: Test",
+      "tfdsl": "damage(1,opponent_pick_opponent_char());if(all(self().played,name=this().name).count=3)->repair(3,pick_friend());if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Wedge Formation",

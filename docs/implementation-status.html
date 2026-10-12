@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 992/1476 (67.2%)</p>
+  <p>TFDSL completion: 994/1476 (67.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>267</td><td>59</td><td>88</td><td>147</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>416</td><td>1</td><td>180</td><td>181</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>268</td><td>58</td><td>88</td><td>146</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>417</td><td>1</td><td>179</td><td>180</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>69</td><td>0</td><td>88</td><td>88</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 777/898 (86.5%)</p>
+  <p>TFDSL completion: 779/898 (86.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>237</td><td>35</td><td>21</td><td>56</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>316</td><td>0</td><td>55</td><td>55</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>238</td><td>34</td><td>21</td><td>55</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>317</td><td>0</td><td>54</td><td>54</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>24</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
 </table>
@@ -116,11 +116,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 3</h2>
-  <p>TFDSL completion: 161/182 (88.5%)</p>
+  <p>TFDSL completion: 162/182 (89.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>61</td><td>51</td><td>6</td><td>4</td><td>10</td></tr>
+<tr><th scope="row">Character</th><td>61</td><td>52</td><td>5</td><td>4</td><td>9</td></tr>
 <tr><th scope="row">Battlecard</th><td>71</td><td>61</td><td>0</td><td>10</td><td>10</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -132,7 +132,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Blaster, Communications</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This is scrapping the top card. It should just be trying to play it. If it can&#39;t, it stays there</td><td class="comment"></td></tr>
 <tr><th scope="row">Captain Elita-1, Special Ops • Ranger</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Confirm is failing. Presumably due to being on opponent&#39;s turn</td><td class="comment">alt-needs: Moving a chosen amount of damage without KOing the destination character</td></tr>
 <tr><th scope="row">Captain Ironhide, Infantry • Bodyguard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Swapping an attached Weapon with a qualifying Weapon from hand</td></tr>
-<tr><th scope="row">Captain Wheeljack, Engineering  Scientist</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Counting Actions played during the turn</td></tr>
 <tr><th scope="row">Eject, Electronic Surveillance</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">We agreed to treat Eject&#39;s alt mode as a Focus ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -169,12 +168,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 142/174 (81.6%)</p>
+  <p>TFDSL completion: 143/174 (82.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>60</td><td>44</td><td>9</td><td>7</td><td>16</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>50</td><td>0</td><td>14</td><td>14</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>51</td><td>0</td><td>13</td><td>13</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -223,7 +222,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Shoulder Holster</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Soldier&#39;s Blaster</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test against multi-factional characters</td><td class="comment"></td></tr>
 <tr><th scope="row">Valuable Contract</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Using a Bounty ability and selecting an owned battle card outside the game</td></tr>
-<tr><th scope="row">War of Attrition</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking the third copy played in a turn and playing another copy</td></tr>
+<tr><th scope="row">War of Attrition</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>
