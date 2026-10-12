@@ -124,7 +124,7 @@
     },
     {
       "name": "Field Communicator",
-      "tfdsl": "on-put(when(attached().trait=Specialist))->(scrap_deck(top_deck());if(confirm())->play(previous_target()))"
+      "tfdsl": "on-put(when(attached().trait=Specialist))->(reveal_cards(top_deck(),mute_opponents=true);scrap_deck(top_deck());if(confirm())->play(previous_target()))"
     },
     {
       "name": "Field Repair",

@@ -439,10 +439,9 @@
     },
     {
       "name": "Swindle, Arms Dealer",
-      "alt-needs": "Counting Upgrades played during a turn",
       "bot-needs": "Choosing another character that shares a trait with this character",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-play-upgrade(when(all(this().owner.played,type=Upgrade).count=2))->draw(1)",
         "bot": ""
       }
     },
