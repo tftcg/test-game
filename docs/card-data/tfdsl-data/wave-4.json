@@ -467,10 +467,9 @@
     },
     {
       "name": "Private Vanguard, Ground Command • Advance Guard",
-      "bot-needs": "Capping attack damage based on flipped battle icons",
       "tfdsl": {
-        "bot": "",
-        "upgrade": "on-put()->damage(1,pick_enemy(tapped=tapped)"
+        "bot": "instead(on-friend-attack-damaged(when(event().target!=this(),event().def_flips.white>=1,event().damage>5))->modify(event().damage:=5))",
+        "upgrade": "on-put()->damage(1,pick_enemy(tapped=tapped))"
       }
     },
     {

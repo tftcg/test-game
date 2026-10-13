@@ -194,8 +194,7 @@
     },
     {
       "name": "Quartermaster",
-      "needs": "Choosing between distinct effects and putting a Battle Master Upgrade from the KO area onto a selected character",
-      "tfdsl": ""
+      "tfdsl": "choose(options('Move an Upgrade','Return a Battle Master Upgrade from KO'));if(chosen()='Move an Upgrade')->(choose(pick_friendly_upgrade());move_upgrade(chosen(),pick_friend(id!=chosen().attached_to.id)));if(chosen()='Return a Battle Master Upgrade from KO')->put_upgrade(pick_friend_ko(trait='Battle Master'),pick_friend())"
     },
     {
       "name": "Reactive Armor",
