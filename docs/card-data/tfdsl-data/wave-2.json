@@ -521,9 +521,8 @@
     {
       "name": "Grimlock, Powerful Commander",
       "tfdsl": {
-        "bot": ""
-      },
-      "bot-needs": "Selecting an owned Dinobot character outside the game and placing it in the KO area in alt mode."
+        "bot": "on-this-attack()->(choose(dinobots());summon_ko(chosen()))"
+      }
     },
     {
       "name": "Ironhide, Steadfast Brawler",

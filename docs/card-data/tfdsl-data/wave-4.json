@@ -489,7 +489,7 @@
       }
     },
     {
-      "name": "Raider Caliburst, Air Force  Weapons",
+      "name": "Raider Caliburst, Air Force • Weapons",
       "comment": "BUG: Issues with subname means image does not load. TODO: implement upgrade mode, test bot mode",
       "tfdsl": {
         "bot": "on(event=draw,when(event().player=opponent(),event().draw_count=2))->damage(1,opponent_pick_opponent_char())",

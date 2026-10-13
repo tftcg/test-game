@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1025/1476 (69.4%)</p>
+  <p>TFDSL completion: 1026/1476 (69.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>282</td><td>54</td><td>78</td><td>132</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>283</td><td>54</td><td>77</td><td>131</td></tr>
 <tr><th scope="row">Battlecard</th><td>597</td><td>429</td><td>1</td><td>167</td><td>168</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>70</td><td>0</td><td>87</td><td>87</td></tr>
 </tbody>
@@ -28,11 +28,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 801/898 (89.2%)</p>
+  <p>TFDSL completion: 802/898 (89.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>249</td><td>31</td><td>13</td><td>44</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>250</td><td>31</td><td>12</td><td>43</td></tr>
 <tr><th scope="row">Battlecard</th><td>371</td><td>325</td><td>0</td><td>46</td><td>46</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>25</td><td>0</td><td>5</td><td>5</td></tr>
 </tbody>
@@ -69,11 +69,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 2</h2>
-  <p>TFDSL completion: 169/184 (91.8%)</p>
+  <p>TFDSL completion: 170/184 (92.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>55</td><td>4</td><td>5</td><td>9</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>56</td><td>4</td><td>4</td><td>8</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>80</td><td>0</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -86,7 +86,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Blurr, Fastest Bot in the Galaxy</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Starting an additional attack against a newly selected untapped enemy after attack damage.</td></tr>
 <tr><th scope="row">Devastator, Towering Warrior</th><td>Character</td><td>todo</td><td>1/1</td><td class="comment">Rather than setting base atk to 10, it gives him +4 atk</td><td class="comment"></td></tr>
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">alt mode&#39;s DSL is ugly because there is no way to count distinct colours across an array of Battlecards, only flips</td><td class="comment"></td></tr>
-<tr><th scope="row">Grimlock, Powerful Commander</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Selecting an owned Dinobot character outside the game and placing it in the KO area in alt mode.</td></tr>
 <tr><th scope="row">Menasor, Menacing Colossus</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Give the player a you may play an extra action on each of your turns.</td></tr>
 <tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
 <tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Currently all sentinels you don&#39;t have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don&#39;t have preselected</td><td class="comment"></td></tr>
@@ -181,7 +180,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Private Vanguard, Ground Command • Advance Guard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
-<tr><th scope="row">Raider Caliburst, Air Force  Weapons</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Issues with subname means image does not load. TODO: implement upgrade mode, test bot mode</td><td class="comment"></td></tr>
+<tr><th scope="row">Raider Caliburst, Air Force • Weapons</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Issues with subname means image does not load. TODO: implement upgrade mode, test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: revenge() doesn&#39;t like multiple terms inside it thus the extra parentheses</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: A delayed after-battle effect registered when this battles with no cards underneath, lasting only for that battle. Selecting an iconless flipped battle card and placing it under this character are already supported.</td></tr>
