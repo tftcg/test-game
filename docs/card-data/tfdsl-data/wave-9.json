@@ -112,8 +112,7 @@
     },
     {
       "name": "This is Bad Comedy",
-      "needs": "Choosing between alternative effects",
-      "tfdsl": ""
+      "tfdsl": "choose(options('Scrap an enemy Utility','Do 1 damage to an enemy that does not have a Utility'));if(chosen()='Scrap an enemy Utility')->scrap_upgrade(pick_enemy_upgrade(subtype=Utility));if(chosen()='Do 1 damage to an enemy that does not have a Utility')->damage(1,pick_enemy(upgrades.subtype!=Utility))"
     },
     {
       "name": "Trithyllium Plating",
@@ -320,10 +319,9 @@
     },
     {
       "name": "Rewind, Data Collector",
-      "alt-needs": "Returning a random card from the scrap pile to hand",
       "comment": "TODO: Test bot mode",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,get(self().scrap,from=random))",
         "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(event().flips.cards,black>=1,subtype=Utility)))"
       }
     },
@@ -358,11 +356,10 @@
     },
     {
       "name": "Squawktalk, Chatterbox Translator",
-      "alt-needs": "Choosing an icon color and revealing an opponent's top deck card",
-      "bot-needs": "Having each player choose and scrap a card from their hand",
+      "comment": "NOTE: bot mode: AP scraps first, then NAP, rather than it being at the same time",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(choose(icons());reveal_cards(opponent_top_deck());if(opponent_top_deck().colours=chosen())->draw(2))",
+        "bot": "on-this-attack()->(scrap_hand(pick_hand());scrap_hand(opponent_pick_opponent_hand()))"
       }
     },
     {

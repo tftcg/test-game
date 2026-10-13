@@ -335,8 +335,7 @@
     },
     {
       "name": "Hypersonic Concussion Blaster",
-      "tfdsl": "",
-      "needs": "Choosing one of two options on attack"
+      "tfdsl": "put_only(faction=Decepticon);share_slot(2,when(attached().name=Sixshot));on-attached-attack()->(choose(options('Look at the top card of your deck. You may scrap it.','You may put a card from your hand on top of your deck.'));if(chosen()='Look at the top card of your deck. You may scrap it.')->(reveal_cards(top_deck(),mute_opponents=true);if(confirm('Scrap it?'))->scrap_deck(top_deck()));if(chosen()='You may put a card from your hand on top of your deck.')->put_deck(pick_hand()))"
     },
     {
       "name": "Tactical Suppression",

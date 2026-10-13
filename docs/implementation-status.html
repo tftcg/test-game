@@ -16,23 +16,23 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1019/1476 (69.0%)</p>
+  <p>TFDSL completion: 1025/1476 (69.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>280</td><td>54</td><td>80</td><td>134</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>427</td><td>1</td><td>169</td><td>170</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>282</td><td>54</td><td>78</td><td>132</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>429</td><td>1</td><td>167</td><td>168</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>70</td><td>0</td><td>87</td><td>87</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 800/898 (89.1%)</p>
+  <p>TFDSL completion: 801/898 (89.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>249</td><td>30</td><td>14</td><td>44</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>249</td><td>31</td><td>13</td><td>44</td></tr>
 <tr><th scope="row">Battlecard</th><td>371</td><td>325</td><td>0</td><td>46</td><td>46</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>25</td><td>0</td><td>5</td><td>5</td></tr>
 </tbody>
@@ -69,11 +69,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 2</h2>
-  <p>TFDSL completion: 168/184 (91.3%)</p>
+  <p>TFDSL completion: 169/184 (91.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>55</td><td>3</td><td>6</td><td>9</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>55</td><td>4</td><td>5</td><td>9</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>80</td><td>0</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -88,7 +88,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">alt mode&#39;s DSL is ugly because there is no way to count distinct colours across an array of Battlecards, only flips</td><td class="comment"></td></tr>
 <tr><th scope="row">Grimlock, Powerful Commander</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Selecting an owned Dinobot character outside the game and placing it in the KO area in alt mode.</td></tr>
 <tr><th scope="row">Menasor, Menacing Colossus</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Give the player a you may play an extra action on each of your turns.</td></tr>
-<tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Choosing exactly one of two effects when this character flips.<br>bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
+<tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
 <tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Currently all sentinels you don&#39;t have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don&#39;t have preselected</td><td class="comment"></td></tr>
 <tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Scrapper&#39;s bot mode lives in the Tower rather than on him</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Teleporting Seeker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Once-per-turn trigger gating across battle-card play and flip events.</td></tr>
@@ -611,12 +611,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 9</h2>
-  <p>TFDSL completion: 65/98 (66.3%)</p>
+  <p>TFDSL completion: 69/98 (70.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>26</td><td>13</td><td>7</td><td>6</td><td>13</td></tr>
-<tr><th scope="row">Battlecard</th><td>35</td><td>23</td><td>0</td><td>12</td><td>12</td></tr>
+<tr><th scope="row">Character</th><td>26</td><td>15</td><td>6</td><td>5</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>35</td><td>24</td><td>0</td><td>11</td><td>11</td></tr>
 <tr><th scope="row">Stratagem</th><td>15</td><td>11</td><td>0</td><td>4</td><td>4</td></tr>
 </tbody>
 </table>
@@ -634,11 +634,11 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
 <tr><th scope="row">Onslaught, Combaticon Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Plan</td></tr>
 <tr><th scope="row">Paddles, Gentle Giant</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing and redirecting a limited amount of attack damage<br>bot-needs: Checking for a damaged or KO&#39;d character across the battlefield and KO area</td></tr>
-<tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test bot mode</td><td class="comment">alt-needs: Returning a random card from the scrap pile to hand</td></tr>
+<tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Playing a specific Upgrade flipped during an attack after battle</td></tr>
 <tr><th scope="row">Squawkbox, Passionate Musician</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Tracking cards scrapped by each player and resolving an opponent&#39;s optional hand scrap</td></tr>
-<tr><th scope="row">Squawktalk, Chatterbox Translator</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Choosing an icon color and revealing an opponent&#39;s top deck card<br>bot-needs: Having each player choose and scrap a card from their hand</td></tr>
+<tr><th scope="row">Squawktalk, Chatterbox Translator</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">bot mode: AP scraps first, then NAP, rather than it being at the same time</td><td class="comment"></td></tr>
 <tr><th scope="row">Swindle, Arms Dealer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Choosing another character that shares a trait with this character</td></tr>
 <tr><th scope="row">Wheelie, Rhyming Racer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Paying a tap-and-scrap activation cost and branching on a scrapped card&#39;s icon count</td></tr>
 <tr><th scope="row">Windblade, Camien Champion</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Taking selected cards from the top of the deck and bottom-decking the rest<br>bot-needs: Replacing attack damage with half that damage rounded up - either attack damage needs to see flips, or it&#39;s a temporary trigger. Probably the former</td></tr>
@@ -651,7 +651,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Nothin&#39;s Gonna Stand In Our Way</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting cards with a specific name played during a turn</td></tr>
 <tr><th scope="row">Spoils of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing up to five characters that share a trait</td></tr>
 <tr><th scope="row">Starscream&#39;s Cape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Increasing numbers in a character&#39;s printed text box</td></tr>
-<tr><th scope="row">This is Bad Comedy</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing between alternative effects</td></tr>
 <tr><th scope="row">Trithyllium Plating</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Twisted Logic</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reordering cards on top of an opponent&#39;s deck</td></tr>
 <tr><th scope="row">Wanna Bet?</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing battle cards being put under an enemy character with scrapping them</td></tr>
@@ -668,12 +667,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 10</h2>
-  <p>TFDSL completion: 50/71 (70.4%)</p>
+  <p>TFDSL completion: 51/71 (71.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>12</td><td>4</td><td>6</td><td>2</td><td>8</td></tr>
-<tr><th scope="row">Battlecard</th><td>28</td><td>23</td><td>1</td><td>4</td><td>5</td></tr>
+<tr><th scope="row">Battlecard</th><td>28</td><td>24</td><td>1</td><td>3</td><td>4</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>13</td><td>0</td><td>7</td><td>7</td></tr>
 </tbody>
 </table>
@@ -695,7 +694,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">First in, Last out</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: End-of-turn conditional static abilities on a selected character</td></tr>
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Hypersonic Concussion Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing one of two options on attack</td></tr>
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
 <tr><th scope="row">Tactical Suppression</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Sixshot is not currently getting &#39;Unaffected by Oppress this turn&#39;</td></tr>

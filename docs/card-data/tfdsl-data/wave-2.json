@@ -699,10 +699,9 @@
     {
       "name": "Omega Supreme, Autobot Defense Base",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(choose(options('Draw a card','Do 1 damage to an enemy'));if(chosen()='Draw a card')->draw(1);if(chosen()='Do 1 damage to an enemy')->damage(1,pick_enemy()))",
         "bot": ""
       },
-      "alt-needs": "Choosing exactly one of two effects when this character flips.",
       "bot-needs": "Splitting a single attack-damage event across characters while preserving attack-damage semantics."
     },
     {
