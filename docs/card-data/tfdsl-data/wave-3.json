@@ -455,7 +455,7 @@
       "name": "Raider Aimless, Air Force • Weapons",
       "tfdsl": {
         "bot": "tough(3)",
-        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=3))->damage(3,event().defender)"
+        "upgrade": "on-attached-after-attack-flip(when(event().flips.blue>=3))->damage(3,event().defender)"
       }
     },
     {

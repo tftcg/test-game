@@ -248,7 +248,7 @@
       }
     },
     {
-      "name": "Broadside, Air and Sea Assault",
+      "name": "Broadside, Air & Sea Assault",
       "alt 2-needs": "Station requirements and station enter/leave events",
       "tfdsl": {
         "alt 1": "on-this-flip()->move(1,this(),pick_enemy())",
