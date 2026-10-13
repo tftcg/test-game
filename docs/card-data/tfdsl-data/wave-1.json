@@ -291,7 +291,7 @@
     },
     {
       "name": "Swap Missions",
-      "tfdsl": "untap(pick_friend(tapped=true));tap(pick_friend(tapped=false))"
+      "tfdsl": "untap(pick_friend(tapped=tapped));tap(pick_friend(tapped=untapped))"
     },
     {
       "name": "Swap Parts",

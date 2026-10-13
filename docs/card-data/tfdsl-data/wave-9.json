@@ -451,9 +451,9 @@
     },
     {
       "name": "Bruticus, Unstoppable Giant",
-      "combiner-needs": "Tracking whether this character was combined this turn and counting black battle cards flipped",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "tough(2);pierce(2);on-this-combine()->set_flag_eot('bruticus combined');on-this-attack-flip(when(this().owner.flags='bruticus combined',event().flips.black>=1))->damage(1,pick_enemy())"
       }
     }
   ]

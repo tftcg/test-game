@@ -691,9 +691,8 @@
     {
       "name": "Volcanicus, Fiery Champion",
       "tfdsl": {
-        "combiner": ""
-      },
-      "combiner-needs": "Tracking the turn a character combined for an attack trigger."
+        "combiner": "on-this-combine()->set_flag_eot('volcanicus combined');on-this-attack-flip(when(this().owner.flags='volcanicus combined',event().flips.orange>=1))->damage(1,event().defender)"
+      }
     },
     {
       "name": "Omega Supreme, Autobot Defense Base",
