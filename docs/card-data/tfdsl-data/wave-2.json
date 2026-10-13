@@ -280,9 +280,8 @@
     },
     {
       "name": "Stunticon Swagger",
-      "tfdslFuture": "put_only(trait=Stunticon)",
-      "needs": "An ongoing global effect that prevents enemies from using Bold/Tough.",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Stunticon);on-attached-defend()->no_bold_eob(true,event().attacker);on-attached-attack()->no_tough_eob(true,event().defender)",
+      "comment": "TODO: Test"
     },
     {
       "name": "Superior Cannon",
@@ -333,7 +332,7 @@
     {
       "name": "Unleash Potential",
       "tfdsl": "",
-      "needs": "Per-turn state recording that Ancient Wisdom was played and selecting owned battle cards outside the game."
+      "needs": "Selecting owned battle cards outside the game."
     },
     {
       "name": "Vandalize",
@@ -346,10 +345,9 @@
     {
       "name": "Acid Storm, Toxic Terror",
       "comment": "TODO: Test",
-      "bot-needs": "An ongoing global effect that prevents enemies from using Bold.",
       "tfdsl": {
         "alt": "on-this-flip()->repair(all(opponent().scrap,orange>=2).count,this())",
-        "bot": ""
+        "bot": "each(all_enemies())->static(no_bold,true,target=it())"
       }
     },
     {
@@ -644,11 +642,11 @@
     },
     {
       "name": "Warpath, Confident Sharpshooter",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->damage(all(opponent().scrap,blue>=2).count,opponent_pick_opponent_char())",
-        "bot": ""
-      },
-      "bot-needs": "Disable opponent using Tough"
+        "bot": "pierce(2);each(all_enemies())->static(no_tough,true,target=it())"
+      }
     },
     {
       "name": "Windblade, Combiner Hunter",
