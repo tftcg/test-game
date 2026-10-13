@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1014/1476 (68.7%)</p>
+  <p>TFDSL completion: 1019/1476 (69.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>277</td><td>55</td><td>82</td><td>137</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>426</td><td>1</td><td>170</td><td>171</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>280</td><td>54</td><td>80</td><td>134</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>427</td><td>1</td><td>169</td><td>170</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>70</td><td>0</td><td>87</td><td>87</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 795/898 (88.5%)</p>
+  <p>TFDSL completion: 800/898 (89.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>246</td><td>31</td><td>16</td><td>47</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>324</td><td>0</td><td>47</td><td>47</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>249</td><td>30</td><td>14</td><td>44</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>325</td><td>0</td><td>46</td><td>46</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>25</td><td>0</td><td>5</td><td>5</td></tr>
 </tbody>
 </table>
@@ -114,11 +114,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 3</h2>
-  <p>TFDSL completion: 165/182 (90.7%)</p>
+  <p>TFDSL completion: 166/182 (91.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>61</td><td>54</td><td>3</td><td>4</td><td>7</td></tr>
+<tr><th scope="row">Character</th><td>61</td><td>55</td><td>3</td><td>3</td><td>6</td></tr>
 <tr><th scope="row">Battlecard</th><td>71</td><td>62</td><td>0</td><td>9</td><td>9</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -127,20 +127,18 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Blaster, Communications</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This is scrapping the top card. It should just be trying to play it. If it can&#39;t, it stays there</td><td class="comment"></td></tr>
 <tr><th scope="row">Captain Elita-1, Special Ops • Ranger</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Confirm is failing. Presumably due to being on opponent&#39;s turn</td><td class="comment"></td></tr>
 <tr><th scope="row">Eject, Electronic Surveillance</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">We agreed to treat Eject&#39;s alt mode as a Focus ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Downshift, Special Ops • Security Agent</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Private Firedrive, Ground Command • Artillery</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Scrapping any chosen number of hand cards for a matching attack bonus and moving a leaving Battle Master to the KO area</td></tr>
-<tr><th scope="row">Private Pteraxadon, Air Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Setting base DEF and moving a leaving Battle Master to the KO area</td></tr>
+<tr><th scope="row">Private Firedrive, Ground Command • Artillery</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Scrapping any chosen number of hand cards for a matching attack bonus</td></tr>
+<tr><th scope="row">Private Pteraxadon, Air Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Setting base DEF</td></tr>
 <tr><th scope="row">Private Sideswipe, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting another friendly character KO during the opponent&#39;s turn</td></tr>
-<tr><th scope="row">Private Smashdown, Ground Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Comparing each player&#39;s battle-icon colors and moving a leaving Battle Master to the KO area</td></tr>
 <tr><th scope="row">Raider Flamefeather, Black Ops • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping a defense bonus based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Storm Cloud, Infantry  Electronic Warfare</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Visper, Infantry • Patrol Leader</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
-<tr><th scope="row">Sergeant Cog, Artillery • Mechanic</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Playing an Upgrade onto each friendly character and moving a leaving Battle Master to the KO area</td></tr>
+<tr><th scope="row">Sergeant Cog, Artillery • Mechanic</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Playing an Upgrade onto each friendly character</td></tr>
 <tr><th scope="row">Sergeant Overdrive, Special Ops • Strategist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Specialist Ratchet, Engineering • Rescue &amp; Repair</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Is getting +1 atk when a repair is attempted on a zero damage character</td><td class="comment"></td></tr>
 <tr><th scope="row">Battlefield Scan</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Temporarily preventing enemies from using Brave and Stealth</td></tr>
@@ -163,12 +161,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Wave 4</h2>
-  <p>TFDSL completion: 150/174 (86.2%)</p>
+  <p>TFDSL completion: 154/174 (88.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>48</td><td>10</td><td>2</td><td>12</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>54</td><td>0</td><td>10</td><td>10</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>50</td><td>9</td><td>1</td><td>10</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>55</td><td>0</td><td>9</td><td>9</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -177,25 +175,22 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Granting Stealth only against specified factions and preventing those factions from using Stealth</td></tr>
-<tr><th scope="row">Mudflap, Hired Muscle</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test bounty</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Dazzlestrike, Ground Command • Artillery</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Brave<br>upgrade-needs: Events for an upgrade being removed from a character or leaving the battlefield</td></tr>
 <tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
 <tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Private Vanguard, Ground Command • Advance Guard</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping attack damage based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
-<tr><th scope="row">Raider Caliburst, Air Force  Weapons</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Tracking opponent card draws during their turn<br>upgrade-needs: Replacing this upgrade leaving the battlefield with placement in the KO area</td></tr>
+<tr><th scope="row">Raider Caliburst, Air Force  Weapons</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Issues with subname means image does not load. TODO: implement upgrade mode, test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
-<tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Name an icon colour</td></tr>
+<tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: revenge() doesn&#39;t like multiple terms inside it thus the extra parentheses</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: A delayed after-battle effect registered when this battles with no cards underneath, lasting only for that battle. Selecting an iconless flipped battle card and placing it under this character are already supported.</td></tr>
 <tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test both sides</td><td class="comment"></td></tr>
-<tr><th scope="row">Sergeant Six-Gun, Artillery • Soldier</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Reading a scrapped Weapon&#39;s printed ATK stat and granting that much ATK</td></tr>
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Trypticon, Assault Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Choosing between temporary ATK and repair after KO&#39;ing another character</td></tr>
 <tr><th scope="row">4-Wheel Drive</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Setting a character&#39;s base ATK conditionally</td></tr>
 <tr><th scope="row">Blast Suit</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Halving attack damage rounded down</td></tr>
 <tr><th scope="row">Composite Armor</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">The scrap is happening immediately rather than after defend</td><td class="comment"></td></tr>
-<tr><th scope="row">Contract Contingency</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Using a chosen character&#39;s Bounty ability after it deals non-KO attack damage</td></tr>
 <tr><th scope="row">Conversion Engine</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Restricting an upgrade to characters with multiple alt modes and flipping its character to another mode</td></tr>
 <tr><th scope="row">Crude Club</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty</td></tr>

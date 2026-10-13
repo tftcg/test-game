@@ -45,8 +45,7 @@
     },
     {
       "name": "Contract Contingency",
-      "tfdsl": "",
-      "needs": "Using a chosen character's Bounty ability after it deals non-KO attack damage"
+      "tfdsl": "choose(pick_friend());atk_eot(2,chosen());on-attack-damage(when(event().origin=chosen(),event().overkill<0))->do_bounty(chosen())"
     },
     {
       "name": "Conversion Engine",
@@ -352,7 +351,6 @@
     },
     {
       "name": "Mudflap, Hired Muscle",
-      "comment": "TODO: Test bounty",
       "tfdsl": {
         "alt": "on-this-flip()->plan(1)",
         "bot": "bounty((reveal_cards(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target())))"
@@ -492,10 +490,9 @@
     },
     {
       "name": "Raider Caliburst, Air Force  Weapons",
-      "bot-needs": "Tracking opponent card draws during their turn",
-      "upgrade-needs": "Replacing this upgrade leaving the battlefield with placement in the KO area",
+      "comment": "BUG: Issues with subname means image does not load. TODO: implement upgrade mode, test bot mode",
       "tfdsl": {
-        "bot": "",
+        "bot": "on(event=draw,when(event().player=opponent(),event().draw_count=2))->damage(1,opponent_pick_opponent_char())",
         "upgrade": ""
       }
     },
@@ -544,9 +541,9 @@
     },
     {
       "name": "Raider Ratbat, Spy Patrol • Fuel Scout",
-      "alt-needs": "Name an icon colour",
+      "comment": "TODO: Test. NOTE: revenge() doesn't like multiple terms inside it thus the extra parentheses",
       "tfdsl": {
-        "alt": "",
+        "alt": "revenge((choose(icons());reveal_cards(opponent().hand);scrap_hand(pick(opponent().hand,colours=chosen()))))",
         "bot": "tap_ability()->(reveal_cards(top_deck());each(all_friends())->repair(previous_target().colours.count,it()))"
       }
     },
@@ -678,9 +675,8 @@
     },
     {
       "name": "Sergeant Six-Gun, Artillery • Soldier",
-      "bot-needs": "Reading a scrapped Weapon's printed ATK stat and granting that much ATK",
       "tfdsl": {
-        "bot": "on-this-ko()->summon_weaponizer('MTX-M2 Anti-Gravity Cannon','MTX-S2A Guided Missile Launcher')"
+        "bot": "on-this-attack()->(if(confirm('Scrap Weapon from Hand?'))->(scrap_hand(pick_hand(subtype=Weapon,atk>=1));atk_eot(previous_target().atk,this())));on-this-ko()->summon_weaponizer('MTX-M2 Anti-Gravity Cannon','MTX-S2A Guided Missile Launcher')"
       }
     },
     {

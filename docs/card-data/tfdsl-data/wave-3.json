@@ -368,7 +368,7 @@
     },
     {
       "name": "Private Firedrive, Ground Command • Artillery",
-      "upgrade-needs": "Scrapping any chosen number of hand cards for a matching attack bonus and moving a leaving Battle Master to the KO area",
+      "upgrade-needs": "Scrapping any chosen number of hand cards for a matching attack bonus",
       "tfdsl": {
         "bot": "on-this-attack()->draw(1)",
         "upgrade": ""
@@ -397,7 +397,7 @@
     },
     {
       "name": "Private Pteraxadon, Air Command • Artillery",
-      "upgrade-needs": "Setting base DEF and moving a leaving Battle Master to the KO area",
+      "upgrade-needs": "Setting base DEF",
       "tfdsl": {
         "upgrade": ""
       }
@@ -571,7 +571,7 @@
     },
     {
       "name": "Sergeant Cog, Artillery • Mechanic",
-      "upgrade-needs": "Playing an Upgrade onto each friendly character and moving a leaving Battle Master to the KO area",
+      "upgrade-needs": "Playing an Upgrade onto each friendly character",
       "tfdsl": {
         "upgrade": ""
       }
@@ -620,9 +620,8 @@
     },
     {
       "name": "Private Smashdown, Ground Command • Artillery",
-      "upgrade-needs": "Comparing each player's battle-icon colors and moving a leaving Battle Master to the KO area",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "on(event=after-defend-flip,when(event().attacker=attached(),event().atk_flips.colours.count>event().flips.colours.count))->atk_eob(2,attached())"
       }
     },
     {
@@ -664,7 +663,6 @@
     },
     {
       "name": "Blaster, Communications",
-      "comment": "BUG: This is scrapping the top card. It should just be trying to play it. If it can't, it stays there",
       "tfdsl": {
         "alt": "on-start-game()->(place_under(this(),all_friends(trait='Mini-Cassette')))",
         "bot": "on-this-flip()->(deploy(this(),pick_under_this(trait='Mini-Cassette'),bot);if(done())->(reveal_cards(top_deck(),mute_opponents=true);play(top_deck())))"
