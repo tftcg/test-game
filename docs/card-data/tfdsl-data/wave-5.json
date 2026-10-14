@@ -64,8 +64,7 @@
     },
     {
       "name": "End Hostilities",
-      "tfdsl": "",
-      "needs": "Secret Action replacement of flipped battle-icon colors"
+      "tfdsl": "reveal(on-friend-defend())->revealed(set_flag_eot(this().id+event().defender.id+'_end-hostilities-active');instead(on(event=battle-flip,when(this().owner.flags=this().id+event().defender.id+'_end-hostilities-active',this().owner.flags!=this().id+event().defender.id+'_end-hostilities-done'))->modify_icon(orange,blue));on(event=char-after-defend,when(this().owner.flags=this().id+event().defender.id+'_end-hostilities-active'))->set_flag_eot(this().id+event().defender.id+'_end-hostilities-done'))"
     },
     {
       "name": "Energon Mace",

@@ -26,8 +26,7 @@
     },
     {
       "name": "Bellicosity",
-      "needs": "Changing flipped battle icon colors",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());instead(on(event=battle-flip,when(event().attacker=chosen(),this().owner.flags!=chosen().id+'_bellicosity'))->modify_icon(blue,orange));on(event=char-after-attack,when(event().attacker=chosen()))->set_flag_eot(chosen().id+'_bellicosity')"
     },
     {
       "name": "Cloaking Screen",
