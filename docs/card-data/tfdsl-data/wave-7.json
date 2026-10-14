@@ -39,8 +39,8 @@
     },
     {
       "name": "Electro-Static Shielding",
-      "tfdsl": "",
-      "needs": "Replacing an opponent's black battle icons with white icons for a battle"
+      "comment": "TODO: Test",
+      "tfdsl": "reveal(on-friend-defend())->revealed(set_flag_eot(this().id+event().defender.id+'_electro-static-shielding-active');instead(on(event=battle-flip,when(this().owner.flags=this().id+event().defender.id+'_electro-static-shielding-active',this().owner.flags!=this().id+event().defender.id+'_electro-static-shielding-done'))->modify_icon(black,white));on(event=char-after-defend,when(this().owner.flags=this().id+event().defender.id+'_electro-static-shielding-active'))->set_flag_eot(this().id+event().defender.id+'_electro-static-shielding-done'))"
     },
     {
       "name": "Enhanced Fusion Cannon",

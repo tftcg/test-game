@@ -16,35 +16,35 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1043/1476 (70.7%)</p>
+  <p>TFDSL completion: 1047/1476 (70.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>291</td><td>50</td><td>73</td><td>123</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>437</td><td>1</td><td>159</td><td>160</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>292</td><td>49</td><td>73</td><td>122</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>440</td><td>1</td><td>156</td><td>157</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>70</td><td>0</td><td>87</td><td>87</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 817/898 (91.0%)</p>
+  <p>TFDSL completion: 820/898 (91.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>257</td><td>27</td><td>9</td><td>36</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>332</td><td>0</td><td>39</td><td>39</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>258</td><td>26</td><td>9</td><td>35</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>334</td><td>0</td><td>37</td><td>37</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>25</td><td>0</td><td>5</td><td>5</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>wave-1</h2>
-  <p>TFDSL completion: 165/170 (97.1%)</p>
+  <p>TFDSL completion: 166/170 (97.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>51</td><td>47</td><td>3</td><td>1</td><td>4</td></tr>
+<tr><th scope="row">Character</th><td>51</td><td>48</td><td>2</td><td>1</td><td>3</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>85</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -53,7 +53,6 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Autobot Cosmos, Recon &amp; Communication</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">The reshuffle event doesn&#39;t have any attack info.</td><td class="comment">bot-needs: A deck reshuffle event while this character is attacking.</td></tr>
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Needs a has(pierce) DSL primitive</td></tr>
 <tr><th scope="row">Deadlock, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Tracking a chosen enemy until it is KO&#39;d during the turn. Needs an eot event listener.</td></tr>
 <tr><th scope="row">Decepticon Shockwave, Cybertron Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it</td><td class="comment"></td></tr>
@@ -124,7 +123,7 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Captain Elita-1, Special Ops • Ranger</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Confirm is failing. Presumably due to being on opponent&#39;s turn</td><td class="comment"></td></tr>
+<tr><th scope="row">Captain Elita-1, Special Ops • Ranger</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Playing actions on the opponent&#39;s turn is likely to be buggy</td><td class="comment"></td></tr>
 <tr><th scope="row">Eject, Electronic Surveillance</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">We agreed to treat Eject&#39;s alt mode as a Focus ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -203,12 +202,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-5</h2>
-  <p>TFDSL completion: 150/188 (79.8%)</p>
+  <p>TFDSL completion: 152/188 (80.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>42</td><td>12</td><td>3</td><td>15</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>46</td><td>0</td><td>18</td><td>18</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>48</td><td>0</td><td>16</td><td>16</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>25</td><td>0</td><td>5</td><td>5</td></tr>
 </tbody>
 </table>
@@ -237,7 +236,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Twin Twist, Demolitions</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Tracking how many times a character flipped this turn</td></tr>
 <tr><th scope="row">Wingspan, Data Processor</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Triggering when an Upgrade is scrapped from this character and placing it beneath this character</td></tr>
 <tr><th scope="row">Wolfwire, Ground Tracker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">This is relying on pick_hand not being cancelled. Needs pay()</td><td class="comment">body-needs: Replacing the post-battle green-card hand swap with a selected flipped card</td></tr>
-<tr><th scope="row">Concealing Contrails</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action replacement of flipped battle-icon colors</td></tr>
+<tr><th scope="row">Concealing Contrails</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Event/trigger that expires at end of battle</td></tr>
 <tr><th scope="row">Counterespionage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Naming cards and inspecting face-down enemy Secret Actions</td></tr>
 <tr><th scope="row">Electro-Optical Visor</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Escape Capsule</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving all upgrades to a character deployed from an upgraded head</td></tr>
@@ -250,14 +249,13 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Intrusion Countermeasures Software</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent-turn hand scrapping with drawing cards</td></tr>
 <tr><th scope="row">Junk Cannon</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Last Stand</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Lose the Initiative</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a single opponent untap with a star-count-limited friendly untap</td></tr>
+<tr><th scope="row">Lose the Initiative</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Lucky Dodge</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing odd attack damage with zero damage</td></tr>
 <tr><th scope="row">Master of Metallikato</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Master Sword</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent-caused scrap with a same-subtype Upgrade from hand</td></tr>
 <tr><th scope="row">Plasma Horns</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Precision Fire</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing a character mode as a runtime selector</td></tr>
 <tr><th scope="row">Regenerative Core</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving damage from a character to an Upgrade and tracking damage on that Upgrade</td></tr>
-<tr><th scope="row">Sonic Stun-Gun</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Triggering when a player plays any green battle card</td></tr>
 <tr><th scope="row">Speed Trap</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a second Action play and preventing further Action plays that turn</td></tr>
 <tr><th scope="row">Spymaster&#39;s Ruse</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Linking a played Secret Action to this card and exempting both from end-turn scrapping</td></tr>
 <tr><th scope="row">Temporal Quagmire</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping each player’s battle-card flips for a battle</td></tr>
@@ -403,12 +401,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-7</h2>
-  <p>TFDSL completion: 33/54 (61.1%)</p>
+  <p>TFDSL completion: 34/54 (63.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>10</td><td>6</td><td>3</td><td>1</td><td>4</td></tr>
-<tr><th scope="row">Battlecard</th><td>20</td><td>13</td><td>0</td><td>7</td><td>7</td></tr>
+<tr><th scope="row">Battlecard</th><td>20</td><td>14</td><td>0</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>16</td><td>8</td><td>0</td><td>8</td><td>8</td></tr>
 </tbody>
 </table>
@@ -424,7 +422,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Nightbird, Tera-Kura Construct</th><td>Character</td><td>bug</td><td>1/1</td><td class="comment">This should be setup by an on-this-battle. It also needs the damage to still happen even if Nightbird is KO&#39;d. Needs new feature support</td><td class="comment"></td></tr>
 <tr><th scope="row">Armor Piercing Munitions</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A selected character&#39;s this-turn attack trigger</td></tr>
 <tr><th scope="row">Contemplation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting zero to three hand cards and drawing once per card scrapped</td></tr>
-<tr><th scope="row">Electro-Static Shielding</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent&#39;s black battle icons with white icons for a battle</td></tr>
+<tr><th scope="row">Electro-Static Shielding</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Evasive Action</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action damage replacement with a trait-qualified target</td></tr>
 <tr><th scope="row">Rapid Response Cycle</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting a trait while an upgraded character is in a specific mode</td></tr>
 <tr><th scope="row">Revving the Engine</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking the third copy played in a turn and playing another copy</td></tr>

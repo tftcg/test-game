@@ -360,12 +360,10 @@
     },
     {
       "name": "Autobot Cosmos, Recon & Communication",
-      "comment": "BUG: The reshuffle event doesn't have any attack info.",
       "tfdsl": {
         "alt": "on-this-flip()->(scrap_hand(all_hand());draw(previous_target().count))",
-        "bot": "on-reshuffle(when(event().attacker=this()))->(if(event().defender.stars<=12)->ko(event().defender))"
-      },
-      "bot-needs": "A deck reshuffle event while this character is attacking."
+        "bot": "on-reshuffle(when(battle().attacker=this()))->(if(battle().defender.stars<=12)->ko(battle().defender))"
+      }
     },
     {
       "name": "Autobot Hound, Long-Range Scout",

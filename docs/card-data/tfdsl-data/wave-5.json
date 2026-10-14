@@ -26,7 +26,7 @@
     {
       "name": "Concealing Contrails",
       "tfdsl": "",
-      "needs": "Secret Action replacement of flipped battle-icon colors"
+      "needs": "Event/trigger that expires at end of battle"
     },
     {
       "name": "Conversion Expertise",
@@ -162,8 +162,8 @@
     },
     {
       "name": "Lose the Initiative",
-      "tfdsl": "",
-      "needs": "Replacing a single opponent untap with a star-count-limited friendly untap"
+      "comment": "TODO: Test",
+      "tfdsl": "reveal(instead(on-untap(when(event().untapped.owner!=this().owner))))->revealed(untap(pick_friend(stars<=event().untapped.stars)))"
     },
     {
       "name": "Lucky Dodge",
@@ -232,8 +232,7 @@
     },
     {
       "name": "Sonic Stun-Gun",
-      "tfdsl": "",
-      "needs": "Triggering when a player plays any green battle card"
+      "tfdsl": "on-play-action(when(event().card.green>=1))->atk_eot(1,attached());on-play-upgrade(when(event().played.green>=1))->atk_eot(1,attached())"
     },
     {
       "name": "Speed Trap",

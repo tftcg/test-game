@@ -168,7 +168,7 @@
     },
     {
       "name": "Leap of Faith",
-      "tfdsl": "scrap_deck(top_deck());if(confirm())->play(previous_target());scrap_deck(top_deck());if(confirm())->play(previous_target(2))"
+      "tfdsl": "reveal_cards(top_deck(),mute_opponents=true);scrap_deck(top_deck());if(confirm())->play(previous_target());reveal_cards(top_deck(),mute_opponents=true);scrap_deck(top_deck());if(confirm())->play(previous_target(2))"
     },
     {
       "name": "Marksmanship",
@@ -322,7 +322,7 @@
     {
       "name": "Underhanded Tactics",
       "comment": "TODO: How to do an if-it's-ko'd?",
-      "tfdsl": "damage(1,pick_enemy())"
+      "tfdsl": "damage(1,pick_enemy());if(previous_target().zone=opponent().ko)->repair(1,pick_friend(faction=Decepticon))"
     },
     {
       "name": "Universal Network Access",

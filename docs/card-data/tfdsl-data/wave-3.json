@@ -287,10 +287,10 @@
     },
     {
       "name": "Captain Elita-1, Special Ops • Ranger",
-      "comment": "BUG: Confirm is failing. Presumably due to being on opponent's turn",
+      "comment": "BUG: Playing actions on the opponent's turn is likely to be buggy",
       "tfdsl": {
         "alt": "on-this-flip(when(exists_friend(id!=this().id)))->(choose(pick_friend(id!=this().id));choose(range(0,chosen().damage));move_no_ko(chosen(),previous_target(),this()))",
-        "bot": "on-this-ko()->(scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target());scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target(2)))"
+        "bot": "on-this-ko()->(reveal_cards(top_deck(),mute_opponents=true);scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target());reveal_cards(top_deck(),mute_opponents=true);scrap_deck(top_deck());if(confirm('Play Revealed Card?'))->play(previous_target(2)))"
       }
     },
     {
