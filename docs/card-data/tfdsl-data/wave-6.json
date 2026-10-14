@@ -610,7 +610,7 @@
       "name": "Crashbash, Ocean Terror",
       "tfdsl": {
         "alt": "on-this-after-attack-flip(when(event().flips.orange<=this().def))->atk_eob(2,this())",
-        "body": "on-this-attack-damage(when(event().overkill<0,event().atk_flips.orange>=1,event().atk_flips.black>=1))->(if(confirm())->move(event().damage,event().target,pick_enemy(id!=event().target.id)))"
+        "body": "on-this-attack-damage(when(event().overkill<0,event().atk_flips.orange>=1,event().atk_flips.blue>=1))->(if(confirm())->move(event().damage,event().target,pick_enemy(id!=event().target.id)))"
       }
     },
     {
