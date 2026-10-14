@@ -164,8 +164,7 @@
     },
     {
       "name": "Inverted!",
-      "tfdsl": "",
-      "needs": "Replacing flipped orange and blue battle icons with one another."
+      "tfdsl": "instead(on-attached-battle-flip()->modify_icon_swap(orange,blue))"
     },
     {
       "name": "Leap of Faith",

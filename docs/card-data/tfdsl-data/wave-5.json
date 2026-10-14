@@ -9,8 +9,7 @@
   "cards": [
     {
       "name": "Belligerence",
-      "tfdsl": "",
-      "needs": "Replacing individual battle-icon colors for either player during a battle"
+      "tfdsl": "instead(on(event=battle-flip)->modify_icon(blue,orange))"
     },
     {
       "name": "Blade Flurry",
