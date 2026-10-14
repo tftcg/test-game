@@ -29,8 +29,7 @@
     },
     {
       "name": "Battlefield Scan",
-      "needs": "Temporarily preventing enemies from using Brave and Stealth",
-      "tfdsl": ""
+      "tfdsl": "each(all_enemies())->(no_brave_eot(true,it());no_stealth_eot(true,it()))"
     },
     {
       "name": "Bolster",
@@ -367,10 +366,9 @@
     },
     {
       "name": "Private Firedrive, Ground Command • Artillery",
-      "upgrade-needs": "Scrapping any chosen number of hand cards for a matching attack bonus",
       "tfdsl": {
         "bot": "on-this-attack()->draw(1)",
-        "upgrade": ""
+        "upgrade": "on-attached-attack()->(choose(range(0,this().owner.hand.count),prompt='Scrap cards for +ATK?');if(chosen()>0)->(scrap_hand(pick_hand(exact=chosen()));atk_eot(chosen(),attached())))"
       }
     },
     {
@@ -570,9 +568,9 @@
     },
     {
       "name": "Sergeant Cog, Artillery • Mechanic",
-      "upgrade-needs": "Playing an Upgrade onto each friendly character",
+      "comment": "BUG: Game is choosing the characters in left to right order. Somehow player needs to choose characters but not be able to pick them again. Maybe if previous_targets() plural was made available, could be checking against that??",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "on-put()->(draw(this().owner.chars.count);each(all(this().owner.chars))->play_upgrade(pick_hand(type=Upgrade),it()))"
       }
     },
     {

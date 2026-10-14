@@ -303,9 +303,9 @@
     },
     {
       "name": "Deadlock, Soldier of Fortune",
-      "alt-needs": "Granting Stealth only against specified factions and preventing those factions from using Stealth",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-opponent-attacker-chosen(when(event().attacker.faction=Autobot || event().attacker.faction=Decepticon))->stealth_eob(true, this());on-this-flip()->(each(all_enemies(faction=Autobot || faction=Decepticon))->no_stealth_eot(true,it()))",
         "bot": "bounty((flip(this());draw(2)))"
       }
     },
@@ -384,10 +384,9 @@
     },
     {
       "name": "Private Dazzlestrike, Ground Command • Artillery",
-      "bot-needs": "Preventing enemies from using Brave",
       "upgrade-needs": "Events for an upgrade being removed from a character or leaving the battlefield",
       "tfdsl": {
-        "bot": "",
+        "bot": "each(all_enemies())->static(no_brave,true,target=it())",
         "upgrade": ""
       }
     },

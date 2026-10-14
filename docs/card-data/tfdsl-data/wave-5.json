@@ -248,8 +248,7 @@
     },
     {
       "name": "Spy Satellite Uplink",
-      "tfdsl": "",
-      "needs": "Preventing Brave and Stealth use against the upgraded character"
+      "tfdsl": "on-attached-attacker-chosen()->(each(all_enemies())->(no_brave_eob(true,it());no_stealth_eob(true,it())))"
     },
     {
       "name": "Spymaster's Ruse",
