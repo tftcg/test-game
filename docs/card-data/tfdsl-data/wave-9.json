@@ -199,9 +199,9 @@
     },
     {
       "name": "Can't Squish This",
-      "front-needs": "Reducing Pierce by a variable amount based on hand size",
+      "front-needs": "Needs a has(pierce)",
       "tfdsl": {
-        "front": ""
+        "front": "on-target-defend()->(if(this().owner.hand.count>=1,this().owner.hand.count<=4)->pierce_eot(0-2,event().attacker);if(this().owner.hand.count>=5,this().owner.hand.count<=7)->pierce_eot(0-3,event().attacker);if(this().owner.hand.count>=8)->pierce_eot(0-4,event().attacker))"
       }
     },
     {

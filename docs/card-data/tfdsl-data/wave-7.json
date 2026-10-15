@@ -74,8 +74,7 @@
     },
     {
       "name": "Revving the Engine",
-      "tfdsl": "",
-      "needs": "Tracking the third copy played in a turn and playing another copy"
+      "tfdsl": "atk_eot(1,pick_friend(trait=Car));if(all(self().played,name=this().name).count=3)->can_atk_untapped(scope=eot,true,pick_friend());if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Robust",
@@ -181,18 +180,15 @@
     },
     {
       "name": "Sulfuric Deluge",
-      "front-needs": "Mode-conditional static ability on a Stratagem target",
       "tfdsl": {
-        "front": ""
+        "front": "static(pierce,when(all_friends(fullname=this().target).mode=alt),2,target=all_friends(fullname=this().target))"
       }
     },
     {
       "name": "Assault Protocol",
-      "front-needs": "Flipping a Stratagem",
-      "back-needs": "Flipping a Stratagem",
       "tfdsl": {
-        "front": "",
-        "back": ""
+        "front": "on-start-turn()->(if(confirm('Scrap card to flip Assault Protocol?'))->(scrap_hand(pick_hand(exact=1));if(done())->flip(this())));on-target-attack(when(event().attacker.weapons.count=0))->atk_eot(1,event().attacker)",
+        "back": "on-start-turn()->(if(confirm('Scrap card to flip Assault Protocol?'))->(scrap_hand(pick_hand(exact=1));if(done())->flip(this())));on-target-defend(when(event().defender.armors.count=0))->def_eot(1,event().defender)"
       }
     },
     {

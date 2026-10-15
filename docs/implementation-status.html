@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1047/1476 (70.9%)</p>
+  <p>TFDSL completion: 1051/1476 (71.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>414</td><td>292</td><td>49</td><td>73</td><td>122</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>440</td><td>1</td><td>156</td><td>157</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>70</td><td>0</td><td>87</td><td>87</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>441</td><td>1</td><td>155</td><td>156</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>72</td><td>1</td><td>84</td><td>85</td></tr>
 </tbody>
 </table>
 </section>
@@ -401,13 +401,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-7</h2>
-  <p>TFDSL completion: 34/54 (63.0%)</p>
+  <p>TFDSL completion: 38/54 (70.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>10</td><td>6</td><td>3</td><td>1</td><td>4</td></tr>
-<tr><th scope="row">Battlecard</th><td>20</td><td>14</td><td>0</td><td>6</td><td>6</td></tr>
-<tr><th scope="row">Stratagem</th><td>16</td><td>8</td><td>0</td><td>8</td><td>8</td></tr>
+<tr><th scope="row">Battlecard</th><td>20</td><td>15</td><td>0</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">Stratagem</th><td>16</td><td>10</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -425,17 +425,14 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Electro-Static Shielding</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Evasive Action</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action damage replacement with a trait-qualified target</td></tr>
 <tr><th scope="row">Rapid Response Cycle</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting a trait while an upgraded character is in a specific mode</td></tr>
-<tr><th scope="row">Revving the Engine</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking the third copy played in a turn and playing another copy</td></tr>
 <tr><th scope="row">Trithyllium Drill</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Triggering when a card is put from hand on top of a deck</td></tr>
 <tr><th scope="row">Artillery Support</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Temporary Pierce reduction at end of battle for a mode-qualified defender</td></tr>
-<tr><th scope="row">Assault Protocol</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Flipping a Stratagem<br>back-needs: Flipping a Stratagem</td></tr>
 <tr><th scope="row">Durable Decepticon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Repairing once per card placed under a combiner, capped at five</td></tr>
 <tr><th scope="row">Fully Loaded</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing a scrapped top-deck Upgrade directly onto a named character and capping a dynamic health bonus</td></tr>
 <tr><th scope="row">Impervious</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing an Armor scrap with an optional Armor scrap from hand</td></tr>
 <tr><th scope="row">Obfuscating Cloud</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Safeguard for friends not working yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Out of the Way Hot Rod!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Optional non-attack damage redirection to another character</td></tr>
 <tr><th scope="row">Silent Hunter</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Pre-game deck-to-character Upgrade placement and post-battle damage</td></tr>
-<tr><th scope="row">Sulfuric Deluge</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Mode-conditional static ability on a Stratagem target</td></tr>
 </tbody>
 </table>
 </section>
@@ -605,7 +602,7 @@ thead { background: #f3f4f6; }
 <tbody>
 <tr><th scope="row">Character</th><td>26</td><td>16</td><td>6</td><td>4</td><td>10</td></tr>
 <tr><th scope="row">Battlecard</th><td>35</td><td>25</td><td>0</td><td>10</td><td>10</td></tr>
-<tr><th scope="row">Stratagem</th><td>15</td><td>11</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><th scope="row">Stratagem</th><td>15</td><td>11</td><td>1</td><td>3</td><td>4</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -644,7 +641,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Zarak Shield</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test force field effect. NOTE: This predicates on &#39;Lord Zarak, Ruler of Nebulos&#39; because &#39;Lord&#39; is a squishy prefix; will need fixing if another Zarak is added</td><td class="comment"></td></tr>
 <tr><th scope="row">Arm the Lonely</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test - make sure flipping works and that there is a working flip_cleaner</td><td class="comment"></td></tr>
 <tr><th scope="row">Brothers In Armor</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test - make sure flipping works and that there is a working flip_cleaner</td><td class="comment"></td></tr>
-<tr><th scope="row">Can&#39;t Squish This</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Reducing Pierce by a variable amount based on hand size</td></tr>
+<tr><th scope="row">Can&#39;t Squish This</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Needs a has(pierce)</td></tr>
 <tr><th scope="row">Do It With Style!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing text in a character&#39;s printed ability</td></tr>
 <tr><th scope="row">Drop Your Weapons</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Setting a character&#39;s base ATK for a battle</td></tr>
 <tr><th scope="row">Scout the Area</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test - make sure flipping works and that there is a working flip_cleaner</td><td class="comment"></td></tr>
