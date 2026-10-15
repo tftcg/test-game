@@ -763,9 +763,8 @@
     },
     {
       "name": "Devastator, Towering Warrior",
-      "comment": "TODO: Rather than setting base atk to 10, it gives him +4 atk",
       "tfdsl": {
-        "combiner": "on-this-combine()->repair(tower().counter,this());static(bold,when(tower().counter>=6),2);static(atk,when(tower().counter>=10),4)"
+        "combiner": "on-this-combine()->repair(tower().counter,this());static(bold,when(tower().counter>=6),2);static(base_atk,when(tower().counter>=10),10)"
       }
     },
     {

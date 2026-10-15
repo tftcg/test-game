@@ -9,8 +9,7 @@
   "cards": [
     {
       "name": "4-Wheel Drive",
-      "tfdsl": "",
-      "needs": "Setting a character's base ATK conditionally"
+      "tfdsl": "choose(pick_friend());static(base_atk,when(chosen().trait=Truck),7,target=chosen())"
     },
     {
       "name": "Acute Reflexes",
@@ -679,10 +678,10 @@
     },
     {
       "name": "Trypticon, Assault Base",
-      "bot-needs": "Choosing between temporary ATK and repair after KO'ing another character",
+      "comment": "BUG: Static effects to other characters don't see new charcters enter the battlefield",
       "tfdsl": {
         "alt": "on-start-game()->(summon_friend('Full-Tilt, Base Recon','Wipe-Out, Devoted Minion','Brunt, Artillery Drone');place_under(this(),previous_target(1),previous_target(2),previous_target(3)));each(all_friends(id!=this().id))->static(bold,1,target=it())",
-        "bot": ""
+        "bot": "on-this-flip()->(if(confirm('KO another character?'))->(ko(pick_friend(id!=this().id));if(done())->(choose(options('Get +3 ATK until EOT','Repair 3'));if(chosen()='Get +3 ATK until EOT')->atk_eot(3,this());if(chosen()='Repair 3')->repair(3,this()))))"
       }
     },
     {

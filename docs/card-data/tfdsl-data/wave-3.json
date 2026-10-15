@@ -394,9 +394,8 @@
     },
     {
       "name": "Private Pteraxadon, Air Command • Artillery",
-      "upgrade-needs": "Setting base DEF",
       "tfdsl": {
-        "upgrade": ""
+        "upgrade": "on-attached-after-attack-flip(when(event().flips.white>=2))->base_def_eob(0,event().defender)"
       }
     },
     {

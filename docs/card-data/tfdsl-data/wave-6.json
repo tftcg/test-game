@@ -274,8 +274,7 @@
     },
     {
       "name": "Turnabout Snare",
-      "needs": "Swapping base ATK and base DEF until end of battle.",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(swap_base_stats(event().attacker,scope=eob))"
     },
     {
       "name": "Underbase Fragment",

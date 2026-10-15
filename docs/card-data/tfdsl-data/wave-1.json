@@ -446,7 +446,7 @@
       "comment": "NOTE: Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it",
       "tfdsl": {
         "alt": "on-this-flip()->(each(all_players())->draw(2,it()))",
-        "bot": "on-opponent-scrap-hand()->damage(1,opponent_pick(opponent().upgrades))"
+        "bot": "on-opponent-scrap-hand()->damage(1,opponent_pick_opponent_char())"
       }
     },
     {

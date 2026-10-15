@@ -207,8 +207,8 @@
     },
     {
       "name": "Precision Fire",
-      "tfdsl": "",
-      "needs": "Choosing a character mode as a runtime selector"
+      "comment": "NOTE: Usualy alt1/alt2 etc issues. Needs testing against Sky Shadow's Combiner Body",
+      "tfdsl": "choose(options('alt','bot','body','combiner'));damage(1,all_chars(mode=chosen()))"
     },
     {
       "name": "Reflect Damage",
@@ -369,10 +369,10 @@
     },
     {
       "name": "More Guns",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Once-per-game return of a KO’d Weaponizer in Upgrade mode to the battlefield as an Upgrade"
+        "front": "on-friend-scrapped(when(event().scrapped.traits='Weaponizer'))->(put_upgrade(event().scrapped,pick_friend());flip(this()))"
+      }
     },
     {
       "name": "Orbital Strike",
@@ -754,11 +754,11 @@
     },
     {
       "name": "Twin Twist, Demolitions",
+      "comment": "NOTE: Only issue here is that there are triggers that the player won't understand for ordering",
       "tfdsl": {
-        "alt": "on-this-flip()->pierce_eot(3,this())",
-        "body": ""
-      },
-      "body-needs": "Tracking how many times a character flipped this turn"
+        "alt": "on-this-flip()->pierce_eot(3,this());on-this-flip()->(if(this().owner.flags=this().id+'_flip1')->set_flag_eot(this().id+'_flip2');set_flag_eot(this().id+'_flip1'))",
+        "body": "on-this-flip()->(if(this().owner.flags=this().id+'_flip1')->set_flag_eot(this().id+'_flip2');set_flag_eot(this().id+'_flip1');if(this().owner.flags=this().id+'_flip2')->damage(1,all_enemies());if(this().owner.flags=this().id+'_flip1')->damage(1,opponent_pick_opponent_char()))"
+      }
     },
     {
       "name": "Vorath",

@@ -53,8 +53,7 @@
     },
     {
       "name": "Enhanced Cyber Blade",
-      "needs": "Setting a character's base DEF for a battle",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Melee);on-attached-after-attack-flip(when(event().flips.blue>=2))->base_def_eob(0,event().defender)"
     },
     {
       "name": "Feral Tenacity",
@@ -213,9 +212,8 @@
     },
     {
       "name": "Drop Your Weapons",
-      "front-needs": "Setting a character's base ATK for a battle",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-after-defend-flip(when(event().defender.fullname=this().target,event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->base_atk_eob(0,event().attacker)"
       }
     },
     {
