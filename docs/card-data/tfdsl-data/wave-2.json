@@ -218,7 +218,7 @@
     {
       "name": "Reckless Charge",
       "comment": "NOTE: each(..) is used here because previous_target doesn't survive through events but it() will",
-      "tfdsl": "each(pick_friend())->(atk_eot(4,it());on-eot()->damage(3,it()))"
+      "tfdsl": "each(pick_friend())->(atk_eot(4,it());on-end-turn()->damage(3,it()))"
     },
     {
       "name": "Recon System",
@@ -390,7 +390,7 @@
     {
       "name": "Blackwing, Aerial Attacker",
       "tfdsl": {
-        "bot": "on-eot(when(event().player=this().owner,all_friends(fullname='Dreadwind, Air Defense').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
+        "bot": "on-end-turn(when(all_friends(fullname='Dreadwind, Air Defense').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
       }
     },
     {
@@ -497,7 +497,7 @@
       "name": "Dreadwind, Air Defense",
       "tfdsl": {
         "alt": "pierce(2)",
-        "bot": "on-eot(when(event().player=this().owner,all_friends(fullname='Blackwing, Aerial Attacker').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
+        "bot": "on-end-turn(when(all_friends(fullname='Blackwing, Aerial Attacker').mode=bot))->(if(confirm())->(scrap_hand(pick_hand(exact=3));if(done())->combine('Dreadwing, Sky Destroyer',2,bot,Dreadwing)))"
       }
     },
     {

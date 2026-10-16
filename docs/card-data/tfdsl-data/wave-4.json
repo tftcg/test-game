@@ -48,8 +48,8 @@
     },
     {
       "name": "Conversion Engine",
-      "tfdsl": "",
-      "needs": "Restricting an upgrade to characters with multiple alt modes and flipping its character to another mode"
+      "comment": "NOTE: Currently using modes>=3 rather than alt>=2",
+      "tfdsl": "put_only(modes.count>=3);on-end-turn()->flip(attached())"
     },
     {
       "name": "Coup",
@@ -398,9 +398,8 @@
     },
     {
       "name": "Private Greenlight, Special Ops • Recon",
-      "alt-needs": "Preventing an opponent's cards from scrapping this character's Upgrades",
       "tfdsl": {
-        "alt": "",
+        "alt": "instead(on-attached-scrapped(when(event().cause.owner!=this().owner))->do_nothing())",
         "bot": "on(event=play-action,when(event().player=this().owner,event().card.green>=1))->atk_eot(1,this())"
       }
     },

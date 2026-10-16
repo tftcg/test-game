@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1068/1476 (72.4%)</p>
+  <p>TFDSL completion: 1070/1476 (72.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>297</td><td>46</td><td>71</td><td>117</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>450</td><td>0</td><td>147</td><td>147</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>298</td><td>45</td><td>71</td><td>116</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>451</td><td>0</td><td>146</td><td>146</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>74</td><td>1</td><td>82</td><td>83</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 828/898 (92.2%)</p>
+  <p>TFDSL completion: 830/898 (92.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>261</td><td>25</td><td>7</td><td>32</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>337</td><td>0</td><td>34</td><td>34</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>262</td><td>24</td><td>7</td><td>31</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>338</td><td>0</td><td>33</td><td>33</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>26</td><td>0</td><td>4</td><td>4</td></tr>
 </tbody>
 </table>
@@ -150,12 +150,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-4</h2>
-  <p>TFDSL completion: 159/174 (91.4%)</p>
+  <p>TFDSL completion: 161/174 (92.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>53</td><td>7</td><td>0</td><td>7</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>56</td><td>0</td><td>8</td><td>8</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>54</td><td>6</td><td>0</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>57</td><td>0</td><td>7</td><td>7</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -165,7 +165,6 @@ thead { background: #f3f4f6; }
 <tbody>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Dazzlestrike, Ground Command • Artillery</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Events for an upgrade being removed from a character or leaving the battlefield</td></tr>
-<tr><th scope="row">Private Greenlight, Special Ops • Recon</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing an opponent&#39;s cards from scrapping this character&#39;s Upgrades</td></tr>
 <tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
@@ -178,7 +177,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Trypticon, Assault Base</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Static effects to other characters don&#39;t see new charcters enter the battlefield</td><td class="comment"></td></tr>
 <tr><th scope="row">Blast Suit</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Halving attack damage rounded down</td></tr>
 <tr><th scope="row">Composite Armor</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">The scrap is happening immediately rather than after defend</td><td class="comment"></td></tr>
-<tr><th scope="row">Conversion Engine</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Restricting an upgrade to characters with multiple alt modes and flipping its character to another mode</td></tr>
+<tr><th scope="row">Conversion Engine</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Crude Club</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty</td></tr>
 <tr><th scope="row">Defensive Configuration</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

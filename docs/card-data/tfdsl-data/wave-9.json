@@ -179,7 +179,7 @@
     {
       "name": "Battlefield Dissonance",
       "tfdsl": {
-        "front": "on-eot(when(all_friends(fullname='Beastbox, Savage Interrogator').mode=bot,all_friends(fullname='Squawktalk, Chatterbox Translator').mode=bot))->(if(confirm('Scrap two cards to form Squawkbox?'))->(scrap_hand(pick_hand(exact=2));if(done())->combine('Squawkbox, Passionate Musician',2,bot,'Beastbox, Savage Interrogator','Squawktalk, Chatterbox Translator')))"
+        "front": "on-end-turn(when(all_friends(fullname='Beastbox, Savage Interrogator').mode=bot,all_friends(fullname='Squawktalk, Chatterbox Translator').mode=bot))->(if(confirm('Scrap two cards to form Squawkbox?'))->(scrap_hand(pick_hand(exact=2));if(done())->combine('Squawkbox, Passionate Musician',2,bot,'Beastbox, Savage Interrogator','Squawktalk, Chatterbox Translator')))"
       }
     },
     {

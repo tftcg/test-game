@@ -153,7 +153,7 @@
     },
     {
       "name": "Last Stand",
-      "tfdsl": "atk_eot(5,pick_friend());on-eot()->ko(previous_target())",
+      "tfdsl": "atk_eot(5,pick_friend());on-end-turn()->ko(previous_target())",
       "comment": "TODO: Test"
     },
     {
