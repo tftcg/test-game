@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1066/1476 (72.2%)</p>
+  <p>TFDSL completion: 1068/1476 (72.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>296</td><td>47</td><td>71</td><td>118</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>449</td><td>0</td><td>148</td><td>148</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>297</td><td>46</td><td>71</td><td>117</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>450</td><td>0</td><td>147</td><td>147</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>74</td><td>1</td><td>82</td><td>83</td></tr>
 </tbody>
 </table>
@@ -431,11 +431,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 37/199 (18.6%)</p>
+  <p>TFDSL completion: 38/199 (19.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>3</td><td>4</td><td>35</td><td>39</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>4</td><td>3</td><td>35</td><td>38</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>27</td><td>0</td><td>54</td><td>54</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>4</td><td>0</td><td>37</td><td>37</td></tr>
 </tbody>
@@ -459,7 +459,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Characters with a specified alternate mode and Stations<br>bot-needs: Detecting a character leaving a Station</td></tr>
 <tr><th scope="row">Lord Kledji, Royal Ruler of Quintessa</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: TAP ability choices that discard a Green card as a cost and affect Rolling Actions or enemy Upgrades</td></tr>
 <tr><th scope="row">Loudmouth, Incendiary Control</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Moving scrapped cards to KO and returning a same-named Upgrade from scrap<br>body-needs: Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap</td></tr>
-<tr><th scope="row">Megatron, Megalomaniacal Mariner</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">This needs a pay() as it has an If you do</td><td class="comment">bot-needs: Revealing multiple deck cards and playing one after a conditional self-damage effect</td></tr>
 <tr><th scope="row">Muck Sergeant Peck, Brackish Chain-Breaker</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Triggering after qualifying attack damage and playing a Rolling Action<br>bot-needs: Moving damage between characters while preventing either from being KO&#39;d</td></tr>
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Assembling paired cards, additional Weapon slot capacity, and replacing a leave-play event with a move to KO</td></tr>
 <tr><th scope="row">Q-RTR Arachnoid Array</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Assembling paired cards, Revenge relocation, and replacing a leave-play event with a move to KO</td></tr>
@@ -587,12 +586,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-9</h2>
-  <p>TFDSL completion: 73/98 (74.5%)</p>
+  <p>TFDSL completion: 74/98 (75.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>26</td><td>16</td><td>6</td><td>4</td><td>10</td></tr>
-<tr><th scope="row">Battlecard</th><td>35</td><td>26</td><td>0</td><td>9</td><td>9</td></tr>
+<tr><th scope="row">Battlecard</th><td>35</td><td>27</td><td>0</td><td>8</td><td>8</td></tr>
 <tr><th scope="row">Stratagem</th><td>15</td><td>12</td><td>1</td><td>2</td><td>3</td></tr>
 </tbody>
 </table>
@@ -622,7 +621,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Cloud Cover</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing damage counters from moving between characters</td></tr>
 <tr><th scope="row">Cosmic Rust Cannon</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Resolving an optional scrap-or-damage choice after battle - else statement? if(!done())?</td></tr>
 <tr><th scope="row">Feral Tenacity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Adding, counting, and removing named counters on an Upgrade</td></tr>
-<tr><th scope="row">Nothin&#39;s Gonna Stand In Our Way</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting cards with a specific name played during a turn</td></tr>
 <tr><th scope="row">Spoils of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing up to five characters that share a trait</td></tr>
 <tr><th scope="row">Starscream&#39;s Cape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Increasing numbers in a character&#39;s printed text box</td></tr>
 <tr><th scope="row">Trithyllium Plating</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?</td><td class="comment"></td></tr>

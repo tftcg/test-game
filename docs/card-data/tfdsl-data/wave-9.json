@@ -75,8 +75,7 @@
     },
     {
       "name": "Nothin's Gonna Stand In Our Way",
-      "needs": "Counting cards with a specific name played during a turn",
-      "tfdsl": ""
+      "tfdsl": "pierce_eot(1,pick_friend());if(all(self().played,name=this().name).count=3)->untap(pick_friend(stars<=12));if(confirm())->play(pick_hand(name=this().name))"
     },
     {
       "name": "Particle Cannon of Galvatron",

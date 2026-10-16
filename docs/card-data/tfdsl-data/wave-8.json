@@ -813,12 +813,10 @@
     },
     {
       "name": "Megatron, Megalomaniacal Mariner",
-      "comment": "TODO: This needs a pay() as it has an If you do",
       "tfdsl": {
-        "alt": "static(health,all(self().ko,trait=Allicon || trait=Sharkticon).count);on-friend-attack(when(event().attacker.id!=this().id,event().attacker.trait=Allicon || event().attacker.trait=Sharkticon))->(if(confirm())->(damage(1,event().attacker);atk_eot(1,event().attacker)))",
-        "bot": ""
-      },
-      "bot-needs": "Revealing multiple deck cards and playing one after a conditional self-damage effect"
+        "alt": "static(health,all(self().ko,trait=Allicon || trait=Sharkticon).count);on-friend-attack(when(event().attacker.id!=this().id,event().attacker.trait=Allicon || event().attacker.trait=Sharkticon))->(if(confirm('Damage '+event().attacker.name+'?'))->(damage(1,event().attacker);atk_eot(1,event().attacker)))",
+        "bot": "static(health,all(self().ko,trait=Allicon || trait=Sharkticon).count);on-this-flip()->(if(confirm('Damage a friendly Allicon/Sharkticon?'))->(damage(2,pick_friend(trait=Allicon || trait=Sharkticon));reveal_cards(top_deck(count=2));play(pick(previous_target(2)))))"
+      }
     },
     {
       "name": "Muck Sergeant Peck, Brackish Chain-Breaker",
