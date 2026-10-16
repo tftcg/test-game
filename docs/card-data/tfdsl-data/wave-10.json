@@ -339,8 +339,7 @@
     },
     {
       "name": "Tactical Suppression",
-      "needs": "Sixshot is not currently getting 'Unaffected by Oppress this turn'",
-      "tfdsl": "reveal(on-friend-battle())->revealed(oppress_eot(2,event().battler);if(event().battler.name=Sixshot)->(bold_eot(2,event().battler);tough_eot(2,event().battler)))"
+      "tfdsl": "reveal(on-friend-battle())->revealed(oppress_eot(2,event().battler);if(event().battler.name=Sixshot)->(bold_eot(2,event().battler);tough_eot(2,event().battler);ignore_oppress_eot(true,event().battler)))"
     },
     {
       "name": "Sixshot, Solo Transformer Assault Group",
@@ -350,9 +349,8 @@
         "alt 3": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->draw(1)",
         "alt 4": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->pierce_eot(3,this())",
         "alt 5": "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->damage(1,pick_enemy())",
-        "bot":   "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->(reveal_cards(top_deck(count=2));if(exists_card(previous_target(),faction=Decepticon))->(if(confirm('Play Decepticon card?'))->play(pick(previous_target(),faction=Decepticon))))"
-      },
-      "bot-needs": "Bot mode needs reordering cards after reveal"
+        "bot":   "on-this-after-battle()->(if(confirm('Scrap a card to flip Sixshot?'))->(scrap_hand(pick_hand());if(done())->flip(this())));on-this-flip()->(reveal_cards(top_deck(count=2));if(exists_card(previous_target(),faction=Decepticon))->(if(confirm('Play Decepticon card?'))->play(pick(previous_target(),faction=Decepticon)):else->reorder_deck(2)):else->reorder_deck(2))"
+      }
     }
   ]
 }

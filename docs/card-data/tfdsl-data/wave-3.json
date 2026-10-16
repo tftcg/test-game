@@ -608,7 +608,6 @@
     },
     {
       "name": "Specialist Ratchet, Engineering • Rescue & Repair",
-      "comment": "BUG: Is getting +1 atk when a repair is attempted on a zero damage character",
       "tfdsl": {
         "alt": "on-start-game()->(if(confirm('Move Medic! to Hand?'))->move_to(self().hand,pick_deck(name='Medic!')))",
         "bot": "on-repair(when(event().origin.owner=this().owner))->atk_eot(1,this())"
@@ -643,11 +642,11 @@
     },
     {
       "name": "Intercept Communications",
-      "tfdsl": "play_only(starting_team(name=Soundwave)>0);draw(2);put_opponent_deck(pick_opponent_scrap())"
+      "tfdsl": "play_only(starting_team(name=Soundwave).count>0);draw(2);put_opponent_deck(pick_opponent_scrap())"
     },
     {
       "name": "Interpret The Airwaves",
-      "tfdsl": "play_only(starting_team(name=Blaster)>0);reorder_deck(5)"
+      "tfdsl": "play_only(starting_team(name=Blaster).count>0);reorder_deck(5)"
     },
     {
       "name": "Obstructive Rhythm",
@@ -655,7 +654,7 @@
     },
     {
       "name": "Recover Cassette",
-      "tfdsl": "play_only(starting_team(name=Blaster || name=Soundwave)>0);if(confirm('Place Mini-Cassette Under Cassette Player?'))->(place_under(pick_friend(name=Blaster || name=Soundwave),pick_friend(trait='Mini-Cassette'));repair(2,pick_friend());ko(this()))"
+      "tfdsl": "play_only(starting_team(name=Blaster || name=Soundwave).count>0);if(confirm('Place Mini-Cassette Under Cassette Player?'))->(place_under(pick_friend(name=Blaster || name=Soundwave),pick_friend(trait='Mini-Cassette'));repair(2,pick_friend());ko(this()))"
     },
     {
       "name": "Blaster, Communications",

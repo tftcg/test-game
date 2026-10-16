@@ -90,8 +90,7 @@
     },
     {
       "name": "Trithyllium Drill",
-      "tfdsl": "",
-      "needs": "Triggering when a card is put from hand on top of a deck"
+      "tfdsl": "on-attached-attack()->plan(2);on-put-deck()->pierce_eot(1,attached())"
     },
     {
       "name": "All Hail Megatron!"

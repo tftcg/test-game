@@ -70,7 +70,6 @@
     },
     {
       "name": "Drill Fingers",
-      "comment": "TODO: Implement Oppress!!",
       "tfdsl": "on-put(when(attached().trait=Specialist))->damage(1,attached());static(atk,when(attached().trait=Specialist),1);oppress(1)"
     },
     {
@@ -80,8 +79,7 @@
     },
     {
       "name": "Escapology",
-      "tfdsl": "",
-      "needs": "Temporary immunity to Oppress"
+      "tfdsl": "bold_eot(1,pick_friend());ignore_oppress_eot(true,previous_target())"
     },
     {
       "name": "Everything Must Go!",

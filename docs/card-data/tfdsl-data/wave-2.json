@@ -176,12 +176,12 @@
     },
     {
       "name": "Master Plan",
+      "comment": "Bug: This is requiring 6 cards exactly, not up to. Issue with Plan",
       "tfdsl": "plan(6)"
     },
     {
       "name": "Mining Pick",
-      "tfdsl": "",
-      "needs": "An event for a card moving from a hand to the top of its owner's deck."
+      "tfdsl": "on-put-deck()->atk_eot(1,attached())"
     },
     {
       "name": "Mounted Missiles",
@@ -613,10 +613,9 @@
       "name": "Starscream, Decepticon King",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "on-this-battle-flip(when(event().flips.card.name='Decepticon Crown'))->(atk_eot(3,this());def_eot(3,this()))"
       },
-      "alt-needs": "Filtering scrap cards by whether their rules grant Plan.",
-      "bot-needs": "Triggering on a named battle card flip while this character battles."
+      "alt-needs": "Filtering scrap cards by whether their rules grant Plan."
     },
     {
       "name": "Sunstreaker, Bold Warrior",

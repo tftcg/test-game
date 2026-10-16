@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1060/1476 (71.8%)</p>
+  <p>TFDSL completion: 1066/1476 (72.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>295</td><td>47</td><td>72</td><td>119</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>445</td><td>1</td><td>151</td><td>152</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>296</td><td>47</td><td>71</td><td>118</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>449</td><td>0</td><td>148</td><td>148</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>74</td><td>1</td><td>82</td><td>83</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 826/898 (92.0%)</p>
+  <p>TFDSL completion: 828/898 (92.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>261</td><td>24</td><td>8</td><td>32</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>336</td><td>0</td><td>35</td><td>35</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>261</td><td>25</td><td>7</td><td>32</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>337</td><td>0</td><td>34</td><td>34</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>26</td><td>0</td><td>4</td><td>4</td></tr>
 </tbody>
 </table>
@@ -68,12 +68,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-2</h2>
-  <p>TFDSL completion: 175/184 (95.1%)</p>
+  <p>TFDSL completion: 177/184 (96.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>59</td><td>2</td><td>3</td><td>5</td></tr>
-<tr><th scope="row">Battlecard</th><td>86</td><td>82</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>59</td><td>3</td><td>2</td><td>5</td></tr>
+<tr><th scope="row">Battlecard</th><td>86</td><td>83</td><td>0</td><td>3</td><td>3</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -89,14 +89,13 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Currently all sentinels you don&#39;t have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don&#39;t have preselected</td><td class="comment"></td></tr>
 <tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Scrapper&#39;s bot mode lives in the Tower rather than on him</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Teleporting Seeker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Once-per-turn trigger gating across battle-card play and flip events.</td></tr>
-<tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.<br>bot-needs: Triggering on a named battle card flip while this character battles.</td></tr>
+<tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.</td></tr>
 <tr><th scope="row">Warpath, Confident Sharpshooter</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Bumpers</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Crash Landing</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Needs testing</td><td class="comment"></td></tr>
 <tr><th scope="row">Decepticon Crown</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Dinobot Enigma</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Fog of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Each player independently choosing cards to keep before scrapping the rest of their hand.</td></tr>
-<tr><th scope="row">Mining Pick</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: An event for a card moving from a hand to the top of its owner&#39;s deck.</td></tr>
 <tr><th scope="row">Predacon Enigma</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Reckless Charge</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">each(..) is used here because previous_target doesn&#39;t survive through events but it() will</td><td class="comment"></td></tr>
 <tr><th scope="row">Recon System</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Increasing a battle flip and choosing a flipped card to scrap before its battle icons are used.</td></tr>
@@ -133,7 +132,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Raider Visper, Infantry • Patrol Leader</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Cog, Artillery • Mechanic</th><td>Character</td><td>bug</td><td>1/1</td><td class="comment">Game is choosing the characters in left to right order. Somehow player needs to choose characters but not be able to pick them again. Maybe if previous_targets() plural was made available, could be checking against that??</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Overdrive, Special Ops • Strategist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Specialist Ratchet, Engineering • Rescue &amp; Repair</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Is getting +1 atk when a repair is attempted on a zero damage character</td><td class="comment"></td></tr>
 <tr><th scope="row">Buzzsaw, Ravage, Frenzy Attack!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test Frenzy effect</td><td class="comment"></td></tr>
 <tr><th scope="row">Dampening Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting the number of battle cards an opponent can flip during a battle</td></tr>
 <tr><th scope="row">Daring Counterattack</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the ko +1 atk. Pierce works</td><td class="comment"></td></tr>
@@ -397,12 +395,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-7</h2>
-  <p>TFDSL completion: 38/54 (70.4%)</p>
+  <p>TFDSL completion: 39/54 (72.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>10</td><td>6</td><td>3</td><td>1</td><td>4</td></tr>
-<tr><th scope="row">Battlecard</th><td>20</td><td>15</td><td>0</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">Battlecard</th><td>20</td><td>16</td><td>0</td><td>4</td><td>4</td></tr>
 <tr><th scope="row">Stratagem</th><td>16</td><td>10</td><td>0</td><td>6</td><td>6</td></tr>
 </tbody>
 </table>
@@ -421,7 +419,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Electro-Static Shielding</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Evasive Action</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action damage replacement with a trait-qualified target</td></tr>
 <tr><th scope="row">Rapid Response Cycle</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting a trait while an upgraded character is in a specific mode</td></tr>
-<tr><th scope="row">Trithyllium Drill</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Triggering when a card is put from hand on top of a deck</td></tr>
 <tr><th scope="row">Artillery Support</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Temporary Pierce reduction at end of battle for a mode-qualified defender</td></tr>
 <tr><th scope="row">Durable Decepticon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Repairing once per card placed under a combiner, capped at five</td></tr>
 <tr><th scope="row">Fully Loaded</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing a scrapped top-deck Upgrade directly onto a named character and capping a dynamic health bonus</td></tr>
@@ -434,12 +431,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 36/199 (18.1%)</p>
+  <p>TFDSL completion: 37/199 (18.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>3</td><td>4</td><td>35</td><td>39</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>26</td><td>0</td><td>55</td><td>55</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>27</td><td>0</td><td>54</td><td>54</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>4</td><td>0</td><td>37</td><td>37</td></tr>
 </tbody>
 </table>
@@ -497,9 +494,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Dare to Be Stupid!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement setting damage from the target&#39;s ATK</td></tr>
 <tr><th scope="row">Decelerator Laser</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting Bandit to the defender conditionally on the attached attacker&#39;s Bandit keyword</td></tr>
 <tr><th scope="row">Diffraction Sword</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counters on an Upgrade and a non-attack-damage replacement that adds and checks them</td></tr>
-<tr><th scope="row">Drill Fingers</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Implement Oppress!!</td><td class="comment"></td></tr>
 <tr><th scope="row">Dual Smokestacks</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Opponent choice between multi-target and selected damage effects</td></tr>
-<tr><th scope="row">Escapology</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Temporary immunity to Oppress</td></tr>
 <tr><th scope="row">Everything Must Go!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A delayed attack trigger for a chosen character, post-battle optional scrap, and using an Upgrade stat-box value</td></tr>
 <tr><th scope="row">Explosive Disposal</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking a scrapped opposing Upgrade, moving it to KO, and its stat-box total</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Tracking a revealed Secret Action through battle and replaying it after battle</td></tr>
@@ -645,12 +640,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-10</h2>
-  <p>TFDSL completion: 51/71 (71.8%)</p>
+  <p>TFDSL completion: 53/71 (74.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>12</td><td>4</td><td>6</td><td>2</td><td>8</td></tr>
-<tr><th scope="row">Battlecard</th><td>28</td><td>24</td><td>1</td><td>3</td><td>4</td></tr>
+<tr><th scope="row">Character</th><td>12</td><td>5</td><td>5</td><td>2</td><td>7</td></tr>
+<tr><th scope="row">Battlecard</th><td>28</td><td>25</td><td>0</td><td>3</td><td>3</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>13</td><td>0</td><td>7</td><td>7</td></tr>
 </tbody>
 </table>
@@ -665,7 +660,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Fastlane, Road Warrior</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Needs debugging - first DSL attempt is failing<br>bot-needs: Looking at, selecting from, and reordering top deck cards</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Selecting a qualifying flipped battle card and retaining it under a character</td></tr>
 <tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting opponent hidden zones</td></tr>
-<tr><th scope="row">Sixshot, Solo Transformer Assault Group</th><td>Character</td><td>partial</td><td>5/6</td><td class="comment"></td><td class="comment">bot-needs: Bot mode needs reordering cards after reveal</td></tr>
 <tr><th scope="row">Anti-Aircraft Ordnance</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cerebro Shell</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Combat Reconfiguration</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
@@ -674,7 +668,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
-<tr><th scope="row">Tactical Suppression</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Sixshot is not currently getting &#39;Unaffected by Oppress this turn&#39;</td></tr>
 <tr><th scope="row">Eat My Dust!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects - TODO: Need a &#39;replace(foo,bar)&#39; DSL that targets a characters DSL/mode</td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Card-text replacement effects</td></tr>
