@@ -169,9 +169,9 @@
     },
     {
       "name": "Obnoxiousness",
-      "front-needs": "Card-text replacement effects",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "front": ""
+        "front": "replace_dsl('focus','oppress',all_friends(fullname=this().target),'alt 1');replace_dsl('bold','oppress',all_friends(fullname=this().target),'alt 2');replace_dsl('tough','oppress',all_friends(fullname=this().target),'bot')"
       }
     },
     {

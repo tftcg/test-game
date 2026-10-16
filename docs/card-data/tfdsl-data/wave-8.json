@@ -554,10 +554,10 @@
     },
     {
       "name": "Me Grimlock Want to Munch Metal",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Replacing printed keyword text"
+        "front": "replace_dsl('bold_eot','pierce_eot',all_friends(fullname=this().target),'alt')"
+      }
     },
     {
       "name": "No Lords, No Masters",

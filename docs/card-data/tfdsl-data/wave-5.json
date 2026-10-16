@@ -377,9 +377,8 @@
     {
       "name": "Orbital Strike",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Dynamically replacing printed card text and deck-construction conditions"
+        "front": "replace_dsl('12','21',all_friends(fullname=this().target),'bot')"
+      }
     },
     {
       "name": "Pop-Up Attack",

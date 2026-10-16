@@ -167,8 +167,8 @@
     },
     {
       "name": "Masher Mace",
-      "needs": "Triggering when this Weapon is scrapped from its Sharkticon and returning it to hand.",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "bold(1);on-this-scrapped(when(event().from.trait=Sharkticon))->move_to(this().owner.hand,this())"
     },
     {
       "name": "Motorcycle Chase",
