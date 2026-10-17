@@ -16,35 +16,35 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1084/1476 (73.4%)</p>
+  <p>TFDSL completion: 1089/1476 (73.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>303</td><td>41</td><td>70</td><td>111</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>454</td><td>0</td><td>143</td><td>143</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>80</td><td>2</td><td>75</td><td>77</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>304</td><td>40</td><td>70</td><td>110</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>457</td><td>0</td><td>140</td><td>140</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>81</td><td>2</td><td>74</td><td>76</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 838/898 (93.3%)</p>
+  <p>TFDSL completion: 843/898 (93.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>266</td><td>21</td><td>6</td><td>27</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>340</td><td>0</td><td>31</td><td>31</td></tr>
-<tr><th scope="row">Stratagem</th><td>30</td><td>28</td><td>0</td><td>2</td><td>2</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>267</td><td>20</td><td>6</td><td>26</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>343</td><td>0</td><td>28</td><td>28</td></tr>
+<tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>wave-1</h2>
-  <p>TFDSL completion: 167/170 (98.2%)</p>
+  <p>TFDSL completion: 168/170 (98.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>51</td><td>49</td><td>2</td><td>0</td><td>2</td></tr>
+<tr><th scope="row">Character</th><td>51</td><td>50</td><td>1</td><td>0</td><td>1</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>85</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -56,7 +56,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Needs a has(pierce) DSL primitive</td></tr>
 <tr><th scope="row">Decepticon Shockwave, Cybertron Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it</td><td class="comment"></td></tr>
 <tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">while you can tell Sludge to move enough damage to KO him, move_no_ko will refuse to move that much</td><td class="comment"></td></tr>
-<tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage</td></tr>
+<tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The &#39;instead&#39; is wrapped in (...) to protect from an engine bug</td><td class="comment"></td></tr>
 <tr><th scope="row">Aerial Recon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this shouldn&#39;t give focus_eob(1) to the attached but should just be an effect</td><td class="comment"></td></tr>
 <tr><th scope="row">All-Out Attack</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing each untapped character to attack during the turn - probably a player flag for custom code in the options function. Also has to remember which characters have attacked this turn</td></tr>
 <tr><th scope="row">I Still Function!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -107,12 +107,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-3</h2>
-  <p>TFDSL completion: 172/182 (94.5%)</p>
+  <p>TFDSL completion: 173/182 (95.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>61</td><td>58</td><td>2</td><td>1</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>65</td><td>0</td><td>6</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>66</td><td>0</td><td>5</td><td>5</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -134,7 +134,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Buzzsaw, Ravage, Frenzy Attack!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test Frenzy effect</td><td class="comment"></td></tr>
 <tr><th scope="row">Dampening Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting the number of battle cards an opponent can flip during a battle</td></tr>
 <tr><th scope="row">Daring Counterattack</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the ko +1 atk. Pierce works</td><td class="comment"></td></tr>
-<tr><th scope="row">Emergency Defense Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing even attack damage and detecting a defense that takes no attack damage</td></tr>
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
@@ -148,12 +147,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-4</h2>
-  <p>TFDSL completion: 162/174 (93.1%)</p>
+  <p>TFDSL completion: 163/174 (93.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>60</td><td>55</td><td>5</td><td>0</td><td>5</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>57</td><td>0</td><td>7</td><td>7</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>58</td><td>0</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -172,7 +171,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test both sides</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Trypticon, Assault Base</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Static effects to other characters don&#39;t see new charcters enter the battlefield</td><td class="comment"></td></tr>
-<tr><th scope="row">Blast Suit</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Halving attack damage rounded down</td></tr>
 <tr><th scope="row">Composite Armor</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">The scrap is happening immediately rather than after defend</td><td class="comment"></td></tr>
 <tr><th scope="row">Conversion Engine</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Crude Club</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -193,13 +191,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-5</h2>
-  <p>TFDSL completion: 160/188 (85.1%)</p>
+  <p>TFDSL completion: 162/188 (86.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>45</td><td>9</td><td>3</td><td>12</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>50</td><td>0</td><td>14</td><td>14</td></tr>
-<tr><th scope="row">Stratagem</th><td>30</td><td>28</td><td>0</td><td>2</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>51</td><td>0</td><td>13</td><td>13</td></tr>
+<tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -239,7 +237,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Junk Cannon</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Last Stand</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Lose the Initiative</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Lucky Dodge</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing odd attack damage with zero damage</td></tr>
 <tr><th scope="row">Master of Metallikato</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Master Sword</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent-caused scrap with a same-subtype Upgrade from hand</td></tr>
 <tr><th scope="row">Plasma Horns</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -254,7 +251,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">All-Out</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Infiltration</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Image fails to load, but this is really a tf.cards issue</td><td class="comment"></td></tr>
 <tr><th scope="row">Master Converter</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Currently alt1/alt2 are not considered equal to alt so this won&#39;t work</td><td class="comment"></td></tr>
-<tr><th scope="row">Metallikato Stance</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Testing all flipped cards for icon counts and moving a selected flipped card after battle</td></tr>
 <tr><th scope="row">More Guns</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Pop-Up Attack</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sabotage</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppressing opponent triggered abilities while an enemy is upgraded</td></tr>

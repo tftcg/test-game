@@ -580,11 +580,11 @@
     },
     {
       "name": "Skywarp, Sneaky Prankster",
+      "comment": "NOTE: The 'instead' is wrapped in (...) to protect from an engine bug",
       "tfdsl": {
         "alt": "on-this-flip()->(each(all_players())->reveal_cards(get(it().deck,from=top)))",
-        "bot": ""
-      },
-      "bot-needs": "A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage"
+        "bot": "on-this-after-defend-flip(when(event().flips.white>=1))->(if(confirm('Apply Attack Damage Elsewhere?'))->(instead(on-this-attack-damaged(scope=eob)->modify(event().target:=pick_friend(id!=event().target.id)))))"
+      }
     },
     {
       "name": "Starscream, Air Commander",

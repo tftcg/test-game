@@ -34,8 +34,7 @@
     },
     {
       "name": "Blast Suit",
-      "tfdsl": "",
-      "needs": "Halving attack damage rounded down"
+      "tfdsl": "instead(on-attached-attack-damaged()->(modify(event().damage:=event().damage / 2);scrap_upgrade(this())))"
     },
     {
       "name": "Composite Armor",

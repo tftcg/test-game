@@ -166,8 +166,7 @@
     },
     {
       "name": "Lucky Dodge",
-      "tfdsl": "",
-      "needs": "Replacing odd attack damage with zero damage"
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().damage % 2 = 1))))->revealed(do_nothing())"
     },
     {
       "name": "Magnetic Dysfunction Ray",
@@ -362,9 +361,8 @@
     {
       "name": "Metallikato Stance",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Testing all flipped cards for icon counts and moving a selected flipped card after battle"
+        "front": "on-friend-after-attack-flip(when(event().attacker.fullname=this().target,event().flips.max_icons<=1))->move_to(self().hand,pick(event().flips.cards))"
+      }
     },
     {
       "name": "More Guns",
@@ -781,7 +779,7 @@
       "name": "Wingspan, Data Processor",
       "tfdsl": {
         "alt": "on-this-flip()->draw(1);static(def,this().under.count)",
-        "bot": ""
+        "bot": "on-attached-scrapped()->place_under(this(),event().scrapped)"
       },
       "bot-needs": "Triggering when an Upgrade is scrapped from this character and placing it beneath this character"
     },

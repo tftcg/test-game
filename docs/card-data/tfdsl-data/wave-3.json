@@ -87,8 +87,7 @@
     },
     {
       "name": "Emergency Defense Field",
-      "needs": "Replacing even attack damage and detecting a defense that takes no attack damage",
-      "tfdsl": ""
+      "tfdsl": "instead(on-attached-attack-damaged(when(event().damage % 2 = 0))->do_nothing());on-attached-after-defend(when(event().damage=0))->scrap_upgrade(this())"
     },
     {
       "name": "Emp Wave",
