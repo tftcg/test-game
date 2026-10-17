@@ -434,9 +434,8 @@
     {
       "name": "Swap Heads",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Swapping heads between characters and flipping a once-per-game Stratagem"
+        "front": "on-friend-flip(when(event().flipped.head.mode=head))->(if(confirm('Swap heads?'))->(swap_heads(event().flipped,pick_friend(head.mode=head,id!=event().flipped.id));if(done())->flip(this())))"
+      }
     },
     {
       "name": "Systems Enhancement",

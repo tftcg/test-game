@@ -128,9 +128,9 @@
     },
     {
       "name": "Eat My Dust!",
-      "front-needs": "Adding/removing traits and card-text replacement effects - TODO: Need a 'replace(foo,bar)' DSL that targets a characters DSL/mode",
+      "front-needs": "NOTE: Explicitly lists 'alt 1' and 'alt 2' because = doesn't match those to alt yet",
       "tfdsl": {
-        "front": ""
+        "front": "trait(Wrecker,all_friends(fullname=this().target));static(safeguard,when(all_friends(fullname=this().target).mode='alt 1' || all_friends(fullname=this().target).mode='alt 2'),3,target=all_friends(fullname=this().target));replace_dsl('1','2',all_friends(fullname=this().target),'bot')"
       }
     },
     {
@@ -202,9 +202,8 @@
     },
     {
       "name": "The Dark Spark",
-      "front-needs": "First-turn-only events and card-text replacement effects",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-first-turn()->damage(1,pick_friend(trait=Leader));replace_dsl('faction=Autobot','faction=Decepticon || faction=Unicronian',all(this().owner.deck,name='Matrix of Leadership'))"
       }
     },
     {
@@ -218,6 +217,7 @@
     {
       "name": "We've Gotta Push Back!",
       "front-needs": "Adding traits and card-text replacement effects",
+        "frontFuture": "trait(Wrecker,all_friends(fullname=this().target));trait(Leader,all_friends(fullname=this().target));replace_dsl('this()','all_friends(trait=Wrecker)',all_friends(fullname=this().target))",
       "tfdsl": {
         "front": ""
       }

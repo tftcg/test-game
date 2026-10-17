@@ -502,9 +502,8 @@
     },
     {
       "name": "Triggercon-Vention",
-      "front-needs": "Modifying a named character's printed damage-move amount.",
       "tfdsl": {
-        "front": ""
+        "front": "replace_dsl('move(1','move(2',all_friends(fullname='Windsweeper, Air Defense'),'alt')"
       }
     },
     {
