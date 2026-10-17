@@ -5,8 +5,15 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TODO, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1631)</h2>
+<h2>Implemented cards (1638)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
+<tr><td>2026-10-17</td><th scope="row">Deadlock, Bounty Hunter</th><td>wave-1</td><td>Character</td><td>complete</td><td><code>2007b8495983</code></td></tr>
+<tr><td>2026-10-17</td><th scope="row">RR Disruptor Blade</th><td>wave-3</td><td>Battlecard</td><td>complete</td><td><code>2007b8495983</code></td></tr>
+<tr><td>2026-10-17</td><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>wave-4</td><td>Character</td><td>complete</td><td><code>2007b8495983</code></td></tr>
+<tr><td>2026-10-17</td><th scope="row">Fortress Maximus, Great War Veteran</th><td>wave-5</td><td>Character</td><td>bug</td><td><code>2007b8495983</code></td></tr>
+<tr><td>2026-10-17</td><th scope="row">Hold the Line</th><td>wave-5</td><td>Battlecard</td><td>complete</td><td><code>2007b8495983</code></td></tr>
+<tr><td>2026-10-17</td><th scope="row">Megatron, Fallen Hero</th><td>wave-5</td><td>Character</td><td>complete</td><td><code>2007b8495983</code></td></tr>
+<tr><td>2026-10-17</td><th scope="row">Scorponok, Brutal Warlord</th><td>wave-9</td><td>Character</td><td>note</td><td><code>2007b8495983</code></td></tr>
 <tr><td>2026-10-16</td><th scope="row">Orbital Strike</th><td>wave-5</td><td>Stratagem</td><td>complete</td><td><code>ff23d3d87f25</code></td></tr>
 <tr><td>2026-10-16</td><th scope="row">Swap Heads</th><td>wave-5</td><td>Stratagem</td><td>complete</td><td><code>7278c075946d</code></td></tr>
 <tr><td>2026-10-16</td><th scope="row">Masher Mace</th><td>wave-6</td><td>Battlecard</td><td>todo</td><td><code>ff23d3d87f25</code></td></tr>
@@ -1639,10 +1646,9 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (706)</h2>
+<h2>No implementation date observed (699)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>wave-1</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Deadlock, Bounty Hunter</th><td>wave-1</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>wave-1</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">All-Out Attack</th><td>wave-1</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Blurr, Fastest Bot in the Galaxy</th><td>wave-2</td><td>Character</td><td>unimplemented</td></tr>
@@ -1659,7 +1665,6 @@
 <tr><th scope="row">Dampening Field</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Emergency Defense Field</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Pop a Wheelie</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">RR Disruptor Blade</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Scavenge the Battlefield</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Take Cover</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">W-5 Gyro Blaster</th><td>wave-3</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1668,7 +1673,6 @@
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>wave-4</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>wave-4</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Raider Caliburst, Air Force • Weapons</th><td>wave-4</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>wave-4</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Blast Suit</th><td>wave-4</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Daring Escape</th><td>wave-4</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Multi-Missile Pod</th><td>wave-4</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1680,8 +1684,6 @@
 <tr><th scope="row">Beachcomber, Geologist</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Brainstorm, Biomechanical Engineer</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Decepticon Pounce, Infiltrator</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Fortress Maximus, Great War Veteran</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Megatron, Fallen Hero</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Perceptor, Precise Sniper</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Sergeant Kup, Wrecker Leader</th><td>wave-5</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Tidal Wave, Dark Fleet (Aircraft Carrier)</th><td>wave-5</td><td>Character</td><td>unimplemented</td></tr>
@@ -1695,7 +1697,6 @@
 <tr><th scope="row">Escape Capsule</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Ghost Shield</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">High Five</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Hold the Line</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Intrusion Countermeasures Software</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Lucky Dodge</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Master Sword</th><td>wave-5</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1948,7 +1949,6 @@
 <tr><th scope="row">Megatron, Bane of Cybertron</th><td>wave-9</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Onslaught, Combaticon Leader</th><td>wave-9</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Paddles, Gentle Giant</th><td>wave-9</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">Scorponok, Brutal Warlord</th><td>wave-9</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Squawkbox, Passionate Musician</th><td>wave-9</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Swindle, Arms Dealer</th><td>wave-9</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Wheelie, Rhyming Racer</th><td>wave-9</td><td>Character</td><td>partial</td></tr>
