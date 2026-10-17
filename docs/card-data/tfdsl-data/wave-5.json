@@ -39,7 +39,7 @@
     },
     {
       "name": "Crystal of Power",
-      "tfdsl": "on-attached-battle()->(on-attached-after-battle()->scrap_upgrade(this()))"
+      "tfdsl": "on-attached-battle()->(on-friend-after-battle(scope=afb)->scrap_upgrade(this()))"
     },
     {
       "name": "Decoy Flares",
@@ -116,8 +116,7 @@
     },
     {
       "name": "Hold the Line",
-      "tfdsl": "",
-      "needs": "Capping attack damage by the attacker’s star count for a battle"
+      "tfdsl": "reveal(on-friend-defend())->revealed(choose(all_friends(id=event().defender.id));repair(1,chosen());instead(on-attack-damage(scope=eob,when(event().target.id=chosen().id,event().damage>event().origin.stars))->modify(event().damage:=event().origin.stars)))"
     },
     {
       "name": "Holomatter Projector",
@@ -652,10 +651,9 @@
     {
       "name": "Megatron, Fallen Hero",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-defend-flip(when(event().flips.orange>=1))->(choose(all_enemies(id=event().attacker.id));on-this-after-defend(scope=afb)->damage(1,chosen()))",
         "body": "on-this-flip()->atk_eot(2,this())"
-      },
-      "alt-needs": "Carrying an orange flip condition forward to deal damage after the battle"
+      }
     },
     {
       "name": "Mindwipe, Hypnotist",
@@ -854,10 +852,9 @@
       "name": "Fortress Maximus, Great War Veteran",
       "tfdsl": {
         "alt": "on-this-after-defend-flip(when(event().flips.white>=1,event().flips.blue>=1))->damage(1,event().attacker)",
-        "body": ""
+        "body": "on-this-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1))->(damage(2,all_enemies());on-this-after-attack(scope=afb)->flip(this()))"
       },
-      "comment": "BUG: Need to automatically attach Cerebros to him and it errors when deployed",
-      "body-needs": "Carrying attack-flip color conditions forward to flip this character after the battle"
+      "comment": "BUG: Need to automatically attach Cerebros to him and it errors when deployed"
     },
     {
       "name": "Cerebros, City Commander",

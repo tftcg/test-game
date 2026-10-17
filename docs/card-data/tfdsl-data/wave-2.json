@@ -398,7 +398,7 @@
       "tfdsl": {
         "alt 1": "brave()",
         "alt 2": "stealth()",
-        "bot": "on-this-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1),once())->draw(1);on-this-after-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1))->flip(this())"
+        "bot": "on-this-attack-flip(when(event().flips.blue>=1,event().flips.orange>=1),once())->(draw(1);on-this-after-attack(scope=afb)->flip(this()))"
       }
     },
     {

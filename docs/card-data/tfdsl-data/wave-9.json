@@ -113,8 +113,8 @@
     },
     {
       "name": "Trithyllium Plating",
-      "comment": "BUG: Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?",
-      "tfdsl": "on-play(when(play-source=hand()))->(if(confirm())->play(pick_scrap(name=this().name)));static(pierce,when(event().defender=attached()),0-2,target=event().attacker)"
+      "comment": "BUG: ERRORING. Also - Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?",
+      "tfdsl": "on-play(when(play-source=hand))->(if(confirm())->play(pick_scrap(name=this().name)));static(pierce,when(event().defender=attached()),0-2,target=event().attacker)"
     },
     {
       "name": "Twisted Logic",
@@ -393,10 +393,10 @@
     },
     {
       "name": "Scorponok, Brutal Warlord",
-      "body-needs": "Playing a specific Upgrade flipped during an attack after battle",
+      "comment": "NOTE: Althought the English is worded to be an event that sets up an event, there's no need in this case",
       "tfdsl": {
         "alt": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Electro-Stinger')));on-this-flip()->draw(1)",
-        "body": ""
+        "body": "on-this-after-attack()->(if(confirm('Play Flipped Upgrade?'))->play_upgrade(pick(event().flips.cards,type=Upgrade),this()))"
       }
     },
     {

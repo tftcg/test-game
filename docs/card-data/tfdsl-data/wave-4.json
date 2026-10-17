@@ -242,7 +242,7 @@
     },
     {
       "name": "Step Forward",
-      "tfdsl": "reveal(on-opponent-attacker-chosen())->revealed(brave_eot(true,pick_friend(faction=Autobot)))"
+      "tfdsl": "reveal(on-opponent-attacker-chosen())->revealed(brave_eob(true,pick_friend(faction=Autobot)))"
     },
     {
       "name": "Sturdy Javelin",
@@ -573,11 +573,9 @@
     },
     {
       "name": "Sergeant Barricade, Infantry • Enforcer",
-      "comment": "TODO: Test",
-      "bot-needs": "A delayed after-battle effect registered when this battles with no cards underneath, lasting only for that battle. Selecting an iconless flipped battle card and placing it under this character are already supported.",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_under_this()))",
-        "bot": ""
+        "bot": "on-this-battle(when(this().under.count=0))->(on-this-after-battle(scope=afb)->place_under(this(),pick(event().flips.cards,colours.count=0)))"
       }
     },
     {

@@ -214,8 +214,7 @@
     },
     {
       "name": "RR Disruptor Blade",
-      "needs": "Persisting attack flip results for a conditional post-battle scrap",
-      "tfdsl": ""
+      "tfdsl": "on-attached-after-attack-flip(when(event().flips.black=0))->(on-friend-after-attack(scope=afb)->scrap_upgrade(this()))"
     },
     {
       "name": "Scavenge the Battlefield",

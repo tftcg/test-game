@@ -437,9 +437,8 @@
     {
       "name": "Deadlock, Bounty Hunter",
       "tfdsl": {
-        "alt": ""
-      },
-      "alt-needs": "Tracking a chosen enemy until it is KO'd during the turn. Needs an eot event listener."
+        "alt": "on-this-flip()->(choose(pick_enemy());on-ko(scope=eot,when(event().ko.id=chosen().id))->draw(2))"
+      }
     },
     {
       "name": "Decepticon Shockwave, Cybertron Commander",

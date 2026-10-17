@@ -16,35 +16,35 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1077/1476 (73.0%)</p>
+  <p>TFDSL completion: 1084/1476 (73.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>298</td><td>45</td><td>71</td><td>116</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>452</td><td>0</td><td>145</td><td>145</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>303</td><td>41</td><td>70</td><td>111</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>454</td><td>0</td><td>143</td><td>143</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>80</td><td>2</td><td>75</td><td>77</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 832/898 (92.7%)</p>
+  <p>TFDSL completion: 838/898 (93.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>262</td><td>24</td><td>7</td><td>31</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>338</td><td>0</td><td>33</td><td>33</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>266</td><td>21</td><td>6</td><td>27</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>340</td><td>0</td><td>31</td><td>31</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>28</td><td>0</td><td>2</td><td>2</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>wave-1</h2>
-  <p>TFDSL completion: 166/170 (97.6%)</p>
+  <p>TFDSL completion: 167/170 (98.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>51</td><td>48</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>51</td><td>49</td><td>2</td><td>0</td><td>2</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>85</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -54,7 +54,6 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Autobot Jazz, Special Ops</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Needs a has(pierce) DSL primitive</td></tr>
-<tr><th scope="row">Deadlock, Bounty Hunter</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Tracking a chosen enemy until it is KO&#39;d during the turn. Needs an eot event listener.</td></tr>
 <tr><th scope="row">Decepticon Shockwave, Cybertron Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it</td><td class="comment"></td></tr>
 <tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">while you can tell Sludge to move enough damage to KO him, move_no_ko will refuse to move that much</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: A conditional attack-damage replacement triggered by defense flips. This is tricky - at after-defend-flip stage it is changing who the target will be for the attack damage</td></tr>
@@ -108,12 +107,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-3</h2>
-  <p>TFDSL completion: 171/182 (94.0%)</p>
+  <p>TFDSL completion: 172/182 (94.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>61</td><td>58</td><td>2</td><td>1</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>64</td><td>0</td><td>7</td><td>7</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>65</td><td>0</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -140,7 +139,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Pop a Wheelie</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Flipping characters to a specified mode and granting a restricted extra attack</td></tr>
-<tr><th scope="row">RR Disruptor Blade</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Persisting attack flip results for a conditional post-battle scrap</td></tr>
 <tr><th scope="row">Scavenge the Battlefield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing Upgrade scrapping during a character KO and moving any number of those Upgrades to another character</td></tr>
 <tr><th scope="row">Take Cover</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing all non-attack damage to the controller&#39;s characters for the turn</td></tr>
 <tr><th scope="row">Unconventional Flying Object</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">It ought to flip back to alt explicitly, but avoiding that until alt1/alt2 being equal to alt is implemented</td><td class="comment"></td></tr>
@@ -150,11 +148,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-4</h2>
-  <p>TFDSL completion: 161/174 (92.5%)</p>
+  <p>TFDSL completion: 162/174 (93.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>54</td><td>6</td><td>0</td><td>6</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>55</td><td>5</td><td>0</td><td>5</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>57</td><td>0</td><td>7</td><td>7</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -171,7 +169,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Raider Caliburst, Air Force • Weapons</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Issues with subname means image does not load. TODO: implement upgrade mode, test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: revenge() doesn&#39;t like multiple terms inside it thus the extra parentheses</td><td class="comment"></td></tr>
-<tr><th scope="row">Sergeant Barricade, Infantry • Enforcer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">bot-needs: A delayed after-battle effect registered when this battles with no cards underneath, lasting only for that battle. Selecting an iconless flipped battle card and placing it under this character are already supported.</td></tr>
 <tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test both sides</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Trypticon, Assault Base</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Static effects to other characters don&#39;t see new charcters enter the battlefield</td><td class="comment"></td></tr>
@@ -196,12 +193,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-5</h2>
-  <p>TFDSL completion: 157/188 (83.5%)</p>
+  <p>TFDSL completion: 160/188 (85.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>57</td><td>43</td><td>11</td><td>3</td><td>14</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>49</td><td>0</td><td>15</td><td>15</td></tr>
+<tr><th scope="row">Character</th><td>57</td><td>45</td><td>9</td><td>3</td><td>12</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>50</td><td>0</td><td>14</td><td>14</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>28</td><td>0</td><td>2</td><td>2</td></tr>
 </tbody>
 </table>
@@ -216,9 +213,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Decepticon Pounce, Infiltrator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Reordering selected Secret Actions from the top of the deck while returning the rest</td></tr>
 <tr><th scope="row">Decepticon Quake, Ground Assault</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. Test a lot.</td><td class="comment"></td></tr>
 <tr><th scope="row">Fangry, Sky Tracker</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Fortress Maximus, Great War Veteran</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Need to automatically attach Cerebros to him and it errors when deployed</td><td class="comment">body-needs: Carrying attack-flip color conditions forward to flip this character after the battle</td></tr>
+<tr><th scope="row">Fortress Maximus, Great War Veteran</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Need to automatically attach Cerebros to him and it errors when deployed</td><td class="comment"></td></tr>
 <tr><th scope="row">Horri-Bull, Ground Trooper</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Megatron, Fallen Hero</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Carrying an orange flip condition forward to deal damage after the battle</td></tr>
 <tr><th scope="row">Mindwipe, Hypnotist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: Checking the opponent has a card shouldn&#39;t be here on body mode - things need to just fail gracefully</td><td class="comment"></td></tr>
 <tr><th scope="row">Optimus Prime, Legendary Warrior</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Perceptor, Precise Sniper</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Splitting revealed deck cards into opponent-chosen piles and placing a chosen pile beneath this character</td></tr>
@@ -237,7 +233,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Ghost Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing an opponent-caused scrap with a same-subtype Upgrade from hand</td></tr>
 <tr><th scope="row">Hand-to-Hand Combat</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test. Previous bug fixed.</td><td class="comment"></td></tr>
 <tr><th scope="row">High Five</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Comparing whether two chosen characters share any trait</td></tr>
-<tr><th scope="row">Hold the Line</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping attack damage by the attacker’s star count for a battle</td></tr>
 <tr><th scope="row">Holomatter Projector</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Industrial-grade Phase Charge</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This works. But it probably shouldn&#39;t. Is attached() not getting cleansed by scrap_upgrade?</td><td class="comment"></td></tr>
 <tr><th scope="row">Intrusion Countermeasures Software</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent-turn hand scrapping with drawing cards</td></tr>
@@ -582,11 +577,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-9</h2>
-  <p>TFDSL completion: 74/98 (75.5%)</p>
+  <p>TFDSL completion: 75/98 (76.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>26</td><td>16</td><td>6</td><td>4</td><td>10</td></tr>
+<tr><th scope="row">Character</th><td>26</td><td>17</td><td>5</td><td>4</td><td>9</td></tr>
 <tr><th scope="row">Battlecard</th><td>35</td><td>27</td><td>0</td><td>8</td><td>8</td></tr>
 <tr><th scope="row">Stratagem</th><td>15</td><td>12</td><td>1</td><td>2</td><td>3</td></tr>
 </tbody>
@@ -607,7 +602,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Paddles, Gentle Giant</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Preventing and redirecting a limited amount of attack damage<br>bot-needs: Checking for a damaged or KO&#39;d character across the battlefield and KO area</td></tr>
 <tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
-<tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Playing a specific Upgrade flipped during an attack after battle</td></tr>
+<tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Althought the English is worded to be an event that sets up an event, there&#39;s no need in this case</td><td class="comment"></td></tr>
 <tr><th scope="row">Squawkbox, Passionate Musician</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Tracking cards scrapped by each player and resolving an opponent&#39;s optional hand scrap</td></tr>
 <tr><th scope="row">Squawktalk, Chatterbox Translator</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">bot mode: AP scraps first, then NAP, rather than it being at the same time</td><td class="comment"></td></tr>
 <tr><th scope="row">Swindle, Arms Dealer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Choosing another character that shares a trait with this character</td></tr>
@@ -619,7 +614,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Feral Tenacity</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Adding, counting, and removing named counters on an Upgrade</td></tr>
 <tr><th scope="row">Spoils of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Choosing up to five characters that share a trait</td></tr>
 <tr><th scope="row">Starscream&#39;s Cape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Increasing numbers in a character&#39;s printed text box</td></tr>
-<tr><th scope="row">Trithyllium Plating</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?</td><td class="comment"></td></tr>
+<tr><th scope="row">Trithyllium Plating</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">ERRORING. Also - Technically giving a character without Pierce, -2 Pierce, has now given it Pierce. Will it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Twisted Logic</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reordering cards on top of an opponent&#39;s deck</td></tr>
 <tr><th scope="row">Wanna Bet?</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing battle cards being put under an enemy character with scrapping them</td></tr>
 <tr><th scope="row">Zarak Shield</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test force field effect. NOTE: This predicates on &#39;Lord Zarak, Ruler of Nebulos&#39; because &#39;Lord&#39; is a squishy prefix; will need fixing if another Zarak is added</td><td class="comment"></td></tr>
