@@ -26,6 +26,7 @@
     },
     {
       "name": "Bellicosity",
+      "comment": "NOTE: Technically this is doing 'when it attacks the next time this turn'. It won't fail as it should when someone plays it in combat phase and untaps",
       "tfdsl": "choose(pick_friend());instead(on(event=battle-flip,when(event().attacker=chosen(),this().owner.flags!=chosen().id+'_bellicosity'))->modify_icon(blue,orange));on(event=char-after-attack,when(event().attacker=chosen()))->set_flag_eot(chosen().id+'_bellicosity')"
     },
     {
@@ -432,10 +433,9 @@
     },
     {
       "name": "Swindle, Arms Dealer",
-      "bot-needs": "Choosing another character that shares a trait with this character",
       "tfdsl": {
         "alt": "on-play-upgrade(when(all(this().owner.played,type=Upgrade).count=2))->draw(1)",
-        "bot": ""
+        "bot": "on-this-battle(when(exists_card(event().other_battler.faction,candidate()=this().faction)=false))->(if(confirm('Play [Black] Weapon or Armor?'))->play_upgrade(pick_hand(subtype=Weapon || subtype=Armor,black>=1),pick_friend(id!=this().id,shares_trait(candidate(),this()))))"
       }
     },
     {

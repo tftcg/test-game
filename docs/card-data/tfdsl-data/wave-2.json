@@ -605,9 +605,8 @@
       "name": "Skywarp, Teleporting Seeker",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(icon_count=0))",
-        "bot": ""
-      },
-      "bot-needs": "Once-per-turn trigger gating across battle-card play and flip events."
+        "bot": "on-play-action(when(event().card.icon_count=0))->(if(this().owner.flags!=this().id+'_skywarp_w2')->(atk_eot(3,this());def_eot(3,this());set_flag_eot(this().id+'_skywarp_w2')));on-play-upgrade(when(event().played.icon_count=0))->(if(this().owner.flags!=this().id+'_skywarp_w2')->(atk_eot(3,this());def_eot(3,this());set_flag_eot(this().id+'_skywarp_w2')));on-this-battle-flip(when(event().card.icon_count=0))->(if(this().owner.flags!=this().id+'_skywarp_w2')->(atk_eot(3,this());def_eot(3,this());set_flag_eot(this().id+'_skywarp_w2')))"
+      }
     },
     {
       "name": "Starscream, Decepticon King",

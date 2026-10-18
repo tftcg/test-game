@@ -25,8 +25,7 @@
     },
     {
       "name": "Concealing Contrails",
-      "tfdsl": "",
-      "needs": "Event/trigger that expires at end of battle"
+      "tfdsl": "reveal(on-friend-after-defend-flip())->revealed(def_eot(event().flips.black,event().defender))"
     },
     {
       "name": "Conversion Expertise",
@@ -107,8 +106,7 @@
     },
     {
       "name": "High Five",
-      "tfdsl": "",
-      "needs": "Comparing whether two chosen characters share any trait"
+      "tfdsl": "choose(pick_friend(count=2));if(shares_trait(previous_target()))->repair(1,previous_target())"
     },
     {
       "name": "Hit and Run",
@@ -138,8 +136,7 @@
     },
     {
       "name": "Intrusion Countermeasures Software",
-      "tfdsl": "",
-      "needs": "Replacing opponent-turn hand scrapping with drawing cards"
+      "tfdsl": "reveal(instead(on(event=scrap-hand,when(event().player=this().owner,event().by!=this().owner))))->revealed(draw(2))"
     },
     {
       "name": "Junk Cannon",
@@ -283,8 +280,9 @@
     },
     {
       "name": "Versatility",
-      "tfdsl": "",
-      "needs": "Detecting a character’s first attack of the turn"
+      "comment": "NOTE: Technically this is doing 'when it attacks the next time this turn'. It won't fail as it should when someone plays it in combat phase and untaps",
+      "tfdsl": "choose(pick_friend());on(event=after-attack-flip,when(event().attacker=chosen(),this().owner.flags!=this().id+'_versatility'))->repair(event().flips.colours.count,chosen());on(event=char-after-attack,when(event().attacker=chosen()))->set_flag_eot(this().id+'_versatility')"
+
     },
     {
       "name": "Aerial Enhancements",
@@ -529,9 +527,8 @@
       "name": "Brainstorm, Biomechanical Engineer",
       "tfdsl": {
         "alt": "on-this-flip()->(reveal_cards(top_deck(),mute_opponents=true);if(previous_target().type=Upgrade)->(if(confirm('Play Upgrade?'))->play(previous_target())))",
-        "body": ""
-      },
-      "body-needs": "Selecting a flipped Upgrade and putting it into hand after the battle"
+        "body": "on-this-after-attack-flip(when(event().flips.cards.type=Upgrade))->(if(confirm('Put Flipped Upgrade in Hand?'))->(on-this-after-attack(scope=afb)->move_to(self().hand,pick(event().flips.cards,type=Upgrade))))"
+      }
     },
     {
       "name": "Brawn, Demolitions",
@@ -578,9 +575,8 @@
       "name": "Decepticon Pounce, Infiltrator",
       "tfdsl": {
         "alt": "static(atk,all(this().owner.actions,subtype='Secret Action').count);static(atk,all(this().owner.actions,subtype='Secret Action').count)",
-        "bot": ""
-      },
-      "bot-needs": "Reordering selected Secret Actions from the top of the deck while returning the rest"
+        "bot": "on-this-flip()->(reveal_cards(top_deck(count=3),mute_opponents=true);if(confirm('Reveal Secret Action and Move to Hand?'))->(choose(pick(top_deck(count=3),subtype='Secret Action'));reveal_cards(chosen(),mute_owner=true);move_to(self().hand,chosen()));if(done())->reorder_deck(2):else->reorder_deck(3))"
+      }
     },
     {
       "name": "Decepticon Quake, Ground Assault",
@@ -741,10 +737,9 @@
     {
       "name": "Tracks, Autobot Warrior",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(choose(pick_friend());if(shares_trait(chosen(),this()))->atk_eot(2,chosen()):else->atk_eot(1,chosen()))",
         "bot": "on-this-attack()->damage(1,pick_enemy(trait!=Car,trait!=Plane))"
-      },
-      "alt-needs": "Testing whether a chosen character shares any trait with this character"
+      }
     },
     {
       "name": "Twin Twist, Demolitions",
@@ -780,8 +775,7 @@
       "tfdsl": {
         "alt": "on-this-flip()->draw(1);static(def,this().under.count)",
         "bot": "on-attached-scrapped()->place_under(this(),event().scrapped)"
-      },
-      "bot-needs": "Triggering when an Upgrade is scrapped from this character and placing it beneath this character"
+      }
     },
     {
       "name": "Wolfwire, Ground Tracker",
@@ -844,7 +838,7 @@
         "alt": "",
         "body": "static(atk,this().under.count)"
       },
-      "alt-needs": "Splitting revealed deck cards into opponent-chosen piles and placing a chosen pile beneath this character"
+      "alt-needs": "reveal_cards can show the top 4 to each player; then the opponent can be asked to pick up to 4 to go in the first pile. The trick then is having the perceptor player choose one of those decks. Custom code should handle it"
     },
     {
       "name": "Fortress Maximus, Great War Veteran",
