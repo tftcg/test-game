@@ -440,7 +440,6 @@
     },
     {
       "name": "Decepticon Shockwave, Cybertron Commander",
-      "comment": "NOTE: Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it",
       "tfdsl": {
         "alt": "on-this-flip()->(each(all_players())->draw(2,it()))",
         "bot": "on-opponent-scrap-hand()->damage(1,opponent_pick_opponent_char())"
@@ -455,7 +454,7 @@
     },
     {
       "name": "Dinobot Sludge, Mighty Stomper",
-      "comment": "NOTE: while you can tell Sludge to move enough damage to KO him, move_no_ko will refuse to move that much",
+      "comment": "NOTE: while you can tell Sludge to move enough damage to KO him, move_no_ko will only move as much as it can without KO'ing",
       "tfdsl": {
         "alt": "on-this-flip(when(exists_friend(trait=Dinobot,id!=this().id)))->(choose(pick_friend(trait=Dinobot,id!=this().id));choose(range(0,chosen().damage));move_no_ko(chosen(),previous_target(),this()))",
         "bot": "on-attack(when(event().attacker.owner=this().owner,event().attacker.trait=Dinobot))->repair(1,event().attacker)"

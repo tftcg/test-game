@@ -53,8 +53,7 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Decepticon Shockwave, Cybertron Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Small bug here that you are doing 1 damage to a char your opponent chose, not them doing it</td><td class="comment"></td></tr>
-<tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">while you can tell Sludge to move enough damage to KO him, move_no_ko will refuse to move that much</td><td class="comment"></td></tr>
+<tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">while you can tell Sludge to move enough damage to KO him, move_no_ko will only move as much as it can without KO&#39;ing</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The &#39;instead&#39; is wrapped in (...) to protect from an engine bug</td><td class="comment"></td></tr>
 <tr><th scope="row">Aerial Recon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this shouldn&#39;t give focus_eob(1) to the attached but should just be an effect</td><td class="comment"></td></tr>
 <tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test direct damage</td><td class="comment"></td></tr>
@@ -81,7 +80,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">alt mode&#39;s DSL is ugly because there is no way to count distinct colours across an array of Battlecards, only flips</td><td class="comment"></td></tr>
 <tr><th scope="row">Menasor, Menacing Colossus</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Give the player a you may play an extra action on each of your turns.</td></tr>
 <tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
-<tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Currently all sentinels you don&#39;t have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don&#39;t have preselected</td><td class="comment"></td></tr>
+<tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">When choosing 3 Sentinels, nothing stops you choosing the same one multiple times</td><td class="comment"></td></tr>
 <tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Scrapper&#39;s bot mode lives in the Tower rather than on him</td><td class="comment"></td></tr>
 <tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.</td></tr>
 <tr><th scope="row">Warpath, Confident Sharpshooter</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>

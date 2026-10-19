@@ -550,9 +550,9 @@
     },
     {
       "name": "Optimus Prime, Gleaming Commander",
-      "comment": "NOTE: Currently all sentinels you don't have are put in the KO. This should ideally be a popup picker of all 6 sentinels with the 3 you don't have preselected",
+      "comment": "BUG: When choosing 3 Sentinels, nothing stops you choosing the same one multiple times",
       "tfdsl": {
-        "alt": "on-start-game(when(starting_team(trait!=Sentinel).count=0))->CUSTOM_sentinel_ko_summon()",
+        "alt": "on-start-game(when(starting_team(trait!=Sentinel).count=0))->(if(confirm('Deploy Sentinels not present to the KO?'))->CUSTOM_sentinel_ko_summon():else->(choose(sentinels());summon_ko(chosen());choose(sentinels());summon_ko(chosen());choose(sentinels());summon_ko(chosen())))",
         "bot": "on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->(if(confirm())->flip(pick(self().ko)))"
       }
     },
