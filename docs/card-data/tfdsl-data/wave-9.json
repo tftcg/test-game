@@ -142,7 +142,7 @@
     {
       "name": "Zarak Shield",
       "comment": "TODO: Test force field effect. NOTE: This predicates on 'Lord Zarak, Ruler of Nebulos' because 'Lord' is a squishy prefix; will need fixing if another Zarak is added",
-      "tfdsl": "static(def,when(attached().trait=Titan,1));instead(on-attached-attack-damaged(when(event().damage>4,attached().fullname='Lord Zarak, Ruler of Nebulos'))->(scrap_upgrade(this());modify(event().damage:=4)))"
+      "tfdsl": "static(def,when(attached().trait=Titan),1);instead(on-attached-attack-damaged(when(event().damage>4,attached().fullname='Lord Zarak, Ruler of Nebulos'))->(scrap_upgrade(this());modify(event().damage:=4)));carry_on_deploy(this(),when(attached().fullname='Scorponok, Brutal Warlord',attached().head.fullname='Lord Zarak, Ruler of Nebulos',confirm('Carry Zarak Shield onto Lord Zarak?')))"
     },
     {
       "name": "Combaticon Enigma",
@@ -402,11 +402,10 @@
     },
     {
       "name": "Lord Zarak, Ruler of Nebulos",
-      "comment": "NOTE: Zarak has to go on Scorponok. Skipping enforcing that",
-      "bot-needs": "Detecting deployment from under a named character",
+      "comment": "TODO: Test Shield carry over from Scorponok. NOTE: Zarak has to go on Scorponok. Skipping enforcing that. Deployment carry is implemented on Zarak Shield rather than this card's printed bot ability.",
       "tfdsl": {
         "head": "bold(1);tough(1);focus(1)",
-        "bot": ""
+        "bot": "bold(1);tough(1);focus(1)"
       }
     },
     {

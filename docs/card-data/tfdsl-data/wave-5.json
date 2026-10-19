@@ -75,8 +75,7 @@
     },
     {
       "name": "Escape Capsule",
-      "tfdsl": "",
-      "needs": "Moving all upgrades to a character deployed from an upgraded head"
+      "tfdsl": "carry_on_deploy(attached().upgrades,when(attached().head.mode=head))"
     },
     {
       "name": "Fusion Borer",
