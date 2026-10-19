@@ -63,8 +63,7 @@
     },
     {
       "name": "Dampening Field",
-      "needs": "Limiting the number of battle cards an opponent can flip during a battle",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(max_flips(4,opponent()))"
     },
     {
       "name": "Defensive Formation",
@@ -270,8 +269,7 @@
     },
     {
       "name": "W-5 Gyro Blaster",
-      "needs": "Limiting each player's number of battle-card flips during a battle",
-      "tfdsl": ""
+      "tfdsl": "on-attached-battle()->max_flips(2)"
     },
     {
       "name": "Alpha Trion, Cybertronian Sage",
@@ -472,10 +470,9 @@
     },
     {
       "name": "Raider Flamefeather, Black Ops • Soldier",
-      "bot-needs": "Capping a defense bonus based on flipped battle icons",
       "tfdsl": {
         "alt": "on-this-flip()->bold_eot(1,all_friends(trait=Firecon))",
-        "bot": ""
+        "bot": "on-this-after-defend-flip()->def_eob(min(event().flips.orange,5),this())"
       }
     },
     {

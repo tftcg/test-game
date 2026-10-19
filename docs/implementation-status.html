@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1122/1476 (76.0%)</p>
+  <p>TFDSL completion: 1126/1476 (76.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>322</td><td>27</td><td>65</td><td>92</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>471</td><td>0</td><td>126</td><td>126</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>323</td><td>26</td><td>65</td><td>91</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>474</td><td>0</td><td>123</td><td>123</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>81</td><td>2</td><td>74</td><td>76</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 871/898 (97.0%)</p>
+  <p>TFDSL completion: 875/898 (97.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>282</td><td>9</td><td>2</td><td>11</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>356</td><td>0</td><td>15</td><td>15</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>283</td><td>8</td><td>2</td><td>10</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>359</td><td>0</td><td>12</td><td>12</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -101,12 +101,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-3</h2>
-  <p>TFDSL completion: 177/182 (97.3%)</p>
+  <p>TFDSL completion: 180/182 (98.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>61</td><td>59</td><td>1</td><td>1</td><td>2</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>69</td><td>0</td><td>2</td><td>2</td></tr>
+<tr><th scope="row">Character</th><td>61</td><td>60</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>71</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -119,19 +119,16 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Downshift, Special Ops • Security Agent</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Raider Flamefeather, Black Ops • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping a defense bonus based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Storm Cloud, Infantry  Electronic Warfare</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Visper, Infantry • Patrol Leader</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Cog, Artillery • Mechanic</th><td>Character</td><td>bug</td><td>1/1</td><td class="comment">Game is choosing the characters in left to right order. Somehow player needs to choose characters but not be able to pick them again. Maybe if previous_targets() plural was made available, could be checking against that??</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Overdrive, Special Ops • Strategist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Buzzsaw, Ravage, Frenzy Attack!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test Frenzy effect</td><td class="comment"></td></tr>
-<tr><th scope="row">Dampening Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting the number of battle cards an opponent can flip during a battle</td></tr>
 <tr><th scope="row">Daring Counterattack</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the ko +1 atk. Pierce works</td><td class="comment"></td></tr>
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) as a static effect rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Unconventional Flying Object</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">It ought to flip back to alt explicitly, but avoiding that until alt1/alt2 being equal to alt is implemented</td><td class="comment"></td></tr>
-<tr><th scope="row">W-5 Gyro Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting each player&#39;s number of battle-card flips during a battle</td></tr>
 </tbody>
 </table>
 </section>
@@ -177,12 +174,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-5</h2>
-  <p>TFDSL completion: 178/188 (94.7%)</p>
+  <p>TFDSL completion: 179/188 (95.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>54</td><td>3</td><td>0</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>58</td><td>0</td><td>6</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>59</td><td>0</td><td>5</td><td>5</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -216,7 +213,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Regenerative Core</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving damage from a character to an Upgrade and tracking damage on that Upgrade</td></tr>
 <tr><th scope="row">Speed Trap</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a second Action play and preventing further Action plays that turn</td></tr>
 <tr><th scope="row">Spymaster&#39;s Ruse</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Linking a played Secret Action to this card and exempting both from end-turn scrapping</td></tr>
-<tr><th scope="row">Temporal Quagmire</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping each player’s battle-card flips for a battle</td></tr>
 <tr><th scope="row">Tripwire</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Turn the Tide</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Pairing equal-size character selections and assigning each damage transfer to a distinct target</td></tr>
 <tr><th scope="row">Versatility</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this is doing &#39;when it attacks the next time this turn&#39;. It won&#39;t fail as it should when someone plays it in combat phase and untaps</td><td class="comment"></td></tr>

@@ -254,8 +254,7 @@
     },
     {
       "name": "Temporal Quagmire",
-      "tfdsl": "",
-      "needs": "Capping each player’s battle-card flips for a battle"
+      "tfdsl": "reveal(on-friend-defend())->revealed(max_flips(2))"
     },
     {
       "name": "Triangulator",
