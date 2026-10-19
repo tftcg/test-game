@@ -46,7 +46,7 @@
     },
     {
       "name": "Disassemble",
-      "tfdsl": "scrap_upgrade(pick_upgrade(subtype=Armor || subtype=Weapon));draw(1,previous_target().owner)"
+      "tfdsl": "scrap_upgrade(pick_upgrade(subtype=Armor || subtype=Weapon));if(done())->draw(1,previous_target().owner)"
     },
     {
       "name": "Electro-Optical Visor",
@@ -84,8 +84,7 @@
     },
     {
       "name": "Ghost Shield",
-      "tfdsl": "",
-      "needs": "Replacing an opponent-caused scrap with a same-subtype Upgrade from hand"
+      "tfdsl": "play_only(all(play_target().slots,type=Armor,contents.count=0).count=0,all(replaced_upgrades(),subtype=Armor).count>=1);instead(on-this-scrapped(when(event().cause.owner=opponent()))->(if(confirm('Scrap Armor from Hand instead?'))->(scrap_hand(pick_hand(subtype=Armor));if(done())->do_nothing():else->scrap_upgrade(this())):else->scrap_upgrade(this())))"
     },
     {
       "name": "Grav-Inhibitor",
@@ -176,8 +175,7 @@
     },
     {
       "name": "Master Sword",
-      "tfdsl": "",
-      "needs": "Replacing an opponent-caused scrap with a same-subtype Upgrade from hand"
+      "tfdsl": "play_only(all(play_target().slots,type=Weapon,contents.count=0).count=0,all(replaced_upgrades(),subtype=Weapon).count>=1);instead(on-this-scrapped(when(event().cause.owner=opponent()))->(if(confirm('Scrap Weapon from Hand instead?'))->(scrap_hand(pick_hand(subtype=Weapon));if(done())->do_nothing():else->scrap_upgrade(this())):else->scrap_upgrade(this())))"
     },
     {
       "name": "Mission Briefing",
@@ -481,11 +479,9 @@
     {
       "name": "Autobot Outback, Gunner",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));draw(2)))",
-        "bot": ""
-      },
-      "comment": "NOTE: This is relying on pick_hand not being cancellable. Needs a pay()",
-      "bot-needs": "Replacing Upgrade scrapping with a same-subtype Upgrade from hand"
+        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(type=Upgrade));if(done())->draw(2)))",
+        "bot": "instead(on-attached-scrapped(when(event().cause.owner=opponent()))->(if(confirm('Scrap Same Type Upgrade from Hand instead?'))->(scrap_hand(pick_hand(subtype=event().scrapped.subtype));if(done())->do_nothing():else->scrap_upgrade(event().scrapped)):else->scrap_upgrade(event().scrapped)))"
+      }
     },
     {
       "name": "Autobot Stylor",
@@ -702,11 +698,10 @@
     {
       "name": "Sergeant Kup, Wrecker Leader",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-friend-damaged(when(active_player()=self(),event().damaged.trait=Wrecker))->atk_eot(event().amount,event().damaged)",
         "body": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(icons.blue>=1));scrap_upgrade(pick_enemy_upgrade())))"
       },
-      "comment": "NOTE: This is relying on pick_hand not being cancellable. This really needs a pay()",
-      "alt-needs": "Detecting the source owner’s turn for Wrecker damage triggers"
+      "comment": "NOTE: This is relying on pick_hand not being cancellable. This really needs a pay()"
     },
     {
       "name": "Skullsmasher, Swamp Warrior",
@@ -819,9 +814,8 @@
     {
       "name": "Tidal Wave, Dark Fleet (Battleship)",
       "tfdsl": {
-        "alt": ""
-      },
-      "alt-needs": "Tracking the second character KO and named starting-team components for combining"
+        "alt": "stealth();on-friend-ko(when(starting_team(fullname='Tidal Wave, Dark Fleet (Aircraft Carrier)').count=1,starting_team(fullname='Tidal Wave, Dark Fleet (Transport)').count=1))->(if(this().owner.flags='tidal_wave_ko')->combine('Tidal Wave, Dark Fleet',3,alt,'Tidal Wave, Dark Fleet (Aircraft Carrier)','Tidal Wave, Dark Fleet (Transport)','Tidal Wave, Dark Fleet (Battleship)'):else->set_flag('tidal_wave_ko'))"
+      }
     },
     {
       "name": "Convex",
