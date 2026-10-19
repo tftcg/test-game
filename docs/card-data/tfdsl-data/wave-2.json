@@ -410,10 +410,9 @@
     {
       "name": "Blurr, Fastest Bot in the Galaxy",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack-damage(when(event().damage>0,event().target.tapped=tapped,exists_enemy(tapped=untapped)))->(untap(this());follow_up_attack(attackers=all_friends(id=this().id),defenders=all_enemies(tapped=untapped),can_atk_untapped=true))",
         "bot": ""
-      },
-      "alt-needs": "Starting an additional attack against a newly selected untapped enemy after attack damage."
+      }
     },
     {
       "name": "Bombshell, Decepticon Psy Ops",

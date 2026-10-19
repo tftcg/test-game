@@ -807,16 +807,14 @@
     {
       "name": "Tidal Wave, Dark Fleet (Aircraft Carrier)",
       "tfdsl": {
-        "alt": ""
-      },
-      "alt-needs": "Granting an extra attack restricted to a character deployed from this card"
+        "alt": "on-start-game()->(choose(four-star-air());summon_friend(chosen());place_under(this(),previous_target(2)));on-this-attack()->(each(all(this().under))->(deploy(this(),it(),alt);if(done())->extra_attack(attackers=all_friends(id=it().id))));on-this-component-combine()->deploy(this(),all(this().under),alt);on-this-ko()->deploy(this(),all(this().under),alt)"
+      }
     },
     {
       "name": "Tidal Wave, Dark Fleet (Transport)",
       "tfdsl": {
-        "alt": ""
-      },
-      "alt-needs": "Granting an extra attack restricted to a character deployed from this card"
+        "alt": "on-start-game()->(choose(four-star-ground());summon_friend(chosen());place_under(this(),previous_target(2)));on-this-attack()->(each(all(this().under))->(deploy(this(),it(),alt);if(done())->extra_attack(attackers=all_friends(id=it().id))));on-this-component-combine()->deploy(this(),all(this().under),alt);on-this-ko()->deploy(this(),all(this().under),alt)"
+      }
     },
     {
       "name": "Tidal Wave, Dark Fleet (Battleship)",

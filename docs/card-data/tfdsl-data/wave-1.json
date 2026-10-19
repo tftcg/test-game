@@ -150,8 +150,7 @@
     },
     {
       "name": "I Still Function!",
-      "comment": "TODO: Test",
-      "tfdsl": "choose(pick(self().ko,stars<=12));return_from_ko(chosen(),chosen().damage-1);on-end-turn()->ko(chosen())"
+      "tfdsl": "choose(pick(self().ko,stars<=12));return_from_ko(chosen(),1);on-end-turn()->ko(chosen())"
     },
     {
       "name": "Improvised Shield",
@@ -344,8 +343,8 @@
     },
     {
       "name": "All-Out Attack",
-      "tfdsl": "",
-      "needs": "Allowing each untapped character to attack during the turn - probably a player flag for custom code in the options function. Also has to remember which characters have attacked this turn"
+      "comment": "Uses the Wave 6 errata.",
+      "tfdsl": "on-friend-attack(scope=eot)->extra_attack(required=false,attackers=all_friends(id!=event().attacker.id,tapped=untapped,attacks_this_turn=0))"
     },
     {
       "name": "Tandem Targeting System",
@@ -375,10 +374,9 @@
     {
       "name": "Autobot Jazz, Special Ops",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-defend-flip(when(event().attacker.has_pierce=false,event().flips.white>=2))->(instead(on-this-attack-damaged(scope=eob,when(event().damage>2))->modify(event().damage:=2)))",
         "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->pierce(2,this())"
-      },
-      "alt-needs": "Needs a has(pierce) DSL primitive"
+      }
     },
     {
       "name": "Autobot Mirage, Lone Wolf",

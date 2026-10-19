@@ -187,8 +187,7 @@
     },
     {
       "name": "Pop a Wheelie",
-      "needs": "Flipping characters to a specified mode and granting a restricted extra attack",
-      "tfdsl": ""
+      "tfdsl": "each(all_friends(mode=bot))->trait_flip(it(),Motorcycle);extra_attack(attackers=all_friends(trait=Motorcycle))"
     },
     {
       "name": "Quartermaster",

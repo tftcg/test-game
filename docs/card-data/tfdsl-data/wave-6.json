@@ -9,8 +9,7 @@
   "cards": [
     {
       "name": "All-Out Attack",
-      "needs": "Granting an additional attack to a selected untapped character while tracking whether it has already attacked this turn.",
-      "tfdsl": ""
+      "tfdsl": "on-friend-attack(scope=eot)->extra_attack(required=false,attackers=all_friends(id!=event().attacker.id,tapped=untapped,attacks_this_turn=0))"
     },
     {
       "name": "Ancient Security Tentacle",
@@ -613,11 +612,10 @@
     },
     {
       "name": "Decepticon Doublecrosser, Shield Brothers",
-      "bot-needs": "Granting an extra targeted attack against a newly deployed Titan Master, including attacking it while untapped.",
-      "upgrade-needs": "Replacing this Upgrade leaving the battlefield with moving it to KO.",
+      "comment": "TODO: Test both modes",
       "tfdsl": {
-        "bot": "",
-        "upgrade": ""
+        "bot": "on(event=deploy,when(active_player()=self(),this().tapped=untapped,event().deployed.owner=opponent(),event().deployed.trait='Titan Master'))->extra_attack(attackers=all_friends(id=this().id),defenders=all_enemies(id=event().deployed.id),can_atk_untapped=true)",
+        "upgrade": "on-attached-after-defend-flips()->pierce_eot(0-event().defender.def,event().attacker)"
       }
     },
     {
