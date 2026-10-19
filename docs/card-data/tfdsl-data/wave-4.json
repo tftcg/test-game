@@ -380,10 +380,9 @@
     },
     {
       "name": "Private Dazzlestrike, Ground Command • Artillery",
-      "upgrade-needs": "Events for an upgrade being removed from a character or leaving the battlefield",
       "tfdsl": {
         "bot": "each(all_enemies())->static(no_brave,true,target=it())",
-        "upgrade": ""
+        "upgrade": "on-put()->repair(3,event().attached);on-this-scrapped()->damage(3,event().from);on-this-returned-to-hand()->damage(3,event().from)"
       }
     },
     {

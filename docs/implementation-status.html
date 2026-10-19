@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1116/1476 (75.6%)</p>
+  <p>TFDSL completion: 1120/1476 (75.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>319</td><td>30</td><td>65</td><td>95</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>468</td><td>0</td><td>129</td><td>129</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>321</td><td>28</td><td>65</td><td>93</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>470</td><td>0</td><td>127</td><td>127</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>81</td><td>2</td><td>74</td><td>76</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 866/898 (96.4%)</p>
+  <p>TFDSL completion: 870/898 (96.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>280</td><td>11</td><td>2</td><td>13</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>353</td><td>0</td><td>18</td><td>18</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>282</td><td>9</td><td>2</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>355</td><td>0</td><td>16</td><td>16</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -101,12 +101,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-3</h2>
-  <p>TFDSL completion: 174/182 (95.6%)</p>
+  <p>TFDSL completion: 177/182 (97.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>61</td><td>58</td><td>2</td><td>1</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>71</td><td>67</td><td>0</td><td>4</td><td>4</td></tr>
+<tr><th scope="row">Character</th><td>61</td><td>59</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>71</td><td>69</td><td>0</td><td>2</td><td>2</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -119,7 +119,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting the top deck card at any time<br>bot-needs: Playing a qualifying card directly from the top of the deck</td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Downshift, Special Ops • Security Agent</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Private Sideswipe, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting another friendly character KO during the opponent&#39;s turn</td></tr>
 <tr><th scope="row">Raider Flamefeather, Black Ops • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping a defense bonus based on flipped battle icons</td></tr>
 <tr><th scope="row">Raider Storm Cloud, Infantry  Electronic Warfare</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Visper, Infantry • Patrol Leader</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
@@ -130,9 +129,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Daring Counterattack</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the ko +1 atk. Pierce works</td><td class="comment"></td></tr>
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
-<tr><th scope="row">Scavenge the Battlefield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing Upgrade scrapping during a character KO and moving any number of those Upgrades to another character</td></tr>
-<tr><th scope="row">Take Cover</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing all non-attack damage to the controller&#39;s characters for the turn</td></tr>
+<tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) as a static effect rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
 <tr><th scope="row">Unconventional Flying Object</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">It ought to flip back to alt explicitly, but avoiding that until alt1/alt2 being equal to alt is implemented</td><td class="comment"></td></tr>
 <tr><th scope="row">W-5 Gyro Blaster</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Limiting each player&#39;s number of battle-card flips during a battle</td></tr>
 </tbody>
@@ -140,11 +137,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-4</h2>
-  <p>TFDSL completion: 166/174 (95.4%)</p>
+  <p>TFDSL completion: 167/174 (96.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>56</td><td>4</td><td>0</td><td>4</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>57</td><td>3</td><td>0</td><td>3</td></tr>
 <tr><th scope="row">Battlecard</th><td>64</td><td>60</td><td>0</td><td>4</td><td>4</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -154,7 +151,6 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Private Dazzlestrike, Ground Command • Artillery</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">upgrade-needs: Events for an upgrade being removed from a character or leaving the battlefield</td></tr>
 <tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>

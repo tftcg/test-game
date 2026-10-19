@@ -182,7 +182,7 @@
     },
     {
       "name": "Point-Defense System",
-      "comment": "BUG: Technically this should be checking has(pierce) rather than pierce>0. Does it matter?",
+      "comment": "BUG: Technically this should be checking has(pierce) as a static effect rather than pierce>0. Does it matter?",
       "tfdsl": "on-attached-defend(when(event().attacker.pierce>0))->no_pierce_eob(2,event().attacker)"
     },
     {
@@ -216,8 +216,7 @@
     },
     {
       "name": "Scavenge the Battlefield",
-      "needs": "Replacing Upgrade scrapping during a character KO and moving any number of those Upgrades to another character",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-friend-ko()))->revealed(if(event().ko.upgrades.count>0)->(choose(pick_friend(id!=event().ko.id));each(all(event().ko.upgrades))->(if(confirm('Put '+it().name+' on '+chosen().name))->put_upgrade(it(),chosen())));modify_nothing())"
     },
     {
       "name": "Smoke Cloak",
@@ -254,8 +253,7 @@
     },
     {
       "name": "Take Cover",
-      "needs": "Preventing all non-attack damage to the controller's characters for the turn",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-friend-damaged(when(active_player()!=this().owner))))->revealed(instead(on-friend-damaged(scope=eot)->do_nothing()))"
     },
     {
       "name": "Two-Pronged Attack",
@@ -411,10 +409,9 @@
     },
     {
       "name": "Private Sideswipe, Infantry • Soldier",
-      "bot-needs": "Detecting another friendly character KO during the opponent's turn",
       "tfdsl": {
         "alt": "on-this-flip()->(atk_eot(all(opponent().ko,type=Character).count,this());atk_eot(all(opponent().ko,type=Character).count,this()))",
-        "bot": ""
+        "bot": "on-friend-ko(when(event().ko.id!=this().id,active_player()!=this().owner))->untap(this())"
       }
     },
     {
