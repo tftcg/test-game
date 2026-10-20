@@ -17,7 +17,7 @@
     },
     {
       "name": "Ancient Wisdom",
-      "tfdsl": "set_flag_eot('ancient wisdom');scrap_deck(top_deck(count=2));if(exists_card(previous_target(),type=Action))->move_to(self().hand,pick(previous_target(),type=Action));if(exists_card(previous_target(),type=Upgrade))->move_to(self().hand,pick(previous_target(),type=Upgrade))"
+      "tfdsl": "set_flag_eot('ancient wisdom');scrap_deck(top_deck(count=2));if(exists_card(previous_target(),type=Action))->move_to(self().hand,pick(previous_target(),type=Action));if(exists_card(previous_target(),type=Upgrade))->move_to(self().hand,pick(previous_target(),type=Upgrade));if(confirm('Play Unleash Potential?'))->play(pick_hand(name='Unleash Potential'))"
     },
     {
       "name": "Armored Plating"
@@ -330,8 +330,7 @@
     },
     {
       "name": "Unleash Potential",
-      "tfdsl": "",
-      "needs": "Selecting owned battle cards outside the game."
+      "tfdsl": "if(this().owner.flags='ancient wisdom')->(choose(options(card_query(type=battle,stars=1)));summon(entity=battlecard,chosen()))"
     },
     {
       "name": "Vandalize",

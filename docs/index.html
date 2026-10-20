@@ -346,7 +346,7 @@
       font-size: .8rem;
     }
 
-    #text-prompt, #confirm-prompt, #reorder-prompt, #mode-prompt, #card-pick-prompt {
+    #text-prompt, #confirm-prompt, #reorder-prompt, #mode-prompt, #card-pick-prompt, #value-pick-prompt {
       width: min(420px, calc(100vw - 2rem));
       color: inherit;
       background: #1a222c;
@@ -354,7 +354,7 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop, #value-pick-prompt::backdrop { background: rgb(0 0 0 / 60%); }
     #text-prompt form { display: grid; gap: .75rem; }
     #text-prompt label { display: grid; gap: .35rem; }
     #text-prompt input {
@@ -463,6 +463,42 @@
       display: block;
       min-width: 6rem;
       margin-left: auto;
+      padding: .45rem .8rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    #value-pick-prompt h2 { margin: 0 0 .5rem; font-size: 1.1rem; }
+    #value-pick-prompt p { margin: 0 0 .6rem; }
+    #value-pick-options {
+      --row-height: 2rem;
+      max-height: calc(6 * var(--row-height));
+      overflow-y: auto;
+      margin-bottom: .75rem;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      background: #10151b;
+    }
+    #value-pick-options [role="option"] {
+      display: block;
+      width: 100%;
+      height: var(--row-height);
+      padding: 0 .6rem;
+      overflow: hidden;
+      color: inherit;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+    #value-pick-options [role="option"]:hover { background: #263748; }
+    #value-pick-options [role="option"][aria-selected="true"] { background: #35506a; }
+    #value-pick-confirm {
+      float: right;
       padding: .45rem .8rem;
       color: inherit;
       background: #263748;
@@ -646,6 +682,12 @@
     <button id="card-pick-confirm" type="button">Confirm</button>
     <button id="card-pick-skip" type="button" hidden>Skip</button>
     <aside id="card-pick-preview" hidden aria-hidden="true"></aside>
+  </dialog>
+  <dialog id="value-pick-prompt">
+    <h2 id="value-pick-title">Choose an option</h2>
+    <p id="value-pick-instructions"></p>
+    <div id="value-pick-options" role="listbox"></div>
+    <button id="value-pick-confirm" type="button">Confirm</button>
   </dialog>
   <dialog id="engine-error">
     <h2 id="engine-error-title">Game error</h2>

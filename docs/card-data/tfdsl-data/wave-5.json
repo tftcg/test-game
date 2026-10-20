@@ -33,8 +33,8 @@
     },
     {
       "name": "Counterespionage",
-      "tfdsl": "",
-      "needs": "Naming cards and inspecting face-down enemy Secret Actions"
+      "comment": "TODO: Test on Secret Actions",
+      "tfdsl": "choose(options(card_query(type=battle,mode1function=Action)));reveal_cards(all(opponent().hand + all(opponent().actions,subtype='Secret Action',revealed=false)));each(all(opponent().hand,name=chosen()))->scrap_hand(it());each(all(opponent().actions,subtype='Secret Action',revealed=false,name=chosen()))->move_to(opponent().scrap,it())"
     },
     {
       "name": "Crystal of Power",
@@ -505,10 +505,9 @@
     {
       "name": "Beachcomber, Geologist",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(choose(options(this().owner.starting_deck));reveal_cards(top_deck());if(chosen()=previous_target(2).name)->draw(3))",
         "bot": "focus(1)"
-      },
-      "alt-needs": "Naming a card and comparing the top deck card to that name"
+      }
     },
     {
       "name": "Bludgeon, Electric Warrior",

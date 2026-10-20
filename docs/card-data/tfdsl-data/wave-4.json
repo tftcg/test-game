@@ -263,8 +263,8 @@
     },
     {
       "name": "Valuable Contract",
-      "tfdsl": "",
-      "needs": "Using a Bounty ability and selecting an owned battle card outside the game"
+      "comment": "NOTE: I've chosen to treat this like Revenge, so just like Hazardous Shield this gives the Bounty ability to the character, it doesn't manage its own Bounty",
+      "tfdsl": "bounty((choose(options(card_query(type=battle,stars=1)));summon(entity=battlecard,chosen())))"
     },
     {
       "name": "War of Attrition",
