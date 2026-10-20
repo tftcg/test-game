@@ -609,10 +609,9 @@
     {
       "name": "Starscream, Decepticon King",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->move_to(self().hand,pick_scrap(contains_dsl='plan('))",
         "bot": "on-this-battle-flip(when(event().flips.card.name='Decepticon Crown'))->(atk_eot(3,this());def_eot(3,this()))"
-      },
-      "alt-needs": "Filtering scrap cards by whether their rules grant Plan."
+      }
     },
     {
       "name": "Sunstreaker, Bold Warrior",
@@ -688,11 +687,11 @@
     },
     {
       "name": "Omega Supreme, Autobot Defense Base",
+      "comment": "TODO: Test Crashbash into W2 Omega friend - then pass the atk and def flips into attack_damage and onto the event",
       "tfdsl": {
         "alt": "on-this-flip()->(choose(options('Draw a card','Do 1 damage to an enemy'));if(chosen()='Draw a card')->draw(1);if(chosen()='Do 1 damage to an enemy')->damage(1,pick_enemy()))",
-        "bot": ""
-      },
-      "bot-needs": "Splitting a single attack-damage event across characters while preserving attack-damage semantics."
+        "bot": "instead(on-friend-attack-damaged(when(event().target.id!=this().id,event().damage>=2))->(if(confirm('Have Omega take 2 damage of attack?'))->(attack_damage(2,this());modify(event().damage:=event().damage - 2))))"
+      }
     },
     {
       "name": "Builder's Tools",

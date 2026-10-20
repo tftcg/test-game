@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1136/1476 (77.0%)</p>
+  <p>TFDSL completion: 1139/1476 (77.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>328</td><td>22</td><td>64</td><td>86</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>479</td><td>0</td><td>118</td><td>118</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>330</td><td>20</td><td>64</td><td>84</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>480</td><td>0</td><td>117</td><td>117</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>81</td><td>2</td><td>74</td><td>76</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 885/898 (98.6%)</p>
+  <p>TFDSL completion: 888/898 (98.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>288</td><td>4</td><td>1</td><td>5</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>364</td><td>0</td><td>7</td><td>7</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>290</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>365</td><td>0</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -63,11 +63,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-2</h2>
-  <p>TFDSL completion: 181/184 (98.4%)</p>
+  <p>TFDSL completion: 183/184 (99.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>64</td><td>62</td><td>2</td><td>0</td><td>2</td></tr>
+<tr><th scope="row">Character</th><td>64</td><td>64</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Battlecard</th><td>86</td><td>84</td><td>0</td><td>2</td><td>2</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -78,10 +78,9 @@ thead { background: #f3f4f6; }
 <tbody>
 <tr><th scope="row">Acid Storm, Toxic Terror</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Grapple, Autobot Architect</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">alt mode&#39;s DSL is ugly because there is no way to count distinct colours across an array of Battlecards, only flips</td><td class="comment"></td></tr>
-<tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Splitting a single attack-damage event across characters while preserving attack-damage semantics.</td></tr>
+<tr><th scope="row">Omega Supreme, Autobot Defense Base</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test Crashbash into W2 Omega friend - then pass the atk and def flips into attack_damage and onto the event</td><td class="comment"></td></tr>
 <tr><th scope="row">Optimus Prime, Gleaming Commander</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">When choosing 3 Sentinels, nothing stops you choosing the same one multiple times</td><td class="comment"></td></tr>
 <tr><th scope="row">Scrapper, Constructicon Foreman</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Scrapper&#39;s bot mode lives in the Tower rather than on him</td><td class="comment"></td></tr>
-<tr><th scope="row">Starscream, Decepticon King</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering scrap cards by whether their rules grant Plan.</td></tr>
 <tr><th scope="row">Warpath, Confident Sharpshooter</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Bumpers</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Crash Landing</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Needs testing</td><td class="comment"></td></tr>
@@ -132,12 +131,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-4</h2>
-  <p>TFDSL completion: 172/174 (98.9%)</p>
+  <p>TFDSL completion: 173/174 (99.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>60</td><td>60</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>62</td><td>0</td><td>2</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>63</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -158,7 +157,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">It just gives a win condition as a popup rather than a real one; but hey, banned card</td><td class="comment"></td></tr>
 <tr><th scope="row">Defensive Configuration</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Head-On Collision</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This won&#39;t work for alt1/alt2 characters</td><td class="comment"></td></tr>
-<tr><th scope="row">Multi-Missile Pod</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing multiple upgrades in one Weapon slot and counting Multi-Missile Pods scrapped during a battle</td></tr>
 <tr><th scope="row">Overheat</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Suppressing specific battle icon effects for a battle</td></tr>
 <tr><th scope="row">Relentless Invasion</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Shoulder Holster</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

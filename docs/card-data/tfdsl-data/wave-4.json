@@ -25,9 +25,7 @@
     },
     {
       "name": "Multi-Missile Pod",
-      "tfdslAttempt": "share_slot(3);on-attached-attack()->(if(confirm('Scrap this?'))->(choose(attached());scrap_upgrade(this());if(done())->(if(this().owner.flags=chosen().id + '_mmpod2')->(damage(3,all_enemies());set_flag_eob(chosen().id + '_mmpod3')):else->(if(this().owner.flags=chosen().id + '_mmpod1')->(damage(2,all_enemies());set_flag_eob(chosen().id + '_mmpod2')):else->(damage(1,all_enemies());set_flag_eob(chosen().id + '_mmpod1'))))))",
-      "tfdsl": "",
-      "needs": "Allowing multiple upgrades in one Weapon slot and counting Multi-Missile Pods scrapped during a battle"
+      "tfdsl": "put_only(trait=Plane || trait=Helicopter);share_slot(3);on-attached-attack()->(if(confirm('Scrap this?'))->(scrap_upgrade(this());if(done())->damage(all(battle().upgrade_scraps,from=event().attacker,card.name=this().name).count,all_enemies())))"
     },
     {
       "name": "Battlefield Incursion",
