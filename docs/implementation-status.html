@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1130/1476 (76.6%)</p>
+  <p>TFDSL completion: 1131/1476 (76.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>324</td><td>25</td><td>65</td><td>90</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>477</td><td>0</td><td>120</td><td>120</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>325</td><td>24</td><td>65</td><td>89</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>477</td><td>1</td><td>119</td><td>120</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>81</td><td>2</td><td>74</td><td>76</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 879/898 (97.9%)</p>
+  <p>TFDSL completion: 880/898 (98.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>284</td><td>7</td><td>2</td><td>9</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>362</td><td>0</td><td>9</td><td>9</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>285</td><td>6</td><td>2</td><td>8</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>362</td><td>1</td><td>8</td><td>9</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -133,12 +133,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-4</h2>
-  <p>TFDSL completion: 168/174 (96.6%)</p>
+  <p>TFDSL completion: 169/174 (97.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>60</td><td>57</td><td>3</td><td>0</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>61</td><td>0</td><td>3</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>60</td><td>58</td><td>2</td><td>0</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>61</td><td>1</td><td>2</td><td>3</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -147,7 +147,6 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Private Highjump, Off-Road Patrol • Infiltration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Can&#39;t have two prerequisites currently for a tap_ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an extra Action play each turn</td></tr>
 <tr><th scope="row">Raider Brunt, Weapons • Soldier</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Capping enemy Bold and Tough totals</td></tr>
 <tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
@@ -158,7 +157,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Composite Armor</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">The scrap is happening immediately rather than after defend</td><td class="comment"></td></tr>
 <tr><th scope="row">Conversion Engine</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Crude Club</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty</td></tr>
+<tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty</td></tr>
 <tr><th scope="row">Defensive Configuration</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Head-On Collision</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This won&#39;t work for alt1/alt2 characters</td><td class="comment"></td></tr>
 <tr><th scope="row">Multi-Missile Pod</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Allowing multiple upgrades in one Weapon slot and counting Multi-Missile Pods scrapped during a battle</td></tr>

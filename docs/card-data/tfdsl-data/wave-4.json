@@ -25,6 +25,7 @@
     },
     {
       "name": "Multi-Missile Pod",
+      "tfdslAttempt": "share_slot(3);on-attached-attack()->(if(confirm('Scrap this?'))->(choose(attached());scrap_upgrade(this());if(done())->(if(this().owner.flags=chosen().id + '_mmpod2')->(damage(3,all_enemies());set_flag_eob(chosen().id + '_mmpod3')):else->(if(this().owner.flags=chosen().id + '_mmpod1')->(damage(2,all_enemies());set_flag_eob(chosen().id + '_mmpod2')):else->(damage(1,all_enemies());set_flag_eob(chosen().id + '_mmpod1'))))))",
       "tfdsl": "",
       "needs": "Allowing multiple upgrades in one Weapon slot and counting Multi-Missile Pods scrapped during a battle"
     },
@@ -65,7 +66,7 @@
     },
     {
       "name": "Daring Escape",
-      "tfdsl": "",
+      "tfdsl": "repeat(all_friends(faction=Autobot).count)->move_to(self().ko,top_deck());if(all(self().deck + self().scrap).count=0)->confirm('You Escaped, Congratulations')",
       "needs": "Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty"
     },
     {
@@ -401,11 +402,9 @@
     },
     {
       "name": "Private Highjump, Off-Road Patrol • Infiltration",
-      "comment": "BUG: Can't have two prerequisites currently for a tap_ability",
-      "botFuture": "tap_ability(scrap_hand(pick_hand(exact=1,black>=1)),scrap_hand(pick_hand(exact=1)))->draw(2)",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1,black>=1)),scrap_hand(pick_hand(exact=1)))->draw(2)"
       }
     },
     {
@@ -653,7 +652,7 @@
       "name": "Raider Brunt, Weapons • Soldier",
       "bot-needs": "Capping enemy Bold and Tough totals",
       "tfdsl": {
-        "bot": "on-this-ko()->summon_weaponizer('TTC-HD Turret Armor','TTC-HP Oblivio Launcher')"
+        "bot": "on-this-ko()->summon_weaponizer('TTC-HD Turret Armor','TTC-HP Oblivio Launcher');static(max_bold,1,target=all_enemies());static(max_tough,1,target=all_enemies())"
       }
     },
     {
