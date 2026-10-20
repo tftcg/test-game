@@ -650,7 +650,6 @@
     },
     {
       "name": "Raider Brunt, Weapons • Soldier",
-      "bot-needs": "Capping enemy Bold and Tough totals",
       "tfdsl": {
         "bot": "on-this-ko()->summon_weaponizer('TTC-HD Turret Armor','TTC-HP Oblivio Launcher');static(max_bold,1,target=all_enemies());static(max_tough,1,target=all_enemies())"
       }
