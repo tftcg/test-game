@@ -659,9 +659,8 @@
     {
       "name": "Menasor, Menacing Colossus",
       "tfdsl": {
-        "combiner": ""
-      },
-      "combiner-needs": "Give the player a you may play an extra action on each of your turns."
+        "combiner": "bold(1);tough(1);pierce(1);on-start-turn()->set_flag_eot('extra action');on-this-combine()->(draw(2);set_flag_eot('extra action'))"
+      }
     },
     {
       "name": "Optimus Maximus, Ultimate Defender",

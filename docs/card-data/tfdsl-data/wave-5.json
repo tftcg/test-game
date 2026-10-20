@@ -228,8 +228,8 @@
     },
     {
       "name": "Speed Trap",
-      "tfdsl": "",
-      "needs": "Replacing a second Action play and preventing further Action plays that turn"
+      "comment": "TODO: Test the no more actions",
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(all(opponent().played,type=Action).count>=1))))->revealed(scrap_hand(event().card);set_flag('no actions',opponent()))"
     },
     {
       "name": "Spiked Bracelet",

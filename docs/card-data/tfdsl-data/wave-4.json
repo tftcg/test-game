@@ -66,8 +66,8 @@
     },
     {
       "name": "Daring Escape",
-      "tfdsl": "repeat(all_friends(faction=Autobot).count)->move_to(self().ko,top_deck());if(all(self().deck + self().scrap).count=0)->confirm('You Escaped, Congratulations')",
-      "needs": "Moving top deck cards directly to the KO area and winning when both deck and scrap pile are empty"
+      "comment": "NOTE: It just gives a win condition as a popup rather than a real one; but hey, banned card",
+      "tfdsl": "repeat(all_friends(faction=Autobot).count)->move_to(self().ko,top_deck());if(all(self().deck + self().scrap).count=0)->confirm('You Escaped, Congratulations')"
     },
     {
       "name": "Decipher",
@@ -409,10 +409,10 @@
     },
     {
       "name": "Private Hot Rod, Infantry • Soldier",
-      "bot-needs": "Allowing an extra Action play each turn",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "safeguard(3);on-reshuffle(when(this().under.count=0))->place_under(this(),bottom_deck())",
-        "bot": ""
+        "bot": "on-start-turn(when(this().under.count>0))->set_flag_eot('extra action');on-this-flip()->set_flag_eot('extra action')"
       }
     },
     {
