@@ -25,7 +25,7 @@
     },
     {
       "name": "Multi-Missile Pod",
-      "tfdsl": "put_only(trait=Plane || trait=Helicopter);share_slot(3);on-attached-attack()->(if(confirm('Scrap this?'))->(scrap_upgrade(this());if(done())->damage(all(battle().upgrade_scraps,from=event().attacker,card.name=this().name).count,all_enemies())))"
+      "tfdsl": "share_slot(3);put_only(trait=Plane || trait=Helicopter);on-attached-attack()->(if(confirm('Scrap this?'))->(scrap_upgrade(this());if(done())->damage(all(battle().upgrade_scraps,from=event().attacker,card.name=this().name).count,all_enemies())))"
     },
     {
       "name": "Battlefield Incursion",

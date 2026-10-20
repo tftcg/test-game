@@ -137,7 +137,7 @@
     },
     {
       "name": "Imperator Claw",
-      "tfdsl": "put_only(faction!=Autobot);share_slot(2,when(attached().faction=Decepticon,attached().trait=Titan));on-attached-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->damage(1,all_chars(stars<attached().stars))"
+      "tfdsl": "share_slot(2,when(attached().faction=Decepticon,attached().trait=Titan));put_only(faction!=Autobot);on-attached-after-attack-flip(when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1))->damage(1,all_chars(stars<attached().stars))"
     },
     {
       "name": "Zarak Shield",

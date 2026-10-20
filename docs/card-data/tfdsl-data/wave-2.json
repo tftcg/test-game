@@ -321,8 +321,7 @@
     },
     {
       "name": "Underhanded Tactics",
-      "comment": "TODO: How to do an if-it's-ko'd?",
-      "tfdsl": "damage(1,pick_enemy());if(previous_target().zone=opponent().ko)->repair(1,pick_friend(faction=Decepticon))"
+      "tfdsl": "damage(1,pick_enemy());if(exists_card(opponent().ko,id=previous_target().id))->repair(1,pick_friend(faction=Decepticon))"
     },
     {
       "name": "Universal Network Access",

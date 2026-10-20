@@ -49,7 +49,7 @@
     },
     {
       "name": "Cargo Trailer",
-      "tfdsl": "put_only(trait=Truck);share_slot(3);static(atk,all_upgrades_on_attached(name=this().name).count)"
+      "tfdsl": "share_slot(3);put_only(trait=Truck);static(atk,all_upgrades_on_attached(name=this().name).count)"
     },
     {
       "name": "Collateral Damage",
