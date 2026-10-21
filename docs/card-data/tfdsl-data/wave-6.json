@@ -206,8 +206,7 @@
     },
     {
       "name": "Prime's New Arm",
-      "needs": "Preventing opponent cards from scrapping this upgrade.",
-      "tfdsl": ""
+      "tfdsl": "put_only(name='Optimus Prime',damage>0);health(2);instead(on-this-scrapped(when(event().cause.owner!=this().owner))->do_nothing())"
     },
     {
       "name": "Reroute Enemy Vectors",

@@ -178,8 +178,8 @@
     },
     {
       "name": "Overheat",
-      "tfdsl": "",
-      "needs": "Suppressing specific battle icon effects for a battle"
+      "comment": "NOTE: This card goes back in time - instead of doing that I'm giving -atk for the number of orange and -pierce for the number of black until eob",
+      "tfdsl": "reveal(on(event=after-attack-flip,when(event().attacker.owner=opponent(),event().flips.cards.count>=7)))->revealed(atk_eob(0-event().flips.orange,event().attacker);pierce_eob(0-event().flips.black,event().attacker))"
     },
     {
       "name": "Overwhelming Advantage",

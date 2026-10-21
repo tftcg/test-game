@@ -468,10 +468,10 @@
     },
     {
       "name": "Four the Selectors!",
+      "comment": "NOTE: Ignoring Horde support as no card references it yet",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Horde keyword support"
+        "front": "do_nothing()"
+      }
     },
     {
       "name": "Heroic Perseverance",
@@ -615,9 +615,8 @@
     {
       "name": "Sonic Doom",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Removing printed text from a named character mode"
+        "front": "static(atk,when(all_friends(fullname=this().target).mode='bot'),2,target=all_friends(fullname=this().target));replace_dsl('=0','>=0',all_friends(fullname=this().target),'bot')"
+      }
     },
     {
       "name": "Spin to Deflect Stuff",
@@ -1013,9 +1012,8 @@
     {
       "name": "Scorpulator, Desert Rose",
       "tfdsl": {
-        "bot": ""
-      },
-      "bot-needs": "Choosing a trait from a character and damaging every character with that trait"
+        "bot": "on-this-attack-damage()->(choose(options(all_friends().traits));damage(1,all_chars(trait=chosen())));on-this-ko()->summon_weaponizer('Q-PTP Aculear Scope','Q-RTR Arachnoid Array')"
+      }
     },
     {
       "name": "Thunder Guts Gilthor, The One Who Claps",
