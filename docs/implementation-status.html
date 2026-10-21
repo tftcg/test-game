@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1144/1476 (77.5%)</p>
+  <p>TFDSL completion: 1148/1476 (77.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>331</td><td>20</td><td>63</td><td>83</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>482</td><td>0</td><td>115</td><td>115</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>332</td><td>19</td><td>63</td><td>82</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>485</td><td>0</td><td>112</td><td>112</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>83</td><td>2</td><td>72</td><td>74</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 889/898 (99.0%)</p>
+  <p>TFDSL completion: 891/898 (99.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>293</td><td>290</td><td>2</td><td>1</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>366</td><td>0</td><td>5</td><td>5</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>368</td><td>0</td><td>3</td><td>3</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -63,12 +63,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-2</h2>
-  <p>TFDSL completion: 183/184 (99.5%)</p>
+  <p>TFDSL completion: 185/184 (100.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>64</td><td>64</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><th scope="row">Battlecard</th><td>86</td><td>84</td><td>0</td><td>2</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>86</td><td>86</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
@@ -86,10 +86,9 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Crash Landing</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Needs testing</td><td class="comment"></td></tr>
 <tr><th scope="row">Decepticon Crown</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Dinobot Enigma</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Fog of War</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Each player independently choosing cards to keep before scrapping the rest of their hand.</td></tr>
+<tr><th scope="row">Fog of War</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This is implemented in DSL, so the player of the card then the opponent are performing the action in serial rather than at the same time</td><td class="comment"></td></tr>
 <tr><th scope="row">Predacon Enigma</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Reckless Charge</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">each(..) is used here because previous_target doesn&#39;t survive through events but it() will</td><td class="comment"></td></tr>
-<tr><th scope="row">Recon System</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Increasing a battle flip and choosing a flipped card to scrap before its battle icons are used.</td></tr>
 <tr><th scope="row">Stunticon Swagger</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Tackle</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Can tap characters with more stars</td><td class="comment"></td></tr>
 </tbody>
@@ -581,12 +580,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-10</h2>
-  <p>TFDSL completion: 55/71 (77.5%)</p>
+  <p>TFDSL completion: 57/71 (80.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>12</td><td>5</td><td>5</td><td>2</td><td>7</td></tr>
-<tr><th scope="row">Battlecard</th><td>28</td><td>25</td><td>0</td><td>3</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>12</td><td>6</td><td>4</td><td>2</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>28</td><td>26</td><td>0</td><td>2</td><td>2</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>15</td><td>1</td><td>4</td><td>5</td></tr>
 </tbody>
 </table>
@@ -600,12 +599,11 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Enemy, Infuriating Infiltrator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Card-text replacement effects</td></tr>
 <tr><th scope="row">Fastlane, Road Warrior</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Needs debugging - first DSL attempt is failing<br>bot-needs: Looking at, selecting from, and reordering top deck cards</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Selecting a qualifying flipped battle card and retaining it under a character</td></tr>
-<tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Inspecting opponent hidden zones</td></tr>
+<tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test alt</td><td class="comment"></td></tr>
 <tr><th scope="row">Anti-Aircraft Ordnance</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cerebro Shell</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Combat Reconfiguration</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">First in, Last out</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: End-of-turn conditional static abilities on a selected character</td></tr>
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>

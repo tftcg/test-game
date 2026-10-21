@@ -45,8 +45,7 @@
     },
     {
       "name": "First in, Last out",
-      "needs": "End-of-turn conditional static abilities on a selected character",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend());atk_eot(2,chosen());static(atk,when(chosen().trait=Wrecker,battle().attacker=chosen(),battle().defender.damage<=3),2,target=chosen())"
     },
     {
       "name": "For Cybertron!",
@@ -294,9 +293,9 @@
     },
     {
       "name": "Laserbeak, Impatient Interrogator",
-      "alt-needs": "Inspecting opponent hidden zones",
+      "comment": "TODO: Test alt",
       "tfdsl": {
-        "alt": "",
+        "alt": "reveal_cards(all(opponent().hand + all(opponent().actions,subtype='Secret Action',revealed=false)))",
         "bot": "on-this-attack(when(event().defender.health - event().defender.damage <= 3))->damage(1,event().defender);each(all_friends(faction=Decepticon,trait=Leader))->static(focus,1,target=it())"
       }
     },

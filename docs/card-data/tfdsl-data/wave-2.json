@@ -139,8 +139,8 @@
     },
     {
       "name": "Fog of War",
-      "tfdsl": "",
-      "needs": "Each player independently choosing cards to keep before scrapping the rest of their hand."
+      "comment": "NOTE: This is implemented in DSL, so the player of the card then the opponent are performing the action in serial rather than at the same time",
+      "tfdsl": "if(self().hand.count>2)->(choose(pick(self().hand,exact=2));each(all(self().hand))->(if(previous_target().id!=it().id)->scrap_hand(it()))):else->draw(2-self().hand.count);if(opponent().hand.count>2)->(choose(opponent_pick(opponent().hand,exact=2));each(all(opponent().hand))->(if(previous_target(3).id!=it().id)->scrap_hand(it()))):else->draw(2-opponent().hand.count,opponent())"
     },
     {
       "name": "Handheld Blaster",
@@ -222,8 +222,7 @@
     },
     {
       "name": "Recon System",
-      "tfdsl": "",
-      "needs": "Increasing a battle flip and choosing a flipped card to scrap before its battle icons are used."
+      "tfdsl": "on-attached-battle()->flip_extra(1);on-attached-battle-flip(when(event().final_intended_flip=true))->(scrap_flip(pick(event().flips.cards),event(),event().battler))"
     },
     {
       "name": "Rest and Relaxation",
