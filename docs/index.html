@@ -78,6 +78,76 @@
       border-radius: .25rem;
       cursor: pointer;
     }
+    #pile-split-prompt, #pile-pick-prompt { width: min(900px, calc(100vw - 2rem)); }
+    #pile-split-prompt h2, #pile-pick-prompt h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+    #pile-split-instructions { margin: 0 0 .8rem; color: #b7c7d6; }
+    #pile-split-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+      margin-bottom: 1rem;
+    }
+    .pile-split-pile {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: .5rem;
+      min-height: 190px;
+      padding: .5rem;
+      background: #10151b;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+    }
+    .pile-split-pile h3 { flex-basis: 100%; margin: 0; font-size: .9rem; }
+    .pile-empty { color: #9fb2c5; font-style: italic; }
+    .pile-card {
+      display: grid;
+      grid-template-rows: 120px auto;
+      width: 86px;
+      padding: .2rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #8298aa;
+      border-radius: .2rem;
+      cursor: pointer;
+    }
+    .pile-card img { width: 100%; height: 100%; object-fit: cover; }
+    .pile-card span { overflow: hidden; font-size: .65rem; text-overflow: ellipsis; white-space: nowrap; }
+    #pile-pick-instructions { margin: 0 0 .8rem; color: #b7c7d6; }
+    #pile-pick-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+      margin-bottom: 1rem;
+    }
+    .pile-pick-option {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+      gap: .4rem;
+      min-height: 190px;
+      padding: .5rem;
+      color: inherit;
+      background: #10151b;
+      border: 2px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    .pile-pick-option.selected { border-color: #a9cce8; background: #263748; }
+    .pile-pick-option img { width: 86px; height: 120px; object-fit: cover; }
+    .pile-pick-option span { align-self: center; color: #9fb2c5; font-style: italic; }
+    #pile-split-confirm, #pile-pick-confirm {
+      display: block;
+      min-width: 6rem;
+      margin-left: auto;
+      padding: .45rem .8rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
     #summon-button:disabled { cursor: not-allowed; opacity: .5; }
 
     .game-layout {
@@ -354,7 +424,8 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop, #value-pick-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #pile-split-prompt::backdrop, #pile-pick-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop, #value-pick-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #pile-split-prompt, #pile-pick-prompt { width: min(900px, calc(100vw - 2rem)); }
     #text-prompt form { display: grid; gap: .75rem; }
     #text-prompt label { display: grid; gap: .35rem; }
     #text-prompt input {
@@ -669,6 +740,18 @@
     <p id="reorder-instructions"></p>
     <div id="reorder-cards"></div>
     <button id="reorder-confirm" type="button">Confirm</button>
+  </dialog>
+  <dialog id="pile-split-prompt">
+    <h2>Separate the revealed cards into two piles</h2>
+    <p id="pile-split-instructions">Select a card to move it between piles. Either pile may be empty.</p>
+    <div id="pile-split-cards"></div>
+    <button id="pile-split-confirm" type="button">Confirm piles</button>
+  </dialog>
+  <dialog id="pile-pick-prompt">
+    <h2 id="pile-pick-title">Which pile to add to hand?</h2>
+    <p id="pile-pick-instructions">Choose one pile.</p>
+    <div id="pile-pick-options"></div>
+    <button id="pile-pick-confirm" type="button">Choose pile</button>
   </dialog>
   <dialog id="mode-prompt">
     <h2>Choose a mode for <span id="mode-character"></span></h2>

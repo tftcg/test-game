@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1148/1476 (77.8%)</p>
+  <p>TFDSL completion: 1151/1476 (78.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>414</td><td>332</td><td>19</td><td>63</td><td>82</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>485</td><td>0</td><td>112</td><td>112</td></tr>
+<tr><th scope="row">Character</th><td>414</td><td>333</td><td>18</td><td>63</td><td>81</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>487</td><td>0</td><td>110</td><td>110</td></tr>
 <tr><th scope="row">Stratagem</th><td>157</td><td>83</td><td>2</td><td>72</td><td>74</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 891/898 (99.2%)</p>
+  <p>TFDSL completion: 894/898 (99.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>293</td><td>290</td><td>2</td><td>1</td><td>3</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>368</td><td>0</td><td>3</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>293</td><td>291</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>370</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -166,12 +166,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-5</h2>
-  <p>TFDSL completion: 182/188 (96.8%)</p>
+  <p>TFDSL completion: 185/188 (98.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>57</td><td>55</td><td>2</td><td>0</td><td>2</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>61</td><td>0</td><td>3</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>57</td><td>56</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>63</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -186,7 +186,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Horri-Bull, Ground Trooper</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Mindwipe, Hypnotist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: Checking the opponent has a card shouldn&#39;t be here on body mode - things need to just fail gracefully</td><td class="comment"></td></tr>
 <tr><th scope="row">Optimus Prime, Legendary Warrior</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Perceptor, Precise Sniper</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: reveal_cards can show the top 4 to each player; then the opponent can be asked to pick up to 4 to go in the first pile. The trick then is having the perceptor player choose one of those decks. Custom code should handle it</td></tr>
 <tr><th scope="row">Sergeant Kup, Wrecker Leader</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This is relying on pick_hand not being cancellable. This really needs a pay()</td><td class="comment"></td></tr>
 <tr><th scope="row">Twin Twist, Demolitions</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Only issue here is that there are triggers that the player won&#39;t understand for ordering</td><td class="comment"></td></tr>
 <tr><th scope="row">Wolfwire, Ground Tracker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">This is relying on pick_hand not being cancelled. Needs pay()</td><td class="comment">body-needs: Replacing the post-battle green-card hand swap with a selected flipped card</td></tr>
@@ -201,11 +200,9 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Master of Metallikato</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Plasma Horns</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Precision Fire</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Usualy alt1/alt2 etc issues. Needs testing against Sky Shadow&#39;s Combiner Body</td><td class="comment"></td></tr>
-<tr><th scope="row">Regenerative Core</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving damage from a character to an Upgrade and tracking damage on that Upgrade</td></tr>
 <tr><th scope="row">Speed Trap</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the no more actions</td><td class="comment"></td></tr>
 <tr><th scope="row">Spymaster&#39;s Ruse</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Linking a played Secret Action to this card and exempting both from end-turn scrapping</td></tr>
 <tr><th scope="row">Tripwire</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Turn the Tide</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Pairing equal-size character selections and assigning each damage transfer to a distinct target</td></tr>
 <tr><th scope="row">Versatility</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this is doing &#39;when it attacks the next time this turn&#39;. It won&#39;t fail as it should when someone plays it in combat phase and untaps</td><td class="comment"></td></tr>
 <tr><th scope="row">All-Out</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Infiltration</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Image fails to load, but this is really a tf.cards issue</td><td class="comment"></td></tr>

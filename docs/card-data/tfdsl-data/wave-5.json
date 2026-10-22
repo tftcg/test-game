@@ -208,8 +208,7 @@
     },
     {
       "name": "Regenerative Core",
-      "tfdsl": "",
-      "needs": "Moving damage from a character to an Upgrade and tracking damage on that Upgrade"
+      "tfdsl": "on-attached-attack()->(move(1,attached(),this());if(this().counter>=2)->scrap_upgrade(this()))"
     },
     {
       "name": "Scout Armor",
@@ -271,8 +270,7 @@
     },
     {
       "name": "Turn the Tide",
-      "tfdsl": "",
-      "needs": "Pairing equal-size character selections and assigning each damage transfer to a distinct target"
+      "tfdsl": "CUSTOM_turn_the_tide()"
     },
     {
       "name": "Versatility",
@@ -824,10 +822,9 @@
     {
       "name": "Perceptor, Precise Sniper",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(reveal_cards(top_deck(count=4),mute_opponents=true);CUSTOM_perceptor(top_deck(count=4)))",
         "body": "static(atk,this().under.count)"
-      },
-      "alt-needs": "reveal_cards can show the top 4 to each player; then the opponent can be asked to pick up to 4 to go in the first pile. The trick then is having the perceptor player choose one of those decks. Custom code should handle it"
+      }
     },
     {
       "name": "Fortress Maximus, Great War Veteran",
