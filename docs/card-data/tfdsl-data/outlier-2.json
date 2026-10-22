@@ -1,0 +1,14 @@
+{
+  "set": {
+    "name": "Outlier 1"
+  },
+  "cards": [
+    {
+      "name": "Optimus Prime, Inspiring Leader",
+      "tfdsl": {
+        "alt": "each(all_friends(id!=this().id))->static(tough,1,target=it());instead(on-damage(when(event().damaged.owner=this().owner,event().damaged!=this(),event().origin.owner!=this().owner))->do_nothing());on-this-attack()->move_to(self().hand,pick_scrap(name='Matrix of Leadership'))",
+        "bot": "on-this-flip(when(this().upgrades.name='Matrix of Leadership'))->bold_eot(3,all_friends(id!=this().id))"
+      }
+    }
+  ]
+}

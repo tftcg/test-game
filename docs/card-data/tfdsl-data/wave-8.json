@@ -304,7 +304,7 @@
     },
     {
       "name": "Sparring Lessons",
-      "tfdsl": "choose(pick_friend(faction=Autobot,count=2));damage(1,previous_target());repair(2,previous_target())",
+      "tfdsl": "choose(pick_friend(faction=Autobot,exact=2));damage(1,previous_target());repair(2,previous_target())",
       "comment": "TODO: Test"
     },
     {
