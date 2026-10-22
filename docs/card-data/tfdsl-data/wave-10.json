@@ -127,9 +127,8 @@
     },
     {
       "name": "Eat My Dust!",
-      "front-needs": "NOTE: Explicitly lists 'alt 1' and 'alt 2' because = doesn't match those to alt yet",
       "tfdsl": {
-        "front": "trait(Wrecker,all_friends(fullname=this().target));static(safeguard,when(all_friends(fullname=this().target).mode='alt 1' || all_friends(fullname=this().target).mode='alt 2'),3,target=all_friends(fullname=this().target));replace_dsl('1','2',all_friends(fullname=this().target),'bot')"
+        "front": "trait(Wrecker,all_friends(fullname=this().target));static(safeguard,when(all_friends(fullname=this().target).mode='alt'),3,target=all_friends(fullname=this().target));replace_dsl('1','2',all_friends(fullname=this().target),'bot')"
       }
     },
     {

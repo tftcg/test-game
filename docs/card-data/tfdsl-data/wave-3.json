@@ -260,8 +260,7 @@
     },
     {
       "name": "Unconventional Flying Object",
-      "comment": "TODO: It ought to flip back to alt explicitly, but avoiding that until alt1/alt2 being equal to alt is implemented",
-      "tfdsl": "flip(pick_friend(trait=Spaceship),bot);flip(previous_target())"
+      "tfdsl": "flip(pick_friend(trait=Spaceship),bot);flip(previous_target(),alt)"
     },
     {
       "name": "Urban Camo",

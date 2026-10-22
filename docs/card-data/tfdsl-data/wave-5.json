@@ -199,7 +199,6 @@
     },
     {
       "name": "Precision Fire",
-      "comment": "NOTE: Usualy alt1/alt2 etc issues. Needs testing against Sky Shadow's Combiner Body",
       "tfdsl": "choose(options('alt','bot','body','combiner'));damage(1,all_chars(mode=chosen()))"
     },
     {
@@ -240,8 +239,7 @@
     },
     {
       "name": "Spymaster's Ruse",
-      "tfdsl": "",
-      "needs": "Linking a played Secret Action to this card and exempting both from end-turn scrapping"
+      "tfdsl": "if(confirm('Play Secret Action?'))->(choose(pick_hand(subtype='Secret Action'));play(chosen());set_flag('spymaster::'+this().id+'::'+chosen().id))"
     },
     {
       "name": "Staggering Might",
@@ -339,9 +337,9 @@
     },
     {
       "name": "Master Converter",
-      "comment": "BUG: Currently alt1/alt2 are not considered equal to alt so this won't work",
+      "comment": "BUG: Not working. NOTE: The stratagem addresses alt modes, but the DSL ought to be able to work with faces",
       "tfdsl": {
-        "front": "trait(Tank,all_friends(fullname=this().target),alt);trait(Plane,all_friends(fullname=this().target),alt)"
+        "front": "trait(Tank,all_friends(fullname=this().target),'alt 2');trait(Plane,all_friends(fullname=this().target),'alt 1')"
       }
     },
     {

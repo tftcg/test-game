@@ -16,24 +16,24 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1151/1476 (78.0%)</p>
+  <p>TFDSL completion: 1153/1476 (78.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>414</td><td>333</td><td>18</td><td>63</td><td>81</td></tr>
-<tr><th scope="row">Battlecard</th><td>597</td><td>487</td><td>0</td><td>110</td><td>110</td></tr>
-<tr><th scope="row">Stratagem</th><td>157</td><td>83</td><td>2</td><td>72</td><td>74</td></tr>
+<tr><th scope="row">Battlecard</th><td>597</td><td>488</td><td>0</td><td>109</td><td>109</td></tr>
+<tr><th scope="row">Stratagem</th><td>157</td><td>84</td><td>1</td><td>72</td><td>73</td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>Waves 1 to 5</h2>
-  <p>TFDSL completion: 894/898 (99.6%)</p>
+  <p>TFDSL completion: 895/898 (99.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>293</td><td>291</td><td>1</td><td>1</td><td>2</td></tr>
-<tr><th scope="row">Battlecard</th><td>371</td><td>370</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Battlecard</th><td>371</td><td>371</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -123,7 +123,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Erratic Energy Grenade</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Heroic Team-Up</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Point-Defense System</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Technically this should be checking has(pierce) as a static effect rather than pierce&gt;0. Does it matter?</td><td class="comment"></td></tr>
-<tr><th scope="row">Unconventional Flying Object</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">It ought to flip back to alt explicitly, but avoiding that until alt1/alt2 being equal to alt is implemented</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>
@@ -154,7 +153,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Crude Club</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Daring Escape</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">It just gives a win condition as a popup rather than a real one; but hey, banned card</td><td class="comment"></td></tr>
 <tr><th scope="row">Defensive Configuration</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Head-On Collision</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">This won&#39;t work for alt1/alt2 characters</td><td class="comment"></td></tr>
 <tr><th scope="row">Overheat</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This card goes back in time - instead of doing that I&#39;m giving -atk for the number of orange and -pierce for the number of black until eob</td><td class="comment"></td></tr>
 <tr><th scope="row">Relentless Invasion</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Shoulder Holster</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -166,12 +164,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-5</h2>
-  <p>TFDSL completion: 185/188 (98.4%)</p>
+  <p>TFDSL completion: 186/188 (98.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>57</td><td>56</td><td>1</td><td>0</td><td>1</td></tr>
-<tr><th scope="row">Battlecard</th><td>64</td><td>63</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Battlecard</th><td>64</td><td>64</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>30</td><td>29</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
@@ -199,14 +197,12 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Lose the Initiative</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Master of Metallikato</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Plasma Horns</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Precision Fire</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Usualy alt1/alt2 etc issues. Needs testing against Sky Shadow&#39;s Combiner Body</td><td class="comment"></td></tr>
 <tr><th scope="row">Speed Trap</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test the no more actions</td><td class="comment"></td></tr>
-<tr><th scope="row">Spymaster&#39;s Ruse</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Linking a played Secret Action to this card and exempting both from end-turn scrapping</td></tr>
 <tr><th scope="row">Tripwire</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Versatility</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this is doing &#39;when it attacks the next time this turn&#39;. It won&#39;t fail as it should when someone plays it in combat phase and untaps</td><td class="comment"></td></tr>
 <tr><th scope="row">All-Out</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Infiltration</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Image fails to load, but this is really a tf.cards issue</td><td class="comment"></td></tr>
-<tr><th scope="row">Master Converter</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Currently alt1/alt2 are not considered equal to alt so this won&#39;t work</td><td class="comment"></td></tr>
+<tr><th scope="row">Master Converter</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Not working. NOTE: The stratagem addresses alt modes, but the DSL ought to be able to work with faces</td><td class="comment"></td></tr>
 <tr><th scope="row">More Guns</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Pop-Up Attack</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sabotage</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppressing opponent triggered abilities while an enemy is upgraded</td></tr>
@@ -577,13 +573,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-10</h2>
-  <p>TFDSL completion: 57/71 (80.3%)</p>
+  <p>TFDSL completion: 58/71 (81.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>12</td><td>6</td><td>4</td><td>2</td><td>6</td></tr>
 <tr><th scope="row">Battlecard</th><td>28</td><td>26</td><td>0</td><td>2</td><td>2</td></tr>
-<tr><th scope="row">Stratagem</th><td>20</td><td>15</td><td>1</td><td>4</td><td>5</td></tr>
+<tr><th scope="row">Stratagem</th><td>20</td><td>16</td><td>0</td><td>4</td><td>4</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -604,7 +600,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap triggers and turn-scoped listeners for enemy flips</td></tr>
 <tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
-<tr><th scope="row">Eat My Dust!</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: NOTE: Explicitly lists &#39;alt 1&#39; and &#39;alt 2&#39; because = doesn&#39;t match those to alt yet</td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Adding/removing traits and card-text replacement effects</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Solar Regeneration</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>

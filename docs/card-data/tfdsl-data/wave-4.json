@@ -109,7 +109,6 @@
     },
     {
       "name": "Head-On Collision",
-      "comment": "TODO: This won't work for alt1/alt2 characters",
       "tfdsl": "choose(pick_friend());static(atk,when(event().attacker=previous_target(),event().attacker.mode=alt),3,target=previous_target())"
     },
     {
