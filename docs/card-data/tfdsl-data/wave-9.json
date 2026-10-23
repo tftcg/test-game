@@ -126,8 +126,8 @@
     },
     {
       "name": "Wanna Bet?",
-      "needs": "Replacing battle cards being put under an enemy character with scrapping them",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "instead(on(event=place-under,when(event().cardtype=battle,event().bot.owner!=this().owner))->scrap_hand(event().cards))"
     },
     {
       "name": "Electro-Stinger",

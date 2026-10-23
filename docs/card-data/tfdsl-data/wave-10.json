@@ -206,10 +206,8 @@
     },
     {
       "name": "Voracious Hunger",
-      "front-needs": "Card-text replacement effects",
-      "fronStart": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Battlefield Incursion')))",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Battlefield Incursion')));replace_dsl('*',\"on-this-flip()->(if(confirm('KO another character?'))->(ko(pick_friend(id!=this().id));if(done())->(atk_eot(3,this());repair(3,this()))))\",all_friends(fullname=this().target),'bot')"
       }
     },
     {
@@ -282,10 +280,9 @@
     },
     {
       "name": "Hoist, Methodical Maintenance",
-      "alt-needs": "Selecting a qualifying flipped battle card and retaining it under a character",
       "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-battle(when(this().under.count=0))->(on-this-after-battle(scope=afb)->place_under(this(),pick(event().flips.cards,contains_dsl='repair(')))",
         "bot": "focus(1);on-this-flip()->(if(confirm())->play(pick_under_this()))"
       }
     },
