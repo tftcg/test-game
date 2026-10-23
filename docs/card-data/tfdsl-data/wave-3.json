@@ -328,11 +328,9 @@
     },
     {
       "name": "Major Shockwave, Applied Sciences • Scientist",
-      "alt-needs": "Inspecting the top deck card at any time",
-      "bot-needs": "Playing a qualifying card directly from the top of the deck",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "keep_top_card_visible();on-this-flip()->(draw(1);scrap_hand(opponent_pick_opponent_hand()))",
+        "bot": "keep_top_card_visible();CUSTOM_major_shockwave()"
       }
     },
     {

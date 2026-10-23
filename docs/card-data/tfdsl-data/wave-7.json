@@ -47,8 +47,7 @@
     },
     {
       "name": "Evasive Action",
-      "tfdsl": "",
-      "needs": "Secret Action damage replacement with a trait-qualified target"
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.trait=Plane || event().target.trait=Helicopter || event().target.trait=Spaceship))))->revealed(modify(event().damage:=event().damage - 2))"
     },
     {
       "name": "Fearless",
@@ -129,9 +128,8 @@
     },
     {
       "name": "Impervious",
-      "front-needs": "Replacing an Armor scrap with an optional Armor scrap from hand",
       "tfdsl": {
-        "front": ""
+        "front": "instead(on(event=scrap-upgrade,when(event().from.fullname=this().target,event().from.owner=this().owner,event().scrapped.subtype=Armor,event().cause.owner=opponent()))->(if(confirm('Scrap Armor from Hand instead?'))->(scrap_hand(pick_hand(subtype=Armor));if(done())->do_nothing():else->scrap_upgrade(event().scrapped)):else->scrap_upgrade(event().scrapped)));each(all_friends(fullname=this().target))->static(health,when(it().upgrades.name='Ultra Magnus Armor'),2,target=it())"
       }
     },
     {
@@ -262,9 +260,8 @@
     },
     {
       "name": "Nightbird, Tera-Kura Construct",
-      "comment": "BUG: This should be setup by an on-this-battle. It also needs the damage to still happen even if Nightbird is KO'd. Needs new feature support",
       "tfdsl": {
-        "bot": "focus(1);on-this-after-battle(when(event().other_battler.trait=Melee))->damage(1,event().other_battler)"
+        "bot": "focus(1);on-this-battle(when(event().other_battler.trait=Melee))->(on-this-after-battle(scope=afb)->damage(1,event().other_battler))"
       }
     }
   ]
