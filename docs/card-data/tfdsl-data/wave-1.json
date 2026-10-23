@@ -65,7 +65,7 @@
     },
     {
       "name": "Crushing Size",
-      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Utility));if(done()=false)->draw(1);pierce(1)"
+      "tfdsl": "on-put()->(scrap_upgrade(pick_enemy_upgrade(subtype=Utility));if(done()=false)->draw(1);pierce(1))"
     },
     {
       "name": "Crushing Treads",
@@ -105,7 +105,7 @@
     },
     {
       "name": "Drill Arms",
-      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Armor));if(done()=false)->draw(1)"
+      "tfdsl": "on-put()->(scrap_upgrade(pick_enemy_upgrade(subtype=Armor));if(done()=false)->draw(1))"
     },
     {
       "name": "Emergency Maintenance",
@@ -262,7 +262,7 @@
     },
     {
       "name": "Scrapper Gauntlets",
-      "tfdsl": "scrap_upgrade(pick_enemy_upgrade(subtype=Weapon));if(done()=false)->draw(1)"
+      "tfdsl": "on-put()->(scrap_upgrade(pick_enemy_upgrade(subtype=Weapon));if(done()=false)->draw(1))"
     },
     {
       "name": "Security Checkpoint",
@@ -322,7 +322,7 @@
     },
     {
       "name": "Turbo Boosters",
-      "tfdsl": "put_only(trait=Car);untap(attached())"
+      "tfdsl": "put_only(trait=Car);on-put()->(untap(attached()))"
     },
     {
       "name": "Zap",

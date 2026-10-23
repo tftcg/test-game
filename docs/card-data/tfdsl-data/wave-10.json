@@ -240,9 +240,8 @@
     },
     {
       "name": "Bob, Loveable Pet",
-      "alt-needs": "Suppressing card ability triggers from a specific KO event",
       "tfdsl": {
-        "alt": ""
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()))"
       }
     },
     {

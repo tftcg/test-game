@@ -74,7 +74,7 @@
     {
       "name": "Defensive Configuration",
       "comment": "TODO: Test",
-      "tfdsl": "add_slot('Armor',1);reveal_cards(top_deck());if(previous_target().subtype=Armor)->play(previous_target(),attached())"
+      "tfdsl": "add_slot('Armor',1);on-put()->(reveal_cards(top_deck());if(previous_target().subtype=Armor)->play(previous_target(),attached()))"
     },
     {
       "name": "Designated Target",
@@ -216,7 +216,7 @@
     {
       "name": "Shoulder Holster",
       "comment": "TODO: Test",
-      "tfdsl": "add_slot('Weapon',1);reveal_cards(top_deck());if(previous_target().subtype=Weapon)->play(previous_target(),attached())"
+      "tfdsl": "add_slot('Weapon',1);on-put()->(reveal_cards(top_deck());if(previous_target().subtype=Weapon)->play(previous_target(),attached()))"
     },
     {
       "name": "Showing Off",
@@ -394,7 +394,7 @@
       "name": "Private Greenlight, Special Ops • Recon",
       "tfdsl": {
         "alt": "instead(on-attached-scrapped(when(event().cause.owner!=this().owner))->do_nothing())",
-        "bot": "on(event=play-action,when(event().player=this().owner,event().card.green>=1))->atk_eot(1,this())"
+        "bot": "on(event=play-action,when(event().player=this().owner,event().card.green>=1))->atk_eot(1,this());on(event=play-upgrade,when(event().player=this().owner,event().played.green>=1))->atk_eot(1,this())"
       }
     },
     {

@@ -13,8 +13,7 @@
     },
     {
       "name": "Armor Piercing Munitions",
-      "tfdsl": "",
-      "needs": "A selected character's this-turn attack trigger"
+      "tfdsl": "choose(pick_friend());on-attack(scope=eot,when(event().attacker.id=chosen().id,event().attacker.trait=Tank))->(atk_eob(2,chosen());scrap_upgrade(all(event().defender.upgrades,subtype=Armor)))"
     },
     {
       "name": "Camien Grace",

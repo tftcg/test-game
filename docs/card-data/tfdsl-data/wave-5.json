@@ -138,7 +138,7 @@
     },
     {
       "name": "Junk Cannon",
-      "tfdsl": "on(event=put-upgrade,when(event().attached=attached()))->atk_eot(2,attached())",
+      "tfdsl": "on-put()->atk_eot(2,attached())",
       "comment": "TODO: Test"
     },
     {
@@ -255,7 +255,7 @@
     },
     {
       "name": "Triangulator",
-      "tfdsl": "share_slot(3);focus(1);if(confirm())->play(pick_hand(name=this().name))"
+      "tfdsl": "share_slot(3);focus(1);on-put()->(if(confirm())->play(pick_hand(name=this().name)))"
     },
     {
       "name": "Tripwire",
@@ -389,9 +389,8 @@
     {
       "name": "Sabotage",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Suppressing opponent triggered abilities while an enemy is upgraded"
+        "front": "suppress_triggers(event=put-upgrade,controller=opponent(),when(exists_friend(fullname=this().target),event().attached.owner=opponent()))"
+      }
     },
     {
       "name": "Saturation Bombing",

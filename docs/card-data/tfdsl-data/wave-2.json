@@ -24,7 +24,7 @@
     },
     {
       "name": "Attack Drone",
-      "tfdsl": "share_slot(3);if(confirm())->play(pick_hand(name=this().name))"
+      "tfdsl": "share_slot(3);on-put()->(if(confirm())->play(pick_hand(name=this().name)))"
     },
     {
       "name": "Backup Beam",
@@ -769,7 +769,7 @@
       "name": "Megatron, Cybertronian Tyrant",
       "tfdsl": {
         "alt": "bold(1)",
-        "bot": "on-upgrade()->atk_eot(1,this())"
+        "bot": "on-upgraded()->atk_eot(1,this())"
       }
     },
     {

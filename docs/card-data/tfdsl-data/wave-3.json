@@ -103,7 +103,7 @@
     },
     {
       "name": "Extra Padding",
-      "tfdsl": "share_slot(3);tough(1);if(confirm())->play(pick_hand(name=this().name))"
+      "tfdsl": "share_slot(3);tough(1);on-put()->(if(confirm())->play(pick_hand(name=this().name)))"
     },
     {
       "name": "Firecon Flame",
@@ -565,7 +565,7 @@
     {
       "name": "Sergeant Hound, Infantry • Recon",
       "tfdsl": {
-        "bot": "on-upgrade()->atk_eot(2,this())"
+        "bot": "on-upgraded()->atk_eot(2,this())"
       }
     },
     {
