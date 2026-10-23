@@ -767,11 +767,9 @@
     {
       "name": "Wolfwire, Ground Tracker",
       "tfdsl": {
-        "alt": "on-this-flip()->(if(confirm())->(scrap_hand(pick_hand(icons.green>=1));draw(2)))",
-        "body": ""
-      },
-      "comment": "NOTE: This is relying on pick_hand not being cancelled. Needs pay()",
-      "body-needs": "Replacing the post-battle green-card hand swap with a selected flipped card"
+        "alt": "on-this-flip()->(if(confirm('Scrap a green card to draw 2?'))->(scrap_hand(pick_hand(green>=1));if(done())->draw(2)))",
+        "body": "on-this-battle()->(instead(on(event=green-swap-decision,scope=afb,when(event().player=self()))->modify(event().allow_none:=true)))"
+      }
     },
     {
       "name": "Sky Shadow, Elite Warrior",
