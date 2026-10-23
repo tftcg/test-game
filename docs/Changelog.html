@@ -5,9 +5,12 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TODO, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1718)</h2>
+<h2>Implemented cards (1721)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
+<tr><td>2026-10-23</td><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>wave-3</td><td>Character</td><td>complete</td><td><code>df326b40bff7</code></td></tr>
 <tr><td>2026-10-23</td><th scope="row">Wolfwire, Ground Tracker</th><td>wave-5</td><td>Character</td><td>complete</td><td><code>aa1ae405a41c</code></td></tr>
+<tr><td>2026-10-23</td><th scope="row">Evasive Action</th><td>wave-7</td><td>Battlecard</td><td>complete</td><td><code>df326b40bff7</code></td></tr>
+<tr><td>2026-10-23</td><th scope="row">Impervious</th><td>wave-7</td><td>Stratagem</td><td>complete</td><td><code>df326b40bff7</code></td></tr>
 <tr><td>2026-10-22</td><th scope="row">Sabotage</th><td>wave-5</td><td>Stratagem</td><td>complete</td><td><code>9afd5d74feba</code></td></tr>
 <tr><td>2026-10-22</td><th scope="row">Spymaster&#39;s Ruse</th><td>wave-5</td><td>Battlecard</td><td>complete</td><td><code>b357508598ab</code></td></tr>
 <tr><td>2026-10-22</td><th scope="row">Armor Piercing Munitions</th><td>wave-7</td><td>Battlecard</td><td>complete</td><td><code>9afd5d74feba</code></td></tr>
@@ -794,7 +797,7 @@
 <tr><td>On or before 2026-10-13</td><th scope="row">Holomatter Mastery</th><td>wave-7</td><td>Stratagem</td><td>complete</td><td><code>3a7aa9ca336f</code></td></tr>
 <tr><td>On or before 2026-10-13</td><th scope="row">Impetuous Stand</th><td>wave-7</td><td>Battlecard</td><td>complete</td><td><code>3a7aa9ca336f</code></td></tr>
 <tr><td>On or before 2026-10-13</td><th scope="row">Malevolent Architect</th><td>wave-7</td><td>Stratagem</td><td>complete</td><td><code>3a7aa9ca336f</code></td></tr>
-<tr><td>On or before 2026-10-13</td><th scope="row">Nightbird, Tera-Kura Construct</th><td>wave-7</td><td>Character</td><td>bug</td><td><code>3a7aa9ca336f</code></td></tr>
+<tr><td>On or before 2026-10-13</td><th scope="row">Nightbird, Tera-Kura Construct</th><td>wave-7</td><td>Character</td><td>complete</td><td><code>3a7aa9ca336f</code></td></tr>
 <tr><td>On or before 2026-10-13</td><th scope="row">Obfuscating Cloud</th><td>wave-7</td><td>Stratagem</td><td>bug</td><td><code>3a7aa9ca336f</code></td></tr>
 <tr><td>On or before 2026-10-13</td><th scope="row">One Tough Bug!</th><td>wave-7</td><td>Stratagem</td><td>complete</td><td><code>3a7aa9ca336f</code></td></tr>
 <tr><td>On or before 2026-10-13</td><th scope="row">Rage</th><td>wave-7</td><td>Battlecard</td><td>complete</td><td><code>3a7aa9ca336f</code></td></tr>
@@ -1726,9 +1729,8 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (619)</h2>
+<h2>No implementation date observed (616)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
-<tr><th scope="row">Major Shockwave, Applied Sciences • Scientist</th><td>wave-3</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Alpha Sentinel, Dark Guardian Relic</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Armada, Herald of Shrouds</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Autobot Countdown, Aerospace Commander</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
@@ -1825,12 +1827,10 @@
 <tr><th scope="row">Highbrow, Appallingly Astute</th><td>wave-7</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Megatron/Ratchet, Twisted Amalgamation</th><td>wave-7</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Contemplation</th><td>wave-7</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Evasive Action</th><td>wave-7</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Rapid Response Cycle</th><td>wave-7</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Artillery Support</th><td>wave-7</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Durable Decepticon</th><td>wave-7</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Fully Loaded</th><td>wave-7</td><td>Stratagem</td><td>unimplemented</td></tr>
-<tr><th scope="row">Impervious</th><td>wave-7</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Out of the Way Hot Rod!</th><td>wave-7</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Silent Hunter</th><td>wave-7</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Abominus, Hellsparked Horror</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
