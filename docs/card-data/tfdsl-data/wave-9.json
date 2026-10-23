@@ -35,14 +35,11 @@
     },
     {
       "name": "Cloud Cover",
-      "needs": "Preventing damage counters from moving between characters",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-damage-move(when(event().move_from.owner=opponent(),event().move_from.cardtype=character,event().move_to.cardtype=character))))->revealed(instead(on-damage-move(scope=eot,when(event().move_from.cardtype=character,event().move_to.cardtype=character))->do_nothing()))"
     },
     {
       "name": "Cosmic Rust Cannon",
-      "needs": "Resolving an optional scrap-or-damage choice after battle - else statement? if(!done())?",
-      "tfdslFuture": "on-attached-attack()->damage(1,attached());on-attached-after-attack()->(if(confirm('Scrap Upgrade?'))->scrap_upgrade(pick_upgrade()))",
-      "tfdsl": ""
+      "tfdsl": "on-attached-attack()->(on-attached-after-attack(scope=afb)->(if(event().attacker.upgrades.count=0)->damage(1,event().attacker):else->(if(confirm('Scrap an Upgrade?'))->(scrap_upgrade(pick(event().attacker.upgrades));if(done()!=true)->damage(1,event().attacker)):else->damage(1,event().attacker)));damage(1,attached()))"
     },
     {
       "name": "Cross-Counter",
@@ -87,8 +84,7 @@
     },
     {
       "name": "Spoils of War",
-      "needs": "Choosing up to five characters that share a trait",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend(upto=5));if(shares_trait(previous_target()))->repair(1,previous_target())"
     },
     {
       "name": "Starscream's Cape",
@@ -244,10 +240,7 @@
     },
     {
       "name": "Such Heroic Nonsense",
-      "front-needs": "Swapping a hand card for a specific battle card flipped during a battle",
-      "tfdsl": {
-        "front": ""
-      }
+      "needs": "Conditioning green-swap eligibility on this Stratagem without changing flipped-card icons or making green flips eligible"
     },
     {
       "name": "Beastbox, Savage Interrogator",
@@ -275,7 +268,7 @@
     },
     {
       "name": "Ghost of Starscream, Annoying Apparition",
-      "alt-needs": "Returning a KO character to the battlefield and moving its Upgrades",
+      "alt-needs": "Triggering a character ability from the KO area when Starscream is KO'd and capturing its Upgrades before KO cleanup",
       "tfdsl": {
         "alt": "",
         "bot": "on-this-attack()->(if(confirm())->tap(pick_enemy()))"
@@ -359,35 +352,29 @@
     },
     {
       "name": "Wheelie, Rhyming Racer",
-      "bot-needs": "Paying a tap-and-scrap activation cost and branching on a scrapped card's icon count",
       "tfdsl": {
         "alt": "static(stealth,when(event().attacker.faction=Decepticon || event().attacker.faction=Quintesson))",
-        "bot": ""
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=1)))->(if(previous_target().icons.count<=1)->damage(2,pick_enemy()):else->damage(1,opponent_pick(opponent().chars)))"
       }
     },
     {
       "name": "Windblade, Camien Champion",
-      "alt-needs": "Taking selected cards from the top of the deck and bottom-decking the rest",
-      "bot-needs": "Replacing attack damage with half that damage rounded up - either attack damage needs to see flips, or it's a temporary trigger. Probably the former",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-flip()->(reveal_cards(top_deck(count=3));choose(pick(top_deck(count=3),upto=2));move_to(self().hand,previous_target(3));if(previous_target(1).count>previous_target(3).count)->(reorder_deck(previous_target(1).count - previous_target(3).count);put_deck_bottom(self(),top_deck(count=previous_target(1).count - previous_target(3).count))))",
+        "bot": "instead(on-attack-damage(when(event().target=this(),event().def_flips.colours.count>=4))->modify(event().damage:=(event().damage+1)/2))"
       }
     },
     {
       "name": "Squawkbox, Passionate Musician",
-      "combiner-needs": "Tracking cards scrapped by each player and resolving an opponent's optional hand scrap",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "on-this-combine()->(scrap_hand(pick_hand(exact=1));scrap_hand(opponent_pick(opponent().hand,exact=1));draw(previous_target(1).count+previous_target(2).count));on-this-attack(when(event().defender.faction=Autobot))->(scrap_hand(opponent_pick(opponent().hand,upto=1));if(previous_target().count=0)->draw(1))"
       }
     },
     {
       "name": "Paddles, Gentle Giant",
-      "alt-needs": "Preventing and redirecting a limited amount of attack damage",
-      "bot-needs": "Checking for a damaged or KO'd character across the battlefield and KO area",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "instead(on-attack-damage(when(event().target.owner=this().owner,event().target.id!=this().id,event().target.trait=Dinobot,event().target.mode=alt,event().damage>0))->(choose(range(0,max(0,min(3,event().damage,this().health - this().damage - 1))));if(chosen()>0)->damage(chosen(),this());modify(event().damage:=min(6,event().damage) - chosen())))",
+        "bot": "on-this-flip()->(if(exists_card(all(self().chars,id!=this().id,faction=Autobot,damage>0)+all(self().ko,faction=Autobot)))->(if(exists_card(all(self().chars,id!=this().id,faction=Autobot,trait=Dinobot,damage>0)+all(self().ko,faction=Autobot,trait=Dinobot)))->atk_eot(2,this()):else->atk_eot(1,this())))"
       }
     },
     {

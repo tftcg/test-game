@@ -25,8 +25,7 @@
     },
     {
       "name": "Contemplation",
-      "tfdsl": "",
-      "needs": "Selecting zero to three hand cards and drawing once per card scrapped"
+      "tfdsl": "each(pick(self().hand,upto=3))->(scrap_hand(it());if(done())->draw(1));if(starting_team(faction!=Autobot).count=0)->plan(1)"
     },
     {
       "name": "Corrupt Construction",
@@ -67,8 +66,7 @@
     },
     {
       "name": "Rapid Response Cycle",
-      "tfdsl": "",
-      "needs": "Granting a trait while an upgraded character is in a specific mode"
+      "tfdsl": "trait(Motorcycle,attached(),bot);on-attached-defend(when(event().attacker.stars>event().defender.stars))->def_eob(1,event().defender)"
     },
     {
       "name": "Revving the Engine",
@@ -95,9 +93,8 @@
     },
     {
       "name": "Artillery Support",
-      "front-needs": "Temporary Pierce reduction at end of battle for a mode-qualified defender",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-defend(when(event().defender.fullname=this().target,event().defender.mode=alt))->pierce_eob(0-2,event().attacker)"
       }
     },
     {
@@ -108,16 +105,14 @@
     },
     {
       "name": "Durable Decepticon",
-      "front-needs": "Repairing once per card placed under a combiner, capped at five",
       "tfdsl": {
-        "front": ""
+        "front": "static(def,1,target=all_friends(fullname=this().target));on(event=combine,when(event().combiner.fullname=this().target))->(static(def,1,target=event().combiner);repeat(min(5,event().combiner.under.count))->(if(confirm('Repair 1 damage?'))->repair(1,event().combiner)))"
       }
     },
     {
       "name": "Fully Loaded",
-      "front-needs": "Playing a scrapped top-deck Upgrade directly onto a named character and capping a dynamic health bonus",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=char-flip,when(event().flipped.fullname=this().target))->(scrap_deck(top_deck());if(previous_target().type=Upgrade)->play_upgrade(pick_scrap(id=previous_target().id),pick_friend(fullname=this().target)));static(health,min(3,all_friends(fullname=this().target).upgrades.count),target=all_friends(fullname=this().target))"
       }
     },
     {
@@ -150,9 +145,9 @@
     },
     {
       "name": "Out of the Way Hot Rod!",
-      "front-needs": "Optional non-attack damage redirection to another character",
+      "comment": "NOTE: currently replaces the original damage with separate damage to the chosen character; a future engine change should allow modifying the damage event's recipient and continue resolving that same event.",
       "tfdsl": {
-        "front": ""
+        "front": "instead(on(event=char-damage,when(event().damaged.fullname=this().target,event().origin.owner=opponent()))->(if(exists_friend(id!=event().damaged.id))->(if(confirm('Redirect this damage?'))->(damage(event().amount,pick_friend(id!=event().damaged.id));modify(event().amount:=0)):else->modify_nothing()):else->modify_nothing()))"
       }
     },
     {
@@ -163,9 +158,8 @@
     },
     {
       "name": "Silent Hunter",
-      "front-needs": "Pre-game deck-to-character Upgrade placement and post-battle damage",
       "tfdsl": {
-        "front": ""
+        "front": "on-before-begin-game()->(if(exists_card(self().deck,name='Cybertronium Bow'))->(if(confirm('Put Cybertronium Bow on Flamewar?'))->put_upgrade(pick_deck(name='Cybertronium Bow'),pick_friend(fullname=this().target))));on(event=char-after-attack,when(event().attacker.fullname=this().target,event().attacker.upgrades.name='Cybertronium Bow'))->damage(2,event().defender)"
       }
     },
     {
@@ -210,16 +204,15 @@
     },
     {
       "name": "Fangry, Cursed Nightmare",
-      "alt-needs": "Scrapping an opponent's battle card without applying its icons",
       "comment": "NOTE: The bot mode should be able to be written more simply",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-battle(when(event().other_battler.trait=Melee))->(on-opponent-battle-flip(scope=eob,when(event().final_intended_flip=true))->(scrap_flip(opponent_pick(event().flips.cards),event(),event().other_battler)))",
         "bot": "on-start-turn()->scrap_deck(get(self().deck,from=top,count=3));on-opponent-start-turn()->scrap_deck(get(opponent().deck,from=top,count=3))"
       }
     },
     {
       "name": "Hardhead, Grave Mistakes",
-      "bot-needs": "Replacing opposing scrap recursion or play by moving the card to the KO area",
+      "bot-needs": "Replacing opposing scrap-pile returns and plays with a move to KO requires broader card-movement replacement support",
       "tfdsl": {
         "alt": "on-this-flip()->(move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this());if(previous_target(2).icon_count>=2)->damage(2,pick_enemy()))",
         "bot": ""
@@ -227,11 +220,9 @@
     },
     {
       "name": "Highbrow, Appallingly Astute",
-      "alt-needs": "Post-battle damage conditioned on defense flip icons",
-      "bot-needs": "Counting Actions played in a turn and a forced end-of-turn mode flip",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-this-after-defend-flip(when(event().flips.blue>=2))->(on-this-after-battle(scope=afb)->damage(1,event().attacker))",
+        "bot": "on-play-action(when(event().player=this().owner,event().card.type=Action,all(this().owner.played,type=Action).count=2))->(reorder_deck(4);on-end-turn()->flip(this(),alt))"
       }
     },
     {
@@ -244,11 +235,10 @@
     },
     {
       "name": "Megatron/Ratchet, Twisted Amalgamation",
-      "comment": "Proposal - feels like the choose can merge into the damage",
-      "bot-needs": "Preventing enemy repair and counting distinct names among green Upgrades",
+      "bot-needs": "Counting distinct names among green Upgrades for Pierce",
       "tfdsl": {
         "alt": "on-this-flip()->(choose(pick_enemy());damage(1,previous_target());if(previous_target().faction=Autobot || previous_target().faction=Decepticon)->repair(1,this()))",
-        "bot": ""
+        "bot": "instead(on(event=char-repair,when(event().repaired.owner!=this().owner))->do_nothing())"
       }
     },
     {

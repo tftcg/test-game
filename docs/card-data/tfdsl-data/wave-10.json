@@ -83,7 +83,7 @@
     },
     {
       "name": "Red Rust",
-      "needs": "Rolling Action scrap triggers and turn-scoped listeners for enemy flips",
+      "needs": "Rolling Action scrap events and remembering all enemy mode flips during the turn",
       "tfdsl": ""
     },
     {
@@ -160,9 +160,9 @@
     },
     {
       "name": "Mortar Cannon",
-      "front-needs": "Adding/removing traits and card-text replacement effects",
+      "front-needs": "Removing an existing trait from a character mode",
       "tfdsl": {
-        "front": ""
+        "front": "trait(Ranged,all_friends(fullname=this().target),'alt');replace_dsl('draw(2)','damage(2,pick_enemy())',all_friends(fullname=this().target),'alt')"
       }
     },
     {
@@ -193,9 +193,8 @@
     },
     {
       "name": "Target: Acquired",
-      "front-needs": "Card-text replacement effects",
       "tfdsl": {
-        "front": ""
+        "front": "replace_dsl('*',\"on-this-flip()->(choose(options('Draw a card','Do 1 damage to an enemy'));if(chosen()='Draw a card')->draw(1);if(chosen()='Do 1 damage to an enemy')->damage(1,pick_enemy());choose(options('Draw a card','Do 1 damage to an enemy'));if(chosen()='Draw a card')->draw(1);if(chosen()='Do 1 damage to an enemy')->damage(1,pick_enemy()))\",all_friends(fullname=this().target),'alt')"
       }
     },
     {
@@ -212,8 +211,8 @@
     },
     {
       "name": "We've Gotta Push Back!",
-      "front-needs": "Adding traits and card-text replacement effects",
-        "frontFuture": "trait(Wrecker,all_friends(fullname=this().target));trait(Leader,all_friends(fullname=this().target));replace_dsl('this()','all_friends(trait=Wrecker)',all_friends(fullname=this().target))",
+      "front-needs": "Replacing mode abilities on folded characters with multiple faces in one mode",
+      "frontFuture": "trait(Wrecker,all_friends(fullname=this().target));trait(Leader,all_friends(fullname=this().target));replace_dsl('this()','all_friends(trait=Wrecker)',all_friends(fullname=this().target))",
       "tfdsl": {
         "front": ""
       }
@@ -244,16 +243,16 @@
     },
     {
       "name": "Broadside, Air & Sea Assault",
-      "alt 2-needs": "Station requirements and station enter/leave events",
+      "alt 2-needs": "Station requirements, station modifiers, and station enter/leave events",
       "tfdsl": {
         "alt 1": "on-this-flip()->move(1,this(),pick_enemy())",
         "bot": "on-this-flip()->pierce_eot(3,this())",
-        "alt 2": ""
+        "alt 2": "static(base_def,all_friends(trait=Boat || trait=Helicopter || trait=Plane).count)"
       }
     },
     {
       "name": "Cloudraker, Claustrophobic Sky Fighter",
-      "alt-needs": "Preventing card-caused flips and damage-counter movement",
+      "alt-needs": "Distinguishing and preventing card-caused flips, and preventing damage-counter movement to this character",
       "comment": "TODO: Test",
       "tfdsl": {
         "alt": "",
@@ -262,7 +261,7 @@
     },
     {
       "name": "Enemy, Infuriating Infiltrator",
-      "bot-needs": "Card-text replacement effects",
+      "bot-needs": "Redirecting damage from opponent card effects to this character",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->move(2,this(),pick_friend(stars>=10))",
         "bot": ""
@@ -270,11 +269,9 @@
     },
     {
       "name": "Fastlane, Road Warrior",
-        "altFuture": "on-this-defend()->def_eob(all(this().owner.actions,subtype='Rolling Action').count)",
-      "alt-needs": "Needs debugging - first DSL attempt is failing",
-      "bot-needs": "Looking at, selecting from, and reordering top deck cards",
+      "bot-needs": "Reordering the card owner's deck when this effect resolves during the non-active player's turn",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-defend()->def_eob(all(this().owner.actions,subtype='Rolling Action').count,this())",
         "bot": ""
       }
     },
