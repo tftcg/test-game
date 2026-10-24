@@ -1,0 +1,72 @@
+{
+  "set": {
+    "name": "Outlier 3"
+  },
+  "cards": [
+    {
+      "name": "Divebomb [B]",
+      "tfdsl": ""
+    },
+    {
+      "name": "Headstrong [B]",
+      "tfdsl": ""
+    },
+    {
+      "name": "Predaking [B]",
+      "tfdsl": ""
+    },
+    {
+      "name": "Rampage [B]",
+      "tfdsl": ""
+    },
+    {
+      "name": "Razorclaw [B]",
+      "tfdsl": ""
+    },
+    {
+      "name": "Tantrum [B]",
+      "tfdsl": ""
+    },
+    {
+      "name": "Divebomb [B], Predacon Air Support",
+      "tfdsl": {
+        "alt": "stealth();on-this-attack()->opponent_pick(all_enemy_upgrades())",
+        "bot": "on-this-attack()->opponent_pick(all_enemy_upgrades());on-this-attack-damage()->repair(1,all_friends(trait=Predacon))"
+      }
+    },
+    {
+      "name": "Headstrong [B], Predacon Juggernaut",
+      "tfdsl": {
+        "alt": "brave();safeguard(3)",
+        "bot": "brave();on-this-defend()->damage(1,event().attacker)"
+      }
+    },
+    {
+      "name": "Rampage [B], Predacon Beserker",
+      "tfdsl": {
+        "alt": "pierce(2);can_atk_untapped()",
+        "bot": "pierce(2);on-this-flip()->(reveal_cards(top_deck());repeat(top_deck().icons.count)->damage(1,opponent_pick(all_enemies())))"
+      }
+    },
+    {
+      "name": "Razorclaw [B], Predacon Huntmaster",
+      "tfdsl": {
+        "alt": "bold(1);can_atk_untapped()",
+        "bot": "bold(2);can_atk_untapped()"
+      }
+    },
+    {
+      "name": "Tantrum [B], Predacon Fueler",
+      "tfdsl": {
+        "alt": "on-this-damaged()->damage(1,opponent_pick(all_enemies()));revenge(damage(1,all_chars()))",
+        "bot": "static(atk,when(damage>=4),3);revenge(damage(1,all_chars()))"
+      }
+    },
+    {
+      "name": "Predaking [B], Apex Predator",
+      "tfdsl": {
+        "combiner": "bold(2);on-this-attack-damage(when(event().overkill>=0))->damage(2,opponent_pick(all_enemies()))"
+      }
+    }
+  ]
+}
