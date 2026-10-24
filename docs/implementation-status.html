@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1222/1514 (80.7%)</p>
+  <p>TFDSL completion: 1224/1514 (80.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>355</td><td>15</td><td>56</td><td>71</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>357</td><td>13</td><td>56</td><td>69</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>508</td><td>0</td><td>104</td><td>104</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>96</td><td>1</td><td>61</td><td>62</td></tr>
 </tbody>
@@ -40,11 +40,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 291/578 (50.3%)</p>
+  <p>TFDSL completion: 293/578 (50.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>50</td><td>15</td><td>56</td><td>71</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>52</td><td>13</td><td>56</td><td>69</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>128</td><td>0</td><td>98</td><td>98</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>65</td><td>1</td><td>61</td><td>62</td></tr>
 </tbody>
@@ -341,11 +341,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-7</h2>
-  <p>TFDSL completion: 52/54 (96.3%)</p>
+  <p>TFDSL completion: 54/54 (100.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>10</td><td>8</td><td>2</td><td>0</td><td>2</td></tr>
+<tr><th scope="row">Character</th><td>10</td><td>10</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Battlecard</th><td>20</td><td>20</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>16</td><td>16</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
@@ -355,9 +355,8 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Fangry, Cursed Nightmare</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The bot mode should be able to be written more simply</td><td class="comment"></td></tr>
-<tr><th scope="row">Hardhead, Grave Mistakes</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Replacing opposing scrap-pile returns and plays with a move to KO requires broader card-movement replacement support</td></tr>
+<tr><th scope="row">Hardhead, Grave Mistakes</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Hoist, Fearless Rescuer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Megatron/Ratchet, Twisted Amalgamation</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Counting distinct names among green Upgrades for Pierce</td></tr>
 <tr><th scope="row">Electro-Static Shielding</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Obfuscating Cloud</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Safeguard for friends not working yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Out of the Way Hot Rod!</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">currently replaces the original damage with separate damage to the chosen character; a future engine change should allow modifying the damage event&#39;s recipient and continue resolving that same event.</td><td class="comment"></td></tr>

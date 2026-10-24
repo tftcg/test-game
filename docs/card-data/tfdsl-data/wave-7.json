@@ -212,10 +212,10 @@
     },
     {
       "name": "Hardhead, Grave Mistakes",
-      "bot-needs": "Replacing opposing scrap-pile returns and plays with a move to KO requires broader card-movement replacement support",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->(move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this());if(previous_target(2).icon_count>=2)->damage(2,pick_enemy()))",
-        "bot": ""
+        "bot": "instead(on(event=move-card,when(event().from_zone=opponent().scrap,event().player=opponent()))->modify(event().to_zone:=opponent().ko));instead(on-opponent-play-action(when(event().play_source=opponent().scrap))->move_to(opponent().scrap,event().card));instead(on-opponent-play-upgrade(when(event().play_source=opponent().scrap))->move_to(opponent().scrap,event().played))"
       }
     },
     {
@@ -235,10 +235,9 @@
     },
     {
       "name": "Megatron/Ratchet, Twisted Amalgamation",
-      "bot-needs": "Counting distinct names among green Upgrades for Pierce",
       "tfdsl": {
         "alt": "on-this-flip()->(choose(pick_enemy());damage(1,previous_target());if(previous_target().faction=Autobot || previous_target().faction=Decepticon)->repair(1,this()))",
-        "bot": "instead(on(event=char-repair,when(event().repaired.owner!=this().owner))->do_nothing())"
+        "bot": "instead(on(event=char-repair,when(event().repaired.owner!=this().owner))->do_nothing());static(pierce,when(this().upgrades.count>=1),unique(all(this().upgrades,green>=1).name).count)"
       }
     },
     {
