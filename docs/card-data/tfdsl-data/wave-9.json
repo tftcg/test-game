@@ -88,8 +88,7 @@
     },
     {
       "name": "Starscream's Cape",
-      "needs": "Increasing numbers in a character's printed text box",
-      "tfdsl": ""
+      "tfdsl": "put_only(name=Starscream);starscream_plus(1)"
     },
     {
       "name": "Stasis Field",

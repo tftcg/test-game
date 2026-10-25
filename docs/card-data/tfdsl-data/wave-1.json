@@ -588,14 +588,14 @@
       "tfdsl": {
         "comment": "TODO: Needs other_friends()",
         "alt": "on-this-flip()->damage(all_friends(trait=Plane).length,pick_enemy())",
-        "bot": "bold(2)"
+        "bot": "static(bold,when(this().mode=bot),2 + this().starscream_plus)"
       }
     },
     {
       "name": "Starscream, Scheming Second-in-Command",
       "tfdsl": {
-        "alt": "bold(1)",
-        "bot": "tough(1)"
+        "alt": "static(bold,when(this().mode=alt),1 + this().starscream_plus)",
+        "bot": "static(tough,when(this().mode=bot),1 + this().starscream_plus)"
       }
     },
     {

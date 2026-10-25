@@ -608,7 +608,7 @@
       "name": "Starscream, Decepticon King",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(contains_dsl='plan('))",
-        "bot": "on-this-battle-flip(when(event().flips.card.name='Decepticon Crown'))->(atk_eot(3,this());def_eot(3,this()))"
+        "bot": "on-this-battle-flip(when(event().flips.card.name='Decepticon Crown'))->(atk_eot(3 + this().starscream_plus,this());def_eot(3 + this().starscream_plus,this()))"
       }
     },
     {
@@ -775,7 +775,7 @@
     {
       "name": "Starscream, Decepticon Lieutenant",
       "tfdsl": {
-        "bot": "tough(1)"
+        "bot": "static(tough,when(this().mode=bot),1 + this().starscream_plus)"
       }
     },
     {

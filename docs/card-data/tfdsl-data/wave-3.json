@@ -288,8 +288,8 @@
     {
       "name": "Captain Starscream, Infantry • Air Commander",
       "tfdsl": {
-        "alt": "on-this-flip()->damage(1,pick_enemy(upgrades.count=0))",
-        "bot": "on-enemy-scrapped()->damage(1,event().from)"
+        "alt": "on-this-flip()->damage(1 + this().starscream_plus,pick_enemy(upgrades.count=0))",
+        "bot": "on-enemy-scrapped()->damage(1 + this().starscream_plus,event().from)"
       }
     },
     {

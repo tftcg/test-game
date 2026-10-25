@@ -266,10 +266,9 @@
     },
     {
       "name": "Fastlane, Road Warrior",
-      "bot-needs": "Reordering the card owner's deck when this effect resolves during the non-active player's turn",
       "tfdsl": {
         "alt": "on-this-defend()->def_eob(all(this().owner.actions,subtype='Rolling Action').count,this())",
-        "bot": ""
+        "bot": "on-this-flip()->(reveal_cards(top_deck(count=3),mute_opponents=true);if(all(previous_target(),subtype='Rolling Action').count>=1)->(if(confirm('Reveal Rolling Action?'))->(move_to(self().hand,pick(all(previous_target(),subtype='Rolling Action')));reorder_deck(2)):else->reorder_deck(3)):else->reorder_deck(3))"
       }
     },
     {
