@@ -421,7 +421,7 @@
     {
       "name": "Breakdown, Paranoid Scout",
       "tfdsl": {
-        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=2))->atk_eot(2,this())"
+        "alt": "on-this-after-attack-flip(when(event().flips.blue>=2))->atk_eot(2,this())"
       }
     },
     {
@@ -441,7 +441,7 @@
     {
       "name": "Decepticon Drag Strip, Cutthroat Warrior",
       "tfdsl": {
-        "alt": "on-attached-after-attack-flip(when(event().flips.blue>=2,event().flips.orange>=2))->draw(2)",
+        "alt": "on-this-after-attack-flip(when(event().flips.blue>=2,event().flips.orange>=2))->draw(2)",
         "bot": "pierce(1)"
       }
     },
