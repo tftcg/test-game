@@ -212,7 +212,33 @@
     #action-buttons button:hover, #choice-confirm:hover, #start-turn-button:hover { background: #35506a; }
     #choice-options { display: grid; gap: .35rem; margin-bottom: .5rem; font-size: .85rem; }
 
+    .game-board { min-width: 0; }
+    #board-pick {
+      position: sticky;
+      top: .5rem;
+      z-index: 5;
+      margin-bottom: .75rem;
+      padding: .65rem;
+      background: #263748;
+      border: 2px solid #72cfff;
+      border-radius: .4rem;
+    }
+    #board-pick[hidden] { display: none; }
+    #board-pick-instructions { margin: 0 0 .4rem; }
+    #board-pick-count { margin-right: .75rem; }
+    #board-pick button {
+      padding: .4rem .75rem;
+      color: inherit;
+      background: #202b36;
+      border: 1px solid #72cfff;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    #board-pick button:disabled { opacity: .5; cursor: not-allowed; }
     #game-state { display: grid; gap: .75rem; min-width: 0; }
+    #game-state.character-picking .ko { overflow: auto; }
+    #game-state.character-picking .ko .pile { display: flex; flex-wrap: wrap; gap: .35rem; }
+    #game-state.character-picking .ko .pile .card { margin: 0; }
     .player-mat {
       display: grid;
       grid-template-columns: 112px minmax(0, 1fr) 130px;
@@ -286,6 +312,62 @@
     .player-mat.opponent .character-card-stack.body-mode .character-head {
       left: 0;
     }
+    .mode-inspection-button {
+      position: absolute;
+      top: .15rem;
+      right: .15rem;
+      z-index: 2;
+      padding: .15rem .3rem;
+      color: white;
+      background: rgb(9 13 18 / 90%);
+      border: 1px solid #aebdca;
+      border-radius: .25rem;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .character-card-stack:hover .mode-inspection-button,
+    .character-card-stack:focus-within .mode-inspection-button,
+    .mode-inspection-button[aria-expanded="true"] { opacity: 1; }
+    .player-mat.opponent .mode-inspection-button {
+      top: auto;
+      right: auto;
+      bottom: .15rem;
+      left: .15rem;
+      transform: rotate(180deg);
+    }
+    .under-inspection-button { top: 2.1rem; }
+    .player-mat.opponent .under-inspection-button { bottom: 2.1rem; }
+    @media (hover: none) {
+      .mode-inspection-button { opacity: 1; }
+    }
+    #mode-inspection {
+      position: fixed;
+      z-index: 20;
+      width: min(760px, calc(100vw - 24px));
+      max-height: calc(100vh - 24px);
+      overflow: auto;
+      padding: .75rem;
+      background: #1a222c;
+      border: 2px solid #aebdca;
+      border-radius: .4rem;
+      box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
+    }
+    #mode-inspection[hidden] { display: none; }
+    .mode-inspection-heading { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+    #mode-inspection-title { margin: 0; font-size: 1rem; }
+    #mode-inspection-close {
+      padding: .3rem .6rem;
+      color: inherit;
+      background: #263748;
+      border: 1px solid #aebdca;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+    #mode-inspection-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .65rem; margin-top: .75rem; }
+    #mode-inspection figure { margin: 0; padding: .25rem; border: 2px solid transparent; border-radius: .25rem; }
+    #mode-inspection figure.current-mode { border-color: #ffda70; }
+    #mode-inspection img { display: block; width: 100%; aspect-ratio: 5 / 7; object-fit: contain; }
+    #mode-inspection figcaption { padding-top: .3rem; text-align: center; }
 
     .card {
       position: relative;
@@ -304,6 +386,19 @@
     .card.character { width: 120px; height: 168px; }
     .card.tapped { transform: rotate(-90deg) scale(.78); }
     .card.horizontal { transform: rotate(90deg); }
+    .card.board-pickable {
+      cursor: pointer;
+      outline: 3px solid #72cfff;
+      outline-offset: -3px;
+    }
+    .card.board-pickable:hover, .card.board-pickable:focus-visible {
+      outline-width: 5px;
+      filter: brightness(1.15);
+    }
+    .card.board-selected {
+      outline: 5px double #ffda70;
+      outline-offset: -5px;
+    }
     .card-code {
       position: absolute;
       right: .15rem;
@@ -416,7 +511,7 @@
       font-size: .8rem;
     }
 
-    #text-prompt, #confirm-prompt, #reorder-prompt, #mode-prompt, #card-pick-prompt, #value-pick-prompt {
+    #text-prompt, #confirm-prompt, #reorder-prompt, #mode-prompt, #card-pick-prompt, #value-pick-prompt, #scrap-prompt {
       width: min(420px, calc(100vw - 2rem));
       color: inherit;
       background: #1a222c;
@@ -424,7 +519,7 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #pile-split-prompt::backdrop, #pile-pick-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop, #value-pick-prompt::backdrop { background: rgb(0 0 0 / 60%); }
+    #text-prompt::backdrop, #confirm-prompt::backdrop, #reorder-prompt::backdrop, #pile-split-prompt::backdrop, #pile-pick-prompt::backdrop, #mode-prompt::backdrop, #card-pick-prompt::backdrop, #value-pick-prompt::backdrop, #scrap-prompt::backdrop { background: rgb(0 0 0 / 60%); }
     #pile-split-prompt, #pile-pick-prompt { width: min(900px, calc(100vw - 2rem)); }
     #text-prompt form { display: grid; gap: .75rem; }
     #text-prompt label { display: grid; gap: .35rem; }
@@ -457,7 +552,7 @@
       border-radius: .2rem;
       cursor: zoom-in;
     }
-    #confirm-card-preview, #mode-card-preview, #card-pick-preview {
+    #confirm-card-preview, #mode-card-preview, #card-pick-preview, #scrap-preview {
       position: fixed;
       z-index: 1;
       width: 280px;
@@ -469,7 +564,7 @@
       border-radius: .4rem;
       box-shadow: 0 12px 30px rgb(0 0 0 / 65%);
     }
-    #confirm-card-preview[hidden], #mode-card-preview[hidden], #card-pick-preview[hidden] { display: none; }
+    #confirm-card-preview[hidden], #mode-card-preview[hidden], #card-pick-preview[hidden], #scrap-preview[hidden] { display: none; }
     .confirm-actions {
       display: flex;
       justify-content: center;
@@ -606,7 +701,7 @@
     #card-pick-prompt { width: min(760px, calc(100vw - 2rem)); }
     #card-pick-prompt h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
     #card-pick-instructions { margin: 0 0 .8rem; color: #b7c7d6; }
-    #card-pick-options {
+    #card-pick-options, #scrap-cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -633,7 +728,11 @@
       height: 1.15rem;
       accent-color: #a9cce8;
     }
-    #card-pick-confirm, #card-pick-skip, #card-pick-put-in-hand {
+    #scrap-prompt { width: min(760px, calc(100vw - 2rem)); }
+    #scrap-title { margin: 0 0 .75rem; font-size: 1.1rem; }
+    #scrap-cards { max-height: 65vh; overflow-y: auto; padding: .25rem; }
+    #scrap-cards .card-pick-option { flex: 0 0 112px; cursor: zoom-in; }
+    #card-pick-confirm, #card-pick-skip, #card-pick-put-in-hand, #scrap-close {
       display: block;
       min-width: 6rem;
       margin-left: auto;
@@ -715,9 +814,24 @@
         <button id="choice-confirm" type="button">Confirm choice</button>
       </section>
     </aside>
-    <section id="game-state" aria-label="Game board"></section>
+    <section class="game-board" aria-label="Game board">
+      <section id="board-pick" hidden aria-label="Choose cards">
+        <p id="board-pick-instructions"></p>
+        <span id="board-pick-count" role="status"></span>
+        <button id="board-pick-confirm" type="button">Confirm</button>
+        <button id="board-pick-skip" type="button" hidden>Skip</button>
+      </section>
+      <section id="game-state" aria-label="Cards in play"></section>
+    </section>
   </main>
   <aside id="card-preview" hidden aria-hidden="true"></aside>
+  <section id="mode-inspection" hidden role="region" aria-labelledby="mode-inspection-title">
+    <div class="mode-inspection-heading">
+      <h2 id="mode-inspection-title"></h2>
+      <button id="mode-inspection-close" type="button">Close</button>
+    </div>
+    <div id="mode-inspection-cards"></div>
+  </section>
   <dialog id="text-prompt">
     <form id="text-prompt-form">
       <label>
@@ -767,6 +881,12 @@
     <button id="card-pick-put-in-hand" type="button" hidden>Put in Hand (Wolfwire)</button>
     <button id="card-pick-skip" type="button" hidden>Skip</button>
     <aside id="card-pick-preview" hidden aria-hidden="true"></aside>
+  </dialog>
+  <dialog id="scrap-prompt" aria-labelledby="scrap-title">
+    <h2 id="scrap-title">Scrap</h2>
+    <div id="scrap-cards"></div>
+    <button id="scrap-close" type="button">Close</button>
+    <aside id="scrap-preview" hidden aria-hidden="true"></aside>
   </dialog>
   <dialog id="value-pick-prompt">
     <h2 id="value-pick-title">Choose an option</h2>
