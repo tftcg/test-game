@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1224/1514 (80.8%)</p>
+  <p>TFDSL completion: 1225/1514 (80.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>357</td><td>13</td><td>56</td><td>69</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>358</td><td>12</td><td>56</td><td>68</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>508</td><td>0</td><td>104</td><td>104</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>96</td><td>1</td><td>61</td><td>62</td></tr>
 </tbody>
@@ -40,11 +40,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 293/578 (50.7%)</p>
+  <p>TFDSL completion: 294/578 (50.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>52</td><td>13</td><td>56</td><td>69</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>53</td><td>12</td><td>56</td><td>68</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>128</td><td>0</td><td>98</td><td>98</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>65</td><td>1</td><td>61</td><td>62</td></tr>
 </tbody>
@@ -518,11 +518,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-9</h2>
-  <p>TFDSL completion: 92/98 (93.9%)</p>
+  <p>TFDSL completion: 93/98 (94.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>26</td><td>23</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>26</td><td>24</td><td>1</td><td>1</td><td>2</td></tr>
 <tr><th scope="row">Battlecard</th><td>35</td><td>34</td><td>0</td><td>1</td><td>1</td></tr>
 <tr><th scope="row">Stratagem</th><td>15</td><td>14</td><td>0</td><td>1</td><td>1</td></tr>
 </tbody>
@@ -539,7 +539,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Huffer, Sullen Engineer</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Again needs a pay() for the If You Dos</td><td class="comment"></td></tr>
 <tr><th scope="row">Lord Zarak, Ruler of Nebulos</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test Shield carry over from Scorponok. NOTE: Zarak has to go on Scorponok. Skipping enforcing that. Deployment carry is implemented on Zarak Shield rather than this card&#39;s printed bot ability.</td><td class="comment"></td></tr>
 <tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
-<tr><th scope="row">Onslaught, Combaticon Leader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Preventing enemies from using Plan</td></tr>
 <tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Althought the English is worded to be an event that sets up an event, there&#39;s no need in this case</td><td class="comment"></td></tr>
@@ -575,7 +574,7 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Broadside, Air &amp; Sea Assault</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">alt 2-needs: Station requirements, station modifiers, and station enter/leave events</td></tr>
-<tr><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">Test</td><td class="comment">alt-needs: Distinguishing and preventing card-caused flips, and preventing damage-counter movement to this character</td></tr>
+<tr><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Distinguishing and preventing card-caused flips</td></tr>
 <tr><th scope="row">Enemy, Infuriating Infiltrator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Redirecting damage from opponent card effects to this character</td></tr>
 <tr><th scope="row">Fastlane, Road Warrior</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Reordering the card owner&#39;s deck when this effect resolves during the non-active player&#39;s turn</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>

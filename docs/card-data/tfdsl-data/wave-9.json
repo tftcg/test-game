@@ -409,10 +409,9 @@
     },
     {
       "name": "Onslaught, Combaticon Leader",
-      "bot-needs": "Preventing enemies from using Plan",
       "tfdsl": {
         "alt": "each(all_friends(trait=Combaticon))->(static(bold,when(all_friendly_upgrades(attached_to.id=it().id,black>=1).count>=1),1,target=it()));each(all_friends(trait=Combaticon))->(static(tough,when(all_friendly_upgrades(attached_to.id=it().id,black>=1).count>=1),1,target=it()))",
-        "bot": ""
+        "bot": "block_plan()"
       }
     },
     {

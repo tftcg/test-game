@@ -252,8 +252,8 @@
     },
     {
       "name": "Cloudraker, Claustrophobic Sky Fighter",
-      "alt-needs": "Distinguishing and preventing card-caused flips, and preventing damage-counter movement to this character",
-      "comment": "TODO: Test",
+      "alt-needs": "Distinguishing and preventing card-caused flips",
+      "altFuture": "no_flip();instead(on-char-move,when(event().move_to=this())->do_nothing())",
       "tfdsl": {
         "alt": "",
         "bot": "static(atk,when(event().attacker=this(),event().attacker.stars>event().defender.stars),event().attacker.stars - event().defender.stars)"
