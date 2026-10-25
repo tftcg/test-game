@@ -83,8 +83,8 @@
     },
     {
       "name": "Red Rust",
-      "needs": "Rolling Action scrap events and remembering all enemy mode flips during the turn",
-      "tfdsl": ""
+      "comment": "TODO: Test - does this damage more than one the first time? Or do we need a macro event when N characters flip? Can we even have that?",
+      "tfdsl": "scrap(on-enemy-flip())->when_scrapped(damage(1,event().flipped);on-enemy-flip(scope=eot)->damage(1,event().flipped))"
     },
     {
       "name": "Replenishment Maneuvers",
@@ -100,8 +100,7 @@
     },
     {
       "name": "Subtle Activation",
-      "needs": "Activating a character TAP ability outside its normal timing",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-opponent-attacker-chosen())->revealed(each(pick_friend())->(if(it().tapped=untapped)->(if(confirm('Use TAP ability?'))->(use_tap_ability(it());if(done())->untap(it())))))"
     },
     {
       "name": "Surveillance Array",
@@ -211,10 +210,8 @@
     },
     {
       "name": "We've Gotta Push Back!",
-      "front-needs": "Replacing mode abilities on folded characters with multiple faces in one mode",
-      "frontFuture": "trait(Wrecker,all_friends(fullname=this().target));trait(Leader,all_friends(fullname=this().target));replace_dsl('this()','all_friends(trait=Wrecker)',all_friends(fullname=this().target))",
       "tfdsl": {
-        "front": ""
+        "front": "trait(Wrecker,all_friends(fullname=this().target));trait(Leader,all_friends(fullname=this().target));replace_dsl('static(tough,when(this().upgrades.subtype=Armor),2)','static(tough,when(this().upgrades.subtype=Armor),2,target=all_friends(trait=Wrecker))',all_friends(fullname=this().target),'alt 1');replace_dsl('static(bold,when(this().upgrades.subtype=Weapon),2)','static(bold,when(this().upgrades.subtype=Weapon),2,target=all_friends(trait=Wrecker))',all_friends(fullname=this().target),'alt 2');replace_dsl('static(pierce,when(this().upgrades.subtype=Utility),3)','static(pierce,when(this().upgrades.subtype=Utility),3,target=all_friends(trait=Wrecker))',all_friends(fullname=this().target),'bot')"
       }
     },
     {

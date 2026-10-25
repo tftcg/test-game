@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1225/1514 (80.9%)</p>
+  <p>TFDSL completion: 1228/1514 (81.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>358</td><td>12</td><td>56</td><td>68</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>508</td><td>0</td><td>104</td><td>104</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>96</td><td>1</td><td>61</td><td>62</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>510</td><td>0</td><td>102</td><td>102</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>97</td><td>1</td><td>60</td><td>61</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 294/578 (50.9%)</p>
+  <p>TFDSL completion: 297/578 (51.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>53</td><td>12</td><td>56</td><td>68</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>128</td><td>0</td><td>98</td><td>98</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>65</td><td>1</td><td>61</td><td>62</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>130</td><td>0</td><td>96</td><td>96</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>66</td><td>1</td><td>60</td><td>61</td></tr>
 </tbody>
 </table>
 </section>
@@ -560,13 +560,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-10</h2>
-  <p>TFDSL completion: 63/71 (88.7%)</p>
+  <p>TFDSL completion: 66/71 (93.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>12</td><td>8</td><td>4</td><td>0</td><td>4</td></tr>
-<tr><th scope="row">Battlecard</th><td>28</td><td>26</td><td>0</td><td>2</td><td>2</td></tr>
-<tr><th scope="row">Stratagem</th><td>20</td><td>18</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><th scope="row">Battlecard</th><td>28</td><td>28</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th scope="row">Stratagem</th><td>20</td><td>19</td><td>1</td><td>0</td><td>1</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -584,12 +584,10 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Combat Reconfiguration</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Red Rust</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action scrap events and remembering all enemy mode flips during the turn</td></tr>
-<tr><th scope="row">Subtle Activation</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Activating a character TAP ability outside its normal timing</td></tr>
+<tr><th scope="row">Red Rust</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test - does this damage more than one the first time? Or do we need a macro event when N characters flip? Can we even have that?</td><td class="comment"></td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Removing an existing trait from a character mode</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Solar Regeneration</th><td>Stratagem</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">We&#39;ve Gotta Push Back!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing mode abilities on folded characters with multiple faces in one mode</td></tr>
 </tbody>
 </table>
 </section>
