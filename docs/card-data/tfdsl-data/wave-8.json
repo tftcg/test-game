@@ -46,8 +46,8 @@
     },
     {
       "name": "Custom Junkion Saddle",
-      "tfdsl": "",
-      "needs": "Stations, station occupancy requirements, and granting a Station from an Upgrade"
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(trait=Motorcycle,mode=alt,trait!=Vehicle,stations.count=0);if(attached().mode=alt,attached().trait=Motorcycle)->(trait(Vehicle,attached());station('Junkion Saddle',requires(stars<=13,mode=bot),gives(atk(1),def(1)),text(on(event=enter-station,when(event().station=station()))->damage(1,pick_enemy(tapped=tapped))),target=attached()))"
     },
     {
       "name": "Dare to Be Stupid!",
@@ -440,11 +440,11 @@
     },
     {
       "name": "Combat Deck",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Stations and their game-start and untap effects",
-      "back-needs": "Stations and their untap and Station-entry effects"
+        "front": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Loading Dock',requires(stars<=10),gives(def(1)),text(on-start-game()->enter_station('Loading Dock');static(stealth,when(occupant().tapped=untapped),true,target=occupant())))",
+        "back": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Auto-Launcher Console',requires(stars<=15),gives(atk(1)),text(on(event=enter-station,when(event().station=station()))->(if(event().character.upgrades.subtype=Weapon)->damage(1,pick_enemy()):else->damage(1,opponent_pick(opponent().chars)))))"
+      }
     },
     {
       "name": "Don't Touch That Dial!",
@@ -748,12 +748,12 @@
     },
     {
       "name": "Greasestain, No Muss! No Fuss!",
+      "comment": "TODO: Test",
+      "alt-needs": "Implement the ability on Greasestain",
       "tfdsl": {
-        "alt": "bandit()",
-        "bot": "bandit()"
-      },
-      "alt-needs": "Stations and moving damage to a character in a Station",
-      "bot-needs": "Conditional Station-based damage"
+        "alt": "bandit();station('Ram Leather Seat',requires(stars<=11,mode=bot),gives(atk(1),trait(Motorcycle)),text(on(event=char-attack,when(event().attacker=occupant()))->move(1,pick(occupant()+host()),event().defender)))",
+        "bot": "bandit();on-this-attack(when(this().in_station))->(if(event().defender.in_station)->damage(2,event().defender):else->damage(1,event().defender));on(event=attack-damage,when(event().target.owner=this().owner,event().target!=this(),event().target.mode=bot,event().target.other_modes=alt,event().target.damage<event().target.health))->(if(confirm())->move(1,event().target,this()))"
+      }
     },
     {
       "name": "High Bailiff Bollag, Court Knight",
