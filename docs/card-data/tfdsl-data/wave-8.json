@@ -65,8 +65,8 @@
     },
     {
       "name": "Diffraction Sword",
-      "tfdsl": "",
-      "needs": "Counters on an Upgrade and a non-attack-damage replacement that adds and checks them"
+      "comment": "TODO: Test",
+      "tfdsl": "instead(on-attached-damage(when(event().origin.owner != this().owner))->(modify(event().amount:=event().amount - 1);up_counter(1,this());if(this().counter>=2)->scrap_upgrade(this())))"
     },
     {
       "name": "Drill Fingers",
@@ -74,8 +74,7 @@
     },
     {
       "name": "Dual Smokestacks",
-      "tfdsl": "",
-      "needs": "Opponent choice between multi-target and selected damage effects"
+      "tfdsl": "put_only(trait=Boat || trait=Train || trait=Truck);on-put()->(opponent_choose(options('Have '+self()+' do 1 damage to each enemy','Have '+self()+' do 2 damage to an enemy of their choice'));if(chosen()='Have '+self()+' do 1 damage to each enemy')->damage(1,all_enemies()):else->damage(2,pick_enemy()))"
     },
     {
       "name": "Escapology",
@@ -205,8 +204,7 @@
     },
     {
       "name": "Nudge Gun",
-      "tfdsl": "",
-      "needs": "Selecting and tapping or untapping Rolling Actions"
+      "tfdsl": "on-put()->(if(confirm('Tap/Untap Rolling Action?'))->(choose(pick(self().actions+opponent().actions,subtype='Rolling Action'));if(chosen().tapped=tapped)->untap(chosen()):else->tap(chosen())))"
     },
     {
       "name": "Pack Behavior",
@@ -248,8 +246,7 @@
     },
     {
       "name": "Police Action",
-      "tfdsl": "",
-      "needs": "Scrapping an arbitrary Rolling Action and suppressing its effect"
+      "tfdsl": "choose(pick(self().actions+opponent().actions,subtype='Rolling Action'));move_to(chosen().owner.scrap,chosen());draw(1,chosen().owner)"
     },
     {
       "name": "Razor Wings",
@@ -285,8 +282,7 @@
     },
     {
       "name": "Shanix Laundering",
-      "tfdsl": "",
-      "needs": "A conditional Upgrade scrap cost followed by revealing specific deck cards to hand"
+      "tfdsl": "scrap_upgrade(pick_friendly_upgrade());if(done())->(reveal_cards(top_deck(count=2));draw(2))"
     },
     {
       "name": "Shard of the Divine Light",
@@ -330,8 +326,7 @@
     },
     {
       "name": "Terrorburster Shield",
-      "tfdsl": "",
-      "needs": "Capping attack damage for a battle based on the defender's stars"
+      "tfdsl": "put_only(trait=Terrorcon);on-attached-after-defend-flip(when(event().flips.orange>=1))->(instead(on(event=attack-damage,scope=eob,when(event().damage>event().target.stars))->modify(event().damage:=event().target.stars)))"
     },
     {
       "name": "Terrorcon Enigma",
@@ -365,8 +360,8 @@
     },
     {
       "name": "Tried and Executed",
-      "tfdsl": "",
-      "needs": "Returning a filtered Upgrade from scrap to hand"
+      "comment": "TODO: Test",
+      "tfdsl": "choose(pick_friend());if(chosen().faction=Quintession,chosen().trait=Specialit)->(if(confirm('Play Quintesson Weapon?'))->play_upgrade(pick_hand(trait=Quintesson,subtype=Weapon)));if(chosen().trait=Judge)->(if(confirm('Return Quintesson Armor from scrap?'))->move_to(self().hand,pick_scrap(faction=Quintesson,subtype=Armor)))"
     },
     {
       "name": "Two Foes, Two Fists",
@@ -973,11 +968,9 @@
     {
       "name": "Tread Bolt, Devil of the Deep Blue Sky",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Revealing, selectively retaining, ordering, and scrapping multiple deck cards",
-      "bot-needs": "Detecting deck reshuffles and placing cards under a character"
+        "alt": "static(stealth,when(event().attacker.faction=Decepticon));on-this-flip()->(reveal_cards(top_deck(count=3));if(exists_card(top_deck(count=3),type=Action))->(choose(pick(top_deck(count=3),type=Action));move_to(self().hand,chosen());do_focus(self(),top_deck(count=2).count)):else->do_focus(self(),top_deck(count=3).count))",
+        "bot": "on-reshuffle(when(event().player=this().owner))->place_under(this(),bottom_deck());on-this-attack()->damage(2*this().under.count,event().defender)"
+      }
     },
     {
       "name": "Waster Drone",
@@ -997,6 +990,7 @@
     },
     {
       "name": "Abominus, Hellsparked Horror",
+      "combinerFuture": "static(bold,when(all(this().upgrades).count>0),unique(this().upgrades.subtype).count);static(tough,when(all(this().upgrades).count>0),unique(this().upgrades.subtype).count);on-this-combine()->(if(confirm('Flip All enemies?'))->(if())",
       "tfdsl": {
         "combiner": ""
       },

@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1230/1514 (81.2%)</p>
+  <p>TFDSL completion: 1239/1514 (81.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>359</td><td>11</td><td>56</td><td>67</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>511</td><td>0</td><td>101</td><td>101</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>360</td><td>11</td><td>55</td><td>66</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>518</td><td>0</td><td>94</td><td>94</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>97</td><td>1</td><td>60</td><td>61</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 299/578 (51.7%)</p>
+  <p>TFDSL completion: 308/578 (53.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>54</td><td>11</td><td>56</td><td>67</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>131</td><td>0</td><td>95</td><td>95</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>55</td><td>11</td><td>55</td><td>66</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>138</td><td>0</td><td>88</td><td>88</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>66</td><td>1</td><td>60</td><td>61</td></tr>
 </tbody>
 </table>
@@ -365,12 +365,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 42/199 (21.1%)</p>
+  <p>TFDSL completion: 51/199 (25.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>5</td><td>3</td><td>34</td><td>37</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>27</td><td>0</td><td>54</td><td>54</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>6</td><td>3</td><td>33</td><td>36</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>34</td><td>0</td><td>47</td><td>47</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>7</td><td>0</td><td>34</td><td>34</td></tr>
 </tbody>
 </table>
@@ -413,7 +413,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Simultaneously tapping this character and an enemy, followed by a conditional keyword check<br>bot-needs: Checking defender Tough and counting Actions and Upgrades played this turn</td></tr>
 <tr><th scope="row">Thunder Guts Gilthor, The One Who Claps</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Odd attack-damage detection and Stations</td></tr>
 <tr><th scope="row">Trasher Drone</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Suppressing character KO triggers, detecting return to the battlefield, and moving a filtered opponent-scrap Upgrade to KO</td></tr>
-<tr><th scope="row">Tread Bolt, Devil of the Deep Blue Sky</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Revealing, selectively retaining, ordering, and scrapping multiple deck cards<br>bot-needs: Detecting deck reshuffles and placing cards under a character</td></tr>
 <tr><th scope="row">Waster Drone</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Suppressing character KO triggers, detecting return to the battlefield, and moving an Upgrade between distinct enemies</td></tr>
 <tr><th scope="row">Wreck-Gar, The Big Cheese! Now With More Cheese!</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Other-character targeting and Stations<br>bot-needs: Checking an attached Upgrade&#39;s keyword and applying conditional stats</td></tr>
 <tr><th scope="row">38-Amp Ionic Plate</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Testing whether a damage-counter total is odd</td></tr>
@@ -425,8 +424,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Custom Junkion Saddle</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Stations, station occupancy requirements, and granting a Station from an Upgrade</td></tr>
 <tr><th scope="row">Dare to Be Stupid!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement setting damage from the target&#39;s ATK</td></tr>
 <tr><th scope="row">Decelerator Laser</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Granting Bandit to the defender conditionally on the attached attacker&#39;s Bandit keyword</td></tr>
-<tr><th scope="row">Diffraction Sword</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counters on an Upgrade and a non-attack-damage replacement that adds and checks them</td></tr>
-<tr><th scope="row">Dual Smokestacks</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Opponent choice between multi-target and selected damage effects</td></tr>
+<tr><th scope="row">Diffraction Sword</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Everything Must Go!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A delayed attack trigger for a chosen character, post-battle optional scrap, and using an Upgrade stat-box value</td></tr>
 <tr><th scope="row">Explosive Disposal</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking a scrapped opposing Upgrade, moving it to KO, and its stat-box total</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Tracking a revealed Secret Action through battle and replaying it after battle</td></tr>
@@ -449,31 +447,27 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Stations and playing an Upgrade from scrap</td></tr>
 <tr><th scope="row">Ninety Day Warranty!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Distributing pending attack damage among any number of characters</td></tr>
 <tr><th scope="row">Nucleon Exposure</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent-forced flips and turn-wide flip prevention</td></tr>
-<tr><th scope="row">Nudge Gun</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and tapping or untapping Rolling Actions</td></tr>
 <tr><th scope="row">Pack Behavior</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Passenger Coverage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement transferring damage after base DEF calculation across Station occupants</td></tr>
 <tr><th scope="row">Patrol Bolas</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Stations, counters, and moving an Upgrade to a Station occupant</td></tr>
 <tr><th scope="row">Peas in a Pod!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting another character distinct from an earlier selection with conditional star thresholds</td></tr>
 <tr><th scope="row">Pile-Up</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting a player&#39;s Rolling Actions</td></tr>
 <tr><th scope="row">Playing Both Sides</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking starting-team conditions and creating a delayed chosen-target trigger with player choice</td></tr>
-<tr><th scope="row">Police Action</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Scrapping an arbitrary Rolling Action and suppressing its effect</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping Black Pierce contribution based on the attacker&#39;s base ATK</td></tr>
 <tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving a selected Upgrade between characters or putting a qualifying KO Upgrade onto a character</td></tr>
 <tr><th scope="row">Relax With a Cold One!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A delayed trigger for a chosen character and bulk returning the defender&#39;s Upgrades</td></tr>
 <tr><th scope="row">Riffraff Knick-Knacks</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Additional Upgrade slot capacity and counters on an Upgrade</td></tr>
-<tr><th scope="row">Shanix Laundering</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A conditional Upgrade scrap cost followed by revealing specific deck cards to hand</td></tr>
 <tr><th scope="row">Sitrep Update</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the scrap of a face-down Secret Action</td></tr>
 <tr><th scope="row">Skimming Off the Top</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sparring Lessons</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Spread Democracy!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Delayed battle-limited triggers on a specified enemy</td></tr>
-<tr><th scope="row">Terrorburster Shield</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping attack damage for a battle based on the defender&#39;s stars</td></tr>
 <tr><th scope="row">Terrorcon Enigma</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Opponent-controlled flipping and combining characters</td></tr>
 <tr><th scope="row">The Power to Bite</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action trigger on lethal attack damage and damage calculated from combat stats</td></tr>
 <tr><th scope="row">Throttle</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Too Short For This Ride</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Characters leaving Stations and temporary Station-entry prevention</td></tr>
 <tr><th scope="row">Traffic Checkpoint</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and tapping a player&#39;s Rolling Actions</td></tr>
 <tr><th scope="row">Transfusion Cable</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Additional Upgrade slot capacity and removing a printed trait</td></tr>
-<tr><th scope="row">Tried and Executed</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning a filtered Upgrade from scrap to hand</td></tr>
+<tr><th scope="row">Tried and Executed</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Two Foes, Two Fists</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Resolving excess attack damage and selecting a tapped or untapped recipient</td></tr>
 <tr><th scope="row">Unfathomable Motives</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Cancelling a played Action while resolving a Secret Action</td></tr>
 <tr><th scope="row">Well-Worn Armor</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting non-attack damage instances received this turn</td></tr>
