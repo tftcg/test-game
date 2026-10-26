@@ -698,11 +698,10 @@
     },
     {
       "name": "Optimus Prime, Dark Awakening",
-      "alt-needs": "Returning a green card from scrap to hand.",
-      "bot-needs": "Applying different dynamic stat bonuses from each faction-bearing Upgrade by subtype and faction sharing.",
+      "comment": "TODO: Test",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-start-game()->damage(2,this());on-this-flip()->move_to(self().hand,pick_scrap(green>=1))",
+        "bot": "each(all_friends())->(static(atk,all(this().upgrades,faction.count>0,subtype=Weapon,shares_faction(candidate(),it())=false).count,target=it());static(def,all(this().upgrades,faction.count>0,subtype=Armor,shares_faction(candidate(),it())=false).count,target=it());static(health,all(this().upgrades,faction.count>0,subtype=Utility,shares_faction(candidate(),it())=false).count,target=it()))"
       }
     },
     {

@@ -126,8 +126,8 @@
     },
     {
       "name": "Hodgepodge Panoply",
-      "tfdsl": "",
-      "needs": "Granting the attacker Drifter during a conditional defense"
+      "comment": "TODO: Test",
+      "tfdsl": "static(drifter,when(event().defender.faction=Junkion,event().defender.has_drifter=true),true,target=event().attacker)"
     },
     {
       "name": "Hot Seat",
@@ -157,7 +157,7 @@
     {
       "name": "Lagartan Spaulders",
       "tfdsl": "",
-      "needs": "Optional replacement-cost discard of a Green card when this Upgrade would be scrapped"
+      "needs": "Optional replacement effect - i.e. needs modify to only be seen in a replacement effect when evaluated, not when seen"
     },
     {
       "name": "Lie in Wait",
@@ -236,8 +236,7 @@
     },
     {
       "name": "Pile-Up",
-      "tfdsl": "",
-      "needs": "Selecting a player's Rolling Actions"
+      "tfdsl": "choose(pick(players()));tap(all(chosen().actions,subtype='Rolling Action',tapped=untapped))"
     },
     {
       "name": "Playing Both Sides",
@@ -672,8 +671,8 @@
     {
       "name": "Ashtray, Come to Where the Flavor Is!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "drifter()",
+        "bot": "drifter()"
       },
       "alt-needs": "Detecting cards with no battle icons and Stations",
       "bot-needs": "Counting icon combinations in an opponent scrap pile and opponent-selected repeated damage"
@@ -750,8 +749,8 @@
     {
       "name": "Greasestain, No Muss! No Fuss!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "bandit()",
+        "bot": "bandit()"
       },
       "alt-needs": "Stations and moving damage to a character in a Station",
       "bot-needs": "Conditional Station-based damage"
@@ -774,8 +773,8 @@
     {
       "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "drifter()",
+        "bot": "drifter()"
       },
       "alt-needs": "Limiting battle flips and Stations",
       "bot-needs": "Selecting an opponent battle card to scrap without its icons and repairing by selected icon count"
@@ -783,8 +782,8 @@
     {
       "name": "Junkion Nancy, Just Say No to Sparkplugs!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "drifter()",
+        "bot": "drifter()"
       },
       "alt-needs": "Characters with a specified alternate mode and Stations",
       "bot-needs": "Detecting a character leaving a Station"
@@ -846,8 +845,8 @@
     {
       "name": "Rum-Maj, Wreck-Gar Sold Separately!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "bandit()",
+        "bot": "bandit()"
       },
       "alt-needs": "Stations and conditional global stat and keyword effects",
       "bot-needs": "Counting battle cards flipped for conditional temporary effects"
@@ -855,8 +854,8 @@
     {
       "name": "Scrapheap, It's Not Trash If It's Worth Cash!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "bandit()",
+        "bot": "bandit()"
       },
       "alt-needs": "Stations and playing a qualifying Upgrade from scrap",
       "bot-needs": "Post-battle Upgrade replacement from scrap with a different-name condition"
@@ -916,20 +915,20 @@
     {
       "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "drifter()",
+        "bot": "drifter()"
       },
       "alt-needs": "Conditional attack-damage redistribution with rounded division and starting-team checks",
       "bot-needs": "Once-per-turn tracking and rounded division when moving damage"
     },
     {
       "name": "Terrorcon Blot, Rank and Vile Rank and File",
+      "comment": "TODO: Test bot mode",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "instead(on-friend-damage(when(event().damaged.trait=Terrorcon,event().damaged.damage>=1,event().damaged.stars=4,event().amount>0))->modify(event().amount:=event().amount - 1))"
       },
-      "alt-needs": "Secret Action-style reveal and cancellation while an opponent plays an Action",
-      "bot-needs": "Non-attack-damage replacement conditional on the source card's owner"
+      "alt-needs": "Secret Action-style reveal and cancellation while an opponent plays an Action"
     },
     {
       "name": "Terrorcon Cutthroat, Shock and Cawww",

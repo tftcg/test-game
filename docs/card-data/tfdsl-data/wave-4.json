@@ -149,7 +149,7 @@
     },
     {
       "name": "Kinetic Intensifier Whip",
-      "tfdsl": "on-attached-flip()->bold(2)"
+      "tfdsl": "on-attached-flip()->bold_eot(2,attached())"
     },
     {
       "name": "Lucky Vest",
