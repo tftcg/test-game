@@ -13,8 +13,8 @@
     },
     {
       "name": "Ancient Security Tentacle",
-      "needs": "Preventing damage-counter movement to the upgraded character and allowing three Tentacles in one Weapon slot.",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(faction=Quintesson,trait=Specialist);instead(on-damage-move(event().move_to=attached())->do_nothing())"
     },
     {
       "name": "Angolmois Surge",
@@ -97,8 +97,8 @@
     },
     {
       "name": "\"Dutch\"",
-      "needs": "Tracking the first white battle icon and flipping an extra battle card.",
-      "tfdsl": ""
+      "comment": "TODO: Test",
+      "tfdsl": "static(atk,when(attached().faction=Mercenary),1,target=attached());on-attached-battle-flip(when(event().flips.white>=1),once())->flip_extra(1)"
     },
     {
       "name": "Energy Conversion Field",
@@ -108,7 +108,7 @@
     {
       "name": "Forked Tentacle",
       "needs": "Changing TAP ability option counts and the Tentacle slot-capacity rule.",
-      "tfdsl": ""
+      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(faction=Quintesson,trait=Specialist)"
     },
     {
       "name": "Gift of Innermost Energon",
@@ -137,8 +137,7 @@
     },
     {
       "name": "Litigious Tentacle",
-      "needs": "The Tentacle slot-capacity rule.",
-      "tfdsl": ""
+      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(faction=Quintesson,trait=Specialist);health(2)"
     },
     {
       "name": "Loading The Cannon",
@@ -383,9 +382,9 @@
     },
     {
       "name": "In The Name of Slingshot",
-      "front-needs": "Deploying a named character from outside the game and applying damage to exactly four characters.",
+      "comment": "BUG: 2nd player's 'start of first turn' is currently waiting for their first turn",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-game(when(starting_team(trait!=Aerialbot).count=0))->summon_friend('Autobot Powerglide, Haughty Show-Off');on-start-first-turn()->(repeat(4)->(damage(1,pick_friend(trait=Aerialbot,damage=0))))"
       }
     },
     {

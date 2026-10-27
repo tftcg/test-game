@@ -179,8 +179,7 @@
     },
     {
       "name": "Monofiber Filament",
-      "tfdsl": "",
-      "needs": "Additional Upgrade slot capacity"
+      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(faction=Quintesson,trait=Leader);pierce(1)"
     },
     {
       "name": "Muster the Will",
@@ -354,8 +353,8 @@
     },
     {
       "name": "Transfusion Cable",
-      "tfdsl": "",
-      "needs": "Additional Upgrade slot capacity and removing a printed trait"
+      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(trait=Specialist);",
+      "needs": "Removing a printed trait"
     },
     {
       "name": "Tried and Executed",
@@ -749,9 +748,8 @@
     {
       "name": "Greasestain, No Muss! No Fuss!",
       "comment": "TODO: Test",
-      "alt-needs": "Implement the ability on Greasestain",
       "tfdsl": {
-        "alt": "bandit();station('Ram Leather Seat',requires(stars<=11,mode=bot),gives(atk(1),trait(Motorcycle)),text(on(event=char-attack,when(event().attacker=occupant()))->move(1,pick(occupant()+host()),event().defender)))",
+        "alt": "bandit();on-friend-attack-damaged(when(event().target.trait=Motorcycle,event().target!=this(),event().overkill<0))->(if(confirm('Move 1 damage to Greasestain?'))->move(1,event().target,this()));station('Ram Leather Seat',requires(stars<=11,mode=bot),gives(atk(1),trait(Motorcycle)),text(on(event=char-attack,when(event().attacker=occupant()))->move(1,pick(occupant()+host()),event().defender)))",
         "bot": "bandit();on-this-attack(when(this().in_station))->(if(event().defender.in_station)->damage(2,event().defender):else->damage(1,event().defender));on(event=attack-damage,when(event().target.owner=this().owner,event().target!=this(),event().target.mode=bot,event().target.other_modes=alt,event().target.damage<event().target.health))->(if(confirm())->move(1,event().target,this()))"
       }
     },
