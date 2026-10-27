@@ -279,8 +279,35 @@
 
     .card-row { display: flex; align-items: flex-start; gap: .4rem; min-width: max-content; }
     .card-row.scrollable { overflow-x: auto; min-width: 100%; height: calc(100% - 1.2rem); }
-    .character-row { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: .75rem; height: calc(100% - 1.2rem); overflow: auto; }
-    .character-stack { display: grid; grid-template-rows: 170px auto; align-content: start; justify-items: center; min-width: 126px; }
+    .character-area { height: calc(100% - 1.2rem); overflow: auto; }
+    .character-area.has-station-stratagems { display: grid; grid-template-columns: 132px minmax(126px, 1fr); gap: .75rem; }
+    .character-row { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; align-items: flex-start; gap: .75rem; min-height: 100%; }
+    .character-stack { display: grid; grid-template-rows: minmax(170px, auto) auto; align-content: start; justify-items: center; min-width: 126px; }
+    .station-stratagems { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+    .station-card-display { position: relative; display: grid; justify-items: center; align-self: center; gap: .2rem; width: 120px; }
+    .station-card-display.station-card-tapped { width: 132px; }
+    /* Match the visible bounds of the 168px card rotated and scaled to .78. */
+    .station-card-tapped > .character-card-stack { margin-block: -37.2px; }
+    .station-label {
+      position: relative;
+      z-index: 3;
+      box-sizing: border-box;
+      width: 100%;
+      padding: .2rem .3rem;
+      color: #e8f3ff;
+      background: #152534;
+      border: 1px solid #8298aa;
+      border-radius: .2rem;
+      font-size: .65rem;
+      line-height: 1.25;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+    .station-card-display:not(.station-card-tapped) > .station-label:first-child {
+      position: absolute;
+      bottom: calc(100% + .2rem);
+      left: 0;
+    }
     .character-card-stack {
       --head-card-width: 72px;
       position: relative;

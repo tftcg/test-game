@@ -240,11 +240,11 @@
     },
     {
       "name": "Broadside, Air & Sea Assault",
-      "alt 2-needs": "Station requirements, station modifiers, and station enter/leave events",
+      "comment": "TODO: Test",
       "tfdsl": {
         "alt 1": "on-this-flip()->move(1,this(),pick_enemy())",
         "bot": "on-this-flip()->pierce_eot(3,this())",
-        "alt 2": "static(base_def,all_friends(trait=Boat || trait=Helicopter || trait=Plane).count)"
+        "alt 2": "static(base_def,all_friends(trait=Boat || trait=Helicopter || trait=Plane).count);station('Flight Deck',requires(stars<=12),gives(def(1)),text(on(event=enter-station,when(event().station=station(),event().character.trait=Helicopter || event().character.trait=Plane))->repair(1,event().character);on(event=leave-station,when(event().station=station(),event().character.trait=Plane))->damage(1,pick_enemy())))"
       }
     },
     {

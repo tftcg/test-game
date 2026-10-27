@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1248/1514 (82.4%)</p>
+  <p>TFDSL completion: 1249/1514 (82.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>361</td><td>19</td><td>46</td><td>65</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>362</td><td>18</td><td>46</td><td>64</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>521</td><td>0</td><td>91</td><td>91</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>98</td><td>1</td><td>59</td><td>60</td></tr>
 </tbody>
@@ -40,11 +40,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 317/578 (54.8%)</p>
+  <p>TFDSL completion: 318/578 (55.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>56</td><td>19</td><td>46</td><td>65</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>57</td><td>18</td><td>46</td><td>64</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>141</td><td>0</td><td>85</td><td>85</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>67</td><td>1</td><td>59</td><td>60</td></tr>
 </tbody>
@@ -68,7 +68,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">while you can tell Sludge to move enough damage to KO him, move_no_ko will only move as much as it can without KO&#39;ing</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The &#39;instead&#39; is wrapped in (...) to protect from an engine bug</td><td class="comment"></td></tr>
 <tr><th scope="row">Aerial Recon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this shouldn&#39;t give focus_eob(1) to the attached but should just be an effect</td><td class="comment"></td></tr>
-<tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test direct damage</td><td class="comment"></td></tr>
+<tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Errors when Metroplex is KO&#39;d. TODO: Test direct damage</td><td class="comment"></td></tr>
 <tr><th scope="row">Salvage for Parts</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test. Rewritten DSL</td><td class="comment"></td></tr>
 </tbody>
 </table>
@@ -552,11 +552,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-10</h2>
-  <p>TFDSL completion: 67/71 (94.4%)</p>
+  <p>TFDSL completion: 68/71 (95.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>12</td><td>9</td><td>3</td><td>0</td><td>3</td></tr>
+<tr><th scope="row">Character</th><td>12</td><td>10</td><td>2</td><td>0</td><td>2</td></tr>
 <tr><th scope="row">Battlecard</th><td>28</td><td>28</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>19</td><td>1</td><td>0</td><td>1</td></tr>
 </tbody>
@@ -565,7 +565,7 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Broadside, Air &amp; Sea Assault</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">alt 2-needs: Station requirements, station modifiers, and station enter/leave events</td></tr>
+<tr><th scope="row">Broadside, Air &amp; Sea Assault</th><td>Character</td><td>todo</td><td>3/3</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Distinguishing and preventing card-caused flips</td></tr>
 <tr><th scope="row">Enemy, Infuriating Infiltrator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Redirecting damage from opponent card effects to this character</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>

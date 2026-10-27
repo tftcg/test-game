@@ -334,7 +334,7 @@
     },
     {
       "name": "Protected By Metroplex",
-      "comment": "TODO: Test direct damage",
+      "comment": "BUG: Errors when Metroplex is KO'd. TODO: Test direct damage",
       "tfdsl": "instead(on-attack-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)));instead(on-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)))"
     },
     {
