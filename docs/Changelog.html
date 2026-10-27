@@ -5,12 +5,18 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TODO, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1782)</h2>
+<h2>Implemented cards (1788)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
+<tr><td>2026-10-26</td><th scope="row">&quot;Dutch&quot;</th><td>wave-6</td><td>Battlecard</td><td>todo</td><td><code>5b0e96e91b31</code></td></tr>
+<tr><td>2026-10-26</td><th scope="row">Ancient Security Tentacle</th><td>wave-6</td><td>Battlecard</td><td>todo</td><td><code>5b0e96e91b31</code></td></tr>
+<tr><td>2026-10-26</td><th scope="row">In The Name of Slingshot</th><td>wave-6</td><td>Stratagem</td><td>bug</td><td><code>5b0e96e91b31</code></td></tr>
+<tr><td>2026-10-26</td><th scope="row">Litigious Tentacle</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>5b0e96e91b31</code></td></tr>
 <tr><td>2026-10-26</td><th scope="row">Optimus Prime, Dark Awakening</th><td>wave-6</td><td>Character</td><td>todo</td><td><code>ca5247acffa4</code></td></tr>
 <tr><td>2026-10-26</td><th scope="row">Combat Deck</th><td>wave-8</td><td>Stratagem</td><td>todo</td><td><code>de238075a88f</code></td></tr>
 <tr><td>2026-10-26</td><th scope="row">Custom Junkion Saddle</th><td>wave-8</td><td>Battlecard</td><td>todo</td><td><code>de238075a88f</code></td></tr>
+<tr><td>2026-10-26</td><th scope="row">Greasestain, No Muss! No Fuss!</th><td>wave-8</td><td>Character</td><td>todo</td><td><code>5b0e96e91b31</code></td></tr>
 <tr><td>2026-10-26</td><th scope="row">Hodgepodge Panoply</th><td>wave-8</td><td>Battlecard</td><td>todo</td><td><code>ca5247acffa4</code></td></tr>
+<tr><td>2026-10-26</td><th scope="row">Monofiber Filament</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>5b0e96e91b31</code></td></tr>
 <tr><td>2026-10-26</td><th scope="row">Pile-Up</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>ca5247acffa4</code></td></tr>
 <tr><td>2026-10-26</td><th scope="row">Broadside, Air &amp; Sea Assault</th><td>wave-10</td><td>Character</td><td>todo</td><td><code>18a48548a9cf</code></td></tr>
 <tr><td>2026-10-25</td><th scope="row">Diffraction Sword</th><td>wave-8</td><td>Battlecard</td><td>todo</td><td><code>3c341f8344d4</code></td></tr>
@@ -1790,7 +1796,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (583)</h2>
+<h2>No implementation date observed (577)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Alpha Sentinel, Dark Guardian Relic</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Armada, Herald of Shrouds</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
@@ -1816,8 +1822,6 @@
 <tr><th scope="row">Shockblast, Galactic Man</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Slitherfang, Poisonous Protection</th><td>wave-6</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Tow-Line, Signals Engineer</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">&quot;Dutch&quot;</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Ancient Security Tentacle</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Aquatic Maneuvers</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Are These Wires Important?</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Armed To The Teeth</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1833,13 +1837,12 @@
 <tr><th scope="row">Discordant Cacophony</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Dreadful Feast</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Energy Conversion Field</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Forked Tentacle</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
+<tr><th scope="row">Forked Tentacle</th><td>wave-6</td><td>Battlecard</td><td>partial</td></tr>
 <tr><th scope="row">Gift of Innermost Energon</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Give Me Your Face</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Guilty or Innocent</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Insurance Write-Off</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Judicial Discretion</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Litigious Tentacle</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Loading The Cannon</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Lost In Transit</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Manipulate Time</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1865,7 +1868,6 @@
 <tr><th scope="row">Dark Regeneration</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Energon Reclamation</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Hit Me With That Beat</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
-<tr><th scope="row">In The Name of Slingshot</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Indigestion</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Kneel Before Us</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Localized Tremors</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
@@ -1891,7 +1893,6 @@
 <tr><th scope="row">Decepticon Wingthing, Loyal, Lethal Cohort</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Gilthor, Wounded Retribution</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">Greasestain, No Muss! No Fuss!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Junker Drone</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
@@ -1940,7 +1941,6 @@
 <tr><th scope="row">Lagartan Spaulders</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Me Grimlock Need New Strategy</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Mirror Response Mode</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Monofiber Filament</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Mystical Bond</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Ninety Day Warranty!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Nucleon Exposure</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1958,7 +1958,7 @@
 <tr><th scope="row">The Power to Bite</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Too Short For This Ride</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Traffic Checkpoint</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Transfusion Cable</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
+<tr><th scope="row">Transfusion Cable</th><td>wave-8</td><td>Battlecard</td><td>partial</td></tr>
 <tr><th scope="row">Two Foes, Two Fists</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Unfathomable Motives</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Well-Worn Armor</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
