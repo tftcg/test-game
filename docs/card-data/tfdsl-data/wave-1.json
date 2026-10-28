@@ -166,7 +166,7 @@
     },
     {
       "name": "Ion Blaster of Optimus Prime",
-      "tfdsl": "put_only(name='Optimus Prime')"
+      "tfdsl": "put_only(name='Optimus Prime' || fullname='Autobot Roller, Scout Drone')"
     },
     {
       "name": "Jaws of Steel",
@@ -587,7 +587,7 @@
       "name": "Starscream, Air Commander",
       "tfdsl": {
         "comment": "TODO: Needs other_friends()",
-        "alt": "on-this-flip()->damage(all_friends(trait=Plane).length,pick_enemy())",
+        "alt": "on-this-flip()->damage(all_friends(trait=Plane).count-1,pick_enemy())",
         "bot": "static(bold,when(this().mode=bot),2 + this().starscream_plus)"
       }
     },

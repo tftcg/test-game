@@ -142,7 +142,7 @@
     {
       "name": "Imminent Breakthrough",
       "comment": "NOTE: As there isn't a 'during your turn' event, making this start of turn. Potentiallty later it can be an actionable ability",
-      "tfdsl": "scrap(on-start-turn())->set_flag_eot('tech research')"
+      "tfdsl": "scrap(on-start-turn())->when_scrapped(set_flag_eot('tech research'))"
     },
     {
       "name": "Inexorable Force",
@@ -686,10 +686,11 @@
     },
     {
       "name": "Autobot Roller, Scout Drone",
+      "comment": "NOTE: The 'treat this as though it were named Optimus Prime' ability is handled by adding this character explicitly to both relevant upgrades",
       "tfdsl": {
-        "alt": ""
+        "alt": "tap_ability()->(reveal_cards(top_deck());if(previous_target().subtype='Rolling Action')->(if(confirm('Play it?'))->play(previous_target()):else->(move_to(self().hand,previous_target()))):else->(move_to(self().hand,previous_target())))"
       },
-      "alt-needs": "Treating a character as though it had another name and revealing and conditionally playing the top deck card"
+      "alt-needs": "Treating a character as though it had another name"
     },
     {
       "name": "Bug Bite, The Renegade Who Had It Made",
