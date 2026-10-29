@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1258/1514 (83.1%)</p>
+  <p>TFDSL completion: 1259/1514 (83.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>364</td><td>18</td><td>44</td><td>62</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>365</td><td>17</td><td>44</td><td>61</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>526</td><td>2</td><td>84</td><td>86</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>99</td><td>1</td><td>58</td><td>59</td></tr>
 </tbody>
@@ -40,11 +40,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 327/578 (56.6%)</p>
+  <p>TFDSL completion: 328/578 (56.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>59</td><td>18</td><td>44</td><td>62</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>60</td><td>17</td><td>44</td><td>61</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>146</td><td>2</td><td>78</td><td>80</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>68</td><td>1</td><td>58</td><td>59</td></tr>
 </tbody>
@@ -125,8 +125,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Eject, Electronic Surveillance</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">We agreed to treat Eject&#39;s alt mode as a Focus ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Camshaft, Special Ops • Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Downshift, Special Ops • Security Agent</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Raider Storm Cloud, Infantry  Electronic Warfare</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
-<tr><th scope="row">Raider Visper, Infantry • Patrol Leader</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Cog, Artillery • Mechanic</th><td>Character</td><td>bug</td><td>1/1</td><td class="comment">Game is choosing the characters in left to right order. Somehow player needs to choose characters but not be able to pick them again. Maybe if previous_targets() plural was made available, could be checking against that??</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Overdrive, Special Ops • Strategist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Buzzsaw, Ravage, Frenzy Attack!</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test Frenzy effect</td><td class="comment"></td></tr>
@@ -154,7 +152,6 @@ thead { background: #f3f4f6; }
 <tbody>
 <tr><th scope="row">Deadlock, Soldier of Fortune</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Private Hot Rod, Infantry • Soldier</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Raider Nightflight, Air Strike Patrol • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Need to do the &#39;if all three are the same name&#39; on bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Raider Ratbat, Spy Patrol • Fuel Scout</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: revenge() doesn&#39;t like multiple terms inside it thus the extra parentheses</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Mirage, Special Ops • Spy</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test both sides</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Soundblaster, Weapons • Arms Dealer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
@@ -364,11 +361,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 63/199 (31.7%)</p>
+  <p>TFDSL completion: 64/199 (32.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>8</td><td>11</td><td>23</td><td>34</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>9</td><td>10</td><td>23</td><td>33</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>39</td><td>1</td><td>41</td><td>42</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>8</td><td>0</td><td>33</td><td>33</td></tr>
 </tbody>
@@ -379,7 +376,7 @@ thead { background: #f3f4f6; }
 <tbody>
 <tr><th scope="row">Abominus, Hellsparked Horror</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Counting distinct Upgrade types and opponent-controlled character flipping</td></tr>
 <tr><th scope="row">Ashtray, Come to Where the Flavor Is!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Detecting cards with no battle icons and Stations<br>bot-needs: Counting icon combinations in an opponent scrap pile and opponent-selected repeated damage</td></tr>
-<tr><th scope="row">Autobot Roller, Scout Drone</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment">The &#39;treat this as though it were named Optimus Prime&#39; ability is handled by adding this character explicitly to both relevant upgrades</td><td class="comment">alt-needs: Treating a character as though it had another name</td></tr>
+<tr><th scope="row">Autobot Roller, Scout Drone</th><td>Character</td><td>note</td><td>1/1</td><td class="comment">The &#39;treat this as though it were named Optimus Prime&#39; ability is handled by adding this character explicitly to both relevant upgrades</td><td class="comment"></td></tr>
 <tr><th scope="row">Bug Bite, The Renegade Who Had It Made</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Returning an Upgrade from scrap based on shared battle-icon colors and card types<br>bot-needs: Attack-damage lethal detection, Bounty resolution, and conditional effects based on an opponent-selected hand card</td></tr>
 <tr><th scope="row">Clench, Colossus of Obliteration</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Scrapping a battle card without its icons and choosing an icon color to calculate damage<br>bot-needs: Optional variable hand scrapping and scaling a temporary stat by the number scrapped</td></tr>
 <tr><th scope="row">Crasher, Fractious Fanatic</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Detecting simultaneous non-attack damage and choosing between multi-character repair or enemy damage<br>bot-needs: Selecting a trait on the defender and damaging other enemies sharing that trait</td></tr>
@@ -528,7 +525,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Ghost of Starscream, Annoying Apparition</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Triggering a character ability from the KO area when Starscream is KO&#39;d and capturing its Upgrades before KO cleanup</td></tr>
 <tr><th scope="row">Huffer, Sullen Engineer</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Again needs a pay() for the If You Dos</td><td class="comment"></td></tr>
 <tr><th scope="row">Lord Zarak, Ruler of Nebulos</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test Shield carry over from Scorponok. NOTE: Zarak has to go on Scorponok. Skipping enforcing that. Deployment carry is implemented on Zarak Shield rather than this card&#39;s printed bot ability.</td><td class="comment"></td></tr>
-<tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
+<tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage. Make the &#39;ko&#39; DSL put a marker in the context.<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
 <tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Althought the English is worded to be an event that sets up an event, there&#39;s no need in this case</td><td class="comment"></td></tr>

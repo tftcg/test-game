@@ -290,7 +290,7 @@
     },
     {
       "name": "Megatron, Bane of Cybertron",
-      "bot-needs": "Detecting a character KO'd by one of your cards without damage",
+      "bot-needs": "Detecting a character KO'd by one of your cards without damage. Make the 'ko' DSL put a marker in the context.",
       "alt-needs": "Replacing Upgrade slot conflicts and a character leaving the battlefield",
       "tfdsl": {
         "bot": "",

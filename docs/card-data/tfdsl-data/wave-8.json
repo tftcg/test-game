@@ -688,8 +688,7 @@
       "comment": "NOTE: The 'treat this as though it were named Optimus Prime' ability is handled by adding this character explicitly to both relevant upgrades",
       "tfdsl": {
         "alt": "tap_ability()->(reveal_cards(top_deck());if(previous_target().subtype='Rolling Action')->(if(confirm('Play it?'))->play(previous_target()):else->(move_to(self().hand,previous_target()))):else->(move_to(self().hand,previous_target())))"
-      },
-      "alt-needs": "Treating a character as though it had another name"
+      }
     },
     {
       "name": "Bug Bite, The Renegade Who Had It Made",

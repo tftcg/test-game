@@ -525,10 +525,9 @@
     },
     {
       "name": "Raider Storm Cloud, Infantry  Electronic Warfare",
-      "comment": "TODO: Need to do the 'if all three are the same name' on bot mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->bold_eot(3,pick_friend())"
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->(if(scrapped_same())->bold_eot(6,pick_friend()):else->bold_eot(3,pick_friend()))"
       }
     },
     {
@@ -540,10 +539,9 @@
     },
     {
       "name": "Raider Visper, Infantry • Patrol Leader",
-      "comment": "TODO: Need to do the 'if all three are the same name' on bot mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->scrap_hand(opponent_pick_opponent_hand(count=3))"
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->(scrap_hand(opponent_pick_opponent_hand(count=3));if(scrapped_same())->draw(3))"
       }
     },
     {

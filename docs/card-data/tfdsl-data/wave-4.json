@@ -513,10 +513,9 @@
     },
     {
       "name": "Raider Nightflight, Air Strike Patrol • Spy",
-      "comment": "TODO: Need to do the 'if all three are the same name' on bot mode",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped))",
-        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->damage(3,opponent_pick(opponent().chars))"
+        "bot": "tap_ability(scrap_hand(pick_hand(exact=3,green>=1)))->(damage(3,opponent_pick(opponent().chars));if(scrapped_same())->repair(3,pick_friend()))"
       }
     },
     {
