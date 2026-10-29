@@ -181,7 +181,7 @@
     },
     {
       "name": "Mining Pick",
-      "tfdsl": "on-put-deck()->atk_eot(1,attached())"
+      "tfdsl": "on-attached-attack()->plan(2);on-put-deck()->atk_eot(1,attached())"
     },
     {
       "name": "Mounted Missiles",

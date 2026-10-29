@@ -720,12 +720,11 @@
     },
     {
       "name": "Decepticon Wingthing, Loyal, Lethal Cohort",
+      "comment": "TODO: Currently it is doing a damage for each card put on the deck because there isn't a macro event",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Moving damage between selected characters while excluding the source target",
-      "bot-needs": "Detecting cards put from hand onto a deck"
+        "alt": "stealth();on-this-flip()->(if(confirm('Move damage?'))->(choose(pick_friend(stars>=10));move(1,chosen(),pick_char(id!=chosen().id))))",
+        "bot": "on(event=put-deck)->(if(this().upgrades.count>0)->damage(1,pick_enemy()):else->damage(1,opponent_pick_opponent_char()))"
+      }
     },
     {
       "name": "Detritus, Now With Sleek, Sexy Handling!",

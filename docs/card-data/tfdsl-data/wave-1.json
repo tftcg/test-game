@@ -61,7 +61,7 @@
     },
     {
       "name": "Computer Sabotage",
-      "tfdsl": "scrap_hand(opponent_pick_opponent_hand(count=opponent().hand.count-3))"
+      "tfdsl": "if(opponent().hand.count>3)->scrap_hand(opponent_pick_opponent_hand(count=opponent().hand.count-3))"
     },
     {
       "name": "Crushing Size",

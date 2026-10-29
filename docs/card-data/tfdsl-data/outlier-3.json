@@ -65,7 +65,7 @@
     {
       "name": "Predaking [B], Apex Predator",
       "tfdsl": {
-        "combiner": "bold(2);on-this-attack-damage(when(event().overkill>=0))->damage(2,opponent_pick(all_enemies()))"
+        "combiner": "bold(2);on-this-attack-damage(when(event().overkill>=0))->damage(2,opponent_pick(all_enemies()));on-start-turn()->(draw(2);play(pick_hand());play(pick_hand()));on-this-combine()->(draw(2);play(pick_hand());play(pick_hand()))"
       }
     }
   ]
