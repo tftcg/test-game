@@ -749,7 +749,7 @@
       "name": "Scrapper, Constructicon Foreman",
       "comment": "NOTE: Scrapper's bot mode lives in the Tower rather than on him",
       "tfdsl": {
-        "alt": "tower()",
+        "alt": "on-start-game()->tower()",
         "bot": "do_nothing()"
       }
     },

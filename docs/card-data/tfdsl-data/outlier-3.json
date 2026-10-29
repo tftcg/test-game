@@ -51,7 +51,7 @@
     {
       "name": "Razorclaw [B], Predacon Huntmaster",
       "tfdsl": {
-        "alt": "bold(1);can_atk_untapped()",
+        "alt": "on-start-game()->wildhunt();bold(1);can_atk_untapped()",
         "bot": "bold(2);can_atk_untapped()"
       }
     },

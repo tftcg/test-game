@@ -9,8 +9,7 @@
   "cards": [
     {
       "name": "38-Amp Ionic Plate",
-      "tfdsl": "",
-      "needs": "Testing whether a damage-counter total is odd"
+      "tfdsl": "static(pierce,when(attached().faction=Mercenary),1,target=attached());static(def,when(attached().damage % 2 = 1),2,target=attached())"
     },
     {
       "name": "Abrogate",
