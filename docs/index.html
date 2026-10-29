@@ -186,10 +186,32 @@
     #gameplay-event-log {
       margin: 0;
       min-height: 0;
-      white-space: pre-wrap;
       overflow-wrap: anywhere;
       overflow-y: auto;
       font: .8rem/1.4 ui-monospace, monospace;
+    }
+    .gameplay-log-section {
+      margin-bottom: .75rem;
+    }
+    .gameplay-log-section h3, .gameplay-log-section summary {
+      margin: 0;
+      padding: .35rem 0;
+      color: #9fb2c5;
+      font: bold .85rem/1.4 ui-monospace, monospace;
+    }
+    .gameplay-log-section summary {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      list-style: none;
+    }
+    .gameplay-log-section summary::-webkit-details-marker { display: none; }
+    .gameplay-log-section summary::after { content: "+"; }
+    .gameplay-log-section[open] summary::after { content: "-"; }
+    .gameplay-log-section pre {
+      margin: 0;
+      white-space: pre-wrap;
+      font: inherit;
     }
     #turn-actions, #action-buttons { min-width: 0; }
     #action-buttons {
@@ -825,7 +847,7 @@
     <aside class="control-column">
       <section id="gameplay-events">
         <h2 class="panel-title">Game event log</h2>
-        <pre id="gameplay-event-log" aria-live="polite"></pre>
+        <div id="gameplay-event-log" aria-live="polite"></div>
       </section>
       <section id="turn-actions" hidden>
         <h2 class="panel-title">Actions</h2>
