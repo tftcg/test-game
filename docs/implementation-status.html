@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1261/1514 (83.3%)</p>
+  <p>TFDSL completion: 1262/1514 (83.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>365</td><td>17</td><td>44</td><td>61</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>527</td><td>2</td><td>83</td><td>85</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>528</td><td>2</td><td>82</td><td>84</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>100</td><td>1</td><td>57</td><td>58</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 330/578 (57.1%)</p>
+  <p>TFDSL completion: 331/578 (57.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>60</td><td>17</td><td>44</td><td>61</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>147</td><td>2</td><td>77</td><td>79</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>148</td><td>2</td><td>76</td><td>78</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>69</td><td>1</td><td>57</td><td>58</td></tr>
 </tbody>
 </table>
@@ -187,7 +187,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Decepticon Quake, Ground Assault</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. Test a lot.</td><td class="comment"></td></tr>
 <tr><th scope="row">Fangry, Sky Tracker</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Fortress Maximus, Great War Veteran</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">Need to automatically attach Cerebros to him and it errors when deployed</td><td class="comment"></td></tr>
-<tr><th scope="row">Horri-Bull, Ground Trooper</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Mindwipe, Hypnotist</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test. NOTE: Checking the opponent has a card shouldn&#39;t be here on body mode - things need to just fail gracefully</td><td class="comment"></td></tr>
 <tr><th scope="row">Optimus Prime, Legendary Warrior</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sergeant Kup, Wrecker Leader</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">This is relying on pick_hand not being cancellable. This really needs a pay()</td><td class="comment"></td></tr>
@@ -357,12 +356,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 65/199 (32.7%)</p>
+  <p>TFDSL completion: 66/199 (33.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>9</td><td>10</td><td>23</td><td>33</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>39</td><td>1</td><td>41</td><td>42</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>40</td><td>1</td><td>40</td><td>41</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>9</td><td>0</td><td>32</td><td>32</td></tr>
 </tbody>
 </table>
@@ -454,7 +453,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">The Power to Bite</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action trigger on lethal attack damage and damage calculated from combat stats</td></tr>
 <tr><th scope="row">Throttle</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Too Short For This Ride</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Characters leaving Stations and temporary Station-entry prevention</td></tr>
-<tr><th scope="row">Traffic Checkpoint</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and tapping a player&#39;s Rolling Actions</td></tr>
+<tr><th scope="row">Traffic Checkpoint</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Transfusion Cable</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Removing a printed trait</td></tr>
 <tr><th scope="row">Tried and Executed</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Two Foes, Two Fists</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Resolving excess attack damage and selecting a tapped or untapped recipient</td></tr>

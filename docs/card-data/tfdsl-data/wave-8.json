@@ -347,8 +347,8 @@
     },
     {
       "name": "Traffic Checkpoint",
-      "tfdsl": "",
-      "needs": "Selecting and tapping a player's Rolling Actions"
+      "comment": "TODO: Test",
+      "tfdsl": "reveal(on-opponent-start-turn()->revealed(choose(pick(players()));tap(all(chosen().actions,subtype='Rolling Action',tapped=untapped))"
     },
     {
       "name": "Transfusion Cable",

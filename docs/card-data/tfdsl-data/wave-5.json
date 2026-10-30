@@ -618,10 +618,9 @@
     },
     {
       "name": "Horri-Bull, Ground Trooper",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->move(1,this(),pick_enemy())",
-        "body": "on-play-action(when(event().played.black>=1))->(damage(1,pick_enemy());damage(1,this()))"
+        "body": "on-play-action(when(event().card.black>=1))->(damage(1,this(),pick_enemy()));on-play-upgrade(when(event().played.black>=1))->(damage(1,this(),pick_enemy()))"
       }
     },
     {
