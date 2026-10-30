@@ -303,8 +303,7 @@
     },
     {
       "name": "Tackle",
-      "comment": "BUG: Can tap characters with more stars",
-      "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));tap(pick_enemy(previous_target().stars<=stars,tapped=untapped))"
+      "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));if(done())->tap(pick_enemy(stars<=previous_target().stars,tapped=untapped))"
     },
     {
       "name": "Tech Research",

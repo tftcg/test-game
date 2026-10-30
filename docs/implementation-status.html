@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1259/1514 (83.2%)</p>
+  <p>TFDSL completion: 1261/1514 (83.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>365</td><td>17</td><td>44</td><td>61</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>526</td><td>2</td><td>84</td><td>86</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>99</td><td>1</td><td>58</td><td>59</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>527</td><td>2</td><td>83</td><td>85</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>100</td><td>1</td><td>57</td><td>58</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 328/578 (56.7%)</p>
+  <p>TFDSL completion: 330/578 (57.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>60</td><td>17</td><td>44</td><td>61</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>146</td><td>2</td><td>78</td><td>80</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>68</td><td>1</td><td>58</td><td>59</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>147</td><td>2</td><td>77</td><td>79</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>69</td><td>1</td><td>57</td><td>58</td></tr>
 </tbody>
 </table>
 </section>
@@ -68,8 +68,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Dinobot Sludge, Mighty Stomper</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">while you can tell Sludge to move enough damage to KO him, move_no_ko will only move as much as it can without KO&#39;ing</td><td class="comment"></td></tr>
 <tr><th scope="row">Skywarp, Sneaky Prankster</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The &#39;instead&#39; is wrapped in (...) to protect from an engine bug</td><td class="comment"></td></tr>
 <tr><th scope="row">Aerial Recon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this shouldn&#39;t give focus_eob(1) to the attached but should just be an effect</td><td class="comment"></td></tr>
-<tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Errors when Metroplex is KO&#39;d. TODO: Test direct damage</td><td class="comment"></td></tr>
-<tr><th scope="row">Salvage for Parts</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test. Rewritten DSL</td><td class="comment"></td></tr>
+<tr><th scope="row">Protected By Metroplex</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Direct damage not being replaced</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>
@@ -102,7 +101,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Predacon Enigma</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Reckless Charge</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">each(..) is used here because previous_target doesn&#39;t survive through events but it() will</td><td class="comment"></td></tr>
 <tr><th scope="row">Stunticon Swagger</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Tackle</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Can tap characters with more stars</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>
@@ -219,12 +217,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 48/156 (30.8%)</p>
+  <p>TFDSL completion: 49/156 (31.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>31</td><td>7</td><td>4</td><td>20</td><td>24</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>24</td><td>1</td><td>37</td><td>38</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>25</td><td>1</td><td>36</td><td>37</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>11</td><td>0</td><td>24</td><td>24</td></tr>
 </tbody>
 </table>
@@ -294,7 +292,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Photon Charge</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Engine requests reorder without data; was on Brawn. Not clear why as the three events below are at different times</td><td class="comment"></td></tr>
 <tr><th scope="row">Reroute Enemy Vectors</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: An attack-damage replacement that reduces a selected enemy&#39;s damage by half.</td></tr>
 <tr><th scope="row">Secret Missive</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning a green Secret Action from scrap to hand.</td></tr>
-<tr><th scope="row">Sidecar Artillery</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking an attack ATK condition through delayed after-battle effects and scrapping the source.</td></tr>
 <tr><th scope="row">Squid Pro Quo</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving a chosen amount of up to two damage counters and boosting from the actual amount moved.</td></tr>
 <tr><th scope="row">Stim Shock</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Filtering characters by Bold total and modifying that total.</td></tr>
 <tr><th scope="row">Subcontractor Agreement</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Using a Bounty ability from another card.</td></tr>
@@ -354,20 +351,19 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Hardhead, Grave Mistakes</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Hoist, Fearless Rescuer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Electro-Static Shielding</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Obfuscating Cloud</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Safeguard for friends not working yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Out of the Way Hot Rod!</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">currently replaces the original damage with separate damage to the chosen character; a future engine change should allow modifying the damage event&#39;s recipient and continue resolving that same event.</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 64/199 (32.2%)</p>
+  <p>TFDSL completion: 65/199 (32.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>9</td><td>10</td><td>23</td><td>33</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>39</td><td>1</td><td>41</td><td>42</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>8</td><td>0</td><td>33</td><td>33</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>9</td><td>0</td><td>32</td><td>32</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -490,7 +486,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Old War Stories</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Counters on a Stratagem, tracking weapons played this turn, and playing Weapons onto multiple characters</td></tr>
 <tr><th scope="row">Order in the Court</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Detecting use of a TAP ability and Stratagem-side flipping<br>back-needs: Stratagem-side flipping when all characters untap</td></tr>
 <tr><th scope="row">Prosecutorial Overreach</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Once-per-turn tracking of Tentacle upgrades and playing another Tentacle</td></tr>
-<tr><th scope="row">Put a Stinger in the Works</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Deploying a named character from outside the game in a specified mode before the game</td></tr>
 <tr><th scope="row">Queen of the Junkyard</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Counters on a Stratagem, deck reshuffle detection, and scaling a named character&#39;s ATK by those counters</td></tr>
 <tr><th scope="row">Slice, Dice, and Julienne!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Detecting an opponent drawing cards during your turn and granting temporary ATK to Road Drones</td></tr>
 <tr><th scope="row">Stop the Tax and Spend!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Replacing a multi-card deck scrap with a single-card deck scrap</td></tr>

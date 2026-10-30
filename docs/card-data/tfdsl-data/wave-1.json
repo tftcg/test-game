@@ -257,7 +257,6 @@
     },
     {
       "name": "Salvage for Parts",
-      "comment": "TODO: Test. Rewritten DSL",
       "tfdsl": "each(all_upgrades())->(choose(all_chars(id=it().attached_to.id));scrap_upgrade(it());repair(1,chosen()))"
     },
     {
@@ -334,8 +333,8 @@
     },
     {
       "name": "Protected By Metroplex",
-      "comment": "BUG: Errors when Metroplex is KO'd. TODO: Test direct damage",
-      "tfdsl": "instead(on-attack-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)));instead(on-damage(when(event().target.owner=attached().owner))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)))"
+      "comment": "BUG: Direct damage not being replaced",
+      "tfdsl": "instead(on-attack-damage(when(event().target=attached(),exists_friend(name=Metroplex)))->modify(event().target:=all_chars(name=Metroplex,owner=attached().owner)));instead(on-damage(when(event().damaged=attached(),exists_friend(name=Metroplex)))->modify(event().damaged:=all_chars(name=Metroplex,owner=attached().owner)))"
     },
     {
       "name": "Rally the City",

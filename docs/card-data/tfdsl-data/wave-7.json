@@ -135,9 +135,8 @@
     },
     {
       "name": "Obfuscating Cloud",
-      "comment": "BUG: Safeguard for friends not working yet",
       "tfdsl": {
-        "front": "on-start-game()->(if(confirm())->put_upgrade(pick_deck(name='Smokethrower'),pick_friend(fullname=this().target)));static(safeguard,when(all(all_friends(fullname=this().target).upgrades,name='Smokethrower').count>0),3)"
+        "front": "on-start-game()->(if(confirm())->put_upgrade(pick_deck(name='Smokethrower'),pick_friend(fullname=this().target)));each(all_friends(fullname!=this().target))->static(safeguard,when(all(all_friends(fullname=this().target).upgrades,name='Smokethrower').count>0),3,target=it())"
       }
     },
     {

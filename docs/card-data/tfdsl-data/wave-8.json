@@ -583,9 +583,8 @@
     {
       "name": "Put a Stinger in the Works",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Deploying a named character from outside the game in a specified mode before the game"
+        "front": "on-start-game(when(starting_team(trait!=Constructicon).count=0))->(summon_friend('Scorpulator, Desert Rose');ko(pick_friend(fullname!='Scorpulator, Desert Rose')))"
+      }
     },
     {
       "name": "Queen of the Junkyard",
