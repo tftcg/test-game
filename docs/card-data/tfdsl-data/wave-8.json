@@ -96,8 +96,7 @@
     },
     {
       "name": "Half-Track Trickery",
-      "tfdsl": "",
-      "needs": "Forced flip to a specific mode and conditional follow-up based on a selected character"
+      "tfdsl": "choose(pick_friend());if(chosen().trait=Truck)->flip(pick_enemy(mode=bot || mode=body),alt);if(chosen().trait=Tank)->(if(confirm('Scrap Upgrade?'))->(scrap_upgrade(pick_friendly_upgrade());if(done())->damage(2,pick_enemy())))"
     },
     {
       "name": "Hand of Adaptus",
@@ -256,8 +255,8 @@
     },
     {
       "name": "Recon Reissue",
-      "tfdsl": "",
-      "needs": "Moving a selected Upgrade between characters or putting a qualifying KO Upgrade onto a character"
+      "comment": "TODO: Test",
+      "tfdsl": "reveal(on-friend-defend())->revealed(choose(options('Move an Armor or Utility','Return a Battle Master Armor or Utility from KO'));if(chosen()='Move an Armor or Utility')->(choose(pick_friendly_upgrade(subtype=Armor || subtype=Utility));move_upgrade(chosen(),pick_friend(id!=chosen().attached_to.id)));if(chosen()='Return a Battle Master Armor or Utility from KO')->put_upgrade(pick_friend_ko(trait='Battle Master',subtype=Armor || subtype=Utility),pick_friend()))"
     },
     {
       "name": "Relax With a Cold One!",
@@ -441,7 +440,7 @@
       "comment": "TODO: Test",
       "tfdsl": {
         "front": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Loading Dock',requires(stars<=10),gives(def(1)),text(on-start-game()->enter_station('Loading Dock');static(stealth,when(occupant().tapped=untapped),true,target=occupant())))",
-        "back": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Auto-Launcher Console',requires(stars<=15),gives(atk(1)),text(on(event=enter-station,when(event().station=station()))->(if(event().character.upgrades.subtype=Weapon)->damage(1,pick_enemy()):else->damage(1,opponent_pick(opponent().chars)))))"
+        "back": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Auto-Launcher Console',requires(stars<=15),gives(atk(1)),text(on(event=enter-station,when(event().station=station()))->(if(event().entered.upgrades.subtype=Weapon)->damage(1,pick_enemy()):else->damage(1,opponent_pick(opponent().chars)))))"
       }
     },
     {
@@ -583,7 +582,7 @@
     {
       "name": "Put a Stinger in the Works",
       "tfdsl": {
-        "front": "on-start-game(when(starting_team(trait!=Constructicon).count=0))->(summon_friend('Scorpulator, Desert Rose');ko(pick_friend(fullname!='Scorpulator, Desert Rose')))"
+        "front": "on-start-game(when(starting_team(trait!=Constructicon).count=0))->(summon_friend('Scorpulator, Desert Rose'));on-before-begin-game()->ko(pick_friend(fullname!='Scorpulator, Desert Rose'))"
       }
     },
     {

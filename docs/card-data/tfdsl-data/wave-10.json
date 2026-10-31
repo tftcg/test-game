@@ -244,15 +244,14 @@
       "tfdsl": {
         "alt 1": "on-this-flip()->move(1,this(),pick_enemy())",
         "bot": "on-this-flip()->pierce_eot(3,this())",
-        "alt 2": "static(base_def,all_friends(trait=Boat || trait=Helicopter || trait=Plane).count);station('Flight Deck',requires(stars<=12),gives(def(1)),text(on(event=enter-station,when(event().station=station(),event().character.trait=Helicopter || event().character.trait=Plane))->repair(1,event().character);on(event=leave-station,when(event().station=station(),event().character.trait=Plane))->damage(1,pick_enemy())))"
+        "alt 2": "static(base_def,all_friends(trait=Boat || trait=Helicopter || trait=Plane).count);station('Flight Deck',requires(stars<=12),gives(def(1)),text(on(event=enter-station,when(event().station=station(),event().entered.trait=Helicopter || event().entered.trait=Plane))->repair(1,event().entered);on(event=leave-station,when(event().station=station(),event().left.trait=Plane))->damage(1,pick_enemy())))"
       }
     },
     {
       "name": "Cloudraker, Claustrophobic Sky Fighter",
-      "alt-needs": "Distinguishing and preventing card-caused flips",
-      "altFuture": "no_flip();instead(on-char-move,when(event().move_to=this())->do_nothing())",
+      "comment": "NOTE: You can play Rapid Conversion on Cloudraker, it just won't flip him",
       "tfdsl": {
-        "alt": "",
+        "alt": "instead(on-this-flip(when(event().source!=self()))->do_nothing());instead(on-damage-move(event().move_to=this())->do_nothing())",
         "bot": "static(atk,when(event().attacker=this(),event().attacker.stars>event().defender.stars),event().attacker.stars - event().defender.stars)"
       }
     },

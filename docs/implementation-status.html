@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1262/1514 (83.4%)</p>
+  <p>TFDSL completion: 1267/1514 (83.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>365</td><td>17</td><td>44</td><td>61</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>528</td><td>2</td><td>82</td><td>84</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>367</td><td>15</td><td>44</td><td>59</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>531</td><td>2</td><td>79</td><td>81</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>100</td><td>1</td><td>57</td><td>58</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 331/578 (57.3%)</p>
+  <p>TFDSL completion: 336/578 (58.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>60</td><td>17</td><td>44</td><td>61</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>148</td><td>2</td><td>76</td><td>78</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>62</td><td>15</td><td>44</td><td>59</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>151</td><td>2</td><td>73</td><td>75</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>69</td><td>1</td><td>57</td><td>58</td></tr>
 </tbody>
 </table>
@@ -216,12 +216,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 49/156 (31.4%)</p>
+  <p>TFDSL completion: 51/156 (32.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>7</td><td>4</td><td>20</td><td>24</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>25</td><td>1</td><td>36</td><td>37</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>8</td><td>3</td><td>20</td><td>23</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>26</td><td>1</td><td>35</td><td>36</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>11</td><td>0</td><td>24</td><td>24</td></tr>
 </tbody>
 </table>
@@ -236,7 +236,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>Character</td><td>unimplemented</td><td>0/3</td><td class="comment"></td><td class="comment">alt-needs: Swapping a hand card with a flipped blue Weapon and playing this character&#39;s Upgrade side on KO.<br>upgrade-needs: Detecting defender black flips and replacing this Upgrade leaving the battlefield with moving it to KO.<br>bot-needs: Replacing incoming damage-counter movement with redirect-and-repair and playing this character&#39;s Upgrade side on KO.</td></tr>
 <tr><th scope="row">Axor, Opportunistic Fencer</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Moving a selected Weapon or Armor after another character&#39;s battle and using that character&#39;s Bounty ability.</td></tr>
 <tr><th scope="row">Decepticon Doublecrosser, Shield Brothers</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test both modes</td><td class="comment"></td></tr>
-<tr><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Tracking damage taken and damage-counter movement during the turn for dynamic stats.</td></tr>
+<tr><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test moving damage gives +1/+1</td><td class="comment"></td></tr>
 <tr><th scope="row">Deliberata, Judger and The Judged</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: TAP ability modal choice with top-deck reveal/scrap outcomes and a variable hand-scrap cost.</td></tr>
 <tr><th scope="row">General Ghyrik, Grievous Executioner</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Dynamic enemy-health reduction during the owner&#39;s turn and scaling Bold/Pierce from a target&#39;s Utility battle icons.</td></tr>
 <tr><th scope="row">Gilthor, Chained Amalgamation</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting Tentacles across the battlefield for Bold and selecting an enemy&#39;s specific flip mode.<br>bot-needs: Counting Tentacles for DEF and suppressing black-card Pierce for a battle.</td></tr>
@@ -268,7 +268,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Assuming Control</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Adding a KO character&#39;s ATK to a selected named character and moving this Action to KO.</td></tr>
 <tr><th scope="row">Black Mail</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Checking survival after attack damage and moving damage to another friendly character.</td></tr>
 <tr><th scope="row">Bomb Removal Protocol</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A replacement effect that redirects a variable number of damage counters to an upgrade, with an upgrade counter threshold.</td></tr>
-<tr><th scope="row">CNA-Encoded Armory</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Returning a selected Upgrade from scrap to hand.</td></tr>
 <tr><th scope="row">Demolition Derby</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking a battlefield character-count condition through attack damage and granting an extra attack.</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent attacker selection with a different attacker.</td></tr>
 <tr><th scope="row">Dreadful Feast</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting three same-team characters and moving damage from two sources to a third.</td></tr>
@@ -356,12 +355,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 66/199 (33.2%)</p>
+  <p>TFDSL completion: 68/199 (34.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>9</td><td>10</td><td>23</td><td>33</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>40</td><td>1</td><td>40</td><td>41</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>42</td><td>1</td><td>38</td><td>39</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>9</td><td>0</td><td>32</td><td>32</td></tr>
 </tbody>
 </table>
@@ -418,7 +417,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Everything Must Go!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A delayed attack trigger for a chosen character, post-battle optional scrap, and using an Upgrade stat-box value</td></tr>
 <tr><th scope="row">Explosive Disposal</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking a scrapped opposing Upgrade, moving it to KO, and its stat-box total</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Tracking a revealed Secret Action through battle and replaying it after battle</td></tr>
-<tr><th scope="row">Half-Track Trickery</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Forced flip to a specific mode and conditional follow-up based on a selected character</td></tr>
 <tr><th scope="row">Happy Motoring!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Rolling Action support. Stations and flipping multiple characters to another mode after battle</td></tr>
 <tr><th scope="row">Head Case</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reassigning Titan Master bonuses between characters</td></tr>
 <tr><th scope="row">Head of State</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting battle cards to scrap without icons and scaling temporary stats by that selection</td></tr>
@@ -442,7 +440,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Peas in a Pod!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting another character distinct from an earlier selection with conditional star thresholds</td></tr>
 <tr><th scope="row">Playing Both Sides</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Tracking starting-team conditions and creating a delayed chosen-target trigger with player choice</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping Black Pierce contribution based on the attacker&#39;s base ATK</td></tr>
-<tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Moving a selected Upgrade between characters or putting a qualifying KO Upgrade onto a character</td></tr>
+<tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>todo</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Relax With a Cold One!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A delayed trigger for a chosen character and bulk returning the defender&#39;s Upgrades</td></tr>
 <tr><th scope="row">Riffraff Knick-Knacks</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Additional Upgrade slot capacity and counters on an Upgrade</td></tr>
 <tr><th scope="row">Sitrep Update</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the scrap of a face-down Secret Action</td></tr>
@@ -540,11 +538,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-10</h2>
-  <p>TFDSL completion: 68/71 (95.8%)</p>
+  <p>TFDSL completion: 69/71 (97.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>12</td><td>10</td><td>2</td><td>0</td><td>2</td></tr>
+<tr><th scope="row">Character</th><td>12</td><td>11</td><td>1</td><td>0</td><td>1</td></tr>
 <tr><th scope="row">Battlecard</th><td>28</td><td>28</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><th scope="row">Stratagem</th><td>20</td><td>19</td><td>1</td><td>0</td><td>1</td></tr>
 </tbody>
@@ -554,7 +552,7 @@ thead { background: #f3f4f6; }
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
 <tr><th scope="row">Broadside, Air &amp; Sea Assault</th><td>Character</td><td>todo</td><td>3/3</td><td class="comment">Test</td><td class="comment"></td></tr>
-<tr><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Distinguishing and preventing card-caused flips</td></tr>
+<tr><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">You can play Rapid Conversion on Cloudraker, it just won&#39;t flip him</td><td class="comment"></td></tr>
 <tr><th scope="row">Enemy, Infuriating Infiltrator</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Redirecting damage from opponent card effects to this character</td></tr>
 <tr><th scope="row">Hoist, Methodical Maintenance</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Laserbeak, Impatient Interrogator</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Test alt</td><td class="comment"></td></tr>
@@ -585,7 +583,7 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Unicron, Chaos Bringer</th><td>Character</td><td>todo</td><td>2/2</td><td class="comment">Needs to block flips. It also has stealth and taps because I don&#39;t have a way to stop it being able to attack</td><td class="comment"></td></tr>
+<tr><th scope="row">Unicron, Chaos Bringer</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">It has stealth and taps because I don&#39;t have a way to stop it being able to attack</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>

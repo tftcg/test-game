@@ -214,7 +214,7 @@
       "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->(move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this());if(previous_target(2).icon_count>=2)->damage(2,pick_enemy()))",
-        "bot": "instead(on(event=move-card,when(event().from_zone=opponent().scrap,event().player=opponent()))->modify(event().to_zone:=opponent().ko));instead(on-opponent-play-action(when(event().play_source=opponent().scrap))->move_to(opponent().scrap,event().card));instead(on-opponent-play-upgrade(when(event().play_source=opponent().scrap))->move_to(opponent().scrap,event().played))"
+        "bot": "instead(on(event=move-card,when(event().from_zone=opponent().scrap,event().player=opponent()))->modify(event().to_zone:=opponent().ko));instead(on-opponent-play-action(when(event().played_from=opponent().scrap))->move_to(opponent().scrap,event().card));instead(on-opponent-play-upgrade(when(event().played_from=opponent().scrap))->move_to(opponent().scrap,event().played))"
       }
     },
     {

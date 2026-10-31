@@ -347,7 +347,7 @@
     },
     {
       "name": "Tandem Targeting System",
-      "tfdsl": "on-play-upgrade(when(event().play_source=hand))->(if(confirm())->play(pick_scrap(name='Tandem Targeting System')))"
+      "tfdsl": "on-play-upgrade(when(event().played_from=hand))->(if(confirm())->play(pick_scrap(name='Tandem Targeting System')))"
     },
     {
       "name": "Arcee, Skilled Fighter",
