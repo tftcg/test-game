@@ -5,8 +5,13 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TODO, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1794)</h2>
+<h2>Implemented cards (1799)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
+<tr><td>2026-10-31</td><th scope="row">CNA-Encoded Armory</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>7a87991c8d16</code></td></tr>
+<tr><td>2026-10-31</td><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>wave-6</td><td>Character</td><td>todo</td><td><code>7a87991c8d16</code></td></tr>
+<tr><td>2026-10-31</td><th scope="row">Half-Track Trickery</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>7a87991c8d16</code></td></tr>
+<tr><td>2026-10-31</td><th scope="row">Recon Reissue</th><td>wave-8</td><td>Battlecard</td><td>todo</td><td><code>7a87991c8d16</code></td></tr>
+<tr><td>2026-10-31</td><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>wave-10</td><td>Character</td><td>note</td><td><code>7a87991c8d16</code></td></tr>
 <tr><td>2026-10-30</td><th scope="row">Traffic Checkpoint</th><td>wave-8</td><td>Battlecard</td><td>todo</td><td><code>49c11184b643</code></td></tr>
 <tr><td>2026-10-29</td><th scope="row">Sidecar Artillery</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>eb53413d92fd</code></td></tr>
 <tr><td>2026-10-29</td><th scope="row">Autobot Roller, Scout Drone</th><td>wave-8</td><td>Character</td><td>note</td><td><code>18da59849514</code></td></tr>
@@ -55,7 +60,7 @@
 <tr><td>On or before 2026-10-23</td><th scope="row">Menacing Gaze</th><td>outlier-1</td><td>Battlecard</td><td>complete</td><td><code>2db96c62132a</code></td></tr>
 <tr><td>On or before 2026-10-23</td><th scope="row">Scourge, Decepticon Tracker</th><td>outlier-1</td><td>Character</td><td>complete</td><td><code>2db96c62132a</code></td></tr>
 <tr><td>On or before 2026-10-23</td><th scope="row">Sweeps, Minion</th><td>outlier-1</td><td>Character</td><td>complete</td><td><code>2db96c62132a</code></td></tr>
-<tr><td>On or before 2026-10-23</td><th scope="row">Unicron, Chaos Bringer</th><td>outlier-1</td><td>Character</td><td>todo</td><td><code>2db96c62132a</code></td></tr>
+<tr><td>On or before 2026-10-23</td><th scope="row">Unicron, Chaos Bringer</th><td>outlier-1</td><td>Character</td><td>note</td><td><code>2db96c62132a</code></td></tr>
 <tr><td>On or before 2026-10-23</td><th scope="row">Optimus Prime, Inspiring Leader</th><td>outlier-2</td><td>Character</td><td>complete</td><td><code>2db96c62132a</code></td></tr>
 <tr><td>On or before 2026-10-23</td><th scope="row">Divebomb [B], Predacon Air Support</th><td>outlier-3</td><td>Character</td><td>complete</td><td><code>d87e24a0b576</code></td></tr>
 <tr><td>On or before 2026-10-23</td><th scope="row">Headstrong [B], Predacon Juggernaut</th><td>outlier-3</td><td>Character</td><td>complete</td><td><code>d87e24a0b576</code></td></tr>
@@ -1802,7 +1807,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (571)</h2>
+<h2>No implementation date observed (566)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Alpha Sentinel, Dark Guardian Relic</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Armada, Herald of Shrouds</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
@@ -1810,7 +1815,6 @@
 <tr><th scope="row">Autobot Pipes, Idiosyncratic Collector</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Axor, Opportunistic Fencer</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>wave-6</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Deliberata, Judger and The Judged</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">General Ghyrik, Grievous Executioner</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Gilthor, Chained Amalgamation</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
@@ -1838,7 +1842,6 @@
 <tr><th scope="row">Assuming Control</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Black Mail</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Bomb Removal Protocol</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">CNA-Encoded Armory</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Demolition Derby</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Dreadful Feast</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1931,7 +1934,6 @@
 <tr><th scope="row">Everything Must Go!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Explosive Disposal</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Half-Track Trickery</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Happy Motoring!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Head Case</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Head of State</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1951,7 +1953,6 @@
 <tr><th scope="row">Peas in a Pod!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Playing Both Sides</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Recon Reissue</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Relax With a Cold One!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Riffraff Knick-Knacks</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sitrep Update</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
@@ -1998,7 +1999,6 @@
 <tr><th scope="row">Ghost of Starscream, Annoying Apparition</th><td>wave-9</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Megatron, Bane of Cybertron</th><td>wave-9</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Such Heroic Nonsense</th><td>wave-9</td><td>Stratagem</td><td>unimplemented</td></tr>
-<tr><th scope="row">Cloudraker, Claustrophobic Sky Fighter</th><td>wave-10</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Enemy, Infuriating Infiltrator</th><td>wave-10</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>wave-10</td><td>Stratagem</td><td>partial</td></tr>
 <tr><th scope="row">Divebomb [B]</th><td>outlier-3</td><td>Battlecard</td><td>unimplemented</td></tr>
