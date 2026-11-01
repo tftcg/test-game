@@ -23,37 +23,34 @@
     },
     {
       "name": "Aquatic Maneuvers",
-      "needs": "A revealed Secret Action that persists through the battle to react to later blue battle flips.",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend(when(event().defender.trait=Quintesson || event().defender.trait=Boat || event().defender.trait=Seacon)))->revealed(def_eob(2,event().defender);on(event=after-defend-flip,scope=afb,when(event().flips.blue>0))->pierce_eob(0-event().flips.blue,event().attacker))"
     },
     {
       "name": "Are These Wires Important?",
-      "needs": "Selecting characters by printed base name (Dazzlestrike, Lionizer, Ravage, Steeljaw, or Trypticon) in addition to traits.",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend(when(event().defender.trait=Beast || event().defender.trait=Dinobot || event().defender.trait=Firecon || event().defender.trait=Predacon || event().defender.name='Dazzlestrike' || event().defender.name='Lionizer' || event().defender.name='Ravage' || event().defender.name='Steeljaw' || event().defender.name='Trypticon')))->revealed(scrap_upgrade(all(event().attacker.upgrades,subtype=Utility)))"
     },
     {
       "name": "Armed To The Teeth",
-      "needs": "Allowing any number of Weapon plays in one turn.",
-      "tfdsl": ""
+      "tfdsl": "play(pick(self().hand,type=Upgrade,subtype=Weapon,upto=self().hand.count))"
     },
     {
       "name": "Aspect of Bitterness",
-      "needs": "Detecting an upgrade leaving the battlefield.",
-      "tfdsl": ""
+      "needs": "Detecting this Upgrade leaving the battlefield by a route other than being scrapped.",
+      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on(event=scrap-upgrade,when(event().scrapped=this()))->(choose(pick_friend(faction=Quintesson));atk_eot(2,chosen());def_eot(2,chosen()))"
     },
     {
       "name": "Aspect of Death",
-      "needs": "Counters on an Upgrade and a leave-battlefield trigger.",
-      "tfdsl": ""
+      "needs": "Detecting this Upgrade leaving the battlefield by a route other than being scrapped.",
+      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on-attached-defend()->up_counter(1,this());on(event=scrap-upgrade,when(event().scrapped=this()))->damage(event().scrapped.counter,pick_enemy())"
     },
     {
       "name": "Aspect of Doubt",
-      "needs": "Restricting an upgrade to characters that have a bot mode.",
-      "tfdsl": ""
+      "needs": "Firing this Upgrade's immediate untap and repair effect when it is first attached; the Upgrade's own put listener is installed after the put-upgrade event.",
+      "tfdsl": "put_only(faction=Quintesson,trait=Specialist,mode=bot || other_modes=bot)"
     },
     {
       "name": "Aspect of Laughter",
-      "needs": "Replacing a green-card scrap effect by reducing the amount scrapped.",
+      "needs": "Replacing a multi-card hand-scrap instruction once; scrap-hand currently emits one event per card, so a replacement cannot reduce the original batch size by one.",
       "tfdsl": ""
     },
     {
@@ -62,18 +59,16 @@
     },
     {
       "name": "Assuming Control",
-      "needs": "Adding a KO character's ATK to a selected named character and moving this Action to KO.",
-      "tfdsl": ""
+      "needs": "Retaining the selected KO character's ATK while choosing a different recipient character.",
+      "tfdsl": "choose(pick(self().ko,type=Character));if(confirm('Add its ATK to a character?'))->(choose(pick(all_friends((faction=Quintesson,trait=Specialist,mode=bot) || (faction=Quintesson,trait=Specialist,other_modes=bot) || name='Bombshell' || name='Dr. Arkeville' || name='Megaempress' || name='Mindwipe' || name='Soundblaster' || name='Soundwave' || name='Tarantulas' || name='Trypticon')));atk_eot(previous_target(2).atk,chosen()));move_to(self().ko,this())"
     },
     {
       "name": "Black Mail",
-      "needs": "Checking survival after attack damage and moving damage to another friendly character.",
-      "tfdsl": ""
+      "tfdsl": "on-attached-attack-damaged(when(attached().faction=Mercenary,event().overkill<0))->move(1,attached(),pick_friend(id!=attached().id))"
     },
     {
       "name": "Bomb Removal Protocol",
-      "needs": "A replacement effect that redirects a variable number of damage counters to an upgrade, with an upgrade counter threshold.",
-      "tfdsl": ""
+      "tfdsl": "instead(on-damage-move(when(event().move_to=this(),event().move_from.owner=opponent()))->(up_counter(event().amount,this());if(this().counter>=2)->scrap_upgrade(this())))"
     },
     {
       "name": "CNA-Encoded Armory",
@@ -81,18 +76,16 @@
     },
     {
       "name": "Demolition Derby",
-      "needs": "Tracking a battlefield character-count condition through attack damage and granting an extra attack.",
-      "tfdsl": ""
+      "tfdsl": "if(opponent().chars.count>=self().chars.count*2)->(choose(pick_friend());atk_eot(2,chosen());on(event=attack-damage,scope=eot,when(event().origin.id=chosen().id,event().overkill>=0,opponent().chars.count>=self().chars.count*2))->untap(event().origin))"
     },
     {
       "name": "Discordant Cacophony",
-      "needs": "Replacing opponent attacker selection with a different attacker.",
+      "needs": "Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.",
       "tfdsl": ""
     },
     {
       "name": "Dreadful Feast",
-      "needs": "Selecting three same-team characters and moving damage from two sources to a third.",
-      "tfdsl": ""
+      "needs": "Selecting and retaining three distinct characters on the same team across multiple picks; current previous-target history does not reliably preserve the chosen sources and destination."
     },
     {
       "name": "\"Dutch\"",
@@ -101,7 +94,7 @@
     },
     {
       "name": "Energy Conversion Field",
-      "needs": "Replacing non-attack multi-character damage with all-character repair.",
+      "needs": "Detecting a single non-attack damage instruction's full target set and replacing it with one repair of all characters; char-damage replacements currently see targets individually.",
       "tfdsl": ""
     },
     {
@@ -111,28 +104,25 @@
     },
     {
       "name": "Gift of Innermost Energon",
-      "needs": "Detecting KOs from simultaneous damage and repairing the actual aggregate damage dealt.",
-      "tfdsl": ""
+      "needs": "Detecting which characters were KO'd by this damage instruction and totaling successfully applied damage after any replacements.",
+      "tfdsl": "damage(1,all_friends())"
     },
     {
       "name": "Give Me Your Face",
-      "needs": "A turn-duration Action trigger for enemy Titan Master deployments.",
-      "tfdsl": ""
+      "tfdsl": "on(event=deploy,scope=eot,when(event().deployed.owner=opponent(),event().deployed.trait='Titan Master'))->tap(event().deployed)"
     },
     {
       "name": "Guilty or Innocent",
-      "needs": "Choosing between a base-DEF override and Tough suppression for a selected character.",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend(trait=Sharkticon || trait=Allicon));on(event=char-attack,scope=eot,when(event().attacker.id=chosen().id))->(choose(options('Set DEF to 0','Suppress Tough'));if(chosen()='Set DEF to 0')->base_def_eob(0,event().defender);if(chosen()='Suppress Tough')->no_tough_eob(1,all_enemies()))"
     },
     {
       "name": "Insurance Write-Off",
-      "needs": "Checking and revealing drawn Quintesson cards.",
-      "tfdsl": ""
+      "needs": "Identifying cards drawn by this effect, then conditionally revealing a drawn Quintesson and drawing one more card.",
+      "tfdsl": "put_only(trait=Allicon || trait=Sharkticon);on-attached-ko()->draw(2)"
     },
     {
       "name": "Judicial Discretion",
-      "needs": "Player choice between damage or repair and conditionally repeating that choice.",
-      "tfdsl": ""
+      "tfdsl": "choose(options('Damage','Repair'));if(chosen()='Damage')->damage(1,pick_enemy());if(chosen()='Repair')->repair(1,pick_friend());if(all_friends(trait=Judge || name=Tyrest).count>0)->(choose(options('Damage','Repair'));if(chosen()='Damage')->damage(1,pick_enemy());if(chosen()='Repair')->repair(1,pick_friend()))"
     },
     {
       "name": "Litigious Tentacle",
@@ -140,8 +130,8 @@
     },
     {
       "name": "Loading The Cannon",
-      "needs": "Comparing post-battle attack damage against pre-flip DEF and moving a Secret Action to KO.",
-      "tfdsl": ""
+      "comment": "NOTE: This is not remembering the defence before flipping battle cards. If it earned EOT defence during flipping then that makes this behave wrong",
+      "tfdsl": "reveal(on-friend-defend())->revealed(def_eob(1,event().defender);on(event=char-after-defend,scope=afb,when(event().damage<=event().defender.def))->move_to(self().ko,this()))"
     },
     {
       "name": "Lose The Battle...",
@@ -150,8 +140,7 @@
     },
     {
       "name": "Lost In Transit",
-      "needs": "Replacing a black Action play by scrapping and cancelling it.",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(card.black>=1))))->revealed(scrap_hand(event().card))"
     },
     {
       "name": "Maceration Laser",
@@ -159,8 +148,7 @@
     },
     {
       "name": "Manipulate Time",
-      "needs": "Conditional multicolor and upgrade-icon checks plus attack-damage prevention and mass untap.",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-friend-defend())->revealed(tough_eob(all_friends(faction=Quintesson).count,event().defender);on(event=after-defend-flip,scope=afb,when(event().flips.orange>=1,event().flips.black>=1,event().flips.blue>=1,event().flips.green>=2))->(if(all(event().defender.upgrades,data.icons.orange>=1).count>=1,all(event().defender.upgrades,data.icons.black>=1).count>=1,all(event().defender.upgrades,data.icons.blue>=1).count>=1,all(event().defender.upgrades,data.icons.green>=2).count>=1 || all(event().defender.upgrades,data.icons.green>=1).count>=2)->(instead(on(event=attack-damage,scope=eob)->modify(event().damage:=0));each(all_friends())->untap(it()))))"
     },
     {
       "name": "Masher Mace",
@@ -180,13 +168,11 @@
     },
     {
       "name": "Open Agenda",
-      "needs": "Revealing cards, selecting up to two for hand, and bottom-decking the rest in a chosen order.",
-      "tfdsl": ""
+      "tfdsl": "reveal_cards(top_deck(count=3));move_to(self().hand,pick(previous_target(1),upto=2));reorder_deck(3-previous_target(2).count);put_deck_bottom(self(),top_deck(count=3-previous_target(2).count))"
     },
     {
       "name": "Opportune Protection",
-      "needs": "Replacing damage to split up to three damage counters to another character.",
-      "tfdsl": ""
+      "needs": "A single Secret Action replacement listener that can handle both attack-damage and non-attack char-damage; separate reveal listeners overwrite each other."
     },
     {
       "name": "Photon Charge",
@@ -208,8 +194,7 @@
     },
     {
       "name": "Reroute Enemy Vectors",
-      "needs": "An attack-damage replacement that reduces a selected enemy's damage by half.",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-opponent-start-turn())->revealed(choose(pick_friend());set_flag(scope=eot,this().id + chosen().id + '_protected');choose(pick_enemy());set_flag(scope=eot,this().id + chosen().id + '_attacker');instead(on(event=attack-damage,scope=eot,when(this().owner.flags=this().id + event().target.id + '_protected',this().owner.flags=this().id + event().origin.id + '_attacker'))->modify(event().damage:=(event().damage - event().damage % 2) / 2)))"
     },
     {
       "name": "Scrounging For Energon",
@@ -217,7 +202,7 @@
     },
     {
       "name": "Secret Missive",
-      "needs": "Returning a green Secret Action from scrap to hand.",
+      "needs": "Firing this Upgrade's own on-put effect when first attached; its listener is installed after the put-upgrade event.",
       "tfdsl": ""
     },
     {
@@ -234,17 +219,15 @@
     },
     {
       "name": "Squid Pro Quo",
-      "needs": "Moving a chosen amount of up to two damage counters and boosting from the actual amount moved.",
-      "tfdsl": ""
+      "tfdsl": "choose(pick_friend(faction=Quintesson));choose(range(0,min(2,chosen().damage)));choose(pick_friend(faction=Decepticon));move(previous_target(2),previous_target(1),previous_target(3));atk_eot(previous_target(2),previous_target(3))"
     },
     {
       "name": "Stim Shock",
-      "needs": "Filtering characters by Bold total and modifying that total.",
-      "tfdsl": ""
+      "tfdsl": "reveal(on-enemy-attack())->revealed(damage(1,all_enemies(bold>0));bold_eot(0-3,all_enemies()))"
     },
     {
       "name": "Subcontractor Agreement",
-      "needs": "Using a Bounty ability from another card.",
+      "needs": "Substituting another card's Bounty body during a Bounty invocation; do_bounty currently dispatches only the selected character's bound Bounty bodies.",
       "tfdsl": ""
     },
     {
@@ -253,7 +236,7 @@
     },
     {
       "name": "The Dweller Awakens",
-      "needs": "Choosing between two revealed Secret Action effects.",
+      "needs": "Detecting that an opponent's played Action causes a Secret Action to reveal or trigger; play-action exposes only the Action card and player, not that relationship.",
       "tfdsl": ""
     },
     {
@@ -263,8 +246,7 @@
     },
     {
       "name": "Touch of Quintessa",
-      "needs": "Overkill attack-damage replacement and counting green battle icons flipped by both players.",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.faction=Quintesson,event().damage+event().target.damage>event().target.health))))->revealed(repair(event().atk_flips.green + event().def_flips.green,event().target);move_to(self().ko,this());modify(event().damage:=event().damage))"
     },
     {
       "name": "Turnabout Snare",
@@ -272,8 +254,8 @@
     },
     {
       "name": "Underbase Fragment",
-      "needs": "Returning cards from scrap by a named card or a substring of the card name.",
-      "tfdsl": ""
+      "comment": "NOTE: This matches Superior upgrades on exact names rather than searching the name for a substring",
+      "tfdsl": "put_only(trait=Specialist);on(event=char-tap,when(event().tapped=attached()))->move_to(self().hand,pick_scrap(name='Tech Research' || name='Superior Cannon' || name='Superior Jetpack' || name='Superior Plating' || name='Superior Surveillance'))"
     },
     {
       "name": "United Against Tyranny",
@@ -281,13 +263,12 @@
     },
     {
       "name": "Universal Greeting",
-      "needs": "Making a separate modal choice for each of two selected characters.",
-      "tfdsl": ""
+      "comment": "NOTE: Because it's a simpler order to code, this has you choose Autobot, then option, then the 2nd character and its options",
+      "tfdsl": "choose(pick_friend(faction=Autobot));choose(options('Bold','Pierce','Repair'));if(chosen()='Bold')->bold_eot(1,previous_target(1));if(chosen()='Pierce')->pierce_eot(2,previous_target(1));if(chosen()='Repair')->repair(1,previous_target(1));choose(pick(all_chars(id!=previous_target(1).id,faction=Quintesson || faction=Junkion)));choose(options('Bold','Pierce','Repair'));if(chosen()='Bold')->bold_eot(1,previous_target(3));if(chosen()='Pierce')->pierce_eot(2,previous_target(3));if(chosen()='Repair')->repair(1,previous_target(3))"
     },
     {
       "name": "Unsavory Leftovers",
-      "needs": "Returning a color- and type-filtered Upgrade from scrap to hand.",
-      "tfdsl": ""
+      "tfdsl": "put_only(trait=Allicon || trait=Sharkticon);on-attached-ko()->(if(confirm('Return an orange Weapon or blue Armor?'))->move_to(self().hand,pick(self().scrap,(subtype=Weapon,orange>=1) || (subtype=Armor,blue>=1))))"
     },
     {
       "name": "Vorpal Fangs",
@@ -295,7 +276,7 @@
     },
     {
       "name": "What Lies Beyond",
-      "needs": "Detecting returns from KO and damage-free KOs, then skipping an extra turn.",
+      "needs": "A return-from-KO event, KO cause/damage context to identify qualifying enemy KOs, and a runtime operation/event for skipping an extra turn.",
       "tfdsl": ""
     },
     {

@@ -339,7 +339,6 @@
     },
     {
       "name": "Acid Storm, Toxic Terror",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->repair(all(opponent().scrap,orange>=2).count,this())",
         "bot": "each(all_enemies())->static(no_bold,true,target=it())"
@@ -633,7 +632,6 @@
     },
     {
       "name": "Warpath, Confident Sharpshooter",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->damage(all(opponent().scrap,blue>=2).count,opponent_pick_opponent_char())",
         "bot": "pierce(2);each(all_enemies())->static(no_tough,true,target=it())"

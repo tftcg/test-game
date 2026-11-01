@@ -14,12 +14,11 @@
     {
       "name": "Abrogate",
       "tfdsl": "",
-      "needs": "Revealing a matching card from hand and cancelling and returning a played Action"
+      "needs": "Matching a revealed hand Action against the played Action's battle icons, then cancelling and returning that Action during its play window"
     },
     {
       "name": "Anti-Grav Cell",
-      "tfdsl": "",
-      "needs": "Detecting use of an attached character's TAP ability and scrapping this Upgrade"
+      "tfdsl": "on-attached-tap-ability(when(attached().atk<=3))->(untap(attached());scrap_upgrade(this()))"
     },
     {
       "name": "Armor Axe"
@@ -40,8 +39,7 @@
     },
     {
       "name": "Cooling of Tensions",
-      "tfdsl": "",
-      "needs": "Limiting the number of battle cards each player may flip per battle"
+      "tfdsl": "on(event=char-attack,scope=eot)->max_flips(2)"
     },
     {
       "name": "Custom Junkion Saddle",
@@ -50,13 +48,11 @@
     },
     {
       "name": "Dare to Be Stupid!",
-      "tfdsl": "",
-      "needs": "Secret Action attack-damage replacement setting damage from the target's ATK"
+      "tfdsl": "reveal(instead(on-attack-damage(when(event().target.faction=Junkion,event().target.has_bandit=true))))->revealed(modify(event().damage:=event().target.atk))"
     },
     {
       "name": "Decelerator Laser",
-      "tfdsl": "",
-      "needs": "Granting Bandit to the defender conditionally on the attached attacker's Bandit keyword"
+      "tfdsl": "on(event=defend-flip,when(event().attacker=attached(),attached().faction=Junkion,attached().has_bandit=true),once())->bandit_eob(true,event().defender)"
     },
     {
       "name": "Depower-Linx",
@@ -82,17 +78,17 @@
     {
       "name": "Everything Must Go!",
       "tfdsl": "",
-      "needs": "A delayed attack trigger for a chosen character, post-battle optional scrap, and using an Upgrade stat-box value"
+      "needs": "Binding the selected Junkion to a delayed attack listener, identifying the qualifying attached Weapon, and reading its printed +ATK after battle"
     },
     {
       "name": "Explosive Disposal",
       "tfdsl": "",
-      "needs": "Tracking a scrapped opposing Upgrade, moving it to KO, and its stat-box total"
+      "needs": "Exposing a scrapped Upgrade's printed +ATK and +DEF stat-box values; scrap events already expose the card, its former character, and its cause"
     },
     {
       "name": "Extended Duration Mission",
       "tfdsl": "",
-      "needs": "Rolling Action support. Tracking a revealed Secret Action through battle and replaying it after battle"
+      "needs": "Capturing the exact Secret Action revealed during defense so it can be scrapped and replayed after battle"
     },
     {
       "name": "Half-Track Trickery",
@@ -104,8 +100,8 @@
     },
     {
       "name": "Happy Motoring!",
-      "tfdsl": "",
-      "needs": "Rolling Action support. Stations and flipping multiple characters to another mode after battle"
+      "comment": "NOTE: Doesn't currently flip the two characters at the same time. Perhaps it should",
+      "tfdsl": "scrap(on-friend-after-battle(when(event().battler.in_station,event().battler.faction=Junkion,event().battler.occupied_station.host.faction=Junkion,event().battler.occupied_station.host.trait=Motorcycle)))->when_scrapped(choose(pick_friend(id=event().battler.occupied_station.host.id));flip(event().battler);untap(previous_target());flip(previous_target()))"
     },
     {
       "name": "Head Case",
@@ -114,13 +110,11 @@
     },
     {
       "name": "Head of State",
-      "tfdsl": "",
-      "needs": "Selecting battle cards to scrap without icons and scaling temporary stats by that selection"
+      "tfdsl": "if(attached().faction=Junkion)->(on-attached-battle-flip(when(event().final_intended_flip=true))->(each(pick(event().flips.cards,upto=2))->(scrap_flip(it(),event(),event().battler);atk_eob(1,event().battler);def_eob(1,event().battler))))"
     },
     {
       "name": "High Beam Headlights",
-      "tfdsl": "",
-      "needs": "Player choice between temporary keywords in an attacker-selection window"
+      "tfdsl": "play_only(play_target().trait=Vehicle);on-opponent-attacker-chosen(when(attached().trait=Vehicle))->(choose(options('Brave','Stealth'));if(chosen()='Brave')->brave_eob(true,attached());if(chosen()='Stealth')->stealth_eob(true,attached()))"
     },
     {
       "name": "Hodgepodge Panoply",
@@ -130,12 +124,12 @@
     {
       "name": "Hot Seat",
       "tfdsl": "",
-      "needs": "Rolling Action support. Characters leaving Stations"
+      "needs": "A DSL operation that forces a selected Station occupant to leave; enter/leave events and station occupancy are already available"
     },
     {
       "name": "Hurry Hurry Hurry!",
       "tfdsl": "",
-      "needs": "Enforcing a compulsory additional attacker with prior-attack tracking"
+      "needs": "Verifying that every friendly character is a Junkion or has a Motorcycle mode before installing a mandatory follow-up attack on each enemy attack; follow_up_attack and attacks_this_turn are available"
     },
     {
       "name": "Imminent Breakthrough",
@@ -144,8 +138,8 @@
     },
     {
       "name": "Inexorable Force",
-      "tfdsl": "",
-      "needs": "Immunity to opponent tapping and Oppress"
+      "tfdsl": "static(ignore_oppress,when(attached().trait=Titan || attached().trait=Guardian || attached().stars>=18),true,target=attached())",
+      "needs": "Preventing opponent-caused TAP events; conditional ignore_oppress is supported"
     },
     {
       "name": "Junkyard Turbofox",
@@ -155,7 +149,7 @@
     {
       "name": "Lagartan Spaulders",
       "tfdsl": "",
-      "needs": "Optional replacement effect - i.e. needs modify to only be seen in a replacement effect when evaluated, not when seen"
+      "needs": "The replacement must both scrap a green card and cancel the original Upgrade-scrap event; current instead effects either apply modifications and continue the original event, or cancel without performing the replacement."
     },
     {
       "name": "Lie in Wait",
@@ -168,7 +162,7 @@
     {
       "name": "Me Grimlock Need New Strategy",
       "tfdsl": "",
-      "needs": "Moving named Stratagems between KO, outside the game, and the battlefield with shared targets"
+      "needs": "Moving a named Stratagem from KO or outside the game to the battlefield, then matching and replacing another Stratagem by its shared target"
     },
     {
       "name": "Mirror Response Mode",
@@ -186,8 +180,8 @@
     },
     {
       "name": "Mystical Bond",
-      "tfdsl": "",
-      "needs": "Stations and playing an Upgrade from scrap"
+      "comment": "TODO: Test that playing from scrap doesn't also just pass 'hand' as the play_source",
+      "tfdsl": "on-play-upgrade(when(event().played=this(),event().played_from='hand'))->(if(confirm())->play(pick_scrap(name=this().name)));on-attached-attack(when(attached().in_station,attached().occupied_station.host.trait=Vehicle,all(attached().occupied_station.host.upgrades,name=this().name).count>0))->(repair(1,attached().occupied_station.host);repair(1,attached()))"
     },
     {
       "name": "Ninety Day Warranty!",
@@ -215,8 +209,8 @@
     },
     {
       "name": "Patrol Bolas",
-      "tfdsl": "",
-      "needs": "Stations, counters, and moving an Upgrade to a Station occupant"
+      "comment": "TODO: This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event",
+      "tfdsl": "static(atk,this().counter,target=attached());on(event=enter-station,when(event().station.host=attached(),event().entered.faction=Junkion))->(if(confirm('Move Patrol Bolas to the Station occupant?'))->(move_upgrade(this(),event().entered);up_counter(1,this())))"
     },
     {
       "name": "Patrol the Perimeter",
@@ -224,8 +218,7 @@
     },
     {
       "name": "Peas in a Pod!",
-      "tfdsl": "",
-      "needs": "Selecting another character distinct from an earlier selection with conditional star thresholds"
+      "tfdsl": "choose(pick_enemy(tapped=tapped));if(previous_target(1).count>0)->(untap(previous_target(1));choose(pick_friend(faction=Junkion,tapped=tapped,stars<=10));if(previous_target(2).count>0)->(untap(previous_target(2));if(previous_target(1).stars>=11)->(choose(pick_friend(faction=Junkion,tapped=tapped,stars<=10));if(previous_target(3).count>0)->untap(previous_target(3)))))"
     },
     {
       "name": "Performance Gear Selector",
@@ -237,8 +230,7 @@
     },
     {
       "name": "Playing Both Sides",
-      "tfdsl": "",
-      "needs": "Tracking starting-team conditions and creating a delayed chosen-target trigger with player choice"
+      "tfdsl": "reveal(on-opponent-start-turn(when(starting_team(faction=Mercenary).count>0)))->revealed(choose(pick_enemy());on(event=play-upgrade,scope=eot,when(event().player=opponent(),event().target=chosen()))->(choose(options('Draw a card','Play an Upgrade from your hand'));if(chosen()='Draw a card')->draw(1);if(chosen()='Play an Upgrade from your hand')->play_upgrade(pick_hand(type=Upgrade),event().target)))"
     },
     {
       "name": "Police Action",
@@ -251,7 +243,7 @@
     {
       "name": "Reactive Thrusters",
       "tfdsl": "",
-      "needs": "Capping Black Pierce contribution based on the attacker's base ATK"
+      "needs": "Capping Pierce contributed by black battle icons independently of other Pierce sources, using the attacker's base ATK"
     },
     {
       "name": "Recon Reissue",
@@ -261,7 +253,7 @@
     {
       "name": "Relax With a Cold One!",
       "tfdsl": "",
-      "needs": "A delayed trigger for a chosen character and bulk returning the defender's Upgrades"
+      "needs": "A delayed after-attack listener must retain the selected Junkion target; listener guards reset previous-target history, and it() is not supported in event predicates"
     },
     {
       "name": "Revving Up",
@@ -269,8 +261,7 @@
     },
     {
       "name": "Riffraff Knick-Knacks",
-      "tfdsl": "",
-      "needs": "Additional Upgrade slot capacity and counters on an Upgrade"
+      "tfdsl": "share_slot(3);if(attached().faction=Junkion,all(self().hand,name=this().name).count>0)->(if(confirm())->play(pick_hand(name=this().name)));on-attached-attack-damaged(when(attached().faction=Junkion,event().overkill<0))->(if(confirm())->(repair(1,attached());scrap_upgrade(this())))"
     },
     {
       "name": "Severed Combiner Hand",
@@ -305,8 +296,8 @@
     },
     {
       "name": "Spread Democracy!",
-      "tfdsl": "",
-      "needs": "Rolling Action support. Delayed battle-limited triggers on a specified enemy"
+      "comment": "NOTE: That the text on this card is flat out broken, I've implemented as 'If that enemy is attacking it gets Drifter, if it is defending it gets Bandit",
+      "tfdsl": "scrap(on-friend-battle(when(event().battler.faction=Junkion,event().battler.has_bandit=true || event().battler.has_drifter=true)))->when_scrapped(if(event().other_battler=event().attacker)->drifter_eob(1,event().other_battler);if(event().other_battler=event().defender)->bandit_eob(1,event().other_battler))"
     },
     {
       "name": "Summon the Courage",
@@ -326,13 +317,12 @@
     },
     {
       "name": "Terrorcon Enigma",
-      "tfdsl": "",
-      "needs": "Opponent-controlled flipping and combining characters"
+      "tfdsl": "combine('Abominus, Hellsparked Horror',5,bot,Terrorcon)",
+      "needs": "Opponent-controlled enemy flipping and damage when that flip fails"
     },
     {
       "name": "The Power to Bite",
-      "tfdsl": "",
-      "needs": "Secret Action trigger on lethal attack damage and damage calculated from combat stats"
+      "tfdsl": "reveal(on-friend-attack-damaged(when(event().target.trait=Sharkticon || event().target.trait=Allicon,event().overkill>=0)))->revealed(if(event().target.atk>event().origin.def)->damage(event().target.atk - event().origin.def,event().origin))"
     },
     {
       "name": "Throttle",
@@ -342,7 +332,7 @@
     {
       "name": "Too Short For This Ride",
       "tfdsl": "",
-      "needs": "Characters leaving Stations and temporary Station-entry prevention"
+      "needs": "A DSL operation to force a character out of a Station and a temporary effect that prevents that character from re-entering"
     },
     {
       "name": "Traffic Checkpoint",
@@ -361,13 +351,12 @@
     },
     {
       "name": "Two Foes, Two Fists",
-      "tfdsl": "",
-      "needs": "Rolling Action support. Resolving excess attack damage and selecting a tapped or untapped recipient"
+      "comment": "TODO: Test the 'else put on untapped",
+      "tfdsl": "scrap(on-friend-after-attack(when(event().overkill>0,event().attacker.trait=Titan || event().attacker.trait=Guardian || event().attacker.stars>=18)))->when_scrapped(choose(pick_enemy(tapped=tapped));if(chosen().tapped=tapped)->damage(event().overkill,chosen()):else->(choose(pick_enemy(tapped=untapped));damage(event().overkill,chosen())))"
     },
     {
       "name": "Unfathomable Motives",
-      "tfdsl": "",
-      "needs": "Cancelling a played Action while resolving a Secret Action"
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(event().card.green>=1))))->revealed(move_to(opponent().scrap,event().card))"
     },
     {
       "name": "Untiring Parma Shield"
@@ -378,8 +367,7 @@
     },
     {
       "name": "Well-Worn Armor",
-      "tfdsl": "",
-      "needs": "Counting non-attack damage instances received this turn"
+      "tfdsl": "on-attached-damage()->def_eot(1,attached())"
     },
     {
       "name": "A Very Cross Examination",
