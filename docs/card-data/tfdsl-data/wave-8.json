@@ -374,7 +374,7 @@
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Stations and the Interrogation Console Station effect"
+      "front-needs": "Removing or replacing an already-installed station on the Combat Deck; station installation and entry effects are supported"
     },
     {
       "name": "Alphastrike Counterforce"
@@ -382,10 +382,10 @@
     {
       "name": "Angolmois Infusion",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=put-upgrade,when(event().attached.trait=Terrorcon,event().played.name='Terrorburster Shield'))->up_counter(1,this());on(event=combine,when(event().combiner.fullname=this().target))->(flip(this());down_counter(3,this()))",
+        "back": "on(event=put-upgrade,when(event().attached.fullname=this().target,event().played.name='Terrorburster Shield'))->up_counter(1,this());static(def,this().counter,target=all_friends(fullname=this().target))"
       },
-      "front-needs": "Counters on a Stratagem, main-phase conditional combining, and Stratagem-side flipping",
-      "back-needs": "Counters on a Stratagem and scaling a named character's DEF by those counters"
+      "front-needs": "A main-phase trigger for the optional named combination when the counter threshold and five qualifying Terrorcons are present; counters, named combine detection, and side flipping are implemented"
     },
     {
       "name": "Barrel Rolling",
@@ -396,32 +396,29 @@
     {
       "name": "Blockbuster Moving Trailers",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Stations and counting characters in Stations"
+        "front": "static(bold,when(all_friends(fullname=this().target).mode='bot'),all_friends(in_station,occupied_station.provider.name='Combat Deck').count,target=all_friends(fullname=this().target))"
+      }
     },
     {
       "name": "Boater Suppression",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Starting-team composition checks and Stratagem-side flipping",
-      "back-needs": "Computing a temporary keyword total from character star counts and Stratagem-side flipping"
+        "front": "on-friend-battle(when(starting_team(name='Tidal Wave').count=3))->(if(confirm('Flip this?'))->(flip(this());oppress_eot(max(0,3-all_friends(stars<=4).count),all_friends())))",
+        "back": "on(event=untap-all)->flip(this())"
+      }
     },
     {
       "name": "Cat's Cradle of Contingencies",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "First-turn timing, playing multiple Rolling Actions, and counting the cards played",
-      "back-needs": "Tracking Rolling Actions untapped this turn"
+        "front": "on-start-first-turn()->(choose(range(0,min(3,all(self().hand,subtype='Rolling Action').count)));if(chosen()>0)->(play(pick_hand(subtype='Rolling Action',exact=chosen()));draw(chosen());flip(this())))",
+        "back": "on(event=untap-rolling,when(event().untapped.owner=this().owner,event().untapped.subtype='Rolling Action'))->atk_eot(1,all_friends(fullname=this().target))"
+      }
     },
     {
       "name": "Cherish This World or Perish",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Counters on a Stratagem and combining named characters"
+      "front-needs": "A main-phase timing hook for the threshold-gated combine and an exposed event for a character newly gaining Drifter; counters and named-character combination are supported"
     },
     {
       "name": "Combat Deck",
@@ -436,14 +433,13 @@
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Suppressing the battle effects of selected White icons"
+      "front-needs": "Suppression of White-icon battle effects for a single battle"
     },
     {
       "name": "Extermination Exercise",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Stations and conditional temporary opposing-character stat reductions"
+        "front": "on-friend-attack(when(event().attacker.in_station,event().attacker.occupied_station.provider.name='Combat Deck',shares_faction(event().attacker,event().defender),exists_friend(fullname=this().target)))->(atk_eob(1,event().attacker);def_eob(1,event().attacker);atk_eob(0-1,event().defender);def_eob(0-1,event().defender))"
+      }
     },
     {
       "name": "Four the Selectors!",
@@ -455,81 +451,76 @@
     {
       "name": "Heroic Perseverance",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Conditional attack-damage replacement"
+        "front": "instead(on(event=attack-damage,when(event().target.owner=this().owner,event().target.faction=Autobot,event().target.damage>0,event().target.has_safeguard=true))->modify(event().damage:=max(0,event().damage-1)))"
+      }
     },
     {
       "name": "Ignore the Pain",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Storing damage on a Stratagem and moving it between the Stratagem and a character"
+      "front-needs": "Moving damage counters between a Character and a Stratagem; counters do not represent damage or update Character damage"
     },
     {
       "name": "It's As Good As Used!",
+      "comment": "TODO: one-or-many card, needs a multi-scrap event solution",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Revealing multiple hand cards and allowing an opponent to choose one to play onto a character"
+        "front": "on(event=scrap-upgrade,when(event().cause.owner=opponent(),event().from.owner=this().owner,all_friends(fullname=this().target).count>0,all(self().hand,type=Upgrade).count>=2))->(if(confirm('Reveal Upgrades to replace the scrapped Upgrade?'))->(reveal_cards(pick_hand(type=Upgrade,upto=all(self().hand,type=Upgrade).count));if(previous_target().count>=2)->play_upgrade(opponent_pick(previous_target()),event().from)))"
+      }
     },
     {
       "name": "I've Got Your Back",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Delayed after-battle effects, tracking all-character tapped state, and Stratagem-side flipping"
+        "front": "on(event=char-after-defend,when(event().defender.owner=this().owner,self().starting_team.count=2,all(self().chars,tapped=tapped).count=self().chars.count))->(untap(pick_friend(id!=event().defender.id));flip(this()))"
+      }
     },
     {
       "name": "Kakistocracy",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Main-phase timing, Stations, and tapping or untapping Rolling Actions"
+      "front-needs": "Conditional starting STAR allowance, a main-phase timing hook, and an operation to remove a character from its Station; Rolling Action tap/untap is supported"
     },
     {
       "name": "King of Pain",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Removing text from a character and tracking played Upgrade sides",
-      "back-needs": "Modifying printed card text and named Upgrade text"
+      "front-needs": "Detecting Scorpulator's KO and tracking when both specific Upgrade sides are played",
+      "back-needs": "Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported"
     },
     {
       "name": "Materiel War",
+      "comment": "NOTE: The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Once-per-turn tracking and detecting an opponent-caused scrap of a character with Revenge"
+        "front": "on(event=scrap-upgrade,when(event().cause.owner=opponent(),event().from.owner=this().owner,event().from.faction=Decepticon,event().from.has_revenge=true,this().owner.flags!='materiel_war'))->(set_flag_eot('materiel_war');if(confirm('Scrap an enemy Upgrade?'))->scrap_upgrade(opponent_pick(opponent().upgrades)))"
+      }
     },
     {
       "name": "Me Grimlock Kick Butt!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Named-character attack conditions and Stratagem-side flipping",
-      "back-needs": "Temporary global stat modifiers and Stratagem-side flipping after battle"
+        "front": "on-friend-attack(when(event().attacker.trait=Dinobot,event().defender.damage>0,event().defender.stars>=17,all_friends(fullname=this().target).count>0))->flip(this())",
+        "back": "static(def,1,target=all_friends(trait=Dinobot));static(def,0-1,target=all_enemies(stars>=17));on(event=char-after-attack,when(event().attacker.owner!=this().owner,event().attacker.stars>=17))->flip(this())"
+      }
     },
     {
       "name": "Me Grimlock King!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Replacing printed card text"
+        "front": "replace_dsl(\"pick_friend(trait=Dinobot)\",\"pick_friend((faction=Quintesson,trait=Melee) || fullname='Grimlock, Dinobot Leader')\",all_friends(fullname=this().target),'alt')"
+      }
     },
     {
       "name": "Me Grimlock Mash Brains!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Opponent hand reveal of a count based on a character trait and scrapping a revealed card"
+        "front": "on-friend-attack(when(event().attacker.fullname=this().target,event().defender.trait=Specialist))->(if(opponent().hand.count>0)->(reveal_cards(opponent_pick(opponent().hand,count=min(all_friends(trait=Dinobot).count,opponent().hand.count)));scrap_hand(pick(previous_target()))))"
+      }
     },
     {
       "name": "Me Grimlock Say Execute Them!",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Named-character conditions and temporary enemy HEALTH and DEF reductions"
+      "front-needs": "Temporary HEALTH reduction through end of battle; DEF reductions already support end-of-battle scope"
     },
     {
       "name": "Me Grimlock Want to Munch Metal",
@@ -543,29 +534,26 @@
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Putting a Stratagem onto a character and moving it to KO when that character is KO'd"
+      "front-needs": "Attaching a Stratagem to a Character, granting that host a trait, and moving the attached Stratagem to KO with its host"
     },
     {
       "name": "Old War Stories",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Counters on a Stratagem, tracking weapons played this turn, and playing Weapons onto multiple characters"
+        "front": "on(event=play-upgrade,when(event().player=this().owner,event().played.subtype=Weapon))->set_flag_eot('old_war_stories_weapon');on(event=end-turn,when(event().player=this().owner,this().owner.flags!='old_war_stories_weapon'))->up_counter(1,this());on(event=untap-all,when(this().counter>=self().chars.count,self().chars.count>=2,all_friends(fullname=this().target).count>0))->(if(confirm('Remove story counters to repair your characters?'))->(down_counter(self().chars.count,this());repair(1,self().chars);if(confirm('Play a Weapon on each character?'))->(each(all_friends())->(play_upgrade(pick_hand(subtype=Weapon),it())))))"
+      }
     },
     {
       "name": "Order in the Court",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Detecting use of a TAP ability and Stratagem-side flipping",
-      "back-needs": "Stratagem-side flipping when all characters untap"
+        "front": "on(event=char-tap-ability,when(event().tapped.owner=this().owner))->(if(confirm('Flip this?'))->flip(this()));on(event=char-tap,when(event().tapped.owner=this().owner,event().tapped.faction=Quintesson,event().tapped.trait=Specialist))->(if(confirm('Flip this?'))->flip(this()))",
+        "back": "static(brave,true,target=all_friends(fullname=this().target));on(event=untap-all)->flip(this())"
+      }
     },
     {
       "name": "Prosecutorial Overreach",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Once-per-turn tracking of Tentacle upgrades and playing another Tentacle"
+        "front": "on(event=put-upgrade,when(event().attached.fullname=this().target,event().played.trait=Tentacle,this().owner.flags!='prosecutorial_overreach'))->(set_flag_eot('prosecutorial_overreach');if(confirm('Play another Tentacle?'))->play_upgrade(pick_hand(trait=Tentacle),event().attached))"
+      }
     },
     {
       "name": "Put a Stinger in the Works",
@@ -576,9 +564,8 @@
     {
       "name": "Queen of the Junkyard",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Counters on a Stratagem, deck reshuffle detection, and scaling a named character's ATK by those counters"
+        "front": "on-end-turn(when(self().deck.count+self().scrap.count<=50))->up_counter(1,this());on-reshuffle()->down_counter(this().counter,this());static(atk,when(this().counter>=0),this().counter,target=all_friends(fullname=this().target))"
+      }
     },
     {
       "name": "Scrappy Spotlight"
@@ -586,9 +573,8 @@
     {
       "name": "Slice, Dice, and Julienne!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Detecting an opponent drawing cards during your turn and granting temporary ATK to Road Drones"
+        "front": "on(event=draw,when(event().player=opponent(),this().owner=event().active_player,exists_friend(fullname=this().target)))->atk_eot(1,all_friends(trait='Road Drone'))"
+      }
     },
     {
       "name": "Sonic Doom",
@@ -607,50 +593,49 @@
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Replacing a multi-card deck scrap with a single-card deck scrap"
+      "front-needs": "A replacement window for opponent-caused multi-card scraps from the top of a player's deck"
     },
     {
       "name": "The City's Finest Views",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Granting Stations to a trait and resolving Station-entry effects"
+      "front-needs": "Granting stations to every eligible Titan through per-character station installation; station entry effects are supported"
     },
     {
       "name": "The Great Escape",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Storing damage on a Stratagem and tracking characters KO'd by that Stratagem"
+      "front-needs": "Storing Character damage on a Stratagem and tracking the specific Character KO'd by that stored damage"
     },
     {
       "name": "Third Party Brigade",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Deploying a named character from outside the game in a specified mode and scrapping the first Black battle card without its icons"
+      "front-needs": "Deploying the owned Shockblast from outside the game in a specified mode; battle-flip scrapping without icons is supported"
     },
     {
       "name": "This Shall Be Your Ship",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Tracking multiple listed game events and Stratagem-side flipping",
-      "back-needs": "Returning a qualifying KO character to the battlefield and Stations"
+      "front-needs": "Tracking a same-turn faction-matched Upgrade plus Action, a Leader KO by damage, an all-characters untap, a multi-icon Utility, and an attack with distinct Upgrade types",
+      "back-needs": "Tracking the five qualifying events and installing both Stations on the flipped Stratagem; return-from-KO and station effects are supported"
     },
     {
       "name": "Time for New Leadership",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Tracking a character KO during the opponent's turn and delayed conditional repair"
+        "front": "on-opponent-start-turn(when(exists_friend(fullname=this().target)))->(choose(pick_char());on(event=ko,scope=eot,when(event().ko=chosen()))->repair(3,pick_friend()))"
+      }
     },
     {
       "name": "Writhing in the Deep",
       "tfdsl": {
         "front": ""
       },
-      "front-needs": "Tracking characters KO'd during the previous turn, variable Green-card discards, returning characters from KO, and delayed KO"
+      "front-needs": "Tracking prior-turn KO characters through variable Green-card discards and scheduling delayed KOs for only the Characters returned this way; return-from-KO is supported"
     },
     {
       "name": "Ashtray, Come to Where the Flavor Is!",

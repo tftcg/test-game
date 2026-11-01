@@ -585,7 +585,6 @@
     },
     {
       "name": "Sergeant Soundblaster, Weapons • Arms Dealer",
-      "comment": "TODO: Test",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->(move_upgrade(pick(this().upgrades,subtype=Weapon),pick_friend(id!=previous_target().attached_to.id));atk_eot(1,previous_target())))",
         "bot": "on-this-attack()->(if(confirm())->put_upgrade(pick_scrap(subtype=Weapon,black>=1),this()))"

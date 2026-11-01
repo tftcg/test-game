@@ -291,45 +291,40 @@
     },
     {
       "name": "Brutal Conditioning",
-      "front-needs": "Once-per-game placement of a Stratagem on a damaged character and Stratagem counters.",
-      "back-needs": "Moving a Stratagem to KO when the character it is on is KO'd.",
+      "front-needs": "Attaching a Stratagem to a chosen character, tracking that host for later damage/KO triggers, and enforcing the once-per-game attachment.",
+      "back-needs": "Moving an attached Stratagem to its owner's KO area when its host is KO'd; generic Stratagem counters are supported.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Buried Banquet",
-      "front-needs": "Moving a color-filtered Upgrade from an opponent's scrap pile to their KO area.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-attack(when(event().attacker.fullname=this().target))->(if(confirm('Put a black or green Upgrade into your opponent\\'s KO area?'))->(move_to(opponent().ko,pick(opponent().scrap,type=Upgrade,black>=1 || green>=1));if(done())->repair(1,event().attacker)))"
       }
     },
     {
       "name": "Cantankerous Attitude",
-      "front-needs": "A delayed after-battle optional upgrade scrap followed by damage-counter movement.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-upgraded(when(event().attached.fullname=this().target))->(if(confirm('Scrap an Upgrade from another character?'))->(scrap_upgrade(pick_friendly_upgrade(attached_to.id!=event().attached.id));if(done())->damage(2,pick_enemy())));on-friend-defend(when(event().defender.fullname=this().target))->(on(event=char-after-defend,scope=afb,when(event().defender.fullname='Dinobot Slug, Hot-Headed Warrior'))->(if(confirm('Scrap an Upgrade after battle?'))->(scrap_upgrade(pick(event().defender.upgrades));if(done())->move(1,event().defender,event().attacker))))"
       }
     },
     {
       "name": "Cerebro-Shell Shock",
-      "front-needs": "Limiting the number of battle cards an attacker can flip.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-defend(when(event().defender.fullname=this().target,event().defender.tapped=tapped,event().attacker.damage>0))->max_flips(4,opponent())"
       }
     },
     {
       "name": "Colossal Cannons",
-      "front-needs": "Selecting an enemy that shares any faction with a multi-faction defender after named attack damage.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-attack-damage(when(event().origin.fullname=this().target,event().target.owner=opponent(),event().target.faction=Autobot || event().target.faction=Decepticon,event().target.trait!=Leader,event().damage>0))->damage(1,pick_enemy(shares_faction(candidate(),event().target)))"
       }
     },
     {
       "name": "Dark Regeneration",
-      "front-needs": "Moving any chosen number of damage counters while preventing the destination from being KO'd.",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-first-turn()->(if(exists_friend(fullname=this().target,damage>0),exists_friend(fullname!=this().target))->(choose(pick_friend(fullname=this().target,damage>0));choose(range(0,previous_target(1).damage));move_no_ko(chosen(),previous_target(1),pick_friend(fullname!=this().target))))"
       }
     },
     {
@@ -340,9 +335,9 @@
     },
     {
       "name": "Energon Reclamation",
-      "front-needs": "Fuel counters on a Stratagem and their spend-to-repair effect.",
+      "front-needs": "An activated repair effect available during the main phase; fuel counters, attack-triggered flipping, repair, and Stratagem flipping are supported, but no main-phase Stratagem activation window exists.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-attack-damage(when(event().origin.fullname=this().target,event().origin.mode=bot,event().damage>0))->(up_counter(1,this());on(event=char-after-attack,scope=afb,when(event().attacker.fullname=this().target))->flip(event().attacker,alt))"
       }
     },
     {
@@ -353,9 +348,8 @@
     },
     {
       "name": "Hit Me With That Beat",
-      "front-needs": "Capping attack damage from one attack based on pre-existing damage counters.",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=after-defend-flip,when(event().defender.fullname=this().target,event().defender.mode=alt,event().attacker.has_pierce=true,event().flips.white>=2))->(damage(1,event().defender);instead(on(event=attack-damage,scope=eob,when(event().target.fullname=this().target))->modify(event().damage:=min(event().damage,event().target.damage))))"
       }
     },
     {
@@ -367,35 +361,33 @@
     },
     {
       "name": "Indigestion",
-      "front-needs": "Granting a once-per-game TAP ability that scraps cards from under a character and scales damage from the count.",
+      "front-needs": "Granting a once-per-game TAP ability to a named character, selecting and scrapping its cards-under zone, and scaling damage from the successful scrap count.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Kneel Before Us",
-      "front-needs": "Targeting the character a Head-mode character is on.",
       "tfdsl": {
-        "front": ""
+        "front": "each(all_friends())->static(brave,when(it().head.fullname=this().target),true,target=it())"
       }
     },
     {
       "name": "Localized Tremors",
-      "front-needs": "Counting simultaneous enemy untaps and comparing their DEF with a named character.",
+      "front-needs": "Counting enemies that untap in the same batch to trigger a single opponent-selected Upgrade scrap; per-character untap events do not expose the batch count or prior tapped state.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Magnetic Boomerang",
-      "front-needs": "Detecting an opponent card scrapping an Upgrade from a named character and returning that Upgrade to hand.",
       "tfdsl": {
-        "front": ""
+        "front": "instead(on(event=scrap-upgrade,when(event().from.fullname=this().target,event().from.mode=alt,event().cause.owner=opponent()))->return_upgrade(event().scrapped))"
       }
     },
     {
       "name": "Mass Displacement Drive",
-      "front-needs": "Temporarily modifying a character's STAR value while it is in a specified mode.",
+      "front-needs": "Overriding a character's STAR value by mode; STAR is currently a printed/deck-building value, not a modifiable static property.",
       "tfdsl": {
         "front": ""
       }
@@ -412,22 +404,22 @@
     },
     {
       "name": "Pit of Judgement",
-      "front-needs": "Initializing and spending Stratagem counters, then returning a character from KO to the battlefield.",
+      "front-needs": "Activating the repair-and-return effect during the main phase; the engine has no main-phase Stratagem activation window. Counter initialization and return_from_ko are supported.",
       "tfdsl": {
-        "front": ""
+        "front": "on-start-game()->up_counter(starting_team(faction=Quintesson).count,this())"
       }
     },
     {
       "name": "Quite A Haul",
-      "front-needs": "Using a Mercenary's Bounty ability after it KOs an enemy with attack damage.",
+      "front-needs": "No additional DSL is required for the printed effect: Game already invokes a character's Bounty after an attack-damage KO. Confirm whether the Stratagem is intended to provide an extra Bounty invocation.",
       "tfdsl": {
         "front": ""
       }
     },
     {
       "name": "Sound The Alarm",
-      "front-needs": "Flipping a Stratagem, adding its stats to a chosen character, and returning cards from scrap by text.",
-      "back-needs": "Moving a Stratagem to KO when the character it is on is KO'd.",
+      "front-needs": "Attaching a Stratagem to a chosen character and adding its printed stats to that host; scrap search by arbitrary text is also unsupported.",
+      "back-needs": "Moving an attached Stratagem to its owner's KO area when its host is KO'd.",
       "tfdsl": {
         "front": ""
       }
@@ -437,16 +429,16 @@
     },
     {
       "name": "Stuck On You",
-      "front-needs": "Adding an Armor slot and playing an Armor from scrap or KO once per game.",
+      "front-needs": "Playing an Armor directly from scrap or KO once per game, as though it were in hand; the conditional extra Armor slot is implemented.",
       "tfdsl": {
-        "front": ""
+        "front": "if(starting_team().count=2)->add_slot('Armor',1,all_friends())"
       }
     },
     {
       "name": "The Last Line of Defense",
-      "front-needs": "Adding a Utility slot to a named character.",
+      "comment": "TODO: This has a one-or-more that needs to be handled better. The eot shouldn't be here",
       "tfdsl": {
-        "front": ""
+        "front": "static(brave,true,target=all_friends(fullname=this().target));add_slot('Utility',1,all_friends(fullname=this().target));on(event=char-untap,when(event().untapped.owner=opponent(),exists_friend(fullname=this().target),self().flags!='last_line_used',exists_card(self().hand),exists_friend(damage>=1)))->(if(confirm('Scrap a card to move 1 damage counter?'))->(scrap_hand(pick_hand());if(done())->(set_flag(scope=eot,'last_line_used');move(1,pick_friend(damage>=1),pick_enemy()))))"
       }
     },
     {
@@ -454,15 +446,16 @@
     },
     {
       "name": "Thermal Reciprocation",
-      "front-needs": "Thermal counters on a Stratagem and spending a chosen number to deal matching damage.",
-      "back-needs": "Thermal counters on a Stratagem and spending a chosen number to deal matching damage.",
+      "comment": "NOTE: The ko listener won't work until Battlemasters are firing a Play Upgrade event",
+      "front-needs": "Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=char-damage,when(event().damaged.fullname=this().target,event().origin.owner=opponent()))->up_counter(1,this());on(event=attack-damage,when(event().target.fullname=this().target,event().origin.owner=opponent()))->up_counter(1,this());on(event=ko,when(event().ko.fullname=this().target))->(on(event=play-upgrade,when(event().played.fullname=this().target))->flip(this()))",
+        "back": "on-friend-attack-damage(when(event().origin.upgrades.fullname=this().target,event().origin.upgrades.mode=upgrade,event().damage>0))->(if(this().counter>0)->(if(confirm('Remove thermal counters to damage the defender?'))->(choose(range(1,this().counter));down_counter(chosen(),this());damage(chosen(),event().target))))"
       }
     },
     {
       "name": "Third Party Brigade",
-      "front-needs": "Deploying a named character from outside the game and scrapping the first black battle card without using its icons.",
+      "front-needs": "Deploying a named character from outside the game; the attack-flip trigger can be expressed, but the game has no sideboard/out-of-game zone and no effect for scrapping a flipped card before using its icons.",
       "tfdsl": {
         "front": ""
       }
@@ -483,10 +476,8 @@
     },
     {
       "name": "Up In Smoke",
-      "begin": "on-start-game()->(if(confirm())->move_to(self().hand,pick_deck(name='Smoke Cloak')))",
-      "front-needs": "Searching the deck before the game and counting named upgrades for a dynamic Pierce value.",
       "tfdsl": {
-        "front": ""
+        "front": "on-before-begin-game()->(if(all(self().deck,name='Smoke Cloak').count>0)->(if(confirm('Search for Smoke Cloak?'))->(choose(pick(self().deck,name='Smoke Cloak'));reveal_cards(chosen());move_to(self().hand,chosen()))));each(all_friends(fullname='Decepticon Exhaust, Consumptive Condottiere'))->static(pierce,2*all(it().upgrades,name='Smoke Cloak' || name='Smokethrower').count,target=it())"
       }
     },
     {
@@ -498,17 +489,15 @@
     },
     {
       "name": "Off-Road Cycle",
-      "front-needs": "Fence counters on a Stratagem and flipping it at a counter threshold.",
-      "back-needs": "Returning a named Weapon from scrap to hand when an Action Master takes a Station.",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=scrap-upgrade,when(event().from.fullname=this().target))->(up_counter(1,this());if(this().counter>=2)->(if(confirm('Flip Off-Road Cycle?'))->flip(this())))",
+        "back": "station('Turbo Saddle',requires(stars<=12),gives(atk(1),health(1),trait(Motorcycle)),text(on(event=enter-station,when(event().station=station(),event().entered.trait='Action Master'))->move_to(self().hand,pick_scrap(name='Sidecar Artillery'))))"
       }
     },
     {
       "name": "Verdant Aegis",
-      "front-needs": "Capping damage from a single attack based on an Upgrade color-count condition.",
       "tfdsl": {
-        "front": ""
+        "front": "instead(on(event=attack-damage,when(event().target.fullname=this().target,event().target.mode=bot,all(event().target.upgrades,green>=1).count>=3))->modify(event().damage:=min(4,event().damage)))"
       }
     },
     {
