@@ -679,20 +679,17 @@
     {
       "name": "Bug Bite, The Renegade Who Had It Made",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Returning an Upgrade from scrap based on shared battle-icon colors and card types",
-      "bot-needs": "Attack-damage lethal detection, Bounty resolution, and conditional effects based on an opponent-selected hand card"
+        "alt": "on-this-flip()->(if(confirm('Scrap an Upgrade from your hand to return an unrelated Upgrade?'))->(scrap_hand(pick_hand(type=Upgrade));if(done())->move_to(self().hand,pick_scrap(type=Upgrade,subtype!=previous_target().subtype,(orange=0 || previous_target().orange=0),(blue=0 || previous_target().blue=0),(white=0 || previous_target().white=0),(black=0 || previous_target().black=0),(green=0 || previous_target().green=0)))))",
+        "bot": "bounty((choose(opponent_pick(opponent().hand));scrap_hand(previous_target());if(done())->(if(previous_target().type=Action)->repair(1,pick_friend());if(previous_target().type=Upgrade)->damage(1,pick_enemy()))))"
+      }
     },
     {
       "name": "Clench, Colossus of Obliteration",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "tough(2)",
+        "bot": "oppress(2);on-this-attack()->(scrap_hand(pick_hand(upto=3));if(done())->atk_eot(previous_target().count,this()))"
       },
-      "alt-needs": "Scrapping a battle card without its icons and choosing an icon color to calculate damage",
-      "bot-needs": "Optional variable hand scrapping and scaling a temporary stat by the number scrapped"
+      "alt-needs": "Scrapping a battle card without its icons and choosing an icon color to calculate damage"
     },
     {
       "name": "Crasher, Fractious Fanatic",
@@ -714,11 +711,11 @@
     {
       "name": "Detritus, Now With Sleek, Sexy Handling!",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(pierce,1,target=all_friends(trait='Road Drone'))",
         "bot": ""
       },
-      "alt-needs": "Deploying a uniquely named character from outside the game",
-      "bot-needs": "Playing an Upgrade followed by combining a dynamically qualified group"
+      "alt-needs": "Deploying a uniquely named Road Drone from outside the game in alt mode tapped when Detritus battles",
+      "bot-needs": "After playing an Upgrade on flip, checking for four distinct Road Drones across the battlefield and KO area and combining them with Detritus"
     },
     {
       "name": "Gilthor, Wounded Retribution",
@@ -726,8 +723,8 @@
         "alt": "",
         "bot": ""
       },
-      "alt-needs": "Per-turn tracking of characters taking non-attack damage",
-      "bot-needs": "Reading stat-box values of an Upgrade when it is scrapped"
+      "alt-needs": "Counting distinct friendly characters that took non-attack damage during this turn",
+      "bot-needs": "Reading an Upgrade's printed +ATK/+DEF stat-box values from its scrap event and granting that amount until end of turn"
     },
     {
       "name": "Greasestain, No Muss! No Fuss!",
@@ -748,9 +745,9 @@
     {
       "name": "Junker Drone",
       "tfdsl": {
-        "alt": ""
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->scrap_upgrade(pick_friendly_upgrade());on(event=scrap-upgrade,when(event().cause=this(),event().scrapped.owner=this().owner))->repair(2,event().from)"
       },
-      "alt-needs": "Suppressing character KO triggers and detecting return to the battlefield"
+      "alt-needs": "Triggering its deploy effect when returned from the KO area"
     },
     {
       "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
@@ -773,17 +770,15 @@
     {
       "name": "Lord Kledji, Royal Ruler of Quintessa",
       "tfdsl": {
-        "bot": ""
-      },
-      "bot-needs": "TAP ability choices that discard a Green card as a cost and affect Rolling Actions or enemy Upgrades"
+        "bot": "tap_ability(scrap_hand(pick_hand(green>=1)))->(choose(options('Draw 2','Move up to 2 damage','Scrap an enemy Upgrade'));if(chosen()='Draw 2')->draw(2);if(chosen()='Move up to 2 damage')->move(2,pick_char(damage>0),pick_char(id!=previous_target().id));if(chosen()='Scrap an enemy Upgrade')->scrap_upgrade(pick_enemy_upgrade()))"
+      }
     },
     {
       "name": "Loudmouth, Incendiary Control",
       "tfdsl": {
-        "alt": "",
+        "alt": "on(event=scrap-upgrade,when(event().scrapped.owner=this().owner,self().flags!=this().id+'_loudmouth_used'))->(if(confirm('Put this Upgrade into your KO area?'))->(move_to(self().ko,event().scrapped);if(done())->(set_flag_eot(this().id+'_loudmouth_used');move_to(self().hand,pick_scrap(name=event().scrapped.name)))))",
         "body": ""
       },
-      "alt-needs": "Moving scrapped cards to KO and returning a same-named Upgrade from scrap",
       "body-needs": "Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap"
     },
     {
@@ -796,25 +791,22 @@
     {
       "name": "Muck Sergeant Peck, Brackish Chain-Breaker",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Triggering after qualifying attack damage and playing a Rolling Action",
-      "bot-needs": "Moving damage between characters while preventing either from being KO'd"
+        "alt": "static(health,2,target=all_friends(faction=Quintesson,trait=Sharkticon,stars=4));on(event=attack-damage,when(event().target.owner=this().owner,event().damage>0,event().target.trait=Sharkticon || event().target.trait=Allicon))->(if(confirm('Play a Rolling Action?'))->play(pick_hand(subtype='Rolling Action')))",
+        "bot": "static(health,2,target=all_friends(faction=Quintesson,trait=Sharkticon,stars=4));on-friend-attack-damage(when(event().origin.id!=this().id,event().damage>0,event().origin.trait=Sharkticon || event().origin.trait=Allicon))->(if(confirm('Move up to 2 damage between this and the attacker?'))->(choose(options('This to attacker','Attacker to this'));if(chosen()='This to attacker')->(choose(range(0,2));move_no_ko(chosen(),this(),event().origin));if(chosen()='Attacker to this')->(choose(range(0,2));move_no_ko(chosen(),event().origin,this()))))"
+      }
     },
     {
       "name": "Q-PTP Aculear Scope",
       "tfdsl": {
         "upgrade": ""
       },
-      "upgrade-needs": "Assembling paired cards, additional Weapon slot capacity, and replacing a leave-play event with a move to KO"
+      "upgrade-needs": "Allowing another weapon in attached's slot but only if it has only 1 weapon slot"
     },
     {
       "name": "Q-RTR Arachnoid Array",
       "tfdsl": {
-        "upgrade": ""
-      },
-      "upgrade-needs": "Assembling paired cards, Revenge relocation, and replacing a leave-play event with a move to KO"
+        "upgrade": "static(brave,when(attached().tapped=tapped),true,target=attached());revenge(if(attached().trait=Constructicon)->(if(confirm('Move Q-RTR Arachnoid Array?'))->move_upgrade(this(),pick_friend(id!=attached().id))))"
+      }
     },
     {
       "name": "Quig",
@@ -845,28 +837,27 @@
     {
       "name": "Scrapper Drone",
       "tfdsl": {
-        "alt": ""
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->scrap_upgrade(opponent_pick(opponent().upgrades))"
       },
-      "alt-needs": "Suppressing character KO triggers and detecting return to the battlefield"
+      "alt-needs": "Triggering its deploy effect when returned from the KO area"
     },
     {
       "name": "Sentinel Prime, Legacy of the Primes",
       "tfdsl": {
-        "alt 1": "",
+        "alt 1": "static(oppress,when(this().oppress>0),1,target=all_friends(id!=this().id))",
         "alt 2": "",
         "body": ""
       },
-      "alt 1-needs": "Granting a keyword to other characters conditionally on this character's keyword",
-      "alt 2-needs": "Increasing this character's keyword total conditionally on that keyword",
+      "alt 2-needs": "Checking this character's Oppress without the conditional static grant satisfying its own condition",
       "body-needs": "Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities"
     },
     {
       "name": "Sideswipe, Covert Clone",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(atk,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),2);static(pierce,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),1)",
         "bot": ""
       },
-      "alt-needs": "Conditional attacker keyword checks and replacing an Upgrade scrap with a different Upgrade",
+      "alt-needs": "Replacing an opponent-caused Upgrade scrap with a different Upgrade",
       "bot-needs": "Finding the highest stat-box values among filtered KO Upgrades"
     },
     {
@@ -889,10 +880,9 @@
       "name": "Soundbarrier, Grudging Foot Soldier Support",
       "tfdsl": {
         "bot": "",
-        "upgrade": ""
+        "upgrade": "on(event=start-turn)->tough_eot(2,attached())"
       },
-      "bot-needs": "Capping a Black icon's Pierce contribution",
-      "upgrade-needs": "Replacing a leave-play event with a move to KO"
+      "bot-needs": "Capping a Black icon's Pierce contribution"
     },
     {
       "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
@@ -924,27 +914,24 @@
     {
       "name": "Terrorcon Hun-Gurrr, Eaters Digest",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Player choice between damage and conditional repair after self-damage",
-      "bot-needs": "Discarding a card as a cost and scaling temporary DEF by Orange flips with a cap"
+        "alt": "on-this-flip()->(if(exists_friend(id!=this().id))->(damage(1,pick_friend(id!=this().id));if(done())->(choose(options('Damage','Repair'));if(chosen()='Damage')->damage(1,pick_enemy());if(chosen()='Repair')->repair(2,pick_friend(trait=Terrorcon,id!=this().id,id!=previous_target(2).id)))))",
+        "bot": "on-start-turn()->(if(confirm('Scrap a card to draw a card?'))->(scrap_hand(pick_hand());if(done())->draw(1)));on-this-after-defend-flip(when(all(this().upgrades).count>=1,event().flips.orange>=1))->def_eob(min(event().flips.orange,5),this())"
+      }
     },
     {
       "name": "Terrorcon Rippersnapper, Tooth and Nail",
+      "comment": "BUG: This doesn't let you tap an already tapped 6 star or fewer character, and thus do 1 damage if it has stealth",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Simultaneously tapping this character and an enemy, followed by a conditional keyword check",
-      "bot-needs": "Checking defender Tough and counting Actions and Upgrades played this turn"
+        "alt": "on-this-flip(when(this().tapped=untapped))->(if(confirm('Tap this and an enemy with 6 Stars or fewer?'))->(choose(pick_enemy(stars<=6));if(previous_target().has_stealth=true)->(tap(previous_target());tap(this());damage(1,previous_target())):else->(tap(previous_target());tap(this()))))",
+        "bot": "on-this-attack(when(event().defender.has_tough=false))->def_eob(0 - all(self().played,type=Action).count - all(self().played,type=Upgrade).count,event().defender)"
+      }
     },
     {
       "name": "Trasher Drone",
       "tfdsl": {
-        "alt": ""
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->move_to(opponent().ko,pick_opponent_scrap(type=Upgrade,stars=0))"
       },
-      "alt-needs": "Suppressing character KO triggers, detecting return to the battlefield, and moving a filtered opponent-scrap Upgrade to KO"
+      "alt-needs": "Triggering its deploy effect when returned from the KO area"
     },
     {
       "name": "Tread Bolt, Devil of the Deep Blue Sky",
@@ -956,33 +943,30 @@
     {
       "name": "Waster Drone",
       "tfdsl": {
-        "alt": ""
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->(choose(pick_enemy());choose(pick_enemy_upgrade(attached_to.id=chosen().id));move_upgrade(chosen(),pick_enemy(id!=previous_target(2).id)))"
       },
-      "alt-needs": "Suppressing character KO triggers, detecting return to the battlefield, and moving an Upgrade between distinct enemies"
+      "alt-needs": "Triggering its deploy effect when returned from the KO area"
     },
     {
       "name": "Wreck-Gar, The Big Cheese! Now With More Cheese!",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Other-character targeting and Stations",
-      "bot-needs": "Checking an attached Upgrade's keyword and applying conditional stats"
+        "alt": "static(health,1,target=all_friends(faction=Autobot || faction=Junkion,id!=this().id));static(bold,when(exists_card(this().upgrades,contains_dsl='bold(') || exists_card(this().upgrades,contains_dsl='tough(')),1);static(tough,when(exists_card(this().upgrades,contains_dsl='bold(') || exists_card(this().upgrades,contains_dsl='tough(')),1);station('The Big Chair',requires(stars<=11,mode=bot),gives(trait(Motorcycle)),text(on(event=char-battle,when(event().battler=occupant()))->(if(exists_card(all_friendly_upgrades(attached_to.id!=event().battler.id,shares_faction(candidate(),event().battler))))->(if(confirm('Move a matching Upgrade?'))->move_upgrade(pick_friendly_upgrade(attached_to.id!=event().battler.id,shares_faction(candidate(),event().battler)),event().battler)))))",
+        "bot": "static(health,1,target=all_friends(faction=Autobot || faction=Junkion,id!=this().id));static(bandit,when(exists_card(this().upgrades,contains_dsl='bandit(')),true);static(def,when(exists_card(this().upgrades,contains_dsl='bandit(')),1);static(drifter,when(exists_card(this().upgrades,contains_dsl='drifter(')),true);static(atk,when(exists_card(this().upgrades,contains_dsl='drifter(')),1)"
+      }
     },
     {
       "name": "Abominus, Hellsparked Horror",
-      "combinerFuture": "static(bold,when(all(this().upgrades).count>0),unique(this().upgrades.subtype).count);static(tough,when(all(this().upgrades).count>0),unique(this().upgrades.subtype).count);on-this-combine()->(if(confirm('Flip All enemies?'))->(if())",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "static(bold,unique(this().upgrades.subtype).count);static(pierce,unique(this().upgrades.subtype).count)"
       },
-      "combiner-needs": "Counting distinct Upgrade types and opponent-controlled character flipping"
+      "combiner-needs": "Flipping opponent-controlled characters and damaging those that cannot flip"
     },
     {
       "name": "Roadmaster Prime Mode, Master of Chaos",
+      "comment": "TODO: Test if the game is lost while it tries to deploy its drones out",
       "tfdsl": {
-        "combiner": ""
-      },
-      "combiner-needs": "Per-player hand scrapping and draws based on the other player's scrapped-card count, plus deployment of combined characters on KO"
+        "combiner": "on-this-combine()->(choose(all(self().hand));scrap_hand(previous_target(1));choose(all(opponent().hand));scrap_hand(previous_target(2));draw(previous_target(2).count,self());draw(previous_target(1).count,opponent()));on-this-ko()->repeat(this().upgrades.count)->(choose(pick_under_this(trait=Road Drone));deploy(this(),chosen(),alt))"
+      }
     },
     {
       "name": "Scorpulator, Desert Rose",
@@ -993,9 +977,9 @@
     {
       "name": "Thunder Guts Gilthor, The One Who Claps",
       "tfdsl": {
-        "combiner": ""
+        "combiner": "pierce(4);on-this-attack-damage(when(event().damage%2=1))->damage(1,all_enemies());on-this-combine()->repair(10,pick_friend(id!=this().id));station('Annihilator Cannon',requires(stars<=8,mode=bot),gives(atk(2),def(1),trait(Tank)),text(on(event=char-attack,when(event().attacker=occupant()))->(move(1,occupant(),event().defender);move(1,host(),event().defender))))"
       },
-      "combiner-needs": "Odd attack-damage detection and Stations"
+      "combiner-needs": "Moving a damage counter from the attacker and the station host to the defender without making an undamaged source invalid"
     }
   ]
 }

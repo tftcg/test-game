@@ -527,19 +527,16 @@
     },
     {
       "name": "Alpha Sentinel, Dark Guardian Relic",
-      "alt-needs": "Checking that all untapped enemies meet a STAR threshold and scaling DEF from other characters.",
-      "bot-needs": "Choosing between two after-attack-damage effects, each contingent on self-damage.",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on(event=start-turn,when(all_enemies(tapped=untapped,stars<10).count=0))->def_eot(all_friends().count-1,all_friends())",
+        "bot": "on-friend-attack-damaged(when(event().damage>=1))->(choose(options('Damage','Repair'));if(chosen()='Damage')->(if(confirm())->(damage(1,this());damage(1,event().origin)));if(chosen()='Repair')->(if(confirm())->(damage(1,this());repair(1,pick_friend(id!=this().id)))))"
       }
     },
     {
       "name": "Armada, Herald of Shrouds",
-      "alt-needs": "Scaling multiple stats from untapped trait-filtered characters.",
       "bot-needs": "Detecting TAP ability use and single-character opponent untaps, then selecting a matching-STAR character to untap and flipping this character.",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=tapped),true);static(atk,all_friends(trait=Spaceship,tapped=untapped).count);static(def,all_friends(trait=Spaceship,tapped=untapped).count)",
         "bot": ""
       }
     },
@@ -564,11 +561,10 @@
     {
       "name": "Autobot Powerglide, Haughty Show-Off",
       "alt-needs": "Swapping a hand card with a flipped blue Weapon and playing this character's Upgrade side on KO.",
-      "upgrade-needs": "Detecting defender black flips and replacing this Upgrade leaving the battlefield with moving it to KO.",
       "bot-needs": "Replacing incoming damage-counter movement with redirect-and-repair and playing this character's Upgrade side on KO.",
       "tfdsl": {
         "alt": "",
-        "upgrade": "",
+        "upgrade": "on(event=after-defend-flip,when(event().attacker=attached(),event().flips.black>=2))->pierce_eob(this().base_atk,attached())",
         "bot": ""
       }
     },
@@ -649,19 +645,17 @@
     {
       "name": "Mind Control Collar",
       "head-needs": "Choosing one of three temporary battle abilities.",
-      "bot-needs": "KOing this deployed character without causing other character abilities to trigger.",
       "tfdsl": {
         "head": "",
-        "bot": ""
+        "bot": "on-deploy()->ko(this());suppress_triggers(event=ko,controller=self(),when(event().ko=this()))"
       }
     },
     {
       "name": "Mind Control Helmet",
       "head-needs": "Choosing between two temporary battle abilities or Plan.",
-      "bot-needs": "KOing this deployed character without causing other character abilities to trigger.",
       "tfdsl": {
         "head": "",
-        "bot": ""
+        "bot": "on-deploy()->ko(this());suppress_triggers(event=ko,controller=self(),when(event().ko=this()))"
       }
     },
     {
@@ -699,29 +693,24 @@
     },
     {
       "name": "Savage Wheelie, Rhymer Climber",
-      "alt-needs": "Searching the deck before the game and scaling an attack reduction by the minimum orange icons each player flipped.",
-      "bot-needs": "Scaling a DEF reduction by the minimum blue icons each player flipped.",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-start-game()->(if(confirm('Move Energon Slingshot to Hand?'))->move_to(self().hand,pick_deck(name='Energon Slingshot')));on-this-after-defend-flip(when(event().atk_flips.orange>=1,event().flips.orange>=1))->atk_eob(0-min(event().atk_flips.orange,event().flips.orange),event().attacker)",
+        "bot": "on-this-after-defend-flip(when(event().atk_flips.blue>=1,event().flips.blue>=1))->def_eob(0-min(event().atk_flips.blue,event().flips.blue),event().defender)"
       }
     },
     {
       "name": "Sharkticon Biter, Brazen Berserker",
-      "alt-needs": "Granting an additional attack to another Sharkticon after a multicolor flip.",
       "bot-needs": "Detecting a character returning from KO to the battlefield.",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-attack()->plan(1);on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.green>=1))->extra_attack(attackers=all_friends(trait=Sharkticon,id!=this().id),required=false)",
         "bot": ""
       }
     },
     {
       "name": "Sharkticon Chomp, Craving Carnivore",
-      "alt-needs": "Restricting a selected untap target to a character that has a bot mode.",
-      "bot-needs": "Playing a green Upgrade from hand on flipping to this mode.",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "focus(1);on-this-after-attack-flip(when(event().flips.black>=1,event().flips.green>=1))->(if(confirm('Untap a Quintesson Specialist?'))->untap(pick_friend((faction=Quintesson,trait=Specialist,modes=bot))))",
+        "bot": "on-this-flip()->(if(confirm())->play_upgrade(pick_hand(green>=1)))"
       }
     },
     {
@@ -753,19 +742,17 @@
     },
     {
       "name": "Slitherfang, Poisonous Protection",
-      "upgrade-needs": "Replacing this Upgrade leaving the battlefield with moving it to KO.",
       "tfdsl": {
         "bot": "on-this-after-attack()->damage(1,event().defender)",
-        "upgrade": ""
+        "upgrade": "on-start-turn(when(attached().faction!=Quintesson))->damage(1,attached());on-attached-defend()->(on(event=char-after-defend,scope=afb)->damage(1,event().attacker))"
       }
     },
     {
       "name": "Tow-Line, Signals Engineer",
-      "alt-needs": "Tracking the first Action played each turn.",
-      "bot-needs": "Returning a face-up Action from the played area to hand.",
+      "comment": "TODO: Test this with various actions - does it hurt for them to vanish from the action area and nullify any lingering EOT abilities they provide?",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-play-action(when(all(self().played,type=Action).count=1))->plan(1)",
+        "bot": "on-this-after-battle-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->(on-this-after-battle(scope=afb)->(if(confirm())->move_to(self().hand,pick(self().actions,type=Action))))"
       }
     }
   ]
