@@ -5,7 +5,7 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TEST, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1878)</h2>
+<h2>Implemented cards (1882)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
 <tr><td>2026-11-01</td><th scope="row">Alpha Sentinel, Dark Guardian Relic</th><td>wave-6</td><td>Character</td><td>complete</td><td><code>5a3844afe2f3</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Buried Banquet</th><td>wave-6</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
@@ -32,6 +32,7 @@
 <tr><td>2026-11-01</td><th scope="row">Heroic Perseverance</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">I&#39;ve Got Your Back</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">It&#39;s As Good As Used!</th><td>wave-8</td><td>Stratagem</td><td>partial</td><td><code>fb1448e836a4</code></td></tr>
+<tr><td>2026-11-01</td><th scope="row">Junker Drone</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>7add09caf4bd</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Lord Kledji, Royal Ruler of Quintessa</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>5a3844afe2f3</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Materiel War</th><td>wave-8</td><td>Stratagem</td><td>note</td><td><code>fb1448e836a4</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Me Grimlock Kick Butt!</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
@@ -44,10 +45,13 @@
 <tr><td>2026-11-01</td><th scope="row">Q-RTR Arachnoid Array</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>5a3844afe2f3</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Queen of the Junkyard</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Roadmaster Prime Mode, Master of Chaos</th><td>wave-8</td><td>Character</td><td>test</td><td><code>5a3844afe2f3</code></td></tr>
+<tr><td>2026-11-01</td><th scope="row">Scrapper Drone</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>7add09caf4bd</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Slice, Dice, and Julienne!</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Terrorcon Hun-Gurrr, Eaters Digest</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>5a3844afe2f3</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>wave-8</td><td>Character</td><td>bug</td><td><code>5a3844afe2f3</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Time for New Leadership</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>fb1448e836a4</code></td></tr>
+<tr><td>2026-11-01</td><th scope="row">Trasher Drone</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>7add09caf4bd</code></td></tr>
+<tr><td>2026-11-01</td><th scope="row">Waster Drone</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>7add09caf4bd</code></td></tr>
 <tr><td>2026-11-01</td><th scope="row">Wreck-Gar, The Big Cheese! Now With More Cheese!</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>5a3844afe2f3</code></td></tr>
 <tr><td>2026-10-31</td><th scope="row">Aquatic Maneuvers</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>215a75f42efb</code></td></tr>
 <tr><td>2026-10-31</td><th scope="row">Are These Wires Important?</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>215a75f42efb</code></td></tr>
@@ -1886,7 +1890,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (487)</h2>
+<h2>No implementation date observed (483)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Armada, Herald of Shrouds</th><td>wave-6</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Autobot Countdown, Aerospace Commander</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
@@ -1940,14 +1944,12 @@
 <tr><th scope="row">Crasher, Fractious Fanatic</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Gilthor, Wounded Retribution</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">Junker Drone</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Loudmouth, Incendiary Control</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Rum-Maj, Wreck-Gar Sold Separately!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Scrapheap, It&#39;s Not Trash If It&#39;s Worth Cash!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Scrapper Drone</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Sideswipe, Covert Clone</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
@@ -1957,8 +1959,6 @@
 <tr><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Terrorcon Cutthroat, Shock and Cawww</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Thunder Guts Gilthor, The One Who Claps</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Trasher Drone</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Waster Drone</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Abrogate</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Caring is Sharing!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Everything Must Go!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
