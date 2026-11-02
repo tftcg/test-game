@@ -13,13 +13,12 @@
     },
     {
       "name": "Ancient Security Tentacle",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(faction=Quintesson,trait=Specialist);instead(on-damage-move(event().move_to=attached())->do_nothing())"
     },
     {
       "name": "Angolmois Surge",
-      "comment": "TODO: Chaos Counters ignored until Unicron implemented",
-      "tfdsl": "damage(1,pick_friend(trait=Melee));atk_eot(4,previous_target())"
+      "tfdsl": "damage(1,pick_friend(trait=Melee));atk_eot(4,previous_target());up_counter(1, all_friends(fullname='Unicron, Chaos Bringer'))"
     },
     {
       "name": "Aquatic Maneuvers",
@@ -89,7 +88,7 @@
     },
     {
       "name": "\"Dutch\"",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "static(atk,when(attached().faction=Mercenary),1,target=attached());on-attached-battle-flip(when(event().flips.white>=1),once())->flip_extra(1)"
     },
     {
@@ -135,7 +134,7 @@
     },
     {
       "name": "Lose The Battle...",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "reveal(on-friend-defend())->revealed(move_to(self().hand,pick_scrap(subtype=Weapon)))"
     },
     {
@@ -152,17 +151,17 @@
     },
     {
       "name": "Masher Mace",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "bold(1);on-this-scrapped(when(event().from.trait=Sharkticon))->move_to(this().owner.hand,this())"
     },
     {
       "name": "Motorcycle Chase",
-      "comment": "TODO: Test. I'm feeling previous_target() needs to be (2) as it's giving Brave to the wrong char",
+      "comment": "TEST:. I'm feeling previous_target() needs to be (2) as it's giving Brave to the wrong char",
       "tfdsl": "tap(pick_friend(trait=Motorcycle,tapped=untapped));tap(opponent_pick(opponent().chars,tapped=untapped,stars<=10));brave_eot(true,previous_target())"
     },
     {
       "name": "Occupation",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "draw(2);scrap_hand(pick_hand(count=2));if(starting_team(faction!=Quintesson).count=0)->(if(confirm('Play a Green icon card?'))->play(pick_hand(green>=1)))"
 
     },
@@ -436,7 +435,7 @@
     },
     {
       "name": "The Last Line of Defense",
-      "comment": "TODO: This has a one-or-more that needs to be handled better. The eot shouldn't be here",
+      "comment": "NOTE: This has a one-or-more that needs to be handled better. The eot shouldn't be here",
       "tfdsl": {
         "front": "static(brave,true,target=all_friends(fullname=this().target));add_slot('Utility',1,all_friends(fullname=this().target));on(event=char-untap,when(event().untapped.owner=opponent(),exists_friend(fullname=this().target),self().flags!='last_line_used',exists_card(self().hand),exists_friend(damage>=1)))->(if(confirm('Scrap a card to move 1 damage counter?'))->(scrap_hand(pick_hand());if(done())->(set_flag(scope=eot,'last_line_used');move(1,pick_friend(damage>=1),pick_enemy()))))"
       }
@@ -482,7 +481,7 @@
     },
     {
       "name": "V2 Sonicsurge Drone Armor",
-      "comment": "TODO: Test this",
+      "comment": "TEST: this",
       "tfdsl": {
         "front": "on-friend-defend(when(event().defender.name!=this().target,all(this().owner.chars,name=this().target,mode=alt,tapped=untapped).count>0))->(if(confirm())->(choose(pick(this().owner.chars,name=this().target,mode=alt,tapped=untapped));tap(previous_target());def_eot(previous_target().def,event().defender)))"
       }
@@ -573,7 +572,7 @@
     },
     {
       "name": "Decepticon Doublecrosser, Shield Brothers",
-      "comment": "TODO: Test both modes",
+      "comment": "TEST: both modes",
       "tfdsl": {
         "bot": "on(event=deploy,when(active_player()=self(),this().tapped=untapped,event().deployed.owner=opponent(),event().deployed.trait='Titan Master'))->extra_attack(attackers=all_friends(id=this().id),defenders=all_enemies(id=event().deployed.id),can_atk_untapped=true)",
         "upgrade": "on-attached-after-defend-flips()->pierce_eot(0-event().defender.def,event().attacker)"
@@ -581,7 +580,7 @@
     },
     {
       "name": "Decepticon Exhaust, Consumptive Condottiere",
-      "comment": "TODO: Test moving damage gives +1/+1",
+      "comment": "TEST: moving damage gives +1/+1",
       "tfdsl": {
         "alt": "on(event=start-turn)->(if(confirm('Do 1 damage to Exhaust?'))->damage(1,this()));on-this-attack-damaged()->(atk_eot(1,this());def_eot(1,this()));on-this-damage()->(atk_eot(1,this());def_eot(1,this()));on-damage-move(when(event().move_to=this()))->(atk_eot(1,this());def_eot(1,this()))",
         "bot": "bounty(move(1,this(),pick_enemy()))"
@@ -658,7 +657,7 @@
     },
     {
       "name": "Optimus Prime, Dark Awakening",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-start-game()->damage(2,this());on-this-flip()->move_to(self().hand,pick_scrap(green>=1))",
         "bot": "each(all_friends())->(static(atk,all(this().upgrades,faction.count>0,subtype=Weapon,shares_faction(candidate(),it())=false).count,target=it());static(def,all(this().upgrades,faction.count>0,subtype=Armor,shares_faction(candidate(),it())=false).count,target=it());static(health,all(this().upgrades,faction.count>0,subtype=Utility,shares_faction(candidate(),it())=false).count,target=it()))"
@@ -738,7 +737,7 @@
     },
     {
       "name": "Tow-Line, Signals Engineer",
-      "comment": "TODO: Test this with various actions - does it hurt for them to vanish from the action area and nullify any lingering EOT abilities they provide?",
+      "comment": "TEST: this with various actions - does it hurt for them to vanish from the action area and nullify any lingering EOT abilities they provide?",
       "tfdsl": {
         "alt": "on-play-action(when(all(self().played,type=Action).count=1))->plan(1)",
         "bot": "on-this-after-battle-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.blue>=1))->(on-this-after-battle(scope=afb)->(if(confirm())->move_to(self().hand,pick(self().actions,type=Action))))"

@@ -379,10 +379,10 @@
     },
     {
       "name": "Autobot Mirage, Lone Wolf",
+      "comment": "TEST: test the untap, and it only working on first attack",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->play(pick_hand(type=Action)))",
-        "comment": "TODO: Needs to only untap on the first attack",
-        "bot": "on-attached-after-attack-flip(when(event().flips.white>=3))->untap(this())"
+        "bot": "on-attached-after-attack-flip(when(event().flips.white>=3,this().owner.flags!=this().id + '_first_attack'))->(untap(this(),set_flag_eot(this().id + '_first_attack')))"
       }
     },
     {
@@ -419,7 +419,7 @@
     {
       "name": "Chromia, Special Ops",
       "tfdsl": {
-        "comment": "TODO: Test this",
+        "comment": "TEST: this",
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(white>=1))",
         "bot": "on-attached-after-attack-flip(when(event().flips.white>=2))->draw(2)"
       }
@@ -527,7 +527,7 @@
     {
       "name": "Megatron, Living Weapon",
       "tfdsl": {
-        "comment": "TODO: Test this",
+        "comment": "TEST: this",
         "alt": "on-this-flip()->move_to(self().hand,pick_scrap(subtype=Weapon))",
         "bot": "allow_in_slot('Weapon','Armor');allow_in_slot('Weapon','Utility')"
       }
@@ -566,7 +566,7 @@
     {
       "name": "Ransack, Insecticon Commando",
       "tfdsl": {
-        "comment": "TODO: Test. The alt needs to be pick_other_char()",
+        "comment": "TEST:. The alt needs to be pick_other_char()",
         "alt": "on-this-flip()->move(2,pick_char(),this())",
         "bot": "static(atk,this().damage)"
       }
@@ -585,8 +585,7 @@
     {
       "name": "Starscream, Air Commander",
       "tfdsl": {
-        "comment": "TODO: Needs other_friends()",
-        "alt": "on-this-flip()->damage(all_friends(trait=Plane).count-1,pick_enemy())",
+        "alt": "on-this-flip()->damage(all_friends(trait=Plane,id!=this().id).count,pick_enemy())",
         "bot": "static(bold,when(this().mode=bot),2 + this().starscream_plus)"
       }
     },

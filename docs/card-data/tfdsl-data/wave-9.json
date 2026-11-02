@@ -121,7 +121,7 @@
     },
     {
       "name": "Wanna Bet?",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "instead(on(event=place-under,when(event().cardtype=battle,event().bot.owner!=this().owner))->scrap_hand(event().cards))"
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "name": "Zarak Shield",
-      "comment": "TODO: Test force field effect. NOTE: This predicates on 'Lord Zarak, Ruler of Nebulos' because 'Lord' is a squishy prefix; will need fixing if another Zarak is added",
+      "comment": "TEST: force field effect. NOTE: This predicates on 'Lord Zarak, Ruler of Nebulos' because 'Lord' is a squishy prefix; will need fixing if another Zarak is added",
       "tfdsl": "static(def,when(attached().trait=Titan),1);instead(on-attached-attack-damaged(when(event().damage>4,attached().fullname='Lord Zarak, Ruler of Nebulos'))->(scrap_upgrade(this());modify(event().damage:=4)));carry_on_deploy(this(),when(attached().fullname='Scorponok, Brutal Warlord',attached().head.fullname='Lord Zarak, Ruler of Nebulos',confirm('Carry Zarak Shield onto Lord Zarak?')))"
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "name": "Arm the Lonely",
-      "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
+      "comment": "TEST: - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
         "front": "on-start-turn(when(self().ko.trait='Battle Master'))->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
       }
@@ -178,7 +178,7 @@
     },
     {
       "name": "Brothers In Armor",
-      "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
+      "comment": "TEST: - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
         "front": "on-start-turn(when(self().ko.trait='Battle Master'))->(if(confirm())->(put_upgrade(pick(self().ko,trait='Battle Master'),pick_friend(fullname=this().target));flip(this())))"
       }
@@ -191,14 +191,14 @@
     },
     {
       "name": "Can't Squish This",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "on-target-defend(when(event().attacker.has_pierce=true))->(if(this().owner.hand.count>=1,this().owner.hand.count<=4)->pierce_eot(0-2,event().attacker);if(this().owner.hand.count>=5,this().owner.hand.count<=7)->pierce_eot(0-3,event().attacker);if(this().owner.hand.count>=8)->pierce_eot(0-4,event().attacker))"
       }
     },
     {
       "name": "Do It With Style!",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "replace_dsl('has_pierce=false','.stars<=8',all_friends(fullname=this().target),'alt')"
       }
@@ -232,7 +232,7 @@
     },
     {
       "name": "Scout the Area",
-      "comment": "TODO: Test - make sure flipping works and that there is a working flip_cleaner",
+      "comment": "TEST: - make sure flipping works and that there is a working flip_cleaner",
       "tfdsl": {
         "front": "on-start-turn()->(if(confirm())->(deploy(pick_friend(fullname=this().target),pick(pick_friend(fullname=this().target).under));flip(this())))"
       }
@@ -243,7 +243,7 @@
     },
     {
       "name": "Beastbox, Savage Interrogator",
-      "comment": "TODO: Test alt",
+      "comment": "TEST: alt",
       "tfdsl": {
         "alt": "on-this-flip()->(reveal_cards(opponent_top_deck());if(previous_target().type=Action)->(if(confirm('Play Opponent Action?'))->play(previous_target())))",
         "bot": "on-this-attack(when(event().defender.faction=Autobot))->atk_eot(2,this())"
@@ -259,7 +259,7 @@
     },
     {
       "name": "Galvatron, Maniacal Tyrant",
-      "comment": "TODO: Test, especially bot mode",
+      "comment": "TEST:, especially bot mode",
       "tfdsl": {
         "alt": "on-this-flip()->(if(confirm())->scrap_upgrade(pick_enemy_upgrade()))",
         "bot": "on-this-after-attack-flip(when(this().upgrades.white>=1,this().upgrades.blue>=1,this().upgrades.green>=1,event().flips.white>=1,event().flips.orange>=1,event().flips.black>=1))->damage(4,pick_enemy())"
@@ -306,7 +306,7 @@
     },
     {
       "name": "Rewind, Data Collector",
-      "comment": "TODO: Test bot mode",
+      "comment": "TEST: bot mode",
       "tfdsl": {
         "alt": "on-this-flip()->move_to(self().hand,get(self().scrap,from=random))",
         "bot": "on-this-after-attack-flip()->(if(confirm())->play(pick(event().flips.cards,black>=1,subtype=Utility)))"
@@ -386,7 +386,7 @@
     },
     {
       "name": "Lord Zarak, Ruler of Nebulos",
-      "comment": "TODO: Test Shield carry over from Scorponok. NOTE: Zarak has to go on Scorponok. Skipping enforcing that. Deployment carry is implemented on Zarak Shield rather than this card's printed bot ability.",
+      "comment": "TEST: Shield carry over from Scorponok. NOTE: Zarak has to go on Scorponok. Skipping enforcing that. Deployment carry is implemented on Zarak Shield rather than this card's printed bot ability.",
       "tfdsl": {
         "head": "bold(1);tough(1);focus(1)",
         "bot": "bold(1);tough(1);focus(1)"
@@ -429,7 +429,7 @@
     },
     {
       "name": "Bruticus, Unstoppable Giant",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "combiner": "tough(2);pierce(2);on-this-combine()->set_flag_eot('bruticus combined');on-this-attack-flip(when(this().owner.flags='bruticus combined',event().flips.black>=1))->damage(1,pick_enemy())"
       }

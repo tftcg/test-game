@@ -43,7 +43,7 @@
     },
     {
       "name": "Custom Junkion Saddle",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "put_only(trait=Motorcycle,mode=alt,trait!=Vehicle,stations.count=0);if(attached().mode=alt,attached().trait=Motorcycle)->(trait(Vehicle,attached());station('Junkion Saddle',requires(stars<=13,mode=bot),gives(atk(1),def(1)),text(on(event=enter-station,when(event().station=station()))->damage(1,pick_enemy(tapped=tapped))),target=attached()))"
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "name": "Diffraction Sword",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "instead(on-attached-damage(when(event().origin.owner != this().owner))->(modify(event().amount:=event().amount - 1);up_counter(1,this());if(this().counter>=2)->scrap_upgrade(this())))"
     },
     {
@@ -118,7 +118,7 @@
     },
     {
       "name": "Hodgepodge Panoply",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "static(drifter,when(event().defender.faction=Junkion,event().defender.has_drifter=true),true,target=event().attacker)"
     },
     {
@@ -180,7 +180,7 @@
     },
     {
       "name": "Mystical Bond",
-      "comment": "TODO: Test that playing from scrap doesn't also just pass 'hand' as the play_source",
+      "comment": "TEST: that playing from scrap doesn't also just pass 'hand' as the play_source",
       "tfdsl": "on-play-upgrade(when(event().played=this(),event().played_from='hand'))->(if(confirm())->play(pick_scrap(name=this().name)));on-attached-attack(when(attached().in_station,attached().occupied_station.host.trait=Vehicle,all(attached().occupied_station.host.upgrades,name=this().name).count>0))->(repair(1,attached().occupied_station.host);repair(1,attached()))"
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "name": "Pack Behavior",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "put_only(trait=Predacon || trait=Seacon || trait=Terrorcon);bold(1);revenge(put_upgrade(this(),pick_friend()))"
     },
     {
@@ -209,7 +209,7 @@
     },
     {
       "name": "Patrol Bolas",
-      "comment": "TODO: This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event",
+      "needs": "This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event",
       "tfdsl": "static(atk,this().counter,target=attached());on(event=enter-station,when(event().station.host=attached(),event().entered.faction=Junkion))->(if(confirm('Move Patrol Bolas to the Station occupant?'))->(move_upgrade(this(),event().entered);up_counter(1,this())))"
     },
     {
@@ -247,7 +247,7 @@
     },
     {
       "name": "Recon Reissue",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "reveal(on-friend-defend())->revealed(choose(options('Move an Armor or Utility','Return a Battle Master Armor or Utility from KO'));if(chosen()='Move an Armor or Utility')->(choose(pick_friendly_upgrade(subtype=Armor || subtype=Utility));move_upgrade(chosen(),pick_friend(id!=chosen().attached_to.id)));if(chosen()='Return a Battle Master Armor or Utility from KO')->put_upgrade(pick_friend_ko(trait='Battle Master',subtype=Armor || subtype=Utility),pick_friend()))"
     },
     {
@@ -282,13 +282,13 @@
     },
     {
       "name": "Skimming Off the Top",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "each(all_players())->draw(1,it());if(starting_team(trait=Mercenary || trait=Junkion).count>0)->draw(1)"
     },
     {
       "name": "Sparring Lessons",
       "tfdsl": "choose(pick_friend(faction=Autobot,exact=2));damage(1,previous_target());repair(2,previous_target())",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Spear of the Moment",
@@ -327,7 +327,7 @@
     {
       "name": "Throttle",
       "tfdsl": "tap(pick_friend(trait=Melee,tapped=untapped));tap(pick_enemy(previous_target().health<=health,tapped=untapped))",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Too Short For This Ride",
@@ -336,7 +336,7 @@
     },
     {
       "name": "Traffic Checkpoint",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "reveal(on-opponent-start-turn()->revealed(choose(pick(players()));tap(all(chosen().actions,subtype='Rolling Action',tapped=untapped))"
     },
     {
@@ -346,12 +346,12 @@
     },
     {
       "name": "Tried and Executed",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "choose(pick_friend());if(chosen().faction=Quintession,chosen().trait=Specialit)->(if(confirm('Play Quintesson Weapon?'))->play_upgrade(pick_hand(trait=Quintesson,subtype=Weapon)));if(chosen().trait=Judge)->(if(confirm('Return Quintesson Armor from scrap?'))->move_to(self().hand,pick_scrap(faction=Quintesson,subtype=Armor)))"
     },
     {
       "name": "Two Foes, Two Fists",
-      "comment": "TODO: Test the 'else put on untapped",
+      "comment": "TEST: the 'else put on untapped",
       "tfdsl": "scrap(on-friend-after-attack(when(event().overkill>0,event().attacker.trait=Titan || event().attacker.trait=Guardian || event().attacker.stars>=18)))->when_scrapped(choose(pick_enemy(tapped=tapped));if(chosen().tapped=tapped)->damage(event().overkill,chosen()):else->(choose(pick_enemy(tapped=untapped));damage(event().overkill,chosen())))"
     },
     {
@@ -422,7 +422,7 @@
     },
     {
       "name": "Combat Deck",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Loading Dock',requires(stars<=10),gives(def(1)),text(on-start-game()->enter_station('Loading Dock');static(stealth,when(occupant().tapped=untapped),true,target=occupant())))",
         "back": "on(event=untap-all)->(if(confirm())->flip(this()));station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())));station('Auto-Launcher Console',requires(stars<=15),gives(atk(1)),text(on(event=enter-station,when(event().station=station()))->(if(event().entered.upgrades.subtype=Weapon)->damage(1,pick_enemy()):else->damage(1,opponent_pick(opponent().chars)))))"
@@ -463,7 +463,7 @@
     },
     {
       "name": "It's As Good As Used!",
-      "comment": "TODO: one-or-many card, needs a multi-scrap event solution",
+      "front-needs": "one-or-many card, needs a multi-scrap event solution",
       "tfdsl": {
         "front": "on(event=scrap-upgrade,when(event().cause.owner=opponent(),event().from.owner=this().owner,all_friends(fullname=this().target).count>0,all(self().hand,type=Upgrade).count>=2))->(if(confirm('Reveal Upgrades to replace the scrapped Upgrade?'))->(reveal_cards(pick_hand(type=Upgrade,upto=all(self().hand,type=Upgrade).count));if(previous_target().count>=2)->play_upgrade(opponent_pick(previous_target()),event().from)))"
       }
@@ -524,7 +524,7 @@
     },
     {
       "name": "Me Grimlock Want to Munch Metal",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "replace_dsl('bold_eot','pierce_eot',all_friends(fullname=this().target),'alt')"
       }
@@ -573,7 +573,7 @@
     {
       "name": "Slice, Dice, and Julienne!",
       "tfdsl": {
-        "front": "on(event=draw,when(event().player=opponent(),this().owner=event().active_player,exists_friend(fullname=this().target)))->atk_eot(1,all_friends(trait='Road Drone'))"
+        "front": "on(event=draw,when(event().player=opponent(),this().owner=active_player(),exists_friend(fullname=this().target)))->atk_eot(1,all_friends(trait='Road Drone'))"
       }
     },
     {
@@ -687,7 +687,7 @@
     },
     {
       "name": "Decepticon Wingthing, Loyal, Lethal Cohort",
-      "comment": "TODO: Currently it is doing a damage for each card put on the deck because there isn't a macro event",
+      "bot-needs": "Currently it is doing a damage for each card put on the deck because there isn't a macro event",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->(if(confirm('Move damage?'))->(choose(pick_friend(stars>=10));move(1,chosen(),pick_char(id!=chosen().id))))",
         "bot": "on(event=put-deck)->(if(this().upgrades.count>0)->damage(1,pick_enemy()):else->damage(1,opponent_pick_opponent_char()))"
@@ -713,7 +713,7 @@
     },
     {
       "name": "Greasestain, No Muss! No Fuss!",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "bandit();on-friend-attack-damaged(when(event().target.trait=Motorcycle,event().target!=this(),event().overkill<0))->(if(confirm('Move 1 damage to Greasestain?'))->move(1,event().target,this()));station('Ram Leather Seat',requires(stars<=11,mode=bot),gives(atk(1),trait(Motorcycle)),text(on(event=char-attack,when(event().attacker=occupant()))->move(1,pick(occupant()+host()),event().defender)))",
         "bot": "bandit();on-this-attack(when(this().in_station))->(if(event().defender.in_station)->damage(2,event().defender):else->damage(1,event().defender));on(event=attack-damage,when(event().target.owner=this().owner,event().target!=this(),event().target.mode=bot,event().target.other_modes=alt,event().target.damage<event().target.health))->(if(confirm())->move(1,event().target,this()))"
@@ -799,7 +799,7 @@
         "head": "on-this-defend(when(event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)",
         "bot": "on-this-defend(when(event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)"
       },
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Rum-Maj, Wreck-Gar Sold Separately!",
@@ -880,7 +880,7 @@
     },
     {
       "name": "Terrorcon Blot, Rank and Vile Rank and File",
-      "comment": "TODO: Test bot mode",
+      "comment": "TEST: bot mode",
       "tfdsl": {
         "alt": "",
         "bot": "instead(on-friend-damage(when(event().damaged.trait=Terrorcon,event().damaged.damage>=1,event().damaged.stars=4,event().amount>0))->modify(event().amount:=event().amount - 1))"
@@ -893,7 +893,7 @@
         "alt": "",
         "bot": "on-friend-ko(when(event().ko.trait=Terrorcon))->untap(pick_friend(trait=Terrorcon,stars=4))"
       },
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "alt-needs": "Revealing Secret Actions from hand and returning an opponent's face-down Secret Action"
     },
     {
@@ -948,7 +948,7 @@
     },
     {
       "name": "Roadmaster Prime Mode, Master of Chaos",
-      "comment": "TODO: Test if the game is lost while it tries to deploy its drones out",
+      "comment": "TEST: if the game is lost while it tries to deploy its drones out",
       "tfdsl": {
         "combiner": "on-this-combine()->(choose(all(self().hand));scrap_hand(previous_target(1));choose(all(opponent().hand));scrap_hand(previous_target(2));draw(previous_target(2).count,self());draw(previous_target(1).count,opponent()));on-this-ko()->repeat(this().upgrades.count)->(choose(pick_under_this(trait=Road Drone));deploy(this(),chosen(),alt))"
       }

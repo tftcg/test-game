@@ -59,7 +59,7 @@
     },
     {
       "name": "Crude Club",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "static(atk,when(),attached().upgrades.count)"
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "name": "Defensive Configuration",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "add_slot('Armor',1);on-put()->(reveal_cards(top_deck());if(previous_target().subtype=Armor)->play(previous_target(),attached()))"
     },
     {
@@ -202,7 +202,7 @@
     },
     {
       "name": "Relentless Invasion",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "if(exists_friend(fullname='Trypticon, Assault Base'))->(each(ko_chars(fullname='Full-Tilt, Base Recon' || fullname='Wipe-Out, Devoted Minion' || fullname='Brunt, Artillery Drone'))->(return_from_ko(it());if(done())->(extra_attack(attackers=all_friends(id=it().id));on(event=end-turn,scope=eot,when(exists_friend(id=it().id),exists_friend(fullname='Trypticon, Assault Base')))->place_under(all_friends(fullname='Trypticon, Assault Base'),all_friends(id=it().id)))))"
     },
     {
@@ -215,7 +215,7 @@
     },
     {
       "name": "Shoulder Holster",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "add_slot('Weapon',1);on-put()->(reveal_cards(top_deck());if(previous_target().subtype=Weapon)->play(previous_target(),attached()))"
     },
     {
@@ -224,7 +224,7 @@
     },
     {
       "name": "Soldier's Blaster",
-      "comment": "TODO: Test against multi-factional characters",
+      "comment": "TEST: against multi-factional characters",
       "tfdsl": "on-attached-attack(when(event().defender.faction!=attached().faction))->atk_eob(2,attached())"
     },
     {
@@ -266,7 +266,7 @@
     },
     {
       "name": "War of Attrition",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "damage(1,opponent_pick_opponent_char());if(all(self().played,name=this().name).count=3)->repair(3,pick_friend());if(confirm())->play(pick_hand(name=this().name))"
     },
     {
@@ -297,7 +297,7 @@
     },
     {
       "name": "Deadlock, Soldier of Fortune",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-opponent-attacker-chosen(when(event().attacker.faction=Autobot || event().attacker.faction=Decepticon))->stealth_eob(true, this());on-this-flip()->(each(all_enemies(faction=Autobot || faction=Decepticon))->no_stealth_eot(true,it()))",
         "bot": "bounty((flip(this());draw(2)))"
@@ -406,7 +406,7 @@
     },
     {
       "name": "Private Hot Rod, Infantry • Soldier",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "safeguard(3);on-reshuffle(when(this().under.count=0))->place_under(this(),bottom_deck())",
         "bot": "on-start-turn(when(this().under.count>0))->set_flag_eot('extra action');on-this-flip()->set_flag_eot('extra action')"
@@ -527,7 +527,7 @@
     },
     {
       "name": "Raider Ratbat, Spy Patrol • Fuel Scout",
-      "comment": "TODO: Test. NOTE: revenge() doesn't like multiple terms inside it thus the extra parentheses",
+      "comment": "TEST:. NOTE: revenge() doesn't like multiple terms inside it thus the extra parentheses",
       "tfdsl": {
         "alt": "revenge((choose(icons());reveal_cards(opponent().hand);scrap_hand(pick(opponent().hand,colours=chosen()))))",
         "bot": "tap_ability()->(reveal_cards(top_deck());each(all_friends())->repair(previous_target().colours.count,it()))"
@@ -577,7 +577,7 @@
     },
     {
       "name": "Sergeant Mirage, Special Ops • Spy",
-      "comment": "TODO: Test both sides",
+      "comment": "TEST: both sides",
       "tfdsl": {
         "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target().blue>=1)->draw(2);if(previous_target().blue=0)->draw(1))",
         "bot": "static(tough,when(this().owner.actions.subtype='Secret Action'),2)"

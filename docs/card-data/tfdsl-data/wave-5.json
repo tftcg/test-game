@@ -33,7 +33,7 @@
     },
     {
       "name": "Counterespionage",
-      "comment": "TODO: Test on Secret Actions",
+      "comment": "TEST: on Secret Actions",
       "tfdsl": "choose(options(card_query(type=battle,mode1function=Action)));reveal_cards(all(opponent().hand + all(opponent().actions,subtype='Secret Action',revealed=false)));each(all(opponent().hand,name=chosen()))->scrap_hand(it());each(all(opponent().actions,subtype='Secret Action',revealed=false,name=chosen()))->move_to(opponent().scrap,it())"
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "name": "Electro-Optical Visor",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "on-put(when(attached().faction=Decepticon))->(reveal_cards(opponent().hand);scrap_hand(opponent_pick_opponent_hand(faction=Autobot)))"
     },
     {
@@ -92,7 +92,7 @@
     {
       "name": "Hand-to-Hand Combat",
       "tfdsl": "choose(pick_friend());on-attack(when(event().attacker=chosen(),event().attacker.upgrades.subtype!=Weapon))->(atk_eob(3,event().attacker);scrap_upgrade(all(event().defender.upgrades,subtype=Weapon)))",
-      "comment": "TODO: Test. Previous bug fixed."
+      "comment": "TEST:. Previous bug fixed."
     },
     {
       "name": "Handheld Blaster",
@@ -116,7 +116,7 @@
     },
     {
       "name": "Holomatter Projector",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "instead(on-attached-damage(when(event().origin.owner != this().owner))->do_nothing())"
     },
     {
@@ -129,7 +129,7 @@
     },
     {
       "name": "Industrial-grade Phase Charge",
-      "comment": "TODO: This works. But it probably shouldn't. Is attached() not getting cleansed by scrap_upgrade?",
+      "comment": "NOTE: This works. But it probably shouldn't. Is attached() not getting cleansed by scrap_upgrade?",
       "tfdsl": "on-attached-attack()->(if(confirm())->(scrap_upgrade(this());atk_eot(3,attached())))"
     },
     {
@@ -139,7 +139,7 @@
     {
       "name": "Junk Cannon",
       "tfdsl": "on-put()->atk_eot(2,attached())",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Laser Scalpel",
@@ -148,7 +148,7 @@
     {
       "name": "Last Stand",
       "tfdsl": "atk_eot(5,pick_friend());on-end-turn()->ko(previous_target())",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Lock on Target",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Lose the Initiative",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "reveal(instead(on-untap(when(event().untapped.owner!=this().owner))))->revealed(untap(pick_friend(stars<=event().untapped.stars)))"
     },
     {
@@ -170,7 +170,7 @@
     {
       "name": "Master of Metallikato",
       "tfdsl": "choose(pick_friend());on(event=after-attack-flip,when(event().attacker=chosen()))->atk_eob(event().flips.colours.count,chosen())",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Master Sword",
@@ -195,7 +195,7 @@
     {
       "name": "Plasma Horns",
       "tfdsl": "on-attached-after-attack-flip()->(if(event().flips.white>=4)->scrap_upgrade(this());if(event().flips.white<4)->atk_eot(event().flips.white,attached()))",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Precision Fire",
@@ -226,7 +226,7 @@
     },
     {
       "name": "Speed Trap",
-      "comment": "TODO: Test the no more actions",
+      "comment": "TEST: the no more actions",
       "tfdsl": "reveal(instead(on-opponent-play-action(when(all(opponent().played,type=Action).count>=1))))->revealed(scrap_hand(event().card);set_flag('no actions',opponent()))"
     },
     {
@@ -260,7 +260,7 @@
     {
       "name": "Tripwire",
       "tfdsl": "damage(1,pick_enemy());if(previous_target().stars<=5)->tap(previous_target())",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Trithyllium Shield",
@@ -284,7 +284,7 @@
     },
     {
       "name": "All-Out",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "on-friend-attack(when(event().attacker.fullname=this().target,event().attacker.owner.chars.count=1))->(atk_eob(3,event().attacker);flip(this()))"
       }
@@ -356,7 +356,7 @@
     },
     {
       "name": "More Guns",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "on-friend-scrapped(when(event().scrapped.traits='Weaponizer'))->(put_upgrade(event().scrapped,pick_friend());flip(this()))"
       }
@@ -372,7 +372,7 @@
       "tfdsl": {
         "front": "on-attack(when(event().attacker.trait=Helicopter,self().chars.name=this().target))->plan(1)"
       },
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Resilience",
@@ -434,7 +434,7 @@
       "tfdsl": {
         "front": "static(health,when(all_friends(name=this().target).upgrades.name='Decepticon Crown'),4,target=all_friends(name=this().target))"
       },
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Villainous Spotlight"
@@ -491,7 +491,7 @@
     },
     {
       "name": "Autobot Whirl, Aerial Assault",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-this-after-attack-flip(when(event().flips.blue>=1))->damage(1,all_enemies(id!=event().defender.id))",
         "bot": "instead(on-this-attack-damaged(when(event().damage>5,event().attacker.trait=Ranged))->modify(event().damage:=5))"
@@ -572,7 +572,7 @@
         "alt": "static(atk,when(self().chars.count=1),2)",
         "body": "on-ko()->damage(1,all_chars(id!=event().ko.id))"
       },
-      "comment": "TODO: Test. Test a lot."
+      "comment": "TEST:. Test a lot."
     },
     {
       "name": "Doomshot",
@@ -587,7 +587,7 @@
         "alt": "static(bold,when(event().attacker=this(),event().defender.stars>this().stars),2)",
         "body": "static(tough,when(event().defender=this(),event().attacker.stars<this().stars),2)"
       },
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Flameout",
@@ -642,7 +642,7 @@
         "alt": "on-this-flip()->(choose(icons());reveal_cards(opponent().hand);scrap_hand(pick(opponent().hand,colours=chosen())))",
         "body": "on-this-after-attack-flip(when(event().flips.black>=1))->(if(opponent().hand.count>=1)->scrap_hand(opponent_pick_opponent_hand());if(opponent().hand.count=0)->draw(1))"
       },
-      "comment": "TODO: Test. NOTE: Checking the opponent has a card shouldn't be here on body mode - things need to just fail gracefully"
+      "comment": "TEST:. NOTE: Checking the opponent has a card shouldn't be here on body mode - things need to just fail gracefully"
     },
     {
       "name": "Monxo",
@@ -670,7 +670,7 @@
         "alt": "on-this-flip()->(draw(1);if(self().hand.count<opponent().hand.count)->draw(1))",
         "body": "on-this-attack()->(repair(1,pick_friend());if(self().chars.count<opponent().chars.count)->repair(1,previous_target()))"
       },
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Parsec",

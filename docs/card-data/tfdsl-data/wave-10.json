@@ -9,12 +9,12 @@
   "cards": [
     {
       "name": "Anti-Aircraft Ordnance",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "put_only(trait=Boat);instead(on-attached-damage(event().origin.owner != this().owner)->modify(event().amount:=event().amount - 1))"
     },
     {
       "name": "Cerebro Shell",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "choose(pick_enemy());damage(1,previous_target());brave_eot(previous_target());if(starting_team(name=Bombshell || name=Bugbite || name=Salvo).count>0)->def_eot(0-all_enemies(id!=previous_target().id).count,previous_target())"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "Deflection Barrier",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "reveal(on-friend-defend())->revealed(tough_eob(1,event().defender);pierce_eob(0-event().defender.tough,event().attacker))"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "name": "For Cybertron!",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "atk_eot(2,pick_friend(faction=Autobot || faction=Decepticon));def_eot(0-2,pick_enemy(faction!=Autobot,faction!=Decepticon))"
     },
     {
@@ -83,7 +83,7 @@
     },
     {
       "name": "Red Rust",
-      "comment": "TODO: Test - does this damage more than one the first time? Or do we need a macro event when N characters flip? Can we even have that?",
+      "comment": "TEST: - does this damage more than one the first time? Or do we need a macro event when N characters flip? Can we even have that?",
       "tfdsl": "scrap(on-enemy-flip())->when_scrapped(damage(1,event().flipped);on-enemy-flip(scope=eot)->damage(1,event().flipped))"
     },
     {
@@ -166,7 +166,7 @@
     },
     {
       "name": "Obnoxiousness",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "replace_dsl('focus','oppress',all_friends(fullname=this().target),'alt 1');replace_dsl('bold','oppress',all_friends(fullname=this().target),'alt 2');replace_dsl('tough','oppress',all_friends(fullname=this().target),'bot')"
       }
@@ -185,7 +185,7 @@
     },
     {
       "name": "Solar Regeneration",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "front": "on-friend-defend(when(event().defender.fullname=this().target,event().defender.mode=bot))->(if(confirm('Scrap 3 to Repair 3?'))->(scrap_hand(pick_hand(exact=3));if(done())->repair(3,all_friends(fullname=this().target))))"
       }
@@ -240,7 +240,7 @@
     },
     {
       "name": "Broadside, Air & Sea Assault",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt 1": "on-this-flip()->move(1,this(),pick_enemy())",
         "bot": "on-this-flip()->pierce_eot(3,this())",
@@ -272,7 +272,7 @@
     },
     {
       "name": "Hoist, Methodical Maintenance",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-this-battle(when(this().under.count=0))->(on-this-after-battle(scope=afb)->place_under(this(),pick(event().flips.cards,contains_dsl='repair(')))",
         "bot": "focus(1);on-this-flip()->(if(confirm())->play(pick_under_this()))"
@@ -280,7 +280,7 @@
     },
     {
       "name": "Laserbeak, Impatient Interrogator",
-      "comment": "TODO: Test alt",
+      "comment": "TEST: alt",
       "tfdsl": {
         "alt": "reveal_cards(all(opponent().hand + all(opponent().actions,subtype='Secret Action',revealed=false)))",
         "bot": "on-this-attack(when(event().defender.health - event().defender.damage <= 3))->damage(1,event().defender);each(all_friends(faction=Decepticon,trait=Leader))->static(focus,1,target=it())"

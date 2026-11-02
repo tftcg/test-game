@@ -48,7 +48,7 @@
     },
     {
       "name": "Bumpers",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "put_only(trait=Car);instead(on-damage-move(event().move_to=attached())->do_nothing())"
     },
     {
@@ -69,12 +69,12 @@
     },
     {
       "name": "Crash Landing",
-      "comment": "TODO: Needs testing",
+      "comment": "TEST: test",
       "tfdsl": "put_only(trait=Plane);on-attached-ko()->damage(attached().atk, pick_enemy(tapped=tapped))"
     },
     {
       "name": "Decepticon Crown",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "put_only(faction=Decepticon);on-attack(when(event().attacker.owner=this().owner,event().attacker.faction=Decepticon))->plan(1)"
     },
     {
@@ -83,7 +83,7 @@
     },
     {
       "name": "Dinobot Enigma",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "if(all_friends(name=Volcanicus).count>0)->bold_eot(2,pick_friend(name=Volcanicus));combine('Volcanicus, Fiery Champion',5,bot,Dinobot)"
     },
     {
@@ -201,7 +201,7 @@
     },
     {
       "name": "Predacon Enigma",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "if(all_friends(name=Predaking).count>0)->(draw(1);if(confirm())->play(pick_hand(type=Upgrade)));combine('Predaking, Ferocious Hunter',5,bot,Predacon)"
     },
     {
@@ -279,7 +279,7 @@
     {
       "name": "Stunticon Swagger",
       "tfdsl": "put_only(trait=Stunticon);on-attached-defend()->no_bold_eob(true,event().attacker);on-attached-attack()->no_tough_eob(true,event().defender)",
-      "comment": "TODO: Test"
+      "comment": "TEST: test"
     },
     {
       "name": "Superior Cannon",
@@ -682,7 +682,7 @@
     },
     {
       "name": "Omega Supreme, Autobot Defense Base",
-      "comment": "TODO: Test Crashbash into W2 Omega friend - then pass the atk and def flips into attack_damage and onto the event",
+      "comment": "TEST: Crashbash into W2 Omega friend - then pass the atk and def flips into attack_damage and onto the event",
       "tfdsl": {
         "alt": "on-this-flip()->(choose(options('Draw a card','Do 1 damage to an enemy'));if(chosen()='Draw a card')->draw(1);if(chosen()='Do 1 damage to an enemy')->damage(1,pick_enemy()))",
         "bot": "instead(on-friend-attack-damaged(when(event().target.id!=this().id,event().damage>=2))->(if(confirm('Have Omega take 2 damage of attack?'))->(attack_damage(2,this());modify(event().damage:=event().damage - 2))))"

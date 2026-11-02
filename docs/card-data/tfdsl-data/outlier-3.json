@@ -30,8 +30,8 @@
     {
       "name": "Divebomb [B], Predacon Air Support",
       "tfdsl": {
-        "alt": "stealth();on-this-attack()->opponent_pick(all_enemy_upgrades())",
-        "bot": "on-this-attack()->opponent_pick(all_enemy_upgrades());on-this-attack-damage()->repair(1,all_friends(trait=Predacon))"
+        "alt": "stealth();on-this-attack()->scrap_upgrade(opponent_pick(all_enemy_upgrades()))",
+        "bot": "on-this-attack()->scrap_upgrade(opponent_pick(all_enemy_upgrades()));on-this-attack-damage()->repair(1,all_friends(trait=Predacon))"
       }
     },
     {

@@ -37,7 +37,7 @@
     },
     {
       "name": "Electro-Static Shielding",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": "reveal(on-friend-defend())->revealed(set_flag_eot(this().id+event().defender.id+'_electro-static-shielding-active');instead(on(event=battle-flip,when(this().owner.flags=this().id+event().defender.id+'_electro-static-shielding-active',this().owner.flags!=this().id+event().defender.id+'_electro-static-shielding-done'))->modify_icon(black,white));on(event=char-after-defend,when(this().owner.flags=this().id+event().defender.id+'_electro-static-shielding-active'))->set_flag_eot(this().id+event().defender.id+'_electro-static-shielding-done'))"
     },
     {
@@ -211,7 +211,7 @@
     },
     {
       "name": "Hardhead, Grave Mistakes",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-this-flip()->(move_upgrade(pick_friendly_upgrade(attached_to.id!=this().id),this());if(previous_target(2).icon_count>=2)->damage(2,pick_enemy()))",
         "bot": "instead(on(event=move-card,when(event().from_zone=opponent().scrap,event().player=opponent()))->modify(event().to_zone:=opponent().ko));instead(on-opponent-play-action(when(event().played_from=opponent().scrap))->move_to(opponent().scrap,event().card));instead(on-opponent-play-upgrade(when(event().played_from=opponent().scrap))->move_to(opponent().scrap,event().played))"
@@ -226,7 +226,7 @@
     },
     {
       "name": "Hoist, Fearless Rescuer",
-      "comment": "TODO: Test",
+      "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-this-flip()->(reveal_cards(top_deck());if(previous_target.subtype=Armor || previous_target.subtype=Utility)->move_to(self().hand,previous_target()))",
         "bot": "on(event=put-upgrade,when(event().attached.owner=this().owner,event().attached.faction=Autobot,event().played.subtype=Utility))->repair(1,event().attached)"
