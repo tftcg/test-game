@@ -16,11 +16,11 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1368/1514 (90.4%)</p>
+  <p>TFDSL completion: 1372/1514 (90.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>379</td><td>32</td><td>15</td><td>47</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>383</td><td>28</td><td>15</td><td>43</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>567</td><td>11</td><td>34</td><td>45</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>128</td><td>7</td><td>23</td><td>30</td></tr>
 </tbody>
@@ -40,11 +40,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 437/578 (75.6%)</p>
+  <p>TFDSL completion: 441/578 (76.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>74</td><td>32</td><td>15</td><td>47</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>78</td><td>28</td><td>15</td><td>43</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>187</td><td>11</td><td>28</td><td>39</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>97</td><td>7</td><td>23</td><td>30</td></tr>
 </tbody>
@@ -308,11 +308,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 121/199 (60.8%)</p>
+  <p>TFDSL completion: 125/199 (62.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>16</td><td>23</td><td>3</td><td>26</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>20</td><td>19</td><td>3</td><td>22</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>58</td><td>4</td><td>19</td><td>23</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>25</td><td>2</td><td>14</td><td>16</td></tr>
 </tbody>
@@ -330,7 +330,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Deploying a uniquely named Road Drone from outside the game in alt mode tapped when Detritus battles<br>bot-needs: After playing an Upgrade on flip, checking for four distinct Road Drones across the battlefield and KO area and combining them with Detritus</td></tr>
 <tr><th scope="row">Gilthor, Wounded Retribution</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting distinct friendly characters that took non-attack damage during this turn<br>bot-needs: Reading an Upgrade&#39;s printed +ATK/+DEF stat-box values from its scrap event and granting that amount until end of turn</td></tr>
 <tr><th scope="row">Greasestain, No Muss! No Fuss!</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Junker Drone</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Triggering its deploy effect when returned from the KO area</td></tr>
 <tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Limiting battle flips and Stations<br>bot-needs: Selecting an opponent battle card to scrap without its icons and repairing by selected icon count</td></tr>
 <tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Characters with a specified alternate mode and Stations<br>bot-needs: Detecting a character leaving a Station</td></tr>
 <tr><th scope="row">Loudmouth, Incendiary Control</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap</td></tr>
@@ -339,7 +338,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Roadmaster Prime Mode, Master of Chaos</th><td>Character</td><td>test</td><td>1/1</td><td class="comment">if the game is lost while it tries to deploy its drones out</td><td class="comment"></td></tr>
 <tr><th scope="row">Rum-Maj, Wreck-Gar Sold Separately!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Stations and conditional global stat and keyword effects<br>bot-needs: Counting battle cards flipped for conditional temporary effects</td></tr>
 <tr><th scope="row">Scrapheap, It&#39;s Not Trash If It&#39;s Worth Cash!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Stations and playing a qualifying Upgrade from scrap<br>bot-needs: Post-battle Upgrade replacement from scrap with a different-name condition</td></tr>
-<tr><th scope="row">Scrapper Drone</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Triggering its deploy effect when returned from the KO area</td></tr>
 <tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>Character</td><td>partial</td><td>1/3</td><td class="comment"></td><td class="comment">alt 2-needs: Checking this character&#39;s Oppress without the conditional static grant satisfying its own condition<br>body-needs: Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities</td></tr>
 <tr><th scope="row">Sideswipe, Covert Clone</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing an opponent-caused Upgrade scrap with a different Upgrade<br>bot-needs: Finding the highest stat-box values among filtered KO Upgrades</td></tr>
 <tr><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Secret Action-style reveal and cancellation while an opponent plays an Upgrade</td></tr>
@@ -350,8 +348,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Terrorcon Cutthroat, Shock and Cawww</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">test</td><td class="comment">alt-needs: Revealing Secret Actions from hand and returning an opponent&#39;s face-down Secret Action</td></tr>
 <tr><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This doesn&#39;t let you tap an already tapped 6 star or fewer character, and thus do 1 damage if it has stealth</td><td class="comment"></td></tr>
 <tr><th scope="row">Thunder Guts Gilthor, The One Who Claps</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Moving a damage counter from the attacker and the station host to the defender without making an undamaged source invalid</td></tr>
-<tr><th scope="row">Trasher Drone</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Triggering its deploy effect when returned from the KO area</td></tr>
-<tr><th scope="row">Waster Drone</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">alt-needs: Triggering its deploy effect when returned from the KO area</td></tr>
 <tr><th scope="row">Abrogate</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Matching a revealed hand Action against the played Action&#39;s battle icons, then cancelling and returning that Action during its play window</td></tr>
 <tr><th scope="row">Bracing Up</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Caring is Sharing!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement with optional variable Upgrade sacrifice, proportional repair, and moving this card to KO</td></tr>

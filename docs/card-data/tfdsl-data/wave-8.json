@@ -730,9 +730,8 @@
     {
       "name": "Junker Drone",
       "tfdsl": {
-        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->scrap_upgrade(pick_friendly_upgrade());on(event=scrap-upgrade,when(event().cause=this(),event().scrapped.owner=this().owner))->repair(2,event().from)"
-      },
-      "alt-needs": "Triggering its deploy effect when returned from the KO area"
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->scrap_upgrade(pick_friendly_upgrade());on(event=return-from-ko,when(event().returned=this()))->scrap_upgrade(pick_friendly_upgrade());on(event=scrap-upgrade,when(event().cause=this(),event().scrapped.owner=this().owner))->repair(2,event().from)"
+      }
     },
     {
       "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
@@ -822,9 +821,8 @@
     {
       "name": "Scrapper Drone",
       "tfdsl": {
-        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->scrap_upgrade(opponent_pick(opponent().upgrades))"
-      },
-      "alt-needs": "Triggering its deploy effect when returned from the KO area"
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->scrap_upgrade(opponent_pick(opponent().upgrades));on(event=return-from-ko,when(event().returned=this()))->scrap_upgrade(opponent_pick(opponent().upgrades))"
+      }
     },
     {
       "name": "Sentinel Prime, Legacy of the Primes",
@@ -914,9 +912,8 @@
     {
       "name": "Trasher Drone",
       "tfdsl": {
-        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->move_to(opponent().ko,pick_opponent_scrap(type=Upgrade,stars=0))"
-      },
-      "alt-needs": "Triggering its deploy effect when returned from the KO area"
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->move_to(opponent().ko,pick_opponent_scrap(type=Upgrade,stars=0));on(event=return-from-ko,when(event().returned=this()))->move_to(opponent().ko,pick_opponent_scrap(type=Upgrade,stars=0))"
+      }
     },
     {
       "name": "Tread Bolt, Devil of the Deep Blue Sky",
@@ -928,9 +925,8 @@
     {
       "name": "Waster Drone",
       "tfdsl": {
-        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->(choose(pick_enemy());choose(pick_enemy_upgrade(attached_to.id=chosen().id));move_upgrade(chosen(),pick_enemy(id!=previous_target(2).id)))"
-      },
-      "alt-needs": "Triggering its deploy effect when returned from the KO area"
+        "alt": "suppress_triggers(event=ko,controller=self(),when(event().ko=this()));on-deploy()->(choose(pick_enemy());choose(pick_enemy_upgrade(attached_to.id=chosen().id));move_upgrade(chosen(),pick_enemy(id!=previous_target(2).id)));on(event=return-from-ko,when(event().returned=this()))->(choose(pick_enemy());choose(pick_enemy_upgrade(attached_to.id=chosen().id));move_upgrade(chosen(),pick_enemy(id!=previous_target(2).id)))"
+      }
     },
     {
       "name": "Wreck-Gar, The Big Cheese! Now With More Cheese!",
