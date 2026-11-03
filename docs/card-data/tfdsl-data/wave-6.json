@@ -435,9 +435,8 @@
     },
     {
       "name": "The Last Line of Defense",
-      "comment": "NOTE: This has a one-or-more that needs to be handled better. The eot shouldn't be here",
       "tfdsl": {
-        "front": "static(brave,true,target=all_friends(fullname=this().target));add_slot('Utility',1,all_friends(fullname=this().target));on(event=char-untap,when(event().untapped.owner=opponent(),exists_friend(fullname=this().target),self().flags!='last_line_used',exists_card(self().hand),exists_friend(damage>=1)))->(if(confirm('Scrap a card to move 1 damage counter?'))->(scrap_hand(pick_hand());if(done())->(set_flag(scope=eot,'last_line_used');move(1,pick_friend(damage>=1),pick_enemy()))))"
+        "front": "static(brave,true,target=all_friends(fullname=this().target));add_slot('Utility',1,all_friends(fullname=this().target));on(event=char-untap,batch(min=1),when(event().untapped.owner=opponent(),exists_friend(fullname=this().target),exists_card(self().hand),exists_friend(damage>=1)))->(if(confirm('Scrap a card to move 1 damage counter?'))->(scrap_hand(pick_hand());if(done())->move(1,pick_friend(damage>=1),pick_enemy())))"
       }
     },
     {
@@ -481,9 +480,8 @@
     },
     {
       "name": "V2 Sonicsurge Drone Armor",
-      "comment": "TEST: this",
       "tfdsl": {
-        "front": "on-friend-defend(when(event().defender.name!=this().target,all(this().owner.chars,name=this().target,mode=alt,tapped=untapped).count>0))->(if(confirm())->(choose(pick(this().owner.chars,name=this().target,mode=alt,tapped=untapped));tap(previous_target());def_eot(previous_target().def,event().defender)))"
+        "front": "on-friend-defend(when(event().defender.fullname!=this().target,all(this().owner.chars,fullname=this().target,mode=alt,tapped=untapped).count>0))->(if(confirm())->(choose(pick(this().owner.chars,fullname=this().target,mode=alt,tapped=untapped));tap(previous_target());def_eot(previous_target().def,event().defender)))"
       }
     },
     {
@@ -711,9 +709,8 @@
     },
     {
       "name": "Sharkticon Peck, Protoform Pup",
-      "alt-needs": "Detecting multiple simultaneous friendly untaps and returning an orange card from scrap to hand.",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped),true);on(event=char-untap,batch(min=2),when(event().untapped.owner=self()))->move_to(self().hand,pick_scrap(orange>=1))",
         "bot": "on-this-flip()->bold_eot(1,all_friends(trait=Sharkticon || trait=Allicon))"
       }
     },

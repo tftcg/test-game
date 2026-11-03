@@ -29,6 +29,7 @@
     },
     {
       "name": "Divebomb [B], Predacon Air Support",
+      "comment": "Lowest Def, Lowest HP, Lowest Star",
       "tfdsl": {
         "alt": "stealth();on-this-attack()->scrap_upgrade(opponent_pick(all_enemy_upgrades()))",
         "bot": "on-this-attack()->scrap_upgrade(opponent_pick(all_enemy_upgrades()));on-this-attack-damage()->repair(1,all_friends(trait=Predacon))"
@@ -36,6 +37,7 @@
     },
     {
       "name": "Headstrong [B], Predacon Juggernaut",
+      "comment": "Highest Def, Highest HP, Highest Star",
       "tfdsl": {
         "alt": "brave();safeguard(3)",
         "bot": "brave();on-this-defend()->damage(1,event().attacker)"
@@ -43,6 +45,7 @@
     },
     {
       "name": "Rampage [B], Predacon Beserker",
+      "comment": "Random",
       "tfdsl": {
         "alt": "pierce(2);can_atk_untapped()",
         "bot": "pierce(2);on-this-flip()->(reveal_cards(top_deck());repeat(top_deck().icons.count)->damage(1,opponent_pick(all_enemies())))"
@@ -50,6 +53,7 @@
     },
     {
       "name": "Razorclaw [B], Predacon Huntmaster",
+      "comment": "Highest Star, Highest Atk, Highest HP",
       "tfdsl": {
         "alt": "on-start-game()->wildhunt();bold(1);can_atk_untapped()",
         "bot": "bold(2);can_atk_untapped()"
@@ -57,6 +61,7 @@
     },
     {
       "name": "Tantrum [B], Predacon Fueler",
+      "comment": "Last to Atk, Highest Atk, Lowest HP",
       "tfdsl": {
         "alt": "on-this-damage()->damage(1,opponent_pick(all_enemies()));revenge(damage(1,all_chars()))",
         "bot": "static(atk,when(damage>=4),3);revenge(damage(1,all_chars()))"
@@ -64,6 +69,7 @@
     },
     {
       "name": "Predaking [B], Apex Predator",
+      "comment": "Highest Star, Highest Atk, Highest HP",
       "tfdsl": {
         "combiner": "bold(2);on-this-attack-damage(when(event().overkill>=0))->damage(2,opponent_pick(all_enemies()));on-start-turn()->(draw(2);play(pick_hand());play(pick_hand()));on-this-combine()->(draw(2);play(pick_hand());play(pick_hand()))"
       }

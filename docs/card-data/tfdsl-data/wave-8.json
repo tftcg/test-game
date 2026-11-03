@@ -190,8 +190,7 @@
     },
     {
       "name": "Nucleon Exposure",
-      "tfdsl": "",
-      "needs": "Replacing opponent-forced flips and turn-wide flip prevention"
+      "tfdsl": "reveal(instead(on(event=char-flip,batch(min=1),when(event().flipped.owner=self(),event().card_effect=true,event().source.owner=opponent()))))->revealed(if(confirm('Flip one of your characters instead?'))->flip(pick_friend(other_modes.count>0));instead(on(event=char-flip,scope=eot,batch(min=1),when(event().flipped.owner=self(),event().card_effect=true,event().source.owner=opponent()))->do_nothing()))"
     },
     {
       "name": "Nudge Gun",

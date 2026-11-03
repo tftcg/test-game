@@ -83,8 +83,7 @@
     },
     {
       "name": "Red Rust",
-      "comment": "TEST: - does this damage more than one the first time? Or do we need a macro event when N characters flip? Can we even have that?",
-      "tfdsl": "scrap(on-enemy-flip())->when_scrapped(damage(1,event().flipped);on-enemy-flip(scope=eot)->damage(1,event().flipped))"
+      "tfdsl": "scrap(on-enemy-flip(batch(min=1)))->when_scrapped(damage(1,batch().matches.flipped);on-enemy-flip(scope=eot)->damage(1,event().flipped))"
     },
     {
       "name": "Replenishment Maneuvers",

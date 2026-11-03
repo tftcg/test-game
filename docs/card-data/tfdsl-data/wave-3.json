@@ -250,7 +250,7 @@
     },
     {
       "name": "Take Cover",
-      "tfdsl": "reveal(instead(on-friend-damaged(when(active_player()!=this().owner))))->revealed(instead(on-friend-damaged(scope=eot)->do_nothing()))"
+      "tfdsl": "reveal(instead(on-friend-damaged(batch(min=1),when(active_player()!=this().owner,event().amount>0))))->revealed(instead(on-friend-damaged(scope=eot)->do_nothing()))"
     },
     {
       "name": "Two-Pronged Attack",

@@ -62,7 +62,7 @@
     },
     {
       "name": "Rage",
-      "tfdsl": "put_only(trait=Melee);bold(1);on-tap()->damage(1,pick_enemy(tapped=tapped))"
+      "tfdsl": "put_only(trait=Melee);bold(1);on-attached-tap()->damage(1,pick_enemy(tapped=tapped))"
     },
     {
       "name": "Rapid Response Cycle",

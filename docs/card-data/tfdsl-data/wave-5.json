@@ -239,6 +239,7 @@
     },
     {
       "name": "Spymaster's Ruse",
+      "comment": "BUG: Throws a runtime error if you try to play this and you don't have a secret action",
       "tfdsl": "if(confirm('Play Secret Action?'))->(choose(pick_hand(subtype='Secret Action'));play(chosen());set_flag('spymaster::'+this().id+'::'+chosen().id))"
     },
     {

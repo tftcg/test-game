@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1372/1514 (90.6%)</p>
+  <p>TFDSL completion: 1374/1514 (90.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>383</td><td>28</td><td>15</td><td>43</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>567</td><td>11</td><td>34</td><td>45</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>384</td><td>27</td><td>15</td><td>42</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>568</td><td>11</td><td>33</td><td>44</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>128</td><td>7</td><td>23</td><td>30</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 441/578 (76.3%)</p>
+  <p>TFDSL completion: 443/578 (76.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>78</td><td>28</td><td>15</td><td>43</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>187</td><td>11</td><td>28</td><td>39</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>79</td><td>27</td><td>15</td><td>42</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>188</td><td>11</td><td>27</td><td>38</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>97</td><td>7</td><td>23</td><td>30</td></tr>
 </tbody>
 </table>
@@ -189,6 +189,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Master of Metallikato</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Plasma Horns</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Speed Trap</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">the no more actions</td><td class="comment"></td></tr>
+<tr><th scope="row">Spymaster&#39;s Ruse</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Throws a runtime error if you try to play this and you don&#39;t have a secret action</td><td class="comment"></td></tr>
 <tr><th scope="row">Tripwire</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Versatility</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this is doing &#39;when it attacks the next time this turn&#39;. It won&#39;t fail as it should when someone plays it in combat phase and untaps</td><td class="comment"></td></tr>
 <tr><th scope="row">All-Out</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -203,11 +204,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 99/156 (63.5%)</p>
+  <p>TFDSL completion: 100/156 (64.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>13</td><td>7</td><td>11</td><td>18</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>14</td><td>6</td><td>11</td><td>17</td></tr>
 <tr><th scope="row">Battlecard</th><td>62</td><td>46</td><td>7</td><td>9</td><td>16</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>23</td><td>4</td><td>8</td><td>12</td></tr>
 </tbody>
@@ -235,7 +236,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Red Wizard, Ruler of Menonia</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Swapping a hand card with a flipped no-icon card.<br>bot-needs: Inspecting the opponent&#39;s hand and swapping it with revealed deck cards before reordering their deck.</td></tr>
 <tr><th scope="row">Sharkticon Biter, Brazen Berserker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character returning from KO to the battlefield.</td></tr>
 <tr><th scope="row">Sharkticon Gnaw, Gluttonous Gourmand</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Revealing a non-green hand card and placing it under this character.</td></tr>
-<tr><th scope="row">Sharkticon Peck, Protoform Pup</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Detecting multiple simultaneous friendly untaps and returning an orange card from scrap to hand.</td></tr>
 <tr><th scope="row">Shockblast, Galactic Man</th><td>Character</td><td>unimplemented</td><td>0/3</td><td class="comment"></td><td class="comment">alt-needs: Playing this character&#39;s Upgrade side on KO.<br>upgrade-needs: Conditional Bounty use and replacing this Upgrade leaving the battlefield with moving it to KO.<br>bot-needs: Revealing and reordering the opponent&#39;s top deck cards and playing this character&#39;s Upgrade side on KO.</td></tr>
 <tr><th scope="row">Tow-Line, Signals Engineer</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">this with various actions - does it hurt for them to vanish from the action area and nullify any lingering EOT abilities they provide?</td><td class="comment"></td></tr>
 <tr><th scope="row">&quot;Dutch&quot;</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -275,11 +275,9 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Quite A Haul</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: No additional DSL is required for the printed effect: Game already invokes a character&#39;s Bounty after an attack-damage KO. Confirm whether the Stratagem is intended to provide an extra Bounty invocation.</td></tr>
 <tr><th scope="row">Sound The Alarm</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a chosen character and adding its printed stats to that host; scrap search by arbitrary text is also unsupported.<br>back-needs: Moving an attached Stratagem to its owner&#39;s KO area when its host is KO&#39;d.</td></tr>
 <tr><th scope="row">Stuck On You</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing an Armor directly from scrap or KO once per game, as though it were in hand; the conditional extra Armor slot is implemented.</td></tr>
-<tr><th scope="row">The Last Line of Defense</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">This has a one-or-more that needs to be handled better. The eot shouldn&#39;t be here</td><td class="comment"></td></tr>
 <tr><th scope="row">Thermal Reciprocation</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">The ko listener won&#39;t work until Battlemasters are firing a Play Upgrade event</td><td class="comment">front-needs: Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.</td></tr>
 <tr><th scope="row">Third Party Brigade</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Deploying a named character from outside the game; the attack-flip trigger can be expressed, but the game has no sideboard/out-of-game zone and no effect for scrapping a flipped card before using its icons.</td></tr>
 <tr><th scope="row">This Gun For Hire</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Replacing a named character&#39;s faction and detecting play of its Upgrade side.<br>back-needs: Replacing a named Upgrade&#39;s factions and editing its printed text.</td></tr>
-<tr><th scope="row">V2 Sonicsurge Drone Armor</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">this</td><td class="comment"></td></tr>
 </tbody>
 </table>
 </section>
@@ -308,12 +306,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 125/199 (62.8%)</p>
+  <p>TFDSL completion: 126/199 (63.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>20</td><td>19</td><td>3</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>58</td><td>4</td><td>19</td><td>23</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>59</td><td>4</td><td>18</td><td>22</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>25</td><td>2</td><td>14</td><td>16</td></tr>
 </tbody>
 </table>
@@ -370,7 +368,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Muster the Will</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>
 <tr><th scope="row">Ninety Day Warranty!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Distributing pending attack damage among any number of characters</td></tr>
-<tr><th scope="row">Nucleon Exposure</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing opponent-forced flips and turn-wide flip prevention</td></tr>
 <tr><th scope="row">Pack Behavior</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Passenger Coverage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement transferring damage after base DEF calculation across Station occupants</td></tr>
 <tr><th scope="row">Patrol Bolas</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event</td></tr>
@@ -476,7 +473,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Combat Reconfiguration</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Currently using modes&gt;=3 rather than alt&gt;=2</td><td class="comment"></td></tr>
 <tr><th scope="row">Deflection Barrier</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">For Cybertron!</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Red Rust</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">- does this damage more than one the first time? Or do we need a macro event when N characters flip? Can we even have that?</td><td class="comment"></td></tr>
 <tr><th scope="row">Mortar Cannon</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Removing an existing trait from a character mode</td></tr>
 <tr><th scope="row">Obnoxiousness</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Solar Regeneration</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
