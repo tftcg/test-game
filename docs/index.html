@@ -44,6 +44,7 @@
     }
     #player-name { width: 8rem; }
     .deck-selectors label { display: flex; align-items: center; gap: .35rem; font-size: .8rem; }
+    .deck-selectors label[hidden] { display: none; }
     .deck-selectors .deck-load-button {
       display: inline-grid;
       width: 1.9rem;
@@ -806,6 +807,13 @@
         <input id="player-name" type="text" value="Player 1" maxlength="40" autocomplete="nickname">
       </label>
       <label>
+        Game
+        <select id="game-mode">
+          <option selected value="solo">Solo</option>
+          <option value="two-player">Two-player</option>
+        </select>
+      </label>
+      <label>
         Deck
         <select id="human-deck">
           <option selected value="0b706068.json">Wave 1 Starter</option>
@@ -825,7 +833,7 @@
           <input id="human-deck-file" type="file" accept=".json,application/json">
         </label>
       </label>
-      <label>
+      <label id="computer-deck-field">
         Computer
         <select id="computer-deck">
           <option value="0b706068.json">Wave 1 Starter</option>
