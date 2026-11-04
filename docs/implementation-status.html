@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1374/1514 (90.8%)</p>
+  <p>TFDSL completion: 1383/1514 (91.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>384</td><td>27</td><td>15</td><td>42</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>568</td><td>11</td><td>33</td><td>44</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>128</td><td>7</td><td>23</td><td>30</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>386</td><td>25</td><td>15</td><td>40</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>571</td><td>9</td><td>32</td><td>41</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>131</td><td>7</td><td>20</td><td>27</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 443/578 (76.6%)</p>
+  <p>TFDSL completion: 452/578 (78.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>79</td><td>27</td><td>15</td><td>42</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>188</td><td>11</td><td>27</td><td>38</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>97</td><td>7</td><td>23</td><td>30</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>81</td><td>25</td><td>15</td><td>40</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>191</td><td>9</td><td>26</td><td>35</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>100</td><td>7</td><td>20</td><td>27</td></tr>
 </tbody>
 </table>
 </section>
@@ -204,13 +204,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 100/156 (64.1%)</p>
+  <p>TFDSL completion: 109/156 (69.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>14</td><td>6</td><td>11</td><td>17</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>46</td><td>7</td><td>9</td><td>16</td></tr>
-<tr><th scope="row">Stratagem</th><td>35</td><td>23</td><td>4</td><td>8</td><td>12</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>16</td><td>4</td><td>11</td><td>15</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>49</td><td>5</td><td>8</td><td>13</td></tr>
+<tr><th scope="row">Stratagem</th><td>35</td><td>26</td><td>4</td><td>5</td><td>9</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -220,7 +220,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Armada, Herald of Shrouds</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting TAP ability use and single-character opponent untaps, then selecting a matching-STAR character to untap and flipping this character.</td></tr>
 <tr><th scope="row">Autobot Countdown, Aerospace Commander</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Checking attack-damage survival and moving damage from this or a Guardian to the attacker.<br>bot-needs: Calculating the lowest ATK and DEF among qualifying KO characters.</td></tr>
 <tr><th scope="row">Autobot Pipes, Idiosyncratic Collector</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing attack damage to split two damage to this character.<br>bot-needs: Tracking a once-per-turn upgrade-scrap trigger, revealing the deck top, and matching battle-icon counts.</td></tr>
-<tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>Character</td><td>partial</td><td>1/3</td><td class="comment"></td><td class="comment">alt-needs: Swapping a hand card with a flipped blue Weapon and playing this character&#39;s Upgrade side on KO.<br>bot-needs: Replacing incoming damage-counter movement with redirect-and-repair and playing this character&#39;s Upgrade side on KO.</td></tr>
+<tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">bot-needs: Replacing incoming damage-counter movement with redirect-and-repair and playing this character&#39;s Upgrade side on KO.</td></tr>
 <tr><th scope="row">Axor, Opportunistic Fencer</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Moving a selected Weapon or Armor after another character&#39;s battle and using that character&#39;s Bounty ability.</td></tr>
 <tr><th scope="row">Decepticon Doublecrosser, Shield Brothers</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">both modes</td><td class="comment"></td></tr>
 <tr><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">moving damage gives +1/+1</td><td class="comment"></td></tr>
@@ -234,17 +234,13 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Nacelle, Eager Aerospace Engineer</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering characters by absence of printed abilities for a static team bonus.<br>bot-needs: Allowing an additional Upgrade play each turn with a printed-ability restriction.</td></tr>
 <tr><th scope="row">Optimus Prime, Dark Awakening</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Red Wizard, Ruler of Menonia</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Swapping a hand card with a flipped no-icon card.<br>bot-needs: Inspecting the opponent&#39;s hand and swapping it with revealed deck cards before reordering their deck.</td></tr>
-<tr><th scope="row">Sharkticon Biter, Brazen Berserker</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character returning from KO to the battlefield.</td></tr>
-<tr><th scope="row">Sharkticon Gnaw, Gluttonous Gourmand</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Revealing a non-green hand card and placing it under this character.</td></tr>
 <tr><th scope="row">Shockblast, Galactic Man</th><td>Character</td><td>unimplemented</td><td>0/3</td><td class="comment"></td><td class="comment">alt-needs: Playing this character&#39;s Upgrade side on KO.<br>upgrade-needs: Conditional Bounty use and replacing this Upgrade leaving the battlefield with moving it to KO.<br>bot-needs: Revealing and reordering the opponent&#39;s top deck cards and playing this character&#39;s Upgrade side on KO.</td></tr>
 <tr><th scope="row">Tow-Line, Signals Engineer</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">this with various actions - does it hurt for them to vanish from the action area and nullify any lingering EOT abilities they provide?</td><td class="comment"></td></tr>
 <tr><th scope="row">&quot;Dutch&quot;</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Ancient Security Tentacle</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Aspect of Bitterness</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting this Upgrade leaving the battlefield by a route other than being scrapped.</td></tr>
 <tr><th scope="row">Aspect of Death</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting this Upgrade leaving the battlefield by a route other than being scrapped.</td></tr>
-<tr><th scope="row">Aspect of Doubt</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Firing this Upgrade&#39;s immediate untap and repair effect when it is first attached; the Upgrade&#39;s own put listener is installed after the put-upgrade event.</td></tr>
 <tr><th scope="row">Aspect of Laughter</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a multi-card hand-scrap instruction once; scrap-hand currently emits one event per card, so a replacement cannot reduce the original batch size by one.</td></tr>
-<tr><th scope="row">Assuming Control</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Retaining the selected KO character&#39;s ATK while choosing a different recipient character.</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.</td></tr>
 <tr><th scope="row">Dreadful Feast</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and retaining three distinct characters on the same team across multiple picks; current previous-target history does not reliably preserve the chosen sources and destination.</td></tr>
 <tr><th scope="row">Energy Conversion Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting a single non-attack damage instruction&#39;s full target set and replacing it with one repair of all characters; char-damage replacements currently see targets individually.</td></tr>
@@ -257,7 +253,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Occupation</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Opportune Protection</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A single Secret Action replacement listener that can handle both attack-damage and non-attack char-damage; separate reveal listeners overwrite each other.</td></tr>
 <tr><th scope="row">Photon Charge</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Engine requests reorder without data; was on Brawn. Not clear why as the three events below are at different times</td><td class="comment"></td></tr>
-<tr><th scope="row">Secret Missive</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Firing this Upgrade&#39;s own on-put effect when first attached; its listener is installed after the put-upgrade event.</td></tr>
 <tr><th scope="row">Subcontractor Agreement</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Substituting another card&#39;s Bounty body during a Bounty invocation; do_bounty currently dispatches only the selected character&#39;s bound Bounty bodies.</td></tr>
 <tr><th scope="row">The Dweller Awakens</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting that an opponent&#39;s played Action causes a Secret Action to reveal or trigger; play-action exposes only the Action card and player, not that relationship.</td></tr>
 <tr><th scope="row">Thermal Sealant</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Technically this needs a has(pierce) of some kind because this just gave it negative pierce if it didn&#39;t have any. Which can effect some things like Jazz</td><td class="comment"></td></tr>
@@ -268,15 +263,12 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Energon Reclamation</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: An activated repair effect available during the main phase; fuel counters, attack-triggered flipping, repair, and Stratagem flipping are supported, but no main-phase Stratagem activation window exists.</td></tr>
 <tr><th scope="row">In The Name of Slingshot</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">2nd player&#39;s &#39;start of first turn&#39; is currently waiting for their first turn</td><td class="comment"></td></tr>
 <tr><th scope="row">Indigestion</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Granting a once-per-game TAP ability to a named character, selecting and scrapping its cards-under zone, and scaling damage from the successful scrap count.</td></tr>
-<tr><th scope="row">Localized Tremors</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Counting enemies that untap in the same batch to trigger a single opponent-selected Upgrade scrap; per-character untap events do not expose the batch count or prior tapped state.</td></tr>
 <tr><th scope="row">Mass Displacement Drive</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Overriding a character&#39;s STAR value by mode; STAR is currently a printed/deck-building value, not a modifiable static property.</td></tr>
 <tr><th scope="row">Orbital Command</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">When the combiner enters the battlefield, nothing makes this update to give him Guardian</td><td class="comment"></td></tr>
 <tr><th scope="row">Pit of Judgement</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Activating the repair-and-return effect during the main phase; the engine has no main-phase Stratagem activation window. Counter initialization and return_from_ko are supported.</td></tr>
-<tr><th scope="row">Quite A Haul</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: No additional DSL is required for the printed effect: Game already invokes a character&#39;s Bounty after an attack-damage KO. Confirm whether the Stratagem is intended to provide an extra Bounty invocation.</td></tr>
 <tr><th scope="row">Sound The Alarm</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a chosen character and adding its printed stats to that host; scrap search by arbitrary text is also unsupported.<br>back-needs: Moving an attached Stratagem to its owner&#39;s KO area when its host is KO&#39;d.</td></tr>
 <tr><th scope="row">Stuck On You</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing an Armor directly from scrap or KO once per game, as though it were in hand; the conditional extra Armor slot is implemented.</td></tr>
 <tr><th scope="row">Thermal Reciprocation</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">The ko listener won&#39;t work until Battlemasters are firing a Play Upgrade event</td><td class="comment">front-needs: Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.</td></tr>
-<tr><th scope="row">Third Party Brigade</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Deploying a named character from outside the game; the attack-flip trigger can be expressed, but the game has no sideboard/out-of-game zone and no effect for scrapping a flipped card before using its icons.</td></tr>
 <tr><th scope="row">This Gun For Hire</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Replacing a named character&#39;s faction and detecting play of its Upgrade side.<br>back-needs: Replacing a named Upgrade&#39;s factions and editing its printed text.</td></tr>
 </tbody>
 </table>

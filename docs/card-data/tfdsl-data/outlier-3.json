@@ -64,7 +64,7 @@
       "comment": "Last to Atk, Highest Atk, Lowest HP",
       "tfdsl": {
         "alt": "on-this-damage()->damage(1,opponent_pick(all_enemies()));revenge(damage(1,all_chars()))",
-        "bot": "static(atk,when(damage>=4),3);revenge(damage(1,all_chars()))"
+        "bot": "static(atk,when(this().damage>=4),3);revenge(damage(1,all_chars()))"
       }
     },
     {

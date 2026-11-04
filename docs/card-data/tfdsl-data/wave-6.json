@@ -44,8 +44,8 @@
     },
     {
       "name": "Aspect of Doubt",
-      "needs": "Firing this Upgrade's immediate untap and repair effect when it is first attached; the Upgrade's own put listener is installed after the put-upgrade event.",
-      "tfdsl": "put_only(faction=Quintesson,trait=Specialist,mode=bot || other_modes=bot)"
+      "comment": "TODO: Test",
+      "tfdsl": "put_only(faction=Quintesson,trait=Specialist,mode=bot || other_modes=bot);on-this-put()->(untap(attached());repair(2,attached()))"
     },
     {
       "name": "Aspect of Laughter",
@@ -58,7 +58,6 @@
     },
     {
       "name": "Assuming Control",
-      "needs": "Retaining the selected KO character's ATK while choosing a different recipient character.",
       "tfdsl": "choose(pick(self().ko,type=Character));if(confirm('Add its ATK to a character?'))->(choose(pick(all_friends((faction=Quintesson,trait=Specialist,mode=bot) || (faction=Quintesson,trait=Specialist,other_modes=bot) || name='Bombshell' || name='Dr. Arkeville' || name='Megaempress' || name='Mindwipe' || name='Soundblaster' || name='Soundwave' || name='Tarantulas' || name='Trypticon')));atk_eot(previous_target(2).atk,chosen()));move_to(self().ko,this())"
     },
     {
@@ -201,8 +200,7 @@
     },
     {
       "name": "Secret Missive",
-      "needs": "Firing this Upgrade's own on-put effect when first attached; its listener is installed after the put-upgrade event.",
-      "tfdsl": ""
+      "tfdsl": "on-put()->(draw(1);move_to(self().hand,pick_scrap(subtype='Secret Action',green>=1)))"
     },
     {
       "name": "Sharkticon Matrix",
@@ -373,9 +371,8 @@
     },
     {
       "name": "Localized Tremors",
-      "front-needs": "Counting enemies that untap in the same batch to trigger a single opponent-selected Upgrade scrap; per-character untap events do not expose the batch count or prior tapped state.",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=char-untap,batch(min=2),when(event().untapped.owner=opponent(),all_friends(fullname=this().target).count>0))->scrap_upgrade(opponent_pick(opponent().upgrades));on-untap(when(event().untapped.owner=opponent(),all_friends(fullname=this().target,def>event().untapped.def).count>0))->damage(1,event().untapped)"
       }
     },
     {
@@ -410,9 +407,8 @@
     },
     {
       "name": "Quite A Haul",
-      "front-needs": "No additional DSL is required for the printed effect: Game already invokes a character's Bounty after an attack-damage KO. Confirm whether the Stratagem is intended to provide an extra Bounty invocation.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-attack-damage(when(event().origin.faction=Mercenary,event().target.owner=opponent(),event().overkill>=0))->(if(confirm('Use this Mercenary\\'s Bounty again?'))->do_bounty(event().origin))"
       }
     },
     {
@@ -453,9 +449,8 @@
     },
     {
       "name": "Third Party Brigade",
-      "front-needs": "Deploying a named character from outside the game; the attack-flip trigger can be expressed, but the game has no sideboard/out-of-game zone and no effect for scrapping a flipped card before using its icons.",
       "tfdsl": {
-        "front": ""
+        "front": "on-before-begin-game(when(starting_team().count>0,starting_team(trait!=Combaticon).count=0))->summon_friend('Shockblast, Galactic Man');on(event=attack-flip,when(event().attacker.owner=self(),event().attacker.trait=Combaticon,event().card.black>=1),once())->scrap_flip(event().card,event(),event().attacker)"
       }
     },
     {
@@ -546,10 +541,9 @@
     },
     {
       "name": "Autobot Powerglide, Haughty Show-Off",
-      "alt-needs": "Swapping a hand card with a flipped blue Weapon and playing this character's Upgrade side on KO.",
       "bot-needs": "Replacing incoming damage-counter movement with redirect-and-repair and playing this character's Upgrade side on KO.",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-after-battle-flip(when(all(event().flips.cards,subtype=Weapon,blue>=1).count>0))->(on-this-after-battle(scope=afb,when(self().hand.count>0,all(event().flips.cards,subtype=Weapon,blue>=1).count>0))->(if(confirm('Swap a hand card with a flipped blue Weapon?'))->(choose(pick_hand());choose(pick(event().flips.cards,subtype=Weapon,blue>=1));move_to(self().hand,chosen());move_to(self().flips,previous_target(1)))))",
         "upgrade": "on(event=after-defend-flip,when(event().attacker=attached(),event().flips.black>=2))->pierce_eob(this().base_atk,attached())",
         "bot": ""
       }
@@ -686,10 +680,9 @@
     },
     {
       "name": "Sharkticon Biter, Brazen Berserker",
-      "bot-needs": "Detecting a character returning from KO to the battlefield.",
       "tfdsl": {
         "alt": "on-this-attack()->plan(1);on-this-after-attack-flip(when(event().flips.white>=1,event().flips.orange>=1,event().flips.green>=1))->extra_attack(attackers=all_friends(trait=Sharkticon,id!=this().id),required=false)",
-        "bot": ""
+        "bot": "on(event=return-from-ko,when(event().returned=this()))->bold_eot(2,pick_friend())"
       }
     },
     {
@@ -701,10 +694,9 @@
     },
     {
       "name": "Sharkticon Gnaw, Gluttonous Gourmand",
-      "bot-needs": "Revealing a non-green hand card and placing it under this character.",
       "tfdsl": {
-        "alt": "static(health,this().under.count);on-this-flip()->draw(1)",
-        "bot": ""
+        "alt": "static(health,this().under.count);on-this-flip()->(if(confirm('Draw a card?'))->draw(1))",
+        "bot": "static(health,this().under.count);on-this-flip()->(if(all(self().hand,green=0).count>0)->(if(confirm('Reveal a non-green card and put it under this?'))->(choose(pick_hand(green=0));reveal_cards(chosen());place_under(this(),chosen()))))"
       }
     },
     {
