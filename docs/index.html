@@ -42,6 +42,7 @@
       gap: .75rem;
       transform: translateX(-50%);
     }
+    #player-name { width: 8rem; }
     .deck-selectors label { display: flex; align-items: center; gap: .35rem; font-size: .8rem; }
     .deck-selectors .deck-load-button {
       display: inline-grid;
@@ -62,7 +63,7 @@
       height: 1px;
       opacity: 0;
     }
-    .deck-selectors select {
+    .deck-selectors select, .deck-selectors input[type="text"] {
       padding: .35rem;
       color: inherit;
       background: #10151b;
@@ -801,7 +802,11 @@
     <p id="status">Loading game...</p>
     <div class="deck-selectors">
       <label>
-        Player 1
+        Name
+        <input id="player-name" type="text" value="Player 1" maxlength="40" autocomplete="nickname">
+      </label>
+      <label>
+        Deck
         <select id="human-deck">
           <option selected value="0b706068.json">Wave 1 Starter</option>
           <option value="135fecd5.json">Wave 2 Starter</option>
@@ -821,7 +826,7 @@
         </label>
       </label>
       <label>
-        Player 2
+        Computer
         <select id="computer-deck">
           <option value="0b706068.json">Wave 1 Starter</option>
           <option selected value="135fecd5.json">Wave 2 Starter</option>
