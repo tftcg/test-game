@@ -316,8 +316,7 @@
     },
     {
       "name": "Terrorcon Enigma",
-      "tfdsl": "combine('Abominus, Hellsparked Horror',5,bot,Terrorcon)",
-      "needs": "Opponent-controlled enemy flipping and damage when that flip fails"
+      "tfdsl": "if(all_friends(fullname='Abominus, Hellsparked Horror').count>0)->(flip(pick_enemy());damage(2,all(flip_result().failed)));if(all(self().chars+self().ko,trait=Terrorcon,mode=bot).count>=5)->combine('Abominus, Hellsparked Horror',5,bot,Terrorcon)"
     },
     {
       "name": "The Power to Bite",
@@ -462,9 +461,8 @@
     },
     {
       "name": "It's As Good As Used!",
-      "front-needs": "one-or-many card, needs a multi-scrap event solution",
       "tfdsl": {
-        "front": "on(event=scrap-upgrade,when(event().cause.owner=opponent(),event().from.owner=this().owner,all_friends(fullname=this().target).count>0,all(self().hand,type=Upgrade).count>=2))->(if(confirm('Reveal Upgrades to replace the scrapped Upgrade?'))->(reveal_cards(pick_hand(type=Upgrade,upto=all(self().hand,type=Upgrade).count));if(previous_target().count>=2)->play_upgrade(opponent_pick(previous_target()),event().from)))"
+        "front": "on(event=scrap-upgrade,batch(min=1),when(event().cause.owner=opponent(),event().from.owner=this().owner,all_friends(fullname=this().target).count>0))->(each(all(unique(all(batch().matches).from)))->(if(all(self().hand,type=Upgrade).count>=2)->(if(confirm('Reveal Upgrades to replace the scrapped Upgrades?'))->(choose(pick_hand(type=Upgrade,upto=all(self().hand,type=Upgrade).count));if(previous_target(0-1).count>=2)->(reveal_cards(previous_target(0-1));play_upgrade(opponent_pick(previous_target(0-1)),it()))))))"
       }
     },
     {
@@ -639,11 +637,9 @@
     {
       "name": "Ashtray, Come to Where the Flavor Is!",
       "tfdsl": {
-        "alt": "drifter()",
-        "bot": "drifter()"
-      },
-      "alt-needs": "Detecting cards with no battle icons and Stations",
-      "bot-needs": "Counting icon combinations in an opponent scrap pile and opponent-selected repeated damage"
+        "alt": "drifter();on(event=play-action,when(event().player=self(),event().card.icons.count=0))->pierce_eot(1,all_friends());on(event=play-upgrade,when(event().player=self(),event().played.icons.count=0))->pierce_eot(1,all_friends());station('Punctured Vinyl Seat',requires(stars<=9,mode=bot),gives(def(1),trait(Motorcycle)),text(on(event=char-defend,when(event().defender=occupant(),event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)))",
+        "bot": "drifter();on-this-flip()->repeat(all(opponent().scrap,black>=1,green>=1,icons.count>=3).count)->damage(1,opponent_pick(all_enemies()))"
+      }
     },
     {
       "name": "Autobot Infinitus",
@@ -677,29 +673,26 @@
     },
     {
       "name": "Crasher, Fractious Fanatic",
+      "comment": "TEST: Test",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Detecting simultaneous non-attack damage and choosing between multi-character repair or enemy damage",
-      "bot-needs": "Selecting a trait on the defender and damaging other enemies sharing that trait"
+        "alt": "on(event=char-damage,batch(min=2),when(event().origin.owner=opponent(),event().amount>0))->(if(unique(all(batch().matches).damaged).count>=2,self().flags!=this().id+'_crasher_used')->(set_flag_eot(this().id+'_crasher_used');choose(options('Repair','Damage'));if(chosen()='Repair')->repair(1,all_friends(id=all(batch().matches).damaged.id)):else->damage(1,all_enemies())))",
+        "bot": "on-this-attack-damage(when(event().damage>0,event().target.trait=Melee || event().target.trait=Ranged || event().target.trait=Specialist))->(choose(options(all(event().target.traits,candidate()=Melee || candidate()=Ranged || candidate()=Specialist)));damage(1,pick_enemy(upto=2,id!=event().target.id,trait=chosen())))"
+      }
     },
     {
       "name": "Decepticon Wingthing, Loyal, Lethal Cohort",
-      "bot-needs": "Currently it is doing a damage for each card put on the deck because there isn't a macro event",
       "tfdsl": {
         "alt": "stealth();on-this-flip()->(if(confirm('Move damage?'))->(choose(pick_friend(stars>=10));move(1,chosen(),pick_char(id!=chosen().id))))",
-        "bot": "on(event=put-deck)->(if(this().upgrades.count>0)->damage(1,pick_enemy()):else->damage(1,opponent_pick_opponent_char()))"
+        "bot": "on(event=put-deck,batch(min=1),when(event().to='top',event().from_zone=event().player.hand,event().card.owner=event().player))->(if(this().upgrades.count>0)->damage(1,pick_enemy()):else->damage(1,opponent_pick_opponent_char()))"
       }
     },
     {
       "name": "Detritus, Now With Sleek, Sexy Handling!",
       "tfdsl": {
-        "alt": "static(pierce,1,target=all_friends(trait='Road Drone'))",
-        "bot": ""
+        "alt": "static(pierce,1,target=all_friends(trait='Road Drone'));on-this-battle()->(if(all(road-drones().values,candidate()!=all(self().chars+self().ko).fullname).count>0)->(choose(options(all(road-drones().values,candidate()!=all(self().chars+self().ko).fullname)));summon_friend(chosen());tap(previous_target(0-1))))",
+        "bot": "on-this-flip()->(if(confirm('Play an Upgrade?'))->play(pick_hand(type=Upgrade));if(unique(all(self().chars+self().ko,trait='Road Drone').fullname).count>=4)->(if(confirm('Combine into Roadmaster Prime Mode?'))->combine('Roadmaster Prime Mode, Master of Chaos',5,any,'Detritus, Now With Sleek, Sexy Handling!','Junker Drone','Scrapper Drone','Trasher Drone','Waster Drone')))"
       },
-      "alt-needs": "Deploying a uniquely named Road Drone from outside the game in alt mode tapped when Detritus battles",
-      "bot-needs": "After playing an Upgrade on flip, checking for four distinct Road Drones across the battlefield and KO area and combining them with Detritus"
+      "comment": "NOTE: The targeted Pierce aura currently does not extend to newly summoned Drones."
     },
     {
       "name": "Gilthor, Wounded Retribution",
@@ -735,20 +728,18 @@
     {
       "name": "Junkheap, Wrecked to Ruin! Keeps on Doin'!",
       "tfdsl": {
-        "alt": "drifter()",
+        "alt": "drifter();on-this-defend()->max_flips(4);station('Fin-Backed Cantle',requires(stars<=11,mode=bot),gives(def(1),trait(Motorcycle)),text(on(event=enter-station,when(event().station=station()))->(reveal_cards(top_deck());if(previous_target().icons.count=0)->(if(confirm('Play the revealed card?'))->play(previous_target())):else->(if(confirm('Put the revealed card into hand?'))->move_to(self().hand,previous_target())))))",
         "bot": "drifter()"
       },
-      "alt-needs": "Limiting battle flips and Stations",
       "bot-needs": "Selecting an opponent battle card to scrap without its icons and repairing by selected icon count"
     },
     {
       "name": "Junkion Nancy, Just Say No to Sparkplugs!",
       "tfdsl": {
-        "alt": "drifter()",
-        "bot": "drifter()"
+        "alt": "drifter();static(focus,1,target=all_friends(all_traits=Motorcycle))",
+        "bot": "drifter();on(event=leave-station,when(event().left=this(),self().flags!=this().id+'_nancy_used'))->(set_flag_eot(this().id+'_nancy_used');if(this().damage>=3)->repair(1,all_friends()):else->damage(1,pick_enemy()))"
       },
-      "alt-needs": "Characters with a specified alternate mode and Stations",
-      "bot-needs": "Detecting a character leaving a Station"
+      "alt-needs": "Lithonian Cockpit Station: track this turn's Focus uses and occurrences of scrapping one or more cards from the top of your deck, including activity before Nancy enters alt mode"
     },
     {
       "name": "Lord Kledji, Royal Ruler of Quintessa",
@@ -854,17 +845,15 @@
       "name": "Solarbot, Enigmatic Sunsteader",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=untapped));static(def,when(this().tapped=untapped),0-1);static(brave,when(this().tapped=tapped));static(def,when(this().tapped=tapped),1)",
-        "bot": ""
-      },
-      "bot-needs": "Counting cards under the defender, head-mode characters on the defender, and Stations when calculating temporary ATK"
+        "bot": "on-this-attack()->(if(all(event().defender.under,cardtype=character).count>0 || event().defender.head.mode=head || all(event().defender.stations,occupied=true).count>0)->atk_eob(2,this());atk_eob(all(event().defender.under,cardtype=battle).count,this()))"
+      }
     },
     {
       "name": "Soundbarrier, Grudging Foot Soldier Support",
       "tfdsl": {
-        "bot": "",
+        "bot": "on(event=after-attack-flip,when(event().attacker.owner=opponent()))->(if(self().flags!='soundbarrier_'+battle().id)->(set_flag_eot('soundbarrier_'+battle().id);pierce_eob(0-max(0,event().flips.black-3),event().attacker)))",
         "upgrade": "on(event=start-turn)->tough_eot(2,attached())"
-      },
-      "bot-needs": "Capping a Black icon's Pierce contribution"
+      }
     },
     {
       "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
@@ -887,11 +876,9 @@
     {
       "name": "Terrorcon Cutthroat, Shock and Cawww",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip(when(starting_team(trait=Terrorcon,id!=this().id).count>=2))->(if(confirm('Reveal two Secret Actions and scrap one?'))->(reveal_cards(pick_hand(subtype='Secret Action',exact=2));if(done())->(choose(pick(previous_target(0-1)));scrap_hand(chosen());if(all(self().scrap,id=chosen().id).count=1)->move_to(opponent().hand,opponent_pick(opponent().actions,subtype='Secret Action',revealed=false)))))",
         "bot": "on-friend-ko(when(event().ko.trait=Terrorcon))->untap(pick_friend(trait=Terrorcon,stars=4))"
-      },
-      "comment": "TEST: test",
-      "alt-needs": "Revealing Secret Actions from hand and returning an opponent's face-down Secret Action"
+      }
     },
     {
       "name": "Terrorcon Hun-Gurrr, Eaters Digest",
@@ -937,15 +924,14 @@
     {
       "name": "Abominus, Hellsparked Horror",
       "tfdsl": {
-        "combiner": "static(bold,unique(this().upgrades.subtype).count);static(pierce,unique(this().upgrades.subtype).count)"
-      },
-      "combiner-needs": "Flipping opponent-controlled characters and damaging those that cannot flip"
+        "combiner": "static(bold,unique(this().upgrades.subtype).count);static(pierce,unique(this().upgrades.subtype).count);on-this-combine()->(if(confirm('Have your opponent flip their characters?'))->(flip(all_enemies());damage(2,all(flip_result().failed))))"
+      }
     },
     {
       "name": "Roadmaster Prime Mode, Master of Chaos",
       "comment": "TEST: if the game is lost while it tries to deploy its drones out",
       "tfdsl": {
-        "combiner": "on-this-combine()->(choose(all(self().hand));scrap_hand(previous_target(1));choose(all(opponent().hand));scrap_hand(previous_target(2));draw(previous_target(2).count,self());draw(previous_target(1).count,opponent()));on-this-ko()->repeat(this().upgrades.count)->(choose(pick_under_this(trait=Road Drone));deploy(this(),chosen(),alt))"
+        "combiner": "on-this-combine()->(choose(all(self().hand));scrap_hand(previous_target(1));choose(all(opponent().hand));scrap_hand(previous_target(2));draw(previous_target(2).count,self());draw(previous_target(1).count,opponent()));on-this-ko()->repeat(this().upgrades.count)->(choose(pick_under_this(trait='Road Drone'));deploy(this(),chosen(),alt))"
       }
     },
     {

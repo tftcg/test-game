@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1383/1514 (91.3%)</p>
+  <p>TFDSL completion: 1400/1514 (92.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>386</td><td>25</td><td>15</td><td>40</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>571</td><td>9</td><td>32</td><td>41</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>131</td><td>7</td><td>20</td><td>27</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>395</td><td>18</td><td>13</td><td>31</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>572</td><td>8</td><td>32</td><td>40</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>132</td><td>6</td><td>20</td><td>26</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 452/578 (78.2%)</p>
+  <p>TFDSL completion: 469/578 (81.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>81</td><td>25</td><td>15</td><td>40</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>191</td><td>9</td><td>26</td><td>35</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>100</td><td>7</td><td>20</td><td>27</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>90</td><td>18</td><td>13</td><td>31</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>192</td><td>8</td><td>26</td><td>34</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>101</td><td>6</td><td>20</td><td>26</td></tr>
 </tbody>
 </table>
 </section>
@@ -204,11 +204,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 109/156 (69.9%)</p>
+  <p>TFDSL completion: 111/156 (71.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>16</td><td>4</td><td>11</td><td>15</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>17</td><td>4</td><td>10</td><td>14</td></tr>
 <tr><th scope="row">Battlecard</th><td>62</td><td>49</td><td>5</td><td>8</td><td>13</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>26</td><td>4</td><td>5</td><td>9</td></tr>
 </tbody>
@@ -233,13 +233,14 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Mind Control Helmet</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">head-needs: Choosing between two temporary battle abilities or Plan.</td></tr>
 <tr><th scope="row">Nacelle, Eager Aerospace Engineer</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Filtering characters by absence of printed abilities for a static team bonus.<br>bot-needs: Allowing an additional Upgrade play each turn with a printed-ability restriction.</td></tr>
 <tr><th scope="row">Optimus Prime, Dark Awakening</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Red Wizard, Ruler of Menonia</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Swapping a hand card with a flipped no-icon card.<br>bot-needs: Inspecting the opponent&#39;s hand and swapping it with revealed deck cards before reordering their deck.</td></tr>
+<tr><th scope="row">Red Wizard, Ruler of Menonia</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Shockblast, Galactic Man</th><td>Character</td><td>unimplemented</td><td>0/3</td><td class="comment"></td><td class="comment">alt-needs: Playing this character&#39;s Upgrade side on KO.<br>upgrade-needs: Conditional Bounty use and replacing this Upgrade leaving the battlefield with moving it to KO.<br>bot-needs: Revealing and reordering the opponent&#39;s top deck cards and playing this character&#39;s Upgrade side on KO.</td></tr>
 <tr><th scope="row">Tow-Line, Signals Engineer</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">this with various actions - does it hurt for them to vanish from the action area and nullify any lingering EOT abilities they provide?</td><td class="comment"></td></tr>
 <tr><th scope="row">&quot;Dutch&quot;</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Ancient Security Tentacle</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Aspect of Bitterness</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting this Upgrade leaving the battlefield by a route other than being scrapped.</td></tr>
 <tr><th scope="row">Aspect of Death</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting this Upgrade leaving the battlefield by a route other than being scrapped.</td></tr>
+<tr><th scope="row">Aspect of Doubt</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Aspect of Laughter</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a multi-card hand-scrap instruction once; scrap-hand currently emits one event per card, so a replacement cannot reduce the original batch size by one.</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.</td></tr>
 <tr><th scope="row">Dreadful Feast</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and retaining three distinct characters on the same team across multiple picks; current previous-target history does not reliably preserve the chosen sources and destination.</td></tr>
@@ -298,30 +299,27 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 126/199 (63.3%)</p>
+  <p>TFDSL completion: 141/199 (70.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>20</td><td>19</td><td>3</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>59</td><td>4</td><td>18</td><td>22</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>25</td><td>2</td><td>14</td><td>16</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>28</td><td>12</td><td>2</td><td>14</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>60</td><td>3</td><td>18</td><td>21</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>26</td><td>1</td><td>14</td><td>15</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Abominus, Hellsparked Horror</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Flipping opponent-controlled characters and damaging those that cannot flip</td></tr>
-<tr><th scope="row">Ashtray, Come to Where the Flavor Is!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Detecting cards with no battle icons and Stations<br>bot-needs: Counting icon combinations in an opponent scrap pile and opponent-selected repeated damage</td></tr>
 <tr><th scope="row">Autobot Roller, Scout Drone</th><td>Character</td><td>note</td><td>1/1</td><td class="comment">The &#39;treat this as though it were named Optimus Prime&#39; ability is handled by adding this character explicitly to both relevant upgrades</td><td class="comment"></td></tr>
 <tr><th scope="row">Clench, Colossus of Obliteration</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Scrapping a battle card without its icons and choosing an icon color to calculate damage</td></tr>
-<tr><th scope="row">Crasher, Fractious Fanatic</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Detecting simultaneous non-attack damage and choosing between multi-character repair or enemy damage<br>bot-needs: Selecting a trait on the defender and damaging other enemies sharing that trait</td></tr>
-<tr><th scope="row">Decepticon Wingthing, Loyal, Lethal Cohort</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Currently it is doing a damage for each card put on the deck because there isn&#39;t a macro event</td></tr>
-<tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Deploying a uniquely named Road Drone from outside the game in alt mode tapped when Detritus battles<br>bot-needs: After playing an Upgrade on flip, checking for four distinct Road Drones across the battlefield and KO area and combining them with Detritus</td></tr>
+<tr><th scope="row">Crasher, Fractious Fanatic</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
+<tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The targeted Pierce aura currently does not extend to newly summoned Drones.</td><td class="comment"></td></tr>
 <tr><th scope="row">Gilthor, Wounded Retribution</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting distinct friendly characters that took non-attack damage during this turn<br>bot-needs: Reading an Upgrade&#39;s printed +ATK/+DEF stat-box values from its scrap event and granting that amount until end of turn</td></tr>
 <tr><th scope="row">Greasestain, No Muss! No Fuss!</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Limiting battle flips and Stations<br>bot-needs: Selecting an opponent battle card to scrap without its icons and repairing by selected icon count</td></tr>
-<tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Characters with a specified alternate mode and Stations<br>bot-needs: Detecting a character leaving a Station</td></tr>
+<tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Selecting an opponent battle card to scrap without its icons and repairing by selected icon count</td></tr>
+<tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Lithonian Cockpit Station: track this turn&#39;s Focus uses and occurrences of scrapping one or more cards from the top of your deck, including activity before Nancy enters alt mode</td></tr>
 <tr><th scope="row">Loudmouth, Incendiary Control</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap</td></tr>
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Allowing another weapon in attached&#39;s slot but only if it has only 1 weapon slot</td></tr>
 <tr><th scope="row">Quig</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -331,11 +329,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>Character</td><td>partial</td><td>1/3</td><td class="comment"></td><td class="comment">alt 2-needs: Checking this character&#39;s Oppress without the conditional static grant satisfying its own condition<br>body-needs: Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities</td></tr>
 <tr><th scope="row">Sideswipe, Covert Clone</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing an opponent-caused Upgrade scrap with a different Upgrade<br>bot-needs: Finding the highest stat-box values among filtered KO Upgrades</td></tr>
 <tr><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Secret Action-style reveal and cancellation while an opponent plays an Upgrade</td></tr>
-<tr><th scope="row">Solarbot, Enigmatic Sunsteader</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Counting cards under the defender, head-mode characters on the defender, and Stations when calculating temporary ATK</td></tr>
-<tr><th scope="row">Soundbarrier, Grudging Foot Soldier Support</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Capping a Black icon&#39;s Pierce contribution</td></tr>
 <tr><th scope="row">Stock-Pyl, 100 Billion Stars, One Precious World</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Conditional attack-damage redistribution with rounded division and starting-team checks<br>bot-needs: Once-per-turn tracking and rounded division when moving damage</td></tr>
 <tr><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">bot mode</td><td class="comment">alt-needs: Secret Action-style reveal and cancellation while an opponent plays an Action</td></tr>
-<tr><th scope="row">Terrorcon Cutthroat, Shock and Cawww</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">test</td><td class="comment">alt-needs: Revealing Secret Actions from hand and returning an opponent&#39;s face-down Secret Action</td></tr>
 <tr><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This doesn&#39;t let you tap an already tapped 6 star or fewer character, and thus do 1 damage if it has stealth</td><td class="comment"></td></tr>
 <tr><th scope="row">Thunder Guts Gilthor, The One Who Claps</th><td>Character</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">combiner-needs: Moving a damage counter from the attacker and the station host to the defender without making an undamaged source invalid</td></tr>
 <tr><th scope="row">Abrogate</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Matching a revealed hand Action against the played Action&#39;s battle icons, then cancelling and returning that Action during its play window</td></tr>
@@ -370,7 +365,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Skimming Off the Top</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sparring Lessons</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Spread Democracy!</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">That the text on this card is flat out broken, I&#39;ve implemented as &#39;If that enemy is attacking it gets Drifter, if it is defending it gets Bandit</td><td class="comment"></td></tr>
-<tr><th scope="row">Terrorcon Enigma</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Opponent-controlled enemy flipping and damage when that flip fails</td></tr>
 <tr><th scope="row">Throttle</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Too Short For This Ride</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A DSL operation to force a character out of a Station and a temporary effect that prevents that character from re-entering</td></tr>
 <tr><th scope="row">Traffic Checkpoint</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -384,7 +378,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Don&#39;t Touch That Dial!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppression of White-icon battle effects for a single battle</td></tr>
 <tr><th scope="row">Four the Selectors!</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">Ignoring Horde support as no card references it yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Ignore the Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Moving damage counters between a Character and a Stratagem; counters do not represent damage or update Character damage</td></tr>
-<tr><th scope="row">It&#39;s As Good As Used!</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: one-or-many card, needs a multi-scrap event solution</td></tr>
 <tr><th scope="row">Kakistocracy</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Conditional starting STAR allowance, a main-phase timing hook, and an operation to remove a character from its Station; Rolling Action tap/untap is supported</td></tr>
 <tr><th scope="row">King of Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Detecting Scorpulator&#39;s KO and tracking when both specific Upgrade sides are played<br>back-needs: Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported</td></tr>
 <tr><th scope="row">Materiel War</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?</td><td class="comment"></td></tr>

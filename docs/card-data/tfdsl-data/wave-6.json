@@ -44,7 +44,7 @@
     },
     {
       "name": "Aspect of Doubt",
-      "comment": "TODO: Test",
+      "comment": "TEST: Test",
       "tfdsl": "put_only(faction=Quintesson,trait=Specialist,mode=bot || other_modes=bot);on-this-put()->(untap(attached());repair(2,attached()))"
     },
     {
@@ -664,11 +664,10 @@
     },
     {
       "name": "Red Wizard, Ruler of Menonia",
-      "alt-needs": "Swapping a hand card with a flipped no-icon card.",
-      "bot-needs": "Inspecting the opponent's hand and swapping it with revealed deck cards before reordering their deck.",
+      "comment": "TEST: test",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "on-friend-after-attack-flip(when(all(event().flips.cards,icons.count=0).count>0))->(on(event=char-after-attack,scope=afb,when(event().attacker.owner=self(),self().hand.count>0,all(event().flips.cards,icons.count=0).count>0))->(if(confirm('Swap a hand card with an iconless flipped card?'))->(choose(pick_hand());choose(pick(event().flips.cards,icons.count=0));move_to(self().hand,chosen());move_to(self().flips,previous_target(1)))))",
+        "bot": "on(event=play-action,when(event().player=self(),event().card.stars=1))->(reveal_cards(opponent_top_deck(count=3));reveal_cards(all(opponent().hand),mute_opponents=true);choose(range(0,min(previous_target(1).count,opponent().hand.count)));if(chosen()>0)->(choose(pick(previous_target(1),exact=chosen()));choose(pick(opponent().hand,exact=previous_target(4).count));move_to(opponent().hand,previous_target(4));put_deck_top(opponent(),previous_target(5)));if(previous_target(1).count>1)->reorder(opponent().deck,previous_target(1).count));on(event=play-upgrade,when(event().player=self(),event().played.stars=1))->(reveal_cards(opponent_top_deck(count=3));reveal_cards(all(opponent().hand),mute_opponents=true);choose(range(0,min(previous_target(1).count,opponent().hand.count)));if(chosen()>0)->(choose(pick(previous_target(1),exact=chosen()));choose(pick(opponent().hand,exact=previous_target(4).count));move_to(opponent().hand,previous_target(4));put_deck_top(opponent(),previous_target(5)));if(previous_target(1).count>1)->reorder(opponent().deck,previous_target(1).count))"
       }
     },
     {
