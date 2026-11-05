@@ -524,10 +524,9 @@
     {
       "name": "Autobot Countdown, Aerospace Commander",
       "alt-needs": "Checking attack-damage survival and moving damage from this or a Guardian to the attacker.",
-      "bot-needs": "Calculating the lowest ATK and DEF among qualifying KO characters.",
       "tfdsl": {
         "alt": "",
-        "bot": ""
+        "bot": "static(atk,min(all(self().ko,name='Omega Supreme' || trait=Guardian).atk));static(def,min(all(self().ko,name='Omega Supreme' || trait=Guardian).def))"
       }
     },
     {
@@ -640,10 +639,9 @@
     },
     {
       "name": "Nacelle, Eager Aerospace Engineer",
-      "alt-needs": "Filtering characters by absence of printed abilities for a static team bonus.",
       "bot-needs": "Allowing an additional Upgrade play each turn with a printed-ability restriction.",
       "tfdsl": {
-        "alt": "",
+        "alt": "each(all_friends())->(static(atk,when(it().faction=Decepticon,it().vanilla=true),1,target=it());static(def,when(it().faction=Decepticon,it().vanilla=true),1,target=it()))",
         "bot": ""
       }
     },
@@ -707,13 +705,12 @@
     },
     {
       "name": "Shockblast, Galactic Man",
-      "alt-needs": "Playing this character's Upgrade side on KO.",
       "upgrade-needs": "Conditional Bounty use and replacing this Upgrade leaving the battlefield with moving it to KO.",
-      "bot-needs": "Revealing and reordering the opponent's top deck cards and playing this character's Upgrade side on KO.",
+      "bot-needs": "Battlemaster stuff. Maybe make standard Battlemaster checks about having an upgrde mode with Battlemaster trait",
       "tfdsl": {
-        "alt": "",
+        "alt": "on-this-flip()->(each(all_players())->draw(1,it()))",
         "upgrade": "",
-        "bot": ""
+        "bot": "on-this-flip()->(reveal_cards(opponent_top_deck(count=2));if(previous_target().count>1)->reorder(opponent().deck,previous_target().count);put_deck_bottom(opponent(),pick(previous_target(),upto=2)))"
       }
     },
     {

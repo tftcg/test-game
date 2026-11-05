@@ -161,8 +161,7 @@
     },
     {
       "name": "Me Grimlock Need New Strategy",
-      "tfdsl": "",
-      "needs": "Moving a named Stratagem from KO or outside the game to the battlefield, then matching and replacing another Stratagem by its shared target"
+      "tfdsl": "if(all(self().stratagems,name=me-grimlock-stratagems().values).count>0,exists_friend(name=Clobber) || exists_friend(name=Grimlock,trait=Dinobot))->(choose(me-grimlock-stratagems());if(all(self().ko,cardtype=stratagem,name=chosen()).count>0)->return_from_ko(pick(self().ko,cardtype=stratagem,name=chosen())):else->summon(entity=stratagem,chosen());move_to(self().ko,pick(self().stratagems,name=me-grimlock-stratagems().values,target=all(self().stratagems,name=chosen()).target)))"
     },
     {
       "name": "Mirror Response Mode",
@@ -666,10 +665,9 @@
     {
       "name": "Clench, Colossus of Obliteration",
       "tfdsl": {
-        "alt": "tough(2)",
+        "alt": "tough(2);on-this-defend-flip()->(if(self().flags!=this().id+'_clench_used')->(if(confirm('Scrap a flipped card without using its icons?'))->(choose(pick(event().flips.cards));scrap_flip(chosen(),event(),this());set_flag_eot(this().id+'_clench_used');if(chosen().colours.count>0)->(choose(options(all(chosen().colours)));damage(all(previous_target(1).icons,colour=chosen()).count,event().attacker)))))",
         "bot": "oppress(2);on-this-attack()->(scrap_hand(pick_hand(upto=3));if(done())->atk_eot(previous_target().count,this()))"
-      },
-      "alt-needs": "Scrapping a battle card without its icons and choosing an icon color to calculate damage"
+      }
     },
     {
       "name": "Crasher, Fractious Fanatic",
@@ -698,10 +696,8 @@
       "name": "Gilthor, Wounded Retribution",
       "tfdsl": {
         "alt": "",
-        "bot": ""
-      },
-      "alt-needs": "Counting distinct friendly characters that took non-attack damage during this turn",
-      "bot-needs": "Reading an Upgrade's printed +ATK/+DEF stat-box values from its scrap event and granting that amount until end of turn"
+        "bot": "on(event=play-action,when(event().player=this().owner))->damage(1,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.atk>0))->atk_eot(event().scrapped.atk,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.def>0))->def_eot(event().scrapped.def,this())"
+      }
     },
     {
       "name": "Greasestain, No Muss! No Fuss!",
@@ -793,20 +789,16 @@
     {
       "name": "Rum-Maj, Wreck-Gar Sold Separately!",
       "tfdsl": {
-        "alt": "bandit()",
-        "bot": "bandit()"
-      },
-      "alt-needs": "Stations and conditional global stat and keyword effects",
-      "bot-needs": "Counting battle cards flipped for conditional temporary effects"
+        "alt": "bandit();static(oppress,1,target=all_friends());static(atk,when(all(this().stations,name='Stringfield Seat').occupant.trait=Leader),1,target=all_friends());static(pierce,when(all(this().stations,name='Stringfield Seat').occupant.trait=Leader),1,target=all_friends());station('Stringfield Seat',requires(stars<=9,mode=bot),gives(trait(Motorcycle)),text())",
+        "bot": "bandit();on-friend-after-attack-flip(when(event().flips.cards.count<=4))->(pierce_eob(1,event().attacker);if(event().flips.cards.count<=2)->atk_eob(1,event().attacker))"
+      }
     },
     {
       "name": "Scrapheap, It's Not Trash If It's Worth Cash!",
       "tfdsl": {
-        "alt": "bandit()",
-        "bot": "bandit()"
-      },
-      "alt-needs": "Stations and playing a qualifying Upgrade from scrap",
-      "bot-needs": "Post-battle Upgrade replacement from scrap with a different-name condition"
+        "alt": "bandit();each(all_friends())->(static(atk,when(battle().attacker=it() || battle().defender=it()),all(it().upgrades,subtype=Weapon,vanilla=true).count,target=it());static(def,when(battle().attacker=it() || battle().defender=it()),all(it().upgrades,subtype=Armor,vanilla=true).count,target=it()));station('Rubbish Crate',requires(stars<=9,mode=bot),gives(trait(Motorcycle)),text(on(event=enter-station,when(event().station=station()))->(if(confirm('Play a vanilla Weapon or Armor from scrap?'))->play_upgrade(pick_scrap(vanilla=true,(subtype=Weapon,atk=1) || (subtype=Armor,def=1)),event().entered))))",
+        "bot": "bandit();on-this-attack()->(on-this-after-attack(scope=afb)->(if(all(this().upgrades,vanilla=true).count>0)->(if(confirm('Replace a vanilla Upgrade from scrap?'))->(choose(pick(this().upgrades,vanilla=true));scrap_upgrade(chosen());if(all(self().scrap,id=chosen().id).count=1)->play_upgrade(pick_scrap(type=Upgrade,vanilla=true,name!=chosen().name),this())))))"
+      }
     },
     {
       "name": "Scrapper Drone",
@@ -828,10 +820,9 @@
       "name": "Sideswipe, Covert Clone",
       "tfdsl": {
         "alt": "static(atk,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),2);static(pierce,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),1)",
-        "bot": ""
+        "bot": "static(atk,max(all(self().ko,type=Upgrade,trait='Battle Master' || trait=Weaponizer,base_atk>0).base_atk));static(def,max(all(self().ko,type=Upgrade,trait='Battle Master' || trait=Weaponizer,base_def>0).base_def))"
       },
-      "alt-needs": "Replacing an opponent-caused Upgrade scrap with a different Upgrade",
-      "bot-needs": "Finding the highest stat-box values among filtered KO Upgrades"
+      "alt-needs": "Replacing an opponent-caused Upgrade scrap with a different Upgrade"
     },
     {
       "name": "Sinnertwin, Two-Faced Disgrace",
@@ -944,8 +935,7 @@
       "name": "Thunder Guts Gilthor, The One Who Claps",
       "tfdsl": {
         "combiner": "pierce(4);on-this-attack-damage(when(event().damage%2=1))->damage(1,all_enemies());on-this-combine()->repair(10,pick_friend(id!=this().id));station('Annihilator Cannon',requires(stars<=8,mode=bot),gives(atk(2),def(1),trait(Tank)),text(on(event=char-attack,when(event().attacker=occupant()))->(move(1,occupant(),event().defender);move(1,host(),event().defender))))"
-      },
-      "combiner-needs": "Moving a damage counter from the attacker and the station host to the defender without making an undamaged source invalid"
+      }
     }
   ]
 }
