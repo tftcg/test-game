@@ -480,7 +480,7 @@
       "name": "Raider Laserbeak, Espionage • Interrogation",
       "tfdsl": {
         "alt": "on-this-flip()->(draw(1);scrap_hand(pick_hand()))",
-        "bot": "tap_ability()->(if(confirm('Play Secret Action?'))->play(pick_hand(subtype='Secret Action')))"
+        "bot": "pierce(2);tap_ability()->(if(confirm('Play Secret Action?'))->play(pick_hand(subtype='Secret Action')))"
       }
     },
     {
