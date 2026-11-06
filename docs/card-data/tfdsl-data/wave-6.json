@@ -208,7 +208,7 @@
     },
     {
       "name": "Shield Crash",
-      "tfdsl": "choose(pick_friend());if(previous_target().def<previous_target().atk)->(atk_eot(previous_target().def - previous_target().atk,previous_target());def_eot(previous_target().atk - previous_target().def,previous_target()));if(previous_target().def>=previous_target().atk)->(atk_eot(previous_target().def - previous_target().atk,previous_target());def_eot(previous_target().atk - previous_target().def,previous_target()))"
+      "tfdsl": "choose(pick_friend());each(all(options(chosen().def - chosen().atk).values))->(atk_eot(it(),chosen());def_eot(0 - it(),chosen()))"
     },
     {
       "name": "Sidecar Artillery",
@@ -443,7 +443,7 @@
       "comment": "NOTE: The ko listener won't work until Battlemasters are firing a Play Upgrade event",
       "front-needs": "Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.",
       "tfdsl": {
-        "front": "on(event=char-damage,when(event().damaged.fullname=this().target,event().origin.owner=opponent()))->up_counter(1,this());on(event=attack-damage,when(event().target.fullname=this().target,event().origin.owner=opponent()))->up_counter(1,this());on(event=ko,when(event().ko.fullname=this().target))->(on(event=play-upgrade,when(event().played.fullname=this().target))->flip(this()))",
+        "front": "on(event=char-damage,when(event().damaged.fullname=this().target,event().origin.owner=opponent()))->up_counter(1,this());on(event=attack-damage,when(event().target.fullname=this().target,event().origin.owner=opponent()))->up_counter(1,this());on(event=ko,when(event().ko.fullname=this().target))->(on(event=play-card,when(event().card.fullname=this().target))->flip(this()))",
         "back": "on-friend-attack-damage(when(event().origin.upgrades.fullname=this().target,event().origin.upgrades.mode=upgrade,event().damage>0))->(if(this().counter>0)->(if(confirm('Remove thermal counters to damage the defender?'))->(choose(range(1,this().counter));down_counter(chosen(),this());damage(chosen(),event().target))))"
       }
     },
@@ -617,23 +617,21 @@
     {
       "name": "Lokos",
       "tfdsl": {
-        "head": "on-this-battle()->plan(2)",
+        "head": "on-this-body-battle()->plan(2)",
         "bot": "on-this-battle()->plan(2)"
       }
     },
     {
       "name": "Mind Control Collar",
-      "head-needs": "Choosing one of three temporary battle abilities.",
       "tfdsl": {
-        "head": "",
+        "head": "on-this-body-battle()->(choose(options('Bold 1','Pierce 1','Focus 1'));if(chosen()='Bold 1')->bold_eob(1,event().battler);if(chosen()='Pierce 1')->pierce_eob(1,event().battler);if(chosen()='Focus 1')->focus_eob(1,event().battler))",
         "bot": "on-deploy()->ko(this());suppress_triggers(event=ko,controller=self(),when(event().ko=this()))"
       }
     },
     {
       "name": "Mind Control Helmet",
-      "head-needs": "Choosing between two temporary battle abilities or Plan.",
       "tfdsl": {
-        "head": "",
+        "head": "on-this-body-battle()->(choose(options('Tough 1','Safeguard 3','Plan 1'));if(chosen()='Tough 1')->tough_eob(1,event().battler);if(chosen()='Safeguard 3')->safeguard_eob(3,event().battler);if(chosen()='Plan 1')->plan(1))",
         "bot": "on-deploy()->ko(this());suppress_triggers(event=ko,controller=self(),when(event().ko=this()))"
       }
     },
@@ -665,7 +663,7 @@
       "comment": "TEST: test",
       "tfdsl": {
         "alt": "on-friend-after-attack-flip(when(all(event().flips.cards,icons.count=0).count>0))->(on(event=char-after-attack,scope=afb,when(event().attacker.owner=self(),self().hand.count>0,all(event().flips.cards,icons.count=0).count>0))->(if(confirm('Swap a hand card with an iconless flipped card?'))->(choose(pick_hand());choose(pick(event().flips.cards,icons.count=0));move_to(self().hand,chosen());move_to(self().flips,previous_target(1)))))",
-        "bot": "on(event=play-action,when(event().player=self(),event().card.stars=1))->(reveal_cards(opponent_top_deck(count=3));reveal_cards(all(opponent().hand),mute_opponents=true);choose(range(0,min(previous_target(1).count,opponent().hand.count)));if(chosen()>0)->(choose(pick(previous_target(1),exact=chosen()));choose(pick(opponent().hand,exact=previous_target(4).count));move_to(opponent().hand,previous_target(4));put_deck_top(opponent(),previous_target(5)));if(previous_target(1).count>1)->reorder(opponent().deck,previous_target(1).count));on(event=play-upgrade,when(event().player=self(),event().played.stars=1))->(reveal_cards(opponent_top_deck(count=3));reveal_cards(all(opponent().hand),mute_opponents=true);choose(range(0,min(previous_target(1).count,opponent().hand.count)));if(chosen()>0)->(choose(pick(previous_target(1),exact=chosen()));choose(pick(opponent().hand,exact=previous_target(4).count));move_to(opponent().hand,previous_target(4));put_deck_top(opponent(),previous_target(5)));if(previous_target(1).count>1)->reorder(opponent().deck,previous_target(1).count))"
+        "bot": "on(event=play-card,when(event().player=self(),event().card.stars=1))->(reveal_cards(opponent_top_deck(count=3));reveal_cards(all(opponent().hand),mute_opponents=true);choose(range(0,min(previous_target(1).count,opponent().hand.count)));if(chosen()>0)->(choose(pick(previous_target(1),exact=chosen()));choose(pick(opponent().hand,exact=previous_target(4).count));move_to(opponent().hand,previous_target(4));put_deck_top(opponent(),previous_target(5)));if(previous_target(1).count>1)->reorder(opponent().deck,previous_target(1).count))"
       }
     },
     {

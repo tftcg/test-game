@@ -138,8 +138,8 @@
     },
     {
       "name": "Junk Cannon",
-      "tfdsl": "on-put()->atk_eot(2,attached())",
-      "comment": "TEST: test"
+      "tfdsl": "on(event=put-upgrade,when(event().attached=attached()))->atk_eot(2,event().attached)",
+      "comment": "BUG: Does not give +2 to attached when it is replaced by another weapon"
     },
     {
       "name": "Laser Scalpel",

@@ -77,8 +77,8 @@
     },
     {
       "name": "Everything Must Go!",
-      "tfdsl": "",
-      "needs": "Binding the selected Junkion to a delayed attack listener, identifying the qualifying attached Weapon, and reading its printed +ATK after battle"
+      "comment": "Attack-number-qualified EOT flags retain the Weapons that qualified at attack time, while leaving the optional scrap choice until after battle.",
+      "tfdsl": "choose(pick_friend(faction=Junkion,has_bandit=true));on(event=char-attack,scope=eot,when(event().attacker=chosen()))->(each(all(event().attacker.upgrades,subtype=Weapon,(faction=Junkion || vanilla=true)))->set_flag(scope=eot,this().id + event().attacker.id + event().attacker.attacks_this_turn + it().id);on(event=char-after-attack,scope=afb)->(if(all(event().attacker.upgrades,self().flags=this().id + event().attacker.id + event().attacker.attacks_this_turn + candidate().id).count>0)->(if(confirm('Scrap a Weapon for Everything Must Go!?'))->(choose(pick(event().attacker.upgrades,self().flags=this().id + event().attacker.id + event().attacker.attacks_this_turn + candidate().id));scrap_upgrade(chosen());if(done())->(if(chosen().cardtype=character)->damage(chosen().base_atk,event().defender):else->damage(chosen().atk,event().defender))))))"
     },
     {
       "name": "Explosive Disposal",
@@ -228,7 +228,7 @@
     },
     {
       "name": "Playing Both Sides",
-      "tfdsl": "reveal(on-opponent-start-turn(when(starting_team(faction=Mercenary).count>0)))->revealed(choose(pick_enemy());on(event=play-upgrade,scope=eot,when(event().player=opponent(),event().target=chosen()))->(choose(options('Draw a card','Play an Upgrade from your hand'));if(chosen()='Draw a card')->draw(1);if(chosen()='Play an Upgrade from your hand')->play_upgrade(pick_hand(type=Upgrade),event().target)))"
+      "tfdsl": "reveal(on-opponent-start-turn(when(starting_team(faction=Mercenary).count>0)))->revealed(choose(pick_enemy());on(event=play-card,scope=eot,when(event().player=opponent(),event().card.type=Upgrade,event().target=chosen()))->(choose(options('Draw a card','Play an Upgrade from your hand'));if(chosen()='Draw a card')->draw(1);if(chosen()='Play an Upgrade from your hand')->play_upgrade(pick_hand(type=Upgrade),event().target)))"
     },
     {
       "name": "Police Action",
@@ -514,9 +514,8 @@
     {
       "name": "Me Grimlock Say Execute Them!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Temporary HEALTH reduction through end of battle; DEF reductions already support end-of-battle scope"
+        "front": "on-friend-attack(when(event().attacker.fullname!=this().target,event().defender.owner=opponent(),event().defender.damage>0,exists_friend(fullname=this().target)))->(health_eob(0-1,event().defender);def_eob(0-1,event().defender))"
+      }
     },
     {
       "name": "Me Grimlock Want to Munch Metal",
@@ -535,7 +534,7 @@
     {
       "name": "Old War Stories",
       "tfdsl": {
-        "front": "on(event=play-upgrade,when(event().player=this().owner,event().played.subtype=Weapon))->set_flag_eot('old_war_stories_weapon');on(event=end-turn,when(event().player=this().owner,this().owner.flags!='old_war_stories_weapon'))->up_counter(1,this());on(event=untap-all,when(this().counter>=self().chars.count,self().chars.count>=2,all_friends(fullname=this().target).count>0))->(if(confirm('Remove story counters to repair your characters?'))->(down_counter(self().chars.count,this());repair(1,self().chars);if(confirm('Play a Weapon on each character?'))->(each(all_friends())->(play_upgrade(pick_hand(subtype=Weapon),it())))))"
+        "front": "on(event=play-card,when(event().player=this().owner,event().card.subtype=Weapon))->set_flag_eot('old_war_stories_weapon');on(event=end-turn,when(event().player=this().owner,this().owner.flags!='old_war_stories_weapon'))->up_counter(1,this());on(event=untap-all,when(this().counter>=self().chars.count,self().chars.count>=2,all_friends(fullname=this().target).count>0))->(if(confirm('Remove story counters to repair your characters?'))->(down_counter(self().chars.count,this());repair(1,self().chars);if(confirm('Play a Weapon on each character?'))->(each(all_friends())->(play_upgrade(pick_hand(subtype=Weapon),it())))))"
       }
     },
     {
@@ -636,7 +635,7 @@
     {
       "name": "Ashtray, Come to Where the Flavor Is!",
       "tfdsl": {
-        "alt": "drifter();on(event=play-action,when(event().player=self(),event().card.icons.count=0))->pierce_eot(1,all_friends());on(event=play-upgrade,when(event().player=self(),event().played.icons.count=0))->pierce_eot(1,all_friends());station('Punctured Vinyl Seat',requires(stars<=9,mode=bot),gives(def(1),trait(Motorcycle)),text(on(event=char-defend,when(event().defender=occupant(),event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)))",
+        "alt": "drifter();on(event=play-card,when(event().player=self(),event().card.icons.count=0))->pierce_eot(1,all_friends());station('Punctured Vinyl Seat',requires(stars<=9,mode=bot),gives(def(1),trait(Motorcycle)),text(on(event=char-defend,when(event().defender=occupant(),event().attacker.pierce>0))->pierce_eob(0-2,event().attacker)))",
         "bot": "drifter();on-this-flip()->repeat(all(opponent().scrap,black>=1,green>=1,icons.count>=3).count)->damage(1,opponent_pick(all_enemies()))"
       }
     },
@@ -696,7 +695,7 @@
       "name": "Gilthor, Wounded Retribution",
       "tfdsl": {
         "alt": "",
-        "bot": "on(event=play-action,when(event().player=this().owner))->damage(1,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.atk>0))->atk_eot(event().scrapped.atk,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.def>0))->def_eot(event().scrapped.def,this())"
+        "bot": "on(event=play-card,when(event().player=this().owner,event().card.type=Action))->damage(1,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.atk>0))->atk_eot(event().scrapped.atk,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.def>0))->def_eot(event().scrapped.def,this())"
       }
     },
     {

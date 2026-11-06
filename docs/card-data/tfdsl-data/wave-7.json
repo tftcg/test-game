@@ -242,7 +242,7 @@
     {
       "name": "Wolfwire, Lying In Wait",
       "tfdsl": {
-        "alt": "on-opponent-play-action(when(event().card.green>=1,opponent().scrap.count>=20))->damage(1,pick_enemy());on(event=play-upgrade,when(event().player=opponent(),event().played.green>=1,opponent().scrap.count>=20))->damage(1,pick_enemy())",
+        "alt": "on(event=play-card,when(event().player=opponent(),event().card.green>=1,opponent().scrap.count>=20))->damage(1,pick_enemy())",
         "bot": "on-this-flip()->(scrap_deck(get(opponent().deck,count=3,from=top));if(exists_card(previous_target(),green>=1))->draw(1))"
       }
     },

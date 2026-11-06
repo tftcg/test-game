@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1412/1514 (93.3%)</p>
+  <p>TFDSL completion: 1416/1514 (93.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>399</td><td>18</td><td>9</td><td>27</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>573</td><td>8</td><td>31</td><td>39</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>132</td><td>6</td><td>20</td><td>26</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>401</td><td>16</td><td>9</td><td>25</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>574</td><td>8</td><td>30</td><td>38</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>133</td><td>6</td><td>19</td><td>25</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 481/578 (83.2%)</p>
+  <p>TFDSL completion: 485/578 (83.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>94</td><td>18</td><td>9</td><td>27</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>193</td><td>8</td><td>25</td><td>33</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>101</td><td>6</td><td>20</td><td>26</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>96</td><td>16</td><td>9</td><td>25</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>194</td><td>8</td><td>24</td><td>32</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>102</td><td>6</td><td>19</td><td>25</td></tr>
 </tbody>
 </table>
 </section>
@@ -183,7 +183,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Electro-Optical Visor</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Holomatter Projector</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Industrial-grade Phase Charge</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This works. But it probably shouldn&#39;t. Is attached() not getting cleansed by scrap_upgrade?</td><td class="comment"></td></tr>
-<tr><th scope="row">Junk Cannon</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
+<tr><th scope="row">Junk Cannon</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Does not give +2 to attached when it is replaced by another weapon</td><td class="comment"></td></tr>
 <tr><th scope="row">Last Stand</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Lose the Initiative</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Master of Metallikato</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -204,11 +204,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 114/156 (73.1%)</p>
+  <p>TFDSL completion: 116/156 (74.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>17</td><td>7</td><td>7</td><td>14</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>19</td><td>5</td><td>7</td><td>12</td></tr>
 <tr><th scope="row">Battlecard</th><td>62</td><td>49</td><td>5</td><td>8</td><td>13</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>26</td><td>4</td><td>5</td><td>9</td></tr>
 </tbody>
@@ -229,8 +229,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Gilthor, Chained Amalgamation</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting Tentacles across the battlefield for Bold and selecting an enemy&#39;s specific flip mode.<br>bot-needs: Counting Tentacles for DEF and suppressing black-card Pierce for a battle.</td></tr>
 <tr><th scope="row">Inquisitor Drebzik, Exhaustive Interrogator</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: TAP ability modal choice with opponent deck manipulation and suppression of a Titan Master&#39;s head bonus.</td></tr>
 <tr><th scope="row">Klementia, Medical Magistrate</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: TAP ability modal choice with card-color-dependent repair and Tentacle-count-based ATK modification.</td></tr>
-<tr><th scope="row">Mind Control Collar</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">head-needs: Choosing one of three temporary battle abilities.</td></tr>
-<tr><th scope="row">Mind Control Helmet</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">head-needs: Choosing between two temporary battle abilities or Plan.</td></tr>
 <tr><th scope="row">Nacelle, Eager Aerospace Engineer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an additional Upgrade play each turn with a printed-ability restriction.</td></tr>
 <tr><th scope="row">Optimus Prime, Dark Awakening</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Red Wizard, Ruler of Menonia</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -299,13 +297,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 150/199 (75.4%)</p>
+  <p>TFDSL completion: 152/199 (76.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>32</td><td>9</td><td>1</td><td>10</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>61</td><td>3</td><td>17</td><td>20</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>26</td><td>1</td><td>14</td><td>15</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>62</td><td>3</td><td>16</td><td>19</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>27</td><td>1</td><td>13</td><td>14</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -334,7 +332,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Caring is Sharing!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement with optional variable Upgrade sacrifice, proportional repair, and moving this card to KO</td></tr>
 <tr><th scope="row">Custom Junkion Saddle</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Diffraction Sword</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Everything Must Go!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Binding the selected Junkion to a delayed attack listener, identifying the qualifying attached Weapon, and reading its printed +ATK after battle</td></tr>
 <tr><th scope="row">Explosive Disposal</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Exposing a scrapped Upgrade&#39;s printed +ATK and +DEF stat-box values; scrap events already expose the card, its former character, and its cause</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capturing the exact Secret Action revealed during defense so it can be scrapped and replayed after battle</td></tr>
 <tr><th scope="row">Happy Motoring!</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Doesn&#39;t currently flip the two characters at the same time. Perhaps it should</td><td class="comment"></td></tr>
@@ -376,7 +373,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Kakistocracy</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Conditional starting STAR allowance, a main-phase timing hook, and an operation to remove a character from its Station; Rolling Action tap/untap is supported</td></tr>
 <tr><th scope="row">King of Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Detecting Scorpulator&#39;s KO and tracking when both specific Upgrade sides are played<br>back-needs: Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported</td></tr>
 <tr><th scope="row">Materiel War</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?</td><td class="comment"></td></tr>
-<tr><th scope="row">Me Grimlock Say Execute Them!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Temporary HEALTH reduction through end of battle; DEF reductions already support end-of-battle scope</td></tr>
 <tr><th scope="row">Me Grimlock Want to Munch Metal</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">No Lords, No Masters</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a Character, granting that host a trait, and moving the attached Stratagem to KO with its host</td></tr>
 <tr><th scope="row">Stop the Tax and Spend!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: A replacement window for opponent-caused multi-card scraps from the top of a player&#39;s deck</td></tr>
@@ -409,7 +405,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Ghost of Starscream, Annoying Apparition</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Triggering a character ability from the KO area when Starscream is KO&#39;d and capturing its Upgrades before KO cleanup</td></tr>
 <tr><th scope="row">Huffer, Sullen Engineer</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Again needs a pay() for the If You Dos</td><td class="comment"></td></tr>
 <tr><th scope="row">Lord Zarak, Ruler of Nebulos</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">Shield carry over from Scorponok. NOTE: Zarak has to go on Scorponok. Skipping enforcing that. Deployment carry is implemented on Zarak Shield rather than this card&#39;s printed bot ability.</td><td class="comment"></td></tr>
-<tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage. Make the &#39;ko&#39; DSL put a marker in the context.<br>alt-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
+<tr><th scope="row">Megatron, Bane of Cybertron</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting a character KO&#39;d by one of your cards without damage. Make the &#39;ko&#39; DSL put a marker in the context.<br>upgrade-needs: Replacing Upgrade slot conflicts and a character leaving the battlefield</td></tr>
 <tr><th scope="row">Rewind, Data Collector</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">bot mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Rumble, Demolition Expert</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Needs a pay() rather than relying on pick_hand</td><td class="comment"></td></tr>
 <tr><th scope="row">Scorponok, Brutal Warlord</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">Althought the English is worded to be an event that sets up an event, there&#39;s no need in this case</td><td class="comment"></td></tr>
