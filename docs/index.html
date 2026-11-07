@@ -331,8 +331,17 @@
       height: 100%;
       z-index: 10;
       pointer-events: none;
-      opacity: .45;
       overflow: visible;
+    }
+    #attack-arrow-lines line { opacity: .45; }
+    .attack-damage-label {
+      fill: #fff;
+      stroke: #11161d;
+      stroke-width: 5px;
+      paint-order: stroke;
+      text-anchor: middle;
+      dominant-baseline: central;
+      font: bold 18px system-ui, sans-serif;
     }
     #game-state.character-picking .ko { overflow: auto; }
     #game-state.character-picking .ko .pile { display: flex; flex-wrap: wrap; gap: .35rem; }
