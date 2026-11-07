@@ -115,8 +115,7 @@
     },
     {
       "name": "Insurance Write-Off",
-      "needs": "Identifying cards drawn by this effect, then conditionally revealing a drawn Quintesson and drawing one more card.",
-      "tfdsl": "put_only(trait=Allicon || trait=Sharkticon);on-attached-ko()->draw(2)"
+      "tfdsl": "put_only(trait=Allicon || trait=Sharkticon);on-attached-ko()->(draw(2);if(exists_card(drawn_cards(),faction=Quintesson,zone=self().hand))->(if(confirm('Reveal a drawn Quintesson card?'))->(reveal_cards(pick(drawn_cards(),faction=Quintesson,zone=self().hand,exact=1));draw(1))))"
     },
     {
       "name": "Judicial Discretion",
@@ -515,10 +514,9 @@
     },
     {
       "name": "Armada, Herald of Shrouds",
-      "bot-needs": "Detecting TAP ability use and single-character opponent untaps, then selecting a matching-STAR character to untap and flipping this character.",
       "tfdsl": {
         "alt": "static(stealth,when(this().tapped=tapped),true);static(atk,all_friends(trait=Spaceship,tapped=untapped).count);static(def,all_friends(trait=Spaceship,tapped=untapped).count)",
-        "bot": ""
+        "bot": "on(event=char-tap-ability,when(event().tapped.owner=opponent()))->(untap(pick_friend(id=this().id || (trait=Spaceship,stars<=event().tapped.stars)));flip(this()));on(event=char-untap,batch(min=1),when(event().untapped.owner=opponent(),event().source.owner=opponent()))->(if(batch().matches.count=1)->(each(all(batch().matches))->(untap(pick_friend(id=this().id || (trait=Spaceship,stars<=it().untapped.stars)));flip(this()))))"
       }
     },
     {

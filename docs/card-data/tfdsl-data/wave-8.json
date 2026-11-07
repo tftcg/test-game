@@ -13,8 +13,7 @@
     },
     {
       "name": "Abrogate",
-      "tfdsl": "",
-      "needs": "Matching a revealed hand Action against the played Action's battle icons, then cancelling and returning that Action during its play window"
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(event().card.green=0))))->revealed(if(exists_card(self().hand,type=Action,(white>=1,event().card.white>=1) || (orange>=1,event().card.orange>=1) || (black>=1,event().card.black>=1) || (blue>=1,event().card.blue>=1) || (green>=1,event().card.green>=1)))->(choose(pick(self().hand,type=Action,(white>=1,event().card.white>=1) || (orange>=1,event().card.orange>=1) || (black>=1,event().card.black>=1) || (blue>=1,event().card.blue>=1) || (green>=1,event().card.green>=1)));reveal_cards(chosen())):else->modify_nothing())"
     },
     {
       "name": "Anti-Grav Cell",
@@ -250,8 +249,7 @@
     },
     {
       "name": "Relax With a Cold One!",
-      "tfdsl": "",
-      "needs": "A delayed after-attack listener must retain the selected Junkion target; listener guards reset previous-target history, and it() is not supported in event predicates"
+      "tfdsl": "choose(pick_friend(faction=Junkion,has_drifter=true));on(event=char-attack,scope=eot,when(event().attacker=chosen()))->(return_upgrade(all(event().defender.upgrades,subtype=Weapon || subtype=Armor));repair(1,event().defender))"
     },
     {
       "name": "Revving Up",

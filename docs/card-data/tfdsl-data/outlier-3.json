@@ -69,7 +69,7 @@
     },
     {
       "name": "Predaking [B], Apex Predator",
-      "comment": "Highest Star, Highest Atk, Highest HP",
+      "comment": "Highest Star, Highest Atk, Highest HP. TODO: Ideally the Stratagem wouldn't keep trying to combine into Predaking every turn. Add an if(count(Predaking)=0)",
       "tfdsl": {
         "combiner": "bold(2);on-this-attack-damage(when(event().overkill>=0))->damage(2,opponent_pick(all_enemies()));on-start-turn()->(draw(2);play(pick_hand());play(pick_hand()));on-this-combine()->(draw(2);play(pick_hand());play(pick_hand()))"
       }

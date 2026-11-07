@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1416/1514 (93.5%)</p>
+  <p>TFDSL completion: 1420/1514 (93.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>401</td><td>16</td><td>9</td><td>25</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>574</td><td>8</td><td>30</td><td>38</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>402</td><td>15</td><td>9</td><td>24</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>577</td><td>7</td><td>28</td><td>35</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>133</td><td>6</td><td>19</td><td>25</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 485/578 (83.9%)</p>
+  <p>TFDSL completion: 489/578 (84.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>96</td><td>16</td><td>9</td><td>25</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>194</td><td>8</td><td>24</td><td>32</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>97</td><td>15</td><td>9</td><td>24</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>197</td><td>7</td><td>22</td><td>29</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>102</td><td>6</td><td>19</td><td>25</td></tr>
 </tbody>
 </table>
@@ -204,12 +204,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 116/156 (74.4%)</p>
+  <p>TFDSL completion: 118/156 (75.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>19</td><td>5</td><td>7</td><td>12</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>49</td><td>5</td><td>8</td><td>13</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>20</td><td>4</td><td>7</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>50</td><td>4</td><td>8</td><td>12</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>26</td><td>4</td><td>5</td><td>9</td></tr>
 </tbody>
 </table>
@@ -217,7 +217,6 @@ thead { background: #f3f4f6; }
 <table>
 <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col">TFDSL completion</th><th scope="col">Comment</th><th scope="col">Needs</th></tr></thead>
 <tbody>
-<tr><th scope="row">Armada, Herald of Shrouds</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Detecting TAP ability use and single-character opponent untaps, then selecting a matching-STAR character to untap and flipping this character.</td></tr>
 <tr><th scope="row">Autobot Countdown, Aerospace Commander</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Checking attack-damage survival and moving damage from this or a Guardian to the attacker.</td></tr>
 <tr><th scope="row">Autobot Pipes, Idiosyncratic Collector</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing attack damage to split two damage to this character.<br>bot-needs: Tracking a once-per-turn upgrade-scrap trigger, revealing the deck top, and matching battle-icon counts.</td></tr>
 <tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">bot-needs: Replacing incoming damage-counter movement with redirect-and-repair and playing this character&#39;s Upgrade side on KO.</td></tr>
@@ -245,7 +244,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Energy Conversion Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting a single non-attack damage instruction&#39;s full target set and replacing it with one repair of all characters; char-damage replacements currently see targets individually.</td></tr>
 <tr><th scope="row">Forked Tentacle</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing TAP ability option counts and the Tentacle slot-capacity rule.</td></tr>
 <tr><th scope="row">Gift of Innermost Energon</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting which characters were KO&#39;d by this damage instruction and totaling successfully applied damage after any replacements.</td></tr>
-<tr><th scope="row">Insurance Write-Off</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Identifying cards drawn by this effect, then conditionally revealing a drawn Quintesson and drawing one more card.</td></tr>
 <tr><th scope="row">Loading The Cannon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This is not remembering the defence before flipping battle cards. If it earned EOT defence during flipping then that makes this behave wrong</td><td class="comment"></td></tr>
 <tr><th scope="row">Lose The Battle...</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Masher Mace</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -297,12 +295,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 152/199 (76.4%)</p>
+  <p>TFDSL completion: 154/199 (77.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>32</td><td>9</td><td>1</td><td>10</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>62</td><td>3</td><td>16</td><td>19</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>64</td><td>3</td><td>14</td><td>17</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>27</td><td>1</td><td>13</td><td>14</td></tr>
 </tbody>
 </table>
@@ -327,7 +325,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Stock-Pyl, 100 Billion Stars, One Precious World</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Conditional attack-damage redistribution with rounded division and starting-team checks<br>bot-needs: Once-per-turn tracking and rounded division when moving damage</td></tr>
 <tr><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">bot mode</td><td class="comment">alt-needs: Secret Action-style reveal and cancellation while an opponent plays an Action</td></tr>
 <tr><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This doesn&#39;t let you tap an already tapped 6 star or fewer character, and thus do 1 damage if it has stealth</td><td class="comment"></td></tr>
-<tr><th scope="row">Abrogate</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Matching a revealed hand Action against the played Action&#39;s battle icons, then cancelling and returning that Action during its play window</td></tr>
 <tr><th scope="row">Bracing Up</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Caring is Sharing!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement with optional variable Upgrade sacrifice, proportional repair, and moving this card to KO</td></tr>
 <tr><th scope="row">Custom Junkion Saddle</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -352,7 +349,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Patrol Bolas</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping Pierce contributed by black battle icons independently of other Pierce sources, using the attacker&#39;s base ATK</td></tr>
 <tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Relax With a Cold One!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A delayed after-attack listener must retain the selected Junkion target; listener guards reset previous-target history, and it() is not supported in event predicates</td></tr>
 <tr><th scope="row">Sitrep Update</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the scrap of a face-down Secret Action</td></tr>
 <tr><th scope="row">Skimming Off the Top</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sparring Lessons</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
