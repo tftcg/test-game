@@ -648,7 +648,7 @@
     {
       "name": "Slammer, Combat Drone",
       "tfdsl": {
-        "alt": "static(bold,1,target=all_friends(name=Metroplex));on-deploy(when(event().deployer.name=Metroplex))->damage(1,all_enemies())"
+        "alt": "static(bold,1,target=all_friends(name=Metroplex));on-deploy(when(event().deployer.name=Metroplex,event().summoned!=true))->damage(1,all_enemies())"
       }
     },
     {
