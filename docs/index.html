@@ -195,25 +195,88 @@
     .gameplay-log-section {
       margin-bottom: .75rem;
     }
-    .gameplay-log-section h3, .gameplay-log-section summary {
+    .gameplay-log-section h3 {
+      width: max-content;
+      max-width: 100%;
       margin: 0;
       padding: .35rem 0;
       color: #9fb2c5;
       font: bold .85rem/1.4 ui-monospace, monospace;
+      cursor: help;
     }
-    .gameplay-log-section summary {
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-      list-style: none;
-    }
-    .gameplay-log-section summary::-webkit-details-marker { display: none; }
-    .gameplay-log-section summary::after { content: "+"; }
-    .gameplay-log-section[open] summary::after { content: "-"; }
+    .gameplay-log-section h3:focus-visible { outline: 2px solid #72cfff; }
     .gameplay-log-section pre {
+      position: fixed;
       margin: 0;
+      inset: auto;
+      width: min(650px, calc(100vw - 260px));
+      max-height: min(350px, calc(100vh - 16px));
+      overflow-y: auto;
+      overflow-wrap: anywhere;
+      padding: .75rem;
+      color: #e7edf4;
+      background: #10151b;
+      border: 1px solid #6687a5;
+      border-radius: .4rem;
+      box-shadow: 0 .5rem 1.5rem #0009;
       white-space: pre-wrap;
-      font: .7rem/1.4 ui-monospace, monospace;
+      font: .8rem/1.4 ui-monospace, monospace;
+    }
+    #current-turn-events {
+      position: relative;
+      min-width: 0;
+      color: #e7edf4;
+      background: #263748;
+      border: 1px solid #6687a5;
+      border-radius: .4rem;
+    }
+    #current-turn-events[hidden] { display: none; }
+    #current-turn-toggle {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      width: 100%;
+      padding: .6rem .75rem;
+      color: inherit;
+      background: transparent;
+      border: 0;
+      border-radius: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+    #current-turn-toggle:focus-visible { outline: 2px solid #72cfff; }
+    #current-turn-label { flex-shrink: 0; color: #a9cce8; }
+    #current-turn-latest {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font: .8rem/1.4 ui-monospace, monospace;
+    }
+    .current-turn-hint { margin-left: auto; flex-shrink: 0; font-size: .75rem; color: #9fb2c5; }
+    #current-turn-popup {
+      display: none;
+      position: absolute;
+      z-index: 20;
+      top: 100%;
+      left: 0;
+      width: min(650px, 100%);
+      padding: .75rem;
+      background: #10151b;
+      border: 1px solid #6687a5;
+      border-radius: .4rem;
+      box-shadow: 0 .5rem 1.5rem #0009;
+    }
+    #current-turn-events:not([data-dismissed="true"]):hover > #current-turn-popup,
+    #current-turn-events[data-expanded="true"] > #current-turn-popup { display: block; }
+    #current-turn-heading { margin: 0 0 .5rem; font-size: .9rem; color: #a9cce8; }
+    #current-turn-log {
+      margin: 0;
+      max-height: min(350px, 45vh);
+      overflow-y: auto;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      font: .8rem/1.4 ui-monospace, monospace;
     }
     #turn-actions, #action-buttons { min-width: 0; }
     #action-buttons {
@@ -260,6 +323,17 @@
     }
     #board-pick button:disabled { opacity: .5; cursor: not-allowed; }
     #game-state { display: grid; gap: .75rem; min-width: 0; }
+    #attack-arrow {
+      display: none;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+      opacity: .45;
+      overflow: visible;
+    }
     #game-state.character-picking .ko { overflow: auto; }
     #game-state.character-picking .ko .pile { display: flex; flex-wrap: wrap; gap: .35rem; }
     #game-state.character-picking .ko .pile .card { margin: 0; }
@@ -862,7 +936,7 @@
   <main class="game-layout">
     <aside class="control-column">
       <section id="gameplay-events">
-        <h2 class="panel-title">Game event log</h2>
+        <h2 class="panel-title">Turn history</h2>
         <div id="gameplay-event-log" aria-live="polite"></div>
       </section>
       <section id="turn-actions" hidden>
@@ -887,10 +961,35 @@
         <button id="board-pick-confirm" type="button">Confirm</button>
         <button id="board-pick-skip" type="button" hidden>Skip</button>
       </section>
-      <section id="game-state" aria-label="Cards in play"></section>
+      <section id="game-state" aria-label="Cards in play">
+        <section id="current-turn-events" aria-label="Current turn events" hidden>
+          <button id="current-turn-toggle" type="button" aria-controls="current-turn-popup" aria-expanded="false">
+            <strong id="current-turn-label"></strong>
+            <span id="current-turn-latest" aria-live="polite"></span>
+            <span class="current-turn-hint">Hover or click for turn details</span>
+          </button>
+          <div id="current-turn-popup" role="region" aria-labelledby="current-turn-heading">
+            <h3 id="current-turn-heading"></h3>
+            <pre id="current-turn-log" tabindex="0"></pre>
+          </div>
+        </section>
+      </section>
     </section>
   </main>
   <aside id="card-preview" hidden aria-hidden="true"></aside>
+  <svg id="attack-arrow" aria-hidden="true">
+    <defs>
+      <marker id="attack-arrow-head-pink" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="3" markerHeight="3" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 Z" fill="#ffb6cf"></path>
+      </marker>
+      <marker id="attack-arrow-head-green" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="3" markerHeight="3" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 Z" fill="#b5f5c3"></path>
+      </marker>
+    </defs>
+    <g id="attack-arrow-lines" stroke-width="16" stroke-linecap="round"></g>
+  </svg>
   <section id="mode-inspection" hidden role="region" aria-labelledby="mode-inspection-title">
     <div class="mode-inspection-heading">
       <h2 id="mode-inspection-title"></h2>
