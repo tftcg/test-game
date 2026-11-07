@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1420/1514 (93.8%)</p>
+  <p>TFDSL completion: 1426/1514 (94.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>402</td><td>15</td><td>9</td><td>24</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>577</td><td>7</td><td>28</td><td>35</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>133</td><td>6</td><td>19</td><td>25</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>578</td><td>7</td><td>27</td><td>34</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>137</td><td>6</td><td>15</td><td>21</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 489/578 (84.6%)</p>
+  <p>TFDSL completion: 495/578 (85.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>97</td><td>15</td><td>9</td><td>24</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>197</td><td>7</td><td>22</td><td>29</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>102</td><td>6</td><td>19</td><td>25</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>198</td><td>7</td><td>21</td><td>28</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>106</td><td>6</td><td>15</td><td>21</td></tr>
 </tbody>
 </table>
 </section>
@@ -295,13 +295,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 154/199 (77.4%)</p>
+  <p>TFDSL completion: 160/199 (80.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>32</td><td>9</td><td>1</td><td>10</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>64</td><td>3</td><td>14</td><td>17</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>27</td><td>1</td><td>13</td><td>14</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>65</td><td>3</td><td>13</td><td>16</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>31</td><td>1</td><td>9</td><td>10</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -340,7 +340,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Inexorable Force</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing opponent-caused TAP events; conditional ignore_oppress is supported</td></tr>
 <tr><th scope="row">Junkyard Turbofox</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Interrupting Upgrade returns across zones and swapping a matching star-cost Upgrade</td></tr>
 <tr><th scope="row">Lagartan Spaulders</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: The replacement must both scrap a green card and cancel the original Upgrade-scrap event; current instead effects either apply modifications and continue the original event, or cancel without performing the replacement.</td></tr>
-<tr><th scope="row">Mirror Response Mode</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Counting shared traits with the battling enemy</td></tr>
 <tr><th scope="row">Muster the Will</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>
 <tr><th scope="row">Ninety Day Warranty!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Distributing pending attack damage among any number of characters</td></tr>
@@ -371,11 +370,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Materiel War</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?</td><td class="comment"></td></tr>
 <tr><th scope="row">Me Grimlock Want to Munch Metal</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">No Lords, No Masters</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a Character, granting that host a trait, and moving the attached Stratagem to KO with its host</td></tr>
-<tr><th scope="row">Stop the Tax and Spend!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: A replacement window for opponent-caused multi-card scraps from the top of a player&#39;s deck</td></tr>
-<tr><th scope="row">The City&#39;s Finest Views</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Granting stations to every eligible Titan through per-character station installation; station entry effects are supported</td></tr>
 <tr><th scope="row">The Great Escape</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Storing Character damage on a Stratagem and tracking the specific Character KO&#39;d by that stored damage</td></tr>
-<tr><th scope="row">Third Party Brigade</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Deploying the owned Shockblast from outside the game in a specified mode; battle-flip scrapping without icons is supported</td></tr>
-<tr><th scope="row">This Shall Be Your Ship</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Tracking a same-turn faction-matched Upgrade plus Action, a Leader KO by damage, an all-characters untap, a multi-icon Utility, and an attack with distinct Upgrade types<br>back-needs: Tracking the five qualifying events and installing both Stations on the flipped Stratagem; return-from-KO and station effects are supported</td></tr>
+<tr><th scope="row">This Shall Be Your Ship</th><td>Stratagem</td><td>note</td><td>2/2</td><td class="comment">A Leader KO with cause=&#39;GameCheck&#39; counts as KO&#39;d by damage, including the rare case where reduced health makes existing damage lethal.</td><td class="comment"></td></tr>
 <tr><th scope="row">Writhing in the Deep</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Tracking prior-turn KO characters through variable Green-card discards and scheduling delayed KOs for only the Characters returned this way; return-from-KO is supported</td></tr>
 </tbody>
 </table>

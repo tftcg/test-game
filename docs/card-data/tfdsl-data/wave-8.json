@@ -164,8 +164,7 @@
     },
     {
       "name": "Mirror Response Mode",
-      "tfdsl": "",
-      "needs": "Counting shared traits with the battling enemy"
+      "tfdsl": "static(atk,when(event().attacker=attached(),shares_trait(attached(),event().defender)),all(unique(attached().traits),event().defender.traits=candidate()).count,target=attached());static(def,when(event().attacker=attached(),shares_trait(attached(),event().defender)),all(unique(attached().traits),event().defender.traits=candidate()).count,target=attached());static(atk,when(event().defender=attached(),shares_trait(attached(),event().attacker)),all(unique(attached().traits),event().attacker.traits=candidate()).count,target=attached());static(def,when(event().defender=attached(),shares_trait(attached(),event().attacker)),all(unique(attached().traits),event().attacker.traits=candidate()).count,target=attached())"
     },
     {
       "name": "Monofiber Filament",
@@ -336,7 +335,7 @@
     },
     {
       "name": "Transfusion Cable",
-      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(trait=Specialist);",
+      "tfdsl": "share_slot(3,matching(trait=Tentacle));put_only(trait=Specialist)",
       "needs": "Removing a printed trait"
     },
     {
@@ -584,16 +583,14 @@
     {
       "name": "Stop the Tax and Spend!",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "A replacement window for opponent-caused multi-card scraps from the top of a player's deck"
+        "front": "instead(on(event=scrap-deck,batch(min=2),when(exists_friend(fullname=this().target),event().player=self(),event().source.owner=opponent(),event().source.cardtype=character))->(if(confirm('Scrap only the top card?'))->scrap_deck(get(batch().matches.card,count=1,from=top)):else->modify_nothing()))"
+      }
     },
     {
       "name": "The City's Finest Views",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Granting stations to every eligible Titan through per-character station installation; station entry effects are supported"
+        "front": "each(all_friends(trait=Titan))->station('Observation Deck',requires(stars<=6),gives(def(1)),text(on(event=enter-station,when(event().station=station(),event().entered.trait=Melee))->reveal_cards(get(opponent().deck,count=1,from=top),mute_owner=true);on(event=enter-station,when(event().station=station(),event().entered.trait=Ranged,event().cause='attack'))->set_flag(scope=eot,'city_views_'+event().entered.id);on(event=enter-station,when(event().station=station(),event().entered.trait=Ranged,event().battle.defender=event().entered))->damage(1,event().battle.attacker);on(event=enter-station,when(event().station=station(),event().entered.trait=Ranged,event().battle.attacker=event().entered))->damage(1,event().battle.defender);on(event=defender-chosen,when(station().occupant=event().attacker,self().flags='city_views_'+event().attacker.id))->(damage(1,event().defender);delete_flag('city_views_'+event().attacker.id))),target=it())"
+      }
     },
     {
       "name": "The Great Escape",
@@ -605,17 +602,16 @@
     {
       "name": "Third Party Brigade",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Deploying the owned Shockblast from outside the game in a specified mode; battle-flip scrapping without icons is supported"
+        "front": "on-before-begin-game(when(starting_team().count>0,starting_team(trait!=Combaticon).count=0))->summon_friend('Shockblast, Galactic Man');on(event=attack-flip,when(event().attacker.owner=self(),event().attacker.trait=Combaticon,event().card.black>=1),once())->scrap_flip(event().card,event(),event().attacker)"
+      }
     },
     {
       "name": "This Shall Be Your Ship",
       "tfdsl": {
-        "front": ""
+        "front": "on(event=play-card,when(event().player=self()))->(if(event().card.type=Upgrade)->(each(all(event().card.faction,event().target.faction=candidate()))->(set_flag(scope=eot,'ship_'+this().id+'_upgrade_'+it());if(self().flags='ship_'+this().id+'_action_'+it())->set_flag('ship_'+this().id+'_1')));if(event().card.type=Action)->(each(all(event().card.faction))->(set_flag(scope=eot,'ship_'+this().id+'_action_'+it());if(self().flags='ship_'+this().id+'_upgrade_'+it())->set_flag('ship_'+this().id+'_1')));CUSTOM_This_Shall_Be_Your_Ship_Flip());on(event=ko,when(event().ko.owner=self(),event().ko.trait=Leader,event().cause='GameCheck'))->(set_flag('ship_'+this().id+'_2');CUSTOM_This_Shall_Be_Your_Ship_Flip());on(event=untap-all)->(set_flag('ship_'+this().id+'_3');CUSTOM_This_Shall_Be_Your_Ship_Flip());on(event=put-upgrade,when(event().attached.owner=self(),event().attached.utils=event().played,event().played.icons.count>=2))->(set_flag('ship_'+this().id+'_4');CUSTOM_This_Shall_Be_Your_Ship_Flip());on(event=char-attack,when(event().attacker.owner=self(),(event().attacker.weapons.count>0,event().attacker.armors.count>0) || (event().attacker.weapons.count>0,event().attacker.utils.count>0) || (event().attacker.armors.count>0,event().attacker.utils.count>0)))->(set_flag('ship_'+this().id+'_5');CUSTOM_This_Shall_Be_Your_Ship_Flip())",
+        "back": "if(exists_ko(cardtype=character,trait=Leader,id=starting_team().id))->return_from_ko(pick_friend_ko(cardtype=character,trait=Leader,id=starting_team().id),3);station('Assault Bay',requires(stars<=16),gives(atk(2)),text(on(event=enter-station,when(event().station=station(),event().entered.trait!=Leader,event().entered.damage>0))->move(1,event().entered,pick_enemy())));station('Helm of the Revenge',requires(stars<=19,mode=bot),gives(atk(1),health(1),def(1)),text(on(event=end-turn,when(event().player=self(),occupant().trait=Leader))->damage(1,pick_enemy())))"
       },
-      "front-needs": "Tracking a same-turn faction-matched Upgrade plus Action, a Leader KO by damage, an all-characters untap, a multi-icon Utility, and an attack with distinct Upgrade types",
-      "back-needs": "Tracking the five qualifying events and installing both Stations on the flipped Stratagem; return-from-KO and station effects are supported"
+      "comment": "NOTE: A Leader KO with cause='GameCheck' counts as KO'd by damage, including the rare case where reduced health makes existing damage lethal."
     },
     {
       "name": "Time for New Leadership",
