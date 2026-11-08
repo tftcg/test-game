@@ -204,8 +204,7 @@
     },
     {
       "name": "Patrol Bolas",
-      "needs": "This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event",
-      "tfdsl": "static(atk,this().counter,target=attached());on(event=enter-station,when(event().station.host=attached(),event().entered.faction=Junkion))->(if(confirm('Move Patrol Bolas to the Station occupant?'))->(move_upgrade(this(),event().entered);up_counter(1,this())))"
+      "tfdsl": "static(atk,this().counter,target=attached());on(event=enter-station,when(event().station.host=attached(),event().entered.faction=Junkion))->(if(confirm('Move Patrol Bolas to the Station occupant?'))->(move_upgrade(this(),event().entered)));on-put(when(event().moved=true,event().attached.faction=Junkion,event().former.faction=Junkion))->up_counter(1,this())"
     },
     {
       "name": "Patrol the Perimeter",
@@ -475,10 +474,11 @@
     },
     {
       "name": "King of Pain",
+      "comment": "TODO: Test. NOTE: Front flip keys off 'Q-RTR Arachnoid Array' but really should key off both being played",
       "tfdsl": {
-        "front": ""
+        "front": "replace_dsl('all_friends()','all_chars()',all_friends(fullname=this().target),'bot');on(event=card-play,when(event().card='Q-RTR Arachnoid Array'))->flip(this())",
+        "back": ""
       },
-      "front-needs": "Detecting Scorpulator's KO and tracking when both specific Upgrade sides are played",
       "back-needs": "Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported"
     },
     {

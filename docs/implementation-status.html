@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1429/1514 (94.4%)</p>
+  <p>TFDSL completion: 1431/1514 (94.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>404</td><td>14</td><td>8</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>578</td><td>7</td><td>27</td><td>34</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>137</td><td>6</td><td>15</td><td>21</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>579</td><td>6</td><td>27</td><td>33</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>137</td><td>7</td><td>14</td><td>21</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 498/578 (86.2%)</p>
+  <p>TFDSL completion: 500/578 (86.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>99</td><td>14</td><td>8</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>198</td><td>7</td><td>21</td><td>28</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>106</td><td>6</td><td>15</td><td>21</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>199</td><td>6</td><td>21</td><td>27</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>106</td><td>7</td><td>14</td><td>21</td></tr>
 </tbody>
 </table>
 </section>
@@ -289,13 +289,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 160/199 (80.4%)</p>
+  <p>TFDSL completion: 162/199 (81.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>32</td><td>9</td><td>1</td><td>10</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>65</td><td>3</td><td>13</td><td>16</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>31</td><td>1</td><td>9</td><td>10</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>66</td><td>2</td><td>13</td><td>15</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>31</td><td>2</td><td>8</td><td>10</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -338,7 +338,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>
 <tr><th scope="row">Ninety Day Warranty!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Distributing pending attack damage among any number of characters</td></tr>
 <tr><th scope="row">Passenger Coverage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement transferring damage after base DEF calculation across Station occupants</td></tr>
-<tr><th scope="row">Patrol Bolas</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: This currently assumes it only increases the counter when it is moved as part of this ability, and not a general move. Needs to listen to a move upgrade event</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping Pierce contributed by black battle icons independently of other Pierce sources, using the attacker&#39;s base ATK</td></tr>
 <tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sitrep Update</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the scrap of a face-down Secret Action</td></tr>
@@ -359,7 +358,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Four the Selectors!</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">Ignoring Horde support as no card references it yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Ignore the Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Moving damage counters between a Character and a Stratagem; counters do not represent damage or update Character damage</td></tr>
 <tr><th scope="row">Kakistocracy</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Conditional starting STAR allowance, a main-phase timing hook, and an operation to remove a character from its Station; Rolling Action tap/untap is supported</td></tr>
-<tr><th scope="row">King of Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Detecting Scorpulator&#39;s KO and tracking when both specific Upgrade sides are played<br>back-needs: Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported</td></tr>
+<tr><th scope="row">King of Pain</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">TODO: Test. NOTE: Front flip keys off &#39;Q-RTR Arachnoid Array&#39; but really should key off both being played</td><td class="comment">back-needs: Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported</td></tr>
 <tr><th scope="row">Materiel War</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?</td><td class="comment"></td></tr>
 <tr><th scope="row">Me Grimlock Want to Munch Metal</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">No Lords, No Masters</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a Character, granting that host a trait, and moving the attached Stratagem to KO with its host</td></tr>
