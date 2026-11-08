@@ -323,8 +323,7 @@
     },
     {
       "name": "Too Short For This Ride",
-      "tfdsl": "",
-      "needs": "A DSL operation to force a character out of a Station and a temporary effect that prevents that character from re-entering"
+      "tfdsl": "if(all_friends(trait=Ranged).count>0)->(choose(pick_enemy());no_enter_station_eot(1,chosen());damage(1,chosen());if(chosen().in_station)->leave_station(chosen()))"
     },
     {
       "name": "Traffic Checkpoint",
