@@ -195,8 +195,7 @@
     },
     {
       "name": "Pack Behavior",
-      "comment": "TEST: test",
-      "tfdsl": "put_only(trait=Predacon || trait=Seacon || trait=Terrorcon);bold(1);revenge(put_upgrade(this(),pick_friend()))"
+      "tfdsl": "put_only(trait=Predacon || trait=Seacon || trait=Terrorcon);bold(1);revenge(put_upgrade(provider(),pick_friend()))"
     },
     {
       "name": "Passenger Coverage",
@@ -588,6 +587,7 @@
     },
     {
       "name": "The City's Finest Views",
+      "comment": "BUG: Trypticon's minions don't try to enter the station.",
       "tfdsl": {
         "front": "each(all_friends(trait=Titan))->station('Observation Deck',requires(stars<=6),gives(def(1)),text(on(event=enter-station,when(event().station=station(),event().entered.trait=Melee))->reveal_cards(get(opponent().deck,count=1,from=top),mute_owner=true);on(event=enter-station,when(event().station=station(),event().entered.trait=Ranged,event().cause='attack'))->set_flag(scope=eot,'city_views_'+event().entered.id);on(event=enter-station,when(event().station=station(),event().entered.trait=Ranged,event().battle.defender=event().entered))->damage(1,event().battle.attacker);on(event=enter-station,when(event().station=station(),event().entered.trait=Ranged,event().battle.attacker=event().entered))->damage(1,event().battle.defender);on(event=defender-chosen,when(station().occupant=event().attacker,self().flags='city_views_'+event().attacker.id))->(damage(1,event().defender);delete_flag('city_views_'+event().attacker.id))),target=it())"
       }
@@ -768,7 +768,7 @@
     {
       "name": "Q-RTR Arachnoid Array",
       "tfdsl": {
-        "upgrade": "static(brave,when(attached().tapped=tapped),true,target=attached());revenge(if(attached().trait=Constructicon)->(if(confirm('Move Q-RTR Arachnoid Array?'))->move_upgrade(this(),pick_friend(id!=attached().id))))"
+        "upgrade": "static(brave,when(attached().tapped=tapped),true,target=attached());revenge((if(this().trait=Constructicon)->(if(confirm('Move Q-RTR Arachnoid Array?'))->move_upgrade(provider(),pick_friend(id!=this().id)))))"
       }
     },
     {
@@ -801,12 +801,13 @@
     },
     {
       "name": "Sentinel Prime, Legacy of the Primes",
+        "alt 2-Desired": "static(oppress,when(this().has_oppress=true),2)",
       "tfdsl": {
-        "alt 1": "static(oppress,when(this().oppress>0),1,target=all_friends(id!=this().id))",
+        "alt 1": "static(oppress,when(this().has_oppress=true),1,target=all_friends(id!=this().id))",
         "alt 2": "",
         "body": ""
       },
-      "alt 2-needs": "Checking this character's Oppress without the conditional static grant satisfying its own condition",
+      "alt 2-needs": "Checking oppress while adding oppress leads to an infinite loop",
       "body-needs": "Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities"
     },
     {

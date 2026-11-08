@@ -521,19 +521,17 @@
     },
     {
       "name": "Autobot Countdown, Aerospace Commander",
-      "alt-needs": "Checking attack-damage survival and moving damage from this or a Guardian to the attacker.",
       "tfdsl": {
-        "alt": "",
+        "alt": "static(stealth,when(this().tapped=untapped),true);on-friend-attack-damaged(when(event().damage>=2,event().overkill<0,event().target.id=this().id || event().target.trait=Guardian))->move(1,event().target,event().origin)",
         "bot": "static(atk,min(all(self().ko,name='Omega Supreme' || trait=Guardian).atk));static(def,min(all(self().ko,name='Omega Supreme' || trait=Guardian).def))"
       }
     },
     {
       "name": "Autobot Pipes, Idiosyncratic Collector",
-      "alt-needs": "Replacing attack damage to split two damage to this character.",
-      "bot-needs": "Tracking a once-per-turn upgrade-scrap trigger, revealing the deck top, and matching battle-icon counts.",
+      "comment": "TODO: Test. NOTE: attack_damage() should preserve the original attacker and combat flips and calculate overkill for redirected attack damage.",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "instead(on-friend-attack-damaged(when(event().target!=this(),event().damage>=2,event().target.trait=Boat || all(event().target.modes,candidate()=alt).count=2))->(if(confirm('Have Pipes take 2 damage of the attack?'))->(attack_damage(2,this());modify(event().damage:=event().damage - 2))))",
+        "bot": "on(event=scrap-upgrade,when(event().from.owner=this().owner,event().from!=this(),event().scrapped.icons.count>=1))->(if(self().flags!=this().id+'_pipes_used')->(if(confirm('Reveal the top card of your deck?'))->(set_flag_eot(this().id+'_pipes_used');reveal_cards(top_deck());if(previous_target().icons.count=event().scrapped.icons.count,event().scrapped.zone=event().scrapped.owner.scrap,this().zone=self().chars)->(if(confirm('Put the scrapped Upgrade on Pipes?'))->put_upgrade(event().scrapped,this())))))"
       }
     },
     {

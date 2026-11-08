@@ -69,12 +69,11 @@
     },
     {
       "name": "Crash Landing",
-      "comment": "TEST: test",
+      "comment": "BUG: doesn't include weapons etc - needs to be getting that number earlier than on-ko when things have been scrapped",
       "tfdsl": "put_only(trait=Plane);on-attached-ko()->damage(attached().atk, pick_enemy(tapped=tapped))"
     },
     {
       "name": "Decepticon Crown",
-      "comment": "TEST: test",
       "tfdsl": "put_only(faction=Decepticon);on-attack(when(event().attacker.owner=this().owner,event().attacker.faction=Decepticon))->plan(1)"
     },
     {
@@ -665,7 +664,7 @@
     {
       "name": "Predaking, Ferocious Hunter",
       "tfdsl": {
-        "combiner": "add_slot('Weapon',4)"
+        "combiner": "add_slot('Weapon',4);on-this-combine()->(draw(1);if(confirm('Play card?'))->play(pick_hand()))"
       }
     },
     {

@@ -59,13 +59,11 @@
     },
     {
       "name": "Crude Club",
-      "comment": "TEST: test",
       "tfdsl": "static(atk,when(),attached().upgrades.count)"
     },
     {
       "name": "Daring Escape",
-      "comment": "NOTE: It just gives a win condition as a popup rather than a real one; but hey, banned card",
-      "tfdsl": "repeat(all_friends(faction=Autobot).count)->move_to(self().ko,top_deck());if(all(self().deck + self().scrap).count=0)->confirm('You Escaped, Congratulations')"
+      "tfdsl": "repeat(all_friends(faction=Autobot).count)->move_to(self().ko,top_deck());if(all(self().deck + self().scrap).count=0)->victory('Player Escaped, Congratulations')"
     },
     {
       "name": "Decipher",
