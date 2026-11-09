@@ -5,13 +5,17 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TEST, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1925)</h2>
+<h2>Implemented cards (1929)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
 <tr><td>2026-11-08</td><th scope="row">Autobot Countdown, Aerospace Commander</th><td>wave-6</td><td>Character</td><td>complete</td><td><code>33030efc0735</code></td></tr>
 <tr><td>2026-11-08</td><th scope="row">Autobot Pipes, Idiosyncratic Collector</th><td>wave-6</td><td>Character</td><td>complete</td><td><code>33030efc0735</code></td></tr>
+<tr><td>2026-11-08</td><th scope="row">Explosive Disposal</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>fc7f96767ce3</code></td></tr>
+<tr><td>2026-11-08</td><th scope="row">Junkyard Turbofox</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>fc7f96767ce3</code></td></tr>
 <tr><td>2026-11-08</td><th scope="row">Lagartan Spaulders</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>47d8e4fe61fb</code></td></tr>
 <tr><td>2026-11-08</td><th scope="row">Ninety Day Warranty!</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>47d8e4fe61fb</code></td></tr>
 <tr><td>2026-11-08</td><th scope="row">Passenger Coverage</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>47d8e4fe61fb</code></td></tr>
+<tr><td>2026-11-08</td><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>wave-8</td><td>Character</td><td>test</td><td><code>fc7f96767ce3</code></td></tr>
+<tr><td>2026-11-08</td><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>wave-8</td><td>Character</td><td>test</td><td><code>fc7f96767ce3</code></td></tr>
 <tr><td>2026-11-08</td><th scope="row">Too Short For This Ride</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>c3f86597eed3</code></td></tr>
 <tr><td>2026-11-07</td><th scope="row">Mirror Response Mode</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>bea3ea59c01a</code></td></tr>
 <tr><td>2026-11-07</td><th scope="row">Stop the Tax and Spend!</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>bea3ea59c01a</code></td></tr>
@@ -1933,7 +1937,7 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (440)</h2>
+<h2>No implementation date observed (436)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Autobot Powerglide, Haughty Show-Off</th><td>wave-6</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Axor, Opportunistic Fencer</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
@@ -1972,17 +1976,13 @@
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Sideswipe, Covert Clone</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Stock-Pyl, 100 Billion Stars, One Precious World</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Caring is Sharing!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
-<tr><th scope="row">Explosive Disposal</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Head Case</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Hot Seat</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Hurry Hurry Hurry!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Inexorable Force</th><td>wave-8</td><td>Battlecard</td><td>partial</td></tr>
-<tr><th scope="row">Junkyard Turbofox</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Sitrep Update</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Transfusion Cable</th><td>wave-8</td><td>Battlecard</td><td>partial</td></tr>
