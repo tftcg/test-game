@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1432/1514 (94.6%)</p>
+  <p>TFDSL completion: 1435/1514 (94.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>404</td><td>14</td><td>8</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>580</td><td>6</td><td>26</td><td>32</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>583</td><td>6</td><td>23</td><td>29</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>137</td><td>7</td><td>14</td><td>21</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 501/578 (86.7%)</p>
+  <p>TFDSL completion: 504/578 (87.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>99</td><td>14</td><td>8</td><td>22</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>200</td><td>6</td><td>20</td><td>26</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>203</td><td>6</td><td>17</td><td>23</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>106</td><td>7</td><td>14</td><td>21</td></tr>
 </tbody>
 </table>
@@ -289,12 +289,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 163/199 (81.9%)</p>
+  <p>TFDSL completion: 166/199 (83.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>32</td><td>9</td><td>1</td><td>10</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>67</td><td>2</td><td>12</td><td>14</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>70</td><td>2</td><td>9</td><td>11</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>31</td><td>2</td><td>8</td><td>10</td></tr>
 </tbody>
 </table>
@@ -333,11 +333,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Imminent Breakthrough</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">As there isn&#39;t a &#39;during your turn&#39; event, making this start of turn. Potentiallty later it can be an actionable ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Inexorable Force</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing opponent-caused TAP events; conditional ignore_oppress is supported</td></tr>
 <tr><th scope="row">Junkyard Turbofox</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Interrupting Upgrade returns across zones and swapping a matching star-cost Upgrade</td></tr>
-<tr><th scope="row">Lagartan Spaulders</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: The replacement must both scrap a green card and cancel the original Upgrade-scrap event; current instead effects either apply modifications and continue the original event, or cancel without performing the replacement.</td></tr>
 <tr><th scope="row">Muster the Will</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>
-<tr><th scope="row">Ninety Day Warranty!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Distributing pending attack damage among any number of characters</td></tr>
-<tr><th scope="row">Passenger Coverage</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Secret Action attack-damage replacement transferring damage after base DEF calculation across Station occupants</td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping Pierce contributed by black battle icons independently of other Pierce sources, using the attacker&#39;s base ATK</td></tr>
 <tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sitrep Update</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the scrap of a face-down Secret Action</td></tr>

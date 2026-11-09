@@ -147,8 +147,7 @@
     },
     {
       "name": "Lagartan Spaulders",
-      "tfdsl": "",
-      "needs": "The replacement must both scrap a green card and cancel the original Upgrade-scrap event; current instead effects either apply modifications and continue the original event, or cancel without performing the replacement."
+      "tfdsl": "tough(1);instead(on(event=scrap-upgrade,when(event().scrapped=this(),event().from=this().attached_to,event().from.trait=Allicon,event().cause.owner=opponent(),exists_card(self().hand,green>=1)))->(if(confirm('Scrap a green card from hand instead?'))->(scrap_hand(pick_hand(green>=1,exact=1));if(done())->do_nothing():else->modify_nothing()):else->modify_nothing()))"
     },
     {
       "name": "Lie in Wait",
@@ -182,8 +181,7 @@
     },
     {
       "name": "Ninety Day Warranty!",
-      "tfdsl": "",
-      "needs": "Distributing pending attack damage among any number of characters"
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.faction=Junkion,event().target.has_drifter=true))))->revealed(if(confirm('Distribute this attack damage among your Junkions?'))->(distribute_damage(event().damage,all_friends(faction=Junkion));modify(event().damage:=0)):else->modify_nothing())"
     },
     {
       "name": "Nucleon Exposure",
@@ -199,8 +197,7 @@
     },
     {
       "name": "Passenger Coverage",
-      "tfdsl": "",
-      "needs": "Secret Action attack-damage replacement transferring damage after base DEF calculation across Station occupants"
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.in_station,event().target.occupied_station.host.trait=Vehicle))))->revealed(modify(event().target:=event().target.occupied_station.host);modify(event().damage:=max(0,event().damage - event().target.base_def)))"
     },
     {
       "name": "Patrol Bolas",
