@@ -574,9 +574,8 @@
     },
     {
       "name": "Deliberata, Judger and The Judged",
-      "bot-needs": "TAP ability modal choice with top-deck reveal/scrap outcomes and a variable hand-scrap cost.",
       "tfdsl": {
-        "bot": ""
+        "bot": "tap_ability()->(choose(options('Reveal cards','Untap a Quintesson'));if(chosen()='Reveal cards')->(scrap_hand(pick_hand(green>=1));if(done())->(reveal_cards(top_deck(count=2));if(exists_card(previous_target(3),green>=1))->move_to(self().hand,previous_target(3)):else->scrap_deck(previous_target(3))));if(chosen()='Untap a Quintesson')->(if(all(this().upgrades,trait=Tentacle).count<3)->scrap_hand(pick_hand(count=3 - all(this().upgrades,trait=Tentacle).count));untap(pick_friend(faction=Quintesson,stars<=4))))"
       }
     },
     {
@@ -604,9 +603,8 @@
     },
     {
       "name": "Klementia, Medical Magistrate",
-      "bot-needs": "TAP ability modal choice with card-color-dependent repair and Tentacle-count-based ATK modification.",
       "tfdsl": {
-        "bot": ""
+        "bot": "tap_ability()->(choose(options('Repair','Modify ATK'));if(chosen()='Repair')->(scrap_hand(pick_hand());if(done())->(if(previous_target(2).faction=Quintesson)->repair(2,pick_char()):else->repair(1,pick_char())));if(chosen()='Modify ATK')->(choose(options('+ATK','-ATK'));if(chosen()='+ATK')->atk_eot(all(this().upgrades,trait=Tentacle).count,pick_char());if(chosen()='-ATK')->atk_eot(0 - all(this().upgrades,trait=Tentacle).count,pick_char())))"
       }
     },
     {
