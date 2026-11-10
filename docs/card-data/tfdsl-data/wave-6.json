@@ -536,11 +536,10 @@
     },
     {
       "name": "Autobot Powerglide, Haughty Show-Off",
-      "bot-needs": "Replacing incoming damage-counter movement with redirect-and-repair and playing this character's Upgrade side on KO.",
       "tfdsl": {
-        "alt": "on-this-after-battle-flip(when(all(event().flips.cards,subtype=Weapon,blue>=1).count>0))->(on-this-after-battle(scope=afb,when(self().hand.count>0,all(event().flips.cards,subtype=Weapon,blue>=1).count>0))->(if(confirm('Swap a hand card with a flipped blue Weapon?'))->(choose(pick_hand());choose(pick(event().flips.cards,subtype=Weapon,blue>=1));move_to(self().hand,chosen());move_to(self().flips,previous_target(1)))))",
+        "alt": "on-this-after-battle-flip(when(all(event().flips.cards,subtype=Weapon,blue>=1).count>0))->(on-this-after-battle(scope=afb,when(self().hand.count>0,all(event().flips.cards,subtype=Weapon,blue>=1).count>0))->(if(confirm('Swap a hand card with a flipped blue Weapon?'))->(choose(pick_hand());choose(pick(event().flips.cards,subtype=Weapon,blue>=1));move_to(self().hand,chosen());move_to(self().flips,previous_target(1)))));on-this-ko()->do_deploy_upgrade()",
         "upgrade": "on(event=after-defend-flip,when(event().attacker=attached(),event().flips.black>=2))->pierce_eob(this().base_atk,attached())",
-        "bot": ""
+        "bot": "instead(on-damage-move(when(event().amount>=1,event().move_from.owner=opponent(),event().move_to.owner=self(),event().move_to.cardtype=character,event().move_to!=this()))->(move(event().amount,event().move_from,this());if(this().zone=self().chars,this().damage<this().health)->repair(1,this())));on-this-ko()->do_deploy_upgrade()"
       }
     },
     {
@@ -700,11 +699,10 @@
     {
       "name": "Shockblast, Galactic Man",
       "upgrade-needs": "Conditional Bounty use and replacing this Upgrade leaving the battlefield with moving it to KO.",
-      "bot-needs": "Battlemaster stuff. Maybe make standard Battlemaster checks about having an upgrde mode with Battlemaster trait",
       "tfdsl": {
-        "alt": "on-this-flip()->(each(all_players())->draw(1,it()))",
+        "alt": "on-this-flip()->(each(all_players())->draw(1,it()));on-this-ko()->do_deploy_upgrade()",
         "upgrade": "",
-        "bot": "on-this-flip()->(reveal_cards(opponent_top_deck(count=2));if(previous_target().count>1)->reorder(opponent().deck,previous_target().count);put_deck_bottom(opponent(),pick(previous_target(),upto=2)))"
+        "bot": "on-this-flip()->(reveal_cards(opponent_top_deck(count=2));if(previous_target().count>1)->reorder(opponent().deck,previous_target().count);put_deck_bottom(opponent(),pick(previous_target(),upto=2));on-this-ko()->do_deploy_upgrade())"
       }
     },
     {
