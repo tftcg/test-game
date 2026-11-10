@@ -331,9 +331,8 @@
     },
     {
       "name": "Energon Reclamation",
-      "front-needs": "An activated repair effect available during the main phase; fuel counters, attack-triggered flipping, repair, and Stratagem flipping are supported, but no main-phase Stratagem activation window exists.",
       "tfdsl": {
-        "front": "on-friend-attack-damage(when(event().origin.fullname=this().target,event().origin.mode=bot,event().damage>0))->(up_counter(1,this());on(event=char-after-attack,scope=afb,when(event().attacker.fullname=this().target))->flip(event().attacker,alt))"
+        "front": "on-friend-attack-damage(when(event().origin.fullname=this().target,event().origin.mode=bot,event().damage>0))->(up_counter(1,this());on(event=char-after-attack,scope=afb,when(event().attacker.fullname=this().target))->flip(event().attacker,alt));main_phase_ability(repair(this().counter,pick_friend(damage>0)),when(this().counter>=1,all_friends(damage>0).count>=1))->flip(this())"
       }
     },
     {
@@ -399,9 +398,8 @@
     },
     {
       "name": "Pit of Judgement",
-      "front-needs": "Activating the repair-and-return effect during the main phase; the engine has no main-phase Stratagem activation window. Counter initialization and return_from_ko are supported.",
       "tfdsl": {
-        "front": "on-start-game()->up_counter(starting_team(faction=Quintesson).count,this())"
+        "front": "on-start-game()->up_counter(starting_team(faction=Quintesson).count,this());main_phase_ability(scrap_hand(pick_hand(exact=3,green>=1)),down_counter(1,this()),when(exists_friend(trait=Judge),this().counter>=1,all(self().hand,green>=1).count>=3,ko_chars(trait=Sharkticon,stars<=4).count>=1))->return_from_ko(pick(ko_chars(trait=Sharkticon,stars<=4)))"
       }
     },
     {

@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1443/1514 (95.3%)</p>
+  <p>TFDSL completion: 1447/1514 (95.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>409</td><td>11</td><td>6</td><td>17</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>585</td><td>6</td><td>21</td><td>27</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>137</td><td>7</td><td>14</td><td>21</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>141</td><td>4</td><td>13</td><td>17</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 512/578 (88.6%)</p>
+  <p>TFDSL completion: 516/578 (89.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>104</td><td>11</td><td>6</td><td>17</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>205</td><td>6</td><td>15</td><td>21</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>106</td><td>7</td><td>14</td><td>21</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>110</td><td>4</td><td>13</td><td>17</td></tr>
 </tbody>
 </table>
 </section>
@@ -201,13 +201,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 125/156 (80.1%)</p>
+  <p>TFDSL completion: 127/156 (81.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>31</td><td>25</td><td>2</td><td>4</td><td>6</td></tr>
 <tr><th scope="row">Battlecard</th><td>62</td><td>50</td><td>4</td><td>8</td><td>12</td></tr>
-<tr><th scope="row">Stratagem</th><td>35</td><td>26</td><td>4</td><td>5</td><td>9</td></tr>
+<tr><th scope="row">Stratagem</th><td>35</td><td>28</td><td>2</td><td>5</td><td>7</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -249,12 +249,10 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Universal Greeting</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Because it&#39;s a simpler order to code, this has you choose Autobot, then option, then the 2nd character and its options</td><td class="comment"></td></tr>
 <tr><th scope="row">What Lies Beyond</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A return-from-KO event, KO cause/damage context to identify qualifying enemy KOs, and a runtime operation/event for skipping an extra turn.</td></tr>
 <tr><th scope="row">Brutal Conditioning</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a chosen character, tracking that host for later damage/KO triggers, and enforcing the once-per-game attachment.<br>back-needs: Moving an attached Stratagem to its owner&#39;s KO area when its host is KO&#39;d; generic Stratagem counters are supported.</td></tr>
-<tr><th scope="row">Energon Reclamation</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: An activated repair effect available during the main phase; fuel counters, attack-triggered flipping, repair, and Stratagem flipping are supported, but no main-phase Stratagem activation window exists.</td></tr>
 <tr><th scope="row">In The Name of Slingshot</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">2nd player&#39;s &#39;start of first turn&#39; is currently waiting for their first turn</td><td class="comment"></td></tr>
 <tr><th scope="row">Indigestion</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Granting a once-per-game TAP ability to a named character, selecting and scrapping its cards-under zone, and scaling damage from the successful scrap count.</td></tr>
 <tr><th scope="row">Mass Displacement Drive</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Overriding a character&#39;s STAR value by mode; STAR is currently a printed/deck-building value, not a modifiable static property.</td></tr>
 <tr><th scope="row">Orbital Command</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">When the combiner enters the battlefield, nothing makes this update to give him Guardian</td><td class="comment"></td></tr>
-<tr><th scope="row">Pit of Judgement</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Activating the repair-and-return effect during the main phase; the engine has no main-phase Stratagem activation window. Counter initialization and return_from_ko are supported.</td></tr>
 <tr><th scope="row">Sound The Alarm</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a chosen character and adding its printed stats to that host; scrap search by arbitrary text is also unsupported.<br>back-needs: Moving an attached Stratagem to its owner&#39;s KO area when its host is KO&#39;d.</td></tr>
 <tr><th scope="row">Stuck On You</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing an Armor directly from scrap or KO once per game, as though it were in hand; the conditional extra Armor slot is implemented.</td></tr>
 <tr><th scope="row">Thermal Reciprocation</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">The ko listener won&#39;t work until Battlemasters are firing a Play Upgrade event</td><td class="comment">front-needs: Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.</td></tr>
@@ -286,13 +284,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 170/199 (85.4%)</p>
+  <p>TFDSL completion: 172/199 (86.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>34</td><td>7</td><td>1</td><td>8</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>72</td><td>2</td><td>7</td><td>9</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>31</td><td>2</td><td>8</td><td>10</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>33</td><td>1</td><td>7</td><td>8</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -342,13 +340,11 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Tried and Executed</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Two Foes, Two Fists</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">the &#39;else put on untapped</td><td class="comment"></td></tr>
 <tr><th scope="row">A Very Cross Examination</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Removing or replacing an already-installed station on the Combat Deck; station installation and entry effects are supported</td></tr>
-<tr><th scope="row">Angolmois Infusion</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">front-needs: A main-phase trigger for the optional named combination when the counter threshold and five qualifying Terrorcons are present; counters, named combine detection, and side flipping are implemented</td></tr>
 <tr><th scope="row">Cherish This World or Perish</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: A main-phase timing hook for the threshold-gated combine and an exposed event for a character newly gaining Drifter; counters and named-character combination are supported</td></tr>
 <tr><th scope="row">Combat Deck</th><td>Stratagem</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Don&#39;t Touch That Dial!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppression of White-icon battle effects for a single battle</td></tr>
 <tr><th scope="row">Four the Selectors!</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">Ignoring Horde support as no card references it yet</td><td class="comment"></td></tr>
 <tr><th scope="row">Ignore the Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Moving damage counters between a Character and a Stratagem; counters do not represent damage or update Character damage</td></tr>
-<tr><th scope="row">Kakistocracy</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Conditional starting STAR allowance, a main-phase timing hook, and an operation to remove a character from its Station; Rolling Action tap/untap is supported</td></tr>
 <tr><th scope="row">King of Pain</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">TODO: Test. NOTE: Front flip keys off &#39;Q-RTR Arachnoid Array&#39; but really should key off both being played</td><td class="comment">back-needs: Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported</td></tr>
 <tr><th scope="row">Materiel War</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?</td><td class="comment"></td></tr>
 <tr><th scope="row">Me Grimlock Want to Munch Metal</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>

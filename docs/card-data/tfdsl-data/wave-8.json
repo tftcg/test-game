@@ -368,10 +368,9 @@
     {
       "name": "Angolmois Infusion",
       "tfdsl": {
-        "front": "on(event=put-upgrade,when(event().attached.trait=Terrorcon,event().played.name='Terrorburster Shield'))->up_counter(1,this());on(event=combine,when(event().combiner.fullname=this().target))->(flip(this());down_counter(3,this()))",
+        "front": "on(event=put-upgrade,when(event().attached.trait=Terrorcon,event().played.name='Terrorburster Shield'))->up_counter(1,this());on(event=combine,when(event().combiner.fullname=this().target))->(flip(this());down_counter(3,this()));main_phase_ability(when(this().counter>=3,all(self().chars+self().ko,trait=Terrorcon,mode=bot).count>=5))->combine(this().target,5,bot,Terrorcon)",
         "back": "on(event=put-upgrade,when(event().attached.fullname=this().target,event().played.name='Terrorburster Shield'))->up_counter(1,this());static(def,this().counter,target=all_friends(fullname=this().target))"
-      },
-      "front-needs": "A main-phase trigger for the optional named combination when the counter threshold and five qualifying Terrorcons are present; counters, named combine detection, and side flipping are implemented"
+      }
     },
     {
       "name": "Barrel Rolling",
@@ -462,9 +461,8 @@
     {
       "name": "Kakistocracy",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Conditional starting STAR allowance, a main-phase timing hook, and an operation to remove a character from its Station; Rolling Action tap/untap is supported"
+        "front": "main_phase_ability(damage(1,pick_friend(faction=Quintesson,trait=Melee)),when(exists_friend(faction=Quintesson,trait=Leader),exists_friend(faction=Quintesson,trait=Melee),self().flags!=this().id+'_kakistocracy_used'))->(set_flag_eot(this().id+'_kakistocracy_used');choose(options('Leave Station','Tap Rolling Action','Untap Rolling Action'));if(chosen()='Leave Station')->leave_station(previous_target(1));if(chosen()='Tap Rolling Action')->tap(pick(self().actions,subtype='Rolling Action',tapped=untapped));if(chosen()='Untap Rolling Action')->untap(pick(self().actions,subtype='Rolling Action',tapped=tapped)))"
+      }
     },
     {
       "name": "King of Pain",
