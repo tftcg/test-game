@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1447/1514 (95.6%)</p>
+  <p>TFDSL completion: 1451/1514 (95.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>409</td><td>11</td><td>6</td><td>17</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>410</td><td>10</td><td>6</td><td>16</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>585</td><td>6</td><td>21</td><td>27</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>141</td><td>4</td><td>13</td><td>17</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>142</td><td>3</td><td>13</td><td>16</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 516/578 (89.3%)</p>
+  <p>TFDSL completion: 520/578 (90.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>104</td><td>11</td><td>6</td><td>17</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>105</td><td>10</td><td>6</td><td>16</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>205</td><td>6</td><td>15</td><td>21</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>110</td><td>4</td><td>13</td><td>17</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>111</td><td>3</td><td>13</td><td>16</td></tr>
 </tbody>
 </table>
 </section>
@@ -201,13 +201,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 127/156 (81.4%)</p>
+  <p>TFDSL completion: 128/156 (82.1%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>31</td><td>25</td><td>2</td><td>4</td><td>6</td></tr>
 <tr><th scope="row">Battlecard</th><td>62</td><td>50</td><td>4</td><td>8</td><td>12</td></tr>
-<tr><th scope="row">Stratagem</th><td>35</td><td>28</td><td>2</td><td>5</td><td>7</td></tr>
+<tr><th scope="row">Stratagem</th><td>35</td><td>29</td><td>1</td><td>5</td><td>6</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -254,7 +254,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Mass Displacement Drive</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Overriding a character&#39;s STAR value by mode; STAR is currently a printed/deck-building value, not a modifiable static property.</td></tr>
 <tr><th scope="row">Orbital Command</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">When the combiner enters the battlefield, nothing makes this update to give him Guardian</td><td class="comment"></td></tr>
 <tr><th scope="row">Sound The Alarm</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a chosen character and adding its printed stats to that host; scrap search by arbitrary text is also unsupported.<br>back-needs: Moving an attached Stratagem to its owner&#39;s KO area when its host is KO&#39;d.</td></tr>
-<tr><th scope="row">Stuck On You</th><td>Stratagem</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Playing an Armor directly from scrap or KO once per game, as though it were in hand; the conditional extra Armor slot is implemented.</td></tr>
 <tr><th scope="row">Thermal Reciprocation</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">The ko listener won&#39;t work until Battlemasters are firing a Play Upgrade event</td><td class="comment">front-needs: Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.</td></tr>
 <tr><th scope="row">This Gun For Hire</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Replacing a named character&#39;s faction and detecting play of its Upgrade side.<br>back-needs: Replacing a named Upgrade&#39;s factions and editing its printed text.</td></tr>
 </tbody>
@@ -284,11 +283,11 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 172/199 (86.4%)</p>
+  <p>TFDSL completion: 175/199 (87.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>34</td><td>7</td><td>1</td><td>8</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>35</td><td>6</td><td>1</td><td>7</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>72</td><td>2</td><td>7</td><td>9</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>33</td><td>1</td><td>7</td><td>8</td></tr>
 </tbody>
@@ -308,10 +307,9 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Allowing another weapon in attached&#39;s slot but only if it has only 1 weapon slot</td></tr>
 <tr><th scope="row">Quig</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Roadmaster Prime Mode, Master of Chaos</th><td>Character</td><td>test</td><td>1/1</td><td class="comment">if the game is lost while it tries to deploy its drones out</td><td class="comment"></td></tr>
-<tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>Character</td><td>partial</td><td>1/3</td><td class="comment"></td><td class="comment">alt 2-needs: Checking oppress while adding oppress leads to an infinite loop<br>body-needs: Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities</td></tr>
+<tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">alt 2-needs: Checking oppress while adding oppress leads to an infinite loop</td></tr>
 <tr><th scope="row">Sideswipe, Covert Clone</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing an opponent-caused Upgrade scrap with a different Upgrade</td></tr>
 <tr><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">alt mode</td><td class="comment"></td></tr>
-<tr><th scope="row">Stock-Pyl, 100 Billion Stars, One Precious World</th><td>Character</td><td>partial</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Conditional attack-damage redistribution with rounded division and starting-team checks<br>bot-needs: Once-per-turn tracking and rounded division when moving damage</td></tr>
 <tr><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">alt and bot modes</td><td class="comment"></td></tr>
 <tr><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This doesn&#39;t let you tap an already tapped 6 star or fewer character, and thus do 1 damage if it has stealth</td><td class="comment"></td></tr>
 <tr><th scope="row">Bracing Up</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>

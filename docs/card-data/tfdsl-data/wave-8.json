@@ -797,10 +797,9 @@
       "tfdsl": {
         "alt 1": "static(oppress,when(this().has_oppress=true),1,target=all_friends(id!=this().id))",
         "alt 2": "",
-        "body": ""
+        "body": "on-this-flip(when(event().flipped.mode=body))->(if(this().head.mode=head,this().head.other_traits='Titan Master',confirm('Deploy the attached Titan Master?'))->do_deploy_head();if(all(self().chars,trait='Titan Master').count>0)->(choose(pick(self().chars,trait='Titan Master'));atk_eot(1,chosen());pierce_eot(2,chosen())))"
       },
-      "alt 2-needs": "Checking oppress while adding oppress leads to an infinite loop",
-      "body-needs": "Deploying an attached Titan Master in a specified mode and selecting a Titan Master for temporary abilities"
+      "alt 2-needs": "Checking oppress while adding oppress leads to an infinite loop"
     },
     {
       "name": "Sideswipe, Covert Clone",
@@ -835,11 +834,9 @@
     {
       "name": "Stock-Pyl, 100 Billion Stars, One Precious World",
       "tfdsl": {
-        "alt": "drifter()",
-        "bot": "drifter()"
-      },
-      "alt-needs": "Conditional attack-damage redistribution with rounded division and starting-team checks",
-      "bot-needs": "Once-per-turn tracking and rounded division when moving damage"
+        "alt": "drifter();instead(on-friend-attack-damaged(when(event().target!=this(),event().damage>=2,event().target.stars=4 || event().target.stars=5,starting_team(stars=4 || stars=5,id!=event().target.id).count=0,event().stock_pyl_redirected!=true))->(modify(event().stock_pyl_redirected:=true);if(confirm('Have Stock-Pyl take some attack damage?'))->(choose(range(1,event().damage/2));attack_damage(chosen(),this());repeat(previous_target())->modify(event().damage:=event().damage-1))))",
+        "bot": "drifter();on-this-attack-damaged(when(event().damage>=4,this().damage<this().health,self().flags!=this().id+'_stock_pyl_used'))->(set_flag_eot(this().id+'_stock_pyl_used');if(confirm('Move half this damage to the attacker?'))->move(event().damage/2,this(),event().origin))"
+      }
     },
     {
       "name": "Terrorcon Blot, Rank and Vile Rank and File",

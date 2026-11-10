@@ -421,9 +421,8 @@
     },
     {
       "name": "Stuck On You",
-      "front-needs": "Playing an Armor directly from scrap or KO once per game, as though it were in hand; the conditional extra Armor slot is implemented.",
       "tfdsl": {
-        "front": "if(starting_team().count=2)->add_slot('Armor',1,all_friends())"
+        "front": "if(starting_team().count=2)->add_slot('Armor',1,all_friends());main_phase_ability(play_upgrade(pick(self().scrap+self().ko,subtype=Armor)),when(starting_team().count=2,all(self().scrap+self().ko,subtype=Armor).count>=1))->flip(this())"
       }
     },
     {
