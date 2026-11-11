@@ -92,8 +92,7 @@
     },
     {
       "name": "Energy Conversion Field",
-      "needs": "Detecting a single non-attack damage instruction's full target set and replacing it with one repair of all characters; char-damage replacements currently see targets individually.",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-friend-damaged(batch(min=2),when(event().origin.owner=opponent(),event().amount>0))))->revealed(repair(1,all_friends()))"
     },
     {
       "name": "Forked Tentacle",
@@ -169,7 +168,7 @@
     },
     {
       "name": "Opportune Protection",
-      "needs": "A single Secret Action replacement listener that can handle both attack-damage and non-attack char-damage; separate reveal listeners overwrite each other."
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().damage>0,event().target.faction=Quintesson,starting_team(faction=Mercenary).count>0,exists_friend(id!=event().target.id)))))->revealed(if(confirm('Have another character take some attack damage?'))->(choose(pick_friend(id!=event().target.id));choose(range(1,min(3,event().damage)));attack_damage(chosen(),previous_target(1));modify(event().damage:=event().damage - chosen())):else->modify_nothing());reveal(instead(on-friend-damaged(when(event().amount>0,event().damaged.faction=Quintesson,starting_team(faction=Mercenary).count>0,exists_friend(id!=event().damaged.id)))))->revealed(if(confirm('Have another character take some damage?'))->(choose(pick_friend(id!=event().damaged.id));choose(range(1,min(3,event().amount)));damage(chosen(),previous_target(1));modify(event().amount:=event().amount - chosen())):else->modify_nothing())"
     },
     {
       "name": "Photon Charge",

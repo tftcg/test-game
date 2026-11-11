@@ -121,8 +121,7 @@
     },
     {
       "name": "Hot Seat",
-      "tfdsl": "",
-      "needs": "A DSL operation that forces a selected Station occupant to leave; enter/leave events and station occupancy are already available"
+      "tfdsl": "scrap(on(event=start-turn,when(exists_card(self().chars,in_station=true))))->when_scrapped(choose(pick(self().chars,in_station=true));leave_station(chosen()))"
     },
     {
       "name": "Hurry Hurry Hurry!",
@@ -136,8 +135,7 @@
     },
     {
       "name": "Inexorable Force",
-      "tfdsl": "static(ignore_oppress,when(attached().trait=Titan || attached().trait=Guardian || attached().stars>=18),true,target=attached())",
-      "needs": "Preventing opponent-caused TAP events; conditional ignore_oppress is supported"
+      "tfdsl": "static(ignore_oppress,when(attached().trait=Titan || attached().trait=Guardian || attached().stars>=18),true,target=attached());instead(on(event=char-tap,when(event().tapped=attached(),event().source.owner=opponent(),attached().trait=Titan || attached().trait=Guardian || attached().stars>=18))->do_nothing())"
     },
     {
       "name": "Junkyard Turbofox",
@@ -804,10 +802,9 @@
     {
       "name": "Sideswipe, Covert Clone",
       "tfdsl": {
-        "alt": "static(atk,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),2);static(pierce,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),1)",
+        "alt": "static(atk,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),2);static(pierce,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),1);instead(on(event=scrap-upgrade,when(event().from=this(),event().cause.owner=opponent(),exists_card(this().upgrades,id!=event().scrapped.id)))->(if(confirm('Scrap a different Upgrade from Sideswipe?'))->(scrap_upgrade(pick(this().upgrades,id!=event().scrapped.id));if(done())->do_nothing():else->modify_nothing()):else->modify_nothing()))",
         "bot": "static(atk,max(all(self().ko,type=Upgrade,trait='Battle Master' || trait=Weaponizer,base_atk>0).base_atk));static(def,max(all(self().ko,type=Upgrade,trait='Battle Master' || trait=Weaponizer,base_def>0).base_def))"
-      },
-      "alt-needs": "Replacing an opponent-caused Upgrade scrap with a different Upgrade"
+      }
     },
     {
       "name": "Sinnertwin, Two-Faced Disgrace",

@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1451/1514 (95.8%)</p>
+  <p>TFDSL completion: 1456/1514 (96.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>410</td><td>10</td><td>6</td><td>16</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>585</td><td>6</td><td>21</td><td>27</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>411</td><td>9</td><td>6</td><td>15</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>589</td><td>5</td><td>18</td><td>23</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>142</td><td>3</td><td>13</td><td>16</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 520/578 (90.0%)</p>
+  <p>TFDSL completion: 525/578 (90.8%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>105</td><td>10</td><td>6</td><td>16</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>205</td><td>6</td><td>15</td><td>21</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>106</td><td>9</td><td>6</td><td>15</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>209</td><td>5</td><td>12</td><td>17</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>111</td><td>3</td><td>13</td><td>16</td></tr>
 </tbody>
 </table>
@@ -201,12 +201,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 128/156 (82.1%)</p>
+  <p>TFDSL completion: 130/156 (83.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>31</td><td>25</td><td>2</td><td>4</td><td>6</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>50</td><td>4</td><td>8</td><td>12</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>52</td><td>4</td><td>6</td><td>10</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>29</td><td>1</td><td>5</td><td>6</td></tr>
 </tbody>
 </table>
@@ -233,14 +233,12 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Aspect of Laughter</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a multi-card hand-scrap instruction once; scrap-hand currently emits one event per card, so a replacement cannot reduce the original batch size by one.</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.</td></tr>
 <tr><th scope="row">Dreadful Feast</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and retaining three distinct characters on the same team across multiple picks; current previous-target history does not reliably preserve the chosen sources and destination.</td></tr>
-<tr><th scope="row">Energy Conversion Field</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting a single non-attack damage instruction&#39;s full target set and replacing it with one repair of all characters; char-damage replacements currently see targets individually.</td></tr>
 <tr><th scope="row">Forked Tentacle</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing TAP ability option counts and the Tentacle slot-capacity rule.</td></tr>
 <tr><th scope="row">Gift of Innermost Energon</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting which characters were KO&#39;d by this damage instruction and totaling successfully applied damage after any replacements.</td></tr>
 <tr><th scope="row">Loading The Cannon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This is not remembering the defence before flipping battle cards. If it earned EOT defence during flipping then that makes this behave wrong</td><td class="comment"></td></tr>
 <tr><th scope="row">Lose The Battle...</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Masher Mace</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Occupation</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Opportune Protection</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A single Secret Action replacement listener that can handle both attack-damage and non-attack char-damage; separate reveal listeners overwrite each other.</td></tr>
 <tr><th scope="row">Photon Charge</th><td>Battlecard</td><td>bug</td><td>1/1</td><td class="comment">Engine requests reorder without data; was on Brawn. Not clear why as the three events below are at different times</td><td class="comment"></td></tr>
 <tr><th scope="row">Subcontractor Agreement</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Substituting another card&#39;s Bounty body during a Bounty invocation; do_bounty currently dispatches only the selected character&#39;s bound Bounty bodies.</td></tr>
 <tr><th scope="row">The Dweller Awakens</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting that an opponent&#39;s played Action causes a Secret Action to reveal or trigger; play-action exposes only the Action card and player, not that relationship.</td></tr>
@@ -283,12 +281,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 175/199 (87.9%)</p>
+  <p>TFDSL completion: 178/199 (89.4%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>35</td><td>6</td><td>1</td><td>7</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>72</td><td>2</td><td>7</td><td>9</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>36</td><td>5</td><td>1</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>74</td><td>1</td><td>6</td><td>7</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>33</td><td>1</td><td>7</td><td>8</td></tr>
 </tbody>
 </table>
@@ -308,7 +306,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Quig</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Roadmaster Prime Mode, Master of Chaos</th><td>Character</td><td>test</td><td>1/1</td><td class="comment">if the game is lost while it tries to deploy its drones out</td><td class="comment"></td></tr>
 <tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>Character</td><td>partial</td><td>2/3</td><td class="comment"></td><td class="comment">alt 2-needs: Checking oppress while adding oppress leads to an infinite loop</td></tr>
-<tr><th scope="row">Sideswipe, Covert Clone</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Replacing an opponent-caused Upgrade scrap with a different Upgrade</td></tr>
 <tr><th scope="row">Sinnertwin, Two-Faced Disgrace</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">alt mode</td><td class="comment"></td></tr>
 <tr><th scope="row">Terrorcon Blot, Rank and Vile Rank and File</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">alt and bot modes</td><td class="comment"></td></tr>
 <tr><th scope="row">Terrorcon Rippersnapper, Tooth and Nail</th><td>Character</td><td>bug</td><td>2/2</td><td class="comment">This doesn&#39;t let you tap an already tapped 6 star or fewer character, and thus do 1 damage if it has stealth</td><td class="comment"></td></tr>
@@ -320,10 +317,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Happy Motoring!</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Doesn&#39;t currently flip the two characters at the same time. Perhaps it should</td><td class="comment"></td></tr>
 <tr><th scope="row">Head Case</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reassigning Titan Master bonuses between characters</td></tr>
 <tr><th scope="row">Hodgepodge Panoply</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Hot Seat</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A DSL operation that forces a selected Station occupant to leave; enter/leave events and station occupancy are already available</td></tr>
 <tr><th scope="row">Hurry Hurry Hurry!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Verifying that every friendly character is a Junkion or has a Motorcycle mode before installing a mandatory follow-up attack on each enemy attack; follow_up_attack and attacks_this_turn are available</td></tr>
 <tr><th scope="row">Imminent Breakthrough</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">As there isn&#39;t a &#39;during your turn&#39; event, making this start of turn. Potentiallty later it can be an actionable ability</td><td class="comment"></td></tr>
-<tr><th scope="row">Inexorable Force</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Preventing opponent-caused TAP events; conditional ignore_oppress is supported</td></tr>
 <tr><th scope="row">Muster the Will</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>
 <tr><th scope="row">Reactive Thrusters</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Capping Pierce contributed by black battle icons independently of other Pierce sources, using the attacker&#39;s base ATK</td></tr>
