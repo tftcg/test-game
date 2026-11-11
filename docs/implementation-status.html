@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1456/1514 (96.2%)</p>
+  <p>TFDSL completion: 1458/1514 (96.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>411</td><td>9</td><td>6</td><td>15</td></tr>
 <tr><th scope="row">Battlecard</th><td>612</td><td>589</td><td>5</td><td>18</td><td>23</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>142</td><td>3</td><td>13</td><td>16</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>144</td><td>3</td><td>11</td><td>14</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 525/578 (90.8%)</p>
+  <p>TFDSL completion: 527/578 (91.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>106</td><td>9</td><td>6</td><td>15</td></tr>
 <tr><th scope="row">Battlecard</th><td>226</td><td>209</td><td>5</td><td>12</td><td>17</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>111</td><td>3</td><td>13</td><td>16</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>113</td><td>3</td><td>11</td><td>14</td></tr>
 </tbody>
 </table>
 </section>
@@ -281,13 +281,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 178/199 (89.4%)</p>
+  <p>TFDSL completion: 180/199 (90.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>42</td><td>36</td><td>5</td><td>1</td><td>6</td></tr>
 <tr><th scope="row">Battlecard</th><td>81</td><td>74</td><td>1</td><td>6</td><td>7</td></tr>
-<tr><th scope="row">Stratagem</th><td>41</td><td>33</td><td>1</td><td>7</td><td>8</td></tr>
+<tr><th scope="row">Stratagem</th><td>41</td><td>35</td><td>1</td><td>5</td><td>6</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -337,13 +337,11 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Combat Deck</th><td>Stratagem</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Don&#39;t Touch That Dial!</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Suppression of White-icon battle effects for a single battle</td></tr>
 <tr><th scope="row">Four the Selectors!</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">Ignoring Horde support as no card references it yet</td><td class="comment"></td></tr>
-<tr><th scope="row">Ignore the Pain</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Moving damage counters between a Character and a Stratagem; counters do not represent damage or update Character damage</td></tr>
 <tr><th scope="row">King of Pain</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">TODO: Test. NOTE: Front flip keys off &#39;Q-RTR Arachnoid Array&#39; but really should key off both being played</td><td class="comment">back-needs: Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported</td></tr>
 <tr><th scope="row">Materiel War</th><td>Stratagem</td><td>note</td><td>1/1</td><td class="comment">The once per turn is consumed regardless of whether you scrap an upgrade. Is that what designer intended?</td><td class="comment"></td></tr>
 <tr><th scope="row">Me Grimlock Want to Munch Metal</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">No Lords, No Masters</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Attaching a Stratagem to a Character, granting that host a trait, and moving the attached Stratagem to KO with its host</td></tr>
 <tr><th scope="row">The City&#39;s Finest Views</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">Trypticon&#39;s minions don&#39;t try to enter the station.</td><td class="comment"></td></tr>
-<tr><th scope="row">The Great Escape</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Storing Character damage on a Stratagem and tracking the specific Character KO&#39;d by that stored damage</td></tr>
 <tr><th scope="row">This Shall Be Your Ship</th><td>Stratagem</td><td>note</td><td>2/2</td><td class="comment">A Leader KO with cause=&#39;GameCheck&#39; counts as KO&#39;d by damage, including the rare case where reduced health makes existing damage lethal.</td><td class="comment"></td></tr>
 <tr><th scope="row">Writhing in the Deep</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Tracking prior-turn KO characters through variable Green-card discards and scheduling delayed KOs for only the Characters returned this way; return-from-KO is supported</td></tr>
 </tbody>

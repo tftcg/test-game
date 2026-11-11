@@ -145,7 +145,7 @@
       "name": "Out of the Way Hot Rod!",
       "comment": "NOTE: currently replaces the original damage with separate damage to the chosen character; a future engine change should allow modifying the damage event's recipient and continue resolving that same event.",
       "tfdsl": {
-        "front": "instead(on(event=char-damage,when(event().damaged.fullname=this().target,event().origin.owner=opponent()))->(if(exists_friend(id!=event().damaged.id))->(if(confirm('Redirect this damage?'))->(damage(event().amount,pick_friend(id!=event().damaged.id));modify(event().amount:=0)):else->modify_nothing()):else->modify_nothing()))"
+        "front": "instead(on(event=char-damage,when(event().damaged.fullname=this().target,event().origin.owner=opponent()))->(if(exists_friend(id!=event().damaged.id))->(if(confirm('Redirect this damage?'))->(damage(event().amount,pick_friend(id!=event().damaged.id));modify(event().amount:=0)):else->modify_noop()):else->modify_noop()))"
       }
     },
     {

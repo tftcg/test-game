@@ -13,7 +13,7 @@
     },
     {
       "name": "Abrogate",
-      "tfdsl": "reveal(instead(on-opponent-play-action(when(event().card.green=0))))->revealed(if(exists_card(self().hand,type=Action,(white>=1,event().card.white>=1) || (orange>=1,event().card.orange>=1) || (black>=1,event().card.black>=1) || (blue>=1,event().card.blue>=1) || (green>=1,event().card.green>=1)))->(choose(pick(self().hand,type=Action,(white>=1,event().card.white>=1) || (orange>=1,event().card.orange>=1) || (black>=1,event().card.black>=1) || (blue>=1,event().card.blue>=1) || (green>=1,event().card.green>=1)));reveal_cards(chosen())):else->modify_nothing())"
+      "tfdsl": "reveal(instead(on-opponent-play-action(when(event().card.green=0))))->revealed(if(exists_card(self().hand,type=Action,(white>=1,event().card.white>=1) || (orange>=1,event().card.orange>=1) || (black>=1,event().card.black>=1) || (blue>=1,event().card.blue>=1) || (green>=1,event().card.green>=1)))->(choose(pick(self().hand,type=Action,(white>=1,event().card.white>=1) || (orange>=1,event().card.orange>=1) || (black>=1,event().card.black>=1) || (blue>=1,event().card.blue>=1) || (green>=1,event().card.green>=1)));reveal_cards(chosen())):else->modify_noop())"
     },
     {
       "name": "Anti-Grav Cell",
@@ -143,7 +143,7 @@
     },
     {
       "name": "Lagartan Spaulders",
-      "tfdsl": "tough(1);instead(on(event=scrap-upgrade,when(event().scrapped=this(),event().from=this().attached_to,event().from.trait=Allicon,event().cause.owner=opponent(),exists_card(self().hand,green>=1)))->(if(confirm('Scrap a green card from hand instead?'))->(scrap_hand(pick_hand(green>=1,exact=1));if(done())->do_nothing():else->modify_nothing()):else->modify_nothing()))"
+      "tfdsl": "tough(1);instead(on(event=scrap-upgrade,when(event().scrapped=this(),event().from=this().attached_to,event().from.trait=Allicon,event().cause.owner=opponent(),exists_card(self().hand,green>=1)))->(if(confirm('Scrap a green card from hand instead?'))->(scrap_hand(pick_hand(green>=1,exact=1));if(done())->do_nothing():else->modify_noop()):else->modify_noop()))"
     },
     {
       "name": "Lie in Wait",
@@ -177,7 +177,7 @@
     },
     {
       "name": "Ninety Day Warranty!",
-      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.faction=Junkion,event().target.has_drifter=true))))->revealed(if(confirm('Distribute this attack damage among your Junkions?'))->(distribute_damage(event().damage,all_friends(faction=Junkion));modify(event().damage:=0)):else->modify_nothing())"
+      "tfdsl": "reveal(instead(on-friend-attack-damaged(when(event().target.faction=Junkion,event().target.has_drifter=true))))->revealed(if(confirm('Distribute this attack damage among your Junkions?'))->(distribute_damage(event().damage,all_friends(faction=Junkion));modify(event().damage:=0)):else->modify_noop())"
     },
     {
       "name": "Nucleon Exposure",
@@ -440,9 +440,8 @@
     {
       "name": "Ignore the Pain",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Moving damage counters between a Character and a Stratagem; counters do not represent damage or update Character damage"
+        "front": "on-friend-attack-damaged(when(event().target.fullname=this().target,event().damage>0,event().overkill<0))->(if(starting_team(trait=Sharkticon).count=1,starting_team(fullname=this().target).count=1,this().counter<1)->(if(confirm('Move attack damage to Ignore the Pain?'))->move(event().damage,event().target,this())):else->(if(this().counter>0)->move(this().counter,this(),event().target)));on(event=untap-all,when(this().counter>0))->flip(this())"
+      }
     },
     {
       "name": "It's As Good As Used!",
@@ -572,7 +571,7 @@
     {
       "name": "Stop the Tax and Spend!",
       "tfdsl": {
-        "front": "instead(on(event=scrap-deck,batch(min=2),when(exists_friend(fullname=this().target),event().player=self(),event().source.owner=opponent(),event().source.cardtype=character))->(if(confirm('Scrap only the top card?'))->scrap_deck(get(batch().matches.card,count=1,from=top)):else->modify_nothing()))"
+        "front": "instead(on(event=scrap-deck,batch(min=2),when(exists_friend(fullname=this().target),event().player=self(),event().source.owner=opponent(),event().source.cardtype=character))->(if(confirm('Scrap only the top card?'))->scrap_deck(get(batch().matches.card,count=1,from=top)):else->modify_noop()))"
       }
     },
     {
@@ -585,9 +584,8 @@
     {
       "name": "The Great Escape",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Storing Character damage on a Stratagem and tracking the specific Character KO'd by that stored damage"
+        "front": "on-friend-attack-damaged(when(event().damage>0,event().overkill<0,event().target.all_traits=Motorcycle,self().flags!='great_escape_used_'+this().id))->(if(confirm('Move all damage to The Great Escape and KO this character?'))->(set_flag('great_escape_used_'+this().id);set_flag('great_escape_character_'+this().id+'_'+event().target.id);move(event().target.damage,event().target,this());ko(event().target)));on-start-turn(when(all(self().ko,all_traits=Motorcycle,self().flags='great_escape_character_'+this().id+'_'+candidate().id).count>0))->(if(confirm('Return the character from The Great Escape?'))->(choose(pick(self().ko,all_traits=Motorcycle,self().flags='great_escape_character_'+this().id+'_'+candidate().id));return_from_ko(chosen())));on(event=return-from-ko,when(event().returned.owner=this().owner,self().flags='great_escape_character_'+this().id+'_'+event().returned.id))->(move(this().counter,this(),event().returned);delete_flag('great_escape_character_'+this().id+'_'+event().returned.id);flip(this()))"
+      }
     },
     {
       "name": "Third Party Brigade",
@@ -802,7 +800,7 @@
     {
       "name": "Sideswipe, Covert Clone",
       "tfdsl": {
-        "alt": "static(atk,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),2);static(pierce,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),1);instead(on(event=scrap-upgrade,when(event().from=this(),event().cause.owner=opponent(),exists_card(this().upgrades,id!=event().scrapped.id)))->(if(confirm('Scrap a different Upgrade from Sideswipe?'))->(scrap_upgrade(pick(this().upgrades,id!=event().scrapped.id));if(done())->do_nothing():else->modify_nothing()):else->modify_nothing()))",
+        "alt": "static(atk,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),2);static(pierce,when(event().attacker=this(),event().defender.brave>0 || event().defender.stealth>0),1);instead(on(event=scrap-upgrade,when(event().from=this(),event().cause.owner=opponent(),exists_card(this().upgrades,id!=event().scrapped.id)))->(if(confirm('Scrap a different Upgrade from Sideswipe?'))->(scrap_upgrade(pick(this().upgrades,id!=event().scrapped.id));if(done())->do_nothing():else->modify_noop()):else->modify_noop()))",
         "bot": "static(atk,max(all(self().ko,type=Upgrade,trait='Battle Master' || trait=Weaponizer,base_atk>0).base_atk));static(def,max(all(self().ko,type=Upgrade,trait='Battle Master' || trait=Weaponizer,base_def>0).base_def))"
       }
     },
@@ -810,7 +808,7 @@
       "name": "Sinnertwin, Two-Faced Disgrace",
       "comment": "TEST: alt mode",
       "tfdsl": {
-        "alt": "instead(on-opponent-play-upgrade(when(starting_team(trait=Terrorcon).count>=2,all(self().hand,type=Upgrade,subtype=event().card.subtype || (subtype='Weapon Armor',event().card.subtype=Weapon || event().card.subtype=Armor) || (event().card.subtype='Weapon Armor',subtype=Weapon || subtype=Armor)).count>=2))->(if(confirm('Reveal two Upgrades sharing a type and scrap one?'))->(reveal_cards(pick_hand(type=Upgrade,subtype=event().card.subtype || (subtype='Weapon Armor',event().card.subtype=Weapon || event().card.subtype=Armor) || (event().card.subtype='Weapon Armor',subtype=Weapon || subtype=Armor),exact=2));if(done())->(choose(pick(previous_target(0-1)));scrap_hand(chosen());if(done())->(move_to(opponent().hand,event().card);flip(this())):else->modify_nothing()):else->modify_nothing()):else->modify_nothing()))",
+        "alt": "instead(on-opponent-play-upgrade(when(starting_team(trait=Terrorcon).count>=2,all(self().hand,type=Upgrade,subtype=event().card.subtype || (subtype='Weapon Armor',event().card.subtype=Weapon || event().card.subtype=Armor) || (event().card.subtype='Weapon Armor',subtype=Weapon || subtype=Armor)).count>=2))->(if(confirm('Reveal two Upgrades sharing a type and scrap one?'))->(reveal_cards(pick_hand(type=Upgrade,subtype=event().card.subtype || (subtype='Weapon Armor',event().card.subtype=Weapon || event().card.subtype=Armor) || (event().card.subtype='Weapon Armor',subtype=Weapon || subtype=Armor),exact=2));if(done())->(choose(pick(previous_target(0-1)));scrap_hand(chosen());if(done())->(move_to(opponent().hand,event().card);flip(this())):else->modify_noop()):else->modify_noop()):else->modify_noop()))",
         "bot": "on-attack-damage(when(event().origin=this()))->damage(1,pick_enemy(id!=event().target.id))"
       }
     },
@@ -839,7 +837,7 @@
       "name": "Terrorcon Blot, Rank and Vile Rank and File",
       "comment": "TEST: alt and bot modes",
       "tfdsl": {
-        "alt": "instead(on-opponent-play-action(when(event().card.green=0,event().card.subtype!='Secret Action',starting_team(trait=Terrorcon).count>=2,all(self().hand,type=Action,subtype!='Secret Action').count>=2))->(if(confirm('Reveal two non-Secret Actions and scrap one?'))->(reveal_cards(pick_hand(type=Action,subtype!='Secret Action',exact=2));if(done())->(choose(pick(previous_target(0-1)));scrap_hand(chosen());if(done())->(move_to(opponent().hand,event().card);flip(this())):else->modify_nothing()):else->modify_nothing()):else->modify_nothing()))",
+        "alt": "instead(on-opponent-play-action(when(event().card.green=0,event().card.subtype!='Secret Action',starting_team(trait=Terrorcon).count>=2,all(self().hand,type=Action,subtype!='Secret Action').count>=2))->(if(confirm('Reveal two non-Secret Actions and scrap one?'))->(reveal_cards(pick_hand(type=Action,subtype!='Secret Action',exact=2));if(done())->(choose(pick(previous_target(0-1)));scrap_hand(chosen());if(done())->(move_to(opponent().hand,event().card);flip(this())):else->modify_noop()):else->modify_noop()):else->modify_noop()))",
         "bot": "instead(on-friend-damage(when(event().damaged.trait=Terrorcon,event().damaged.damage>=1,event().damaged.stars=4,event().amount>0))->modify(event().amount:=event().amount - 1))"
       }
     },

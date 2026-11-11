@@ -213,7 +213,7 @@
     },
     {
       "name": "Scavenge the Battlefield",
-      "tfdsl": "reveal(instead(on-friend-ko()))->revealed(if(event().ko.upgrades.count>0)->(choose(pick_friend(id!=event().ko.id));each(all(event().ko.upgrades))->(if(confirm('Put '+it().name+' on '+chosen().name))->put_upgrade(it(),chosen())));modify_nothing())"
+      "tfdsl": "reveal(instead(on-friend-ko()))->revealed(if(event().ko.upgrades.count>0)->(choose(pick_friend(id!=event().ko.id));each(all(event().ko.upgrades))->(if(confirm('Put '+it().name+' on '+chosen().name))->put_upgrade(it(),chosen())));modify_noop())"
     },
     {
       "name": "Smoke Cloak",
