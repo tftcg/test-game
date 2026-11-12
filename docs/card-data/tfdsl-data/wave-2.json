@@ -318,7 +318,7 @@
     },
     {
       "name": "Underhanded Tactics",
-      "tfdsl": "damage(1,pick_enemy());if(exists_card(opponent().ko,id=previous_target().id))->repair(1,pick_friend(faction=Decepticon))"
+      "tfdsl": "damage(1,pick_enemy());if(exists_card(damage_result().ko,id=previous_target().id))->repair(1,pick_friend(faction=Decepticon))"
     },
     {
       "name": "Universal Network Access",

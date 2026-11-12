@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1458/1514 (96.3%)</p>
+  <p>TFDSL completion: 1464/1514 (96.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>411</td><td>9</td><td>6</td><td>15</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>589</td><td>5</td><td>18</td><td>23</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>413</td><td>8</td><td>5</td><td>13</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>592</td><td>4</td><td>16</td><td>20</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>144</td><td>3</td><td>11</td><td>14</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 527/578 (91.2%)</p>
+  <p>TFDSL completion: 533/578 (92.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>106</td><td>9</td><td>6</td><td>15</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>209</td><td>5</td><td>12</td><td>17</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>108</td><td>8</td><td>5</td><td>13</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>212</td><td>4</td><td>10</td><td>14</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>113</td><td>3</td><td>11</td><td>14</td></tr>
 </tbody>
 </table>
@@ -201,12 +201,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 130/156 (83.3%)</p>
+  <p>TFDSL completion: 133/156 (85.3%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>31</td><td>25</td><td>2</td><td>4</td><td>6</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>52</td><td>4</td><td>6</td><td>10</td></tr>
+<tr><th scope="row">Character</th><td>31</td><td>25</td><td>3</td><td>3</td><td>6</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>54</td><td>3</td><td>5</td><td>8</td></tr>
 <tr><th scope="row">Stratagem</th><td>35</td><td>29</td><td>1</td><td>5</td><td>6</td></tr>
 </tbody>
 </table>
@@ -218,7 +218,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Decepticon Doublecrosser, Shield Brothers</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">both modes</td><td class="comment"></td></tr>
 <tr><th scope="row">Decepticon Exhaust, Consumptive Condottiere</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">moving damage gives +1/+1</td><td class="comment"></td></tr>
 <tr><th scope="row">General Ghyrik, Grievous Executioner</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: Dynamic enemy-health reduction during the owner&#39;s turn and scaling Bold/Pierce from a target&#39;s Utility battle icons.</td></tr>
-<tr><th scope="row">Gilthor, Chained Amalgamation</th><td>Character</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">alt-needs: Counting Tentacles across the battlefield for Bold and selecting an enemy&#39;s specific flip mode.<br>bot-needs: Counting Tentacles for DEF and suppressing black-card Pierce for a battle.</td></tr>
+<tr><th scope="row">Gilthor, Chained Amalgamation</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment">TODO: Bot mode&#39;s event().atk_flips.black needs to switch to a hybrid-aware property so inactive trait-qualified black icons do not subtract other Pierce.</td><td class="comment">bot-needs: Hybrid-aware black flip count for Pierce subtraction.</td></tr>
 <tr><th scope="row">Inquisitor Drebzik, Exhaustive Interrogator</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">bot-needs: TAP ability modal choice with opponent deck manipulation and suppression of a Titan Master&#39;s head bonus.</td></tr>
 <tr><th scope="row">Nacelle, Eager Aerospace Engineer</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Allowing an additional Upgrade play each turn with a printed-ability restriction.</td></tr>
 <tr><th scope="row">Optimus Prime, Dark Awakening</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -232,9 +232,7 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Aspect of Doubt</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Aspect of Laughter</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing a multi-card hand-scrap instruction once; scrap-hand currently emits one event per card, so a replacement cannot reduce the original batch size by one.</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.</td></tr>
-<tr><th scope="row">Dreadful Feast</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Selecting and retaining three distinct characters on the same team across multiple picks; current previous-target history does not reliably preserve the chosen sources and destination.</td></tr>
 <tr><th scope="row">Forked Tentacle</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing TAP ability option counts and the Tentacle slot-capacity rule.</td></tr>
-<tr><th scope="row">Gift of Innermost Energon</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Detecting which characters were KO&#39;d by this damage instruction and totaling successfully applied damage after any replacements.</td></tr>
 <tr><th scope="row">Loading The Cannon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This is not remembering the defence before flipping battle cards. If it earned EOT defence during flipping then that makes this behave wrong</td><td class="comment"></td></tr>
 <tr><th scope="row">Lose The Battle...</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Masher Mace</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -281,12 +279,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 180/199 (90.5%)</p>
+  <p>TFDSL completion: 183/199 (92.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>36</td><td>5</td><td>1</td><td>6</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>74</td><td>1</td><td>6</td><td>7</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>38</td><td>3</td><td>1</td><td>4</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>75</td><td>1</td><td>5</td><td>6</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>35</td><td>1</td><td>5</td><td>6</td></tr>
 </tbody>
 </table>
@@ -297,10 +295,8 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Autobot Roller, Scout Drone</th><td>Character</td><td>note</td><td>1/1</td><td class="comment">The &#39;treat this as though it were named Optimus Prime&#39; ability is handled by adding this character explicitly to both relevant upgrades</td><td class="comment"></td></tr>
 <tr><th scope="row">Crasher, Fractious Fanatic</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The targeted Pierce aura currently does not extend to newly summoned Drones.</td><td class="comment"></td></tr>
-<tr><th scope="row">Gilthor, Wounded Retribution</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment"></td></tr>
 <tr><th scope="row">Greasestain, No Muss! No Fuss!</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Selecting an opponent battle card to scrap without its icons and repairing by selected icon count</td></tr>
-<tr><th scope="row">Junkion Nancy, Just Say No to Sparkplugs!</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">alt-needs: Lithonian Cockpit Station: track this turn&#39;s Focus uses and occurrences of scrapping one or more cards from the top of your deck, including activity before Nancy enters alt mode</td></tr>
 <tr><th scope="row">Loudmouth, Incendiary Control</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap</td></tr>
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Allowing another weapon in attached&#39;s slot but only if it has only 1 weapon slot</td></tr>
 <tr><th scope="row">Quig</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -317,7 +313,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Happy Motoring!</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Doesn&#39;t currently flip the two characters at the same time. Perhaps it should</td><td class="comment"></td></tr>
 <tr><th scope="row">Head Case</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Reassigning Titan Master bonuses between characters</td></tr>
 <tr><th scope="row">Hodgepodge Panoply</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Hurry Hurry Hurry!</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Verifying that every friendly character is a Junkion or has a Motorcycle mode before installing a mandatory follow-up attack on each enemy attack; follow_up_attack and attacks_this_turn are available</td></tr>
 <tr><th scope="row">Imminent Breakthrough</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">As there isn&#39;t a &#39;during your turn&#39; event, making this start of turn. Potentiallty later it can be an actionable ability</td><td class="comment"></td></tr>
 <tr><th scope="row">Muster the Will</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>

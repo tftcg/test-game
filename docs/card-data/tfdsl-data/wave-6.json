@@ -83,7 +83,7 @@
     },
     {
       "name": "Dreadful Feast",
-      "needs": "Selecting and retaining three distinct characters on the same team across multiple picks; current previous-target history does not reliably preserve the chosen sources and destination."
+      "tfdsl": "if(exists_card(players().chars,owner.chars.count>=3))->(choose(pick_char(owner.chars.count>=3));choose(pick_char(owner=previous_target(1).owner,id!=previous_target(1).id));choose(pick_char(owner=previous_target(1).owner,id!=previous_target(1).id,id!=previous_target(2).id));move(1,all_chars(id=previous_target(1).id || id=previous_target(2).id),previous_target(3)))"
     },
     {
       "name": "\"Dutch\"",
@@ -101,8 +101,7 @@
     },
     {
       "name": "Gift of Innermost Energon",
-      "needs": "Detecting which characters were KO'd by this damage instruction and totaling successfully applied damage after any replacements.",
-      "tfdsl": "damage(1,all_friends())"
+      "tfdsl": "damage(1,all_friends());if(damage_result().ko.count=0)->repair(damage_result().amount,pick_friend())"
     },
     {
       "name": "Give Me Your Face",
@@ -583,11 +582,11 @@
     },
     {
       "name": "Gilthor, Chained Amalgamation",
-      "alt-needs": "Counting Tentacles across the battlefield for Bold and selecting an enemy's specific flip mode.",
-      "bot-needs": "Counting Tentacles for DEF and suppressing black-card Pierce for a battle.",
+      "bot-needs": "Hybrid-aware black flip count for Pierce subtraction.",
+      "comment": "TODO: Bot mode's event().atk_flips.black needs to switch to a hybrid-aware property so inactive trait-qualified black icons do not subtract other Pierce.",
       "tfdsl": {
-        "alt": "",
-        "bot": ""
+        "alt": "static(bold,all_friendly_upgrades(trait=Tentacle).count);on-this-flip()->(choose(pick_enemy());damage(1,chosen());if(exists_enemy(id=chosen().id,other_faces.count>0))->(if(confirm('Flip the damaged enemy to another mode?'))->(choose(options(chosen().other_faces));flip(previous_target(0 - 2),chosen()))))",
+        "bot": "static(def,all_friendly_upgrades(trait=Tentacle).count);on(event=after-defend-flip,when(event().defender=this(),event().atk_flips.orange>=1,event().atk_flips.black>=1,event().attacker.has_pierce=true))->pierce_eob(0 - event().atk_flips.black,event().attacker)"
       }
     },
     {

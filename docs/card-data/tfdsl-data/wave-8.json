@@ -125,8 +125,7 @@
     },
     {
       "name": "Hurry Hurry Hurry!",
-      "tfdsl": "",
-      "needs": "Verifying that every friendly character is a Junkion or has a Motorcycle mode before installing a mandatory follow-up attack on each enemy attack; follow_up_attack and attacks_this_turn are available"
+      "tfdsl": "reveal(on-opponent-attacker-chosen())->revealed(if(all_friends(faction!=Junkion,all_traits!=Motorcycle).count=0)->(on-enemy-attack(scope=eot)->follow_up_attack(player=opponent(),attackers=all_enemies(tapped=untapped,attacks_this_turn=0,id!=event().attacker.id))))"
     },
     {
       "name": "Imminent Breakthrough",
@@ -676,7 +675,7 @@
     {
       "name": "Gilthor, Wounded Retribution",
       "tfdsl": {
-        "alt": "",
+        "alt": "on(event=play-card,when(event().player=this().owner,event().card.type=Upgrade))->damage(1,this());on(event=char-damage,batch(min=1),when(event().damaged.owner=self(),event().origin.owner=opponent(),event().amount>0))->(if(self().flags!='gilthor_retribution_'+this().id)->(if(confirm('Deal non-attack damage with Gilthor?'))->(set_flag(scope=eot,'gilthor_retribution_'+this().id);damage(turn().non_attack_damaged.count,pick_enemy()))))",
         "bot": "on(event=play-card,when(event().player=this().owner,event().card.type=Action))->damage(1,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.atk>0))->atk_eot(event().scrapped.atk,this());on(event=scrap-upgrade,when(event().from=this(),event().scrapped.def>0))->def_eot(event().scrapped.def,this())"
       }
     },
@@ -713,10 +712,9 @@
     {
       "name": "Junkion Nancy, Just Say No to Sparkplugs!",
       "tfdsl": {
-        "alt": "drifter();static(focus,1,target=all_friends(all_traits=Motorcycle))",
+        "alt": "drifter();static(focus,1,target=all_friends(all_traits=Motorcycle));station('Lithonian Cockpit',requires(stars<=8,mode=bot),gives(trait(Motorcycle)),text(on(event=char-defend,when(event().defender=occupant()))->def_eot(all(turn().focus_uses,player=self()).count + all(turn().top_deck_scrap_occurrences,player=self()).count,occupant())))",
         "bot": "drifter();on(event=leave-station,when(event().left=this(),self().flags!=this().id+'_nancy_used'))->(set_flag_eot(this().id+'_nancy_used');if(this().damage>=3)->repair(1,all_friends()):else->damage(1,pick_enemy()))"
-      },
-      "alt-needs": "Lithonian Cockpit Station: track this turn's Focus uses and occurrences of scrapping one or more cards from the top of your deck, including activity before Nancy enters alt mode"
+      }
     },
     {
       "name": "Lord Kledji, Royal Ruler of Quintessa",
