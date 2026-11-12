@@ -285,10 +285,9 @@
     },
     {
       "name": "Brutal Conditioning",
-      "front-needs": "Attaching a Stratagem to a chosen character, tracking that host for later damage/KO triggers, and enforcing the once-per-game attachment.",
-      "back-needs": "Moving an attached Stratagem to its owner's KO area when its host is KO'd; generic Stratagem counters are supported.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-damaged(when(event().amount>0,event().origin.owner=self(),event().damaged.trait=Melee,self().flags!=this().id+'_attached'))->(if(this().zone=self().stratagems,this().side=front,event().damaged.zone=self().chars,self().flags!=this().id+'_attached')->(if(confirm('Attach Brutal Conditioning?'))->(set_flag(this().id+'_attached');set_flag('stratagem-attachment::'+this().id+'::'+event().damaged.id))));on-friend-damaged(when(event().amount>0,event().origin.owner=self(),self().flags='stratagem-attachment::'+this().id+'::'+event().damaged.id))->(if(this().zone=self().stratagems,this().side=front)->(up_counter(1,this());if(this().counter>=3)->flip(this())))",
+        "back": "on-ko(when(self().flags='stratagem-attachment::'+this().id+'::'+event().ko.id))->(delete_flag('stratagem-attachment::'+this().id+'::'+event().ko.id);move_to(self().ko,this()))"
       }
     },
     {
@@ -347,9 +346,8 @@
     },
     {
       "name": "In The Name of Slingshot",
-      "comment": "BUG: 2nd player's 'start of first turn' is currently waiting for their first turn",
       "tfdsl": {
-        "front": "on-start-game(when(starting_team(trait!=Aerialbot).count=0))->summon_friend('Autobot Powerglide, Haughty Show-Off');on-start-first-turn()->(repeat(4)->(damage(1,pick_friend(trait=Aerialbot,damage=0))))"
+        "front": "on-start-game(when(starting_team(trait!=Aerialbot).count=0))->summon_friend('Autobot Powerglide, Haughty Show-Off');on-game-first-turn()->(repeat(4)->(damage(1,pick_friend(trait=Aerialbot,damage=0))))"
       }
     },
     {

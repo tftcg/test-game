@@ -511,9 +511,8 @@
     {
       "name": "No Lords, No Masters",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Attaching a Stratagem to a Character, granting that host a trait, and moving the attached Stratagem to KO with its host"
+        "front": "on(event=start-turn,when(turn().game_first_turn=true))->(choose(pick_friend((trait=Sharkticon || trait=Allicon),fullname!=this().target));each(all_friends(id=chosen().id))->(set_flag('stratagem-attachment::'+this().id+'::'+it().id);trait(Leader,it())));on-ko(when(self().flags='stratagem-attachment::'+this().id+'::'+event().ko.id))->(delete_flag('stratagem-attachment::'+this().id+'::'+event().ko.id);move_to(self().ko,this()))"
+      }
     },
     {
       "name": "Old War Stories",
