@@ -261,8 +261,7 @@
     },
     {
       "name": "Sitrep Update",
-      "tfdsl": "",
-      "needs": "Replacing the scrap of a face-down Secret Action"
+      "tfdsl": "instead(on(event=scrap-action,when(event().scrapped.owner=this().owner,event().scrapped.subtype='Secret Action',event().facing=down))->(if(confirm('Scrap Sitrep Update instead?'))->(scrap_upgrade(this());if(done())->do_nothing():else->modify_noop()):else->modify_noop()))"
     },
     {
       "name": "Skimming Off the Top",
@@ -723,9 +722,8 @@
       "name": "Loudmouth, Incendiary Control",
       "tfdsl": {
         "alt": "on(event=scrap-upgrade,when(event().scrapped.owner=this().owner,self().flags!=this().id+'_loudmouth_used'))->(if(confirm('Put this Upgrade into your KO area?'))->(move_to(self().ko,event().scrapped);if(done())->(set_flag_eot(this().id+'_loudmouth_used');move_to(self().hand,pick_scrap(name=event().scrapped.name)))))",
-        "body": ""
-      },
-      "body-needs": "Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap"
+        "body": "on(event=scrap-action,when(event().scrapped.owner=this().owner,self().flags!=this().id+'_loudmouth_used'))->(if(confirm('Put this Action into your KO area?'))->(move_to(self().ko,event().scrapped);if(done())->(set_flag_eot(this().id+'_loudmouth_used');move_to(self().hand,pick_scrap(name=event().scrapped.name)))))"
+      }
     },
     {
       "name": "Megatron, Megalomaniacal Mariner",

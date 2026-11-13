@@ -16,12 +16,12 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1470/1514 (97.1%)</p>
+  <p>TFDSL completion: 1472/1514 (97.2%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>426</td><td>414</td><td>7</td><td>5</td><td>12</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>593</td><td>4</td><td>15</td><td>19</td></tr>
+<tr><th scope="row">Character</th><td>426</td><td>415</td><td>6</td><td>5</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>594</td><td>4</td><td>14</td><td>18</td></tr>
 <tr><th scope="row">Stratagem</th><td>158</td><td>147</td><td>3</td><td>8</td><td>11</td></tr>
 </tbody>
 </table>
@@ -40,12 +40,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 539/578 (93.3%)</p>
+  <p>TFDSL completion: 541/578 (93.6%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>121</td><td>109</td><td>7</td><td>5</td><td>12</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>213</td><td>4</td><td>9</td><td>13</td></tr>
+<tr><th scope="row">Character</th><td>121</td><td>110</td><td>6</td><td>5</td><td>11</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>214</td><td>4</td><td>8</td><td>12</td></tr>
 <tr><th scope="row">Stratagem</th><td>127</td><td>116</td><td>3</td><td>8</td><td>11</td></tr>
 </tbody>
 </table>
@@ -276,12 +276,12 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-8</h2>
-  <p>TFDSL completion: 186/199 (93.5%)</p>
+  <p>TFDSL completion: 188/199 (94.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
-<tr><th scope="row">Character</th><td>42</td><td>38</td><td>3</td><td>1</td><td>4</td></tr>
-<tr><th scope="row">Battlecard</th><td>81</td><td>76</td><td>1</td><td>4</td><td>5</td></tr>
+<tr><th scope="row">Character</th><td>42</td><td>39</td><td>2</td><td>1</td><td>3</td></tr>
+<tr><th scope="row">Battlecard</th><td>81</td><td>77</td><td>1</td><td>3</td><td>4</td></tr>
 <tr><th scope="row">Stratagem</th><td>41</td><td>37</td><td>1</td><td>3</td><td>4</td></tr>
 </tbody>
 </table>
@@ -294,7 +294,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Detritus, Now With Sleek, Sexy Handling!</th><td>Character</td><td>note</td><td>2/2</td><td class="comment">The targeted Pierce aura currently does not extend to newly summoned Drones.</td><td class="comment"></td></tr>
 <tr><th scope="row">Greasestain, No Muss! No Fuss!</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">bot-needs: Selecting an opponent battle card to scrap without its icons and repairing by selected icon count</td></tr>
-<tr><th scope="row">Loudmouth, Incendiary Control</th><td>Character</td><td>partial</td><td>1/2</td><td class="comment"></td><td class="comment">body-needs: Tracking non-battle-scrapped Actions, moving them to KO, and returning a same-named Action from scrap</td></tr>
 <tr><th scope="row">Q-PTP Aculear Scope</th><td>Character</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">upgrade-needs: Allowing another weapon in attached&#39;s slot but only if it has only 1 weapon slot</td></tr>
 <tr><th scope="row">Quig</th><td>Character</td><td>test</td><td>2/2</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Roadmaster Prime Mode, Master of Chaos</th><td>Character</td><td>test</td><td>1/1</td><td class="comment">if the game is lost while it tries to deploy its drones out</td><td class="comment"></td></tr>
@@ -314,7 +313,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Muster the Will</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Implemented as Durable as much simpler</td><td class="comment"></td></tr>
 <tr><th scope="row">Mystical Bond</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">that playing from scrap doesn&#39;t also just pass &#39;hand&#39; as the play_source</td><td class="comment"></td></tr>
 <tr><th scope="row">Recon Reissue</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
-<tr><th scope="row">Sitrep Update</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the scrap of a face-down Secret Action</td></tr>
 <tr><th scope="row">Skimming Off the Top</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Sparring Lessons</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Spread Democracy!</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">That the text on this card is flat out broken, I&#39;ve implemented as &#39;If that enemy is attacking it gets Drifter, if it is defending it gets Bandit</td><td class="comment"></td></tr>
