@@ -43,12 +43,12 @@
     {
       "name": "Aspect of Doubt",
       "comment": "TEST: Test",
-      "tfdsl": "put_only(faction=Quintesson,trait=Specialist,mode=bot || other_modes=bot);on-this-put()->(untap(attached());repair(2,attached()))"
+      "tfdsl": "put_only(faction=Quintesson,trait=Specialist,mode=bot || other_modes=bot);on-put()->(untap(attached());repair(2,attached()))"
     },
     {
       "name": "Aspect of Laughter",
-      "needs": "Replacing a multi-card hand-scrap instruction once; scrap-hand currently emits one event per card, so a replacement cannot reduce the original batch size by one.",
-      "tfdsl": ""
+      "needs": "Migrate remaining mandatory green hand-scrap effects to scrap_green_from_hand: Drebzik, Air Strike Patrol, Raider Chop Shop, W5 Wolfwire, Pit of Judgement, Lagartan Spaulders. Ignore Writhing in the Deep and Unfathomable Motives",
+      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist)"
     },
     {
       "name": "Aspect of Rage",
@@ -404,10 +404,9 @@
     },
     {
       "name": "Sound The Alarm",
-      "front-needs": "Attaching a Stratagem to a chosen character and adding its printed stats to that host; scrap search by arbitrary text is also unsupported.",
-      "back-needs": "Moving an attached Stratagem to its owner's KO area when its host is KO'd.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-ko(when(event().ko.fullname=this().target))->(choose(pick_friend());set_flag('stratagem-attachment::'+this().id+'::'+chosen().id);flip(this());move_to(self().hand,pick_scrap(contains_dsl='brave(' || contains_dsl='stealth(')))",
+        "back": "static(health,0-2,target=all_friends(fullname=this().target));on-ko(when(self().flags='stratagem-attachment::'+this().id+'::'+event().ko.id))->(delete_flag('stratagem-attachment::'+this().id+'::'+event().ko.id);move_to(self().ko,this()))"
       }
     },
     {
@@ -566,14 +565,14 @@
     {
       "name": "Deliberata, Judger and The Judged",
       "tfdsl": {
-        "bot": "tap_ability()->(choose(options('Reveal cards','Untap a Quintesson'));if(chosen()='Reveal cards')->(scrap_hand(pick_hand(green>=1));if(done())->(reveal_cards(top_deck(count=2));if(exists_card(previous_target(3),green>=1))->move_to(self().hand,previous_target(3)):else->scrap_deck(previous_target(3))));if(chosen()='Untap a Quintesson')->(if(all(this().upgrades,trait=Tentacle).count<3)->scrap_hand(pick_hand(count=3 - all(this().upgrades,trait=Tentacle).count));untap(pick_friend(faction=Quintesson,stars<=4))))"
+        "bot": "tap_ability()->(choose(options('Reveal cards','Untap a Quintesson'));if(chosen()='Reveal cards')->(scrap_green_from_hand(1);if(done())->(reveal_cards(top_deck(count=2));if(exists_card(previous_target(3),green>=1))->move_to(self().hand,previous_target(3)):else->scrap_deck(previous_target(3))));if(chosen()='Untap a Quintesson')->(if(all(this().upgrades,trait=Tentacle).count<3)->scrap_hand(pick_hand(count=3 - all(this().upgrades,trait=Tentacle).count));untap(pick_friend(faction=Quintesson,stars<=4))))"
       }
     },
     {
       "name": "General Ghyrik, Grievous Executioner",
-      "bot-needs": "Dynamic enemy-health reduction during the owner's turn and scaling Bold/Pierce from a target's Utility battle icons.",
+      "comment": "TEST: Once continuous static implemented, test enemies entering the battlefield after it's installed get -1 hp",
       "tfdsl": {
-        "bot": ""
+        "bot": "static(health,when(turn().player=this().owner),0-1,target=all_enemies());on-this-attack()->(choose(pick_enemy());bold_eot(all(chosen().upgrades,subtype=Utility).icons.count,this());pierce_eot(all(chosen().upgrades,subtype=Utility).icons.count,this());scrap_upgrade(pick(chosen().upgrades,subtype=Utility)))"
       }
     },
     {

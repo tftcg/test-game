@@ -117,7 +117,7 @@
     {
       "name": "Hodgepodge Panoply",
       "comment": "TEST: test",
-      "tfdsl": "static(drifter,when(event().defender.faction=Junkion,event().defender.has_drifter=true),true,target=event().attacker)"
+      "tfdsl": "static(drifter,when(battle().defender=attached(),attached().faction=Junkion,attached().has_drifter=true),true,target=battle().attacker)"
     },
     {
       "name": "Hot Seat",
@@ -353,9 +353,8 @@
     {
       "name": "A Very Cross Examination",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Removing or replacing an already-installed station on the Combat Deck; station installation and entry effects are supported"
+        "front": "replace_dsl(\"station('Repair Bay',requires(stars<=14),gives(health(1)),text(on(event=untap-all,when(occupant(),self().chars.count>=2))->repair(1,occupant())))\",\"station('Interrogation Console',requires(stars<=12),gives(def(1)),text(on(event=enter-station,when(event().station=station()))->(if(confirm('Do 1 damage to the character taking this Station?'))->(damage(1,event().entered);if(done())->scrap_hand(opponent_pick(opponent().hand))))))\",all(self().stratagems,name='Combat Deck'))"
+      }
     },
     {
       "name": "Alphastrike Counterforce"
@@ -396,9 +395,9 @@
     {
       "name": "Cherish This World or Perish",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-attack-damaged(when(event().target.fullname='Stock-Pyl, 100 Billion Stars, One Precious World',event().damage>0))->up_counter(1,this());on(event=char-add-ability,when(event().target.owner=opponent(),event().ability=drifter,event().gain=true))->up_counter(1,this());main_phase_ability(when(this().counter>=4,exists_friend(fullname='Gilthor, Wounded Retribution'),exists_card(self().chars+self().ko,fullname='Stock-Pyl, 100 Billion Stars, One Precious World')))->combine(this().target,2,any,'Gilthor, Wounded Retribution','Stock-Pyl, 100 Billion Stars, One Precious World')"
       },
-      "front-needs": "A main-phase timing hook for the threshold-gated combine and an exposed event for a character newly gaining Drifter; counters and named-character combination are supported"
+      "front-needs": "Counters for enemies newly gaining Drifter from continuous static effects, including Hodgepodge Panoply; explicit scoped grants are supported"
     },
     {
       "name": "Combat Deck",
@@ -463,9 +462,9 @@
       "comment": "TODO: Test. NOTE: Front flip keys off 'Q-RTR Arachnoid Array' but really should key off both being played",
       "tfdsl": {
         "front": "replace_dsl('all_friends()','all_chars()',all_friends(fullname=this().target),'bot');on(event=card-play,when(event().card='Q-RTR Arachnoid Array'))->flip(this())",
-        "back": ""
+        "back": "replace_dsl(',when(attached().trait=Constructicon)','',all(self().chars+self().ko+self().hand+self().upgrades,fullname='Q-PTP Aculear Scope'),'upgrade');replace_dsl('this().trait=Constructicon','true=true',all(self().chars+self().ko+self().hand+self().upgrades,fullname='Q-RTR Arachnoid Array'),'upgrade')"
       },
-      "back-needs": "Applying the specified printed ATK/DEF bonuses to matching Upgrades; DSL text replacement is supported"
+      "back-needs": "Applying the specified printed ATK/DEF bonuses to matching Upgrades"
     },
     {
       "name": "Materiel War",
@@ -715,7 +714,7 @@
     {
       "name": "Lord Kledji, Royal Ruler of Quintessa",
       "tfdsl": {
-        "bot": "tap_ability(scrap_hand(pick_hand(green>=1)))->(choose(options('Draw 2','Move up to 2 damage','Scrap an enemy Upgrade'));if(chosen()='Draw 2')->draw(2);if(chosen()='Move up to 2 damage')->move(2,pick_char(damage>0),pick_char(id!=previous_target().id));if(chosen()='Scrap an enemy Upgrade')->scrap_upgrade(pick_enemy_upgrade()))"
+        "bot": "tap_ability(scrap_green_from_hand(1))->(choose(options('Draw 2','Move up to 2 damage','Scrap an enemy Upgrade'));if(chosen()='Draw 2')->draw(2);if(chosen()='Move up to 2 damage')->move(2,pick_char(damage>0),pick_char(id!=previous_target().id));if(chosen()='Scrap an enemy Upgrade')->scrap_upgrade(pick_enemy_upgrade()))"
       }
     },
     {
