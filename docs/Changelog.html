@@ -5,13 +5,17 @@
 <style>body{font-family:system-ui,sans-serif;margin:2rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem;text-align:left}thead{background:#f3f4f6}code{white-space:nowrap}</style></head>
 <body><h1>TFDSL implementation changelog</h1>
 <p>Implemented means complete TFDSL coverage, including entries marked TEST, NOTE or BUG; it does not imply bug-free or tested. Complete cards omitted from the report are inferred from their disappearance from its incomplete-card table. Cards already complete in the first detailed report are labelled “On or before”; older summary-only reports cannot establish individual dates. Later regressions do not erase the first implementation date.</p>
-<h2>Implemented cards (1957)</h2>
+<h2>Implemented cards (1961)</h2>
 <table><thead><tr><th>Date</th><th>Card</th><th>Set</th><th>Type</th><th>Latest report status</th><th>Commit</th></tr></thead><tbody>
+<tr><td>2026-11-12</td><th scope="row">Aspect of Bitterness</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>326373cadf00</code></td></tr>
+<tr><td>2026-11-12</td><th scope="row">Aspect of Death</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>326373cadf00</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">Brutal Conditioning</th><td>wave-6</td><td>Stratagem</td><td>complete</td><td><code>8b929e0f1cae</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">Gilthor, Chained Amalgamation</th><td>wave-6</td><td>Character</td><td>complete</td><td><code>0ec982d7eda9</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">Loudmouth, Incendiary Control</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>baca7e4f66ee</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">No Lords, No Masters</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>8b929e0f1cae</code></td></tr>
+<tr><td>2026-11-12</td><th scope="row">Q-PTP Aculear Scope</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>326373cadf00</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">Reactive Thrusters</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>0ec982d7eda9</code></td></tr>
+<tr><td>2026-11-12</td><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>wave-8</td><td>Character</td><td>complete</td><td><code>326373cadf00</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">Sitrep Update</th><td>wave-8</td><td>Battlecard</td><td>complete</td><td><code>baca7e4f66ee</code></td></tr>
 <tr><td>2026-11-12</td><th scope="row">Writhing in the Deep</th><td>wave-8</td><td>Stratagem</td><td>complete</td><td><code>0ec982d7eda9</code></td></tr>
 <tr><td>2026-11-11</td><th scope="row">Dreadful Feast</th><td>wave-6</td><td>Battlecard</td><td>complete</td><td><code>6b06bb9792b4</code></td></tr>
@@ -1965,15 +1969,13 @@
 <tr><td>On or before 2026-09-20</td><th scope="row">Wildrider, Traffic Terror</th><td>Wave 10</td><td>Character</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 <tr><td>On or before 2026-09-20</td><th scope="row">With Courage and Good Cheer</th><td>Wave 10</td><td>Stratagem</td><td>complete</td><td><code>08f3c16ad739</code></td></tr>
 </tbody></table>
-<h2>No implementation date observed (408)</h2>
+<h2>No implementation date observed (404)</h2>
 <table><thead><tr><th>Card</th><th>Set</th><th>Type</th><th>Latest known status</th></tr></thead><tbody>
 <tr><th scope="row">Axor, Opportunistic Fencer</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">General Ghyrik, Grievous Executioner</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Inquisitor Drebzik, Exhaustive Interrogator</th><td>wave-6</td><td>Character</td><td>unimplemented</td></tr>
 <tr><th scope="row">Nacelle, Eager Aerospace Engineer</th><td>wave-6</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Shockblast, Galactic Man</th><td>wave-6</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Aspect of Bitterness</th><td>wave-6</td><td>Battlecard</td><td>partial</td></tr>
-<tr><th scope="row">Aspect of Death</th><td>wave-6</td><td>Battlecard</td><td>partial</td></tr>
 <tr><th scope="row">Aspect of Laughter</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Discordant Cacophony</th><td>wave-6</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Forked Tentacle</th><td>wave-6</td><td>Battlecard</td><td>partial</td></tr>
@@ -1986,8 +1988,6 @@
 <tr><th scope="row">Thermal Reciprocation</th><td>wave-6</td><td>Stratagem</td><td>partial</td></tr>
 <tr><th scope="row">This Gun For Hire</th><td>wave-6</td><td>Stratagem</td><td>unimplemented</td></tr>
 <tr><th scope="row">Junkheap, Wrecked to Ruin! Keeps on Doin&#39;!</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
-<tr><th scope="row">Q-PTP Aculear Scope</th><td>wave-8</td><td>Character</td><td>unimplemented</td></tr>
-<tr><th scope="row">Sentinel Prime, Legacy of the Primes</th><td>wave-8</td><td>Character</td><td>partial</td></tr>
 <tr><th scope="row">Caring is Sharing!</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Extended Duration Mission</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
 <tr><th scope="row">Head Case</th><td>wave-8</td><td>Battlecard</td><td>unimplemented</td></tr>
