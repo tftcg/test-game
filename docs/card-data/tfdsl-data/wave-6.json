@@ -34,13 +34,11 @@
     },
     {
       "name": "Aspect of Bitterness",
-      "needs": "Detecting this Upgrade leaving the battlefield by a route other than being scrapped.",
-      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on(event=scrap-upgrade,when(event().scrapped=this()))->(choose(pick_friend(faction=Quintesson));atk_eot(2,chosen());def_eot(2,chosen()))"
+      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on-this-scrapped()->(choose(pick_friend(faction=Quintesson));atk_eot(2,chosen());def_eot(2,chosen()));on-this-returned-to-hand()->(choose(pick_friend(faction=Quintesson));atk_eot(2,chosen());def_eot(2,chosen()))"
     },
     {
       "name": "Aspect of Death",
-      "needs": "Detecting this Upgrade leaving the battlefield by a route other than being scrapped.",
-      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on-attached-defend()->up_counter(1,this());on(event=scrap-upgrade,when(event().scrapped=this()))->damage(event().scrapped.counter,pick_enemy())"
+      "tfdsl": "put_only(faction=Quintesson,trait=Leader || trait=Specialist);on-attached-defend()->up_counter(1,this());on-this-scrapped()->damage(this().counter,pick_enemy());on-this-returned-to-hand()->damage(this().counter,pick_enemy())"
     },
     {
       "name": "Aspect of Doubt",

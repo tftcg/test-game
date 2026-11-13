@@ -742,9 +742,8 @@
     {
       "name": "Q-PTP Aculear Scope",
       "tfdsl": {
-        "upgrade": ""
-      },
-      "upgrade-needs": "Allowing another weapon in attached's slot but only if it has only 1 weapon slot"
+        "upgrade": "slot_capacity('Weapon',2,1,when(attached().trait=Constructicon))"
+      }
     },
     {
       "name": "Q-RTR Arachnoid Array",
@@ -782,13 +781,11 @@
     },
     {
       "name": "Sentinel Prime, Legacy of the Primes",
-        "alt 2-Desired": "static(oppress,when(this().has_oppress=true),2)",
       "tfdsl": {
         "alt 1": "static(oppress,when(this().has_oppress=true),1,target=all_friends(id!=this().id))",
-        "alt 2": "",
+        "alt 2": "static(oppress,when(this().has_oppress=true),2)",
         "body": "on-this-flip(when(event().flipped.mode=body))->(if(this().head.mode=head,this().head.other_traits='Titan Master',confirm('Deploy the attached Titan Master?'))->do_deploy_head();if(all(self().chars,trait='Titan Master').count>0)->(choose(pick(self().chars,trait='Titan Master'));atk_eot(1,chosen());pierce_eot(2,chosen())))"
-      },
-      "alt 2-needs": "Checking oppress while adding oppress leads to an infinite loop"
+      }
     },
     {
       "name": "Sideswipe, Covert Clone",
