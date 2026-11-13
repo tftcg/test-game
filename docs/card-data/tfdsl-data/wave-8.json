@@ -228,8 +228,7 @@
     },
     {
       "name": "Reactive Thrusters",
-      "tfdsl": "",
-      "needs": "Capping Pierce contributed by black battle icons independently of other Pierce sources, using the attacker's base ATK"
+      "tfdsl": "reveal(on-friend-defend())->revealed(on(event=after-defend-flip,scope=eob,when(event().attacker.has_pierce=true))->pierce_eob(0-max(0,event().atk_flips.combat_black - event().attacker.base_atk),event().attacker))"
     },
     {
       "name": "Recon Reissue",
@@ -608,9 +607,8 @@
     {
       "name": "Writhing in the Deep",
       "tfdsl": {
-        "front": ""
-      },
-      "front-needs": "Tracking prior-turn KO characters through variable Green-card discards and scheduling delayed KOs for only the Characters returned this way; return-from-KO is supported"
+        "front": "on-start-turn(when(exists_friend(fullname=this().target),exists_card(previous_turn().ko,owner=self(),trait=Sharkticon || trait=Allicon)))->(scrap_hand(pick_hand(green>=1,upto=all(previous_turn().ko,owner=self(),trait=Sharkticon || trait=Allicon).count));each(all(scrapped_cards()))->(if(exists_card(previous_turn().ko,owner=self(),zone=self().ko,trait=Sharkticon || trait=Allicon))->(choose(pick(previous_turn().ko,owner=self(),zone=self().ko,trait=Sharkticon || trait=Allicon));each(all(previous_turn().ko,id=chosen().id))->(return_from_ko(it(),1);if(done())->(on(event=end-turn,scope=eot,when(it().zone=self().chars))->ko(it()))))))"
+      }
     },
     {
       "name": "Ashtray, Come to Where the Flavor Is!",

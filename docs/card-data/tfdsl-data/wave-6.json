@@ -580,11 +580,9 @@
     },
     {
       "name": "Gilthor, Chained Amalgamation",
-      "bot-needs": "Hybrid-aware black flip count for Pierce subtraction.",
-      "comment": "TODO: Bot mode's event().atk_flips.black needs to switch to a hybrid-aware property so inactive trait-qualified black icons do not subtract other Pierce.",
       "tfdsl": {
         "alt": "static(bold,all_friendly_upgrades(trait=Tentacle).count);on-this-flip()->(choose(pick_enemy());damage(1,chosen());if(exists_enemy(id=chosen().id,other_faces.count>0))->(if(confirm('Flip the damaged enemy to another mode?'))->(choose(options(chosen().other_faces));flip(previous_target(0 - 2),chosen()))))",
-        "bot": "static(def,all_friendly_upgrades(trait=Tentacle).count);on(event=after-defend-flip,when(event().defender=this(),event().atk_flips.orange>=1,event().atk_flips.black>=1,event().attacker.has_pierce=true))->pierce_eob(0 - event().atk_flips.black,event().attacker)"
+        "bot": "static(def,all_friendly_upgrades(trait=Tentacle).count);on(event=after-defend-flip,when(event().defender=this(),event().atk_flips.orange>=1,event().atk_flips.black>=1,event().attacker.has_pierce=true))->pierce_eob(0 - event().atk_flips.combat_black,event().attacker)"
       }
     },
     {
