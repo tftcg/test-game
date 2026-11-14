@@ -16,13 +16,13 @@ thead { background: #f3f4f6; }
 <h1>TFDSL implementation report</h1>
 <section>
 <h2>All selected sets</h2>
-  <p>TFDSL completion: 1480/1514 (97.8%)</p>
+  <p>TFDSL completion: 1483/1514 (98.0%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>426</td><td>418</td><td>5</td><td>3</td><td>8</td></tr>
-<tr><th scope="row">Battlecard</th><td>612</td><td>596</td><td>3</td><td>13</td><td>16</td></tr>
-<tr><th scope="row">Stratagem</th><td>158</td><td>149</td><td>4</td><td>5</td><td>9</td></tr>
+<tr><th scope="row">Battlecard</th><td>612</td><td>597</td><td>3</td><td>12</td><td>15</td></tr>
+<tr><th scope="row">Stratagem</th><td>158</td><td>151</td><td>4</td><td>3</td><td>7</td></tr>
 </tbody>
 </table>
 </section>
@@ -40,13 +40,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>Waves 6 onwards</h2>
-  <p>TFDSL completion: 549/578 (95.0%)</p>
+  <p>TFDSL completion: 552/578 (95.5%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>121</td><td>113</td><td>5</td><td>3</td><td>8</td></tr>
-<tr><th scope="row">Battlecard</th><td>226</td><td>216</td><td>3</td><td>7</td><td>10</td></tr>
-<tr><th scope="row">Stratagem</th><td>127</td><td>118</td><td>4</td><td>5</td><td>9</td></tr>
+<tr><th scope="row">Battlecard</th><td>226</td><td>217</td><td>3</td><td>6</td><td>9</td></tr>
+<tr><th scope="row">Stratagem</th><td>127</td><td>120</td><td>4</td><td>3</td><td>7</td></tr>
 </tbody>
 </table>
 </section>
@@ -201,13 +201,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-6</h2>
-  <p>TFDSL completion: 141/156 (90.4%)</p>
+  <p>TFDSL completion: 143/156 (91.7%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>31</td><td>27</td><td>2</td><td>2</td><td>4</td></tr>
-<tr><th scope="row">Battlecard</th><td>62</td><td>56</td><td>2</td><td>4</td><td>6</td></tr>
-<tr><th scope="row">Stratagem</th><td>35</td><td>31</td><td>1</td><td>3</td><td>4</td></tr>
+<tr><th scope="row">Battlecard</th><td>62</td><td>57</td><td>2</td><td>3</td><td>5</td></tr>
+<tr><th scope="row">Stratagem</th><td>35</td><td>32</td><td>1</td><td>2</td><td>3</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -228,7 +228,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Ancient Security Tentacle</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Aspect of Doubt</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">Test</td><td class="comment"></td></tr>
 <tr><th scope="row">Aspect of Laughter</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Migrate remaining mandatory green hand-scrap effects to scrap_green_from_hand: Drebzik, Air Strike Patrol, Raider Chop Shop, W5 Wolfwire, Pit of Judgement, Lagartan Spaulders. Ignore Writhing in the Deep and Unfathomable Motives</td></tr>
-<tr><th scope="row">Discordant Cacophony</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.</td></tr>
 <tr><th scope="row">Forked Tentacle</th><td>Battlecard</td><td>partial</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Changing TAP ability option counts and the Tentacle slot-capacity rule.</td></tr>
 <tr><th scope="row">Loading The Cannon</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">This is not remembering the defence before flipping battle cards. If it earned EOT defence during flipping then that makes this behave wrong</td><td class="comment"></td></tr>
 <tr><th scope="row">Lose The Battle...</th><td>Battlecard</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
@@ -242,7 +241,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Universal Greeting</th><td>Battlecard</td><td>note</td><td>1/1</td><td class="comment">Because it&#39;s a simpler order to code, this has you choose Autobot, then option, then the 2nd character and its options</td><td class="comment"></td></tr>
 <tr><th scope="row">What Lies Beyond</th><td>Battlecard</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: A return-from-KO event, KO cause/damage context to identify qualifying enemy KOs, and a runtime operation/event for skipping an extra turn.</td></tr>
 <tr><th scope="row">Indigestion</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Granting a once-per-game TAP ability to a named character, selecting and scrapping its cards-under zone, and scaling damage from the successful scrap count.</td></tr>
-<tr><th scope="row">Mass Displacement Drive</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">front-needs: Overriding a character&#39;s STAR value by mode; STAR is currently a printed/deck-building value, not a modifiable static property.</td></tr>
 <tr><th scope="row">Orbital Command</th><td>Stratagem</td><td>bug</td><td>1/1</td><td class="comment">When the combiner enters the battlefield, nothing makes this update to give him Guardian</td><td class="comment"></td></tr>
 <tr><th scope="row">Thermal Reciprocation</th><td>Stratagem</td><td>partial</td><td>1/2</td><td class="comment">The ko listener won&#39;t work until Battlemasters are firing a Play Upgrade event</td><td class="comment">front-needs: Detecting opponent-caused damage-counter movement onto Powerglide with its cause/source context; the char-move event exposes the source and destination characters but not the effect source.</td></tr>
 <tr><th scope="row">This Gun For Hire</th><td>Stratagem</td><td>unimplemented</td><td>0/2</td><td class="comment"></td><td class="comment">front-needs: Replacing a named character&#39;s faction and detecting play of its Upgrade side.<br>back-needs: Replacing a named Upgrade&#39;s factions and editing its printed text.</td></tr>
@@ -330,13 +328,13 @@ thead { background: #f3f4f6; }
 </section>
 <section>
 <h2>wave-9</h2>
-  <p>TFDSL completion: 94/98 (95.9%)</p>
+  <p>TFDSL completion: 95/98 (96.9%)</p>
 <table>
 <thead><tr><th scope="col">Type</th><th scope="col">Total</th><th scope="col">Complete</th><th scope="col">Partial</th><th scope="col">Unimplemented</th><th scope="col">Remaining</th></tr></thead>
 <tbody>
 <tr><th scope="row">Character</th><td>26</td><td>24</td><td>1</td><td>1</td><td>2</td></tr>
 <tr><th scope="row">Battlecard</th><td>35</td><td>35</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><th scope="row">Stratagem</th><td>15</td><td>14</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Stratagem</th><td>15</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
 <h3>Cards</h3>
@@ -364,7 +362,6 @@ thead { background: #f3f4f6; }
 <tr><th scope="row">Can&#39;t Squish This</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Do It With Style!</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">test</td><td class="comment"></td></tr>
 <tr><th scope="row">Scout the Area</th><td>Stratagem</td><td>test</td><td>1/1</td><td class="comment">- make sure flipping works and that there is a working flip_cleaner</td><td class="comment"></td></tr>
-<tr><th scope="row">Such Heroic Nonsense</th><td>Stratagem</td><td>unimplemented</td><td>0/1</td><td class="comment"></td><td class="comment">needs: Conditioning green-swap eligibility on this Stratagem without changing flipped-card icons or making green flips eligible</td></tr>
 </tbody>
 </table>
 </section>

@@ -76,8 +76,7 @@
     },
     {
       "name": "Discordant Cacophony",
-      "needs": "Replacing the attacker choice with another legal attacker; attacker-chosen fires after selection, and the combat flow has no replacement choice window.",
-      "tfdsl": ""
+      "tfdsl": "reveal(instead(on-opponent-attacker-chosen(when(all_friends(trait=Motorcycle || name=Blaster || name=Frenzy || name=Hellbat || name=Jazz || name=Nightscream || name=Soundblaster || name=Soundwave || name=Tarantulas || name=Transmutate).count>=2,exists_card(event().attackers,tapped=untapped,id!=event().attacker.id)))))->revealed(untap(event().attacker);modify(event().attacker:=opponent_pick(event().attackers,tapped=untapped,id!=event().attacker.id));tap(event().attacker))"
     },
     {
       "name": "Dreadful Feast",
@@ -375,9 +374,8 @@
     },
     {
       "name": "Mass Displacement Drive",
-      "front-needs": "Overriding a character's STAR value by mode; STAR is currently a printed/deck-building value, not a modifiable static property.",
       "tfdsl": {
-        "front": ""
+        "front": "on-friend-flip(when(event().flipped.fullname=this().target,event().flipped.mode=alt))->stars(scope=mode,5,event().flipped)"
       }
     },
     {

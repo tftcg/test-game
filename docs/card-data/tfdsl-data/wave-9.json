@@ -239,7 +239,9 @@
     },
     {
       "name": "Such Heroic Nonsense",
-      "needs": "Conditioning green-swap eligibility on this Stratagem without changing flipped-card icons or making green flips eligible"
+      "tfdsl": {
+        "front": "on(event=battle-flip,when(event().card.name='Hunker Down',event().card.owner=this().owner,exists_friend(fullname=this().target)))->set_flag_eot('such-heroic-nonsense::'+battle().id+'::'+event().card.id)"
+      }
     },
     {
       "name": "Beastbox, Savage Interrogator",
